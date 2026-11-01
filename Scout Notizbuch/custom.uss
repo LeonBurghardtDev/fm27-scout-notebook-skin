@@ -172,3 +172,22 @@ SIImage#SimpleBanner {
 #ClickableBannerButton:hover {
   border-color: var(--skin-brand-primary);
 }
+
+/* Top-bar clock: native draws a black box with a light outline, which
+ * clashes with the paper look. Render it as a small gold stamp instead. */
+.calendar-widget-time-container,
+.nav-on-light .calendar-widget-time-container,
+.nav-on-dark .calendar-widget-time-container {
+  height: 22px;
+  padding: 0px 7px;
+  background-color: var(--skin-brand-primary);
+  border-width: 0px;
+  border-radius: 3px;
+}
+.calendar-widget-time-container #Time,
+.calendar-widget-time-container .global-text-primary,
+.nav-on-light .calendar-widget-time-container .global-text-primary,
+.nav-on-dark .calendar-widget-time-container .global-text-primary {
+  color: var(--skin-brand-on-primary);
+  -unity-text-align: middle-center;
+}
