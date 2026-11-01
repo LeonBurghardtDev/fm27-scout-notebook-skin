@@ -1,0 +1,709 @@
+/* FM DUGOUT THEME — edit this file for shared appearance.
+ * Edit, save, then reload the skin. No build step is needed.
+ * Component rules: styles/*.uss. New local overrides: custom.uss.
+ */
+:root {
+
+  /* SURFACES
+   * Canvas = top bar; page = workspace/second nav; panel/raised/strong = surface layers.
+   */
+  --skin-surface-canvas: rgb(11, 17, 24);
+  --skin-surface-page: rgb(19, 27, 37);
+  --skin-surface-navigation: rgb(14, 22, 32);
+  --skin-surface-panel: rgb(24, 32, 43);
+  --skin-surface-raised: rgb(29, 40, 53);
+  --skin-surface-strong: rgb(39, 53, 68);
+
+  /* MATCHDAY: preserve the native paper sheet; retheme surrounding chrome.
+   * White coverage mask carries no palette; semantic tint supplies its colour. */
+  --skin-match-surface-mask: url("assets/surfaces/solid-mask.png");
+  --skin-match-card-background: var(--skin-surface-panel);
+  --skin-match-overview-card-background: var(--skin-surface-raised);
+  --skin-match-squad-item-background: var(--skin-match-overview-card-background);
+  --skin-match-sheet-background: var(--skin-on-media);
+  --skin-match-sheet-foreground: var(--colours-base-neutral-black);
+
+  /* Processing entity links keep native light rich-text paint. */
+  --skin-processing-header-background: var(--skin-surface-raised);
+  --skin-processing-header-foreground: var(--skin-text-primary);
+  --skin-processing-header-secondary: var(--skin-text-secondary);
+
+  /* DATA PALETTE
+   * Categories identify series, never good/bad status. Reuse the same series
+   * across bars, labels, legends and plots. Adjust explicit alpha companions
+   * with their base RGB when retheming. Feedback/status keeps its own roles. */
+  --skin-data-sky: rgb(112, 199, 230);
+  --skin-data-sky-alpha-16: rgba(112, 199, 230, 0.16);
+  --skin-data-amber: rgb(240, 190, 105);
+  --skin-data-amber-alpha-16: rgba(240, 190, 105, 0.16);
+  --skin-data-mint: rgb(115, 211, 177);
+  --skin-data-mint-alpha-16: rgba(115, 211, 177, 0.16);
+  --skin-data-coral: rgb(235, 150, 134);
+  --skin-data-coral-alpha-16: rgba(235, 150, 134, 0.16);
+  --skin-data-blue: rgb(147, 177, 239);
+  --skin-data-sand: rgb(215, 207, 151);
+  --skin-data-steel: rgb(160, 186, 199);
+  --skin-data-rose: rgb(226, 166, 177);
+  /* Comparison facts retain native inline colours under the tested overrides.
+   * Match that identity pair in the editable comparison consumers. */
+  --skin-data-comparison-cyan: rgb(76, 252, 238);
+  --skin-data-comparison-cyan-alpha-16: rgba(76, 252, 238, 0.16);
+  --skin-data-comparison-orange: rgb(245, 162, 7);
+  --skin-data-comparison-orange-alpha-16: rgba(245, 162, 7, 0.16);
+  --skin-chart-series-1: var(--skin-data-sky);
+  --skin-chart-series-2: var(--skin-data-amber);
+  --skin-chart-series-3: var(--skin-data-mint);
+  --skin-chart-series-4: var(--skin-data-coral);
+  --skin-chart-series-5: var(--skin-data-blue);
+  --skin-chart-series-6: var(--skin-data-sand);
+  --skin-chart-series-7: var(--skin-data-steel);
+  --skin-chart-series-8: var(--skin-data-rose);
+  --skin-chart-series-1-fill: var(--skin-data-sky-alpha-16);
+  --skin-chart-series-2-fill: var(--skin-data-amber-alpha-16);
+  --skin-chart-grid: var(--skin-border-default);
+  --skin-chart-grid-muted: var(--skin-border-subtle);
+  --skin-chart-point-context: var(--skin-text-secondary);
+  --skin-chart-point-highlight: var(--skin-chart-series-1);
+  --skin-chart-label-size: var(--skin-font-size-12);
+  --skin-chart-label-gap: var(--global-gap-small);
+  --skin-chart-radar-label-min-width: 72px;
+  --skin-chart-positive: var(--skin-feedback-success-foreground);
+  --skin-chart-neutral: var(--skin-text-secondary);
+  --skin-chart-negative: var(--skin-feedback-danger-foreground);
+  --skin-chart-grade-1: var(--skin-feedback-danger-foreground);
+  --skin-chart-grade-2: var(--skin-feedback-warning-foreground);
+  --skin-chart-grade-3: var(--skin-text-secondary);
+  --skin-chart-grade-4: var(--skin-data-sky);
+  --skin-chart-grade-5: var(--skin-data-mint);
+  --skin-chart-radar-artwork: var(--skin-radar-comparison-artwork);
+  /* Compact plots have no label gutter: compensate for artwork diameter 69.6%. */
+  --skin-chart-compact-radar-background-size: 143.678% 143.678%;
+  --skin-comparison-left: var(--skin-data-comparison-cyan);
+  --skin-comparison-right: var(--skin-data-comparison-orange);
+  --skin-comparison-left-fill: var(--skin-data-comparison-cyan-alpha-16);
+  --skin-comparison-right-fill: var(--skin-data-comparison-orange-alpha-16);
+  --skin-attribute-key: var(--skin-data-mint);
+  --skin-attribute-key-fill: var(--skin-data-mint-alpha-16);
+  --skin-attribute-preferred: var(--skin-data-sky);
+  --skin-attribute-preferred-fill: var(--skin-data-sky-alpha-16);
+  --skin-attribute-training: var(--skin-data-amber);
+  --skin-attribute-training-fill: var(--skin-data-amber-alpha-16);
+  /* Native radar source puts comparison/right in series 1, subject/left in 2. */
+  --skin-radar-profile-line: var(--skin-on-media);
+  --skin-radar-match-profile-line: var(--skin-radar-profile-line);
+  --skin-radar-subject-line: var(--skin-comparison-left);
+  --skin-radar-comparison-line: var(--skin-comparison-right);
+  --skin-radar-subject-fill: var(--skin-comparison-left-fill);
+  --skin-radar-comparison-fill: var(--skin-comparison-right-fill);
+  /* Report comparisons bind reference to series 1 and subject to series 2. */
+  --skin-report-radar-subject-line: var(--skin-chart-series-1);
+  --skin-report-radar-subject-fill: var(--skin-chart-series-1-fill);
+  --skin-report-radar-reference-line: var(--skin-chart-series-2);
+  --skin-report-radar-reference-fill: var(--skin-chart-series-2-fill);
+  --skin-report-chart-surface: var(--skin-transparent);
+
+  /* TACTICS CHROME AND PITCH
+   * Muted pitch paint matches the overview tile. Keep text, kits and position
+   * markers fully opaque; soften only grass/line paint, never a parent opacity. */
+  --skin-pitch-background: var(--skin-surface-strong);
+  --skin-pitch-lines: var(--skin-on-media-alpha-20);
+  --skin-tactics-surface: var(--skin-surface-raised);
+  --skin-tactics-header: var(--skin-surface-panel);
+  --skin-tactics-border: var(--skin-card-border-colour);
+  --skin-tactics-border-width: var(--skin-card-border-width);
+  --skin-tactics-position-hover: var(--skin-control-hover);
+  --skin-tactics-position-pressed: var(--skin-control-pressed);
+  --skin-tactics-position-foreground: var(--skin-text-primary);
+  --skin-tactics-position-focus: var(--skin-focus-ring);
+  /* Keep the unfilled tactical assessment visible beside its coloured level. */
+  --skin-tactics-assessment-empty: var(--skin-on-media-alpha-35);
+  /* More vertical room for feedback inside the native 50px card. */
+  --skin-tactics-feedback-padding-y: 4px;
+  /* Picked-position fields keep their football colour beneath interaction. */
+  --skin-picked-position-hover-overlay: var(--skin-on-media-alpha-08);
+  --skin-picked-position-pressed-overlay: var(--skin-on-media-alpha-12);
+  /* Pitch movement diagrams need opaque ink, separate from table row fills. */
+  --skin-tactics-movement-ip: var(--skin-data-mint);
+  --skin-tactics-movement-oop: var(--skin-data-sky);
+  /* Two digits must fit without wrapping at the profile and tooltip sizes. */
+  --skin-player-number-min-width: 32px;
+  --skin-player-number-height: 28px;
+  --skin-player-number-padding: 6px;
+  --skin-player-number-size: var(--skin-font-size-16);
+  --skin-player-number-font: var(--skin-font-family-display);
+  --skin-player-number-background: var(--skin-surface-strong);
+  --skin-player-number-foreground: var(--skin-text-primary);
+  --skin-player-number-offset-y: -2px;
+  --skin-player-training-summary-size: var(--body-sm-size);
+  --skin-attribute-label-line-height: var(--skin-font-size-20);
+
+  /* Interior of the native 188px first-contact pitch; leaves its frame visible. */
+  --skin-chart-first-contact-zone-height: 180px;
+  /* Reserve gutters for native report radar labels outside their plot box. */
+  --skin-chart-report-radar-width: 85%;
+  /* Tone game-bound scoring/conceding tile fills beneath their labels. */
+  --skin-chart-position-scrim: var(--skin-surface-canvas-alpha-48);
+  /* Compact progress charts fit inside data rows; full report charts keep their scale. */
+  --skin-chart-compact-height: 16px;
+  /* Mini form marks remain bars, independently of rounded controls/badges. */
+  --skin-form-bar-radius: var(--skin-radius-hairline);
+  /* Finance graphs share their card surface; the area pairs with its line.
+   * Income/expense series keep separate football/accounting meanings. */
+  --skin-chart-finance-background: var(--skin-transparent);
+  --skin-chart-finance-line: var(--skin-chart-series-1);
+  --skin-chart-finance-fill: var(--skin-chart-series-1-fill);
+  --skin-finance-value-foreground: var(--skin-text-primary);
+  /* Neutral accounting categories remain visible independently of UI surfaces.
+   * These marker roles do not rewrite native indexed pie palettes. */
+  --skin-finance-category-fund-raising-colour: #9BA9B5;
+  --skin-finance-category-other-colour: #FFFFFF;
+  --skin-chart-axis-foreground: var(--skin-text-secondary);
+  /* The chart draws axis labels outside its plot. Reserve real layout space
+   * rather than clipping the currency figures or covering neighbouring rows. */
+  --skin-chart-finance-axis-gutter: 48px;
+  --skin-chart-finance-edge-gutter: 8px;
+  --skin-chart-finance-label-gap: 20px;
+  --skin-chart-finance-summary-height: 160px;
+  --skin-finance-breakdown-view-min-width: 100%;
+
+  /* Finance period tabs have game-owned transparent fills. Treat selected
+   * periods as outlined choices rather than assuming a filled Volt surface. */
+  --skin-finance-period-background: var(--skin-control-background);
+  --skin-finance-period-hover: var(--skin-control-hover);
+  --skin-finance-period-pressed: var(--skin-control-pressed);
+  --skin-finance-period-foreground: var(--skin-text-primary);
+  --skin-finance-period-border: var(--skin-brand-primary);
+
+
+
+  /* START SCREEN AND RELEASE NOTES
+   * Reuse the normal heading/body scale within native fixed-size tiles.
+   * Layout dimensions remain theme settings, not per-label literals. */
+  --skin-menu-tile-heading-size: var(--heading-lg-size);
+  --skin-menu-tile-heading-height: 32px;
+  --skin-menu-body-size: var(--skin-font-size-13);
+  --skin-menu-entity-size: var(--skin-font-size-30);
+  --skin-menu-title-inset: var(--global-padding-regular);
+  --skin-menu-promo-copy-width: 208px;
+  --skin-menu-promo-art-width: 80px;
+  --skin-menu-promo-art-height: 90px;
+  /* Poppins' 1.5em line metrics must fit the native 33px two-line helper. */
+  --skin-preferences-compact-help-size: var(--skin-font-size-11);
+  --skin-release-notes-width: 672px;
+  --skin-release-notes-max-width: 90%;
+  --skin-release-notes-max-height: 90%;
+  --skin-release-notes-padding: 16px;
+  --skin-release-notes-gap: 16px;
+  --skin-release-notes-image-width: 160px;
+  --skin-release-notes-title-size: var(--skin-font-size-24);
+  --skin-release-notes-heading-size: var(--heading-lg-size);
+  --skin-release-notes-body-size: var(--skin-font-size-13);
+
+  /* MESSAGE CHROME
+   * Component roles alias shared theme geometry and surfaces. Club edge colours
+   * remain native bindings so neutral headers always retain readable text.
+   */
+  --skin-divider-width: var(--global-border-width-regular);
+  --skin-divider-colour: var(--skin-border-subtle);
+  --skin-message-surface: var(--skin-surface-raised);
+  --skin-message-radius: var(--skin-radius-card);
+  --skin-message-inset: var(--global-padding-extra-large);
+  --skin-message-row-inset: var(--global-padding-large);
+  --skin-message-row-padding: var(--global-padding-extra-large);
+  --skin-message-row-radius: var(--numbers-border-radius-null);
+  --skin-message-divider-width: var(--skin-divider-width);
+  --skin-message-header-edge-width: 6px;
+  --skin-message-banner-radius: var(--skin-radius-card);
+  --skin-message-club-header-paint-scale: 32;
+  --skin-message-club-header-extension: 16392px;
+  --skin-message-club-header-overlap: var(--skin-staff-header-gradient-overlap);
+  /* Trim native inline article outlines at the wrapper boundary. */
+  --skin-message-native-outline-crop: -1px;
+  --skin-message-inline-frame-visibility: hidden;
+  /* Descriptions inside native fixed-height table lines must not wrap upward. */
+  --skin-table-description-wrap: nowrap;
+  --skin-table-description-overflow: hidden;
+  --skin-table-description-truncation: ellipsis;
+  --skin-message-divider-colour: var(--skin-divider-colour);
+  --skin-message-header-artwork-opacity: 0;
+  --skin-message-attachment-surface: var(--skin-transparent);
+  --skin-message-inline-surface-mask: var(--skin-match-surface-mask);
+  --skin-message-attachment-radius: var(--global-border-width-none);
+  --skin-message-tag-padding-y: var(--global-padding-extra-small);
+  --skin-message-tag-padding-x: var(--global-padding-small);
+  --skin-message-tag-radius: var(--skin-radius-small);
+  --skin-message-tag-read-opacity: 0.55;
+  --skin-message-tag-read-selected-opacity: 0.65;
+
+  /* TEXT AND READ STATE
+   * Read messages stay quieter than unread. Disabled text is a separate role.
+   */
+  --skin-text-primary: rgb(243, 246, 238);
+  --skin-text-secondary: rgb(183, 195, 205);
+  --skin-text-read-opacity: 0.8;
+  --skin-text-read-selected-opacity: 0.88;
+  --skin-text-disabled: rgb(155, 169, 181);
+  /* Unknown/no-data grades are information, not disabled controls. Keep them
+   * neutral and secondary while remaining readable on hovered report rows. */
+  --skin-grade-unknown-foreground: var(--skin-text-secondary);
+  --skin-text-link: var(--skin-brand-accent);
+  --skin-text-link-hover: var(--skin-brand-primary);
+  --skin-ink: #000000;
+
+  /* CONTROLS, SELECTION AND BRAND
+   * Keep filled action/selection states paired with their foreground through every state.
+   */
+  --skin-border-default: rgb(71, 85, 98);
+  --skin-border-subtle: rgb(52, 66, 81);
+  --skin-control-background: rgb(39, 53, 68);
+  --skin-control-hover: rgb(48, 66, 84);
+  --skin-control-pressed: rgb(58, 78, 100);
+  /* Ordinary editable fields share neutral control paint. Text selection uses
+   * a translucent neutral highlight: FM draws it over the selected glyphs. */
+  --skin-field-background: var(--skin-control-background);
+  --skin-field-hover: var(--skin-control-hover);
+  --skin-field-pressed: var(--skin-control-pressed);
+  --skin-field-border: var(--skin-border-default);
+  --skin-field-focus-border: var(--skin-focus-ring);
+  --skin-field-foreground: var(--skin-text-primary);
+  --skin-field-text-selection: var(--skin-on-media-alpha-20);
+  /* Ordinary on/off switches share roles at every native size. Warning
+   * switches retain their separate football/feedback contracts. */
+  --skin-switch-track-background: var(--skin-control-background);
+  --skin-switch-track-hover: var(--skin-control-hover);
+  --skin-switch-track-pressed: var(--skin-control-pressed);
+  --skin-switch-off-marker: var(--skin-text-primary);
+  --skin-switch-on-marker: var(--skin-selection-background);
+  --skin-switch-on-hover: var(--skin-selection-hover);
+  --skin-switch-on-pressed: var(--skin-selection-pressed);
+  --skin-switch-track-current: var(--skin-switch-track-background);
+  --skin-switch-edge-current: var(--skin-border-default);
+  --skin-switch-marker-current: var(--skin-switch-off-marker);
+  /* Shared range paint. Native handle geometry and disabled opacity remain. */
+  --skin-range-track-background: var(--skin-control-hover);
+  --skin-range-track-border: var(--skin-border-default);
+  --skin-range-marker: var(--skin-selection-background);
+  --skin-range-marker-hover: var(--skin-selection-hover);
+  --skin-range-marker-pressed: var(--skin-selection-pressed);
+  --skin-range-marker-disabled: var(--skin-text-disabled);
+  /* Responsibility ownership is informational. The native name painter can
+   * retain white ink despite computed colour, so use a neutral field and an
+   * accent edge instead of a filled primary-action surface. */
+  --skin-responsibility-owner-background: var(--skin-control-background);
+  --skin-responsibility-owner-hover: var(--skin-control-hover);
+  --skin-responsibility-owner-pressed: var(--skin-control-pressed);
+  --skin-responsibility-owner-foreground: var(--skin-text-primary);
+  --skin-responsibility-owner-border: var(--skin-selection-background);
+  /* Dropdown choices may include names painted with game-owned ink. Quiet
+   * neutral feedback supports these mixed templates without a Volt text clash. */
+  --skin-menu-choice-hover: var(--skin-control-hover);
+  --skin-menu-choice-pressed: var(--skin-control-pressed);
+  --skin-menu-choice-foreground: var(--skin-text-primary);
+
+
+  /* Informational summary controls are quiet cards, not primary actions. */
+  --skin-control-summary-background: var(--skin-surface-panel);
+  --skin-control-summary-hover: var(--skin-surface-raised);
+  --skin-control-summary-pressed: var(--skin-control-pressed);
+  --skin-control-summary-icon-background: var(--skin-surface-raised);
+  --skin-control-summary-overlay-opacity: 0;
+  /* Let focus details use spare header width; the match count sizes to content. */
+  --skin-recruitment-focus-count-grow: 0;
+  /* Selection and accent follow primary by default. Replace an alias only
+   * when intentionally designing a separate accent or selection palette. */
+  --skin-selection-background: var(--skin-brand-primary);
+  --skin-selection-hover: var(--skin-brand-primary-hover);
+  --skin-selection-pressed: var(--skin-brand-primary-pressed);
+  --skin-selection-foreground: var(--skin-brand-on-primary);
+  --skin-focus-ring: rgb(207, 255, 102);
+  --skin-brand-primary: rgb(171, 239, 37);
+  --skin-brand-primary-hover: rgb(189, 243, 89);
+  --skin-brand-on-primary: rgb(20, 30, 10);
+  --skin-brand-primary-pressed: rgb(143, 205, 19);
+  --skin-brand-accent: var(--skin-brand-primary);
+  --skin-brand-accent-soft: var(--skin-brand-accent);
+  --skin-action-primary-background: var(--skin-brand-primary);
+  --skin-action-primary-hover: var(--skin-brand-primary-hover);
+  --skin-action-primary-pressed: var(--skin-brand-primary-pressed);
+  --skin-action-primary-foreground: var(--skin-brand-on-primary);
+  --skin-action-primary-border: var(--skin-brand-primary);
+  --skin-action-disabled-background: var(--skin-surface-strong);
+  --skin-action-disabled-foreground: var(--skin-text-disabled);
+  --skin-action-disabled-border: var(--skin-border-subtle);
+  --skin-control-border: rgb(99, 121, 140);
+  --skin-selection-muted: rgb(44, 55, 68);
+  /* Ordinary report cards use surface depth; floating dialogs keep their
+   * separate outline role. Data-list selection stays neutral, unlike buttons. */
+  --skin-card-border-width: 0px;
+  /* Some native cards fix their border width inline. A transparent ordinary
+   * card edge also removes that paint without shifting their content. Set a
+   * visible colour plus the width above when designing an outlined theme. */
+  --skin-card-border-colour: var(--skin-transparent);
+  /* Informational badges stay neutral; status badges retain their semantic palette. */
+  --skin-badge-neutral-background: var(--skin-surface-strong);
+  --skin-notification-badge-background: var(--skin-brand-primary);
+  --skin-notification-badge-foreground: var(--skin-brand-on-primary);
+  --skin-badge-neutral-foreground: var(--skin-text-primary);
+  /* The rating host owns the current category; recycled text can retain an
+   * earlier colour class. Pair foreground with that host's semantic paint. */
+  --skin-rating-badge-lime-foreground: var(--theme-color-lime-soft-soft);
+  --skin-rating-badge-green-foreground: var(--theme-color-green-soft-soft);
+  --skin-list-selection-background: var(--skin-surface-strong);
+  --skin-list-selection-foreground: var(--skin-text-primary);
+  --skin-list-selection-hover: var(--skin-control-hover);
+  /* One crop pair supplies the default solid-looking entity/news banners.
+   * Keep extension/overlap equal and opposite; 0px restores the native fade. */
+  --skin-header-gradient-extension: 4096px;
+  --skin-header-gradient-overlap: -4096px;
+  /* Non-player headers fade horizontally, so their paint needs a wider crop. */
+  --skin-staff-header-gradient-extension: 16384px;
+  --skin-staff-header-gradient-overlap: -16384px;
+  /* Single-row player header variants bind layout width in game code. Paint
+   * scaling and its exact inverse preserve content geometry. Both 1 restores. */
+  --skin-player-header-horizontal-paint-scale: 32;
+  --skin-player-header-horizontal-content-scale: 0.03125;
+  /* Contract's native gradient already has a 12px end inset. Preserve it
+   * while adding the same 16384px horizontal paint extension as staff. */
+  --skin-contract-header-gradient-padding: 16396px;
+  --skin-contract-header-gradient-overlap: -16384px;
+  --skin-team-report-header-gradient-extension: var(--skin-staff-header-gradient-extension);
+  --skin-team-report-header-gradient-overlap: var(--skin-staff-header-gradient-overlap);
+  /* Scroll thumbs remain visible while idle; interaction changes their ink,
+   * never their visibility. Independent roles cover SI and Unity scrollers. */
+  --skin-scrollbar-thumb: var(--skin-text-disabled);
+  --skin-scrollbar-thumb-hover: var(--skin-text-secondary);
+  --skin-scrollbar-thumb-pressed: var(--skin-text-primary);
+  --skin-scrollbar-radius: var(--skin-radius-small);
+  /* Plain form choices keep neutral row feedback; only the small selection
+   * marker uses Volt. These roles are separate from filled/segmented buttons. */
+  --skin-choice-background: var(--skin-transparent);
+  --skin-choice-hover: var(--skin-control-hover);
+  --skin-choice-pressed: var(--skin-control-pressed);
+  --skin-choice-foreground: var(--skin-text-primary);
+  --skin-choice-marker: var(--skin-brand-accent);
+  /* Radio artwork follows its actual surface: neutral choices retain a Volt
+   * dot; filled choices locally pair ring, dot and action glyphs with ink. */
+  --skin-radio-hover-background: var(--skin-control-hover);
+  --skin-radio-pressed-background: var(--skin-control-pressed);
+  --skin-radio-interaction-foreground: var(--skin-text-primary);
+  --skin-radio-ring-foreground: var(--skin-text-primary);
+  --skin-radio-marker-foreground: var(--skin-choice-marker);
+  --skin-radio-action-foreground: var(--skin-text-primary);
+  --skin-preferences-scaling-icon-foreground: var(--skin-text-primary);
+  --skin-choice-card-background: var(--skin-surface-panel);
+  --skin-choice-card-selected: var(--skin-surface-raised);
+  /* The manager card clips a painted child; both frames share one radius. */
+  --skin-choice-card-radius: var(--skin-radius-control);
+  --skin-choice-card-title-size: var(--heading-md-size);
+  --skin-choice-card-description-size: var(--body-sm-size);
+  --skin-choice-card-compact-title-size: var(--skin-font-size-14);
+  --skin-choice-card-compact-description-size: var(--skin-font-size-11);
+  --skin-planner-point-background: var(--skin-surface-panel);
+  --skin-planner-point-selected: var(--skin-surface-raised);
+  --skin-planner-point-selected-border: var(--skin-brand-primary);
+  /* Search sidebar pitches have six close rows, unlike the full planner. */
+  --skin-search-pitch-point-width: 50px;
+  --skin-search-pitch-point-height: 20px;
+  --skin-search-pitch-label-size: var(--skin-font-size-12);
+  --skin-segmented-overlay-opacity: 0;
+  --skin-choice-radius: var(--skin-radius-small);
+  /* Space between biography artwork and its natural-height introduction. */
+  --skin-biography-cover-gap: var(--global-gap-regular);
+  --skin-field-label-gap: var(--global-gap-regular);
+  /* Full club Facts label lane: preserve Poppins labels before the values. */
+  --skin-facts-label-min-width: 224px;
+  /* Compact Main Stadium values leave room for the wider label metrics. */
+  --skin-club-profile-value-max-width: 112px;
+  /* Compact Board and medical risk headers retain native columns and rows. */
+  --skin-summary-table-header-inset: 0px;
+  /* Training keeps its native column allocations; compact headers and Summary
+   * role fields reclaim horizontal inset independently of typography/gaps. */
+  --skin-training-table-header-inset: 1px;
+  --skin-training-summary-dropdown-inset: 4px;
+  /* Compact match ratios retain a gutter within native column allocations. */
+  --skin-match-summary-ratio-margin: 2px;
+  /* Training attribute footer keeps horizontal padding and compact vertical space. */
+  --skin-training-traits-vertical-inset: 8px;
+  /* Job Market standard headings retain their native columns and sort gap. */
+  --skin-job-market-header-inset: 1px;
+  /* Shared competition cells retain positive insets independently of team names. */
+  --skin-job-market-competition-inset: 2px;
+  /* Captain headers retain a small gutter between adjacent heading labels. */
+  --skin-captain-table-header-inset: 1px;
+  /* Number-table plain text shares a bounded body-cell inset, separate from headers. */
+  --skin-number-table-plain-cell-inset: 0px;
+  /* Loans expiry text needs no trailing gap after its date; clock spacing stays native. */
+  --skin-loans-expiry-text-trailing-gap: 0px;
+  /* Expiry cells share neighbour-owned gutters; keep their clock gap separate. */
+  --skin-loans-expiry-cell-inset: 0px;
+  --skin-staff-job-gutter: 8px;
+  /* Shared Staff identity keeps a compact gap after its native 24px portrait. */
+  --skin-staff-identity-portrait-gap: 4px;
+  /* Compact Manager History keeps native badge and text metrics within 220px. */
+  --skin-manager-history-record-group-gap: 4px;
+  --skin-manager-history-record-label-gap: 2px;
+  /* Compact ShortCell shares its remaining lane with joined and left dates. */
+  --skin-manager-history-tile-name-max-width: 50%;
+  /* The two Overview budget actions retain their icon's leading separation. */
+  --skin-finance-budget-action-trailing-gap: 0px;
+  /* Floating dialogs need an edge against the dimmed page. Set width to 0px
+   * for borderless popups; ordinary page cards keep their own surface rules. */
+  /* Notification chrome is a neutral floating surface; keep art optional. */
+  /* Popup hosts add no second painted rectangle behind the dialog. */
+  --skin-dialog-backdrop: var(--skin-transparent);
+  --skin-dialog-surface: var(--skin-surface-raised);
+  --skin-dialog-artwork: none;
+  --skin-dialog-heading-foreground: var(--skin-text-primary);
+  --skin-dialog-border: var(--skin-border-default);
+  --skin-dialog-border-width: 1px;
+  --skin-dialog-radius: var(--skin-radius-card);
+  /* Compact menus use a small outer/edge-row radius. Calendar content needs
+   * card-sized corners, supplied locally on its floating root. */
+  --skin-popup-radius: var(--skin-radius-small);
+  --skin-calendar-popup-radius: var(--skin-radius-card);
+  /* Header chrome: active location, secondary-bar edge and quiet bookmarks.
+   * Keep these roles separate from ordinary table selection. */
+  --skin-nav-active-indicator: var(--skin-brand-primary);
+  --skin-nav-secondary-edge: var(--skin-border-subtle);
+  --skin-nav-secondary-edge-width: 1px;
+  --skin-bookmark-background: var(--skin-transparent);
+  --skin-bookmark-hover: var(--skin-on-media-alpha-08);
+  --skin-bookmark-pressed: var(--skin-on-media-alpha-12);
+  --skin-bookmark-border: var(--skin-border-subtle);
+  --skin-bookmark-border-width: var(--global-border-width-none);
+  --skin-bookmark-focus-border-width: var(--skin-nav-secondary-edge-width);
+  --skin-bookmark-foreground: var(--skin-text-secondary);
+  --skin-bookmark-overflow-size: var(--interaction-global-height-sm);
+  --skin-bookmark-overflow-icon-size: 16px;
+  --skin-bookmark-overflow-padding: var(--global-padding-none);
+
+  /* FONT ROLES
+   * Loose font files use skin-root URLs; competition fonts stay game-owned.
+   */
+  --skin-font-family-primary: url("fonts/Poppins-Regular.ttf");
+  --skin-font-body: var(--skin-font-family-primary);
+  --skin-font-family-display: url("fonts/Poppins-Bold.ttf");
+  /* Use the installed game's competition fonts; no UEFA font files are shipped. */
+  --skin-font-family-champions-scoreboard: var(--ucl-family-regular);
+  --skin-font-family-uwcl-scoreboard: var(--uwcl-family-regular);
+  --skin-font-display: var(--skin-font-family-primary);
+  --skin-font-family-condensed: var(--skin-font-family-primary);
+  --skin-font-condensed: var(--skin-font-family-condensed);
+  --skin-font-family-international: var(--typography-family-international);
+  --skin-font-family-navigation: url("fonts/Poppins-Bold.ttf");
+  --skin-font-weight-regular: normal;
+  --skin-font-weight-bold: bold;
+  --skin-font-weight-italic: italic;
+  --skin-font-weight-black-fallback: var(--skin-font-weight-bold);
+  --skin-font-weight-display: normal;
+  --skin-font-secondary-navigation: var(--skin-font-family-primary);
+  --skin-font-secondary-navigation-size: var(--skin-font-size-14);
+  --skin-font-secondary-navigation-weight: var(--skin-font-weight-regular);
+  /* Use an actual bold face for compact header actions and the clock. */
+  --skin-font-action-emphasis: var(--skin-font-family-display);
+  --skin-font-action-emphasis-weight: normal;
+  /* Row stripes composite over their own card layer; cells never paint over them. */
+  --skin-table-row-background: var(--skin-transparent);
+  --skin-table-row-alternate-background: var(--skin-surface-canvas-alpha-35);
+  --skin-table-cell-background: var(--skin-transparent);
+  /* Crop the native player-header fade below its visible area. Keep these
+   * values equal/opposite; setting both to 0px restores the native fade. */
+  --skin-player-header-gradient-extension: var(--skin-header-gradient-extension);
+  --skin-player-header-gradient-overlap: var(--skin-header-gradient-overlap);
+  /* Club overview uses the same crop; keep this pair equal/opposite too. */
+  --skin-club-header-gradient-extension: var(--skin-header-gradient-extension);
+  --skin-club-header-gradient-overlap: var(--skin-header-gradient-overlap);
+  /* Let club colour show through summary cards without dimming their contents.
+   * The dark 75% backplate also supports light club colours. */
+  --skin-club-summary-surface: var(--skin-surface-canvas-alpha-75);
+  /* Protect club title/metadata on pale bound colours; artwork stays opaque. */
+  --skin-club-details-scrim: var(--skin-club-summary-surface);
+  /* Support player identity/metadata over pale club paint, without dimming art. */
+  --skin-player-header-content-scrim: var(--skin-club-details-scrim);
+  /* Club Info can bind a pale secondary club colour behind white metadata. */
+  --skin-club-info-header-scrim: var(--skin-club-summary-surface);
+  --skin-club-info-team-surface: var(--skin-club-summary-surface);
+  /* Header content scrim preserves bound competition tint beneath readable ink. */
+  --skin-competition-summary-scrim: var(--skin-surface-canvas-alpha-75);
+
+  --skin-font-bookmark-label: var(--skin-font-secondary-navigation);
+  --skin-font-bookmark-label-size: var(--skin-font-secondary-navigation-size);
+  --skin-font-bookmark-label-weight: var(--skin-font-secondary-navigation-weight);
+  --skin-font-primary-navigation: var(--skin-font-family-navigation);
+  --skin-font-primary-navigation-weight: var(--skin-font-weight-regular);
+  --skin-font-section-heading: var(--skin-font-family-display);
+  --skin-font-section-heading-weight: var(--skin-font-weight-display);
+
+  /* FONT SIZE SCALE
+   * Native typography contracts and fixed-size component copy share this scale.
+   * Values stay independent: dense data and navigation need different sizing.
+   */
+  --skin-font-size-6: 6px;
+  --skin-font-size-7: 7px;
+  --skin-font-size-8: 8px;
+  --skin-font-size-9: 9px;
+  --skin-font-size-10: 10px;
+  --skin-font-size-11: 11px;
+  --skin-font-size-12: 12px;
+  --skin-font-size-13: 13px;
+  --skin-font-size-14: 14px;
+  --skin-font-size-15: 15px;
+  --skin-font-size-16: 16px;
+  --skin-font-size-18: 18px;
+  --skin-font-size-19: 19px;
+  --skin-font-size-20: 20px;
+  --skin-font-size-22: 22px;
+  --skin-font-size-24: 24px;
+  --skin-font-size-26: 26px;
+  --skin-font-size-30: 30px;
+  --skin-font-size-32: 32px;
+  --skin-font-size-36: 36px;
+  --skin-font-size-40: 40px;
+  --skin-font-size-50: 50px;
+  --skin-font-size-56: 56px;
+  --skin-font-size-64: 64px;
+  --skin-font-size-70: 70px;
+  --skin-font-size-128: 128px;
+  --skin-font-size-132: 132px;
+  --skin-font-size-240: 240px;
+  --skin-font-size-377: 377px;
+
+  /* FEEDBACK
+   * Success, info, warning and danger are meaningful status pairs, separate from the UI brand.
+   */
+  --skin-feedback-warning: rgb(244, 180, 108);
+  --skin-feedback-warning-surface: rgb(66, 48, 31);
+  --skin-feedback-danger: rgb(255, 153, 167);
+  --skin-feedback-danger-surface: rgb(73, 44, 53);
+  --skin-feedback-success: rgb(81, 214, 161);
+  --skin-feedback-success-surface: rgb(20, 57, 48);
+  --skin-feedback-success-foreground: var(--skin-feedback-success);
+  /* Low medical risk has its own paired badge roles. Native green copy over
+   * the mustard status-scale surface failed contrast in Risk Assessment. */
+  /* High remains orange, distinct from Increased amber and Very High red.
+   * Opaque badge paint keeps contrast stable over striped/hovered table rows. */
+  --skin-medical-risk-high-background: rgb(64, 39, 31);
+  --skin-medical-risk-high-foreground: rgb(255, 164, 117);
+  --skin-medical-risk-low-background: var(--skin-feedback-success-surface);
+  --skin-medical-risk-low-foreground: var(--skin-feedback-success-foreground);
+  --skin-feedback-info: rgb(117, 198, 245);
+  --skin-feedback-info-surface: rgb(23, 59, 84);
+  --skin-feedback-info-foreground: var(--skin-feedback-info);
+  --skin-feedback-warning-foreground: var(--skin-feedback-warning);
+  --skin-feedback-danger-foreground: var(--skin-feedback-danger);
+
+  /* CORNER SIZES
+   * Set the applicable roles to 0px for square controls/cards; joins and circular artwork have separate rules.
+   */
+  --skin-radius-micro: 2px;
+  --skin-radius-hairline: 1px;
+  --skin-radius-compact: 3px;
+  --skin-radius-small: 4px;
+  --skin-radius-medium: 10px;
+  --skin-radius-control: 8px;
+  --skin-radius-tight: 6px;
+  --skin-radius-card: 12px;
+  --skin-radius-shell: 16px;
+  --skin-radius-pill: 32px;
+  --skin-radius-extra-large: 40px;
+
+  /* MEDIA AND TRANSPARENCY
+   * Media artwork and photograph overlays retain their own foreground/tint roles.
+   */
+  --skin-transparent: rgba(0, 0, 0, 0);
+  --skin-on-media: rgb(255, 255, 255);
+  --skin-background-image-tint: var(--skin-transparent);
+
+  /* ADVANCED: MATCHING ALPHA COLOURS
+   * Explicit RGBA companions. If the matching opaque colour changes, update its RGB channels here too.
+   */
+  --skin-brand-primary-alpha-08: rgba(171, 239, 37, 0.08);
+  --skin-brand-primary-alpha-16: rgba(171, 239, 37, 0.16);
+  --skin-brand-primary-alpha-70: rgba(171, 239, 37, 0.7);
+  --skin-brand-primary-alpha-00: rgba(171, 239, 37, 0);
+  --skin-brand-accent-alpha-40: rgba(171, 239, 37, 0.4);
+  --skin-surface-page-alpha-60: rgba(19, 27, 37, 0.6);
+  --skin-surface-page-alpha-70: rgba(19, 27, 37, 0.7);
+  --skin-surface-page-alpha-100: rgba(19, 27, 37, 1);
+  --skin-brand-accent-alpha-20: rgba(171, 239, 37, 0.2);
+  --skin-brand-accent-alpha-08: var(--skin-brand-primary-alpha-08);
+  --skin-surface-page-alpha-05: rgba(19, 27, 37, 0.05);
+  --skin-surface-page-alpha-72: rgba(19, 27, 37, 0.72);
+  --skin-surface-page-alpha-76: rgba(19, 27, 37, 0.76);
+  --skin-surface-page-alpha-80: rgba(19, 27, 37, 0.8);
+  --skin-surface-page-alpha-85: rgba(19, 27, 37, 0.85);
+  --skin-brand-primary-hover-alpha-00: rgba(189, 243, 89, 0);
+  --skin-feedback-danger-surface-alpha-00: rgba(73, 44, 53, 0);
+  --skin-feedback-danger-alpha-00: rgba(255, 153, 167, 0);
+  --skin-surface-page-alpha-65: rgba(19, 27, 37, 0.65);
+  --skin-surface-page-alpha-35: rgba(19, 27, 37, 0.35);
+  --skin-brand-accent-alpha-35: rgba(171, 239, 37, 0.35);
+  --skin-brand-accent-alpha-16: var(--skin-brand-primary-alpha-16);
+  --skin-surface-canvas-alpha-95: rgba(11, 17, 24, 0.95);
+  --skin-surface-canvas-alpha-90: rgba(11, 17, 24, 0.9);
+  --skin-surface-canvas-alpha-85: rgba(11, 17, 24, 0.85);
+  --skin-surface-canvas-alpha-75: rgba(11, 17, 24, 0.75);
+  --skin-surface-canvas-alpha-65: rgba(11, 17, 24, 0.65);
+  --skin-surface-canvas-alpha-56: rgba(11, 17, 24, 0.56);
+  --skin-surface-canvas-alpha-48: rgba(11, 17, 24, 0.48);
+  --skin-surface-canvas-alpha-40: rgba(11, 17, 24, 0.4);
+  --skin-surface-canvas-alpha-35: rgba(11, 17, 24, 0.35);
+  --skin-surface-canvas-alpha-32: rgba(11, 17, 24, 0.32);
+  --skin-surface-canvas-alpha-20: rgba(11, 17, 24, 0.2);
+  --skin-surface-canvas-alpha-16: rgba(11, 17, 24, 0.16);
+  --skin-surface-canvas-alpha-14: rgba(11, 17, 24, 0.14);
+  --skin-surface-canvas-alpha-12: rgba(11, 17, 24, 0.12);
+  --skin-surface-canvas-alpha-08: rgba(11, 17, 24, 0.08);
+  --skin-surface-canvas-alpha-04: rgba(11, 17, 24, 0.04);
+  --skin-on-media-alpha-90: rgba(255, 255, 255, 0.9);
+  --skin-on-media-alpha-85: rgba(255, 255, 255, 0.85);
+  --skin-on-media-alpha-75: rgba(255, 255, 255, 0.75);
+  --skin-on-media-alpha-65: rgba(255, 255, 255, 0.65);
+  --skin-on-media-alpha-56: rgba(255, 255, 255, 0.56);
+  --skin-on-media-alpha-48: rgba(255, 255, 255, 0.48);
+  --skin-on-media-alpha-40: rgba(255, 255, 255, 0.4);
+  --skin-on-media-alpha-35: rgba(255, 255, 255, 0.35);
+  --skin-on-media-alpha-24: rgba(255, 255, 255, 0.24);
+  --skin-on-media-alpha-20: rgba(255, 255, 255, 0.2);
+  --skin-on-media-alpha-16: rgba(255, 255, 255, 0.16);
+  --skin-on-media-alpha-14: rgba(255, 255, 255, 0.14);
+  --skin-on-media-alpha-12: rgba(255, 255, 255, 0.12);
+  --skin-on-media-alpha-08: rgba(255, 255, 255, 0.08);
+  --skin-on-media-alpha-04: rgba(255, 255, 255, 0.04);
+  --skin-surface-canvas-alpha-70: rgba(11, 17, 24, 0.7);
+  --skin-surface-canvas-alpha-60: rgba(11, 17, 24, 0.6);
+  --skin-surface-canvas-alpha-55: rgba(11, 17, 24, 0.55);
+  --skin-on-media-alpha-18: rgba(255, 255, 255, 0.18);
+  --skin-on-media-alpha-06: rgba(255, 255, 255, 0.06);
+  --skin-on-media-alpha-25: rgba(255, 255, 255, 0.25);
+  --skin-on-media-alpha-11: rgba(255, 255, 255, 0.11);
+  --skin-on-media-alpha-13: rgba(255, 255, 255, 0.13);
+  --skin-on-media-alpha-80: rgba(255, 255, 255, 0.8);
+  --skin-surface-canvas-alpha-30: rgba(11, 17, 24, 0.3);
+  --skin-on-media-alpha-89: rgba(255, 255, 255, 0.89);
+  --skin-on-media-alpha-60: rgba(255, 255, 255, 0.6);
+  --skin-surface-panel-alpha-75: rgba(24, 32, 43, 0.75);
+  --skin-surface-canvas-alpha-58: rgba(11, 17, 24, 0.58);
+  --skin-on-media-alpha-62: rgba(255, 255, 255, 0.62);
+  --skin-on-media-alpha-21: rgba(255, 255, 255, 0.21);
+  --skin-on-media-alpha-10: rgba(255, 255, 255, 0.1);
+  --skin-surface-canvas-alpha-94: rgba(11, 17, 24, 0.94);
+  --skin-surface-canvas-alpha-50: rgba(11, 17, 24, 0.5);
+  --skin-on-media-alpha-50: rgba(255, 255, 255, 0.5);
+  --skin-surface-page-alpha-20: rgba(19, 27, 37, 0.2);
+  --skin-surface-panel-alpha-14: rgba(24, 32, 43, 0.14);
+  --skin-surface-page-alpha-16: rgba(19, 27, 37, 0.16);
+  --skin-on-media-alpha-07: rgba(255, 255, 255, 0.07);
+  --skin-on-media-alpha-84: rgba(255, 255, 255, 0.84);
+  --skin-surface-page-alpha-56: rgba(19, 27, 37, 0.56);
+  --skin-on-media-alpha-15: rgba(255, 255, 255, 0.15);
+  --skin-surface-page-alpha-90: rgba(19, 27, 37, 0.9);
+  --skin-surface-canvas-alpha-45: rgba(11, 17, 24, 0.45);
+  --skin-surface-page-alpha-40: rgba(19, 27, 37, 0.4);
+  --skin-surface-canvas-alpha-25: rgba(11, 17, 24, 0.25);
+  --skin-surface-panel-alpha-10: rgba(24, 32, 43, 0.1);
+  --skin-surface-panel-alpha-20: rgba(24, 32, 43, 0.2);
+  --skin-on-media-alpha-02: rgba(255, 255, 255, 0.02);
+  --skin-surface-page-alpha-14: rgba(19, 27, 37, 0.14);
+  --skin-on-media-alpha-34: rgba(255, 255, 255, 0.34);
+}

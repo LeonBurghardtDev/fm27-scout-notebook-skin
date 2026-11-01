@@ -1,0 +1,863 @@
+/* Edit this stylesheet directly, then reload the skin. Shared values live in theme.uss. */
+
+/* Match
+ * Native match selectors, with adjacent shared rules in source order.
+ */
+
+/* Match focus unavailable.
+ * changes opacity for the whole element and its contents.
+ * Shared rule for 2 selectors. Editing a declaration here affects the whole group below.
+ * Source rule 2854.
+ */
+.match-focus-unavailable,
+.tactics-visualiser-phases-tile-inactive:hover {
+  opacity: 0.25;
+}
+
+/* Match header.
+ * sets spacing around/inside the element.
+ * Shared rule for 2 selectors. Editing a declaration here affects the whole group below.
+ * Source rule 2855.
+ */
+.match-header,
+.prematch-header-date {
+  margin-left: 16px;
+  margin-right: 16px;
+}
+
+/* Match header scorebug.
+ * controls size/placement.
+ * Source rule 2856.
+ */
+.match-header-scorebug {
+  top: -4px;
+}
+
+/* Match load heavy text.
+ * Changes text/foreground colour.
+ * Shared rule for 3 selectors. Editing a declaration here affects the whole group below.
+ * Source rule 2857.
+ */
+.match-load-heavy-text,
+.colour-blind-mid-1-text {
+  color: var(--linear-ranges-4-values-2);
+}
+
+/* Match load light text.
+ * Changes text/foreground colour.
+ * Shared rule for 5 selectors. Editing a declaration here affects the whole group below.
+ * Source rule 2858.
+ */
+.match-load-light-text,
+.assistant-feedback-positive,
+.squad-numbers-dropdown-no-value > .squad-numbers-text,
+.colour-blind-high-text {
+  color: var(--linear-ranges-4-values-4);
+}
+
+/* Match load medium text.
+ * Changes text/foreground colour.
+ * Shared rule for 2 selectors. Editing a declaration here affects the whole group below.
+ * Source rule 2859.
+ */
+.match-load-medium-text,
+.colour-blind-mid-2-text {
+  color: var(--linear-ranges-4-values-3);
+}
+
+/* Match load very heavy text.
+ * Changes text/foreground colour.
+ * Shared rule for 3 selectors. Editing a declaration here affects the whole group below.
+ * Source rule 2860.
+ */
+.match-load-very-heavy-text,
+.assistant-feedback-negative {
+  color: var(--linear-ranges-4-values-1);
+}
+
+/* Match momentum home away graph legend.
+ * sets the outline/corner shape.
+ * Source rule 2861.
+ */
+.match-momentum-home-away-graph-legend {
+  border-top-left-radius: var(--global-radius-large);
+  border-top-right-radius: var(--global-radius-large);
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+  border-left-color: var(--skin-on-media-alpha-16);
+  border-right-color: var(--skin-on-media-alpha-16);
+  border-top-color: var(--skin-on-media-alpha-16);
+  border-bottom-color: var(--skin-on-media-alpha-16);
+  border-left-width: var(--global-border-width-regular);
+  border-right-width: var(--global-border-width-regular);
+  border-top-width: var(--global-border-width-regular);
+}
+
+/* Match momentum team border.
+ * sets the outline/corner shape.
+ * Source rule 2862.
+ */
+.match-momentum-team-border {
+  border-top-width: var(--global-border-width-regular);
+  border-right-width: var(--global-border-width-regular);
+  border-bottom-width: var(--global-border-width-regular);
+  border-left-width: var(--global-border-width-regular);
+  border-radius: var(--global-radius-large);
+  border-left-color: var(--skin-on-media-alpha-16);
+  border-right-color: var(--skin-on-media-alpha-16);
+  border-top-color: var(--skin-on-media-alpha-16);
+  border-bottom-color: var(--skin-on-media-alpha-16);
+}
+
+/* Match outcome chip.
+ * sets the outline/corner shape; controls size/placement; sets spacing around/inside the element.
+ * Source rule 2863.
+ */
+.match-outcome-chip {
+  padding: 2px 8px;
+  border-radius: var(--skin-radius-medium);
+  flex-direction: var(--row-direction-normal);
+}
+
+/* Match outcome chip draw.
+ * sets the background fill.
+ * Source rule 2864.
+ */
+.match-outcome-chip-draw {
+  background-color: var(--colours-base-orange-deep);
+}
+
+/* Match prep session container.
+ * sets the background fill; sets the outline/corner shape; controls size/placement; sets spacing
+ * around/inside the element.
+ * Source rule 2865.
+ */
+.match-prep-session-container {
+  width: 290px;
+  padding: 12px;
+  background-color: var(--skin-surface-panel);
+  align-self: stretch;
+  border-radius: var(--skin-radius-small);
+  margin-right: 8px;
+  flex-grow: 1;
+}
+
+/* Match prep session container large.
+ * controls size/placement.
+ * Source rule 2866.
+ */
+.match-prep-session-container-large {
+  width: 333px;
+}
+
+/* Match prep tile fixture preview.
+ * sets the background fill; sets the outline/corner shape; controls size/placement; sets spacing
+ * around/inside the element.
+ * Source rule 2867.
+ */
+.match-prep-tile-fixture-preview {
+  padding: var(--padding-padding-8);
+  background-color: var(--skin-on-media-alpha-04);
+  align-items: center;
+  align-self: stretch;
+  border-radius: var(--border-radius-radius-4);
+}
+
+/* Match prep training header.
+ * sets the background fill; sets the outline/corner shape; controls size/placement; sets spacing
+ * around/inside the element.
+ * Source rule 2868.
+ */
+.match-prep-training-header {
+  padding: 16px;
+  background-color: var(--skin-surface-panel);
+  align-items: center;
+  align-self: stretch;
+  border-radius: 0 0 var(--skin-radius-small) var(--skin-radius-small);
+  flex-direction: var(--row-direction-normal);
+}
+
+/* Match preview header teams.
+ * controls size/placement.
+ * Shared rule for 2 selectors. Editing a declaration here affects the whole group below.
+ * Source rule 2869.
+ */
+.match-preview-header-teams {
+  width: 100px;
+}
+
+/* Match processing overlay phone background.
+ * sets the background fill; sets the outline/corner shape; controls size/placement; sets spacing
+ * around/inside the element.
+ * Source rule 2870.
+ */
+.match-processing-overlay-phone-background {
+  width: 2px;
+  height: 16px;
+  background-color: var(--skin-surface-canvas-alpha-48);
+  border-radius: var(--skin-radius-hairline);
+  margin-right: 12px;
+}
+
+/* Match rating property variant5.
+ * Shows these elements; sets the background fill; sets the outline/corner shape; controls size/placement.
+ * Source rule 2871.
+ */
+.match-rating-property-variant5 {
+  display: flex;
+  height: 32px;
+  padding: var(--spacing-padding-extra-small---4) var(--spacing-padding-small---8);
+  border-width: 1px;
+  border-color: var(--skin-on-media-alpha-65);
+  background-color: var(--skin-surface-page-alpha-80);
+  justify-content: center;
+  align-items: center;
+  border-radius: var(--spacing-padding-medium---16);
+  margin-right: var(--spacing-padding-extra-small---4);
+}
+
+/* Match report message block.
+ * sets spacing around/inside the element.
+ * Source rule 2872.
+ */
+.match-report-message-block {
+  padding: var(--padding-padding-8);
+}
+
+/* News social reactions card.
+ * controls size/placement.
+ * Source rule 2873.
+ */
+.match-report-social-reactions .news-social-reactions-card {
+  width: 310px;
+}
+
+/* Match rules property 1 expanded.
+ * sets the background fill; sets the outline/corner shape; controls size/placement; sets spacing
+ * around/inside the element.
+ * Source rule 2874.
+ */
+.match-rules-property-1-expanded {
+  padding: var(--spacing-padding-small---8) var(--spacing-padding-medium---16);
+  background-color: var(--skin-surface-panel);
+  flex-direction: column;
+  align-items: flex-start;
+  border-radius: 0 0 var(--skin-radius-shell) var(--skin-radius-shell);
+  border-top-width: 1px;
+  border-top-color: var(--skin-border-subtle);
+}
+
+/* Match simulation badges championship.
+ * controls size/placement.
+ * Source rule 2875.
+ */
+.match-simulation-badges-championship {
+  width: 32px;
+  height: 32px;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  flex-direction: var(--row-direction-normal);
+}
+
+/* SI dropdown selection field.
+ * sets the background fill; sets the outline/corner shape; controls size/placement; sets spacing
+ * around/inside the element.
+ * Source rule 2876.
+ */
+.match-squad-overview-compact .dropdown-base-no-background .si-dropdown__selection-field {
+  height: var(--buttons-global-height-regular);
+  border-width: 0px;
+  background-color: var(--skin-transparent);
+  max-height: 32px;
+  padding-top: var(--global-padding-regular);
+  padding-right: var(--global-padding-large);
+  padding-bottom: var(--global-padding-regular);
+  padding-left: var(--global-padding-large);
+  align-items: center;
+  border-radius: 0px;
+  flex-direction: var(--row-direction-normal);
+  transition-property: var(--transition-props-paint);
+  transition-duration: var(--global-transition-buttons);
+  transition-timing-function: var(--global-transition-animation-buttons);
+}
+
+/* Stepper step.
+ * sets the outline/corner shape; sets spacing around/inside the element.
+ * Source rule 2877.
+ */
+.match-subs-high-count .stepper-step {
+  border-radius: 0;
+  margin-left: 1px;
+  margin-right: 1px;
+}
+
+/* Match viewer 12x4 tab content box.
+ * controls size/placement.
+ * Source rule 2878.
+ */
+.match-viewer-12x4-tab-content-box {
+  justify-content: space-between;
+  align-items: stretch;
+  align-content: stretch;
+  flex-grow: 1;
+  flex-direction: var(--row-direction-always-normal);
+}
+
+/* The overview's centre viewer shares the surrounding dashboard card paint.
+ * Scope past native utility classes; the actual pitch and players keep theirs. */
+#MatchViewer .tile-states-match-simulation-hero-2d-12x4 {
+  background-color: var(--skin-match-overview-card-background);
+  border-width: var(--skin-card-border-width);
+  border-color: var(--skin-card-border-colour);
+  border-radius: var(--skin-radius-card);
+}
+
+/* The squad strip is another overview card. Its small header bands inherit
+ * the item surface so player columns and the sidebar form one neutral bar. */
+#OverviewPrototype .squad-overview-block,
+#OverviewPrototype .squad-overview-item {
+  background-color: var(--skin-match-squad-item-background);
+}
+
+#OverviewPrototype .squad-overview .background-color-layout-ui-tiles-interaction-surface-dark-default {
+  background-color: var(--skin-transparent);
+}
+
+/* The player-info factory binds a dark translucent fill inline. Cover only
+ * that backing with the existing plain paint mask, leaving its content intact. */
+#OverviewPrototype .squad-overview .player-info-property-1-overview-mode {
+  background-image: var(--skin-match-surface-mask);
+  background-size: 100% 100%;
+  -unity-background-image-tint-color: var(--skin-match-squad-item-background);
+}
+
+#OverviewPrototype .squad-overview-item:hover:enabled {
+  --skin-match-squad-item-background: var(--skin-control-hover);
+}
+
+#OverviewPrototype .squad-overview-item:active:enabled {
+  --skin-match-squad-item-background: var(--skin-control-pressed);
+}
+
+/* Match viewer 12x6.
+ * sets the background fill; sets the outline/corner shape; controls size/placement.
+ * Source rule 2879.
+ */
+.match-viewer-12x6 {
+  width: 968px;
+  height: 476px;
+  background-color: var(--skin-on-media-alpha-20);
+  flex-direction: column;
+  align-items: flex-start;
+  flex-shrink: 0;
+  border-radius: var(--layout-modules-block-radius);
+  border-top-color: var(--skin-on-media-alpha-08);
+  border-right-color: var(--skin-on-media-alpha-08);
+  border-bottom-color: var(--skin-on-media-alpha-08);
+  border-left-color: var(--skin-on-media-alpha-08);
+  border-top-width: 1px;
+  border-right-width: 1px;
+  border-bottom-width: 1px;
+  border-left-width: 1px;
+}
+
+/* Match viewer vertical 4x6.
+ * sets the background fill; sets the outline/corner shape; controls size/placement.
+ * Source rule 2880.
+ */
+.match-viewer-vertical_4x6 {
+  width: 312px;
+  height: 476px;
+  border-width: 2px;
+  border-color: var(--skin-border-subtle);
+  background-color: var(--skin-surface-panel);
+  flex-direction: column;
+  align-items: flex-start;
+  flex-shrink: 0;
+  border-radius: var(--skin-radius-card);
+}
+
+/* Match viewer 12x4 team stats block.
+ * controls size/placement.
+ * Source rule 2881.
+ */
+.match-viewer_12x4-team-stats-block {
+  width: 200px;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Match disabled not live.
+ * sets the background fill; sets the outline/corner shape.
+ * Source rule 2882.
+ */
+.match_disabled_not_live {
+  border-width: 1px;
+  background-color: var(--skin-surface-page-alpha-80);
+  border-radius: var(--skin-radius-control);
+}
+
+/* Match disabled not live background.
+ * sets the background fill; sets the outline/corner shape.
+ * Source rule 2883.
+ */
+.match_disabled_not_live_background {
+  border-width: 1px;
+  border-color: var(--skin-on-media-alpha-16);
+  background-color: var(--skin-surface-canvas-alpha-45);
+  border-radius: var(--skin-radius-control);
+}
+
+/* Matchresult filter.
+ * sets the background fill; controls size/placement.
+ * Source rule 2884.
+ */
+.matchresult_filter {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: var(--none);
+  left: 0;
+  top: 0;
+}
+
+/* Sigradient.
+ * sets the gradient colours drawn by this component.
+ * Source rule 2885.
+ */
+.matchresult_filter .sigradient {
+  --start-colour: var(--skin-surface-canvas-alpha-12);
+  --end-colour: var(--skin-surface-canvas-alpha-65);
+}
+
+/* Textfilter bk.
+ * sets the background fill; controls size/placement.
+ * Source rule 2886.
+ */
+.matchresult_filter .textfilter_bk {
+  height: 25%;
+  background-color: var(--skin-surface-canvas-alpha-65);
+}
+
+/* Max height two lines body medium.
+ * controls size/placement.
+ * Shared rule for 2 selectors. Editing a declaration here affects the whole group below.
+ * Source rule 2887.
+ */
+.news-timed-4-4-tile-content .news-tile-header {
+  max-height: 36px;
+}
+
+/* Max size child.
+ * controls size/placement.
+ * Source rule 2888.
+ */
+.max-size-child {
+  min-width: 100%;
+  min-height: 100%;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+/* Max width 220.
+ * controls size/placement.
+ * Shared rule for 2 selectors. Editing a declaration here affects the whole group below.
+ * Source rule 2890.
+ */
+.playerindicator_container {
+  max-width: 220px;
+}
+
+/* Me team sheet body licensed.
+ * sets the background fill; controls size/placement; sets spacing around/inside the element.
+ * Source rule 2891.
+ */
+.me-team-sheet-body-licensed {
+  width: 640px;
+  padding: var(--spacing-large---32) 0;
+  background-color: var(--skin-match-sheet-background);
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Me team sheet licensed default.
+ * sets the outline/corner shape; controls size/placement.
+ * Source rule 2892.
+ */
+.me-team-sheet-licensed-default {
+  width: 640px;
+  border-width: 2px;
+  border-color: var(--skin-on-media-alpha-35);
+  flex-direction: column;
+  align-items: center;
+  border-radius: var(--spacing-tiles);
+}
+
+/* Media dream team text max width.
+ * sets font/text presentation; controls size/placement.
+ * Source rule 2893.
+ */
+.media-dream-team-text-max-width {
+  width: 100px;
+  flex-shrink: 0;
+  -unity-text-align: middle-center;
+}
+
+/* Medical center players wrapped.
+ * controls size/placement.
+ * Source rule 2894.
+ */
+.medical-center-players-wrapped {
+  width: 100%;
+  height: 75px;
+  flex-grow: 0;
+}
+
+/* Medical recently returned post state.
+ * sets the background fill; sets the outline/corner shape; controls size/placement; sets spacing
+ * around/inside the element.
+ * Source rule 2895.
+ */
+.medical-recently-returned-post-state {
+  padding: 24px 12px;
+  border-width: var(--layout-modules-block-border-thickness);
+  border-color: var(--skin-border-subtle);
+  background-color: var(--skin-surface-panel);
+  flex-direction: column;
+  align-items: flex-start;
+  border-radius: var(--layout-modules-block-radius);
+}
+
+/* Medical risk assessment state5.
+ * sets the background fill; sets the outline/corner shape; controls size/placement; sets spacing
+ * around/inside the element.
+ * Source rule 2896.
+ */
+.medical-risk-assessment-state5 {
+  padding: 24px var(--spacing-tiles);
+  border-width: var(--layout-modules-block-border-thickness);
+  border-color: var(--skin-border-subtle);
+  background-color: var(--skin-surface-panel);
+  flex-direction: column;
+  align-items: flex-start;
+  border-radius: var(--layout-modules-block-radius);
+}
+
+/* Match
+ * Native match selectors, with adjacent shared rules in source order.
+ */
+
+/* Touchline shout badge.
+ * sets the background fill; sets the outline/corner shape; controls size/placement; defines how state
+ * changes animate.
+ * Source rule 4162.
+ */
+.touchline-shout-badge {
+  opacity: 0;
+  width: var(--touchline-shout-anim-badge-size);
+  height: var(--touchline-shout-anim-badge-size);
+  background-color: var(--colours-base-blue-deep);
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--touchline-shout-anim-badge-radius);
+  transition-property: opacity;
+  transition-duration: var(--touchline-shout-anim-badge-fade-duration);
+  transition-delay: var(--touchline-shout-anim-badge-fade-out-delay);
+  transition-timing-function: ease-in-out;
+}
+
+/* Touchline shout badge glyph.
+ * controls size/placement; defines how state changes animate.
+ * Source rule 4163.
+ */
+.touchline-shout-badge .touchline-shout-badge-glyph {
+  width: var(--touchline-shout-anim-glyph-size);
+  height: var(--touchline-shout-anim-glyph-size);
+  -unity-background-scale-mode: scale-to-fit;
+  scale: 1 1;
+  transition-property: scale;
+  transition-duration: var(--touchline-shout-anim-glyph-grow-duration);
+  transition-timing-function: ease-in-out;
+}
+
+/* Touchline shout badge overlay.
+ * controls size/placement.
+ * Source rule 4164.
+ */
+.touchline-shout-badge-overlay {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Touchline shout badge.
+ * defines how state changes animate; changes opacity for the whole element and its contents.
+ * Source rule 4165.
+ */
+.touchline-shout-processed .touchline-shout-badge {
+  opacity: 1;
+  transition-delay: var(--touchline-shout-anim-badge-fade-in-delay);
+}
+
+/* Touchline shout badge glyph.
+ * defines how state changes animate.
+ * Source rule 4166.
+ */
+.touchline-shout-processed .touchline-shout-badge .touchline-shout-badge-glyph {
+  scale: var(--touchline-shout-anim-glyph-grow-scale) var(--touchline-shout-anim-glyph-grow-scale);
+  transition-delay: var(--touchline-shout-anim-glyph-grow-delay);
+}
+
+/* Touchline shout shirt.
+ * defines how state changes animate; changes opacity for the whole element and its contents.
+ * Source rule 4167.
+ */
+.touchline-shout-processed .touchline-shout-shirt {
+  opacity: var(--touchline-shout-anim-shirt-faded-opacity);
+  transition-delay: 0s;
+}
+
+/* Touchline shout shirt.
+ * defines how state changes animate; changes opacity for the whole element and its contents.
+ * Source rule 4168.
+ */
+.touchline-shout-shirt {
+  opacity: 1;
+  transition-property: opacity;
+  transition-duration: var(--touchline-shout-anim-shirt-fade-duration);
+  transition-delay: var(--touchline-shout-anim-shirt-fade-in-delay);
+  transition-timing-function: ease-in-out;
+}
+
+/* Tournament position item.
+ * sets the background fill; sets the outline/corner shape; controls size/placement; sets spacing
+ * around/inside the element.
+ * Source rule 4169.
+ */
+.tournament-position-item {
+  background-color: var(--skin-on-media-alpha-16);
+  padding-top: 2px;
+  padding-right: var(--global-padding-regular);
+  padding-bottom: 2px;
+  padding-left: var(--global-padding-regular);
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: var(--skin-radius-card);
+}
+
+/* Track width 4.
+ * supplies local values read by the component styling.
+ * Source rule 4170.
+ */
+.track-width_4 {
+  --track-width: 4px;
+}
+
+/* Training focus tab group.
+ * controls size/placement; sets spacing around/inside the element.
+ * Source rule 4171.
+ */
+.training-focus-tab-group {
+  width: 272px;
+  margin: 0px;
+  padding: 0px;
+  flex-grow: 1;
+}
+
+/* Training ground.
+ * sets the background fill.
+ * Source rule 4172.
+ */
+.training-ground {
+  background-color: var(--colours-base-purple-soft);
+}
+
+/* Training improvement good color.
+ * Changes text/foreground colour.
+ * Source rule 4173.
+ */
+.training-improvement-good-color {
+  color: var(--skin-component-training-improvement-good-color-foreground);
+}
+
+/* Training improvement poor color.
+ * Changes text/foreground colour.
+ * Source rule 4174.
+ */
+.training-improvement-poor-color {
+  color: var(--skin-component-training-improvement-poor-color-foreground);
+}
+
+/* Training improvement terrible color.
+ * Changes text/foreground colour.
+ * Source rule 4175.
+ */
+.training-improvement-terrible-color {
+  color: var(--skin-component-training-improvement-terrible-color-foreground);
+}
+
+/* Preserve the team sheet's native paper/texture and black-on-paper pairing.
+ * The general dark-surface retheme must not turn this paper dark. */
+.me-team-sheet-body-licensed .text-neutral-black {
+  color: var(--skin-match-sheet-foreground);
+}
+
+/* A paper line-up is not a dark data table: leave its rows unstriped. */
+.me-team-sheet-body-licensed .virtualised-list__item,
+.me-team-sheet-body-licensed .virtualised-list__item--odd {
+  background-color: var(--skin-transparent);
+}
+
+/* These native wrappers paint inline purple fills, which background-color USS
+ * cannot replace. A theme-tinted opaque background image covers only their
+ * paint; native layout, borders, corner clipping and content stay intact. */
+#TeamNewsPanel #OppositionTeamChanges .grid-element--Block > * > *,
+#TeamNewsPanel #StaffAdvice .grid-element--Block > * > * {
+  background-image: var(--skin-match-surface-mask);
+  background-size: 100% 100%;
+  -unity-background-image-tint-color: var(--skin-match-card-background);
+}
+
+/* Playback is a filled action; the native image leaf does not inherit text ink.
+ * Scope to the button, preserving scorebug/team images and native controls. */
+#OverviewHeader #playpause:enabled .unity-image {
+  -unity-background-image-tint-color: var(--skin-action-primary-foreground);
+}
+#OverviewHeader #playpause:disabled {
+  background-color: var(--skin-action-disabled-background);
+  border-color: var(--skin-action-disabled-border);
+}
+#OverviewHeader #playpause:disabled .unity-image {
+  -unity-background-image-tint-color: var(--skin-action-disabled-foreground);
+}
+
+/* Match result banners have two decorative paint children; their club badges,
+ * score and fixture text live outside this backdrop. */
+#BindingExpect_MatchResult #Background.entity-background-header {
+  background-color: var(--skin-match-overview-card-background);
+  border-width: var(--skin-card-border-width);
+  border-color: var(--skin-card-border-colour);
+  border-radius: var(--skin-radius-card);
+}
+#BindingExpect_MatchResult #Background.entity-background-header > * {
+  opacity: 0;
+}
+
+/* The in-match player summary has narrower content than its gradient. Use
+ * the shared paint/inverse-content pair about their common left edge. */
+#MatchPlayerReport #Summary {
+  overflow: hidden;
+  border-radius: var(--skin-radius-card);
+}
+#MatchPlayerReport #Summary .sigradient {
+  scale: var(--skin-player-header-horizontal-paint-scale) 1;
+  transform-origin: 0% 50%;
+}
+#MatchPlayerReport #Summary .sigradient > .data-display-player-report-header-property-1-1 {
+  scale: var(--skin-player-header-horizontal-content-scale) 1;
+  transform-origin: 0% 50%;
+  border-width: var(--skin-card-border-width);
+  border-color: var(--skin-card-border-colour);
+}
+
+/* Only the monochrome attribute-view toggle uses action ink; portraits, badges
+ * and the live player-data polygon keep their own colour contracts. */
+#MatchPlayerReport #InfoHeaderFrame .sicheckbox .game-concepts-attributes-small {
+  -unity-background-image-tint-color: var(--skin-text-primary);
+}
+#MatchPlayerReport #InfoHeaderFrame .sicheckbox:checked:enabled .game-concepts-attributes-small {
+  -unity-background-image-tint-color: var(--skin-selection-foreground);
+}
+#MatchPlayerReport #InfoHeaderFrame .sicheckbox:disabled {
+  background-color: var(--skin-action-disabled-background);
+  border-color: var(--skin-action-disabled-border);
+}
+#MatchPlayerReport #InfoHeaderFrame .sicheckbox:disabled .game-concepts-attributes-small {
+  -unity-background-image-tint-color: var(--skin-action-disabled-foreground);
+}
+
+/* Both TeamFormationAdaptive player-table branches use the same ratio cell.
+ * Reclaim only its native 4px horizontal margins; preserve header padding,
+ * column allocation, sort gap, body names, rating/null pills and data.
+ * Ratio text also serves the native tackle/cross/aerial/save percentage cells. */
+#BindingExpect_TeamFormationAdaptiveBlock #StreamedTable SIText#text.body-md.content-no-wrap.content-ellipsis.margin-horizontal-global-gap-small {
+  margin-left: var(--skin-match-summary-ratio-margin);
+  margin-right: var(--skin-match-summary-ratio-margin);
+}
+
+/* The generic scoreboard is used for friendlies and unlicensed competitions.
+ * Its authored heading/body leaves use native ABCSocial, independently of the
+ * skin's general headings. Preserve its size, weight, colours and geometry. */
+#scorebar SIText.heading-md,
+#scorebar SIText.body-xs-strong {
+  -unity-font-definition: var(--typography-family-primary);
+  -unity-font-style: var(--typography-weight-bold);
+}
+
+/* Licensed scorebugs keep their competition's own attached font resources.
+ * These SIText/class pairs are present in current Windows native VTAs.
+ * Type + class outranks generic .sitext/body font roles without changing
+ * native sizing, weight, club ink, CJK choice or score/time geometry.
+ * UEFA lineup-name classes are shared across competitions and deliberately
+ * retain their active sheet's ownership rather than one global font mapping. */
+SIText.pl-licensed-scoreboard-score,
+SIText.pl-licensed-scoreboard-score-compact,
+SIText.pl-licensed-scoreboard-team,
+SIText.pl-licensed-scoreboard-team-cjk,
+SIText.pl-licensed-bold {
+  -unity-font-definition: var(--pl-family-bold);
+}
+SIText.efl-licensed-scoreboard-score,
+Label.efl-licensed-scoreboard-score,
+SIText.efl-licensed-penalty-score {
+  -unity-font-definition: var(--efl-family-xbold);
+}
+SIText.efl-licensed-scoreboard,
+SIText.efl-licensed-extra-time,
+Label.efl-licensed-score-separator,
+SIText.efl-licensed-team,
+SIText.efl-licensed-penalty-number {
+  -unity-font-definition: var(--efl-family-bold);
+}
+SIText.bundesliga-licensed-scoreboard,
+SIText.bundesliga-licensed-scoreboard-strong {
+  -unity-font-definition: var(--bundesliga-family-bold);
+}
+
+/* UEFA's dedicated family classes can coexist with ordinary heading classes.
+ * Preserve competition typography over the skin heading family. UCL and UWCL
+ * resolve their font roles from the installed game.
+ * Europa and Conference author the same Europa family contract.
+ * Aggregate parentheses are Label leaves; they retain that same UCL family. */
+SIText.uefa-champions-font,
+Label.uefa-champions-font {
+  -unity-font-definition: var(--skin-font-family-champions-scoreboard);
+}
+SIText.uefa-europa-font {
+  -unity-font-definition: var(--uel-family-regular);
+}
+/* These native UEFA leaves also carry heading classes. Restore their authored
+ * bold style separately from the skin's static Poppins Bold heading role. */
+SIText.uefa-champions-font.heading-xl,
+SIText.uefa-europa-font.heading-lg {
+  -unity-font-style: var(--typography-weight-bold);
+}
+SIText.uefa-supercup-font {
+  -unity-font-definition: var(--usc-family-regular);
+}
+SIText.uefa-champions-women-regular-font {
+  -unity-font-definition: var(--skin-font-family-uwcl-scoreboard);
+}
+
+/* The 2026 World Cup clocks explicitly use FM's international font role.
+ * Score/team families are edition-dependent native bindings; do not assign
+ * one font to their shared size classes or guess a family from this name. */
+SIText.fifa-world-cup-sans-font-2026 {
+  -unity-font-definition: var(--typography-family-international);
+}

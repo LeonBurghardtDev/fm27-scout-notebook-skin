@@ -1,0 +1,5091 @@
+/* Edit this stylesheet directly, then reload the skin. Shared values live in theme.uss. */
+
+/* Game Screens
+ * Native game screens selectors, with adjacent shared rules in source order.
+ */
+
+/* FM match UI header.
+ * sets the background fill.
+ * Shared rule for 2 selectors. Editing a declaration here affects the whole group below.
+ * Source rule 473.
+ */
+.fm-match-ui-header,
+.fm-match-ui-menu-background {
+  background-color: var(--colours-base-neutral-black);
+}
+
+/* FM match UI efl sky bet red.
+ * sets the background fill.
+ * Source rule 474.
+ */
+.fm-match-ui-efl-sky-bet-red {
+  background-color: var(--colours-efl-sky-bet-red);
+}
+
+/* FM match UI efl red light.
+ * sets the background fill.
+ * Source rule 475.
+ */
+.fm-match-ui-efl-red-light {
+  background-color: var(--colours-efl-red-light);
+}
+
+/* FM match UI efl sky bet gold.
+ * sets the background fill.
+ * Source rule 476.
+ */
+.fm-match-ui-efl-sky-bet-gold {
+  background-color: var(--colours-efl-sky-bet-gold);
+}
+
+/* FM match UI efl sky bet gray.
+ * sets the background fill.
+ * Source rule 477.
+ */
+.fm-match-ui-efl-sky-bet-gray {
+  background-color: var(--colours-efl-sky-bet-gray);
+}
+
+/* FM match UI efl sky bet red light.
+ * sets the background fill.
+ * Source rule 478.
+ */
+.fm-match-ui-efl-sky-bet-red-light {
+  background-color: var(--colours-efl-sky-bet-red-light);
+}
+
+/* FM match UI efl carabao green.
+ * sets the background fill.
+ * Source rule 479.
+ */
+.fm-match-ui-efl-carabao-green {
+  background-color: var(--colours-efl-carabao-green);
+}
+
+/* FM match UI efl carabao green light.
+ * sets the background fill.
+ * Source rule 480.
+ */
+.fm-match-ui-efl-carabao-green-light {
+  background-color: var(--colours-efl-carabao-green-light);
+}
+
+/* FM match UI efl bristol blue.
+ * sets the background fill.
+ * Source rule 481.
+ */
+.fm-match-ui-efl-bristol-blue {
+  background-color: var(--colours-efl-bristol-blue);
+}
+
+/* FM match UI efl bristol blue light.
+ * sets the background fill.
+ * Source rule 482.
+ */
+.fm-match-ui-efl-bristol-blue-light {
+  background-color: var(--colours-efl-bristol-blue-light);
+}
+
+/* Ribbon top anim out.
+ * defines how state changes animate.
+ * Source rule 483.
+ */
+.ribbon-top-anim-out {
+  transition-property: translate;
+  transition-duration: 0.5s;
+  transition-timing-function: ease-in-out;
+  translate: 0 -100px;
+}
+
+/* Ribbon bottom anim out.
+ * defines how state changes animate.
+ * Shared rule for 3 selectors. Editing a declaration here affects the whole group below.
+ * Source rule 484.
+ */
+.ribbon-bottom-anim-out,
+.shortcuts-panel-anim-out,
+.panel--hide .shortcuts-panel {
+  transition-property: translate;
+  transition-duration: 0.5s;
+  transition-timing-function: ease-in-out;
+  translate: 0 100px;
+}
+
+/* Ribbon.
+ * controls size/placement; sets spacing around/inside the element.
+ * Source rule 485.
+ */
+.ribbon {
+  margin: 0px;
+  flex-grow: 1;
+  flex-direction: var(--row-direction-normal);
+  justify-content: flex-start;
+  padding-right: 0;
+}
+
+/* Ribbon justify content left.
+ * controls size/placement.
+ * Source rule 486.
+ */
+.ribbon-justify-content-left {
+  justify-content: flex-start;
+}
+
+/* Ribbon button icon.
+ * controls size/placement.
+ * Source rule 487.
+ */
+.ribbon__button-icon {
+  width: 32px;
+  height: 32px;
+}
+
+/* Ribbon button.
+ * sets the background fill; sets the outline/corner shape; controls size/placement; sets spacing
+ * around/inside the element.
+ * Source rule 488.
+ */
+.ribbon__button {
+  height: 40px;
+  padding: 0 var(--spacing-padding-extra-small---4);
+  border-width: 1px;
+  border-color: var(--skin-component-ribbon-button-border-color);
+  background-color: var(--skin-surface-page);
+  justify-content: center;
+  align-items: center;
+  border-radius: var(--skin-radius-shell);
+  flex-direction: var(--row-direction-normal);
+}
+
+/* Sibutton.
+ * sets the background fill; controls size/placement; sets spacing around/inside the element.
+ * Source rule 489.
+ */
+.ribbon__button .sibutton {
+  height: 32px;
+  padding: 0;
+  background-color: var(--skin-surface-page);
+  justify-content: center;
+  align-items: center;
+  flex-direction: var(--row-direction-normal);
+}
+
+/* Ribbon template continue button.
+ * controls size/placement; sets spacing around/inside the element.
+ * Source rule 490.
+ */
+.ribbon-template-continue-button {
+  margin-right: 8px;
+  align-self: center;
+}
+
+/* Ribbon home continue button.
+ * sets spacing around/inside the element.
+ * Source rule 491.
+ */
+.ribbon-home-continue-button {
+  margin-left: 32px;
+  margin-right: 32px;
+}
+
+/* Calendar
+ * Native calendar selectors, with adjacent shared rules in source order.
+ */
+
+/* Calendar processing.
+ * supplies local values read by the component styling.
+ * Shared rule for 2 selectors. Editing a declaration here affects the whole group below.
+ * Source rule 1499.
+ */
+.calendar---processing,
+.messages---processing {
+  --easing: "ease-out-cubic";
+  --animation-duration: 1.5;
+}
+
+/* Unity group box.
+ * sets spacing around/inside the element.
+ * Source rule 1500.
+ */
+.calendar-button-group .unity-group-box {
+  margin: 0 0 0 16px;
+  padding: 0;
+}
+
+/* Calendar comp event background bundesliga bottomlayer.
+ * sets the background fill.
+ * Source rule 1501.
+ */
+.calendar-comp-event-background-bundesliga-bottomlayer {
+  background-color: var(--skin-data-calendar-comp-event-background-bundesliga-bottomlayer-background);
+}
+
+/* Calendar comp event background bundesliga toplayer.
+ * sets the gradient colours drawn by this component.
+ * Source rule 1502.
+ */
+.calendar-comp-event-background-bundesliga-toplayer {
+  --start-colour: var(--skin-data-calendar-comp-event-background-bundesliga-toplayer-start-colour);
+  --end-colour: var(--skin-data-calendar-comp-event-background-bundesliga-toplayer-end-colour);
+}
+
+/* Calendar comp event background carabao cup bottomlayer.
+ * sets the background fill.
+ * Source rule 1503.
+ */
+.calendar-comp-event-background-carabao-cup-bottomlayer {
+  background-color: var(--skin-data-calendar-comp-event-background-carabao-cup-bottomlayer-background);
+}
+
+/* Calendar comp event background carabao cup toplayer.
+ * sets the gradient colours drawn by this component.
+ * Source rule 1504.
+ */
+.calendar-comp-event-background-carabao-cup-toplayer {
+  --start-colour: var(--skin-data-calendar-comp-event-background-carabao-cup-toplayer-start-colour);
+  --end-colour: var(--skin-transparent);
+}
+
+/* Calendar comp event background champions league bottomlayer.
+ * sets the background fill.
+ * Source rule 1505.
+ */
+.calendar-comp-event-background-champions-league-bottomlayer {
+  background-color: var(--skin-component-calendar-comp-event-background-champions-league-bottomlayer-background);
+}
+
+/* Calendar comp event background champions league toplayer.
+ * sets the gradient colours drawn by this component.
+ * Source rule 1506.
+ */
+.calendar-comp-event-background-champions-league-toplayer {
+  --start-colour: var(--skin-data-calendar-comp-event-background-champions-league-toplayer-start-colour);
+  --end-colour: var(--skin-transparent);
+}
+
+/* Calendar comp event background championship bottomlayer.
+ * sets the background fill.
+ * Source rule 1507.
+ */
+.calendar-comp-event-background-championship-bottomlayer {
+  background-color: var(--skin-component-calendar-comp-event-background-championship-bottomlayer-background);
+}
+
+/* Calendar comp event background championship bottomlayer.
+ * sets the background fill.
+ * Source rule 1507.
+ */
+.calendar-comp-event-background-league-one-bottomlayer {
+  background-color: var(--skin-component-calendar-comp-event-background-league-one-bottomlayer-background);
+}
+
+/* Calendar comp event background championship bottomlayer.
+ * sets the background fill.
+ * Source rule 1507.
+ */
+.calendar-comp-event-background-league-two-bottomlayer {
+  background-color: var(--skin-component-calendar-comp-event-background-league-two-bottomlayer-background);
+}
+
+/* Calendar comp event background championship toplayer.
+ * sets the gradient colours drawn by this component.
+ * Source rule 1508.
+ */
+.calendar-comp-event-background-championship-toplayer {
+  --start-colour: var(--skin-data-calendar-comp-event-background-championship-toplayer-start-colour);
+  --end-colour: var(--skin-transparent);
+}
+
+/* Calendar comp event background championship toplayer.
+ * sets the gradient colours drawn by this component.
+ * Source rule 1508.
+ */
+.calendar-comp-event-background-league-one-toplayer {
+  --start-colour: var(--skin-data-calendar-comp-event-background-league-one-toplayer-start-colour);
+  --end-colour: var(--skin-transparent);
+}
+
+/* Calendar comp event background championship toplayer.
+ * sets the gradient colours drawn by this component.
+ * Source rule 1508.
+ */
+.calendar-comp-event-background-league-two-toplayer {
+  --start-colour: var(--skin-data-calendar-comp-event-background-league-two-toplayer-start-colour);
+  --end-colour: var(--skin-transparent);
+}
+
+/* Calendar comp event background europa conference league bottomlayer.
+ * sets the background fill.
+ * Shared rule for 4 selectors. Editing a declaration here affects the whole group below.
+ * Source rule 1509.
+ */
+.calendar-comp-event-background-europa-conference-league-bottomlayer,
+.calendar-comp-event-background-europa-league-bottomlayer,
+.calendar-comp-event-background-super-cup-bottomlayer,
+.calendar-comp-event-background-womens-champs-league-bottomlayer {
+  background-color: var(--skin-surface-canvas-alpha-50);
+}
+
+/* Calendar comp event background europa conference league toplayer.
+ * sets the gradient colours drawn by this component.
+ * Source rule 1510.
+ */
+.calendar-comp-event-background-europa-conference-league-toplayer {
+  --start-colour: var(--skin-surface-canvas-alpha-50);
+  --end-colour: var(--skin-transparent);
+}
+
+/* Calendar comp event background europa league toplayer.
+ * sets the gradient colours drawn by this component.
+ * Source rule 1511.
+ */
+.calendar-comp-event-background-europa-league-toplayer {
+  --start-colour: var(--skin-surface-canvas-alpha-50);
+  --end-colour: var(--skin-transparent);
+}
+
+/* Calendar comp event background middlelayer.
+ * changes opacity for the whole element and its contents.
+ * Shared rule for 3 selectors. Editing a declaration here affects the whole group below.
+ * Source rule 1512.
+ */
+.calendar-comp-event-background-middlelayer,
+.choose-numbers-section:disabled,
+.dimmed-look {
+  opacity: 0.5;
+}
+
+/* Calendar comp event background premier league bottomlayer.
+ * sets the background fill.
+ * Source rule 1513.
+ */
+.calendar-comp-event-background-premier-league-bottomlayer {
+  background-color: var(--skin-data-calendar-comp-event-background-premier-league-bottomlayer-background);
+}
+
+/* Calendar comp event background premier league toplayer.
+ * sets the gradient colours drawn by this component.
+ * Source rule 1514.
+ */
+.calendar-comp-event-background-premier-league-toplayer {
+  --start-colour: var(--skin-data-calendar-comp-event-background-premier-league-toplayer-start-colour);
+  --end-colour: var(--skin-transparent);
+}
+
+/* Calendar comp event background super cup toplayer.
+ * sets the gradient colours drawn by this component.
+ * Source rule 1515.
+ */
+.calendar-comp-event-background-super-cup-toplayer {
+  --start-colour: var(--skin-surface-canvas-alpha-50);
+  --end-colour: var(--skin-transparent);
+}
+
+/* Calendar comp event background womens champs league toplayer.
+ * sets the gradient colours drawn by this component.
+ * Source rule 1516.
+ */
+.calendar-comp-event-background-womens-champs-league-toplayer {
+  --start-colour: var(--skin-data-calendar-comp-event-background-womens-champs-league-toplayer-start-colour);
+  --end-colour: var(--skin-transparent);
+}
+
+/* Calendar date labels default active.
+ * sets the background fill.
+ * Source rule 1517.
+ */
+/* Today uses a compact Volt date marker, paired with dark ink. */
+.calendar-date-labels-default-active {
+  background-color: var(--skin-selection-background);
+  color: var(--skin-selection-foreground);
+}
+.calendar-date-labels-default-active .sitext,
+.calendar-day-current .calendar-day-text,
+.calendar-day-current .calendar-day-header .sitext {
+  color: var(--skin-selection-foreground);
+}
+
+/* Calendar date labels default future.
+ * sets the background fill.
+ * Source rule 1518.
+ */
+.calendar-date-labels-default-future {
+  background-color: var(--skin-surface-canvas);
+}
+
+/* Calendar date labels default property.
+ * sets the outline/corner shape; controls size/placement; sets spacing around/inside the element.
+ * Source rule 1519.
+ */
+.calendar-date-labels-default-property {
+  height: 18px;
+  min-width: 45px;
+  padding-top: var(--global-padding-extra-small);
+  padding-right: var(--global-padding-regular);
+  padding-bottom: var(--global-padding-extra-small);
+  padding-left: var(--global-padding-regular);
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  border-radius: 9px;
+}
+
+/* Calendar event.
+ * sets the outline/corner shape.
+ * Source rule 1520.
+ */
+.calendar-day-block .calendar-event {
+  border-radius: var(--global-radius-extra-small);
+  overflow: hidden;
+}
+
+/* Calendar day current.
+ * sets the background fill.
+ * Source rule 1521.
+ */
+.calendar-day-current {
+  background-color: var(--colours-brand-primary-08);
+}
+
+/* Calendar header gradient.
+ * sets the gradient colours drawn by this component.
+ * Shared rule for 2 selectors. Editing a declaration here affects the whole group below.
+ * Source rule 1522.
+ */
+.calendar-day-current .calendar-header-gradient,
+.speakto-button-interaction-button-tag-advice-gradient {
+  --start-colour: var(--skin-brand-primary);
+  --end-colour: var(--skin-brand-primary);
+}
+
+/* Calendar day general.
+ * sets the outline/corner shape.
+ * Source rule 1523.
+ */
+.calendar-day-general {
+  border-width: 0 0 1px 1px;
+  border-color: var(--skin-on-media-alpha-08);
+}
+
+/* Calendar day highlighted.
+ * sets the background fill.
+ * Shared rule for 2 selectors. Editing a declaration here affects the whole group below.
+ * Source rule 1524.
+ */
+.calendar-day-highlighted {
+  /* Highlight the day without competing with session category colours. */
+  background-color: var(--skin-selection-muted);
+}
+
+/* Calendar day body.
+ * changes opacity for the whole element and its contents.
+ * Shared rule for 4 selectors. Editing a declaration here affects the whole group below.
+ * Source rule 1525.
+ */
+.calendar-day-passed .calendar-day-body,
+.calendar-day-passed .calendar-event-list,
+.menu-element--selected .main-menu-navigation-default .navigation-tab-dropdown,
+.navigation-tab-portal-default-active-false:hover .navigation-chip {
+  opacity: 0.65;
+}
+
+/* Fixture background border.
+ * sets the outline/corner shape; changes opacity for the whole element and its contents.
+ * Source rule 1526.
+ */
+.calendar-day-passed .calendar-event .fixture-background-border {
+  opacity: 0.35;
+  border-radius: var(--global-radius-extra-small);
+}
+
+/* Calendar day passed.
+ * sets the background fill.
+ * Shared rule for 7 selectors. Editing a declaration here affects the whole group below.
+ * Source rule 1527.
+ */
+.calendar-day-passed,
+.scroller-default #unity-slider,
+.calendar-day-passed .calendar-event-border,
+.calendar-day-passed .calendar-day-future,
+.calendar-day-future .calendar-day-future,
+.nav-on-light .nonDiegeticButton,
+.nav-on-light .nonDiegeticButton #SelectionField {
+  background-color: var(--skin-transparent);
+}
+
+/* Unity scroll view content viewport vertical.
+ * sets spacing around/inside the element.
+ * Source rule 1528.
+ */
+.calendar-days .unity-scroll-view__content-viewport--vertical {
+  padding-top: var(--global-padding-none);
+  padding-bottom: var(--global-padding-none);
+}
+
+/* Calendar days.
+ * sets the background fill; sets the outline/corner shape.
+ * Shared rule for 2 selectors. Editing a declaration here affects the whole group below.
+ * Source rule 1529.
+ */
+.calendar-days,
+.message-container-frame {
+  border-width: var(--layout-modules-block-border-thickness);
+  border-color: var(--skin-border-subtle);
+  background-color: var(--skin-surface-panel);
+  border-radius: var(--layout-modules-block-radius);
+  overflow: hidden;
+}
+
+/* Fixture background border.
+ * sets the outline/corner shape.
+ * Source rule 1530.
+ */
+.calendar-event .fixture-background-border {
+  border-radius: var(--global-radius-extra-small);
+}
+
+/* Calendar event border.
+ * sets the outline/corner shape.
+ * Source rule 1531.
+ */
+.calendar-event-border {
+  border-width: 1px;
+  border-color: var(--skin-border-subtle);
+  border-radius: var(--global-radius-extra-small);
+  overflow: hidden;
+}
+
+/* Calendar event content.
+ * sets spacing around/inside the element.
+ * Source rule 1532.
+ */
+.calendar-event-content {
+  padding: 4px 6px;
+}
+
+/* Calendar event content standard res.
+ * sets spacing around/inside the element.
+ * Shared rule for 2 selectors. Editing a declaration here affects the whole group below.
+ * Source rule 1533.
+ */
+.calendar-event-content-standard-res,
+.player-search-filter-preview-item {
+  padding: 4px 8px 4px 8px;
+}
+
+/* Calendar event content tile.
+ * sets spacing around/inside the element.
+ * Source rule 1534.
+ */
+.calendar-event-content-tile {
+  padding: 3px;
+}
+
+/* Calendar event8x4.
+ * sets spacing around/inside the element.
+ * Source rule 1535.
+ */
+.calendar-event8x4 {
+  padding: 3px 4px 3px 4px;
+  margin-bottom: var(--global-gap-close);
+}
+
+/* Calendar events list padding.
+ * sets spacing around/inside the element.
+ * Source rule 1536.
+ */
+.calendar-events-list-padding {
+  padding: 2px 0 2px 0;
+}
+
+/* Fixture background border.
+ * sets the outline/corner shape.
+ * Source rule 1537.
+ */
+.calendar-fixture-card .fixture-background-border {
+  border-radius: var(--skin-radius-card) var(--skin-radius-card) 0 0;
+}
+
+/* Calendar fixture comp width.
+ * controls size/placement.
+ * Source rule 1538.
+ */
+.calendar-fixture-comp-width {
+  max-width: 120px;
+}
+
+/* Calendar fixtures table cell.
+ * sets spacing around/inside the element.
+ * Source rule 1539.
+ */
+.calendar-fixtures-table-cell {
+  margin: 0 8px 0 8px;
+}
+
+/* Calendar fixtures table cell border.
+ * sets the outline/corner shape; sets spacing around/inside the element.
+ * Source rule 1540.
+ */
+.calendar-fixtures-table-cell-border {
+  padding: 2px 8px 2px 8px;
+  border-width: 1px;
+  border-color: var(--skin-border-subtle);
+  border-radius: var(--global-radius-extra-small);
+}
+
+/* Calendar grid.
+ * sets the background fill; sets the outline/corner shape.
+ * Source rule 1541.
+ */
+.calendar-grid {
+  border-width: var(--layout-modules-block-border-thickness);
+  border-color: var(--skin-border-subtle);
+  background-color: var(--skin-surface-panel);
+  border-radius: var(--layout-modules-block-radius);
+  overflow: hidden;
+}
+
+/* Calendar line height 12.
+ * controls size/placement.
+ * Source rule 1542.
+ */
+.calendar-line-height-12 {
+  min-height: 12px;
+  max-height: 20px;
+}
+
+/* Calendar line height 14.
+ * controls size/placement.
+ * Source rule 1543.
+ */
+.calendar-line-height-14 {
+  min-height: 14px;
+  max-height: 20px;
+}
+
+/* Calendar line height 16.
+ * controls size/placement.
+ * Source rule 1544.
+ */
+.calendar-line-height-16 {
+  min-height: 16px;
+  max-height: 20px;
+}
+
+/* Calendar max res.
+ * controls size/placement.
+ * Source rule 1545.
+ */
+.calendar-max-res {
+  width: auto;
+  height: 732px;
+}
+
+/* Calendar day body.
+ * controls size/placement; sets spacing around/inside the element.
+ * Source rule 1546.
+ */
+.calendar-max-res .calendar-day-general .calendar-day-body {
+  width: 100%;
+  padding: 8px 12px 8px 12px;
+  flex-grow: 1;
+  min-height: 168px;
+}
+
+/* Calendar day header.
+ * controls size/placement; sets spacing around/inside the element.
+ * Shared rule for 2 selectors. Editing a declaration here affects the whole group below.
+ * Source rule 1547.
+ */
+.calendar-max-res .calendar-day-general .calendar-day-header,
+.calendar-max-res .calendar-day-training .calendar-day-header {
+  padding: 8px 0 4px 12px;
+  flex-grow: 0;
+  align-self: stretch;
+  min-height: 28px;
+}
+
+/* Calendar day body.
+ * controls size/placement; sets spacing around/inside the element.
+ * Source rule 1548.
+ */
+.calendar-max-res .calendar-day-training .calendar-day-body {
+  width: 209px;
+  padding: 8px 0 8px 12px;
+  flex-grow: 1;
+  min-height: 136px;
+}
+
+/* Calendar training focus card.
+ * controls size/placement; sets spacing around/inside the element.
+ * Source rule 1549.
+ */
+.calendar-max-res .calendar-training-focus-card {
+  width: 134px;
+  margin: 12px 12px 12px 12px;
+  padding: var(--global-padding-regular);
+}
+
+/* Calendar training week header.
+ * sets spacing around/inside the element.
+ * Source rule 1550.
+ */
+.calendar-max-res .calendar-training-week-header {
+  margin-left: 250px;
+}
+
+/* Calendar week general header.
+ * controls size/placement.
+ * Source rule 1551.
+ */
+.calendar-max-res .calendar-week-general-header {
+  width: auto;
+  flex-shrink: 0;
+  min-width: 223px;
+}
+
+/* Calendar week training header.
+ * controls size/placement.
+ * Source rule 1552.
+ */
+.calendar-max-res .calendar-week-training-header {
+  width: 200px;
+  flex-shrink: 0;
+}
+
+/* Virtualised list item.
+ * sets the background fill.
+ * Shared rule for 15 selectors. Editing a declaration here affects the whole group below.
+ * Source rule 1553.
+ */
+.calendar-max-res .virtualised-list__item,
+.calendar-standard-res .virtualised-list__item,
+.calendar-min-res .virtualised-list__item,
+.training-week .virtualised-list__item,
+.calendar-tile8x4 .calendar-day-body .virtualised-list__item,
+.calendar-tile4x4 .calendar-day-body .virtualised-list__item,
+.game-creation-unemployed-checkbox.inputs-switch-checkbox-default-switch-false--icon-none:checked:hover,
+.layout-tile-interaction-states-universal-size,
+.player-comparison-row-empty,
+.player_search_transfer_interest_radio .unity-radio-button-group__child-active,
+.manager-style-grid-item-checkbox:checked:hover,
+.ige-input-field-ability .unity-base-text-field__input,
+.fm-searchable-combobox__input .unity-base-text-field,
+.fm-searchable-combobox__input .unity-base-text-field__input,
+.sicardtransparent .sicard-container-large {
+  background-color: var(--skin-transparent);
+}
+
+/* Calendar day body.
+ * controls size/placement; sets spacing around/inside the element.
+ * Source rule 1554.
+ */
+.calendar-min-res .calendar-day-general .calendar-day-body {
+  width: 100%;
+  padding: 2px 8px 4px 8px;
+  flex-grow: 1;
+  min-height: 108px;
+}
+
+/* Calendar day header.
+ * controls size/placement; sets spacing around/inside the element.
+ * Shared rule for 3 selectors. Editing a declaration here affects the whole group below.
+ * Source rule 1555.
+ */
+.calendar-min-res .calendar-day-general .calendar-day-header,
+.calendar-standard-res .calendar-day-general .calendar-day-header,
+.calendar-standard-res .calendar-day-training .calendar-day-header {
+  padding: 4px 0 2px 8px;
+  flex-grow: 0;
+  align-self: stretch;
+  min-height: 28px;
+}
+
+/* Calendar day body.
+ * controls size/placement; sets spacing around/inside the element.
+ * Source rule 1556.
+ */
+.calendar-min-res .calendar-day-training .calendar-day-body {
+  width: 124px;
+  padding: 4px 0 4px 8px;
+  flex-grow: 1;
+  min-height: 100px;
+}
+
+/* Calendar day header.
+ * controls size/placement; sets spacing around/inside the element.
+ * Source rule 1557.
+ */
+.calendar-min-res .calendar-day-training .calendar-day-header {
+  padding: 4px 0 4px 8px;
+  flex-grow: 0;
+  align-self: stretch;
+  min-height: 28px;
+}
+
+/* Calendar training focus card.
+ * controls size/placement; sets spacing around/inside the element.
+ * Source rule 1558.
+ */
+.calendar-min-res .calendar-training-focus-card {
+  width: 116px;
+  margin: 12px 12px 12px 12px;
+  padding: var(--global-padding-regular);
+}
+
+/* Calendar week general header.
+ * controls size/placement.
+ * Source rule 1559.
+ */
+.calendar-min-res .calendar-week-general-header {
+  width: auto;
+  flex-shrink: 0;
+  min-width: 108px;
+}
+
+/* Calendar week training header.
+ * controls size/placement.
+ * Source rule 1560.
+ */
+.calendar-min-res .calendar-week-training-header {
+  width: 117px;
+  flex-shrink: 0;
+}
+
+/* Calendar mobile processing.
+ * supplies local values read by the component styling.
+ * Source rule 1561.
+ */
+.calendar-mobile---processing {
+  --easing: "ease-out-cubic";
+  --animation-duration: 3;
+}
+
+/* Calendar nation width.
+ * controls size/placement.
+ * Source rule 1562.
+ */
+.calendar-nation-width {
+  max-width: 60px;
+}
+
+/* Calendar standard res.
+ * controls size/placement.
+ * Source rule 1563.
+ */
+.calendar-standard-res {
+  width: auto;
+  height: 552px;
+}
+
+/* Calendar day body.
+ * controls size/placement; sets spacing around/inside the element.
+ * Source rule 1564.
+ */
+.calendar-standard-res .calendar-day-general .calendar-day-body {
+  width: 100%;
+  padding: 4px 8px 4px 8px;
+  flex-grow: 1;
+  min-height: 96px;
+}
+
+/* Calendar day body.
+ * controls size/placement; sets spacing around/inside the element.
+ * Source rule 1565.
+ */
+.calendar-standard-res .calendar-day-training .calendar-day-body {
+  width: 163px;
+  padding: 4px 4px 4px 8px;
+  flex-grow: 1;
+  min-height: 82px;
+}
+
+/* Calendar training focus card.
+ * controls size/placement; sets spacing around/inside the element.
+ * Source rule 1566.
+ */
+.calendar-standard-res .calendar-training-focus-card {
+  width: 124px;
+  margin: 12px 12px 12px 12px;
+  padding: var(--global-padding-regular);
+}
+
+/* Calendar training week header.
+ * sets spacing around/inside the element.
+ * Shared rule for 2 selectors. Editing a declaration here affects the whole group below.
+ * Source rule 1567.
+ */
+.calendar-standard-res .calendar-training-week-header,
+.calendar-min-res .calendar-training-week-header {
+  margin-left: 176px;
+}
+
+/* Calendar week general header.
+ * controls size/placement.
+ * Source rule 1568.
+ */
+.calendar-standard-res .calendar-week-general-header {
+  width: auto;
+  flex-shrink: 0;
+  min-width: 176px;
+}
+
+/* Calendar week training header.
+ * controls size/placement.
+ * Source rule 1569.
+ */
+.calendar-standard-res .calendar-week-training-header {
+  width: 155px;
+  flex-shrink: 0;
+}
+
+/* Calendar team names.
+ * controls size/placement.
+ * Source rule 1570.
+ */
+.calendar-team-names {
+  max-width: 98px;
+}
+
+/* Calendar team names min.
+ * controls size/placement.
+ * Source rule 1571.
+ */
+.calendar-team-names-min {
+  max-width: 48px;
+}
+
+/* Calendar tile small.
+ * sets the outline/corner shape.
+ * Source rule 1572.
+ */
+.calendar-tile-small {
+  border-width: 0 1px 0 0;
+  border-color: var(--skin-on-media-alpha-08);
+}
+
+/* Calendar day body.
+ * controls size/placement; sets spacing around/inside the element.
+ * Source rule 1573.
+ */
+.calendar-tile-small .calendar-day-body {
+  width: 41px;
+  height: 85px;
+  padding: 3px 0 3px 0;
+  align-items: center;
+}
+
+/* Calendar day header.
+ * controls size/placement.
+ * Source rule 1574.
+ */
+.calendar-tile-small .calendar-day-header {
+  height: 21px;
+  align-self: stretch;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Calendar events list padding.
+ * sets spacing around/inside the element.
+ * Source rule 1575.
+ */
+.calendar-tile-small .calendar-events-list-padding {
+  padding: 1px 0 1px 0;
+}
+
+/* Calendar tile4x4.
+ * sets the outline/corner shape; controls size/placement.
+ * Source rule 1576.
+ */
+.calendar-tile4x4 {
+  width: 278px;
+  height: 37.5px;
+  border-width: 0 0 1px 0;
+  border-color: var(--skin-on-media-alpha-08);
+}
+
+/* Calendar day body.
+ * controls size/placement; sets spacing around/inside the element.
+ * Source rule 1577.
+ */
+.calendar-tile4x4 .calendar-day-body {
+  padding: 0 8px 0 8px;
+  flex-grow: 1;
+  align-self: stretch;
+  justify-content: center;
+}
+
+/* Calendar day header.
+ * controls size/placement; sets spacing around/inside the element.
+ * Source rule 1578.
+ */
+.calendar-tile4x4 .calendar-day-header {
+  width: 54px;
+  padding: 0 0 0 8px;
+  align-self: stretch;
+  justify-content: center;
+}
+
+/* Calendar days.
+ * sets the outline/corner shape.
+ * Source rule 1579.
+ */
+.calendar-tile4x4 .calendar-days {
+  border-width: 0 0 1px 0;
+  border-radius: var(--global-radius-regular);
+  overflow: hidden;
+}
+
+/* Calendar tile8x4.
+ * sets the outline/corner shape.
+ * Source rule 1580.
+ */
+.calendar-tile8x4 {
+  border-width: 0 1px 1px 0;
+  border-color: var(--skin-on-media-alpha-12);
+}
+
+/* Calendar day body.
+ * controls size/placement; sets spacing around/inside the element.
+ * Source rule 1581.
+ */
+.calendar-tile8x4 .calendar-day-body {
+  width: 87px;
+  height: 94px;
+  padding: 4px 7px 7px 7px;
+}
+
+/* Calendar day header.
+ * controls size/placement; sets spacing around/inside the element.
+ * Source rule 1582.
+ */
+.calendar-tile8x4 .calendar-day-header {
+  height: 28px;
+  padding: 8px 8px 4px 8px;
+  align-self: stretch;
+}
+
+/* Calendar day header text.
+ * controls size/placement.
+ * Source rule 1583.
+ */
+.calendar-tile8x4 .calendar-day-header-text {
+  height: var(--height-height-16);
+}
+
+/* Calendar week header.
+ * controls size/placement; sets spacing around/inside the element.
+ * Source rule 1584.
+ */
+.calendar-tile8x4 .calendar-week-header {
+  width: 234px;
+  padding: 16px 0 16px 21px;
+  flex-shrink: 0;
+}
+
+/* Calendar training border.
+ * sets the outline/corner shape; sets spacing around/inside the element.
+ * Source rule 1585.
+ */
+.calendar-training-border {
+  padding: var(--padding-padding-12);
+  border-width: var(--skin-card-border-width);
+  border-color: var(--skin-border-subtle);
+  border-radius: var(--global-radius-small);
+}
+
+/* Calendar training day standard default type upcoming.
+ * sets the outline/corner shape; controls size/placement; sets spacing around/inside the element.
+ * Source rule 1586.
+ */
+.calendar-training-day-standard-default-type-upcoming {
+  flex-grow: 1;
+  min-height: 143.5px;
+  padding-top: var(--global-padding-regular);
+  padding-right: var(--global-padding-regular);
+  padding-bottom: var(--global-padding-regular);
+  padding-left: var(--global-padding-regular);
+  flex-direction: column;
+  align-items: flex-start;
+  border-right-width: 1px;
+  border-right-color: var(--skin-surface-panel);
+  border-bottom-width: 1px;
+  border-bottom-color: var(--skin-surface-panel);
+}
+
+/* Calendar training events min.
+ * controls size/placement; sets spacing around/inside the element.
+ * Source rule 1587.
+ */
+.calendar-training-events-min {
+  width: auto;
+  height: 24px;
+  margin-bottom: var(--global-gap-close);
+}
+
+/* Calendar training events standard.
+ * controls size/placement.
+ * Source rule 1588.
+ */
+.calendar-training-events-standard {
+  width: auto;
+  height: 26px;
+}
+
+/* Calendar training fixture accent.
+ * sets the background fill; controls size/placement.
+ * Source rule 1589.
+ */
+.calendar-training-fixture-accent {
+  position: absolute;
+  width: var(--global-padding-small);
+  background-color: var(--skin-border-subtle);
+  top: 0;
+  bottom: 0;
+  left: 0;
+}
+
+/* Calendar training fixture edit session element.
+ * sets the outline/corner shape; controls size/placement.
+ * Source rule 1590.
+ */
+.calendar-training-fixture-edit-session-element {
+  height: 24px;
+  border-radius: var(--global-radius-small);
+  overflow: hidden;
+  flex-direction: var(--row-direction-normal);
+}
+
+/* Calendar training fixture element.
+ * sets the outline/corner shape; controls size/placement.
+ * Source rule 1591.
+ */
+.calendar-training-fixture-element {
+  height: 32px;
+  border-radius: var(--global-radius-small);
+  overflow: hidden;
+  flex-direction: var(--row-direction-normal);
+}
+
+/* Fixture background border.
+ * sets the outline/corner shape.
+ * Shared rule for 2 selectors. Editing a declaration here affects the whole group below.
+ * Source rule 1592.
+ */
+.calendar-training-fixture-element .calendar-event .fixture-background-border,
+.calendar-training-fixture-edit-session-element .calendar-event .fixture-background-border {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  border-top-right-radius: var(--global-radius-small);
+  border-bottom-right-radius: var(--global-radius-small);
+}
+
+/* Calendar training session button element.
+ * sets spacing around/inside the element.
+ * Shared rule for 2 selectors. Editing a declaration here affects the whole group below.
+ * Source rule 1593.
+ */
+.calendar-training-fixture-element > .calendar-training-session-button-element,
+.calendar-training-fixture-edit-session-element > .calendar-training-session-button-element {
+  padding-left: var(--global-padding-regular);
+}
+
+/* Calendar training session button element.
+ * sets the background fill; controls size/placement; sets spacing around/inside the element.
+ * Source rule 1594.
+ */
+.calendar-training-session-button-element {
+  padding: var(--global-padding-none) var(--global-padding-small);
+  background-color: var(--none);
+  flex-shrink: 1;
+  flex-grow: 1;
+  flex-direction: var(--row-direction-normal);
+  margin-left: var(--global-gap-none);
+  margin-right: var(--global-gap-none);
+  margin-top: var(--global-gap-none);
+  margin-bottom: var(--global-gap-none);
+  align-items: center;
+}
+
+/* Sitext.
+ * sets font/text presentation.
+ * Shared rule for 2 selectors. Editing a declaration here affects the whole group below.
+ * Source rule 1595.
+ */
+.calendar-training-session-button-element > .sitext,
+.shuffle-draft-set-transition-anim-set-text {
+  white-space: nowrap;
+}
+
+/* Calendar training session button element min res.
+ * sets spacing around/inside the element.
+ * Source rule 1596.
+ */
+.calendar-training-session-button-element-min-res {
+  padding: 2px;
+  padding-left: var(--global-padding-small);
+}
+
+/* Calendar training session button element standard res.
+ * sets spacing around/inside the element.
+ * Source rule 1597.
+ */
+.calendar-training-session-button-element-standard-res {
+  padding: var(--global-gap-small);
+}
+
+/* Calendar training session edit session element.
+ * Shows these elements; sets the outline/corner shape; controls size/placement; sets spacing around/inside
+ * the element.
+ * Source rule 1598.
+ */
+.calendar-training-session-edit-session-element {
+  display: flex;
+  height: 24px;
+  padding: var(--global-padding-none);
+  border-width: var(--global-border-regular);
+  border-color: var(--calendar-training-border-colour, var(--colours-base-neutral-white));
+  flex-direction: var(--row-direction-normal);
+  border-left-width: var(--border-width-border-width-4);
+  border-radius: var(--global-radius-small);
+}
+
+/* Calendar training session edit session label.
+ * sets font/text presentation; controls size/placement; sets spacing around/inside the element.
+ * Source rule 1599.
+ */
+.calendar-training-session-edit-session-label {
+  height: 24px;
+  margin-bottom: var(--global-gap-small);
+  -unity-text-align: middle-left;
+}
+
+/* Calendar training session gradient element.
+ * Shows these elements; sets the outline/corner shape; controls size/placement; sets spacing around/inside
+ * the element.
+ * Source rule 1600.
+ */
+.calendar-training-session-gradient-element {
+  display: flex;
+  height: 32px;
+  padding: var(--none);
+  border-width: 1px;
+  border-color: var(--calendar-training-border-colour, var(--skin-border-subtle));
+  border-radius: var(--global-radius-small);
+  border-left-width: var(--border-width-border-width-4);
+  flex-direction: var(--row-direction-normal);
+}
+
+/* Calendar training session icon element.
+ * controls size/placement.
+ * Source rule 1601.
+ */
+.calendar-training-session-icon-element {
+  width: 16px;
+  height: 16px;
+  align-self: center;
+}
+
+/* Calendar training session selection ring.
+ * Hides these elements; sets the outline/corner shape; controls size/placement.
+ * Source rule 1602.
+ */
+.calendar-training-session-selection-ring {
+  position: absolute;
+  display: none;
+  border-width: var(--border-width-border-width-2);
+  border-color: var(--colours-base-neutral-white);
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: var(--global-radius-small);
+}
+
+/* Date selector calendar row.
+ * controls size/placement; sets spacing around/inside the element.
+ * Shared rule for 2 selectors. Editing a declaration here affects the whole group below.
+ * Source rule 1603.
+ */
+.calendar-training-style-override .date-selector__calendar-row,
+.date-selector__calendar-row {
+  padding-bottom: 0px;
+  padding-top: 0px;
+  flex-shrink: 1;
+}
+
+/* Calendar training week header min.
+ * sets spacing around/inside the element.
+ * Source rule 1604.
+ */
+.calendar-training-week-header-min {
+  margin-left: 140px;
+}
+
+/* Calendar training weekly small default type default.
+ * sets the background fill; sets the outline/corner shape; controls size/placement; sets spacing
+ * around/inside the element.
+ * Source rule 1605.
+ */
+.calendar-training-weekly-small-default-type-default {
+  width: 148px;
+  background-color: var(--skin-surface-panel);
+  min-width: 148px;
+  max-width: 190px;
+  padding-top: var(--global-padding-regular);
+  padding-right: var(--global-padding-large);
+  padding-bottom: var(--global-padding-regular);
+  padding-left: var(--global-padding-large);
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: stretch;
+  border-right-width: 1px;
+  border-right-color: var(--skin-surface-panel);
+  border-bottom-width: 1px;
+  border-bottom-color: var(--skin-surface-panel);
+}
+
+/* Calendar training weekly standard default type default.
+ * sets the background fill; sets the outline/corner shape; controls size/placement; sets spacing
+ * around/inside the element.
+ * Source rule 1606.
+ */
+.calendar-training-weekly-standard-default-type-default {
+  width: 231px;
+  background-color: var(--skin-surface-panel);
+  min-width: 190px;
+  max-width: 240px;
+  padding-top: var(--global-padding-regular);
+  padding-right: var(--global-padding-large);
+  padding-bottom: var(--global-padding-regular);
+  padding-left: var(--global-padding-large);
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: stretch;
+  border-right-width: 1px;
+  border-right-color: var(--skin-surface-panel);
+  border-bottom-width: 1px;
+  border-bottom-color: var(--skin-surface-panel);
+}
+
+/* Calendar widget time container.
+ * sets the background fill; sets the outline/corner shape; controls size/placement; sets spacing
+ * around/inside the element.
+ * Source rule 1607.
+ */
+.calendar-widget-time-container {
+  height: 20px;
+  padding: 0px var(--padding-padding-4);
+  background-color: var(--skin-surface-panel);
+  flex-direction: var(--row-direction-normal);
+  justify-content: center;
+  align-items: center;
+  border-radius: var(--interaction-global-radius-sm);
+}
+
+/* Calendar microtileheight.
+ * controls size/placement; sets spacing around/inside the element.
+ * Source rule 1608.
+ */
+.calendar_microtileheight {
+  height: 66px;
+  margin: var(--global-gap-none);
+  padding: var(--global-padding-none);
+}
+
+/* Calender event4x4.
+ * sets spacing around/inside the element.
+ * Shared rule for 3 selectors. Editing a declaration here affects the whole group below.
+ * Source rule 1609.
+ */
+.calender-event4x4,
+.horizontal-list-margin-4 .virtualised-list__item {
+  margin-right: var(--global-gap-close);
+}
+
+/* Game Screens
+ * Native game screens selectors, with adjacent shared rules in source order.
+ */
+
+/* FM card grid paddings.
+ * sets spacing around/inside the element.
+ * Source rule 2175.
+ */
+.fm-card-grid-paddings {
+  padding-top: var(--global-padding-none);
+  padding-bottom: var(--global-padding-large);
+  padding-left: var(--global-padding-large);
+  padding-right: var(--global-padding-large);
+}
+
+/* SI card title bar header.
+ * sets the background fill; sets the outline/corner shape; controls size/placement; sets spacing
+ * around/inside the element.
+ * Source rule 2176.
+ */
+.fm-card-header-large .si-card-title-bar-header {
+  height: 40px;
+  background-color: var(--skin-transparent);
+  border-radius: var(--global-radius-small);
+  margin-top: var(--global-gap-close);
+  margin-bottom: var(--global-gap-close);
+  flex-direction: var(--row-direction-normal);
+  padding-top: var(--global-padding-regular);
+  padding-right: var(--global-padding-extra-large);
+  padding-left: var(--global-padding-extra-large);
+}
+
+/* SI card title bar header.
+ * sets the background fill; sets the outline/corner shape; controls size/placement; sets spacing
+ * around/inside the element.
+ * Source rule 2177.
+ */
+.fm-card-header-small-standard .si-card-title-bar-header {
+  height: 24px;
+  background-color: var(--skin-transparent);
+  border-radius: var(--global-radius-small);
+  margin-top: var(--global-gap-close);
+  margin-bottom: var(--global-gap-close);
+  flex-direction: var(--row-direction-normal);
+  padding-right: var(--global-padding-regular);
+  padding-left: var(--global-padding-extra-large);
+}
+
+/* FM loading symbol pulse.
+ * changes opacity for the whole element and its contents.
+ * Shared rule for 2 selectors. Editing a declaration here affects the whole group below.
+ * Source rule 2178.
+ */
+.fm-loading-symbol-pulse,
+.tactical-tweak-row--disabled .tactical-tweak-row__icon-badge {
+  opacity: 0.4;
+}
+
+/* FM loading symbol pulse base.
+ * defines how state changes animate.
+ * Source rule 2179.
+ */
+.fm-loading-symbol-pulse-base {
+  transition: opacity 0.8s ease-in-out;
+}
+
+/* Left Icon Indicator.
+ * controls size/placement; sets spacing around/inside the element.
+ * Shared rule for 2 selectors. Editing a declaration here affects the whole group below.
+ * Source rule 2180.
+ */
+.fm-menu-dropdown #LeftIconIndicator,
+.fm-menu-dropdown #RightIconIndicator {
+  width: 0px;
+  height: 0px;
+  margin: 0px;
+  padding: 0px;
+}
+
+/* FM menu dropdown row.
+ * controls size/placement; sets spacing around/inside the element.
+ * Source rule 2181.
+ */
+.fm-menu-dropdown-row {
+  width: 195px;
+  height: 32px;
+  min-width: 195px;
+  max-width: 195px;
+  min-height: 32px;
+  max-height: 32px;
+  padding-left: 32px;
+  padding-right: 8px;
+}
+
+/* Unity scroll view.
+ * controls size/placement.
+ * Source rule 2182.
+ */
+.fm-searchable-combobox-popup .unity-scroll-view {
+  width: 100%;
+  align-self: stretch;
+}
+
+/* Unity scroll view content viewport.
+ * controls size/placement.
+ * Shared rule for 2 selectors. Editing a declaration here affects the whole group below.
+ * Source rule 2183.
+ */
+.fm-searchable-combobox-popup .unity-scroll-view__content-viewport,
+.fm-searchable-combobox-popup .unity-scroll-view__content-container {
+  width: 100%;
+  flex-grow: 1;
+}
+
+/* Unity scroll view vertical scroller.
+ * controls size/placement.
+ * Source rule 2184.
+ */
+.fm-searchable-combobox-popup .unity-scroll-view__vertical-scroller {
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+
+/* FM searchable combobox popup.
+ * controls size/placement.
+ * Shared rule for 2 selectors. Editing a declaration here affects the whole group below.
+ * Source rule 2185.
+ */
+.fm-searchable-combobox-popup,
+.fm-searchable-combobox-popup .unity-scroll-view {
+  max-height: 200px;
+}
+
+/* FM searchable combobox chevron button.
+ * sets the background fill; sets the outline/corner shape; controls size/placement.
+ * Source rule 2186.
+ */
+.fm-searchable-combobox__chevron-button {
+  border-width: 1px;
+  border-color: var(--skin-on-media-alpha-35);
+  background-color: var(--skin-control-background);
+  flex-shrink: 0;
+  flex-direction: var(--row-direction-normal);
+  align-items: center;
+  justify-content: center;
+  min-width: 44px;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  border-top-right-radius: var(--interaction-input-field-border-radius-regular);
+  border-bottom-right-radius: var(--interaction-input-field-border-radius-regular);
+}
+
+/* FM searchable combobox container.
+ * controls size/placement.
+ * Source rule 2187.
+ */
+.fm-searchable-combobox__container {
+  flex-direction: var(--row-direction-normal);
+  align-items: stretch;
+  flex-grow: 1;
+}
+
+/* FM searchable combobox input — pointer hover.
+ * Changes text/foreground colour.
+ * Shared rule for 2 selectors. Editing a declaration here affects the whole group below.
+ * Source rule 2188.
+ */
+.fm-searchable-combobox__container:hover .fm-searchable-combobox__input,
+.fm-searchable-combobox__container--focused .fm-searchable-combobox__input {
+  color: var(--interaction-global-color-max-contrast);
+}
+
+/* FM searchable combobox input — pointer hover.
+ * sets the outline/corner shape.
+ * Shared rule for 4 selectors. Editing a declaration here affects the whole group below.
+ * Source rule 2189.
+ */
+.fm-searchable-combobox__container:hover .fm-searchable-combobox__input,
+.fm-searchable-combobox__container:hover .fm-searchable-combobox__chevron-button,
+.fm-searchable-combobox__container--focused .fm-searchable-combobox__input,
+.fm-searchable-combobox__container--focused .fm-searchable-combobox__chevron-button {
+  border-color: var(--interaction-global-color-max-contrast);
+}
+
+/* FM searchable combobox input.
+ * sets the background fill; sets the outline/corner shape; controls size/placement; sets spacing
+ * around/inside the element.
+ * Source rule 2190.
+ */
+.fm-searchable-combobox__input {
+  border-color: var(--skin-on-media-alpha-35);
+  background-color: var(--skin-control-background);
+  flex-grow: 1;
+  flex-shrink: 1;
+  min-height: var(--interaction-global-height-md);
+  justify-content: center;
+  border-top-width: 1px;
+  border-bottom-width: 1px;
+  border-left-width: 1px;
+  border-right-width: 0;
+  border-top-left-radius: var(--interaction-input-field-border-radius-regular);
+  border-bottom-left-radius: var(--interaction-input-field-border-radius-regular);
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  padding-left: var(--global-padding-large);
+  padding-right: var(--global-padding-small);
+}
+
+/* Unity text input.
+ * sets the background fill; sets the outline/corner shape; controls size/placement; sets spacing
+ * around/inside the element.
+ * Source rule 2191.
+ */
+.fm-searchable-combobox__input #unity-text-input {
+  margin: 0;
+  padding: 0;
+  border-width: 0;
+  background-color: var(--skin-transparent);
+  flex-grow: 1;
+}
+
+/* FM tactics bib image.
+ * Hides these elements; controls size/placement.
+ * Source rule 2192.
+ */
+.fm-tactics-bib-image {
+  position: absolute;
+  display: none;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: 0;
+  -unity-background-scale-mode: scale-to-fit;
+}
+
+/* FM tactics shirt button.
+ * sets the background fill; controls size/placement; sets spacing around/inside the element.
+ * Source rule 2193.
+ */
+.fm-tactics-shirt-button {
+  position: absolute;
+  margin: 0px;
+  padding: 0px;
+  background-color: var(--skin-transparent);
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+}
+
+/* FM tactics shirt kit image.
+ * controls size/placement.
+ * Source rule 2194.
+ */
+.fm-tactics-shirt-kit-image {
+  flex-grow: 1;
+  flex-shrink: 0;
+  -unity-background-scale-mode: scale-to-fit;
+}
+
+/* FM tactics shirt name.
+ * controls size/placement.
+ * Source rule 2195.
+ */
+.fm-tactics-shirt-name {
+  position: absolute;
+  width: 100%;
+  top: 10px;
+}
+
+/* FM tactics shirt number.
+ * controls size/placement.
+ * Source rule 2196.
+ */
+.fm-tactics-shirt-number {
+  width: 100%;
+  height: 100%;
+  flex-grow: 1;
+  flex-shrink: 0;
+}
+
+/* FM tool grid negative margin top.
+ * sets spacing around/inside the element.
+ * Source rule 2197.
+ */
+.fm-tool-grid-negative-margin-top {
+  margin-top: -12px;
+}
+
+/* SI card title bar header.
+ * sets the background fill; controls size/placement; sets spacing around/inside the element.
+ * Source rule 2198.
+ */
+.fm-tool-header-large .si-card-title-bar-header {
+  height: 24px;
+  background-color: var(--skin-transparent);
+  margin-top: var(--global-gap-close);
+  margin-bottom: var(--global-gap-close);
+  flex-direction: var(--row-direction-normal);
+  padding-right: var(--global-padding-large);
+  padding-left: var(--global-padding-large);
+}
+
+/* SI card title bar header.
+ * sets the background fill; controls size/placement; sets spacing around/inside the element.
+ * Source rule 2199.
+ */
+.fm-tool-header-small-standard .si-card-title-bar-header {
+  height: 18px;
+  background-color: var(--skin-transparent);
+  margin-top: var(--global-gap-close);
+  margin-bottom: var(--global-gap-close);
+  flex-direction: var(--row-direction-normal);
+  padding-right: var(--global-padding-large);
+  padding-left: var(--global-padding-large);
+}
+
+/* Game Screens
+ * Native game screens selectors, with adjacent shared rules in source order.
+ */
+
+/* Game concepts club badge size medium.
+ * controls size/placement; sets spacing around/inside the element.
+ * Source rule 2359.
+ */
+.game-concepts-club-badge-size-medium {
+  width: 24px;
+  height: 24px;
+  margin-right: 4px;
+}
+
+/* Game concepts expect to play property 1 frame 1164.
+ * controls size/placement; sets spacing around/inside the element.
+ * Shared rule for 2 selectors. Editing a declaration here affects the whole group below.
+ * Source rule 2360.
+ */
+.game-concepts-expect-to-play-property-1-frame-1164,
+.principles-property-1-dedication {
+  width: 16px;
+  height: 16px;
+  margin-right: var(--spacing-small---8);
+}
+
+/* Game concepts fatigue fresh size large.
+ * controls size/placement; sets spacing around/inside the element.
+ * Source rule 2361.
+ */
+.game-concepts-fatigue-fresh-size-large {
+  width: 32px;
+  height: 32px;
+  flex-shrink: 0;
+  margin-bottom: 8px;
+}
+
+/* Game concepts size extra hero.
+ * controls size/placement.
+ * Source rule 2362.
+ */
+.game-concepts-size-extra-hero {
+  width: 72px;
+  height: 72px;
+  flex-shrink: 0;
+}
+
+/* Game concepts size hero.
+ * controls size/placement.
+ * Source rule 2363.
+ */
+.game-concepts-size-hero {
+  width: 64px;
+  height: 64px;
+  flex-shrink: 0;
+}
+
+/* Game concepts size large.
+ * controls size/placement.
+ * Shared rule for 4 selectors. Editing a declaration here affects the whole group below.
+ * Source rule 2364.
+ */
+.game-concepts-size-large,
+.scaling-icons-condition-large,
+.scaling-icons-sharpness-sharpness-large,
+.ui-concepts-size-large {
+  width: var(--spacing-large---32);
+  height: var(--spacing-large---32);
+  flex-shrink: 0;
+}
+
+/* Game creation body min res.
+ * sets the outline/corner shape; controls size/placement.
+ * Source rule 2365.
+ */
+.game-creation-body-min-res {
+  width: 968px;
+  height: 476px;
+  flex-shrink: 0;
+  border-radius: var(--skin-radius-card);
+}
+
+/* Sicontainer horizontal align.
+ * sets spacing around/inside the element.
+ * Source rule 2366.
+ */
+.game-creation-quick-setup-radio-group .sicontainer_horizontal_align {
+  margin: 0 0 16px 0;
+  padding: 8px 16px 8px 16px;
+}
+
+/* Unity radio button.
+ * controls size/placement.
+ * Shared rule for 2 selectors. Editing a declaration here affects the whole group below.
+ * Source rule 2367.
+ */
+.game-creation-quick-setup-radio-group .unity-radio-button,
+.football-career-radio-group .unity-radio-button {
+  align-self: flex-start;
+  min-width: 100%;
+  max-width: 100%;
+}
+
+/* Selected fill and foreground use the paired default Dugout Volt/ink roles.
+ */
+.game-creation-quick-setup-radio-group .unity-radio-button-group__child-active,
+.quick_start-club-selection .unity-radio-button-group__child-active,
+.ige-kit-style-selected-button:hover,
+.manager-background-highest-level-radiogroup .unity-radio-button-group__child-active,
+.football-career-radio-group .unity-radio-button-group__child-active,
+.non-playing-role-radio-group .unity-radio-button-group__child-active {
+  background-color: var(--skin-selection-background);
+  color: var(--skin-selection-foreground);
+}
+
+/* Unity radio button group child last.
+ * sets spacing around/inside the element.
+ * Source rule 2369.
+ */
+.game-creation-quick-setup-radio-group .unity-radio-button-group__child-last {
+  margin: 0 0 0 0;
+  padding: 8px 16px 8px 16px;
+}
+
+/* Unity radio button checkmark.
+ * sets the background fill; controls size/placement; sets spacing around/inside the element.
+ * Source rule 2370.
+ */
+.game-creation-quick-setup-radio-group .unity-radio-button__checkmark {
+  width: auto;
+  height: auto;
+  margin: 3px;
+  background-color: var(--skin-radio-marker-foreground);
+  align-self: stretch;
+  flex-grow: 1;
+}
+
+/* Unity radio button checkmark background.
+ * sets the background fill; sets the outline/corner shape; controls size/placement; sets spacing
+ * around/inside the element.
+ * Shared rule for 3 selectors. Editing a declaration here affects the whole group below.
+ * Source rule 2371.
+ */
+.game-creation-quick-setup-radio-group .unity-radio-button__checkmark-background,
+.football-career-radio-group .unity-radio-button__checkmark-background,
+.non-playing-role-radio-group .unity-radio-button__checkmark-background {
+  width: 16px;
+  height: 16px;
+  border-color: var(--skin-radio-ring-foreground);
+  background-color: var(--none);
+  padding-top: 0;
+}
+
+/* Unity radio button checkmark background.
+ * sets the background fill; sets the outline/corner shape; controls size/placement; sets spacing
+ * around/inside the element.
+ * Source rule 2371.
+ */
+.manager-background-highest-level-radiogroup .unity-radio-button__checkmark-background {
+  width: 16px;
+  height: 16px;
+  background-color: var(--none);
+  padding-top: 0;
+}
+
+/* Unity radio button checkmark background.
+ * sets the background fill; sets the outline/corner shape; controls size/placement; sets spacing
+ * around/inside the element.
+ * Source rule 2371.
+ */
+.manager-coaching-badge-radiobutton .unity-radio-button__checkmark-background {
+  width: 16px;
+  height: 16px;
+  border-color: var(--skin-radio-ring-foreground);
+  background-color: var(--none);
+  padding-top: 0;
+}
+
+/* Inputs switch checkbox default switch false icon none.
+ * sets the background fill; sets the outline/corner shape; controls size/placement; sets spacing
+ * around/inside the element.
+ * Source rule 2372.
+ */
+.game-creation-unemployed-checkbox.inputs-switch-checkbox-default-switch-false--icon-none {
+  margin: 0;
+  border-width: 0;
+  background-color: var(--skin-transparent);
+  flex-direction: var(--row-direction-normal);
+  flex-wrap: nowrap;
+  overflow: hidden;
+}
+
+/* Inputs hybrid task switch button large active false type default — checked/selected.
+ * sets the background fill; sets the outline/corner shape; controls size/placement; sets spacing
+ * around/inside the element.
+ * Source rule 2373.
+ */
+.game-creation-unemployed-checkbox.inputs-switch-checkbox-default-switch-false--icon-none:checked .inputs-hybrid-task_switch_button-large-active-false--type-default {
+  width: 491px;
+  padding: var(--spacing-medium---16);
+  border-width: 1px;
+  border-color: var(--skin-border-subtle);
+  background-color: var(--skin-control-background);
+  align-items: center;
+  border-radius: var(--skin-radius-card);
+  margin-bottom: 0;
+  flex-direction: var(--row-direction-normal);
+}
+
+/* Game creation world cup nation background colour.
+ * sets the background fill.
+ * Source rule 2374.
+ */
+.game-creation-world-cup-nation-background-colour {
+  background-color: var(--skin-component-game-creation-world-cup-nation-background-colour-background);
+}
+
+/* Game creation world cup title large.
+ * controls size/placement.
+ * Source rule 2375.
+ */
+.game-creation-world-cup-title-large {
+  width: 248px;
+}
+
+/* Game creation world cup title small.
+ * controls size/placement.
+ * Source rule 2376.
+ */
+.game-creation-world-cup-title-small {
+  width: 210px;
+}
+
+/* Game setup game summary buttons.
+ * sets spacing around/inside the element.
+ * Source rule 2377.
+ */
+.game-setup-game-summary-buttons {
+  padding-right: 32px;
+  padding-left: 32px;
+  padding-bottom: 32px;
+}
+
+/* Game summary info block.
+ * sets the background fill; sets the outline/corner shape; sets spacing around/inside the element.
+ * Source rule 2378.
+ */
+.game-summary-info-block {
+  padding: 8px;
+  border-width: var(--layout-modules-block-border-thickness);
+  border-color: var(--skin-border-subtle);
+  background-color: var(--skin-on-media-alpha-12);
+  border-top-left-radius: 0px;
+  border-top-right-radius: 0px;
+  border-bottom-left-radius: var(--skin-radius-control);
+  border-bottom-right-radius: var(--skin-radius-control);
+}
+
+/* Selected surface and label use the paired Volt/ink tokens from the default Dugout theme.
+ */
+.game-creation-quick-setup-radio-group .unity-radio-button-group__child-active .sitext,
+.game-creation-quick-setup-radio-group .unity-radio-button-group__child-active .sitextmedium,
+.game-creation-quick-setup-radio-group .unity-radio-button-group__child-active .sitextsmall,
+.quick_start-club-selection .unity-radio-button-group__child-active .sitext,
+.quick_start-club-selection .unity-radio-button-group__child-active .sitextmedium,
+.quick_start-club-selection .unity-radio-button-group__child-active .sitextsmall,
+.ige-kit-style-selected-button:hover .sitext,
+.ige-kit-style-selected-button:hover .sitextmedium,
+.ige-kit-style-selected-button:hover .sitextsmall,
+.manager-background-highest-level-radiogroup .unity-radio-button-group__child-active .sitext,
+.manager-background-highest-level-radiogroup .unity-radio-button-group__child-active .sitextmedium,
+.manager-background-highest-level-radiogroup .unity-radio-button-group__child-active .sitextsmall,
+.football-career-radio-group .unity-radio-button-group__child-active .sitext,
+.football-career-radio-group .unity-radio-button-group__child-active .sitextmedium,
+.football-career-radio-group .unity-radio-button-group__child-active .sitextsmall,
+.non-playing-role-radio-group .unity-radio-button-group__child-active .sitext,
+.non-playing-role-radio-group .unity-radio-button-group__child-active .sitextmedium,
+.non-playing-role-radio-group .unity-radio-button-group__child-active .sitextsmall {
+  color: var(--skin-selection-foreground);
+}
+
+/* Game Screens
+ * Native game screens selectors, with adjacent shared rules in source order.
+ */
+
+/* Unity text element inner input field component.
+ * sets font/text presentation; controls size/placement.
+ * Source rule 2465.
+ */
+.ige-attributes-input-field .unity-text-element--inner-input-field-component {
+  width: 30px;
+  -unity-text-align: middle-center;
+  flex-grow: 0;
+  flex-shrink: 1;
+}
+
+/* Ige attributes table.
+ * sets the background fill.
+ * Shared rule for 2 selectors. Editing a declaration here affects the whole group below.
+ * Source rule 2466.
+ */
+.ige-attributes-table,
+.ige-ability-input-field {
+  background-color: var(--skin-surface-raised);
+}
+
+/* Ige colour field button.
+ * sets the background fill; controls size/placement; sets spacing around/inside the element.
+ * Source rule 2467.
+ */
+.ige-colour-field-button {
+  width: 116px;
+  height: 24px;
+  padding: 0;
+  background-color: var(--skin-transparent);
+}
+
+/* SI dropdown selection field.
+ * Changes text/foreground colour; sets the background fill; sets the outline/corner shape; controls
+ * size/placement.
+ * Source rule 2468.
+ */
+.ige-dropdown.inputs-combobox-default-default-validation-default .si-dropdown__selection-field {
+  height: auto;
+  border-width: var(--global-border-width-thin);
+  border-color: var(--skin-border-subtle);
+  background-color: var(--skin-control-background);
+  color: var(--skin-text-primary);
+  min-width: auto;
+  min-height: 32px;
+  margin-bottom: 0;
+  flex-grow: 0;
+  max-height: 32px;
+  padding-top: 0;
+  padding-right: var(--global-padding-regular);
+  padding-bottom: 0;
+  padding-left: var(--global-padding-regular);
+  align-items: center;
+  border-radius: var(--buttons-global-radius-small);
+  flex-direction: var(--row-direction-normal);
+  transition-property: var(--transition-props-paint);
+  transition-duration: var(--global-transition-buttons);
+  transition-timing-function: var(--global-transition-animation-buttons);
+}
+
+/* Sitext.
+ * sets font/text presentation.
+ * Source rule 2469.
+ */
+.ige-dropdown.inputs-combobox-default-default-validation-default .sitext {
+  overflow: hidden;
+  text-overflow: clip;
+  white-space: normal;
+}
+
+/* Unity base text field input.
+ * sets the background fill; sets the outline/corner shape; controls size/placement.
+ * Source rule 2470.
+ */
+.ige-input-field .unity-base-text-field__input {
+  width: 120px;
+  height: 32px;
+  border-color: var(--skin-on-media-alpha-35);
+  background-color: var(--skin-on-media-alpha-04);
+  justify-content: space-between;
+  align-items: center;
+  align-self: stretch;
+  border-radius: var(--buttons-global-radius-small);
+}
+
+/* Inputs text field default medium type filled.
+ * controls size/placement.
+ * Shared rule for 2 selectors. Editing a declaration here affects the whole group below.
+ * Source rule 2471.
+ */
+.ige-input-field-string.inputs-text-field-default-medium--type-filled,
+.ige-input-field-string .bindableeditbox {
+  width: 215px;
+  min-width: 215px;
+}
+
+/* Ige input int field.
+ * controls size/placement; sets spacing around/inside the element.
+ * Source rule 2472.
+ */
+.ige-input-int-field {
+  width: auto;
+  padding-top: 0;
+  padding-bottom: 0;
+  flex-direction: column-reverse;
+  flex-grow: 0;
+  align-self: flex-start;
+}
+
+/* Ige quick action panel.
+ * controls size/placement.
+ * Source rule 2473.
+ */
+.ige-quick-action-panel {
+  width: 35%;
+  min-width: 35%;
+  max-width: 35%;
+}
+
+/* Ige tab group secondary navigation panel.
+ * sets the background fill; sets the outline/corner shape.
+ * Source rule 2474.
+ */
+.ige-tab-group-secondary-navigation-panel {
+  border-color: var(--skin-on-media-alpha-20);
+  background-color: var(--skin-on-media-alpha-12);
+  border-bottom-width: 1px;
+  border-top-left-radius: var(--skin-radius-small);
+  border-top-right-radius: var(--skin-radius-small);
+}
+
+/* Ios navigation tab property 1 default.
+ * controls size/placement.
+ * Source rule 2475.
+ */
+.ige-tab-group-tab-button .ios-navigation-tab-property-1-default {
+  max-width: 90px;
+}
+
+/* Text.
+ * sets font/text presentation; controls size/placement.
+ * Source rule 2476.
+ */
+.ige-tab-group-tab-button .ios-navigation-tab-property-1-default > #text {
+  text-overflow: ellipsis;
+  max-height: 12px;
+  overflow: hidden;
+}
+
+/* Income type affiliate club.
+ * Changes text/foreground colour; sets the background fill.
+ * Source rule 2477.
+ */
+.income-type-affiliate-club {
+  background-color: var(--skin-component-income-type-affiliate-club-background);
+  color: var(--skin-component-income-type-affiliate-club-foreground);
+}
+
+/* Income type corporate facilities income.
+ * Changes text/foreground colour; sets the background fill.
+ * Source rule 2478.
+ */
+.income-type-corporate-facilities-income {
+  background-color: var(--skin-component-income-type-corporate-facilities-income-background);
+  color: var(--skin-component-income-type-corporate-facilities-income-foreground);
+}
+
+/* Game Screens
+ * Native game screens selectors, with adjacent shared rules in source order.
+ */
+
+/* Shuffle draft default button background.
+ * sets the background fill.
+ * Source rule 3537.
+ */
+.shuffle-draft-default-button-background {
+  background-color: var(--skin-on-media-alpha-14);
+}
+
+/* Shuffle draft draft button background.
+ * sets the background fill.
+ * Shared rule for 2 selectors. Editing a declaration here affects the whole group below.
+ * Source rule 3538.
+ */
+.shuffle-draft-draft-button-background {
+  background-color: var(--skin-action-primary-background);
+}
+
+/* Selected offer rows are data selections, not primary actions. Use the
+ * neutral list-selection surface so names, grades and portraits stay readable. */
+.virtualised-list__item--selected .agent-offer-player-item-header {
+  background-color: var(--skin-list-selection-background);
+  color: var(--skin-text-primary);
+  --buttons-icons-default: var(--skin-text-primary);
+}
+
+/* Child grades/status labels retain their own semantic foreground contracts. */
+
+/* Shuffle draft draft list action button.
+ * controls size/placement.
+ * Source rule 3539.
+ */
+.shuffle-draft-draft-list-action-button {
+  width: 40px;
+  height: 32px;
+  justify-content: center;
+}
+
+/* Shuffle draft draft panel side frame width.
+ * controls size/placement.
+ * Shared rule for 2 selectors. Editing a declaration here affects the whole group below.
+ * Source rule 3540.
+ */
+.shuffle-draft-draft-panel-side-frame-width {
+  width: 300px;
+}
+
+/* Shuffle draft draft squad panel table cell.
+ * controls size/placement; sets spacing around/inside the element.
+ * Source rule 3541.
+ */
+.shuffle-draft-draft-squad-panel-table-cell {
+  height: 28px;
+  padding: 2px var(--numbers-spacing-tables-regular);
+  align-self: stretch;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+/* Shuffle draft draft summary kit text background element.
+ * sets the outline/corner shape; controls size/placement; sets spacing around/inside the element.
+ * Source rule 3542.
+ */
+.shuffle-draft-draft-summary-kit-text-background-element {
+  height: 28px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-right: var(--global-padding-regular);
+  padding-left: var(--global-padding-regular);
+  justify-content: center;
+  align-items: center;
+  align-self: stretch;
+  border-radius: var(--skin-radius-micro);
+}
+
+/* Shuffle draft draft tile action button.
+ * sets the background fill; sets the outline/corner shape; controls size/placement; sets spacing
+ * around/inside the element.
+ * Source rule 3543.
+ */
+.shuffle-draft-draft-tile-action-button {
+  width: 32px;
+  height: 32px;
+  margin: 0;
+  padding: 0;
+  border-width: var(--global-border-regular);
+  border-color: var(--skin-border-subtle);
+  background-color: var(--none);
+  justify-content: center;
+  align-items: center;
+  border-radius: var(--buttons-global-radius-regular);
+  transition: background-color var(--global-transition-buttons) var(--global-transition-animation-buttons);
+}
+
+/* Shuffle draft FM menu button.
+ * controls size/placement.
+ * Source rule 3544.
+ */
+.shuffle-draft-fm-menu-button {
+  max-width: 36px;
+  min-width: 36px;
+}
+
+/* Shuffle draft live picks arrow tint other.
+ * tints background artwork.
+ * Source rule 3545.
+ */
+.shuffle-draft-live-picks-arrow-tint-other {
+  -unity-background-image-tint-color: var(--skin-surface-page);
+}
+
+/* Shuffle draft live picks arrow tint user.
+ * tints background artwork.
+ * Source rule 3546.
+ */
+.shuffle-draft-live-picks-arrow-tint-user {
+  -unity-background-image-tint-color: var(--skin-brand-primary);
+}
+
+/* Shuffle draft live picks body margin.
+ * sets spacing around/inside the element.
+ * Source rule 3547.
+ */
+.shuffle-draft-live-picks-body-margin {
+  margin: 24px 40px 0px 40px;
+}
+
+/* Shuffle draft live picks list.
+ * controls size/placement.
+ * Source rule 3548.
+ */
+.shuffle-draft-live-picks-list {
+  width: 100%;
+  min-width: 800px;
+  max-width: 1600px;
+}
+
+/* Shuffle draft live picks list item.
+ * controls size/placement.
+ * Source rule 3549.
+ */
+.shuffle-draft-live-picks-list-item {
+  width: 800px;
+  max-width: 800px;
+  min-width: 380px;
+}
+
+/* Shuffle draft live picks one column normal.
+ * controls size/placement.
+ * Shared rule for 2 selectors. Editing a declaration here affects the whole group below.
+ * Source rule 3550.
+ */
+.shuffle-draft-live-picks-list.shuffle-draft-live-picks-one-column-normal,
+.shuffle-draft-live-picks-list.shuffle-draft-live-picks-one-column-short {
+  max-width: 800px;
+  min-width: 380px;
+}
+
+/* Shuffle draft live picks tile.
+ * controls size/placement.
+ * Shared rule for 4 selectors. Editing a declaration here affects the whole group below.
+ * Source rule 3551.
+ */
+.shuffle-draft-live-picks-one-column-normal > .shuffle-draft-live-picks-list-item > .shuffle-draft-live-picks-tile,
+.shuffle-draft-live-picks-two-columns-normal > .shuffle-draft-live-picks-list-item > .shuffle-draft-live-picks-tile,
+.shuffle-draft-live-picks-three-columns-normal > .shuffle-draft-live-picks-list-item > .shuffle-draft-live-picks-tile,
+.shuffle-draft-live-picks-four-columns-normal > .shuffle-draft-live-picks-list-item > .shuffle-draft-live-picks-tile {
+  height: 80px;
+}
+
+/* Shuffle draft live picks tile.
+ * controls size/placement.
+ * Shared rule for 4 selectors. Editing a declaration here affects the whole group below.
+ * Source rule 3552.
+ */
+.shuffle-draft-live-picks-one-column-short > .shuffle-draft-live-picks-list-item > .shuffle-draft-live-picks-tile,
+.shuffle-draft-live-picks-two-columns-short > .shuffle-draft-live-picks-list-item > .shuffle-draft-live-picks-tile,
+.shuffle-draft-live-picks-three-columns-short > .shuffle-draft-live-picks-list-item > .shuffle-draft-live-picks-tile,
+.team-selection-header {
+  height: 54px;
+}
+
+/* Shuffle draft live picks skeleton placeholder.
+ * sets the background fill; controls size/placement.
+ * Source rule 3553.
+ */
+.shuffle-draft-live-picks-skeleton-placeholder {
+  background-color: var(--skin-on-media-alpha-04);
+  flex-grow: 1;
+}
+
+/* Shuffle draft live picks list item.
+ * controls size/placement.
+ * Shared rule for 3 selectors. Editing a declaration here affects the whole group below.
+ * Source rule 3554.
+ */
+.shuffle-draft-live-picks-three-columns-normal > .shuffle-draft-live-picks-list-item,
+.shuffle-draft-live-picks-three-columns-short > .shuffle-draft-live-picks-list-item,
+.tactics-subs-block-single-pitch .subs-block-cell {
+  width: 33.3%;
+}
+
+/* Shuffle draft live picks tile.
+ * sets the outline/corner shape; controls size/placement; sets spacing around/inside the element.
+ * Source rule 3555.
+ */
+.shuffle-draft-live-picks-tile {
+  margin: var(--global-gap-close);
+  border-width: 1px;
+  border-color: var(--skin-border-subtle);
+  flex-grow: 1;
+  min-height: 54px;
+  max-height: 80px;
+  border-radius: var(--global-radius-extra-small);
+}
+
+/* Shuffle draft live picks tile base gradient user pick.
+ * sets the gradient colours drawn by this component.
+ * Source rule 3556.
+ */
+.shuffle-draft-live-picks-tile-base-gradient-user-pick {
+  --start-colour: var(--colours-brand-tints-twilight-120);
+  --end-colour: var(--skin-brand-primary);
+}
+
+/* Shuffle draft player report banner.
+ * controls size/placement; sets spacing around/inside the element.
+ * Source rule 3557.
+ */
+.shuffle-draft-player-report-banner {
+  padding: 6px 12px;
+  align-items: center;
+  flex-shrink: 0;
+  flex-grow: 1;
+  flex-direction: var(--row-direction-normal);
+  align-self: stretch;
+}
+
+/* Shuffle draft player report body block right section width.
+ * controls size/placement.
+ * Source rule 3558.
+ */
+.shuffle-draft-player-report-body-block-right-section-width {
+  width: 295px;
+}
+
+/* Shuffle draft player report body block right section width min res.
+ * controls size/placement.
+ * Source rule 3559.
+ */
+.shuffle-draft-player-report-body-block-right-section-width-min-res {
+  width: 132px;
+}
+
+/* Shuffle draft player report top block border.
+ * sets the outline/corner shape.
+ * Source rule 3560.
+ */
+.shuffle-draft-player-report-top-block-border {
+  border-top-left-radius: var(--skin-radius-card);
+  border-top-right-radius: var(--skin-radius-card);
+}
+
+/* Shuffle draft player tile.
+ * sets the background fill; sets the outline/corner shape; controls size/placement; sets spacing
+ * around/inside the element.
+ * Source rule 3561.
+ */
+.shuffle-draft-player-tile {
+  height: 150px;
+  margin: 6px;
+  border-width: var(--global-border-width-thin);
+  border-color: var(--skin-border-subtle);
+  background-color: var(--skin-surface-page-alpha-100);
+  flex-direction: column;
+  border-radius: var(--global-radius-regular);
+  min-height: 140px;
+}
+
+/* Data display draft player selection label.
+ * sets the background fill; sets the outline/corner shape.
+ * Source rule 3562.
+ */
+.shuffle-draft-player-tile--remove .data_display-draft-player-selection-label {
+  border-color: var(--colours-feature-draft-remove-base);
+  background-color: var(--colours-feature-draft-remove-alpha-32);
+}
+
+/* Shuffle draft player tile remove.
+ * sets the outline/corner shape.
+ * Shared rule for 2 selectors. Editing a declaration here affects the whole group below.
+ * Source rule 3563.
+ */
+.shuffle-draft-player-tile--remove,
+.shuffle-draft-player-tile--remove > .shuffle-draft-player-tile-double-border {
+  border-color: var(--colours-feature-draft-remove-base);
+}
+
+/* Data display draft player selection label.
+ * sets the background fill; sets the outline/corner shape.
+ * Source rule 3564.
+ */
+.shuffle-draft-player-tile--return .data_display-draft-player-selection-label {
+  border-color: var(--colours-feature-draft-return-base);
+  background-color: var(--colours-feature-draft-return-alpha-32);
+}
+
+/* Shuffle draft player tile return.
+ * sets the outline/corner shape.
+ * Shared rule for 2 selectors. Editing a declaration here affects the whole group below.
+ * Source rule 3565.
+ */
+.shuffle-draft-player-tile--return,
+.shuffle-draft-player-tile--return > .shuffle-draft-player-tile-double-border {
+  border-color: var(--colours-feature-draft-return-base);
+}
+
+/* Shuffle draft player tile shortlist.
+ * sets the outline/corner shape.
+ * Shared rule for 2 selectors. Editing a declaration here affects the whole group below.
+ * Source rule 3566.
+ */
+.shuffle-draft-player-tile--shortlist,
+.shuffle-draft-player-tile--shortlist > .shuffle-draft-player-tile-double-border {
+  border-color: var(--colours-feature-draft-shortlist-base);
+}
+
+/* Data display draft player selection label.
+ * sets the background fill; sets the outline/corner shape.
+ * Source rule 3567.
+ */
+.shuffle-draft-player-tile--you-drafted .data_display-draft-player-selection-label {
+  border-color: var(--skin-action-primary-background);
+  background-color: var(--skin-data-shuffle-draft-player-tile-you-drafted-data-display-draft-player-selection-label-background);
+}
+
+/* Shuffle draft player tile background.
+ * sets the background artwork.
+ * Native image/font declarations stay with the game; their omitted positions are marked below.
+ * Source rule 3568.
+ */
+.shuffle-draft-player-tile-background {
+  -unity-background-scale-mode: scale-and-crop;
+}
+
+/* Shuffle draft player tile background gradient.
+ * sets the outline/corner shape; sets the gradient colours drawn by this component.
+ * Source rule 3569.
+ */
+.shuffle-draft-player-tile-background-gradient {
+  --start-colour: var(--skin-surface-page-alpha-60);
+  --end-colour: var(--skin-surface-page);
+  border-radius: var(--global-radius-regular);
+}
+
+/* Shuffle draft player tile double border.
+ * sets the outline/corner shape; controls size/placement.
+ * Source rule 3570.
+ */
+.shuffle-draft-player-tile-double-border {
+  position: absolute;
+  border-width: var(--global-border-width-thin);
+  top: -3px;
+  left: -3px;
+  right: -3px;
+  bottom: -3px;
+  border-radius: var(--border-radius-radius-10);
+}
+
+/* Shuffle draft player tile unselected tint.
+ * sets the background fill; tints background artwork.
+ * Source rule 3571.
+ */
+.shuffle-draft-player-tile-unselected-tint {
+  background-color: var(--skin-surface-canvas-alpha-25);
+  -unity-background-image-tint-color: var(--skin-ink);
+}
+
+/* Shuffle draft remove button background.
+ * sets the background fill.
+ * Source rule 3572.
+ */
+.shuffle-draft-remove-button-background {
+  background-color: var(--colours-feature-draft-remove-base);
+}
+
+/* Visual Element.
+ * sets the background fill; sets the outline/corner shape.
+ * Source rule 3573.
+ */
+.shuffle-draft-removing-indicator > #data_display-graph-progress_timeline-progress_indicator > #VisualElement {
+  border-width: 1px;
+  border-color: var(--skin-on-media-alpha-35);
+  background-color: var(--skin-data-shuffle-draft-removing-indicator-data-display-graph-progress-timeline-progress-indicator-visualelement-background);
+}
+
+/* Shuffle draft return button background.
+ * sets the background fill.
+ * Source rule 3574.
+ */
+.shuffle-draft-return-button-background {
+  background-color: var(--colours-feature-draft-return-base);
+}
+
+/* Visual Element.
+ * sets the background fill; sets the outline/corner shape.
+ * Source rule 3575.
+ */
+.shuffle-draft-returning-indicator > #data_display-graph-progress_timeline-progress_indicator > #VisualElement {
+  border-width: 1px;
+  border-color: var(--skin-on-media-alpha-35);
+  background-color: var(--colours-tactics-base-20);
+}
+
+/* Shuffle draft set transition anim frame container.
+ * controls size/placement.
+ * Source rule 3576.
+ */
+.shuffle-draft-set-transition-anim-frame-container {
+  position: absolute;
+  height: 100%;
+  align-self: center;
+  flex-direction: var(--row-direction-always-normal);
+  align-items: center;
+}
+
+/* Shuffle draft set transition anim last text container.
+ * controls size/placement.
+ * Source rule 3577.
+ */
+.shuffle-draft-set-transition-anim-last-text-container {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Shuffle draft set transition anim left tactical area.
+ * controls size/placement; sets spacing around/inside the element.
+ * Source rule 3578.
+ */
+.shuffle-draft-set-transition-anim-left-tactical-area {
+  width: 112px;
+  height: 248px;
+  scale: -1 1;
+  margin-right: 32px;
+}
+
+/* Shuffle draft set transition anim next text container.
+ * controls size/placement.
+ * Source rule 3579.
+ */
+.shuffle-draft-set-transition-anim-next-text-container {
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+/* Shuffle draft set transition anim right tactical area.
+ * controls size/placement; sets spacing around/inside the element.
+ * Source rule 3580.
+ */
+.shuffle-draft-set-transition-anim-right-tactical-area {
+  width: 112px;
+  height: 248px;
+  margin-left: 32px;
+}
+
+/* Shuffle draft set transition anim round container.
+ * controls size/placement.
+ * Source rule 3581.
+ */
+.shuffle-draft-set-transition-anim-round-container {
+  flex-grow: 1;
+  bottom: 200px;
+  align-self: center;
+  justify-content: center;
+}
+
+/* Shuffle draft set transition anim set text container.
+ * controls size/placement.
+ * Source rule 3582.
+ */
+.shuffle-draft-set-transition-anim-set-text-container {
+  height: 100%;
+  justify-content: center;
+}
+
+/* Shuffle draft set transition anim texts container.
+ * controls size/placement.
+ * Source rule 3583.
+ */
+.shuffle-draft-set-transition-anim-texts-container {
+  position: absolute;
+  height: 100%;
+  align-self: center;
+}
+
+/* Shuffle draft shortlist button background.
+ * sets the background fill.
+ * Source rule 3584.
+ */
+.shuffle-draft-shortlist-button-background {
+  background-color: var(--colours-feature-draft-shortlist-base);
+}
+
+/* Shuffledraft explainer card rect.
+ * sets the background fill; sets the outline/corner shape; controls size/placement.
+ * Source rule 3585.
+ */
+.shuffledraft-explainer-card-rect {
+  background-color: var(--skin-surface-page-alpha-100);
+  min-height: 180px;
+  max-height: 280px;
+  border-radius: var(--skin-radius-card);
+  align-self: stretch;
+}
+
+/* Shuffledraft help panel background.
+ * sets the background fill.
+ * Source rule 3586.
+ */
+.shuffledraft-help-panel-background {
+  background-color: var(--skin-surface-page-alpha-90);
+}
+
+/* Shuffledraft help section.
+ * controls size/placement.
+ * Source rule 3587.
+ */
+.shuffledraft-help-section {
+  max-width: 320px;
+  align-items: center;
+  align-self: stretch;
+  flex-grow: 1;
+}
+
+/* Game Screens
+ * Native game screens selectors, with adjacent shared rules in source order.
+ */
+
+/* Tutorial floating continue chevron.
+ * controls size/placement; sets spacing around/inside the element.
+ * Source rule 4233.
+ */
+.tutorial-floating-continue-chevron {
+  height: 16px;
+  padding: 0 var(--numbers-border-radius-medium, 16px);
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  align-self: stretch;
+  flex-direction: var(--row-direction-normal);
+}
+
+/* Tutorial floating main frame.
+ * sets the background fill; sets the outline/corner shape; controls size/placement; sets spacing
+ * around/inside the element.
+ * Source rule 4234.
+ */
+.tutorial-floating-main-frame {
+  padding: 12px 16px;
+  background-color: var(--skin-text-primary);
+  flex-grow: 1;
+  max-width: 640px;
+  padding-left: 12px;
+  padding-right: 12px;
+  border-radius: var(--skin-radius-card);
+}
+
+/* Tutorial floating main frame phone.
+ * sets the background fill; sets the outline/corner shape; controls size/placement; sets spacing
+ * around/inside the element.
+ * Source rule 4235.
+ */
+.tutorial-floating-main-frame-phone {
+  width: 296px;
+  padding: 16px 24px;
+  background-color: var(--skin-text-primary);
+  justify-content: flex-end;
+  align-items: stretch;
+  border-radius: var(--skin-radius-card);
+}
+
+/* Tutorial floating top frame.
+ * controls size/placement; sets spacing around/inside the element.
+ * Source rule 4236.
+ */
+.tutorial-floating-top-frame {
+  justify-content: space-between;
+  align-items: flex-end;
+  align-self: stretch;
+  flex-direction: var(--row-direction-normal);
+  margin-bottom: 16px;
+}
+
+/* Tutorial floating top frame phone.
+ * controls size/placement; sets spacing around/inside the element.
+ * Source rule 4237.
+ */
+.tutorial-floating-top-frame-phone {
+  justify-content: space-between;
+  align-items: flex-end;
+  align-self: stretch;
+  flex-direction: var(--row-direction-normal);
+  margin-bottom: 4px;
+}
+
+/* Tutorial popup background.
+ * controls size/placement.
+ * Source rule 4238.
+ */
+.tutorial-popup-background {
+  flex-grow: 1;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Tutorial text color.
+ * Changes text/foreground colour.
+ * Source rule 4239.
+ */
+.tutorial-text-color {
+  color: var(--skin-surface-page);
+}
+
+/* Tutorial text step color.
+ * Changes text/foreground colour.
+ * Source rule 4240.
+ */
+.tutorial-text-step-color {
+  color: var(--skin-action-primary-background);
+}
+
+/* Tutorial text underline colour.
+ * sets the outline/corner shape.
+ * Source rule 4241.
+ */
+.tutorial-text-underline-colour {
+  border-color: var(--skin-surface-page);
+}
+
+/* UI concepts calendar size small.
+ * controls size/placement; sets spacing around/inside the element; changes opacity for the whole element
+ * and its contents.
+ * Source rule 4242.
+ */
+.ui-concepts-calendar-size-small {
+  opacity: 0.5;
+  width: 16px;
+  height: 16px;
+  padding: 1px;
+  justify-content: center;
+  align-items: center;
+  margin-right: 4px;
+  flex-direction: var(--row-direction-normal);
+}
+
+/* UI concepts notifications indicator.
+ * sets the background fill; sets the outline/corner shape; controls size/placement.
+ * Source rule 4243.
+ */
+.ui-concepts-notifications-indicator {
+  height: var(--height-height-14);
+  background-color: var(--skin-notification-badge-background);
+  color: var(--skin-notification-badge-foreground);
+  justify-content: center;
+  align-items: center;
+  border-radius: var(--border-radius-radius-8);
+}
+
+/* The count leaf carries global-text-primary, so inherited ink is insufficient.
+ * Keep the filled notification badge paired through parent button states. */
+.ui-concepts-notifications-indicator .sitext,
+.ui-concepts-notifications-indicator #IndicatorCount {
+  color: var(--skin-notification-badge-foreground);
+}
+
+/* UI concepts notifications indicator single digit and plus.
+ * controls size/placement.
+ * Source rule 4244.
+ */
+.ui-concepts-notifications-indicator-single-digit-and-plus {
+  width: var(--width-height-20);
+}
+
+/* UI concepts object preview small.
+ * defines how state changes animate; changes opacity for the whole element and its contents.
+ * Source rule 4245.
+ */
+.ui-concepts-object-preview_small {
+  opacity: 0.65;
+  transition: opacity 0.15s ease;
+}
+
+/* UI concepts placeholder size small.
+ * Hides these elements; controls size/placement; sets spacing around/inside the element.
+ * Source rule 4246.
+ */
+.ui-concepts-placeholder-size-small {
+  display: none;
+  width: 16px;
+  height: 16px;
+  margin-right: 4px;
+}
+
+/* UI concepts tick size small.
+ * controls size/placement; sets spacing around/inside the element.
+ * Source rule 4247.
+ */
+.ui-concepts-tick-size-small {
+  width: 16px;
+  height: 16px;
+  margin-right: var(--spacing-extra-small---4);
+}
+
+/* UI concepts warning icon colour.
+ * tints background artwork.
+ * Shared rule for 3 selectors. Editing a declaration here affects the whole group below.
+ * Source rule 4248.
+ */
+.ui-concepts-warning-icon-colour,
+.youth-atmosphere-poor-image,
+.tint-color-linear-ranges-7-values-3 {
+  -unity-background-image-tint-color: var(--linear-ranges-7-values-3);
+}
+
+/* UI icon no fill background.
+ * sets the background fill; sets the outline/corner shape.
+ * Shared rule for 2 selectors. Editing a declaration here affects the whole group below.
+ * Source rule 4249.
+ */
+.ui-icon-no-fill-background,
+.ui-icon-no-fill-background:disabled {
+  border-color: var(--skin-transparent);
+  background-color: var(--skin-transparent);
+}
+
+/* Unavailable players property 1 default.
+ * controls size/placement; sets spacing around/inside the element.
+ * Source rule 4250.
+ */
+.unavailable-players-property-1-default {
+  padding: 8px var(--spacing-padding-small---8);
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 0;
+}
+
+/* Units block unit details.
+ * sets spacing around/inside the element.
+ * Shared rule for 2 selectors. Editing a declaration here affects the whole group below.
+ * Source rule 4251.
+ */
+.units-block-unit-details,
+.mentoring-frame {
+  padding: 16px;
+}
+
+/* Unity radio button.
+ * sets the background fill; defines how state changes animate.
+ * Source rule 4252.
+ */
+.unity-radio-button {
+  background-color: var(--skin-transparent);
+  transition: background-color var(--global-transition-buttons) var(--global-transition-animation-buttons), border-color var(--global-transition-buttons) var(--global-transition-animation-buttons), border-radius var(--global-transition-buttons) var(--global-transition-animation-buttons);
+}
+
+/* Unity radio button checkmark background — keyboard focus.
+ * sets the outline/corner shape.
+ * Shared rule for 3 selectors. Editing a declaration here affects the whole group below.
+ * Source rule 4253.
+ */
+.unity-radio-button > .unity-radio-button__input:focus:enabled > .unity-radio-button__checkmark-background,
+.unity-base-text-field:hover:enabled > .unity-base-text-field__input,
+.unity-base-text-field:focus:enabled > .unity-base-text-field__input {
+  border-color: var(--colours-base-neutral-white);
+}
+
+/* Unity radio button container.
+ * controls size/placement.
+ * Source rule 4254.
+ */
+.unity-radio-button__container {
+  width: 100%;
+  align-self: center;
+}
+
+/* Calendar
+ * Native calendar selectors, with adjacent shared rules in source order.
+ */
+
+/* Calendar training gradient extra curricular.
+ * sets the gradient colours drawn by this component.
+ * Source rule 4392.
+ */
+.calendar-training-gradient-extra-curricular {
+  --start-colour: var(--colours-calendar-training-extra-curricular-start);
+  --end-colour: var(--colours-calendar-training-extra-curricular-end);
+  --calendar-training-border-colour: var(--colours-base-orange-strong);
+}
+
+/* Calendar training gradient footballing development.
+ * sets the gradient colours drawn by this component.
+ * Source rule 4393.
+ */
+.calendar-training-gradient-footballing-development {
+  --start-colour: var(--colours-calendar-training-footballing-development-start);
+  --end-colour: var(--colours-calendar-training-footballing-development-end);
+  --calendar-training-border-colour: var(--colours-base-pink-strong);
+}
+
+/* Calendar training gradient match preparation.
+ * sets the gradient colours drawn by this component.
+ * Source rule 4394.
+ */
+.calendar-training-gradient-match-preparation {
+  --start-colour: var(--colours-calendar-training-match-preparation-start);
+  --end-colour: var(--colours-calendar-training-match-preparation-end);
+  --calendar-training-border-colour: var(--colours-base-blue-strong);
+}
+
+/* Calendar training gradient physical and recovery.
+ * sets the gradient colours drawn by this component.
+ * Source rule 4395.
+ */
+.calendar-training-gradient-physical-and-recovery {
+  --start-colour: var(--colours-calendar-training-physical-and-recovery-start);
+  --end-colour: var(--colours-calendar-training-physical-and-recovery-end);
+  --calendar-training-border-colour: var(--colours-base-red-strong);
+}
+
+/* Calendar training gradient rest.
+ * sets the gradient colours drawn by this component.
+ * Source rule 4396.
+ */
+.calendar-training-gradient-rest {
+  --start-colour: var(--skin-on-media-alpha-20);
+  --end-colour: var(--skin-on-media-alpha-20);
+  --calendar-training-border-colour: var(--colours-base-grey-strong);
+}
+
+/* Calendar training gradient tactical understanding.
+ * sets the gradient colours drawn by this component.
+ * Source rule 4397.
+ */
+.calendar-training-gradient-tactical-understanding {
+  --start-colour: var(--colours-calendar-training-tactical-understanding-start);
+  --end-colour: var(--colours-calendar-training-tactical-understanding-end);
+  --calendar-training-border-colour: var(--colours-tactics-base-20);
+}
+
+/* Calendar training gradient travel.
+ * sets the gradient colours drawn by this component.
+ * Source rule 4398.
+ */
+.calendar-training-gradient-travel {
+  --start-colour: var(--colours-base-grey-deep);
+  --end-colour: var(--colours-base-grey-deep);
+  --calendar-training-border-colour: var(--colours-base-grey-deep);
+}
+
+/* Champions league blue.
+ * sets the background fill.
+ * Source rule 4399.
+ */
+.champions-league-blue {
+  background-color: var(--colours-champions-league-blue);
+}
+
+/* Champions league dark blue.
+ * Changes text/foreground colour.
+ * Source rule 4400.
+ */
+.champions-league-dark-blue {
+  color: var(--colours-champions-league-dark-blue);
+}
+
+/* Champions league grey.
+ * sets the background fill.
+ * Source rule 4401.
+ */
+.champions-league-grey {
+  background-color: var(--colours-champions-league-grey);
+}
+
+/* Champions league light blue.
+ * Changes text/foreground colour.
+ * Source rule 4402.
+ */
+.champions-league-light-blue {
+  color: var(--colours-champions-league-light-blue);
+}
+
+/* Colours base red 20.
+ * Changes text/foreground colour.
+ * Shared rule for 4 selectors. Editing a declaration here affects the whole group below.
+ * Source rule 4403.
+ */
+.colours-base-red-20,
+.general-performance-much-worse,
+.job-security-precarious-text,
+.recruitment-focus-capacity-warning-text {
+  color: var(--colours-base-red-soft);
+}
+
+/* Team report form defeat.
+ * Changes text/foreground colour.
+ * Source rule 4404.
+ */
+.team-report-form-defeat {
+  color: var(--colours-base-red-strong);
+}
+
+/* Colours brand foundation horizon.
+ * Changes text/foreground colour.
+ * Source rule 4405.
+ */
+.colours-brand-foundation-horizon {
+  color: var(--skin-text-link);
+}
+
+/* Colours brand foundation horizon background.
+ * sets the background fill.
+ * Source rule 4406.
+ */
+.colours-brand-foundation-horizon-background {
+  background-color: var(--skin-brand-accent);
+}
+
+/* Colours brand foundation horizon tint.
+ * tints background artwork.
+ * Source rule 4407.
+ */
+.colours-brand-foundation-horizon-tint {
+  -unity-background-image-tint-color: var(--skin-brand-accent);
+}
+
+/* Colours brand foundation twilight background.
+ * sets the background fill.
+ * Source rule 4408.
+ */
+.colours-brand-foundation-twilight-background {
+  background-color: var(--skin-brand-primary);
+}
+
+/* Communication feedback information.
+ * Changes text/foreground colour.
+ * Source rule 4409.
+ */
+.communication-feedback-information {
+  color: var(--communication-feedback-information);
+}
+
+/* Game Screens
+ * Native game screens selectors, with adjacent shared rules in source order.
+ */
+
+/* Game concepts action zones large.
+ * sets the background artwork; controls size/placement.
+ * Native image/font declarations stay with the game; their omitted positions are marked below.
+ * Source rule 5150.
+ */
+.game-concepts-action-zones_large {
+  width: var(--spacing-large---32);
+  height: var(--spacing-large---32);
+  flex-shrink: 0;
+}
+
+/* Game concepts action zones medium.
+ * sets the background artwork; controls size/placement.
+ * Native image/font declarations stay with the game; their omitted positions are marked below.
+ * Source rule 5151.
+ */
+.game-concepts-action-zones_medium {
+  width: 24px;
+  flex-shrink: 0;
+}
+
+/* Game concepts action zones small.
+ * sets the background artwork; controls size/placement.
+ * Native image/font declarations stay with the game; their omitted positions are marked below.
+ * Source rule 5152.
+ */
+.game-concepts-action-zones_small {
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+}
+
+/* Game concepts adjust budgets.
+ * sets the background artwork; controls size/placement.
+ * Native image/font declarations stay with the game; their omitted positions are marked below.
+ * Source rule 5153.
+ */
+.game-concepts-adjust-budgets {
+  flex-shrink: 0;
+}
+
+/* Game concepts advice dugout large.
+ * sets the background artwork; controls size/placement.
+ * Native image/font declarations stay with the game; their omitted positions are marked below.
+ * Source rule 5154.
+ */
+.game-concepts-advice-dugout_large {
+  width: var(--spacing-large---32);
+  height: var(--spacing-large---32);
+  flex-shrink: 0;
+}
+
+/* Game concepts aerial reach.
+ * sets the background artwork; controls size/placement.
+ * Native image/font declarations stay with the game; their omitted positions are marked below.
+ * Source rule 5155.
+ */
+.game-concepts-aerial-reach {
+  flex-shrink: 0;
+}
+
+/* Game concepts affiliate.
+ * sets the background artwork; controls size/placement.
+ * Native image/font declarations stay with the game; their omitted positions are marked below.
+ * Source rule 5156.
+ */
+.game-concepts-affiliate {
+  flex-shrink: 0;
+}
+
+/* Game concepts analyst bar chart large.
+ * sets the background artwork; controls size/placement.
+ * Native image/font declarations stay with the game; their omitted positions are marked below.
+ * Source rule 5157.
+ */
+.game-concepts-analyst-bar-chart_large {
+  width: var(--spacing-large---32);
+  height: var(--spacing-large---32);
+  flex-shrink: 0;
+}
+
+/* Game concepts analyst bar chart medium.
+ * sets the background artwork; controls size/placement.
+ * Native image/font declarations stay with the game; their omitted positions are marked below.
+ * Source rule 5158.
+ */
+.game-concepts-analyst-bar-chart_medium {
+  width: 24px;
+  flex-shrink: 0;
+}
+
+/* Game concepts analyst bar chart small.
+ * sets the background artwork; controls size/placement.
+ * Native image/font declarations stay with the game; their omitted positions are marked below.
+ * Source rule 5159.
+ */
+.game-concepts-analyst-bar-chart_small {
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+}
+
+/* Game concepts assist large.
+ * sets the background artwork; controls size/placement.
+ * Native image/font declarations stay with the game; their omitted positions are marked below.
+ * Source rule 5160.
+ */
+.game-concepts-assist_large {
+  width: var(--spacing-large---32);
+  height: var(--spacing-large---32);
+  flex-shrink: 0;
+}
+
+/* Game concepts assist medium.
+ * sets the background artwork; controls size/placement.
+ * Native image/font declarations stay with the game; their omitted positions are marked below.
+ * Source rule 5161.
+ */
+.game-concepts-assist_medium {
+  width: 24px;
+  flex-shrink: 0;
+}
+
+/* Game concepts assist small.
+ * sets the background artwork; controls size/placement.
+ * Native image/font declarations stay with the game; their omitted positions are marked below.
+ * Source rule 5162.
+ */
+.game-concepts-assist_small {
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+}
+
+/* Game concepts attacking.
+ * sets the background artwork; controls size/placement.
+ * Native image/font declarations stay with the game; their omitted positions are marked below.
+ * Source rule 5163.
+ */
+.game-concepts-attacking {
+  flex-shrink: 0;
+}
+
+/* Game concepts attacking unit.
+ * sets the background artwork; controls size/placement.
+ * Native image/font declarations stay with the game; their omitted positions are marked below.
+ * Source rule 5164.
+ */
+.game-concepts-attacking-unit {
+  flex-shrink: 0;
+}
+
+/* Game concepts attributes acceleration.
+ * sets the background artwork; controls size/placement.
+ * Native image/font declarations stay with the game; their omitted positions are marked below.
+ * Source rule 5165.
+ */
+.game-concepts-attributes-acceleration {
+  flex-shrink: 0;
+}
+
+/* Game concepts attributes aerial reach.
+ * sets the background artwork; controls size/placement.
+ * Native image/font declarations stay with the game; their omitted positions are marked below.
+ * Source rule 5166.
+ */
+.game-concepts-attributes-aerial-reach {
+  flex-shrink: 0;
+}
+
+/* Game concepts attributes aggression.
+ * sets the background artwork; controls size/placement.
+ * Native image/font declarations stay with the game; their omitted positions are marked below.
+ * Source rule 5167.
+ */
+.game-concepts-attributes-aggression {
+  flex-shrink: 0;
+}
+
+/* Game concepts attributes agility.
+ * sets the background artwork; controls size/placement.
+ * Native image/font declarations stay with the game; their omitted positions are marked below.
+ * Source rule 5168.
+ */
+.game-concepts-attributes-agility {
+  flex-shrink: 0;
+}
+
+/* Game concepts attributes anticipation.
+ * sets the background artwork; controls size/placement.
+ * Native image/font declarations stay with the game; their omitted positions are marked below.
+ * Source rule 5169.
+ */
+.game-concepts-attributes-anticipation {
+  flex-shrink: 0;
+}
+
+/* Game concepts attributes balance.
+ * sets the background artwork; controls size/placement.
+ * Native image/font declarations stay with the game; their omitted positions are marked below.
+ * Source rule 5170.
+ */
+.game-concepts-attributes-balance {
+  flex-shrink: 0;
+}
+
+/* Game concepts attributes bravery.
+ * sets the background artwork; controls size/placement.
+ * Native image/font declarations stay with the game; their omitted positions are marked below.
+ * Source rule 5171.
+ */
+.game-concepts-attributes-bravery {
+  flex-shrink: 0;
+}
+
+/* Game concepts attributes command of area.
+ * sets the background artwork; controls size/placement.
+ * Native image/font declarations stay with the game; their omitted positions are marked below.
+ * Source rule 5172.
+ */
+.game-concepts-attributes-command-of-area {
+  flex-shrink: 0;
+}
+
+/* Game concepts attributes communication.
+ * sets the background artwork; controls size/placement.
+ * Native image/font declarations stay with the game; their omitted positions are marked below.
+ * Source rule 5173.
+ */
+.game-concepts-attributes-communication {
+  flex-shrink: 0;
+}
+
+/* Game concepts attributes composure.
+ * sets the background artwork; controls size/placement.
+ * Native image/font declarations stay with the game; their omitted positions are marked below.
+ * Source rule 5174.
+ */
+.game-concepts-attributes-composure {
+  flex-shrink: 0;
+}
+
+/* Game concepts attributes concentration.
+ * sets the background artwork; controls size/placement.
+ * Native image/font declarations stay with the game; their omitted positions are marked below.
+ * Source rule 5175.
+ */
+.game-concepts-attributes-concentration {
+  flex-shrink: 0;
+}
+
+/* Game concepts attributes corners.
+ * sets the background artwork; controls size/placement.
+ * Native image/font declarations stay with the game; their omitted positions are marked below.
+ * Source rule 5176.
+ */
+.game-concepts-attributes-corners {
+  flex-shrink: 0;
+}
+
+/* Game concepts attributes crossing.
+ * sets the background artwork; controls size/placement.
+ * Native image/font declarations stay with the game; their omitted positions are marked below.
+ * Source rule 5177.
+ */
+.game-concepts-attributes-crossing {
+  flex-shrink: 0;
+}
+
+/* Game concepts attributes decisions.
+ * sets the background artwork; controls size/placement.
+ * Native image/font declarations stay with the game; their omitted positions are marked below.
+ * Source rule 5178.
+ */
+.game-concepts-attributes-decisions {
+  flex-shrink: 0;
+}
+
+/* Game concepts attributes determination.
+ * sets the background artwork; controls size/placement.
+ * Native image/font declarations stay with the game; their omitted positions are marked below.
+ * Source rule 5179.
+ */
+.game-concepts-attributes-determination {
+  flex-shrink: 0;
+}
+
+/* Game concepts attributes eccentricity.
+ * sets the background artwork; controls size/placement.
+ * Native image/font declarations stay with the game; their omitted positions are marked below.
+ * Source rule 5180.
+ */
+.game-concepts-attributes-eccentricity {
+  flex-shrink: 0;
+}
+
+/* Game concepts attributes finishing.
+ * sets the background artwork; controls size/placement.
+ * Native image/font declarations stay with the game; their omitted positions are marked below.
+ * Source rule 5181.
+ */
+.game-concepts-attributes-finishing {
+  flex-shrink: 0;
+}
+
+/* Game concepts attributes first touch.
+ * sets the background artwork; controls size/placement.
+ * Native image/font declarations stay with the game; their omitted positions are marked below.
+ * Source rule 5182.
+ */
+.game-concepts-attributes-first-touch {
+  flex-shrink: 0;
+}
+
+/* Game concepts attributes flair.
+ * sets the background artwork; controls size/placement.
+ * Native image/font declarations stay with the game; their omitted positions are marked below.
+ * Source rule 5183.
+ */
+.game-concepts-attributes-flair {
+  flex-shrink: 0;
+}
+
+/* Game concepts attributes free kicks.
+ * sets the background artwork; controls size/placement.
+ * Native image/font declarations stay with the game; their omitted positions are marked below.
+ * Source rule 5184.
+ */
+.game-concepts-attributes-free-kicks {
+  flex-shrink: 0;
+}
+
+/* Game concepts attributes handling.
+ * sets the background artwork; controls size/placement.
+ * Native image/font declarations stay with the game; their omitted positions are marked below.
+ * Source rule 5185.
+ */
+.game-concepts-attributes-handling {
+  flex-shrink: 0;
+}
+
+/* Game concepts attributes heading.
+ * sets the background artwork; controls size/placement.
+ * Native image/font declarations stay with the game; their omitted positions are marked below.
+ * Source rule 5186.
+ */
+.game-concepts-attributes-heading {
+  flex-shrink: 0;
+}
+
+/* Game concepts attributes intensity.
+ * sets the background artwork; controls size/placement.
+ * Native image/font declarations stay with the game; their omitted positions are marked below.
+ * Source rule 5187.
+ */
+.game-concepts-attributes-intensity {
+  flex-shrink: 0;
+}
+
+/* Game concepts attributes jumping reach.
+ * sets the background artwork; controls size/placement.
+ * Native image/font declarations stay with the game; their omitted positions are marked below.
+ * Source rule 5188.
+ */
+.game-concepts-attributes-jumping-reach {
+  flex-shrink: 0;
+}
+
+/* Game concepts attributes kicking.
+ * sets the background artwork; controls size/placement.
+ * Native image/font declarations stay with the game; their omitted positions are marked below.
+ * Source rule 5189.
+ */
+.game-concepts-attributes-kicking {
+  flex-shrink: 0;
+}
+
+/* Game concepts attributes leadership.
+ * sets the background artwork; controls size/placement.
+ * Native image/font declarations stay with the game; their omitted positions are marked below.
+ * Source rule 5190.
+ */
+.game-concepts-attributes-leadership {
+  flex-shrink: 0;
+}
+
+/* Game concepts attributes long throws.
+ * sets the background artwork; controls size/placement.
+ * Native image/font declarations stay with the game; their omitted positions are marked below.
+ * Source rule 5191.
+ */
+.game-concepts-attributes-long-throws {
+  flex-shrink: 0;
+}
+
+/* Game concepts attributes marking.
+ * sets the background artwork; controls size/placement.
+ * Native image/font declarations stay with the game; their omitted positions are marked below.
+ * Source rule 5192.
+ */
+.game-concepts-attributes-marking {
+  flex-shrink: 0;
+}
+
+/* Game concepts attributes mindset.
+ * sets the background artwork; controls size/placement.
+ * Native image/font declarations stay with the game; their omitted positions are marked below.
+ * Source rule 5193.
+ */
+.game-concepts-attributes-mindset {
+  flex-shrink: 0;
+}
+
+/* Game concepts attributes natural fitness.
+ * sets the background artwork; controls size/placement.
+ * Native image/font declarations stay with the game; their omitted positions are marked below.
+ * Source rule 5194.
+ */
+.game-concepts-attributes-natural-fitness {
+  flex-shrink: 0;
+}
+
+/* Game concepts attributes off the ball.
+ * sets the background artwork; controls size/placement.
+ * Native image/font declarations stay with the game; their omitted positions are marked below.
+ * Source rule 5195.
+ */
+.game-concepts-attributes-off-the-ball {
+  flex-shrink: 0;
+}
+
+/* Game concepts attributes one on ones.
+ * sets the background artwork; controls size/placement.
+ * Native image/font declarations stay with the game; their omitted positions are marked below.
+ * Source rule 5196.
+ */
+.game-concepts-attributes-one-on-ones {
+  flex-shrink: 0;
+}
+
+/* Game concepts attributes others social group.
+ * sets the background artwork; controls size/placement.
+ * Native image/font declarations stay with the game; their omitted positions are marked below.
+ * Source rule 5197.
+ */
+.game-concepts-attributes-others-social-group {
+  flex-shrink: 0;
+}
+
+/* Game concepts attributes pace.
+ * sets the background artwork; controls size/placement.
+ * Native image/font declarations stay with the game; their omitted positions are marked below.
+ * Source rule 5198.
+ */
+.game-concepts-attributes-pace {
+  flex-shrink: 0;
+}
+
+/* Game concepts attributes passing.
+ * sets the background artwork; controls size/placement.
+ * Native image/font declarations stay with the game; their omitted positions are marked below.
+ * Source rule 5199.
+ */
+.game-concepts-attributes-passing {
+  flex-shrink: 0;
+}
+
+/* Game concepts attributes penalties.
+ * sets the background artwork; controls size/placement.
+ * Native image/font declarations stay with the game; their omitted positions are marked below.
+ * Source rule 5200.
+ */
+.game-concepts-attributes-penalties {
+  flex-shrink: 0;
+}
+
+/* Game concepts attributes positioning.
+ * sets the background artwork; controls size/placement.
+ * Native image/font declarations stay with the game; their omitted positions are marked below.
+ * Source rule 5201.
+ */
+.game-concepts-attributes-positioning {
+  flex-shrink: 0;
+}
+
+/* Game concepts attributes possession football.
+ * sets the background artwork; controls size/placement.
+ * Native image/font declarations stay with the game; their omitted positions are marked below.
+ * Source rule 5202.
+ */
+.game-concepts-attributes-possession-football {
+  flex-shrink: 0;
+}
+
+/* Game concepts attributes punching.
+ * sets the background artwork; controls size/placement.
+ * Native image/font declarations stay with the game; their omitted positions are marked below.
+ * Source rule 5203.
+ */
+.game-concepts-attributes-punching {
+  flex-shrink: 0;
+}
+
+/* Game concepts attributes reflexes.
+ * sets the background artwork; controls size/placement.
+ * Native image/font declarations stay with the game; their omitted positions are marked below.
+ * Source rule 5204.
+ */
+.game-concepts-attributes-reflexes {
+  flex-shrink: 0;
+}
+
+/* Game concepts attributes rushing out.
+ * sets the background artwork; controls size/placement.
+ * Native image/font declarations stay with the game; their omitted positions are marked below.
+ * Source rule 5205.
+ */
+.game-concepts-attributes-rushing-out {
+  flex-shrink: 0;
+}
+
+/* Game concepts attributes stamina.
+ * sets the background artwork; controls size/placement.
+ * Native image/font declarations stay with the game; their omitted positions are marked below.
+ * Source rule 5206.
+ */
+.game-concepts-attributes-stamina {
+  flex-shrink: 0;
+}
+
+/* Game concepts attributes strength.
+ * sets the background artwork; controls size/placement.
+ * Native image/font declarations stay with the game; their omitted positions are marked below.
+ * Source rule 5207.
+ */
+.game-concepts-attributes-strength {
+  flex-shrink: 0;
+}
+
+/* Game concepts attributes sub on off.
+ * sets the background artwork; controls size/placement.
+ * Native image/font declarations stay with the game; their omitted positions are marked below.
+ * Source rule 5208.
+ */
+.game-concepts-attributes-sub-on-off {
+  flex-shrink: 0;
+}
+
+/* Game concepts attributes tackling.
+ * sets the background artwork; controls size/placement.
+ * Native image/font declarations stay with the game; their omitted positions are marked below.
+ * Source rule 5209.
+ */
+.game-concepts-attributes-tackling {
+  flex-shrink: 0;
+}
+
+/* Game concepts attributes teamwork.
+ * sets the background artwork; controls size/placement.
+ * Native image/font declarations stay with the game; their omitted positions are marked below.
+ * Source rule 5210.
+ */
+.game-concepts-attributes-teamwork {
+  flex-shrink: 0;
+}
+
+/* Game concepts attributes technique.
+ * sets the background artwork; controls size/placement.
+ * Native image/font declarations stay with the game; their omitted positions are marked below.
+ * Source rule 5211.
+ */
+.game-concepts-attributes-technique {
+  flex-shrink: 0;
+}
+
+/* Game concepts attributes throwing.
+ * sets the background artwork; controls size/placement.
+ * Native image/font declarations stay with the game; their omitted positions are marked below.
+ * Source rule 5212.
+ */
+.game-concepts-attributes-throwing {
+  flex-shrink: 0;
+}
+
+/* Game concepts attributes tier up.
+ * sets the background artwork; controls size/placement.
+ * Native image/font declarations stay with the game; their omitted positions are marked below.
+ * Source rule 5213.
+ */
+.game-concepts-attributes-tier-up {
+  flex-shrink: 0;
+}
+
+/* Game concepts attributes vision.
+ * sets the background artwork; controls size/placement.
+ * Native image/font declarations stay with the game; their omitted positions are marked below.
+ * Source rule 5214.
+ */
+.game-concepts-attributes-vision {
+  flex-shrink: 0;
+}
+
+/* Game concepts attributes work rate.
+ * sets the background artwork; controls size/placement.
+ * Native image/font declarations stay with the game; their omitted positions are marked below.
+ * Source rule 5215.
+ */
+.game-concepts-attributes-work-rate {
+  flex-shrink: 0;
+}
+
+/* Game concepts average position map large.
+ * sets the background artwork; controls size/placement.
+ * Native image/font declarations stay with the game; their omitted positions are marked below.
+ * Source rule 5216.
+ */
+.game-concepts-average-position-map_large {
+  width: var(--spacing-large---32);
+  height: var(--spacing-large---32);
+  flex-shrink: 0;
+}
+
+/* Game concepts average position map medium.
+ * sets the background artwork; controls size/placement.
+ * Native image/font declarations stay with the game; their omitted positions are marked below.
+ * Source rule 5217.
+ */
+.game-concepts-average-position-map_medium {
+  width: 24px;
+  flex-shrink: 0;
+}
+
+/* Game concepts average position map small.
+ * sets the background artwork; controls size/placement.
+ * Native image/font declarations stay with the game; their omitted positions are marked below.
+ * Source rule 5218.
+ */
+.game-concepts-average-position-map_small {
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+}
+
+/* Game concepts balanced.
+ * sets the background artwork; controls size/placement.
+ * Native image/font declarations stay with the game; their omitted positions are marked below.
+ * Source rule 5219.
+ */
+.game-concepts-balanced {
+  flex-shrink: 0;
+}
+
+/* Game concepts board.
+ * sets the background artwork; controls size/placement.
+ * Native image/font declarations stay with the game; their omitted positions are marked below.
+ * Source rule 5220.
+ */
+.game-concepts-board {
+  flex-shrink: 0;
+}
+
+/* Game concepts board request large.
+ * sets the background artwork; controls size/placement.
+ * Native image/font declarations stay with the game; their omitted positions are marked below.
+ * Source rule 5221.
+ */
+.game-concepts-board-request_large {
+  width: var(--spacing-large---32);
+  height: var(--spacing-large---32);
+  flex-shrink: 0;
+}
+
+/* Game concepts board request medium.
+ * sets the background artwork; controls size/placement.
+ * Native image/font declarations stay with the game; their omitted positions are marked below.
+ * Source rule 5222.
+ */
+.game-concepts-board-request_medium {
+  width: 24px;
+  flex-shrink: 0;
+}
+
+/* Game concepts board request small.
+ * sets the background artwork; controls size/placement.
+ * Native image/font declarations stay with the game; their omitted positions are marked below.
+ * Source rule 5223.
+ */
+.game-concepts-board-request_small {
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+}
+
+/* Game concepts board supporter confidence.
+ * sets the background artwork; controls size/placement.
+ * Native image/font declarations stay with the game; their omitted positions are marked below.
+ * Source rule 5224.
+ */
+.game-concepts-board-supporter-confidence {
+  flex-shrink: 0;
+}
+
+/* Game concepts coaching youth.
+ * sets the background artwork; controls size/placement.
+ * Native image/font declarations stay with the game; their omitted positions are marked below.
+ * Source rule 5225.
+ */
+.game-concepts-coaching-youth {
+  flex-shrink: 0;
+}
+
+/* Game concepts complexity.
+ * sets the background artwork; controls size/placement.
+ * Native image/font declarations stay with the game; their omitted positions are marked below.
+ * Source rule 5226.
+ */
+.game-concepts-complexity {
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+}
+
+/* Game concepts contract negotiated ongoing.
+ * sets the background artwork; controls size/placement.
+ * Native image/font declarations stay with the game; their omitted positions are marked below.
+ * Source rule 5227.
+ */
+.game-concepts-contract-negotiated-ongoing {
+  flex-shrink: 0;
+}
+
+/* Game concepts contract time remaining.
+ * sets the background artwork; controls size/placement.
+ * Native image/font declarations stay with the game; their omitted positions are marked below.
+ * Source rule 5228.
+ */
+.game-concepts-contract-time-remaining {
+  flex-shrink: 0;
+}
+
+/* Game concepts controller.
+ * sets the background artwork; controls size/placement.
+ * Native image/font declarations stay with the game; their omitted positions are marked below.
+ * Source rule 5229.
+ */
+.game-concepts-controller {
+  flex-shrink: 0;
+}
+
+/* Game concepts creative threat.
+ * sets the background artwork; controls size/placement.
+ * Native image/font declarations stay with the game; their omitted positions are marked below.
+ * Source rule 5230.
+ */
+.game-concepts-creative-threat {
+  flex-shrink: 0;
+}
+
+/* Game concepts crossing.
+ * sets the background artwork; controls size/placement.
+ * Native image/font declarations stay with the game; their omitted positions are marked below.
+ * Source rule 5231.
+ */
+.game-concepts-crossing {
+  flex-shrink: 0;
+}
+
+/* Game concepts defeat.
+ * sets the background artwork; controls size/placement.
+ * Native image/font declarations stay with the game; their omitted positions are marked below.
+ * Source rule 5232.
+ */
+.game-concepts-defeat {
+  flex-shrink: 0;
+}
+
+/* Game concepts defensive unit.
+ * sets the background artwork; controls size/placement.
+ * Native image/font declarations stay with the game; their omitted positions are marked below.
+ * Source rule 5233.
+ */
+.game-concepts-defensive-unit {
+  flex-shrink: 0;
+}
+
+/* Game concepts draft league knockout small.
+ * sets the background artwork; controls size/placement.
+ * Native image/font declarations stay with the game; their omitted positions are marked below.
+ * Source rule 5234.
+ */
+.game-concepts-draft-league-knockout_small {
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+}
+
+/* Game concepts draw.
+ * sets the background artwork; controls size/placement.
+ * Native image/font declarations stay with the game; their omitted positions are marked below.
+ * Source rule 5235.
+ */
+.game-concepts-draw {
+  flex-shrink: 0;
+}
+
+/* Game concepts energetic.
+ * sets the background artwork; controls size/placement.
+ * Native image/font declarations stay with the game; their omitted positions are marked below.
+ * Source rule 5236.
+ */
+.game-concepts-energetic {
+  flex-shrink: 0;
+}
+
+/* Game concepts fans.
+ * sets the background artwork; controls size/placement.
+ * Native image/font declarations stay with the game; their omitted positions are marked below.
+ * Source rule 5237.
+ */
+.game-concepts-fans {
+  flex-shrink: 0;
+}
+
+/* Game concepts formation.
+ * sets the background artwork; controls size/placement.
+ * Native image/font declarations stay with the game; their omitted positions are marked below.
+ * Source rule 5238.
+ */
+.game-concepts-formation {
+  flex-shrink: 0;
+}
+
+/* Game concepts freedom of movement.
+ * sets the background artwork; controls size/placement.
+ * Native image/font declarations stay with the game; their omitted positions are marked below.
+ * Source rule 5239.
+ */
+.game-concepts-freedom-of-movement {
+  flex-shrink: 0;
+}
+
+/* Game concepts game concepts board supporter confidence.
+ * sets the background artwork; controls size/placement.
+ * Native image/font declarations stay with the game; their omitted positions are marked below.
+ * Source rule 5240.
+ */
+.game-concepts-game-concepts-board-supporter-confidence {
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+}
+
+/* Game concepts game concepts loans large.
+ * sets the background artwork; controls size/placement.
+ * Native image/font declarations stay with the game; their omitted positions are marked below.
+ * Source rule 5241.
+ */
+.game-concepts-game-concepts-loans_large {
+  width: var(--spacing-large---32);
+  height: var(--spacing-large---32);
+  flex-shrink: 0;
+}
+
+/* Game concepts game concepts loans medium.
+ * sets the background artwork; controls size/placement.
+ * Native image/font declarations stay with the game; their omitted positions are marked below.
+ * Source rule 5242.
+ */
+.game-concepts-game-concepts-loans_medium {
+  width: 24px;
+  flex-shrink: 0;
+}
+
+/* Game concepts game concepts loans small.
+ * sets the background artwork; controls size/placement.
+ * Native image/font declarations stay with the game; their omitted positions are marked below.
+ * Source rule 5243.
+ */
+.game-concepts-game-concepts-loans_small {
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+}
+
+/* Game concepts game concepts relationship.
+ * sets the background artwork; controls size/placement.
+ * Native image/font declarations stay with the game; their omitted positions are marked below.
+ * Source rule 5244.
+ */
+.game-concepts-game-concepts-relationship {
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+}
+
+/* Game concepts game concepts traits.
+ * sets the background artwork; controls size/placement.
+ * Native image/font declarations stay with the game; their omitted positions are marked below.
+ * Source rule 5245.
+ */
+.game-concepts-game-concepts-traits {
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+}
+
+/* Game concepts game concepts yellow card.
+ * sets the background artwork; controls size/placement.
+ * Native image/font declarations stay with the game; their omitted positions are marked below.
+ * Source rule 5246.
+ */
+.game-concepts-game-concepts-yellow-card {
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+}
+
+/* Game concepts gets crowd going large.
+ * sets the background artwork; controls size/placement.
+ * Native image/font declarations stay with the game; their omitted positions are marked below.
+ * Source rule 5247.
+ */
+.game-concepts-gets-crowd-going_large {
+  width: var(--spacing-large---32);
+  height: var(--spacing-large---32);
+  flex-shrink: 0;
+}
+
+/* Game concepts goal.
+ * sets the background artwork; controls size/placement.
+ * Native image/font declarations stay with the game; their omitted positions are marked below.
+ * Source rule 5248.
+ */
+.game-concepts-goal {
+  flex-shrink: 0;
+}
+
+/* Game concepts goalkeeper large.
+ * sets the background artwork; controls size/placement.
+ * Native image/font declarations stay with the game; their omitted positions are marked below.
+ * Source rule 5249.
+ */
+.game-concepts-goalkeeper_large {
+  width: var(--spacing-large---32);
+  height: var(--spacing-large---32);
+  flex-shrink: 0;
+}
+
+/* Game concepts goalkeeper medium.
+ * sets the background artwork; controls size/placement.
+ * Native image/font declarations stay with the game; their omitted positions are marked below.
+ * Source rule 5250.
+ */
+.game-concepts-goalkeeper_medium {
+  width: 24px;
+  flex-shrink: 0;
+}
+
+/* Game concepts goalkeeper small.
+ * sets the background artwork; controls size/placement.
+ * Native image/font declarations stay with the game; their omitted positions are marked below.
+ * Source rule 5251.
+ */
+.game-concepts-goalkeeper_small {
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+}
+
+/* Game concepts goalkeeping unit.
+ * sets the background artwork; controls size/placement.
+ * Native image/font declarations stay with the game; their omitted positions are marked below.
+ * Source rule 5252.
+ */
+.game-concepts-goalkeeping-unit {
+  flex-shrink: 0;
+}
+
+/* Game concepts hat.
+ * sets the background artwork; controls size/placement.
+ * Native image/font declarations stay with the game; their omitted positions are marked below.
+ * Source rule 5253.
+ */
+.game-concepts-hat {
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+}
+
+/* Game concepts heat map large.
+ * sets the background artwork; controls size/placement.
+ * Native image/font declarations stay with the game; their omitted positions are marked below.
+ * Source rule 5254.
+ */
+.game-concepts-heat-map_large {
+  width: var(--spacing-large---32);
+  height: var(--spacing-large---32);
+  flex-shrink: 0;
+}
+
+/* Game concepts heat map medium.
+ * sets the background artwork; controls size/placement.
+ * Native image/font declarations stay with the game; their omitted positions are marked below.
+ * Source rule 5255.
+ */
+.game-concepts-heat-map_medium {
+  width: 24px;
+  flex-shrink: 0;
+}
+
+/* Game concepts heat map small.
+ * sets the background artwork; controls size/placement.
+ * Native image/font declarations stay with the game; their omitted positions are marked below.
+ * Source rule 5256.
+ */
+.game-concepts-heat-map_small {
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+}
+
+/* Game concepts key player small.
+ * sets the background artwork; controls size/placement.
+ * Native image/font declarations stay with the game; their omitted positions are marked below.
+ * Source rule 5257.
+ */
+.game-concepts-key-player_small {
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+}
+
+/* Game concepts line of engagement.
+ * sets the background artwork; controls size/placement.
+ * Native image/font declarations stay with the game; their omitted positions are marked below.
+ * Source rule 5258.
+ */
+.game-concepts-line-of-engagement {
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+}
+
+/* Game concepts managerial support.
+ * sets the background artwork; controls size/placement.
+ * Native image/font declarations stay with the game; their omitted positions are marked below.
+ * Source rule 5259.
+ */
+.game-concepts-managerial-support {
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+}
+
+/* Game concepts medical kit.
+ * sets the background artwork; controls size/placement.
+ * Native image/font declarations stay with the game; their omitted positions are marked below.
+ * Source rule 5260.
+ */
+.game-concepts-medical-kit {
+  flex-shrink: 0;
+}
+
+/* Game concepts mentality football.
+ * sets the background artwork; controls size/placement.
+ * Native image/font declarations stay with the game; their omitted positions are marked below.
+ * Source rule 5261.
+ */
+.game-concepts-mentality-football {
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+}
+
+/* Game concepts mentality football medium.
+ * sets the background artwork; controls size/placement.
+ * Native image/font declarations stay with the game; their omitted positions are marked below.
+ * Source rule 5262.
+ */
+.game-concepts-mentality-football-medium {
+  width: 24px;
+  flex-shrink: 0;
+}
+
+/* Game concepts miscellaneous.
+ * sets the background artwork; controls size/placement.
+ * Native image/font declarations stay with the game; their omitted positions are marked below.
+ * Source rule 5263.
+ */
+.game-concepts-miscellaneous {
+  flex-shrink: 0;
+}
+
+/* Game concepts mobility style.
+ * sets the background artwork; controls size/placement.
+ * Native image/font declarations stay with the game; their omitted positions are marked below.
+ * Source rule 5264.
+ */
+.game-concepts-mobility-style {
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+}
+
+/* Game concepts momentum.
+ * sets the background artwork; controls size/placement.
+ * Native image/font declarations stay with the game; their omitted positions are marked below.
+ * Source rule 5265.
+ */
+.game-concepts-momentum {
+  flex-shrink: 0;
+}
+
+/* Game concepts news large.
+ * sets the background artwork; controls size/placement.
+ * Native image/font declarations stay with the game; their omitted positions are marked below.
+ * Source rule 5266.
+ */
+.game-concepts-news_large {
+  width: var(--spacing-large---32);
+  height: var(--spacing-large---32);
+  flex-shrink: 0;
+}
+
+/* Game concepts passing.
+ * sets the background artwork; controls size/placement.
+ * Native image/font declarations stay with the game; their omitted positions are marked below.
+ * Source rule 5267.
+ */
+.game-concepts-passing {
+  flex-shrink: 0;
+}
+
+/* Game concepts passing style.
+ * sets the background artwork; controls size/placement.
+ * Native image/font declarations stay with the game; their omitted positions are marked below.
+ * Source rule 5268.
+ */
+.game-concepts-passing-style {
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+}
+
+/* Game concepts player.
+ * sets the background artwork; controls size/placement.
+ * Native image/font declarations stay with the game; their omitted positions are marked below.
+ * Source rule 5269.
+ */
+.game-concepts-player {
+  flex-shrink: 0;
+}
+
+/* Game concepts player raw ability.
+ * sets the background artwork; controls size/placement.
+ * Native image/font declarations stay with the game; their omitted positions are marked below.
+ * Source rule 5270.
+ */
+.game-concepts-player-raw-ability {
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+}
+
+/* Game concepts player role ability.
+ * sets the background artwork; controls size/placement.
+ * Native image/font declarations stay with the game; their omitted positions are marked below.
+ * Source rule 5271.
+ */
+.game-concepts-player-role-ability {
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+}
+
+/* Game concepts playing time large.
+ * sets the background artwork; controls size/placement.
+ * Native image/font declarations stay with the game; their omitted positions are marked below.
+ * Source rule 5272.
+ */
+.game-concepts-playing-time_large {
+  width: var(--spacing-large---32);
+  height: var(--spacing-large---32);
+  flex-shrink: 0;
+}
+
+/* Game concepts position visualiser defence.
+ * sets the background artwork; controls size/placement.
+ * Native image/font declarations stay with the game; their omitted positions are marked below.
+ * Source rule 5273.
+ */
+.game-concepts-position-visualiser-defence {
+  flex-shrink: 0;
+}
+
+/* Game concepts position visualiser forward.
+ * sets the background artwork; controls size/placement.
+ * Native image/font declarations stay with the game; their omitted positions are marked below.
+ * Source rule 5274.
+ */
+.game-concepts-position-visualiser-forward {
+  flex-shrink: 0;
+}
+
+/* Game concepts position visualiser goalkeeper.
+ * sets the background artwork; controls size/placement.
+ * Native image/font declarations stay with the game; their omitted positions are marked below.
+ * Source rule 5275.
+ */
+.game-concepts-position-visualiser-goalkeeper {
+  flex-shrink: 0;
+}
+
+/* Game concepts position visualiser midfield.
+ * sets the background artwork; controls size/placement.
+ * Native image/font declarations stay with the game; their omitted positions are marked below.
+ * Source rule 5276.
+ */
+.game-concepts-position-visualiser-midfield {
+  flex-shrink: 0;
+}
+
+/* Game concepts possession.
+ * sets the background artwork; controls size/placement.
+ * Native image/font declarations stay with the game; their omitted positions are marked below.
+ * Source rule 5277.
+ */
+.game-concepts-possession {
+  flex-shrink: 0;
+}
+
+/* Game concepts possession football.
+ * sets the background artwork; controls size/placement.
+ * Native image/font declarations stay with the game; their omitted positions are marked below.
+ * Source rule 5278.
+ */
+.game-concepts-possession-football {
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+}
+
+/* Game concepts pressing intensity.
+ * sets the background artwork; controls size/placement.
+ * Native image/font declarations stay with the game; their omitted positions are marked below.
+ * Source rule 5279.
+ */
+.game-concepts-pressing-intensity {
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+}
+
+/* Game concepts pressing trap.
+ * sets the background artwork; controls size/placement.
+ * Native image/font declarations stay with the game; their omitted positions are marked below.
+ * Source rule 5280.
+ */
+.game-concepts-pressing-trap {
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+}
+
+/* Game concepts proposal offer made transfer pending medium.
+ * sets the background artwork; controls size/placement.
+ * Native image/font declarations stay with the game; their omitted positions are marked below.
+ * Source rule 5281.
+ */
+.game-concepts-proposal-offer-made-transfer-pending_medium {
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+}
+
+/* Game concepts quality opposition report.
+ * sets the background artwork; controls size/placement.
+ * Native image/font declarations stay with the game; their omitted positions are marked below.
+ * Source rule 5282.
+ */
+.game-concepts-quality-opposition-report {
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+}
+
+/* Game concepts responsibilites large.
+ * sets the background artwork; controls size/placement.
+ * Native image/font declarations stay with the game; their omitted positions are marked below.
+ * Source rule 5283.
+ */
+.game-concepts-responsibilites_large {
+  width: var(--spacing-large---32);
+  height: var(--spacing-large---32);
+  flex-shrink: 0;
+}
+
+/* Game concepts rivalry.
+ * sets the background artwork; controls size/placement.
+ * Native image/font declarations stay with the game; their omitted positions are marked below.
+ * Source rule 5284.
+ */
+.game-concepts-rivalry {
+  flex-shrink: 0;
+}
+
+/* Game concepts scatter graph large.
+ * sets the background artwork; controls size/placement.
+ * Native image/font declarations stay with the game; their omitted positions are marked below.
+ * Source rule 5285.
+ */
+.game-concepts-scatter-graph_large {
+  width: var(--spacing-large---32);
+  height: var(--spacing-large---32);
+  flex-shrink: 0;
+}
+
+/* Game concepts scatter graph medium.
+ * sets the background artwork; controls size/placement.
+ * Native image/font declarations stay with the game; their omitted positions are marked below.
+ * Source rule 5286.
+ */
+.game-concepts-scatter-graph_medium {
+  width: 24px;
+  flex-shrink: 0;
+}
+
+/* Game concepts scatter graph small.
+ * sets the background artwork; controls size/placement.
+ * Native image/font declarations stay with the game; their omitted positions are marked below.
+ * Source rule 5287.
+ */
+.game-concepts-scatter-graph_small {
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+}
+
+/* Game concepts scouting budget large.
+ * sets the background artwork; controls size/placement.
+ * Native image/font declarations stay with the game; their omitted positions are marked below.
+ * Source rule 5288.
+ */
+.game-concepts-scouting-budget_large {
+  width: var(--spacing-large---32);
+  height: var(--spacing-large---32);
+  flex-shrink: 0;
+}
+
+/* Game concepts scouting report.
+ * sets the background artwork; controls size/placement.
+ * Native image/font declarations stay with the game; their omitted positions are marked below.
+ * Source rule 5289.
+ */
+.game-concepts-scouting-report {
+  flex-shrink: 0;
+}
+
+/* Game concepts set piece takers type dropdown leading icon.
+ * sets the background artwork; controls size/placement.
+ * Native image/font declarations stay with the game; their omitted positions are marked below.
+ * Source rule 5290.
+ */
+.game-concepts-set-piece-takers-type-dropdown-leading-icon {
+  flex-shrink: 0;
+}
+
+/* Game concepts shape ip.
+ * sets the background artwork; controls size/placement.
+ * Native image/font declarations stay with the game; their omitted positions are marked below.
+ * Source rule 5291.
+ */
+.game-concepts-shape-ip {
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+}
+
+/* Game concepts shape oop.
+ * sets the background artwork; controls size/placement.
+ * Native image/font declarations stay with the game; their omitted positions are marked below.
+ * Source rule 5292.
+ */
+.game-concepts-shape-oop {
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+}
+
+/* Game concepts shot map.
+ * sets the background artwork; controls size/placement.
+ * Native image/font declarations stay with the game; their omitted positions are marked below.
+ * Source rule 5293.
+ */
+.game-concepts-shot-map {
+  flex-shrink: 0;
+}
+
+/* Game concepts shout.
+ * sets the background artwork; controls size/placement.
+ * Native image/font declarations stay with the game; their omitted positions are marked below.
+ * Source rule 5294.
+ */
+.game-concepts-shout {
+  flex-shrink: 0;
+}
+
+/* Game concepts shouts calm down.
+ * sets the background artwork; controls size/placement.
+ * Native image/font declarations stay with the game; their omitted positions are marked below.
+ * Source rule 5295.
+ */
+.game-concepts-shouts-calm-down {
+  flex-shrink: 0;
+}
+
+/* Game concepts shouts do better.
+ * sets the background artwork; controls size/placement.
+ * Native image/font declarations stay with the game; their omitted positions are marked below.
+ * Source rule 5296.
+ */
+.game-concepts-shouts-do-better {
+  flex-shrink: 0;
+}
+
+/* Game concepts shouts keep going.
+ * sets the background artwork; controls size/placement.
+ * Native image/font declarations stay with the game; their omitted positions are marked below.
+ * Source rule 5297.
+ */
+.game-concepts-shouts-keep-going {
+  flex-shrink: 0;
+}
+
+/* Game concepts shouts no pressure.
+ * sets the background artwork; controls size/placement.
+ * Native image/font declarations stay with the game; their omitted positions are marked below.
+ * Source rule 5298.
+ */
+.game-concepts-shouts-no-pressure {
+  flex-shrink: 0;
+}
+
+/* Game concepts shouts wake up.
+ * sets the background artwork; controls size/placement.
+ * Native image/font declarations stay with the game; their omitted positions are marked below.
+ * Source rule 5299.
+ */
+.game-concepts-shouts-wake-up {
+  flex-shrink: 0;
+}
+
+/* Game concepts shouts well done.
+ * sets the background artwork; controls size/placement.
+ * Native image/font declarations stay with the game; their omitted positions are marked below.
+ * Source rule 5300.
+ */
+.game-concepts-shouts-well-done {
+  flex-shrink: 0;
+}
+
+/* Game concepts spider graph large.
+ * sets the background artwork; controls size/placement.
+ * Native image/font declarations stay with the game; their omitted positions are marked below.
+ * Source rule 5301.
+ */
+.game-concepts-spider-graph_large {
+  width: var(--spacing-large---32);
+  height: var(--spacing-large---32);
+  flex-shrink: 0;
+}
+
+/* Game concepts spider graph medium.
+ * sets the background artwork; controls size/placement.
+ * Native image/font declarations stay with the game; their omitted positions are marked below.
+ * Source rule 5302.
+ */
+.game-concepts-spider-graph_medium {
+  width: 24px;
+  flex-shrink: 0;
+}
+
+/* Game concepts spider graph small.
+ * sets the background artwork; controls size/placement.
+ * Native image/font declarations stay with the game; their omitted positions are marked below.
+ * Source rule 5303.
+ */
+.game-concepts-spider-graph_small {
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+}
+
+/* Game concepts squad.
+ * sets the background artwork; controls size/placement.
+ * Native image/font declarations stay with the game; their omitted positions are marked below.
+ * Source rule 5304.
+ */
+.game-concepts-squad {
+  flex-shrink: 0;
+}
+
+/* Game concepts stats.
+ * sets the background artwork; controls size/placement.
+ * Native image/font declarations stay with the game; their omitted positions are marked below.
+ * Source rule 5305.
+ */
+.game-concepts-stats {
+  flex-shrink: 0;
+}
+
+/* Game concepts strong set pieces.
+ * sets the background artwork; controls size/placement.
+ * Native image/font declarations stay with the game; their omitted positions are marked below.
+ * Source rule 5306.
+ */
+.game-concepts-strong-set-pieces {
+  flex-shrink: 0;
+}
+
+/* Game concepts swap wings.
+ * sets the background artwork; controls size/placement.
+ * Native image/font declarations stay with the game; their omitted positions are marked below.
+ * Source rule 5307.
+ */
+.game-concepts-swap-wings {
+  flex-shrink: 0;
+}
+
+/* Game concepts swapped wings.
+ * sets the background artwork; controls size/placement.
+ * Native image/font declarations stay with the game; their omitted positions are marked below.
+ * Source rule 5308.
+ */
+.game-concepts-swapped-wings {
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+}
+
+/* Game concepts tackling.
+ * sets the background artwork; controls size/placement.
+ * Native image/font declarations stay with the game; their omitted positions are marked below.
+ * Source rule 5309.
+ */
+.game-concepts-tackling {
+  flex-shrink: 0;
+}
+
+/* Game concepts tactical tinkerer.
+ * sets the background artwork; controls size/placement.
+ * Native image/font declarations stay with the game; their omitted positions are marked below.
+ * Source rule 5310.
+ */
+.game-concepts-tactical-tinkerer {
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+}
+
+/* Game concepts tactical tweak.
+ * sets the background artwork; controls size/placement.
+ * Native image/font declarations stay with the game; their omitted positions are marked below.
+ * Source rule 5311.
+ */
+.game-concepts-tactical-tweak {
+  flex-shrink: 0;
+}
+
+/* Game concepts tactical tweak pending.
+ * sets the background artwork; controls size/placement.
+ * Native image/font declarations stay with the game; their omitted positions are marked below.
+ * Source rule 5312.
+ */
+.game-concepts-tactical-tweak-pending {
+  flex-shrink: 0;
+}
+
+/* Game concepts team report.
+ * sets the background artwork; controls size/placement.
+ * Native image/font declarations stay with the game; their omitted positions are marked below.
+ * Source rule 5313.
+ */
+.game-concepts-team-report {
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+}
+
+/* Game concepts training attacking.
+ * sets the background artwork; controls size/placement.
+ * Native image/font declarations stay with the game; their omitted positions are marked below.
+ * Source rule 5314.
+ */
+.game-concepts-training-attacking {
+  flex-shrink: 0;
+}
+
+/* Game concepts training defending.
+ * sets the background artwork; controls size/placement.
+ * Native image/font declarations stay with the game; their omitted positions are marked below.
+ * Source rule 5315.
+ */
+.game-concepts-training-defending {
+  flex-shrink: 0;
+}
+
+/* Game concepts training fitness large.
+ * sets the background artwork; controls size/placement.
+ * Native image/font declarations stay with the game; their omitted positions are marked below.
+ * Source rule 5316.
+ */
+.game-concepts-training-fitness_large {
+  width: var(--spacing-large---32);
+  height: var(--spacing-large---32);
+  flex-shrink: 0;
+}
+
+/* Game concepts training fitness medium.
+ * sets the background artwork; controls size/placement.
+ * Native image/font declarations stay with the game; their omitted positions are marked below.
+ * Source rule 5317.
+ */
+.game-concepts-training-fitness_medium {
+  width: 24px;
+  flex-shrink: 0;
+}
+
+/* Game concepts training fitness small.
+ * sets the background artwork; controls size/placement.
+ * Native image/font declarations stay with the game; their omitted positions are marked below.
+ * Source rule 5318.
+ */
+.game-concepts-training-fitness_small {
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+}
+
+/* Game concepts training mentoring.
+ * sets the background artwork; controls size/placement.
+ * Native image/font declarations stay with the game; their omitted positions are marked below.
+ * Source rule 5319.
+ */
+.game-concepts-training-mentoring {
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+}
+
+/* Game concepts training physical medium.
+ * sets the background artwork; controls size/placement.
+ * Native image/font declarations stay with the game; their omitted positions are marked below.
+ * Source rule 5320.
+ */
+.game-concepts-training-physical_medium {
+  width: 24px;
+  flex-shrink: 0;
+}
+
+/* Game concepts training set pieces.
+ * sets the background artwork; controls size/placement.
+ * Native image/font declarations stay with the game; their omitted positions are marked below.
+ * Source rule 5321.
+ */
+.game-concepts-training-set-pieces {
+  flex-shrink: 0;
+}
+
+/* Game concepts training technical.
+ * sets the background artwork; controls size/placement.
+ * Native image/font declarations stay with the game; their omitted positions are marked below.
+ * Source rule 5322.
+ */
+.game-concepts-training-technical {
+  flex-shrink: 0;
+}
+
+/* Game concepts training technical medium.
+ * sets the background artwork; controls size/placement.
+ * Native image/font declarations stay with the game; their omitted positions are marked below.
+ * Source rule 5323.
+ */
+.game-concepts-training-technical_medium {
+  width: 24px;
+  flex-shrink: 0;
+}
+
+/* Game concepts transfer confirm.
+ * sets the background artwork; controls size/placement.
+ * Native image/font declarations stay with the game; their omitted positions are marked below.
+ * Source rule 5324.
+ */
+.game-concepts-transfer-confirm {
+  flex-shrink: 0;
+}
+
+/* Game concepts trophy.
+ * sets the background artwork; controls size/placement.
+ * Native image/font declarations stay with the game; their omitted positions are marked below.
+ * Source rule 5325.
+ */
+.game-concepts-trophy {
+  flex-shrink: 0;
+}
+
+/* Game concepts very defensive.
+ * sets the background artwork; controls size/placement.
+ * Native image/font declarations stay with the game; their omitted positions are marked below.
+ * Source rule 5326.
+ */
+.game-concepts-very-defensive {
+  flex-shrink: 0;
+}
+
+/* Game concepts win.
+ * sets the background artwork; controls size/placement.
+ * Native image/font declarations stay with the game; their omitted positions are marked below.
+ * Source rule 5327.
+ */
+.game-concepts-win {
+  flex-shrink: 0;
+}
+
+/* Game concepts xg.
+ * sets the background artwork; controls size/placement.
+ * Native image/font declarations stay with the game; their omitted positions are marked below.
+ * Source rule 5328.
+ */
+.game-concepts-xg {
+  flex-shrink: 0;
+}
+
+/* Game concepts zone map large.
+ * sets the background artwork; controls size/placement.
+ * Native image/font declarations stay with the game; their omitted positions are marked below.
+ * Source rule 5329.
+ */
+.game-concepts-zone-map_large {
+  width: var(--spacing-large---32);
+  height: var(--spacing-large---32);
+  flex-shrink: 0;
+}
+
+/* Game concepts zone map medium.
+ * sets the background artwork; controls size/placement.
+ * Native image/font declarations stay with the game; their omitted positions are marked below.
+ * Source rule 5330.
+ */
+.game-concepts-zone-map_medium {
+  width: 24px;
+  flex-shrink: 0;
+}
+
+/* Game concepts zone map small.
+ * sets the background artwork; controls size/placement.
+ * Native image/font declarations stay with the game; their omitted positions are marked below.
+ * Source rule 5331.
+ */
+.game-concepts-zone-map_small {
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+}
+
+/* Holiday's Jobs template explicitly removes all checkbox margins, leaving
+ * its separate label touching the square. Restore only the missing label gap;
+ * other checkbox layouts retain their own existing spacing. */
+#GoOnHolidayWidget #JobsScope .sicheckbox {
+  margin-right: var(--skin-field-label-gap);
+}
+
+/* Search/shortlist position filters reuse full-size planner points inside a
+ * compact pitch. Keep the source compact geometry and dense label role here;
+ * full Squad Planner cards retain their larger ability/star layout. */
+#player-position-view-container #input-squad-planner-data-point-regular {
+  width: var(--skin-search-pitch-point-width);
+  height: var(--skin-search-pitch-point-height);
+  background-color: var(--skin-planner-point-background);
+  border-color: var(--skin-border-default);
+}
+#player-position-view-container #input-squad-planner-data-point-regular .sitext {
+  font-size: var(--skin-search-pitch-label-size);
+}
+/* The mode's native active-true class means a usable point; the parent
+ * position--filled--selected class carries the actual search selection. */
+#player-position-view-container .position--filled--selected #input-squad-planner-data-point-regular {
+  background-color: var(--skin-planner-point-selected);
+  border-color: var(--skin-planner-point-selected-border);
+}
+#player-position-view-container #input-squad-planner-data-point-regular:hover {
+  background-color: var(--skin-control-hover);
+}
+
+/* The start screen uses the same heading scale as reports. Its two-column
+ * Load Game tile cannot fit the native 22px Poppins title; other menu tiles
+ * follow the same role rather than shrinking individual English labels. */
+#MainMenu .tile-title-color {
+  font-size: var(--skin-menu-tile-heading-size);
+  -unity-font-definition: var(--skin-font-section-heading);
+  -unity-font-style: var(--skin-font-section-heading-weight);
+}
+
+#MainMenu .tile-title-frame {
+  height: var(--skin-menu-tile-heading-height);
+  min-height: var(--skin-menu-tile-heading-height);
+  max-height: var(--skin-menu-tile-heading-height);
+  padding-left: var(--skin-menu-title-inset);
+  padding-right: var(--skin-menu-title-inset);
+}
+
+#MainMenu #description,
+#MainMenu #SubDescription {
+  font-size: var(--skin-menu-body-size);
+  white-space: normal;
+}
+
+#MainMenu #club_name_data {
+  font-size: var(--skin-menu-entity-size);
+}
+
+/* Promotional artwork is decorative; reserve it a lower corner rather than
+ * letting the native full-height image paint over the heading or copy. */
+#MainMenu #MainMenuStartNewCareerNationalTeam #ManagerImage,
+#MainMenu #MainMenuStartNewCareerShuffleDraft .shuffle-draft-logo {
+  width: var(--skin-menu-promo-art-width);
+  max-width: var(--skin-menu-promo-art-width);
+  height: var(--skin-menu-promo-art-height);
+  max-height: var(--skin-menu-promo-art-height);
+  margin-top: var(--skin-menu-tile-heading-height);
+  top: auto;
+  bottom: 0;
+  right: var(--skin-menu-title-inset);
+}
+
+#MainMenu #MainMenuStartNewCareerShuffleDraft #SubDescription,
+#MainMenu #MainMenuStartNewCareerNationalTeam #description {
+  width: var(--skin-menu-promo-copy-width);
+  max-width: 100%;
+  height: auto;
+  min-height: 0;
+  flex-grow: 1;
+  text-overflow: clip;
+}
+
+/* Saves8x2's native inline 33px cap outranks USS geometry. This dedicated
+ * helper role fits two Poppins lines; values and other help keep their size. */
+.preferences-card-tab-padding #tile-wide-8x2 #main-container .body-sm.overflow-text {
+  font-size: var(--skin-preferences-compact-help-size);
+}
+
+/* Release notes: constrain the native row to its viewport. Fixed text and
+ * non-shrinking artwork widths previously exceeded the dialog's inner width. */
+/* Give percentage limits a full-screen containing block; the native switch
+ * otherwise shrink-wraps the dialog, making 90% recursively shrink its frame. */
+#WhatsNewDialog #DemoSwitch,
+#WhatsNewDialog #DemoSwitch > .flex-grow-class,
+#WhatsNewDialog #DemoSwitch > .flex-grow-class > .switch-element {
+  width: 100%;
+  height: 100%;
+  align-self: stretch;
+  align-items: center;
+  justify-content: center;
+}
+
+.whatsnew-panel {
+  width: var(--skin-release-notes-width);
+  max-width: var(--skin-release-notes-max-width);
+  max-height: var(--skin-release-notes-max-height);
+  border-width: var(--skin-dialog-border-width);
+  border-color: var(--skin-dialog-border);
+  border-radius: var(--skin-dialog-radius);
+  background-color: var(--skin-dialog-surface);
+}
+
+.whatsnew-panel > *,
+.whatsnew-panel #BGImage {
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+}
+
+.whatsnew-panel #BGImage {
+  background-color: var(--skin-dialog-surface);
+  background-image: var(--skin-dialog-artwork);
+  --unity-image-tint-color: var(--skin-transparent);
+  -unity-background-image-tint-color: var(--skin-transparent);
+}
+
+/* This separate decorative pattern has no content children. */
+.whatsnew-panel #TintPatternsImage {
+  opacity: 0;
+}
+
+.whatsnew-panel #Body {
+  padding: var(--skin-release-notes-padding);
+  min-height: 0;
+  flex-shrink: 1;
+}
+
+.whatsnew-panel #ContentScroll {
+  min-height: 0;
+  flex-shrink: 1;
+}
+
+.whatsnew-panel #Header #Title {
+  font-size: var(--skin-release-notes-title-size);
+  color: var(--skin-dialog-heading-foreground);
+}
+
+.whatsnew-panel .whatsnew-row-item {
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  padding: var(--skin-release-notes-padding);
+  border-radius: var(--skin-radius-card);
+  background-color: var(--skin-surface-panel);
+}
+
+.whatsnew-panel .whatsnew-row-item #LHS {
+  width: auto;
+  min-width: 0;
+  flex-grow: 1;
+  flex-shrink: 1;
+  margin-right: var(--skin-release-notes-gap);
+}
+
+.whatsnew-panel .whatsnew-row-item #Image {
+  width: var(--skin-release-notes-image-width);
+  min-width: 0;
+  max-width: var(--skin-release-notes-image-width);
+  flex-grow: 0;
+  flex-shrink: 0;
+  border-radius: var(--skin-radius-control);
+}
+
+.whatsnew-panel .whatsnew-panel-title-colour {
+  font-size: var(--skin-release-notes-heading-size);
+  color: var(--skin-text-link);
+}
+
+.whatsnew-panel .whatsnew-row-item #Description {
+  font-size: var(--skin-release-notes-body-size);
+  color: var(--skin-text-primary);
+  white-space: normal;
+  height: auto;
+  flex-shrink: 0;
+}

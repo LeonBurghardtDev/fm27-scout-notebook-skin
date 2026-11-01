@@ -1,0 +1,3248 @@
+/* Edit this stylesheet directly, then reload the skin. Shared values live in theme.uss. */
+
+/* Tactics
+ * Native tactics selectors, with adjacent shared rules in source order.
+ */
+
+/* Dropdown text frame.
+ * controls size/placement; sets spacing around/inside the element.
+ * Source rule 3494.
+ */
+.set-piece-instruction-row-dropdown .dropdown-text-frame {
+  flex-grow: 1;
+  padding-left: var(--global-padding-extra-extra-large);
+}
+
+/* Set piece pitch category a.
+ * sets the background fill.
+ * Shared rule for 3 selectors. Editing a declaration here affects the whole group below.
+ * Source rule 3495.
+ */
+.set-piece-pitch-category-a,
+.stadium-stand-sponsor,
+.transfer-offer-colour-future {
+  background-color: var(--colours-base-orange-strong);
+}
+
+/* Set piece pitch category b.
+ * sets the background fill.
+ * Shared rule for 2 selectors. Editing a declaration here affects the whole group below.
+ * Source rule 3496.
+ */
+.set-piece-pitch-category-b,
+.sponsor-back {
+  background-color: var(--colours-base-green-strong);
+}
+
+/* Set piece pitch category c.
+ * sets the background fill.
+ * Shared rule for 3 selectors. Editing a declaration here affects the whole group below.
+ * Source rule 3497.
+ */
+.set-piece-pitch-category-c,
+.sponsor-secondary,
+.transfer-offer-colour-due {
+  background-color: var(--colours-base-cyan-strong);
+}
+
+/* Set piece pitch category corner taker.
+ * sets the background fill; controls size/placement.
+ * Source rule 3498.
+ */
+.set-piece-pitch-category-corner-taker {
+  background-color: var(--colours-base-grey-soft);
+  flex-direction: column;
+}
+
+/* Set piece pitch category d.
+ * sets the background fill; controls size/placement.
+ * Source rule 3499.
+ */
+.set-piece-pitch-category-d {
+  background-color: var(--colours-base-red-soft);
+  flex-direction: column;
+}
+
+/* Set piece pitch text category a.
+ * Changes text/foreground colour.
+ * Shared rule for 4 selectors. Editing a declaration here affects the whole group below.
+ * Source rule 3500.
+ */
+.set-piece-pitch-text-category-a,
+.set-piece-pitch-text-category-b,
+.set-piece-pitch-text-category-c,
+.set-piece-pitch-text-category-d {
+  color: var(--colours-base-neutral-black);
+}
+
+/* Set piece pitch tile widget.
+ * sets the background fill; sets the outline/corner shape; controls size/placement; sets spacing
+ * around/inside the element.
+ * Source rule 3501.
+ */
+.set-piece-pitch-tile-widget {
+  width: 381px;
+  height: 100%;
+  padding: 1px;
+  background-color: var(--pitch-tile-default-background);
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  border-radius: 7px;
+}
+
+/* Set piece pitch tile widget phone.
+ * sets the background fill; sets the outline/corner shape; controls size/placement; sets spacing
+ * around/inside the element.
+ * Source rule 3502.
+ */
+.set-piece-pitch-tile-widget-phone {
+  padding: 1px;
+  background-color: var(--pitch-tile-default-background);
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  border-radius: 7px;
+}
+
+/* Set piece routine category a.
+ * sets the background fill; sets the outline/corner shape; controls size/placement; sets spacing
+ * around/inside the element.
+ * Source rule 3503.
+ */
+.set-piece-routine-category-a {
+  width: 24px;
+  padding: 4px;
+  background-color: var(--colours-base-orange-strong);
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  border-radius: var(--skin-radius-small);
+  margin-right: var(--spacing-padding-small---8);
+}
+
+/* Set piece routine category b.
+ * sets the background fill; sets the outline/corner shape; controls size/placement; sets spacing
+ * around/inside the element.
+ * Source rule 3504.
+ */
+.set-piece-routine-category-b {
+  width: 24px;
+  padding: 4px;
+  background-color: var(--colours-base-green-strong);
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  border-radius: var(--skin-radius-small);
+  margin-right: var(--spacing-padding-small---8);
+}
+
+/* Set piece routine category c.
+ * sets the background fill; sets the outline/corner shape; controls size/placement; sets spacing
+ * around/inside the element.
+ * Source rule 3505.
+ */
+.set-piece-routine-category-c {
+  width: 24px;
+  padding: 4px;
+  background-color: var(--colours-base-cyan-strong);
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  border-radius: var(--skin-radius-small);
+  margin-right: var(--spacing-padding-small---8);
+}
+
+/* Set piece routine category corner taker.
+ * sets the background fill; sets the outline/corner shape; controls size/placement; sets spacing
+ * around/inside the element.
+ * Source rule 3506.
+ */
+.set-piece-routine-category-corner-taker {
+  width: 24px;
+  padding: 4px;
+  background-color: var(--colours-base-grey-soft);
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  border-radius: var(--skin-radius-small);
+  margin-right: var(--spacing-padding-small---8);
+}
+
+/* Set piece routine category d.
+ * sets the background fill; sets the outline/corner shape; controls size/placement; sets spacing
+ * around/inside the element.
+ * Source rule 3507.
+ */
+.set-piece-routine-category-d {
+  width: 24px;
+  padding: 4px;
+  background-color: var(--colours-base-red-soft);
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  border-radius: var(--skin-radius-small);
+  margin-right: var(--spacing-padding-small---8);
+}
+
+/* Set piece routine one.
+ * sets the background fill; controls size/placement; sets spacing around/inside the element.
+ * Source rule 3508.
+ */
+.set-piece-routine-one {
+  width: 16px;
+  height: 16px;
+  background-color: var(--colours-base-green-soft);
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  margin-right: var(--spacing-padding-small---8);
+}
+
+/* Set piece routine preview radio button.
+ * sets the outline/corner shape; controls size/placement; sets spacing around/inside the element.
+ * Source rule 3509.
+ */
+.set-piece-routine-preview-radio-button {
+  width: 135px;
+  margin: 0 1px;
+  padding: 4px 8px;
+  border-width: 1px;
+  border-color: var(--skin-on-media-alpha-35);
+  align-items: center;
+  border-radius: var(--skin-radius-card);
+  flex-direction: var(--row-direction-always-normal);
+}
+
+/* Set piece routine three.
+ * sets the background fill; controls size/placement; sets spacing around/inside the element.
+ * Source rule 3510.
+ */
+.set-piece-routine-three {
+  width: 16px;
+  height: 16px;
+  background-color: var(--colours-base-cyan-soft);
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  margin-right: var(--spacing-padding-small---8);
+}
+
+/* Set piece routine two.
+ * sets the background fill; controls size/placement; sets spacing around/inside the element.
+ * Source rule 3511.
+ */
+.set-piece-routine-two {
+  width: 16px;
+  height: 16px;
+  background-color: var(--colours-base-blue-soft);
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  margin-right: var(--spacing-padding-small---8);
+}
+
+/* Set pieces buttons ios.
+ * sets spacing around/inside the element.
+ * Source rule 3512.
+ */
+.set-pieces-buttons-ios {
+  margin-left: var(--global-gap-regular);
+}
+
+/* Set pieces header 2x1 tile.
+ * controls size/placement.
+ * Source rule 3513.
+ */
+.set-pieces-header-2x1-tile {
+  width: 146px;
+  height: 66px;
+}
+
+/* Tactics
+ * Native tactics selectors, with adjacent shared rules in source order.
+ */
+
+/* Tactical effectiveness player warning.
+ * tints background artwork.
+ * Source rule 3794.
+ */
+.tactical-effectiveness-player-warning {
+  -unity-background-image-tint-color: var(--interaction-input-switch-border-color-warning);
+}
+
+/* Tactical effectiveness provisional score container.
+ * Shows these elements; sets the background fill; sets the outline/corner shape; controls size/placement.
+ * Source rule 3795.
+ */
+.tactical-effectiveness-provisional-score-container {
+  display: flex;
+  height: var(--interaction-global-height-md, 32px);
+  margin: 4px var(--global-gap-close, 4px);
+  padding: var(--interaction-global-padding-vertical) var(--interaction-global-padding-horizontal-md);
+  background-color: var(--theme-color-purple-soft-surface, var(--skin-data-tactical-effectiveness-provisional-score-container-background));
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  flex-wrap: wrap;
+  border-radius: var(--interaction-global-radius-md, var(--skin-radius-small));
+}
+
+/* Tactical effectiveness tile table column right.
+ * controls size/placement; sets spacing around/inside the element.
+ * Source rule 3796.
+ */
+.tactical-effectiveness-tile-table-column-right {
+  width: 72px;
+  padding-right: var(--global-padding-extra-small);
+  justify-content: center;
+  align-items: flex-end;
+}
+
+/* Tactical effectiveness tile table header.
+ * controls size/placement; sets spacing around/inside the element.
+ * Source rule 3797.
+ */
+.tactical-effectiveness-tile-table-header {
+  height: var(--interaction-global-height-sm);
+  padding: var(--padding-padding-4) var(--padding-padding-4);
+  align-self: stretch;
+  flex-direction: var(--row-direction-normal);
+}
+
+/* Tactical effectiveness tile table row height large.
+ * controls size/placement.
+ * Source rule 3798.
+ */
+.tactical-effectiveness-tile-table-row-height-large {
+  height: var(--interaction-global-height-lg);
+}
+
+/* Tactical effectiveness tile table row height regular.
+ * controls size/placement.
+ * Source rule 3799.
+ */
+.tactical-effectiveness-tile-table-row-height-regular {
+  height: var(--interaction-global-height-md);
+}
+
+/* Tactical shout icon container dark.
+ * sets the background fill; controls size/placement.
+ * Source rule 3800.
+ */
+.tactical-shout-icon-container-dark {
+  width: 24px;
+  height: 24px;
+  background-color: var(--skin-surface-canvas-alpha-65);
+  align-self: center;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Tactical shout icon container light.
+ * sets the background fill; controls size/placement.
+ * Source rule 3801.
+ */
+.tactical-shout-icon-container-light {
+  width: 24px;
+  height: 24px;
+  background-color: var(--skin-on-media-alpha-08);
+  align-self: center;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Tactical shout row.
+ * sets the background fill; controls size/placement; sets spacing around/inside the element.
+ * Source rule 3802.
+ */
+.tactical-shout-row {
+  background-color: var(--skin-on-media-alpha-08);
+  min-height: 32px;
+  padding-left: 8px;
+  padding-right: 8px;
+}
+
+/* Tactical tweak player row.
+ * controls size/placement.
+ * Source rule 3803.
+ */
+.tactical-tweak-player-row {
+  min-height: 32px;
+  flex-direction: column;
+  align-self: stretch;
+}
+
+/* Tactical tweak player row active count.
+ * Changes text/foreground colour; sets font/text presentation; sets spacing around/inside the element.
+ * Source rule 3804.
+ */
+.tactical-tweak-player-row__active-count {
+  color: var(--skin-data-tactical-tweak-player-row-active-count-foreground);
+  font-size: var(--skin-font-size-12);
+  margin-left: 4px;
+  -unity-font-style: bold;
+}
+
+/* Tactical tweak player row header.
+ * sets the background fill; controls size/placement; sets spacing around/inside the element.
+ * Source rule 3805.
+ */
+.tactical-tweak-player-row__header {
+  background-color: var(--skin-on-media-alpha-08);
+  min-height: 24px;
+  padding-left: 8px;
+  padding-right: 8px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  flex-direction: var(--row-direction-normal);
+  justify-content: space-between;
+  align-items: center;
+  align-self: stretch;
+}
+
+/* Tactical tweak player row name.
+ * Changes text/foreground colour; sets font/text presentation; sets spacing around/inside the element.
+ * Source rule 3806.
+ */
+.tactical-tweak-player-row__name {
+  color: var(--skin-text-primary);
+  font-size: var(--skin-font-size-12);
+  margin-left: 4px;
+}
+
+/* Tactical tweak player row picker.
+ * Hides these elements; controls size/placement.
+ * Source rule 3807.
+ */
+.tactical-tweak-player-row__picker {
+  display: none;
+  flex-direction: column;
+  align-self: stretch;
+}
+
+/* Tactical tweak player row row button.
+ * controls size/placement.
+ * Shared rule for 2 selectors. Editing a declaration here affects the whole group below.
+ * Source rule 3808.
+ */
+.tactical-tweak-player-row__row-button,
+.tactical-tweak-row__row-button {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+}
+
+/* Tactical tweak player row shirt badge.
+ * controls size/placement; sets spacing around/inside the element.
+ * Source rule 3809.
+ */
+.tactical-tweak-player-row__shirt-badge {
+  width: 24px;
+  height: 24px;
+  margin-right: var(--global-gap-regular);
+}
+
+/* Tactical tweak player row shirt badge fill.
+ * sets the outline/corner shape; controls size/placement.
+ * Source rule 3810.
+ */
+.tactical-tweak-player-row__shirt-badge-fill {
+  border-width: 1px;
+  border-color: var(--skin-transparent);
+  flex-grow: 1;
+  align-self: stretch;
+  justify-content: center;
+  align-items: center;
+  border-radius: var(--border-radius-radius-4);
+}
+
+/* Tactical tweak player row shirt number.
+ * sets font/text presentation.
+ * Source rule 3811.
+ */
+.tactical-tweak-player-row__shirt-number {
+  font-size: var(--skin-font-size-12);
+  -unity-font-style: bold;
+  -unity-text-align: middle-center;
+}
+
+/* Tactical tweak row.
+ * sets the background fill; controls size/placement; sets spacing around/inside the element.
+ * Source rule 3812.
+ */
+.tactical-tweak-row {
+  background-color: var(--skin-on-media-alpha-08);
+  min-height: 32px;
+  padding-left: 8px;
+  padding-right: 8px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  flex-direction: column;
+  align-self: stretch;
+}
+
+/* Tactical tweak row icon badge.
+ * sets the outline/corner shape.
+ * Source rule 3813.
+ */
+.tactical-tweak-row--active .tactical-tweak-row__icon-badge {
+  border-color: var(--skin-data-tactical-tweak-row-active-tactical-tweak-row-icon-badge-border-color);
+}
+
+/* Tactical tweak row indicator.
+ * Shows these elements; sets the background fill.
+ * Source rule 3814.
+ */
+.tactical-tweak-row--active .tactical-tweak-row__indicator {
+  display: flex;
+  background-color: var(--skin-data-tactical-tweak-row-active-tactical-tweak-row-indicator-background);
+}
+
+/* Tactical tweak row title.
+ * Changes text/foreground colour.
+ * Source rule 3815.
+ */
+.tactical-tweak-row--active .tactical-tweak-row__title {
+  color: var(--skin-data-tactical-tweak-row-active-tactical-tweak-row-title-foreground);
+}
+
+/* Tactical tweak row icon badge.
+ * sets the outline/corner shape.
+ * Source rule 3816.
+ */
+.tactical-tweak-row--active.tactical-tweak-row--conflict .tactical-tweak-row__icon-badge {
+  border-color: var(--skin-data-tactical-tweak-row-active-tactical-tweak-row-conflict-tactical-tweak-row-icon-badge-border-color);
+}
+
+/* Tactical tweak row icon badge.
+ * sets the outline/corner shape.
+ * Source rule 3816.
+ */
+.tactical-tweak-row--pending-apply.tactical-tweak-row--conflict .tactical-tweak-row__icon-badge {
+  border-color: var(--skin-data-tactical-tweak-row-pending-apply-tactical-tweak-row-conflict-tactical-tweak-row-icon-badge-border-color);
+}
+
+/* Tactical tweak row indicator.
+ * sets the background fill.
+ * Source rule 3817.
+ */
+.tactical-tweak-row--active.tactical-tweak-row--conflict .tactical-tweak-row__indicator {
+  background-color: var(--skin-data-tactical-tweak-row-active-tactical-tweak-row-conflict-tactical-tweak-row-indicator-background);
+}
+
+/* Tactical tweak row indicator.
+ * sets the background fill.
+ * Source rule 3817.
+ */
+.tactical-tweak-row--pending-apply.tactical-tweak-row--conflict .tactical-tweak-row__indicator {
+  background-color: var(--skin-data-tactical-tweak-row-pending-apply-tactical-tweak-row-conflict-tactical-tweak-row-indicator-background);
+}
+
+/* Tactical tweak row title.
+ * Changes text/foreground colour.
+ * Source rule 3818.
+ */
+.tactical-tweak-row--active.tactical-tweak-row--conflict .tactical-tweak-row__title {
+  color: var(--skin-data-tactical-tweak-row-active-tactical-tweak-row-conflict-tactical-tweak-row-title-foreground);
+}
+
+/* Tactical tweak row title.
+ * Changes text/foreground colour.
+ * Source rule 3818.
+ */
+.tactical-tweak-row--pending-apply.tactical-tweak-row--conflict .tactical-tweak-row__title {
+  color: var(--skin-data-tactical-tweak-row-pending-apply-tactical-tweak-row-conflict-tactical-tweak-row-title-foreground);
+}
+
+/* Tactical tweak row disabled.
+ * sets the background fill.
+ * Source rule 3819.
+ */
+.tactical-tweak-row--disabled {
+  background-color: var(--skin-on-media-alpha-02);
+}
+
+/* Tactical tweak row title.
+ * Changes text/foreground colour; sets font/text presentation.
+ * Source rule 3820.
+ */
+.tactical-tweak-row--disabled .tactical-tweak-row__title {
+  color: var(--skin-text-secondary);
+  -unity-font-style: normal;
+}
+
+/* Tactical tweak row icon badge.
+ * sets the outline/corner shape.
+ * The two badges keep their existing border width; the tile frames below
+ * restore a separate width only for the pending status.
+ * Source rule 3821.
+ */
+.tactical-tweak-row--pending-apply .tactical-tweak-row__icon-badge,
+.tactical-tweak-row--pending-remove .tactical-tweak-row__icon-badge {
+  border-color: var(--colours-tactics-tweak-pending);
+}
+
+/* Pending tactic tiles retain their status outline after the ordinary shared
+ * card border is removed. The badge above keeps its own native width. */
+.player-instruction-tile--pending .surfaces-card-tile-border,
+.team-instruction-tile--pending .surfaces-card-tile-border,
+.team-instruction-tile--phase-relevant .team-instruction-tile--pending .surfaces-card-tile-border {
+  border-width: var(--global-border-width-tile-card);
+  border-color: var(--colours-tactics-tweak-pending);
+}
+
+/* Tactical tweak row indicator.
+ * Shows these elements; sets the background fill.
+ * Shared rule for 2 selectors. Editing a declaration here affects the whole group below.
+ * Source rule 3822.
+ */
+.tactical-tweak-row--pending-apply .tactical-tweak-row__indicator,
+.tactical-tweak-row--pending-remove .tactical-tweak-row__indicator {
+  display: flex;
+  background-color: var(--colours-tactics-tweak-pending);
+}
+
+/* Tactical tweak row title.
+ * Changes text/foreground colour.
+ * Shared rule for 8 selectors. Editing a declaration here affects the whole group below.
+ * Source rule 3823.
+ */
+.tactical-tweak-row--pending-apply .tactical-tweak-row__title,
+.tactical-tweak-row--pending-remove .tactical-tweak-row__title,
+.player-instruction-tile--pending .tile-title-color,
+.team-instruction-tile--pending .tile-title-color,
+.team-instruction-cell--pending #text-second,
+.team-instruction-tile--pending .mentality-text,
+.team-instruction-tile--pending #name,
+.player-instruction-tile--pending #name {
+  color: var(--colours-tactics-tweak-pending);
+}
+
+/* Tactical tweak row cancel button.
+ * Hides these elements; sets the background fill; sets the outline/corner shape; controls size/placement.
+ * Source rule 3824.
+ */
+.tactical-tweak-row__cancel-button {
+  display: none;
+  width: 24px;
+  height: 24px;
+  background-color: var(--skin-on-media-alpha-10);
+  align-items: center;
+  justify-content: center;
+  border-top-left-radius: var(--skin-radius-small);
+  border-top-right-radius: var(--skin-radius-small);
+  border-bottom-left-radius: var(--skin-radius-small);
+  border-bottom-right-radius: var(--skin-radius-small);
+}
+
+/* Tactical tweak row header.
+ * controls size/placement.
+ * Source rule 3825.
+ */
+.tactical-tweak-row__header {
+  min-height: 24px;
+  flex-direction: var(--row-direction-normal);
+  justify-content: space-between;
+  align-items: center;
+  align-self: stretch;
+}
+
+/* Tactical tweak row icon badge.
+ * sets the background fill; sets the outline/corner shape; controls size/placement; sets spacing
+ * around/inside the element.
+ * Source rule 3826.
+ */
+.tactical-tweak-row__icon-badge {
+  width: 24px;
+  height: 24px;
+  border-width: 1px;
+  border-color: var(--skin-transparent);
+  background-color: var(--skin-surface-canvas-alpha-65);
+  justify-content: center;
+  align-items: center;
+  border-radius: var(--border-radius-radius-4);
+  margin-right: var(--global-gap-regular);
+}
+
+/* Tactical tweak row indicator.
+ * Hides these elements; controls size/placement.
+ * Source rule 3827.
+ */
+.tactical-tweak-row__indicator {
+  position: absolute;
+  display: none;
+  width: 3px;
+  height: 100%;
+  left: 0;
+  top: 0;
+}
+
+/* Tactical tweak row instruct pill.
+ * sets the background fill.
+ * Source rule 3828.
+ */
+.tactical-tweak-row__instruct-pill {
+  background-color: var(--skin-data-tactical-tweak-row-instruct-pill-background);
+}
+
+/* Tactical tweak row instructing pill.
+ * sets the background fill.
+ * Source rule 3829.
+ */
+.tactical-tweak-row__instructing-pill {
+  background-color: var(--skin-on-media-alpha-10);
+}
+
+/* Tactical tweak row pill.
+ * Hides these elements; sets the outline/corner shape; controls size/placement; sets spacing around/inside
+ * the element.
+ * Source rule 3830.
+ */
+.tactical-tweak-row__pill {
+  display: none;
+  height: 24px;
+  padding-left: 8px;
+  padding-right: 8px;
+  align-items: center;
+  justify-content: center;
+  border-top-left-radius: var(--skin-radius-card);
+  border-top-right-radius: var(--skin-radius-card);
+  border-bottom-left-radius: var(--skin-radius-card);
+  border-bottom-right-radius: var(--skin-radius-card);
+}
+
+/* Tactical tweak row pill label.
+ * Changes text/foreground colour; sets font/text presentation.
+ * Source rule 3831.
+ */
+.tactical-tweak-row__pill-label {
+  color: var(--skin-on-media);
+  font-size: var(--skin-font-size-11);
+  -unity-font-style: bold;
+}
+
+/* Tactical tweak row stop pill.
+ * sets the background fill.
+ * Source rule 3832.
+ */
+.tactical-tweak-row__stop-pill {
+  background-color: var(--skin-data-tactical-tweak-row-stop-pill-background);
+}
+
+/* Tactical tweak row stop pill.
+ * sets the background fill.
+ * Source rule 3832.
+ */
+.tactical-tweak-row__stopping-pill {
+  background-color: var(--skin-data-tactical-tweak-row-stopping-pill-background);
+}
+
+/* Tactical tweak row title.
+ * Changes text/foreground colour; sets font/text presentation.
+ * Source rule 3833.
+ */
+.tactical-tweak-row__title {
+  color: var(--skin-text-primary);
+  font-size: var(--skin-font-size-12);
+  -unity-font-style: bold;
+}
+
+/* Tactical tweaks badge.
+ * Changes text/foreground colour; sets the background fill; sets the outline/corner shape; sets font/text
+ * presentation.
+ * Source rule 3834.
+ */
+.tactical-tweaks-badge {
+  height: 18px;
+  background-color: var(--skin-data-tactical-tweaks-badge-background);
+  color: var(--skin-on-media);
+  font-size: var(--skin-font-size-11);
+  min-width: 18px;
+  padding-left: 5px;
+  padding-right: 5px;
+  -unity-text-align: middle-center;
+  -unity-font-style: bold;
+  border-top-left-radius: 9px;
+  border-top-right-radius: 9px;
+  border-bottom-left-radius: 9px;
+  border-bottom-right-radius: 9px;
+}
+
+/* Tactical tweaks list.
+ * sets the background fill; controls size/placement.
+ * Source rule 3835.
+ */
+.tactical-tweaks-list {
+  background-color: var(--skin-surface-raised);
+  align-self: stretch;
+}
+
+/* Tactical tweaks panel.
+ * sets the background fill; sets the outline/corner shape; controls size/placement.
+ * Source rule 3836.
+ */
+.tactical-tweaks-panel {
+  width: 360px;
+  border-width: 1px;
+  border-color: var(--skin-on-media-alpha-12);
+  background-color: var(--skin-surface-page);
+  border-radius: var(--global-radius-small);
+}
+
+/* Tactical tweaks tab.
+ * sets the background fill; sets the outline/corner shape; controls size/placement; sets spacing
+ * around/inside the element.
+ * Source rule 3837.
+ */
+.tactical-tweaks-tab {
+  background-color: var(--none);
+  border-bottom-width: 2px;
+  border-bottom-color: var(--skin-transparent);
+  padding-left: var(--global-padding-regular);
+  padding-right: var(--global-padding-regular);
+  flex-direction: var(--row-direction-normal);
+  align-items: center;
+  justify-content: center;
+}
+
+/* Tactical tweaks tab active true.
+ * sets the outline/corner shape.
+ * Source rule 3838.
+ */
+.tactical-tweaks-tab--active-true {
+  border-bottom-color: var(--skin-data-tactical-tweaks-tab-active-true-border-bottom-color);
+}
+
+/* Tactical tweaks tab badge.
+ * sets the background fill; sets the outline/corner shape; controls size/placement.
+ * Source rule 3839.
+ */
+.tactical-tweaks-tab__badge {
+  width: 16px;
+  height: 16px;
+  background-color: var(--skin-data-tactical-tweaks-tab-badge-background);
+  border-radius: var(--border-radius-radius-8);
+  max-width: 16px;
+  max-height: 16px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Tactical tweaks tabs.
+ * controls size/placement; sets spacing around/inside the element.
+ * Source rule 3840.
+ */
+.tactical-tweaks-tabs {
+  height: 36px;
+  align-items: center;
+  margin-right: 8px;
+  margin-left: 8px;
+}
+
+/* Tactics accent pitch.
+ * controls size/placement.
+ * Source rule 3841.
+ */
+.tactics-accent-pitch {
+  position: absolute;
+  width: 60px;
+  height: 42px;
+  left: 0px;
+  top: 0px;
+}
+
+/* Tactics accent pitch 2 2.
+ * controls size/placement.
+ * Source rule 3842.
+ */
+.tactics-accent-pitch-2-2 {
+  position: absolute;
+  width: 48px;
+  height: 32px;
+  left: 0px;
+  top: 0px;
+}
+
+/* Tactics accent pitch 2 2 container positional ability.
+ * controls size/placement.
+ * Source rule 3843.
+ */
+.tactics-accent-pitch-2-2-container-positional-ability {
+  width: 48px;
+  height: 32px;
+  min-height: 32px;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+}
+
+/* Tactics accent pitch 4 4.
+ * controls size/placement.
+ * Source rule 3844.
+ */
+.tactics-accent-pitch-4-4 {
+  position: absolute;
+  width: 120px;
+  height: 84px;
+  left: 0px;
+  top: 0px;
+}
+
+/* Tactics accent pitch 4 4 container positional ability.
+ * controls size/placement.
+ * Source rule 3845.
+ */
+.tactics-accent-pitch-4-4-container-positional-ability {
+  width: 120px;
+  height: 84px;
+  min-height: 84px;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+}
+
+/* Tactics accent pitch 8 4.
+ * controls size/placement.
+ * Source rule 3846.
+ */
+.tactics-accent-pitch-8-4 {
+  position: absolute;
+  width: 240px;
+  height: 168px;
+  left: 0px;
+  top: 0px;
+}
+
+/* Tactics accent pitch 8 4 container positional ability.
+ * controls size/placement.
+ * Source rule 3847.
+ */
+.tactics-accent-pitch-8-4-container-positional-ability {
+  width: 240px;
+  height: 168px;
+  min-height: 168px;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+}
+
+/* Tactics accent pitch container positional ability.
+ * controls size/placement.
+ * Source rule 3848.
+ */
+.tactics-accent-pitch-container-positional-ability {
+  width: 60px;
+  height: 42px;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+}
+
+/* Tactics accent pitch square perspective.
+ * controls size/placement.
+ * Source rule 3849.
+ */
+.tactics-accent-pitch-square-perspective {
+  position: absolute;
+  width: 240px;
+  height: 240px;
+  left: 0px;
+  top: 0px;
+}
+
+/* Tactics accent pitch square perspective container small.
+ * controls size/placement.
+ * Source rule 3850.
+ */
+.tactics-accent-pitch-square-perspective-container-small {
+  width: 198px;
+  height: 198px;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+}
+
+/* Tactics accent pitch square perspective small.
+ * controls size/placement.
+ * Source rule 3851.
+ */
+.tactics-accent-pitch-square-perspective-small {
+  position: absolute;
+  width: 198px;
+  height: 198px;
+  left: 0px;
+  top: 0px;
+}
+
+/* Tactics accent thematic pitch.
+ * controls size/placement.
+ * Source rule 3852.
+ */
+.tactics-accent-thematic-pitch {
+  position: absolute;
+  width: 48px;
+  height: 64px;
+  left: 0px;
+  top: 0px;
+}
+
+/* Tactics accent thematic pitch container.
+ * controls size/placement.
+ * Source rule 3853.
+ */
+.tactics-accent-thematic-pitch-container {
+  width: 36px;
+  height: 54px;
+}
+
+/* Tactics collapsable pitch container.
+ * sets the background fill; sets the outline/corner shape; controls size/placement; sets spacing
+ * around/inside the element.
+ * Source rule 3854.
+ */
+.tactics-collapsable-pitch-container {
+  padding: 12px;
+  border-width: 2px;
+  border-color: var(--skin-data-tactics-collapsable-pitch-container-border-color);
+  background-color: var(--skin-data-tactics-collapsable-pitch-container-background);
+  border-radius: var(--skin-radius-control);
+  flex-shrink: 1;
+  flex-grow: 1;
+  flex-direction: var(--row-direction-normal);
+  align-self: flex-start;
+}
+
+/* Tactics collapsable pitch container with darker header.
+ * sets the background fill; sets the outline/corner shape; controls size/placement.
+ * Source rule 3855.
+ */
+.tactics-collapsable-pitch-container-with-darker-header {
+  border-width: 1px;
+  border-color: var(--skin-data-tactics-collapsable-pitch-container-with-darker-header-border-color);
+  background-color: var(--skin-data-tactics-collapsable-pitch-container-with-darker-header-background);
+  border-bottom-right-radius: var(--skin-radius-control);
+  border-bottom-left-radius: var(--skin-radius-control);
+  flex-shrink: 1;
+  flex-grow: 1;
+  flex-direction: var(--row-direction-normal);
+  align-self: flex-start;
+}
+
+/* Tactics collapsable pitch expanded.
+ * controls size/placement.
+ * Source rule 3856.
+ */
+.tactics-collapsable-pitch-expanded {
+  width: 452px;
+  max-width: 452px;
+  min-width: 452px;
+  max-height: 660px;
+}
+
+/* Tactics collapsable pitch grass colour.
+ * sets the background fill.
+ * Source rule 3857.
+ */
+.tactics-collapsable-pitch-grass-colour {
+  background-color: var(--colours-tactics-base-50);
+}
+
+/* Tactics collapsable pitch header.
+ * sets the background fill; sets the outline/corner shape; controls size/placement.
+ * Source rule 3858.
+ */
+.tactics-collapsable-pitch-header {
+  border-width: 1px;
+  border-color: var(--skin-data-tactics-collapsable-pitch-header-border-color);
+  background-color: var(--skin-data-tactics-collapsable-pitch-header-background);
+  border-top-left-radius: var(--skin-radius-control);
+  border-top-right-radius: var(--skin-radius-control);
+  flex-shrink: 1;
+  flex-grow: 1;
+  flex-direction: var(--row-direction-normal);
+}
+
+/* Tactics collapsable pitch header button.
+ * sets spacing around/inside the element.
+ * Source rule 3859.
+ */
+.tactics-collapsable-pitch-header-button {
+  margin: 0;
+  padding: 8px;
+}
+
+/* Buttongroup button.
+ * sets the background fill; sets the outline/corner shape; controls size/placement; sets spacing
+ * around/inside the element.
+ * Source rule 3860.
+ */
+.tactics-collapsable-pitch-header-button-group .buttongroup__button {
+  height: var(--interaction-global-height-md);
+  margin: var(--global-gap-micro) var(--global-gap-none);
+  padding: var(--interaction-global-padding-horizontal-xs);
+  border-width: var(--global-border-regular);
+  border-color: var(--skin-border-subtle);
+  background-color: var(--none);
+  min-height: 32px;
+  min-width: 32px;
+  align-items: center;
+  justify-content: center;
+  flex-direction: var(--row-direction-normal);
+  transition: background-color var(--global-transition-buttons) var(--global-transition-animation-buttons);
+}
+
+/* Sitext.
+ * sets spacing around/inside the element.
+ * Source rule 3861.
+ */
+.tactics-collapsable-pitch-header-button-group .buttongroup__button .sitext {
+  margin: 0 4px 0 4px;
+}
+
+/* Buttongroup button active.
+ * sets the background fill; sets the background artwork.
+ * Shared rule for 2 selectors. Editing a declaration here affects the whole group below.
+ * Source rule 3862.
+ */
+.tactics-collapsable-pitch-header-button-group .buttongroup__button--active,
+.tactics-collapsable-pitch-header-button-group .buttongroup__button--active:hover {
+  background-color: var(--colours-tactics-base-20);
+  background-image: none;
+}
+
+/* Tactics collapsable pitch header collapse button.
+ * sets the background fill; sets the outline/corner shape.
+ * Source rule 3863.
+ */
+.tactics-collapsable-pitch-header-collapse-button {
+  background-color: var(--colours-tactics-base-20);
+  border-radius: var(--interaction-global-radius-md);
+}
+
+/* Tactics collapsable pitch shrunk height.
+ * controls size/placement.
+ * Source rule 3864.
+ */
+.tactics-collapsable-pitch-shrunk-height {
+  height: 240px;
+  max-height: 240px;
+  min-height: 240px;
+}
+
+/* Tactics collapsable pitch shrunk width.
+ * controls size/placement.
+ * Source rule 3865.
+ */
+.tactics-collapsable-pitch-shrunk-width {
+  width: 198px;
+  max-width: 198px;
+  min-width: 198px;
+}
+
+/* Tactics creator stepper step.
+ * sets the background fill; controls size/placement; sets spacing around/inside the element.
+ * Source rule 3866.
+ */
+.tactics-creator-stepper-step {
+  width: 24px;
+  height: 4px;
+  background-color: var(--skin-on-media-alpha-35);
+  margin-right: 4px;
+}
+
+/* Tactics multiple choice option button.
+ * sets the background fill; sets the outline/corner shape; controls size/placement; sets spacing
+ * around/inside the element.
+ * Source rule 3867.
+ */
+.tactics-multiple-choice-option-button {
+  border-width: 1px;
+  border-color: var(--skin-border-subtle);
+  background-color: var(--skin-transparent);
+  flex-direction: var(--row-direction-normal);
+  flex-wrap: nowrap;
+  flex-grow: 1;
+  justify-content: flex-start;
+  align-self: stretch;
+  align-content: stretch;
+  border-radius: var(--skin-radius-tight);
+  margin-bottom: 6px;
+  padding-left: 12px;
+  padding-right: 12px;
+  padding-bottom: 8px;
+  padding-top: 8px;
+  cursor: var(--cursor-clickable-1x-url) var(--cursor-clickable-1x-hotspot-x) var(--cursor-clickable-1x-hotspot-y);
+  transition-property: var(--transition-props-paint);
+  transition-duration: var(--global-transition-buttons);
+  transition-timing-function: var(--global-transition-animation-buttons);
+}
+
+/* Tactics multiple choice option button selected.
+ * sets the background fill.
+ * Source rule 3868.
+ */
+.tactics-multiple-choice-option-button-selected {
+  background-color: var(--colours-tactics-teaminstruction-background);
+}
+
+/* Tactics multiple choice option button unselected.
+ * sets the outline/corner shape.
+ * Shared rule for 2 selectors. Editing a declaration here affects the whole group below.
+ * Source rule 3869.
+ */
+.tactics-multiple-choice-option-button-unselected,
+.tactics-subs-block-cell-unselected {
+  border-color: var(--skin-on-media-alpha-16);
+}
+
+/* Tactics nav primary actions property 1 base.
+ * controls size/placement; sets spacing around/inside the element.
+ * Source rule 3870.
+ */
+.tactics-nav-primary-actions-property-1-base {
+  background-color: var(--skin-tactics-header);
+  padding: 8px 4px 8px 8px;
+  justify-content: space-between;
+  align-items: center;
+  align-self: stretch;
+  flex-direction: var(--row-direction-normal);
+}
+
+/* Tactics nav secondary actions property 1 team shape.
+ * sets the background fill; sets the outline/corner shape; controls size/placement; sets spacing
+ * around/inside the element.
+ * Source rule 3871.
+ */
+.tactics-nav-secondary-actions-property-1-team-shape {
+  background-color: var(--skin-tactics-surface);
+  /* Fill the native fixed-height frame after its ordinary edge is removed;
+   * otherwise its bound gradient remains exposed beneath this row. */
+  flex-grow: 1;
+  padding: var(--numbers-border-radius-extra-small);
+  align-items: center;
+  align-self: stretch;
+  /* The outer gradient frame owns clipping. A second rounded backplate
+   * blends its corner pixels with the bound green paint underneath. */
+  border-radius: 0;
+  flex-direction: var(--row-direction-normal);
+}
+
+/* Tactics opposition instruction personalised left.
+ * sets the background fill; sets the outline/corner shape; controls size/placement.
+ * Source rule 3872.
+ */
+.tactics-opposition-instruction-personalised-left {
+  height: 24px;
+  border-width: 1px;
+  border-color: var(--skin-border-default);
+  background-color: var(--skin-transparent);
+  justify-content: center;
+  align-items: center;
+  border-radius: var(--border-radius-leading-small);
+  flex-direction: var(--row-direction-normal);
+}
+
+/* Selected fill and foreground use the paired default Dugout Volt/ink roles.
+ */
+.tactics-opposition-instruction-personalised-left-active {
+  height: 24px;
+  border-width: 1px;
+  border-color: var(--skin-border-default);
+  background-color: var(--skin-selection-background);
+  justify-content: center;
+  align-items: center;
+  border-radius: var(--border-radius-leading-small);
+  flex-direction: var(--row-direction-normal);
+  color: var(--skin-selection-foreground);
+}
+
+/* Tactics opposition instruction personalised right.
+ * sets the background fill; sets the outline/corner shape; controls size/placement.
+ * Source rule 3874.
+ */
+.tactics-opposition-instruction-personalised-right {
+  height: 24px;
+  border-width: 1px;
+  border-color: var(--skin-border-default);
+  background-color: var(--skin-transparent);
+  justify-content: center;
+  align-items: center;
+  border-radius: var(--border-radius-trailing-small);
+  flex-direction: var(--row-direction-normal);
+}
+
+/* Selected fill and foreground use the paired default Dugout Volt/ink roles.
+ */
+.tactics-opposition-instruction-personalised-right-active {
+  height: 24px;
+  border-width: 1px;
+  border-color: var(--skin-border-default);
+  background-color: var(--skin-selection-background);
+  justify-content: center;
+  align-items: center;
+  border-radius: var(--border-radius-trailing-small);
+  flex-direction: var(--row-direction-normal);
+  color: var(--skin-selection-foreground);
+}
+
+/* Tactics overlay bkg.
+ * sets the background fill; controls size/placement.
+ * Source rule 3876.
+ */
+.tactics-overlay-bkg {
+  position: absolute;
+  width: 100%;
+  height: 20%;
+  background-color: var(--skin-surface-canvas-alpha-20);
+  bottom: 0;
+  left: 0;
+}
+
+/* Tactics overview pitch 290.
+ * controls size/placement.
+ * Source rule 3877.
+ */
+.tactics-overview-pitch-290 {
+  position: absolute;
+  width: 290px;
+  height: 152px;
+}
+
+/* Tactics overview pitch 290 4x4.
+ * controls size/placement.
+ * Source rule 3878.
+ */
+.tactics-overview-pitch-290-4x4 {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+}
+
+/* Tactics partnership line mid point colour.
+ * supplies local values read by the component styling.
+ * Source rule 3879.
+ */
+.tactics-partnership-line-mid-point-colour {
+  --line-colour: var(--linear-ranges-4-values-3);
+}
+
+/* Tactics partnership line strong colour.
+ * supplies local values read by the component styling.
+ * Source rule 3880.
+ */
+.tactics-partnership-line-strong-colour {
+  --line-colour: var(--linear-ranges-4-values-4);
+}
+
+/* Tactics pitch grass lines colour.
+ * supplies local values read by the component styling.
+ * Source rule 3881.
+ */
+.tactics-pitch-grass-lines-colour {
+  --grass-colour: var(--skin-pitch-background);
+}
+
+/* Tactics pitch tile background colour.
+ * sets the background fill.
+ * Source rule 3882.
+ */
+.tactics-pitch-tile-background-colour {
+  background-color: var(--pitch-tile-default-background);
+}
+
+/* Tactics pitch visualiser property 1 ip oop.
+ * sets the background fill; sets the outline/corner shape; controls size/placement; sets spacing
+ * around/inside the element.
+ * Source rule 3883.
+ */
+.tactics-pitch-visualiser-property-1-ip-oop {
+  padding: 12px var(--spacing-tiles);
+  border-width: 2px;
+  border-color: var(--skin-data-tactics-pitch-visualiser-property-1-ip-oop-border-color);
+  background-color: var(--skin-data-tactics-pitch-visualiser-property-1-ip-oop-background);
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: stretch;
+  border-radius: var(--skin-radius-control);
+}
+
+/* Tactics pitch widget constraints desktop.
+ * controls size/placement.
+ * Source rule 3884.
+ */
+.tactics-pitch-widget-constraints-pc {
+  max-height: 482px;
+  max-width: 322px;
+  min-height: 482px;
+  min-width: 322px;
+}
+
+/* Tactics pitch widget constraints desktop standard.
+ * controls size/placement.
+ * Source rule 3885.
+ */
+.tactics-pitch-widget-constraints-pc-standard:enabled {
+  flex-shrink: 1;
+  align-self: center;
+  max-height: 402px;
+  max-width: 277px;
+  min-height: 402px;
+  min-width: 277px;
+}
+
+/* Tactics position details layout.
+ * sets the outline/corner shape; controls size/placement.
+ * Source rule 3886.
+ */
+.tactics-position-details-layout {
+  width: 80px;
+  height: 44px;
+  border-radius: var(--border-radius-radius-8);
+  overflow: hidden;
+}
+
+/* FM star rating star.
+ * controls size/placement; sets spacing around/inside the element.
+ * Source rule 3887.
+ */
+.tactics-position-details-layout .fm-star-rating-star {
+  -unity-background-scale-mode: scale-to-fit;
+  margin-right: -1px;
+  max-height: 10px;
+  max-width: 10px;
+}
+
+/* FM star rating star no margin.
+ * controls size/placement.
+ * Source rule 3888.
+ */
+.tactics-position-details-layout .fm-star-rating-star-no-margin {
+  -unity-background-scale-mode: scale-to-fit;
+  max-height: 10px;
+  max-width: 10px;
+}
+
+/* Tactics position empty layout.
+ * controls size/placement.
+ * Source rule 3889.
+ */
+.tactics-position-empty-layout {
+  height: 68px;
+  justify-content: flex-end;
+}
+
+/* Tactics position layout.
+ * controls size/placement.
+ * Source rule 3890.
+ */
+.tactics-position-layout {
+  width: 80px;
+  height: 70px;
+}
+
+/* Unity radio button group child active.
+ * sets the background fill; sets the outline/corner shape.
+ * Shared rule for 2 selectors. Editing a declaration here affects the whole group below.
+ * Source rule 3891.
+ */
+/* Instruction options are list choices. A neutral selected surface keeps
+ * prose readable; the small marker and edge carry selection, not a Volt row.
+ * The explanatory pitch/feedback keeps its separate tactics palette. */
+.tactics-radio-buttons .unity-radio-button:hover {
+  background-color: var(--skin-control-hover);
+  color: var(--skin-choice-foreground);
+}
+
+.tactics-radio-buttons .unity-radio-button:active:enabled {
+  background-color: var(--skin-control-pressed);
+  color: var(--skin-choice-foreground);
+}
+
+.tactics-radio-buttons .unity-radio-button:hover .sitext,
+.tactics-radio-buttons .unity-radio-button:active:enabled .sitext {
+  color: var(--skin-choice-foreground);
+}
+
+.tactics-radio-buttons .unity-radio-button:hover .global-text-secondary,
+.tactics-radio-buttons .unity-radio-button:active:enabled .global-text-secondary {
+  color: var(--skin-text-secondary);
+}
+
+.tactics-radio-buttons .unity-radio-button.unity-radio-button-group__child-active {
+  border-color: var(--skin-choice-marker);
+  background-color: var(--skin-list-selection-background);
+  color: var(--skin-choice-foreground);
+}
+
+.tactics-radio-buttons .unity-radio-button.unity-radio-button-group__child-active:hover {
+  background-color: var(--skin-list-selection-hover);
+}
+
+.tactics-radio-buttons .unity-radio-button.unity-radio-button-group__child-active:active:enabled {
+  background-color: var(--skin-control-pressed);
+}
+
+.tactics-radio-buttons .unity-radio-button.unity-radio-button-group__child-active .sitext {
+  color: var(--skin-choice-foreground);
+}
+
+.tactics-radio-buttons .unity-radio-button.unity-radio-button-group__child-active .global-text-secondary {
+  color: var(--skin-text-secondary);
+}
+
+.tactics-radio-buttons .unity-radio-button-group__child-active .unity-radio-button__checkmark {
+  background-color: var(--skin-choice-marker);
+  border-color: var(--skin-choice-marker);
+}
+
+/* Tactics report pitch name.
+ * sets font/text presentation.
+ * Source rule 3892.
+ */
+.tactics-report-pitch-name {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Tactics row highlight highlighted.
+ * sets the background fill.
+ * Source rule 3893.
+ */
+.tactics-row-highlight-highlighted {
+  background-color: var(--skin-data-tactics-row-highlight-highlighted-background);
+}
+
+/* Tactics row highlight sent off.
+ * sets the background fill.
+ * Source rule 3894.
+ */
+.tactics-row-highlight-sent-off {
+  background-color: var(--skin-data-tactics-row-highlight-sent-off-background);
+}
+
+/* Tactics row highlight unavailable.
+ * sets the background fill.
+ * Source rule 3895.
+ */
+.tactics-row-highlight-unavailable {
+  background-color: var(--skin-data-tactics-row-highlight-unavailable-background);
+}
+
+/* Tactics simplified position indicator bottom.
+ * Shows these elements; sets the background fill; sets the outline/corner shape; controls size/placement.
+ * Source rule 3896.
+ */
+.tactics-simplified-position-indicator-bottom {
+  display: flex;
+  width: 45px;
+  height: 18px;
+  padding: 0 2px 2px 2px;
+  border-color: var(--skin-surface-canvas-alpha-20);
+  background-color: var(--skin-surface-canvas-alpha-56);
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-self: stretch;
+  border-radius: 0 0 var(--skin-radius-control) var(--skin-radius-control);
+  border-bottom-width: 1px;
+  border-right-width: 1px;
+  border-left-width: 1px;
+}
+
+/* Tactics simplified position indicator kit.
+ * controls size/placement.
+ * Source rule 3897.
+ */
+.tactics-simplified-position-indicator-kit {
+  width: 23.699px;
+  height: 23px;
+  flex-shrink: 0;
+}
+
+/* Tactics simplified position indicator top.
+ * Shows these elements; sets the outline/corner shape; controls size/placement; sets spacing around/inside
+ * the element.
+ * Source rule 3898.
+ */
+.tactics-simplified-position-indicator-top {
+  display: flex;
+  width: 45px;
+  height: 14px;
+  padding: 0 10px;
+  border-color: var(--skin-surface-canvas-alpha-20);
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-self: stretch;
+  border-radius: var(--skin-radius-control) var(--skin-radius-control) 0 0;
+  border-top-width: 1px;
+  border-right-width: 1px;
+  border-left-width: 1px;
+}
+
+/* Tactics speak to combo left.
+ * sets the background fill; sets the outline/corner shape; controls size/placement; sets spacing
+ * around/inside the element.
+ * Source rule 3899.
+ */
+.tactics-speak-to-combo-left {
+  height: 32px;
+  margin: var(--margin-leading-extra-small);
+  padding: 8px;
+  border-width: var(--global-border-width-thin) 0 var(--global-border-width-thin) var(--global-border-width-thin);
+  border-color: var(--skin-border-subtle);
+  background-color: var(--skin-control-background);
+  flex-direction: var(--row-direction-normal);
+  border-radius: var(--border-radius-leading-small);
+  transition: background-color var(--global-transition-buttons) var(--global-transition-animation-buttons), border-color var(--global-transition-buttons) var(--global-transition-animation-buttons), color var(--global-transition-buttons) var(--global-transition-animation-buttons);
+}
+
+/* SI dropdown selection field.
+ * sets the background fill; sets the outline/corner shape; controls size/placement; sets spacing
+ * around/inside the element.
+ * Source rule 3900.
+ */
+.tactics-speak-to-combo-right .si-dropdown__selection-field {
+  height: 32px;
+  margin: var(--margin-trailing-extra-small);
+  padding: 2px;
+  border-width: var(--global-border-width-thin) var(--global-border-width-thin) var(--global-border-width-thin) 0;
+  border-color: var(--skin-border-subtle);
+  background-color: var(--skin-control-background);
+  flex-direction: var(--row-direction-normal);
+  border-radius: var(--border-radius-trailing-small);
+  transition: background-color var(--global-transition-buttons) var(--global-transition-animation-buttons), border-color var(--global-transition-buttons) var(--global-transition-animation-buttons);
+}
+
+/* Tactics split button divider.
+ * controls size/placement; sets spacing around/inside the element.
+ * Source rule 3901.
+ */
+.tactics-split-button-divider {
+  margin: 0;
+  align-items: center;
+  flex-direction: var(--row-direction-normal);
+}
+
+/* SI dropdown selection field.
+ * controls size/placement; sets spacing around/inside the element.
+ * Source rule 3902.
+ */
+.tactics-split-button-dropdown-right .si-dropdown__selection-field {
+  margin: 0;
+  padding: 0;
+  align-items: center;
+  align-self: stretch;
+  flex-direction: var(--row-direction-normal);
+}
+
+/* Tactics split button left.
+ * sets the background fill; controls size/placement; sets spacing around/inside the element.
+ * Source rule 3903.
+ */
+.tactics-split-button-left {
+  margin: 0;
+  padding: var(--spacing-small---8) var(--spacing-medium---16);
+  background-color: var(--none);
+  max-height: 32px;
+  flex-grow: 1;
+  justify-content: space-between;
+  align-items: center;
+  align-self: stretch;
+  flex-direction: var(--row-direction-normal);
+}
+
+/* Scaling icons condition level injured size small 16px.
+ * sets the background fill.
+ * Source rule 3904.
+ */
+.tactics-statusicon .scaling-icons-condition-level-injured-size-small-16px {
+  background-color: var(--skin-data-tactics-statusicon-scaling-icons-condition-level-injured-size-small-16px-background);
+}
+
+/* Scaling icons condition level injured size small 16px.
+ * sets the background fill.
+ * Source rule 3904.
+ */
+.tactics-statusicon .game-concepts-abroad-plane_small {
+  background-color: var(--skin-data-tactics-statusicon-game-concepts-abroad-plane-small-background);
+}
+
+/* Scaling icons condition level injured size small 16px.
+ * sets the background fill.
+ * Source rule 3904.
+ */
+.tactics-statusicon .game-concepts-red-card_small {
+  background-color: var(--skin-data-tactics-statusicon-game-concepts-red-card-small-background);
+}
+
+/* Scaling icons condition level injured size small 16px.
+ * sets the background fill.
+ * Source rule 3904.
+ */
+.tactics-statusicon .restricted-low {
+  background-color: var(--skin-data-tactics-statusicon-restricted-low-background);
+}
+
+/* Tactics statusicon container.
+ * sets the outline/corner shape; controls size/placement.
+ * Source rule 3905.
+ */
+.tactics-statusicon_container {
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  border-radius: var(--skin-radius-control);
+  left: 32px;
+  right: 32px;
+  bottom: 0;
+  top: 12px;
+  overflow: hidden;
+}
+
+/* Tactics subs block.
+ * sets the background fill; sets the outline/corner shape; controls size/placement; sets spacing
+ * around/inside the element.
+ * Source rule 3906.
+ */
+.tactics-subs-block {
+  padding: var(--global-padding-large);
+  border-width: 2px;
+  border-color: var(--skin-border-subtle);
+  background-color: var(--skin-data-tactics-subs-block-background);
+  align-self: stretch;
+  border-radius: var(--skin-radius-control);
+}
+
+/* Tactics subs block cell.
+ * sets the outline/corner shape; controls size/placement; sets spacing around/inside the element.
+ * Source rule 3907.
+ */
+.tactics-subs-block-cell {
+  height: 24px;
+  border-width: 1.5px;
+  padding-top: var(--global-padding-small);
+  padding-right: var(--global-padding-small);
+  padding-bottom: var(--global-padding-small);
+  padding-left: var(--global-padding-small);
+  align-items: center;
+  border-radius: var(--skin-radius-small);
+  flex-direction: var(--row-direction-always-normal);
+}
+
+/* Tactics subs block cell fmc.
+ * sets the outline/corner shape; controls size/placement; sets spacing around/inside the element.
+ * Source rule 3908.
+ */
+.tactics-subs-block-cell-fmc {
+  height: 36px;
+  border-width: 1px;
+  padding-top: var(--global-padding-small);
+  padding-right: var(--global-padding-regular);
+  padding-bottom: var(--global-padding-small);
+  padding-left: var(--global-padding-regular);
+  align-items: center;
+  border-radius: var(--skin-radius-control);
+  flex-direction: var(--row-direction-always-normal);
+}
+
+/* Tactics subs block cell selected.
+ * sets the background fill; sets the outline/corner shape.
+ * Source rule 3909.
+ */
+.tactics-subs-block-cell-selected {
+  border-color: var(--skin-on-media-alpha-16);
+  background-color: var(--skin-on-media-alpha-08);
+}
+
+/* Tactics subs block cell unavailable.
+ * sets the background fill; sets the outline/corner shape.
+ * Source rule 3910.
+ */
+.tactics-subs-block-cell-unavailable {
+  border-color: var(--foreground-extended-fg-red-darker);
+  background-color: var(--skin-data-tactics-subs-block-cell-unavailable-background);
+}
+
+/* Tactics subs block double pitch.
+ * controls size/placement.
+ * Source rule 3911.
+ */
+.tactics-subs-block-double-pitch {
+  width: 972px;
+  height: 136px;
+}
+
+/* Tactics subs block fmc.
+ * sets the outline/corner shape; controls size/placement; sets spacing around/inside the element.
+ * Source rule 3912.
+ */
+.tactics-subs-block-fmc {
+  padding: var(--global-padding-regular) var(--global-padding-large);
+  border-width: 1px;
+  border-color: var(--skin-border-subtle);
+  align-self: stretch;
+  border-radius: var(--skin-radius-control);
+}
+
+/* Tactics subs block fmc large width.
+ * controls size/placement.
+ * Source rule 3913.
+ */
+.tactics-subs-block-fmc-large-width {
+  width: 610px;
+}
+
+/* Tactics subs block fmc medium width.
+ * controls size/placement.
+ * Source rule 3914.
+ */
+.tactics-subs-block-fmc-medium-width {
+  width: 282px;
+}
+
+/* Tactics subs block single pitch.
+ * controls size/placement.
+ * Source rule 3915.
+ */
+.tactics-subs-block-single-pitch {
+  width: 478px;
+  height: 136px;
+}
+
+/* Stepper step.
+ * sets the outline/corner shape; controls size/placement.
+ * Source rule 3916.
+ */
+.tactics-subs-block-stepper .stepper-step {
+  width: 4px;
+  height: 4px;
+  border-radius: var(--skin-radius-micro);
+}
+
+/* Stepper step selected.
+ * sets the background fill; sets the outline/corner shape; controls size/placement.
+ * Source rule 3917.
+ */
+.tactics-subs-block-stepper .stepper-step--selected {
+  width: 4px;
+  height: 4px;
+  background-color: var(--communication-feedback-positive);
+  border-radius: var(--skin-radius-micro);
+}
+
+/* Tactics text section.
+ * sets the background fill; sets the outline/corner shape; controls size/placement; sets spacing
+ * around/inside the element.
+ * Source rule 3918.
+ */
+.tactics-text-section {
+  padding: 12px;
+  background-color: var(--skin-surface-canvas-alpha-32);
+  flex-direction: column;
+  border-radius: var(--skin-radius-control);
+  align-items: flex-start;
+  align-self: stretch;
+}
+
+/* Tactics tile 4x4.
+ * controls size/placement; sets spacing around/inside the element.
+ * Source rule 3919.
+ */
+.tactics-tile-4x4 {
+  margin-bottom: 8px;
+  padding-bottom: 0;
+  margin-top: 24px;
+  max-height: 200px;
+  overflow: visible;
+  padding-top: 0;
+}
+
+/* Tactics visualiser ball.
+ * controls size/placement.
+ * Source rule 3920.
+ */
+.tactics-visualiser-ball {
+  width: 14.36px;
+  height: 14.36px;
+  flex-shrink: 0;
+  align-self: center;
+}
+
+/* Tactics visualiser ball fullscreen.
+ * controls size/placement.
+ * Source rule 3921.
+ */
+.tactics-visualiser-ball-fullscreen {
+  width: 22px;
+  height: 22px;
+  flex-shrink: 0;
+  align-self: center;
+}
+
+/* Tactics visualiser phases tile.
+ * sets the background fill; sets the outline/corner shape; controls size/placement.
+ * Source rule 3922.
+ */
+.tactics-visualiser-phases-tile {
+  border-width: 3px;
+  border-color: var(--colours-base-green-soft);
+  background-color: var(--visualiser-phase-tile-background);
+  flex-shrink: 0;
+}
+
+/* Tactics visualiser phases tile active.
+ * sets the background artwork; changes opacity for the whole element and its contents.
+ * Native image/font declarations stay with the game; their omitted positions are marked below.
+ * Source rule 3923.
+ */
+.tactics-visualiser-phases-tile-active {
+  opacity: 0.35;
+  -unity-background-scale-mode: scale-to-fit;
+  background-repeat: repeat repeat;
+  background-position-x: left 0;
+  background-position-y: top 0;
+}
+
+/* Tactics visualiser phases tile inactive.
+ * changes opacity for the whole element and its contents.
+ * Source rule 3924.
+ */
+.tactics-visualiser-phases-tile-inactive {
+  opacity: 0.05;
+}
+
+/* Tactics visualiser pitch.
+ * sets the background fill; sets the outline/corner shape; controls size/placement; sets spacing
+ * around/inside the element.
+ * Source rule 3925.
+ */
+.tactics-visualiser-pitch {
+  padding: 12px;
+  background-color: var(--skin-surface-canvas-alpha-32);
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  border-radius: var(--skin-radius-control);
+  margin-top: 8px;
+}
+
+/* Tactics visualiser pitch default.
+ * sets the outline/corner shape; controls size/placement; sets spacing around/inside the element; changes
+ * opacity for the whole element and its contents.
+ * Source rule 3926.
+ */
+.tactics-visualiser-pitch-default {
+  opacity: 0.1;
+  height: 426px;
+  border-width: 1px;
+  border-color: var(--colours-base-neutral-white);
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  align-self: stretch;
+  margin-bottom: 8px;
+}
+
+/* Tactics visualiser pitch preview.
+ * sets the background fill; sets the outline/corner shape; controls size/placement; sets spacing
+ * around/inside the element.
+ * Source rule 3927.
+ */
+.tactics-visualiser-pitch-preview {
+  width: 48px;
+  height: 64px;
+  border-width: 2px;
+  border-color: var(--skin-data-tactics-visualiser-pitch-preview-border-color);
+  background-color: var(--skin-data-tactics-visualiser-pitch-preview-background);
+  padding-top: 5px;
+  padding-right: 2px;
+  padding-bottom: 5px;
+  padding-left: 2px;
+  justify-content: center;
+  align-items: center;
+  border-radius: var(--skin-radius-control);
+}
+
+/* Tactics visualiser pitch preview overlay.
+ * sets the background artwork; controls size/placement.
+ * Native image/font declarations stay with the game; their omitted positions are marked below.
+ * Source rule 3928.
+ */
+.tactics-visualiser-pitch-preview-overlay {
+  position: absolute;
+  width: 100%;
+  height: 12px;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Native role-movement diagrams inherit translucent attribute-row highlight
+ * fills by default. On the pitch, use phase-specific opaque artwork tint;
+ * preserve each native diagram, rotation, visibility and surrounding controls. */
+.tactics-position__shirt-and-icons .tactic_icons-player_role_movement-ip-colour {
+  -unity-background-image-tint-color: var(--skin-tactics-movement-ip);
+}
+
+.tactics-position__shirt-and-icons .tactic_icons-player_role_movement-oop-colour {
+  -unity-background-image-tint-color: var(--skin-tactics-movement-oop);
+}
+
+/* Tactics visualiser player action buttons type instructions.
+ * controls size/placement; sets spacing around/inside the element.
+ * Source rule 3929.
+ */
+.tactics-visualiser-player-action-buttons--type-instructions {
+  width: 26px;
+  padding: 0 9px 2px 9px;
+  justify-content: center;
+  align-items: center;
+  flex-direction: var(--row-direction-normal);
+}
+
+/* Tactics visualiser player action buttons type report.
+ * sets the outline/corner shape; controls size/placement; sets spacing around/inside the element.
+ * Source rule 3930.
+ */
+.tactics-visualiser-player-action-buttons--type-report {
+  width: 26px;
+  padding: 0 11px 2px 11px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0 0 0 var(--skin-radius-control);
+  margin-right: 0;
+  flex-direction: var(--row-direction-normal);
+}
+
+/* Tactics visualiser player action buttons type sub.
+ * sets the outline/corner shape; controls size/placement; sets spacing around/inside the element.
+ * Source rule 3931.
+ */
+.tactics-visualiser-player-action-buttons--type-sub {
+  width: 26px;
+  padding: 0 9px 2px 9px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0 0 var(--skin-radius-control) 0;
+  flex-direction: var(--row-direction-normal);
+}
+
+/* Tactics visualiser player bottom.
+ * controls size/placement.
+ * Source rule 3932.
+ */
+.tactics-visualiser-player-bottom {
+  width: 80px;
+  height: 18px;
+}
+
+/* Tactics visualiser player bottom border.
+ * sets the background fill; sets the outline/corner shape.
+ * Source rule 3933.
+ */
+.tactics-visualiser-player-bottom-border {
+  background-color: var(--skin-surface-canvas);
+  border-radius: 0 0 var(--skin-radius-control) var(--skin-radius-control);
+  border-right-width: 1px;
+  border-right-color: var(--skin-surface-canvas-alpha-56);
+  border-bottom-width: 1px;
+  border-bottom-color: var(--skin-surface-canvas-alpha-56);
+  border-left-width: 1px;
+  border-left-color: var(--skin-surface-canvas-alpha-56);
+}
+
+/* Tactics visualiser player bottom unavailable.
+ * sets the outline/corner shape; controls size/placement.
+ * Source rule 3934.
+ */
+.tactics-visualiser-player-bottom-unavailable {
+  height: 18px;
+  border-width: 0;
+  border-radius: 0 0 var(--skin-radius-control) var(--skin-radius-control);
+  overflow: hidden;
+  min-height: 18px;
+}
+
+/* Tactics visualiser player comparison.
+ * sets the outline/corner shape; controls size/placement.
+ * Source rule 3935.
+ */
+.tactics-visualiser-player-comparison {
+  width: 82px;
+  border-width: 4px;
+  border-color: var(--none);
+  border-radius: var(--spacing-tiles);
+}
+
+/* Tactics visualiser player comparison selected.
+ * sets the outline/corner shape; controls size/placement.
+ * Source rule 3936.
+ */
+.tactics-visualiser-player-comparison-selected {
+  width: 82px;
+  border-width: 4px;
+  border-color: var(--skin-brand-accent);
+  border-radius: var(--spacing-tiles);
+}
+
+/* Tactics visualiser player position.
+ * controls size/placement.
+ * Source rule 3937.
+ */
+.tactics-visualiser-player-position {
+  width: 80px;
+  height: 16px;
+}
+
+/* Tactics visualiser player position type attacking midfield.
+ * sets the background fill.
+ * Shared rule for 2 selectors. Editing a declaration here affects the whole group below.
+ * Source rule 3938.
+ */
+.tactics-visualiser-player-position-type-attacking-midfield,
+.tactics-visualiser-player-position-type-attacking-midfield-colour {
+  background-color: var(--colours-tactics-attacking-midfield-foreground);
+}
+
+/* Tactics visualiser player position type attacking midfield colour bg.
+ * sets the background fill.
+ * Shared rule for 2 selectors. Editing a declaration here affects the whole group below.
+ * Source rule 3939.
+ */
+.tactics-visualiser-player-position-type-attacking-midfield-colour-bg {
+  background-color: var(--colours-tactics-attacking-midfield-background);
+}
+
+/* Tactics visualiser player position type attacking midfield tint.
+ * tints background artwork.
+ * Source rule 3940.
+ */
+.tactics-visualiser-player-position-type-attacking-midfield-tint {
+  -unity-background-image-tint-color: var(--colours-tactics-attacking-midfield-foreground);
+}
+
+/* Tactics visualiser player position type defenders.
+ * sets the background fill.
+ * Shared rule for 2 selectors. Editing a declaration here affects the whole group below.
+ * Source rule 3941.
+ */
+.tactics-visualiser-player-position-type-defenders,
+.tactics-visualiser-player-position-type-defenders-colour {
+  background-color: var(--colours-tactics-defender-foreground);
+}
+
+/* Tactics visualiser player position type defenders colour bg.
+ * sets the background fill.
+ * Shared rule for 2 selectors. Editing a declaration here affects the whole group below.
+ * Source rule 3942.
+ */
+.tactics-visualiser-player-position-type-defenders-colour-bg {
+  background-color: var(--colours-tactics-defender-background);
+}
+
+/* Tactics visualiser player position type defenders tint.
+ * tints background artwork.
+ * Source rule 3943.
+ */
+.tactics-visualiser-player-position-type-defenders-tint {
+  -unity-background-image-tint-color: var(--colours-tactics-defender-foreground);
+}
+
+/* Tactics visualiser player position type defensive midfield.
+ * sets the background fill.
+ * Shared rule for 2 selectors. Editing a declaration here affects the whole group below.
+ * Source rule 3944.
+ */
+.tactics-visualiser-player-position-type-defensive-midfield,
+.tactics-visualiser-player-position-type-defensive-midfield-colour {
+  background-color: var(--colours-tactics-defensive-midfield-foreground);
+}
+
+/* Tactics visualiser player position type defensive midfield colour bg.
+ * sets the background fill.
+ * Shared rule for 2 selectors. Editing a declaration here affects the whole group below.
+ * Source rule 3945.
+ */
+.tactics-visualiser-player-position-type-defensive-midfield-colour-bg {
+  background-color: var(--colours-tactics-defensive-midfield-background);
+}
+
+/* Tactics visualiser player position type defensive midfield tint.
+ * tints background artwork.
+ * Source rule 3946.
+ */
+.tactics-visualiser-player-position-type-defensive-midfield-tint {
+  -unity-background-image-tint-color: var(--colours-tactics-defensive-midfield-foreground);
+}
+
+/* Tactics visualiser player position type gk.
+ * Changes text/foreground colour; sets the background fill.
+ * Source rule 3947.
+ */
+.tactics-visualiser-player-position-type-gk {
+  background-color: var(--colours-tactics-goalkeeper-foreground);
+  color: var(--skin-text-primary);
+}
+
+/* Tactics visualiser player position type gk colour.
+ * sets the background fill.
+ * Source rule 3948.
+ */
+.tactics-visualiser-player-position-type-gk-colour {
+  background-color: var(--colours-tactics-goalkeeper-foreground);
+}
+
+/* Tactics visualiser player position type gk colour bg.
+ * sets the background fill.
+ * Source rule 3949.
+ */
+.tactics-visualiser-player-position-type-gk-colour-bg {
+  background-color: var(--colours-tactics-goalkeeper-background);
+}
+
+/* Tactics visualiser player position type gk tint.
+ * tints background artwork.
+ * Source rule 3950.
+ */
+.tactics-visualiser-player-position-type-gk-tint {
+  -unity-background-image-tint-color: var(--colours-tactics-goalkeeper-foreground);
+}
+
+/* Tactics visualiser player position type gk — pointer hover.
+ * sets the background fill.
+ * Source rule 3951.
+ */
+.tactics-visualiser-player-position-type-gk:hover:enabled {
+  background-color: var(--skin-surface-strong);
+}
+
+/* Tactics visualiser player position type midfield.
+ * sets the background fill.
+ * Shared rule for 2 selectors. Editing a declaration here affects the whole group below.
+ * Source rule 3952.
+ */
+.tactics-visualiser-player-position-type-midfield,
+.tactics-visualiser-player-position-type-midfield-colour {
+  background-color: var(--colours-tactics-midfield-foreground);
+}
+
+/* Tactics visualiser player position type midfield colour bg.
+ * sets the background fill.
+ * Shared rule for 2 selectors. Editing a declaration here affects the whole group below.
+ * Source rule 3953.
+ */
+.tactics-visualiser-player-position-type-midfield-colour-bg {
+  background-color: var(--colours-tactics-midfield-background);
+}
+
+/* Tactics visualiser player position type midfield tint.
+ * tints background artwork.
+ * Source rule 3954.
+ */
+.tactics-visualiser-player-position-type-midfield-tint {
+  -unity-background-image-tint-color: var(--colours-tactics-midfield-foreground);
+}
+
+/* Tactics visualiser player position type selected.
+ * sets the background fill.
+ * Source rule 3955.
+ */
+.tactics-visualiser-player-position-type-selected {
+  background-color: var(--colours-base-green-base);
+}
+
+/* Tactics visualiser player position type striker.
+ * sets the background fill.
+ * Shared rule for 2 selectors. Editing a declaration here affects the whole group below.
+ * Source rule 3956.
+ */
+.tactics-visualiser-player-position-type-striker,
+.tactics-visualiser-player-position-type-striker-colour {
+  background-color: var(--colours-tactics-striker-foreground);
+}
+
+/* Tactics visualiser player position type striker colour bg.
+ * sets the background fill.
+ * Shared rule for 2 selectors. Editing a declaration here affects the whole group below.
+ * Source rule 3957.
+ */
+.tactics-visualiser-player-position-type-striker-colour-bg {
+  background-color: var(--colours-tactics-striker-background);
+}
+
+/* Tactics visualiser player position type striker tint.
+ * tints background artwork.
+ * Source rule 3958.
+ */
+.tactics-visualiser-player-position-type-striker-tint {
+  -unity-background-image-tint-color: var(--colours-tactics-striker-foreground);
+}
+
+/* Tactics visualiser player position xi or sub colour bg.
+ * sets the background fill.
+ * Shared rule for 2 selectors. Editing a declaration here affects the whole group below.
+ * Source rule 3959.
+ */
+.tactics-visualiser-player-position-xi-or-sub-colour-bg,
+.manager-creation-mobile-grid-button-selected .manager-creation-mobile-grid-button {
+  background-color: var(--skin-on-media-alpha-14);
+}
+
+/* Tactics visualiser player role ability.
+ * controls size/placement.
+ * Source rule 3960.
+ */
+.tactics-visualiser-player-role-ability {
+  width: 80px;
+  height: 10px;
+}
+
+/* Tactics visualiser player simple position position am.
+ * sets the background fill; sets the outline/corner shape; sets font/text presentation; controls
+ * size/placement.
+ * Source rule 3961.
+ */
+.tactics-visualiser-player-simple-position-position-am {
+  width: 48px;
+  height: 18px;
+  padding: 0 var(--spacing-padding-small---2);
+  border-width: 1.5px;
+  border-color: var(--skin-surface-canvas-alpha-56);
+  background-color: var(--colours-tactics-attacking-midfield-foreground);
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  flex-shrink: 0;
+  border-radius: 9px;
+  -unity-text-align: middle-center;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* Tactics visualiser player simple position position cb.
+ * sets the background fill; sets the outline/corner shape; sets font/text presentation; controls
+ * size/placement.
+ * Source rule 3962.
+ */
+.tactics-visualiser-player-simple-position-position-cb {
+  width: 48px;
+  height: 18px;
+  padding: 0 var(--spacing-padding-small---2);
+  border-width: 1.5px;
+  border-color: var(--skin-surface-canvas-alpha-56);
+  background-color: var(--colours-tactics-defender-foreground);
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  flex-shrink: 0;
+  border-radius: 9px;
+  -unity-text-align: middle-center;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* Tactics visualiser player simple position position compact.
+ * sets the outline/corner shape; controls size/placement; sets spacing around/inside the element.
+ * Source rule 3963.
+ */
+.tactics-visualiser-player-simple-position-position-compact {
+  width: 40px;
+  height: 18px;
+  padding: 0 var(--spacing-padding-small---2) 0 var(--spacing-padding-small---2);
+  border-width: 1.5px;
+  border-color: var(--skin-surface-canvas-alpha-56);
+  border-radius: 9px;
+  justify-content: center;
+}
+
+/* Tactics visualiser player simple position position dm.
+ * sets the background fill; sets the outline/corner shape; sets font/text presentation; controls
+ * size/placement.
+ * Source rule 3964.
+ */
+.tactics-visualiser-player-simple-position-position-dm {
+  width: 48px;
+  height: 18px;
+  padding: 0 var(--spacing-padding-small---2);
+  border-width: 1.5px;
+  border-color: var(--skin-surface-canvas-alpha-56);
+  background-color: var(--colours-tactics-defensive-midfield-foreground);
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  flex-shrink: 0;
+  border-radius: 9px;
+  -unity-text-align: middle-center;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* Tactics visualiser player simple position position gk.
+ * sets the background fill; sets the outline/corner shape; sets font/text presentation; controls
+ * size/placement.
+ * Source rule 3965.
+ */
+.tactics-visualiser-player-simple-position-position-gk {
+  width: 48px;
+  height: 18px;
+  padding: 0 var(--spacing-padding-small---2);
+  border-width: 1.5px;
+  border-color: var(--skin-surface-canvas-alpha-56);
+  background-color: var(--colours-tactics-goalkeeper-foreground);
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  flex-shrink: 0;
+  border-radius: 9px;
+  -unity-text-align: middle-center;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* Tactics visualiser player simple position position mc.
+ * sets the background fill; sets the outline/corner shape; sets font/text presentation; controls
+ * size/placement.
+ * Source rule 3966.
+ */
+.tactics-visualiser-player-simple-position-position-mc {
+  width: 48px;
+  height: 18px;
+  padding: 0 var(--spacing-padding-small---2);
+  border-width: 1.5px;
+  border-color: var(--skin-surface-canvas-alpha-56);
+  background-color: var(--colours-tactics-midfield-foreground);
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  flex-shrink: 0;
+  border-radius: 9px;
+  -unity-text-align: middle-center;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* Tactics visualiser player simple position position st.
+ * Changes text/foreground colour; sets the background fill; sets the outline/corner shape; sets font/text
+ * presentation.
+ * Source rule 3967.
+ */
+.tactics-visualiser-player-simple-position-position-st {
+  width: 48px;
+  height: 18px;
+  padding: 0 var(--spacing-padding-small---2);
+  border-width: 1.5px;
+  border-color: var(--skin-surface-canvas-alpha-56);
+  background-color: var(--colours-tactics-striker-foreground);
+  color: var(--skin-text-primary);
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  flex-shrink: 0;
+  border-radius: 9px;
+  margin-bottom: 0;
+  -unity-text-align: middle-center;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* Tactics visualiser player suitability accomplished.
+ * tints background artwork; sets the outline/corner shape.
+ * Source rule 3968.
+ */
+.tactics-visualiser-player-suitability-accomplished {
+  border-color: var(--tactics-visualiser-player-suitability-accomplished);
+  -unity-background-image-tint-color: var(--tactics-visualiser-player-suitability-accomplished);
+}
+
+/* Tactics visualiser player suitability accomplished text.
+ * Changes text/foreground colour.
+ * Source rule 3969.
+ */
+.tactics-visualiser-player-suitability-accomplished-text {
+  color: var(--tactics-visualiser-player-suitability-accomplished);
+}
+
+/* Tactics visualiser player suitability awkward.
+ * tints background artwork; sets the outline/corner shape.
+ * Source rule 3970.
+ */
+.tactics-visualiser-player-suitability-awkward {
+  border-color: var(--tactics-visualiser-player-suitability-awkward);
+  -unity-background-image-tint-color: var(--tactics-visualiser-player-suitability-awkward);
+}
+
+/* Tactics visualiser player suitability awkward text.
+ * Changes text/foreground colour.
+ * Source rule 3971.
+ */
+.tactics-visualiser-player-suitability-awkward-text {
+  color: var(--tactics-visualiser-player-suitability-awkward);
+}
+
+/* Tactics visualiser player suitability competent.
+ * tints background artwork; sets the outline/corner shape.
+ * Source rule 3972.
+ */
+.tactics-visualiser-player-suitability-competent {
+  border-color: var(--tactics-visualiser-player-suitability-competent);
+  -unity-background-image-tint-color: var(--tactics-visualiser-player-suitability-competent);
+}
+
+/* Tactics visualiser player suitability competent text.
+ * Changes text/foreground colour.
+ * Source rule 3973.
+ */
+.tactics-visualiser-player-suitability-competent-text {
+  color: var(--tactics-visualiser-player-suitability-competent);
+}
+
+/* Tactics visualiser player suitability makeshift.
+ * tints background artwork; sets the outline/corner shape.
+ * Source rule 3974.
+ */
+.tactics-visualiser-player-suitability-makeshift {
+  border-color: var(--tactics-visualiser-player-suitability-makeshift);
+  -unity-background-image-tint-color: var(--tactics-visualiser-player-suitability-makeshift);
+}
+
+/* Tactics visualiser player suitability makeshift text.
+ * Changes text/foreground colour.
+ * Source rule 3975.
+ */
+.tactics-visualiser-player-suitability-makeshift-text {
+  color: var(--tactics-visualiser-player-suitability-makeshift);
+}
+
+/* Tactics visualiser player suitability natural.
+ * tints background artwork; sets the outline/corner shape.
+ * Source rule 3976.
+ */
+.tactics-visualiser-player-suitability-natural {
+  border-color: var(--tactics-visualiser-player-suitability-natural);
+  -unity-background-image-tint-color: var(--tactics-visualiser-player-suitability-natural);
+}
+
+/* Tactics visualiser player suitability natural text.
+ * Changes text/foreground colour.
+ * Source rule 3977.
+ */
+.tactics-visualiser-player-suitability-natural-text {
+  color: var(--tactics-visualiser-player-suitability-natural);
+}
+
+/* Tactics visualiser player suitability poor.
+ * tints background artwork; sets the outline/corner shape.
+ * Source rule 3978.
+ */
+.tactics-visualiser-player-suitability-poor {
+  border-color: var(--tactics-visualiser-player-suitability-poor);
+  -unity-background-image-tint-color: var(--tactics-visualiser-player-suitability-poor);
+}
+
+/* Tactics visualiser player suitability poor text.
+ * Changes text/foreground colour.
+ * Source rule 3979.
+ */
+.tactics-visualiser-player-suitability-poor-text {
+  color: var(--tactics-visualiser-player-suitability-poor);
+}
+
+/* Tactics visualiser player suitability unconvincing.
+ * tints background artwork; sets the outline/corner shape.
+ * Source rule 3980.
+ */
+.tactics-visualiser-player-suitability-unconvincing {
+  border-color: var(--tactics-visualiser-player-suitability-unconvincing);
+  -unity-background-image-tint-color: var(--tactics-visualiser-player-suitability-unconvincing);
+}
+
+/* Tactics visualiser player suitability unconvincing text.
+ * Changes text/foreground colour.
+ * Source rule 3981.
+ */
+.tactics-visualiser-player-suitability-unconvincing-text {
+  color: var(--tactics-visualiser-player-suitability-unconvincing);
+}
+
+/* Streamed table cell selector.
+ * controls size/placement.
+ * Source rule 3982.
+ */
+.tactics-visualiser-table .streamed-table-cell-selector {
+  flex-grow: 1;
+  flex-shrink: 0;
+  align-self: stretch;
+}
+
+/* Tactics visualiser tactical analysis overflow anchor.
+ * controls size/placement.
+ * Source rule 3983.
+ */
+.tactics-visualiser-tactical-analysis-overflow-anchor {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  align-items: var(--flex-end-normal);
+  justify-content: flex-end;
+}
+
+/* Tactics visualiser tactical analysis overflow indicator.
+ * sets the background fill; sets the outline/corner shape; controls size/placement; sets spacing
+ * around/inside the element.
+ * Source rule 3984.
+ */
+.tactics-visualiser-tactical-analysis-overflow-indicator {
+  padding: 1px 4px 1px 4px;
+  border-width: 1.5px;
+  border-color: var(--skin-action-primary-border);
+  background-color: var(--skin-action-primary-background);
+  color: var(--skin-action-primary-foreground);
+  justify-content: center;
+  align-items: center;
+  border-top-left-radius: var(--skin-radius-medium);
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+/* Tactical overflow counts inherit Volt ink even when native text classes specify their own colour. */
+.tactics-visualiser-tactical-analysis-overflow-indicator .sitext,
+.tactics-visualiser-tactical-analysis-overflow-indicator .sitextmedium,
+.tactics-visualiser-tactical-analysis-overflow-indicator .sitextsmall {
+  color: var(--skin-action-primary-foreground);
+}
+
+/* Tactics visualiser tactical analysis pitch segment coverage area coverage level 1.
+ * sets the background fill; sets the outline/corner shape; sets spacing around/inside the element.
+ * Source rule 3985.
+ */
+.tactics-visualiser-tactical-analysis-pitch-segment-coverage-area-coverage-level-1 {
+  margin: 0;
+  padding: 4px;
+  border-width: 1.5px;
+  border-color: var(--linear-ranges-6-values-1);
+  background-color: var(--colours-linear-scale-strong-1-alpha-16);
+}
+
+/* Tactics visualiser tactical analysis pitch segment coverage area coverage level 1 — pointer hover.
+ * sets the background fill.
+ * Source rule 3986.
+ */
+.tactics-visualiser-tactical-analysis-pitch-segment-coverage-area-coverage-level-1:hover {
+  background-color: var(--colours-linear-scale-strong-1-alpha-26);
+}
+
+/* Tactics visualiser tactical analysis pitch segment coverage area coverage level 2.
+ * sets the background fill; sets the outline/corner shape; sets spacing around/inside the element.
+ * Source rule 3987.
+ */
+.tactics-visualiser-tactical-analysis-pitch-segment-coverage-area-coverage-level-2 {
+  margin: 0;
+  padding: 4px;
+  border-width: 1.5px;
+  border-color: var(--linear-ranges-6-values-2);
+  background-color: var(--colours-linear-scale-strong-2-alpha-16);
+}
+
+/* Tactics visualiser tactical analysis pitch segment coverage area coverage level 2 — pointer hover.
+ * sets the background fill.
+ * Source rule 3988.
+ */
+.tactics-visualiser-tactical-analysis-pitch-segment-coverage-area-coverage-level-2:hover {
+  background-color: var(--colours-linear-scale-strong-2-alpha-26);
+}
+
+/* Tactics visualiser tactical analysis pitch segment coverage area coverage level 3.
+ * sets the background fill; sets the outline/corner shape; sets spacing around/inside the element.
+ * Source rule 3989.
+ */
+.tactics-visualiser-tactical-analysis-pitch-segment-coverage-area-coverage-level-3 {
+  margin: 0;
+  padding: 4px;
+  border-width: 1.5px;
+  border-color: var(--linear-ranges-6-values-3);
+  background-color: var(--colours-linear-scale-strong-4-alpha-16);
+}
+
+/* Tactics visualiser tactical analysis pitch segment coverage area coverage level 3 — pointer hover.
+ * sets the background fill.
+ * Source rule 3990.
+ */
+.tactics-visualiser-tactical-analysis-pitch-segment-coverage-area-coverage-level-3:hover {
+  background-color: var(--colours-linear-scale-strong-4-alpha-26);
+}
+
+/* Tactics visualiser tactical analysis pitch segment coverage area coverage level 4.
+ * sets the background fill; sets the outline/corner shape; sets spacing around/inside the element.
+ * Source rule 3991.
+ */
+.tactics-visualiser-tactical-analysis-pitch-segment-coverage-area-coverage-level-4 {
+  margin: 0;
+  padding: 4px;
+  border-width: 1.5px;
+  border-color: var(--colours-linear-scale-strong-7);
+  background-color: var(--colours-linear-scale-strong-7-alpha-16);
+}
+
+/* Tactics visualiser tactical analysis pitch segment coverage area coverage level 4 — pointer hover.
+ * sets the background fill.
+ * Source rule 3992.
+ */
+.tactics-visualiser-tactical-analysis-pitch-segment-coverage-area-coverage-level-4:hover {
+  background-color: var(--colours-linear-scale-strong-7-alpha-26);
+}
+
+/* Tactics visualiser tactical analysis pitch segment coverage area coverage level 5.
+ * sets the background fill; sets the outline/corner shape; sets spacing around/inside the element.
+ * Source rule 3993.
+ */
+.tactics-visualiser-tactical-analysis-pitch-segment-coverage-area-coverage-level-5 {
+  margin: 0;
+  padding: 4px;
+  border-width: 1.5px;
+  border-color: var(--linear-ranges-6-values-5);
+  background-color: var(--colours-linear-scale-strong-8-alpha-16);
+}
+
+/* Tactics visualiser tactical analysis pitch segment coverage area coverage level 5 — pointer hover.
+ * sets the background fill.
+ * Source rule 3994.
+ */
+.tactics-visualiser-tactical-analysis-pitch-segment-coverage-area-coverage-level-5:hover {
+  background-color: var(--colours-linear-scale-strong-8-alpha-26);
+}
+
+/* Tactics visualiser tactical analysis pitch segment coverage area coverage level 6.
+ * sets the background fill; sets the outline/corner shape; sets spacing around/inside the element.
+ * Source rule 3995.
+ */
+.tactics-visualiser-tactical-analysis-pitch-segment-coverage-area-coverage-level-6 {
+  margin: 0;
+  padding: 4px;
+  border-width: 1.5px;
+  border-color: var(--linear-ranges-6-values-6);
+  background-color: var(--colours-linear-scale-strong-10-alpha-16);
+}
+
+/* Tactics visualiser tactical analysis pitch segment coverage area coverage level 6 — pointer hover.
+ * sets the background fill.
+ * Source rule 3996.
+ */
+.tactics-visualiser-tactical-analysis-pitch-segment-coverage-area-coverage-level-6:hover {
+  background-color: var(--colours-linear-scale-strong-10-alpha-26);
+}
+
+/* Tactics visualiser tactical analysis pitch segment coverage area coverage n a.
+ * sets the background fill; sets the outline/corner shape; sets spacing around/inside the element.
+ * Source rule 3997.
+ */
+.tactics-visualiser-tactical-analysis-pitch-segment-coverage-area-coverage-n-a {
+  margin: 0;
+  padding: 4px;
+  border-width: 1.5px;
+  border-color: var(--skin-on-media-alpha-35);
+  background-color: var(--skin-surface-canvas-alpha-16);
+}
+
+/* Tactics visualiser tactical analysis player indicator type green.
+ * sets the outline/corner shape; controls size/placement; sets spacing around/inside the element.
+ * Source rule 3998.
+ */
+.tactics-visualiser-tactical-analysis-player-indicator-type-green {
+  margin: 3px;
+  padding: 1px 4px 1px 4px;
+  border-width: 1.5px;
+  border-color: var(--linear-ranges-4-values-4);
+  justify-content: center;
+  align-items: center;
+  border-radius: var(--skin-radius-medium);
+  flex-direction: var(--row-direction-normal);
+}
+
+/* Tactics visualiser tactical analysis player indicator type lime.
+ * sets the outline/corner shape; controls size/placement; sets spacing around/inside the element.
+ * Source rule 3999.
+ */
+.tactics-visualiser-tactical-analysis-player-indicator-type-lime {
+  margin: 3px;
+  padding: 1px 4px 1px 4px;
+  border-width: 1.5px;
+  border-color: var(--linear-ranges-4-values-3);
+  justify-content: center;
+  align-items: center;
+  border-radius: var(--skin-radius-medium);
+  flex-direction: var(--row-direction-normal);
+}
+
+/* Tactics visualiser tactical analysis player indicator type orange.
+ * sets the outline/corner shape; controls size/placement; sets spacing around/inside the element.
+ * Source rule 4000.
+ */
+.tactics-visualiser-tactical-analysis-player-indicator-type-orange {
+  margin: 3px;
+  padding: 1px 4px 1px 4px;
+  border-width: 1.5px;
+  border-color: var(--linear-ranges-4-values-2);
+  justify-content: center;
+  align-items: center;
+  border-radius: var(--skin-radius-medium);
+  flex-direction: var(--row-direction-normal);
+}
+
+/* Tactics visualiser tactical analysis player indicator type red.
+ * Changes text/foreground colour; sets the outline/corner shape; controls size/placement; sets spacing
+ * around/inside the element.
+ * Source rule 4001.
+ */
+.tactics-visualiser-tactical-analysis-player-indicator-type-red {
+  margin: 3px;
+  padding: 1px 4px 1px 4px;
+  border-width: 1.5px;
+  border-color: var(--linear-ranges-4-values-1);
+  color: var(--skin-text-primary);
+  justify-content: center;
+  align-items: center;
+  border-radius: var(--skin-radius-medium);
+  flex-direction: var(--row-direction-normal);
+}
+
+/* Tactics visualiser tactical analysis point level 1.
+ * sets the background fill; sets the outline/corner shape; controls size/placement; sets spacing
+ * around/inside the element.
+ * Source rule 4002.
+ */
+.tactics-visualiser-tactical-analysis-point-level-1 {
+  background-color: var(--linear-ranges-6-values-1);
+  flex-grow: 1;
+  margin-top: 4px;
+  margin-right: 4px;
+  margin-bottom: 4px;
+  margin-left: 4px;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+  border-bottom-left-radius: 8px;
+}
+
+/* Tactics visualiser tactical analysis point level 2.
+ * sets the background fill; sets the outline/corner shape; controls size/placement; sets spacing
+ * around/inside the element.
+ * Source rule 4003.
+ */
+.tactics-visualiser-tactical-analysis-point-level-2 {
+  background-color: var(--linear-ranges-6-values-2);
+  flex-grow: 1;
+  margin-top: 4px;
+  margin-right: 4px;
+  margin-bottom: 4px;
+  margin-left: 4px;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+  border-bottom-left-radius: 8px;
+}
+
+/* Tactics visualiser tactical analysis point level 3.
+ * sets the background fill; sets the outline/corner shape; controls size/placement; sets spacing
+ * around/inside the element.
+ * Source rule 4004.
+ */
+.tactics-visualiser-tactical-analysis-point-level-3 {
+  background-color: var(--linear-ranges-6-values-3);
+  flex-grow: 1;
+  margin-top: 4px;
+  margin-right: 4px;
+  margin-bottom: 4px;
+  margin-left: 4px;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+  border-bottom-left-radius: 8px;
+}
+
+/* Tactics visualiser tactical analysis point level 4.
+ * sets the background fill; sets the outline/corner shape; controls size/placement; sets spacing
+ * around/inside the element.
+ * Source rule 4005.
+ */
+.tactics-visualiser-tactical-analysis-point-level-4 {
+  background-color: var(--colours-linear-scale-strong-7);
+  flex-grow: 1;
+  margin-top: 4px;
+  margin-right: 4px;
+  margin-bottom: 4px;
+  margin-left: 4px;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+  border-bottom-left-radius: 8px;
+}
+
+/* Tactics visualiser tactical analysis point level 5.
+ * sets the background fill; sets the outline/corner shape; controls size/placement; sets spacing
+ * around/inside the element.
+ * Source rule 4006.
+ */
+.tactics-visualiser-tactical-analysis-point-level-5 {
+  background-color: var(--linear-ranges-6-values-5);
+  flex-grow: 1;
+  margin-top: 4px;
+  margin-right: 4px;
+  margin-bottom: 4px;
+  margin-left: 4px;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+  border-bottom-left-radius: 8px;
+}
+
+/* Tactics visualiser tactical analysis point level 6.
+ * sets the background fill; sets the outline/corner shape; controls size/placement; sets spacing
+ * around/inside the element.
+ * Source rule 4007.
+ */
+.tactics-visualiser-tactical-analysis-point-level-6 {
+  background-color: var(--linear-ranges-6-values-6);
+  flex-grow: 1;
+  margin-top: 4px;
+  margin-right: 4px;
+  margin-bottom: 4px;
+  margin-left: 4px;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+  border-bottom-left-radius: 8px;
+}
+
+/* Tactics visualiser warning container.
+ * sets the background fill; sets the outline/corner shape; sets spacing around/inside the element.
+ * Source rule 4008.
+ */
+.tactics-visualiser-warning-container {
+  background-color: var(--skin-surface-canvas-alpha-50);
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 12px;
+  padding-right: 12px;
+  border-radius: var(--skin-radius-small);
+}
+
+/* Selected surface and label use the paired Volt/ink tokens from the default Dugout theme.
+ */
+.tactics-opposition-instruction-personalised-left-active .sitext,
+.tactics-opposition-instruction-personalised-left-active .sitextmedium,
+.tactics-opposition-instruction-personalised-left-active .sitextsmall,
+.tactics-opposition-instruction-personalised-right-active .sitext,
+.tactics-opposition-instruction-personalised-right-active .sitextmedium,
+.tactics-opposition-instruction-personalised-right-active .sitextsmall {
+  color: var(--skin-selection-foreground);
+}
+
+/* Tactics
+ * Native tactics selectors, with adjacent shared rules in source order.
+ */
+
+/* Tactical effectiveness breakdown advice colour positive.
+ * sets the background fill.
+ * Source rule 4763.
+ */
+.tactical-effectiveness-breakdown-advice-colour-positive {
+  background-color: var(--colours-base-green-base-16);
+}
+
+/* Sitext.
+ * Changes text/foreground colour.
+ * Source rule 4764.
+ */
+.tactical-effectiveness-breakdown-advice-colour-positive .sitext {
+  color: var(--colours-base-green-soft);
+}
+
+/* Tactical effectiveness breakdown advice colour negative.
+ * sets the background fill.
+ * Source rule 4765.
+ */
+.tactical-effectiveness-breakdown-advice-colour-negative {
+  background-color: var(--colours-base-red-base-16);
+}
+
+/* Sitext.
+ * Changes text/foreground colour.
+ * Source rule 4766.
+ */
+.tactical-effectiveness-breakdown-advice-colour-negative .sitext {
+  color: var(--colours-base-red-soft);
+}
+
+/* All five report feedback lanes share this authored advice card. Keep its
+ * fixed height, horizontal gutters and 32px action; reclaim only vertical
+ * inset for wrapped feedback at the chosen body face. Runtime fit is audited
+ * separately from the native/current allocation trace. */
+#ReportBody #BreakdownContent .tactical-effectiveness-breakdown .te-advice-property-1 {
+  padding-top: var(--skin-tactics-feedback-padding-y);
+  padding-bottom: var(--skin-tactics-feedback-padding-y);
+}
+
+/* Tactical effectiveness 1.
+ * sets the background fill.
+ * Source rule 4767.
+ */
+.tactical-effectiveness-1 {
+  background-color: var(--colours-data-linear-scale-strong-ondark-1);
+}
+
+/* Tactical effectiveness 2.
+ * sets the background fill.
+ * Source rule 4768.
+ */
+.tactical-effectiveness-2 {
+  background-color: var(--colours-data-linear-scale-strong-ondark-2);
+}
+
+/* Tactical effectiveness 3.
+ * sets the background fill.
+ * Source rule 4769.
+ */
+.tactical-effectiveness-3 {
+  background-color: var(--colours-data-linear-scale-strong-ondark-3);
+}
+
+/* Tactical effectiveness 4.
+ * sets the background fill.
+ * Source rule 4770.
+ */
+.tactical-effectiveness-4 {
+  background-color: var(--colours-data-linear-scale-strong-ondark-4);
+}
+
+/* Tactical effectiveness 5.
+ * sets the background fill.
+ * Source rule 4771.
+ */
+.tactical-effectiveness-5 {
+  background-color: var(--colours-data-linear-scale-strong-ondark-5);
+}
+
+/* Tactical effectiveness 6.
+ * sets the background fill.
+ * Source rule 4772.
+ */
+.tactical-effectiveness-6 {
+  background-color: var(--colours-data-linear-scale-strong-ondark-6);
+}
+
+/* Tactical effectiveness 7.
+ * sets the background fill.
+ * Source rule 4773.
+ */
+.tactical-effectiveness-7 {
+  background-color: var(--colours-data-linear-scale-strong-ondark-7);
+}
+
+/* Tactical effectiveness 8.
+ * sets the background fill.
+ * Source rule 4774.
+ */
+.tactical-effectiveness-8 {
+  background-color: var(--colours-data-linear-scale-strong-ondark-8);
+}
+
+/* Tactical effectiveness 9.
+ * sets the background fill.
+ * Source rule 4775.
+ */
+.tactical-effectiveness-9 {
+  background-color: var(--colours-data-linear-scale-strong-ondark-9);
+}
+
+/* Tactical effectiveness 10.
+ * sets the background fill.
+ * Source rule 4776.
+ */
+.tactical-effectiveness-10 {
+  background-color: var(--colours-data-linear-scale-strong-ondark-10);
+}
+
+/* Tactical effectiveness radial 1.
+ * supplies local values read by the component styling.
+ * Source rule 4777.
+ */
+.tactical-effectiveness-radial-1 {
+  --current-colour: var(--colours-data-linear-scale-strong-ondark-1);
+}
+
+/* Tactical effectiveness radial 2.
+ * supplies local values read by the component styling.
+ * Source rule 4778.
+ */
+.tactical-effectiveness-radial-2 {
+  --current-colour: var(--colours-data-linear-scale-strong-ondark-2);
+}
+
+/* Tactical effectiveness radial 3.
+ * supplies local values read by the component styling.
+ * Source rule 4779.
+ */
+.tactical-effectiveness-radial-3 {
+  --current-colour: var(--colours-data-linear-scale-strong-ondark-3);
+}
+
+/* Tactical effectiveness radial 4.
+ * supplies local values read by the component styling.
+ * Source rule 4780.
+ */
+.tactical-effectiveness-radial-4 {
+  --current-colour: var(--colours-data-linear-scale-strong-ondark-4);
+}
+
+/* Tactical effectiveness radial 5.
+ * supplies local values read by the component styling.
+ * Source rule 4781.
+ */
+.tactical-effectiveness-radial-5 {
+  --current-colour: var(--colours-data-linear-scale-strong-ondark-5);
+}
+
+/* Tactical effectiveness radial 6.
+ * supplies local values read by the component styling.
+ * Source rule 4782.
+ */
+.tactical-effectiveness-radial-6 {
+  --current-colour: var(--colours-data-linear-scale-strong-ondark-6);
+}
+
+/* Tactical effectiveness radial 7.
+ * supplies local values read by the component styling.
+ * Source rule 4783.
+ */
+.tactical-effectiveness-radial-7 {
+  --current-colour: var(--colours-data-linear-scale-strong-ondark-7);
+}
+
+/* Tactical effectiveness radial 8.
+ * supplies local values read by the component styling.
+ * Source rule 4784.
+ */
+.tactical-effectiveness-radial-8 {
+  --current-colour: var(--colours-data-linear-scale-strong-ondark-8);
+}
+
+/* Tactical effectiveness radial 9.
+ * supplies local values read by the component styling.
+ * Source rule 4785.
+ */
+.tactical-effectiveness-radial-9 {
+  --current-colour: var(--colours-data-linear-scale-strong-ondark-9);
+}
+
+/* Tactical effectiveness radial 10.
+ * supplies local values read by the component styling.
+ * Source rule 4786.
+ */
+.tactical-effectiveness-radial-10 {
+  --current-colour: var(--colours-data-linear-scale-strong-ondark-10);
+}
+
+/* Penalty-taker list sits within a report card. Use a theme surface rather
+ * than a white overlay, so its depth survives dark and light palettes. */
+.penaltied-block-bg {
+  padding: var(--global-padding-extra-large);
+  background-color: var(--skin-surface-raised);
+  border-radius: var(--skin-radius-card);
+}
+
+/* Personalised opposition controls identify the instruction target. The
+ * person glyph needs the same ink as its filled selected surface. */
+.tactics-opposition-instruction-personalised-left-active:enabled .game-concepts-training-tactics_small,
+.tactics-opposition-instruction-personalised-right-active:enabled .game-concepts-player-instructions_small {
+  -unity-background-image-tint-color: var(--skin-selection-foreground);
+}
+
+/* Position interactions use shared neutral controls; role swatches remain data. */
+.tactics-visualiser-player-position-type-attacking-midfield:hover:enabled,
+.tactics-visualiser-player-position-type-defenders:hover:enabled,
+.tactics-visualiser-player-position-type-defensive-midfield:hover:enabled,
+.tactics-visualiser-player-position-type-gk:hover:enabled,
+.tactics-visualiser-player-position-type-midfield:hover:enabled,
+.tactics-visualiser-player-position-type-striker:hover:enabled,
+.tactics-visualiser-player-position-type-attacking-midfield #RoleButton:hover:enabled,
+.tactics-visualiser-player-position-type-defenders #RoleButton:hover:enabled,
+.tactics-visualiser-player-position-type-defensive-midfield #RoleButton:hover:enabled,
+.tactics-visualiser-player-position-type-gk #RoleButton:hover:enabled,
+.tactics-visualiser-player-position-type-midfield #RoleButton:hover:enabled,
+.tactics-visualiser-player-position-type-striker #RoleButton:hover:enabled {
+  background-color: var(--skin-tactics-position-hover);
+  color: var(--skin-tactics-position-foreground);
+}
+.tactics-visualiser-player-position-type-attacking-midfield:hover:enabled .sitext,
+.tactics-visualiser-player-position-type-defenders:hover:enabled .sitext,
+.tactics-visualiser-player-position-type-defensive-midfield:hover:enabled .sitext,
+.tactics-visualiser-player-position-type-gk:hover:enabled .sitext,
+.tactics-visualiser-player-position-type-midfield:hover:enabled .sitext,
+.tactics-visualiser-player-position-type-striker:hover:enabled .sitext,
+.tactics-visualiser-player-position-type-attacking-midfield #RoleButton:hover:enabled .sitext,
+.tactics-visualiser-player-position-type-defenders #RoleButton:hover:enabled .sitext,
+.tactics-visualiser-player-position-type-defensive-midfield #RoleButton:hover:enabled .sitext,
+.tactics-visualiser-player-position-type-gk #RoleButton:hover:enabled .sitext,
+.tactics-visualiser-player-position-type-midfield #RoleButton:hover:enabled .sitext,
+.tactics-visualiser-player-position-type-striker #RoleButton:hover:enabled .sitext {
+  color: var(--skin-tactics-position-foreground);
+}
+.tactics-visualiser-player-position-type-attacking-midfield:active:enabled,
+.tactics-visualiser-player-position-type-defenders:active:enabled,
+.tactics-visualiser-player-position-type-defensive-midfield:active:enabled,
+.tactics-visualiser-player-position-type-gk:active:enabled,
+.tactics-visualiser-player-position-type-midfield:active:enabled,
+.tactics-visualiser-player-position-type-striker:active:enabled,
+.tactics-visualiser-player-position-type-attacking-midfield #RoleButton:active:enabled,
+.tactics-visualiser-player-position-type-defenders #RoleButton:active:enabled,
+.tactics-visualiser-player-position-type-defensive-midfield #RoleButton:active:enabled,
+.tactics-visualiser-player-position-type-gk #RoleButton:active:enabled,
+.tactics-visualiser-player-position-type-midfield #RoleButton:active:enabled,
+.tactics-visualiser-player-position-type-striker #RoleButton:active:enabled {
+  background-color: var(--skin-tactics-position-pressed);
+  color: var(--skin-tactics-position-foreground);
+}
+.tactics-visualiser-player-position-type-attacking-midfield:active:enabled .sitext,
+.tactics-visualiser-player-position-type-defenders:active:enabled .sitext,
+.tactics-visualiser-player-position-type-defensive-midfield:active:enabled .sitext,
+.tactics-visualiser-player-position-type-gk:active:enabled .sitext,
+.tactics-visualiser-player-position-type-midfield:active:enabled .sitext,
+.tactics-visualiser-player-position-type-striker:active:enabled .sitext,
+.tactics-visualiser-player-position-type-attacking-midfield #RoleButton:active:enabled .sitext,
+.tactics-visualiser-player-position-type-defenders #RoleButton:active:enabled .sitext,
+.tactics-visualiser-player-position-type-defensive-midfield #RoleButton:active:enabled .sitext,
+.tactics-visualiser-player-position-type-gk #RoleButton:active:enabled .sitext,
+.tactics-visualiser-player-position-type-midfield #RoleButton:active:enabled .sitext,
+.tactics-visualiser-player-position-type-striker #RoleButton:active:enabled .sitext {
+  color: var(--skin-tactics-position-foreground);
+}
+
+/* The routine picker authors its value and gauge below an absolute dropdown
+ * interaction layer. Keep that layer clear so the existing value can show. */
+#SelectBar #parent-anchor > #active #tactics-picker-focusser > #SIDropdown_SelectRoutine.buttons-dropdown-base-regular .si-dropdown__selection-field {
+  background-color: var(--skin-transparent);
+}

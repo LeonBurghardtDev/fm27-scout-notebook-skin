@@ -1,0 +1,1677 @@
+/* Edit this stylesheet directly, then reload the skin. Shared values live in theme.uss. */
+
+/* News Messages
+ * Native news messages selectors, with adjacent shared rules in source order.
+ */
+
+/* Use FM's centrally mapped heading-small family/weight for this product title;
+ * thematic-small remains untouched because it also styles compact game data.
+ */
+.headingportal_messages .thematic-sm {
+  -unity-font-definition: var(--heading-sm-family);
+  -unity-font-style: var(--heading-sm-weight);
+}
+
+/* A message header is product chrome, while the club badge and sender identity
+ * remain content. Suppress only its club-colour gradient and use a Dugout
+ * surface; the separate club overview header retains its team colour. */
+#ReportBody .messages-header-gradient #Club.sigradient {
+  opacity: 0;
+}
+
+#ReportBody #SenderArea.entity-background-header {
+  background-color: var(--skin-message-surface);
+  border-bottom-width: var(--global-border-width-none);
+  padding-left: var(--skin-message-inset);
+  padding-right: var(--skin-message-inset);
+}
+
+/* The club binding paints this separate divider, not SenderArea's border.
+ * Size its host so the bound colour fills the entire emphasized edge. */
+#ReportBody .message-container-frame #IsEmployedDivider,
+#ReportBody .message-container-frame #TeamDividerColourSetter,
+#ReportBody .message-container-frame #TeamDividerColourSetter > .opacity-075 {
+  height: var(--skin-message-header-edge-width);
+  min-height: var(--skin-message-header-edge-width);
+  max-height: var(--skin-message-header-edge-width);
+  flex-grow: 0;
+  flex-shrink: 0;
+}
+
+/* Club/nation textures are separate decorative images, never sender identity. */
+#ReportBody #SenderArea .messages-header-texture-club {
+  opacity: var(--skin-message-header-artwork-opacity);
+}
+
+/* Message list rows share one separator and geometry scale. Preserve native
+ * selected/unread paint, indicators and state-specific typography. */
+.message-button.sibutton {
+  border-top-width: var(--global-border-width-none);
+  border-bottom-width: var(--skin-message-divider-width);
+  border-color: var(--skin-message-divider-colour);
+  padding-top: var(--skin-message-row-padding);
+  padding-bottom: var(--skin-message-row-padding);
+  padding-left: var(--skin-message-row-inset);
+  padding-right: var(--skin-message-row-inset);
+  border-radius: var(--skin-message-row-radius);
+}
+
+/* Structural attachment tiles sit on the detail surface. Table stripes, charts,
+ * meaningful status surfaces and attachment contents retain their own paint. */
+#ReportBody .message-container-frame #MessageAttachments .grid-element-scope,
+#ReportBody .message-container-frame #MessageAttachments .border-color-layout-modules-block-border-colour,
+#ReportBody .message-container-frame #MessageAttachments .siblock-border,
+#ReportBody .message-container-frame #MessageAttachments .frames-finance-graph-property,
+#ReportBody .message-container-frame #MessageAttachments .adaptive-content-block-block-recruitment,
+#ReportBody .message-container-frame #MessageAttachments .player-recommendations-block-fmc,
+#ReportBody .message-container-frame #MessageAttachments .targets-states-current,
+#ReportBody .message-container-frame #MessageAttachments .medical-recently-returned-post-state,
+#ReportBody .message-container-frame #MessageAttachments .medical-risk-assessment-state5 {
+  background-color: var(--skin-message-attachment-surface);
+  border-width: var(--skin-card-border-width);
+  border-radius: var(--skin-message-attachment-radius);
+}
+
+/* Recommendations' generated inner list adds an ordinary frame separately
+ * from the structural wrapper. Preserve controls, data rows and padding. */
+#ReportBody .message-container-frame #MessageAttachments .player-recommendations-block-fmc #main-container {
+  border-width: var(--skin-card-border-width);
+}
+
+/* The scouting Cards view reuses a single full-width player header row.
+ * Use the existing player paint/content scale pair; bind colours stay native. */
+#ReportBody .message-container-frame #BindingExpect_PlayerRecommendationsMainBlock #PlayerInfo .entity-background-header {
+  overflow: hidden;
+  border-radius: var(--skin-message-banner-radius);
+}
+#ReportBody .message-container-frame #BindingExpect_PlayerRecommendationsMainBlock #PlayerInfo .entity-background-header > .sigradient {
+  scale: var(--skin-player-header-horizontal-paint-scale) 1;
+  transform-origin: center;
+}
+#ReportBody .message-container-frame #BindingExpect_PlayerRecommendationsMainBlock #PlayerInfo .entity-background-header > .sigradient > .row-direction-normal {
+  scale: var(--skin-player-header-horizontal-content-scale) 1;
+  transform-origin: center;
+}
+
+/* A growing match-count box reserves half of the focus header as blank space,
+ * clipping the final filter chip. Let that count size to its own content while
+ * the existing flexible details column uses the available width. */
+#ReportBody .message-container-frame .recruitment-focus-completed-header {
+  border-radius: var(--skin-message-banner-radius);
+}
+#ReportBody .message-container-frame .recruitment-focus-completed-header #MatchesNumber {
+  flex-grow: var(--skin-recruitment-focus-count-grow);
+}
+
+/* Medical message tables use two fixed-height 20px lines per native row.
+ * Wrapped, vertically centred descriptions paint over the load title. Keep
+ * these compact descriptions on one line without changing virtual row sizes. */
+#ReportBody .message-container-frame #MessageAttachments .medical-risk-assessment-state5 #tableMessage .small-horizontal-container-center-all > .content-wrap {
+  white-space: var(--skin-table-description-wrap);
+  overflow: var(--skin-table-description-overflow);
+  text-overflow: var(--skin-table-description-truncation);
+}
+
+/* The native performed status used a four-pixel white stripe. All footer
+ * variants now use the shared quiet separator; required keeps its warning fill. */
+#ReportBody .notificationmessagestatus-action-colour,
+#ReportBody .notificationmessagestatus-action-performed-colour,
+#ReportBody .notificationmessagestatus-action-required-colour {
+  border-top-width: var(--skin-message-divider-width);
+  border-top-color: var(--skin-message-divider-colour);
+}
+
+/* A competition banner's absolute artwork must be clipped by the same
+ * shared shape as the banner wrapper; native top-only corners leave it square. */
+#ReportBody .message-container-frame #MatchResultHeaderRemapper,
+#ReportBody .message-container-frame #MatchResultHeaderRemapper > #Background {
+  border-radius: var(--skin-message-banner-radius);
+  overflow: hidden;
+}
+
+/* The bound club gradient is a paint-only sibling behind the news header.
+ * Magnify its leading colour inside its clipped host without scaling content. */
+#ReportBody .message-container-frame #NewsStoryHeaderDynamicBackground {
+  overflow: hidden;
+}
+#ReportBody .message-container-frame #NewsStoryHeaderDynamicBackground #ClubSIGradient_LeftToRight {
+  transform-origin: left center;
+  scale: var(--skin-message-club-header-paint-scale) 1;
+}
+
+/* This image is decorative stadium texture behind club news. Hide its own
+ * drawing, then explicitly retain the bound colour and contrast overlay.
+ * Sender/player portraits and competition artwork are separate content. */
+#ReportBody .message-container-frame #NewsStoryHeaderDynamicBackground #DynamicBackgroundImage_Club {
+  visibility: hidden;
+}
+#ReportBody .message-container-frame #NewsStoryHeaderDynamicBackground #ClubSIGradient_LeftToRight,
+#ReportBody .message-container-frame #NewsStoryHeaderDynamicBackground #ClubBackgroundOverlay {
+  visibility: visible;
+}
+
+/* Preparation has three content siblings inside its gradient. Extend paint
+ * using equal padding/overlap so each sibling keeps its native layout. */
+#ReportBody .message-container-frame #MatchFocus #TeamHeader {
+  overflow: hidden;
+  border-radius: var(--skin-message-banner-radius);
+}
+#ReportBody .message-container-frame #MatchFocus #TeamHeader > #SIGradient_TeamSecondaryColor {
+  padding-right: var(--skin-message-club-header-extension);
+  margin-right: var(--skin-message-club-header-overlap);
+  flex-shrink: 0;
+}
+
+/* Embedded structural sections share the parent message surface. Keep native
+ * table stripes, progress paint, status badges and input controls independent. */
+#ReportBody .message-container-frame #MatchFocus .match-prep-session-container,
+#ReportBody .message-container-frame #MatchFocus .match-prep-training-header,
+#ReportBody .message-container-frame #MatchReportContent .background-color-global-lift-surface-soft,
+#ReportBody .message-container-frame #MatchReportContent .news-social-reactions-card {
+  background-color: var(--skin-message-attachment-surface);
+  border-radius: var(--skin-message-attachment-radius);
+  border-width: var(--skin-card-border-width);
+  border-color: var(--skin-card-border-colour);
+}
+#ReportBody .message-container-frame #MatchFocus .match-prep-session-container {
+  border-left-width: var(--skin-message-divider-width);
+  border-left-color: var(--skin-message-divider-colour);
+}
+
+/* Native reactions set a dark alpha fill inline. Cover only that structural
+ * backplate with the same neutral message surface; do not dim its contents. */
+#ReportBody .message-container-frame #MatchReportContent .news-social-reactions-card {
+  background-image: var(--skin-message-inline-surface-mask);
+  background-size: 100% 100%;
+  -unity-background-image-tint-color: var(--skin-message-surface);
+}
+
+/* Some article factories set their outline inline. Clip that one-pixel native
+ * edge at its dedicated wrapper instead of pretending USS can override it.
+ * Ordinary classed articles retain their shared card-edge declarations below. */
+#ReportBody .message-container-frame #BindingExpect_NewsStoryBlock > #BindingRemapper {
+  overflow: hidden;
+  border-radius: var(--skin-message-banner-radius);
+}
+#ReportBody .message-container-frame #BindingExpect_NewsStoryBlock > #BindingRemapper > #Border {
+  margin: var(--skin-message-native-outline-crop);
+}
+
+/* This generated table fixes its ordinary frame inline. Suppress only that
+ * element's own border paint; visible children preserve all native table data
+ * and sizing. A theme can restore the inline frame through the visibility role. */
+#ReportBody .message-container-frame #ContractAddOnActivatedTableBlock #TableBlock {
+  visibility: var(--skin-message-inline-frame-visibility);
+}
+#ReportBody .message-container-frame #ContractAddOnActivatedTableBlock #TableBlock > * {
+  visibility: visible;
+}
+
+/* A selected row can still be read. Keep its headline in the secondary role so
+ * selection position does not erase the game's read/unread hierarchy.
+ * Source rule 2926.
+ */
+.message-last-selected .portal-messages-item-message-text-read {
+  color: var(--skin-text-secondary);
+  white-space: normal;
+  -unity-font-definition: var(--skin-font-body);
+  -unity-text-align: middle-left;
+  transition-property: var(--transition-props-paint);
+  transition-duration: var(--global-transition-short);
+}
+
+/* Read messages remain legible on the panel while sitting below bold unread messages in
+ * the hierarchy. A surface token here made the title almost disappear against its row.
+ * Source rule 2927.
+ */
+.message-not-last-selected .portal-messages-item-message-text-read {
+  color: var(--skin-text-secondary);
+  white-space: normal;
+  -unity-font-definition: var(--skin-font-body);
+  -unity-text-align: middle-left;
+  transition-property: var(--transition-props-paint);
+  transition-duration: var(--global-transition-short);
+}
+
+/* Pointer hover reports location, not message status. Keep read copy in the
+ * secondary role; the lightened row still gives it more than 4.5:1 contrast. */
+.message-button:hover .portal-messages-item-message-text-read {
+  color: var(--skin-text-secondary);
+}
+
+.message-button:hover .portal-messages-sender-read .portal-messages-sender-text {
+  color: var(--skin-text-secondary);
+}
+
+/* Native selected virtual-list rows can style every text child. Pair ordinary
+ * selected text with Navy, then restore each read-specific label role below so
+ * selection and hover do not make already-read messages look new. */
+.virtualised-list__item--selected .message-button .sitext {
+  color: var(--skin-text-primary);
+}
+
+.virtualised-list__item--selected .message-button .portal-messages-item-message-text-read {
+  color: var(--skin-text-secondary);
+}
+
+.virtualised-list__item--selected .message-button .portal-messages-sender-read .portal-messages-sender-text {
+  color: var(--skin-text-secondary);
+}
+
+.virtualised-list__item--selected .message-button .global-text-secondary {
+  color: var(--skin-text-secondary);
+}
+
+/* Dim only informational text on read items; the row also contains category
+ * chips and actions whose contrast and enabled state must remain unchanged. */
+.message-button .portal-messages-item-message-text-read,
+.message-button .portal-messages-sender-read .portal-messages-sender-text,
+.message-button #TimeSent {
+  opacity: var(--skin-text-read-opacity);
+}
+
+/* A selected row has the brighter strong surface. Lift read copy slightly there
+ * so selection stays legible without erasing its lower emphasis than unread text. */
+.virtualised-list__item--selected .message-button .portal-messages-item-message-text-read,
+.virtualised-list__item--selected .message-button .portal-messages-sender-read .portal-messages-sender-text,
+.virtualised-list__item--selected .message-button #TimeSent {
+  opacity: var(--skin-text-read-selected-opacity);
+}
+
+/* Some FM message templates expose read category lists as disabled. Keep that
+ * information state quieter; do not infer read state from selection or hover.
+ * Other templates expose read state only on sibling labels (see audit). */
+.message-button #Tags .unity-disabled {
+  opacity: var(--skin-message-tag-read-opacity);
+}
+
+.virtualised-list__item--selected .message-button #Tags .unity-disabled {
+  opacity: var(--skin-message-tag-read-selected-opacity);
+}
+
+/* Message point.
+ * tints background artwork.
+ * Source rule 2928.
+ */
+.message-point {
+  -unity-background-image-tint-color: var(--skin-on-media-alpha-08);
+}
+
+/* Message tag.
+ * sets the outline/corner shape; sets spacing around/inside the element.
+ * Source rule 2929.
+ */
+.message-tag {
+  padding: var(--skin-message-tag-padding-y) var(--skin-message-tag-padding-x);
+  border-width: var(--skin-message-divider-width);
+  border-radius: var(--skin-message-tag-radius);
+}
+
+/* Message tag bg.
+ * sets the background fill; sets the outline/corner shape.
+ * Source rule 2930.
+ */
+.message-tag-blue .message-tag-bg {
+  border-color: var(--skin-component-message-tag-blue-message-tag-bg-border-color);
+  background-color: var(--skin-component-message-tag-blue-message-tag-bg-background);
+}
+
+/* Message tag text.
+ * Changes text/foreground colour.
+ * Shared rule for 2 selectors. Editing a declaration here affects the whole group below.
+ * Source rule 2931.
+ */
+.message-tag-blue .message-tag-text,
+.message-tag-magenta .message-tag-text {
+  color: var(--skin-text-primary);
+}
+
+/* Message tag bg.
+ * sets the background fill; sets the outline/corner shape.
+ * Source rule 2932.
+ */
+.message-tag-cyan .message-tag-bg {
+  border-color: var(--skin-component-message-tag-cyan-message-tag-bg-border-color);
+  background-color: var(--skin-component-message-tag-cyan-message-tag-bg-background);
+}
+
+/* Message tag text.
+ * Changes text/foreground colour.
+ * Source rule 2933.
+ */
+.message-tag-cyan .message-tag-text {
+  color: var(--skin-text-primary);
+}
+
+/* Message tag bg.
+ * sets the background fill; sets the outline/corner shape.
+ * Source rule 2934.
+ */
+.message-tag-default .message-tag-bg {
+  border-color: var(--skin-text-primary);
+  background-color: var(--skin-on-media-alpha-12);
+}
+
+/* Message tag bg.
+ * sets the background fill; sets the outline/corner shape.
+ * Source rule 2935.
+ */
+.message-tag-green .message-tag-bg {
+  border-color: var(--skin-component-message-tag-green-message-tag-bg-border-color);
+  background-color: var(--skin-component-message-tag-green-message-tag-bg-background);
+}
+
+/* Message tag text.
+ * Changes text/foreground colour.
+ * Source rule 2936.
+ */
+.message-tag-green .message-tag-text {
+  color: var(--skin-text-primary);
+}
+
+/* Message tag bg.
+ * sets the background fill; sets the outline/corner shape.
+ * Source rule 2937.
+ */
+.message-tag-induction .message-tag-bg {
+  border-color: var(--skin-component-message-tag-induction-message-tag-bg-border-color);
+  background-color: var(--skin-component-message-tag-induction-message-tag-bg-background);
+}
+
+/* Message tag text.
+ * Changes text/foreground colour.
+ * Source rule 2938.
+ */
+.message-tag-induction .message-tag-text {
+  color: var(--skin-component-message-tag-induction-message-tag-text-foreground);
+}
+
+/* Message tag bg.
+ * sets the background fill; sets the outline/corner shape.
+ * Source rule 2939.
+ */
+.message-tag-magenta .message-tag-bg {
+  border-color: var(--skin-component-message-tag-magenta-message-tag-bg-border-color);
+  background-color: var(--skin-component-message-tag-magenta-message-tag-bg-background);
+}
+
+/* Message tag bg.
+ * sets the background fill; sets the outline/corner shape.
+ * Source rule 2940.
+ */
+.message-tag-navy .message-tag-bg {
+  border-color: var(--skin-component-message-tag-navy-message-tag-bg-border-color);
+  background-color: var(--skin-component-message-tag-navy-message-tag-bg-background);
+}
+
+/* Message tag text.
+ * Changes text/foreground colour.
+ * Source rule 2941.
+ */
+.message-tag-navy .message-tag-text {
+  color: var(--skin-text-primary);
+}
+
+/* Message tag bg.
+ * sets the background fill; sets the outline/corner shape.
+ * Source rule 2942.
+ */
+.message-tag-orange .message-tag-bg {
+  border-color: var(--skin-component-message-tag-orange-message-tag-bg-border-color);
+  background-color: var(--skin-component-message-tag-orange-message-tag-bg-background);
+}
+
+/* Message tag text.
+ * Changes text/foreground colour.
+ * Source rule 2943.
+ */
+.message-tag-orange .message-tag-text {
+  color: var(--skin-text-primary);
+}
+
+/* Message tag bg.
+ * sets the background fill; sets the outline/corner shape.
+ * Source rule 2944.
+ */
+.message-tag-purple .message-tag-bg {
+  border-color: var(--skin-component-message-tag-purple-message-tag-bg-border-color);
+  background-color: var(--skin-component-message-tag-purple-message-tag-bg-background);
+}
+
+/* Message tag text.
+ * Changes text/foreground colour.
+ * Source rule 2945.
+ */
+.message-tag-purple .message-tag-text {
+  color: var(--skin-text-primary);
+}
+
+/* SI dropdown selection field.
+ * Changes text/foreground colour; sets the background fill; sets the outline/corner shape; controls
+ * size/placement.
+ * Source rule 2946.
+ */
+.messages-action-dropdown > .si-dropdown__selection-field {
+  margin: 0;
+  border-width: var(--global-border-width-thin);
+  border-color: var(--skin-border-subtle);
+  background-color: var(--skin-control-background);
+  color: var(--skin-text-primary);
+  max-height: var(--buttons-global-height-regular);
+  min-height: var(--buttons-global-height-regular);
+  padding-top: 0;
+  padding-right: var(--global-padding-regular);
+  padding-bottom: 0;
+  padding-left: var(--global-padding-regular);
+  align-items: center;
+  border-radius: var(--global-radius-small);
+  flex-direction: var(--row-direction-normal);
+  transition-property: var(--transition-props-paint);
+  transition-duration: var(--global-transition-buttons);
+  transition-timing-function: var(--global-transition-animation-buttons);
+}
+
+/* SI dropdown selection field.
+ * sets the background fill; sets the outline/corner shape; controls size/placement; sets spacing
+ * around/inside the element.
+ * Source rule 2947.
+ */
+.messages-action-dropdown-primary > .si-dropdown__selection-field {
+  height: var(--buttons-global-height-regular);
+  margin: 0;
+  border-width: var(--global-border-width-regular);
+  border-color: var(--skin-action-primary-border);
+  background-color: var(--skin-action-primary-background);
+  padding-top: 0;
+  padding-right: var(--global-padding-large);
+  padding-bottom: 0;
+  padding-left: var(--global-padding-large);
+  align-items: center;
+  border-radius: var(--global-radius-small);
+  flex-direction: var(--row-direction-normal);
+  transition-property: var(--transition-props-paint);
+  transition-duration: var(--global-transition-buttons);
+  transition-timing-function: var(--global-transition-animation-buttons);
+  color: var(--skin-action-primary-foreground);
+  --buttons-icons-default: var(--skin-action-primary-foreground);
+  --buttons-global-icon-surface: var(--skin-action-primary-foreground);
+}
+
+/* This dropdown is a reusable message action control. Its native label and
+ * chevron can carry their own colour, so pair them with the Volt surface in
+ * every enabled state rather than relying on inherited text colour. */
+.messages-action-dropdown-primary > .si-dropdown__selection-field .sitext,
+.messages-action-dropdown-primary > .si-dropdown__selection-field .sitextmedium,
+.messages-action-dropdown-primary > .si-dropdown__selection-field .sitextsmall {
+  color: var(--skin-action-primary-foreground);
+}
+
+.messages-action-dropdown-primary > .si-dropdown__selection-field .unity-image {
+  -unity-background-image-tint-color: var(--skin-action-primary-foreground);
+}
+
+.messages-action-dropdown-primary > .si-dropdown__selection-field:hover:enabled {
+  background-color: var(--skin-action-primary-hover);
+}
+
+.messages-action-dropdown-primary > .si-dropdown__selection-field:active:enabled {
+  background-color: var(--skin-action-primary-pressed);
+}
+
+.messages-action-dropdown-primary > .si-dropdown__selection-field:disabled {
+  border-color: var(--skin-action-disabled-border);
+  background-color: var(--skin-action-disabled-background);
+  color: var(--skin-action-disabled-foreground);
+}
+
+.messages-action-dropdown-primary > .si-dropdown__selection-field:disabled .sitext,
+.messages-action-dropdown-primary > .si-dropdown__selection-field:disabled .sitextmedium,
+.messages-action-dropdown-primary > .si-dropdown__selection-field:disabled .sitextsmall {
+  color: var(--skin-action-disabled-foreground);
+}
+
+.messages-action-dropdown-primary > .si-dropdown__selection-field:disabled .unity-image {
+  -unity-background-image-tint-color: var(--skin-action-disabled-foreground);
+}
+
+/* Messages priority gradient.
+ * sets the gradient colours drawn by this component.
+ * Source rule 2948.
+ */
+.messages-priority-gradient {
+  --start-colour: var(--skin-transparent);
+  --end-colour: var(--skin-component-messages-priority-gradient-end-colour);
+}
+
+/* Messages tile background.
+ * sets the background fill; sets the outline/corner shape; controls size/placement.
+ * Shared rule for 2 selectors. Editing a declaration here affects the whole group below.
+ * Source rule 2949.
+ */
+.messages-tile-background,
+.international-tournament-messages-tile-background {
+  border-width: 2px;
+  border-color: var(--skin-on-media-alpha-08);
+  background-color: var(--skin-surface-page-alpha-40);
+  flex-grow: 1;
+  border-radius: var(--skin-radius-control);
+}
+
+/* Messages tool list container.
+ * controls size/placement.
+ * Source rule 2950.
+ */
+.messages-tool-list-container {
+  width: 475px;
+  height: 100%;
+}
+
+/* Midnight background colour.
+ * sets the background fill.
+ * Shared rule for 4 selectors. Editing a declaration here affects the whole group below.
+ * Source rule 2951.
+ */
+.midnight-background-colour,
+.layout-tile-base-container.startscreenVar,
+.posessionproximitywarning,
+.navigation-main-calendar-button-default:active:enabled {
+  background-color: var(--skin-surface-canvas);
+}
+
+/* Milestones block milestone all.
+ * sets the outline/corner shape; controls size/placement; sets spacing around/inside the element.
+ * Source rule 2952.
+ */
+.milestones-block-milestone-all {
+  width: 640px;
+  height: 1896px;
+  padding: var(--spacing-medium---16);
+  border-width: 1px;
+  border-color: var(--skin-border-subtle);
+  flex-direction: column;
+  align-items: flex-start;
+  border-radius: var(--skin-radius-card);
+}
+
+/* News Messages
+ * Native news messages selectors, with adjacent shared rules in source order.
+ */
+
+/* Match the news card's outer mask to its rounded artwork in every state.
+ * The image/backplate edge issue is present at rest too; hover adds another
+ * fill on this same owner. Keep all news instances on one shape role. */
+.news-button {
+  border-radius: var(--skin-radius-control);
+  overflow: hidden;
+}
+
+/* News inner item size 200px.
+ * controls size/placement.
+ * Source rule 3075.
+ */
+.news-inner-item-size_200px {
+  width: 200px;
+  height: 200px;
+  overflow: hidden;
+}
+
+/* News inner item size 24px.
+ * controls size/placement.
+ * Source rule 3076.
+ */
+.news-inner-item-size_24px {
+  width: 24px;
+  height: 24px;
+  overflow: hidden;
+}
+
+/* News inner item size 48px.
+ * controls size/placement.
+ * Source rule 3077.
+ */
+.news-inner-item-size_48px {
+  width: 48px;
+  height: 48px;
+  overflow: hidden;
+}
+
+/* News inner item size 64px.
+ * controls size/placement.
+ * Source rule 3078.
+ */
+.news-inner-item-size_64px {
+  width: 64px;
+  height: 64px;
+  overflow: hidden;
+}
+
+/* News item footer.
+ * controls size/placement.
+ * Source rule 3079.
+ */
+.news-item-footer {
+  max-width: 100px;
+}
+
+/* News item stories list item.
+ * controls size/placement.
+ * Source rule 3080.
+ */
+.news-item-stories-list-item {
+  height: 88px;
+}
+
+/* News roundup message hero tile size.
+ * controls size/placement.
+ * Source rule 3081.
+ */
+.news-roundup-message-hero-tile-size {
+  max-height: 228px;
+}
+
+/* News roundup message small tile size.
+ * controls size/placement.
+ * Source rule 3082.
+ */
+.news-roundup-message-small-tile-size {
+  max-height: 300px;
+}
+
+/* News roundup message standard tile size.
+ * controls size/placement.
+ * Source rule 3083.
+ */
+.news-roundup-message-standard-tile-size {
+  max-height: 316px;
+}
+
+/* News social reactions card.
+ * controls size/placement.
+ * Source rule 3084.
+ */
+.news-social-reactions-card {
+  width: 262px;
+  max-height: 500px;
+}
+
+/* News tile header.
+ * controls size/placement.
+ * Source rule 3085.
+ */
+.news-static-4-4-tile-content .news-tile-header {
+  min-height: 36px;
+  max-height: 84px;
+}
+
+/* News tile text.
+ * sets font/text presentation; controls size/placement.
+ * Source rule 3086.
+ */
+.news-static-4-4-tile-content .news-tile-text {
+  height: 120px;
+  -unity-text-align: upper-left;
+}
+
+/* News story block border.
+ * Ordinary article chrome shares card roles; bound header artwork stays native.
+ * Source rule 3087.
+ */
+.news-story-block-border {
+  border-top-width: var(--skin-card-border-width);
+  border-right-width: var(--skin-card-border-width);
+  border-bottom-width: var(--skin-card-border-width);
+  border-left-width: var(--skin-card-border-width);
+  border-radius: var(--skin-radius-card);
+  border-left-color: var(--skin-card-border-colour);
+  border-right-color: var(--skin-card-border-colour);
+  border-top-color: var(--skin-card-border-colour);
+  border-bottom-color: var(--skin-card-border-colour);
+  overflow: hidden;
+  align-self: stretch;
+  justify-content: space-between;
+}
+
+/* News story block fixed height.
+ * controls size/placement.
+ * Source rule 3088.
+ */
+.news-story-block-fixed-height {
+  min-height: 638px;
+}
+
+/* News story block header foreground content area.
+ * controls size/placement.
+ * Source rule 3089.
+ */
+.news-story-block-header-foreground-content-area {
+  width: 312px;
+  height: 100%;
+}
+
+/* News story header.
+ * controls size/placement.
+ * Source rule 3090.
+ */
+.news-story-header {
+  height: 120px;
+}
+
+/* News story related news button.
+ * sets the background fill; sets the outline/corner shape; controls size/placement; sets spacing
+ * around/inside the element.
+ * Source rule 3091.
+ */
+.news-story-related-news-button {
+  width: 284px;
+  height: 30px;
+  padding: 6px 12px;
+  border-color: var(--skin-border-subtle);
+  background-color: var(--skin-transparent);
+  border-radius: var(--skin-radius-tight);
+  margin-bottom: 8px;
+}
+
+/* News story related news frame.
+ * sets the outline/corner shape; controls size/placement; sets spacing around/inside the element.
+ * Source rule 3092.
+ */
+.news-story-related-news-frame {
+  width: 312px;
+  height: 148px;
+  border-width: 1px;
+  border-color: var(--skin-border-subtle);
+  padding-bottom: 1px;
+  flex-direction: column;
+  align-items: flex-start;
+  flex-shrink: 0;
+  border-radius: var(--skin-radius-card);
+}
+
+/* News story related news row.
+ * controls size/placement.
+ * Source rule 3093.
+ */
+.news-story-related-news-row {
+  width: 260px;
+  height: 18px;
+}
+
+/* News story team preview key personnel.
+ * controls size/placement; sets spacing around/inside the element.
+ * Source rule 3094.
+ */
+.news-story-team-preview-key-personnel {
+  width: 30%;
+  padding-left: 20px;
+}
+
+/* News story team preview predicted lineup.
+ * controls size/placement.
+ * Source rule 3095.
+ */
+.news-story-team-preview-predicted-lineup {
+  max-height: 340px;
+}
+
+/* News sub content block.
+ * controls size/placement.
+ * Source rule 3096.
+ */
+.news-sub-content-block {
+  height: 100%;
+  min-width: 312px;
+}
+
+/* News tile size hero.
+ * controls size/placement.
+ * Source rule 3097.
+ */
+.news-tile-size_hero {
+  width: 574px;
+  height: 262px;
+}
+
+/* News tile size large.
+ * controls size/placement.
+ * Source rule 3098.
+ */
+.news-tile-size_large {
+  width: 312px;
+  height: 262px;
+}
+
+/* News tile text.
+ * controls size/placement.
+ * Source rule 3099.
+ */
+.news-timed-4-4-tile-content .news-tile-text {
+  max-height: 48px;
+}
+
+/* News title frame.
+ * sets the background fill; sets the outline/corner shape; controls size/placement; sets spacing
+ * around/inside the element.
+ * Source rule 3100.
+ */
+.news-title-frame {
+  height: 34px;
+  margin: 0.5px 0.5px 0px 0.5px;
+  padding: 2px 8px 0 8px;
+  background-color: var(--none);
+  align-self: stretch;
+  min-height: 34px;
+  max-height: 34px;
+  border-radius: 7px 7px 0px 0px;
+}
+
+/* News Messages
+ * Native news messages selectors, with adjacent shared rules in source order.
+ */
+
+/* Speakto advice frame.
+ * controls size/placement; sets spacing around/inside the element.
+ * Source rule 3625.
+ */
+.speakto-advice-frame {
+  padding: var(--spacing-small---8) var(--spacing-tiles);
+  flex-direction: column;
+  align-items: flex-start;
+  align-self: stretch;
+}
+
+/* Speakto advice gradient.
+ * sets the gradient colours drawn by this component.
+ * Source rule 3626.
+ */
+.speakto-advice-gradient {
+  --start-colour: var(--skin-component-speakto-advice-gradient-start-colour);
+}
+
+/* Selected fill and foreground use the paired default Dugout Volt/ink roles.
+ */
+.speakto-body-header-suggestion-button--action-primary {
+  margin: 0;
+  padding: var(--spacing-small---8) var(--spacing-medium---16);
+  border-width: 1px;
+  border-color: var(--skin-border-subtle);
+  background-color: var(--skin-selection-background);
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  border-radius: var(--skin-radius-control);
+  color: var(--skin-selection-foreground);
+}
+
+/* Speakto body header suggestion button action secondary.
+ * sets the background fill; sets the outline/corner shape; controls size/placement; sets spacing
+ * around/inside the element.
+ * Source rule 3628.
+ */
+.speakto-body-header-suggestion-button--action-secondary {
+  margin: 0 0 12px 0;
+  padding: var(--spacing-small---8) var(--spacing-medium---16);
+  border-width: 1px;
+  border-color: var(--skin-border-subtle);
+  background-color: var(--skin-control-background);
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  border-radius: var(--skin-radius-control);
+}
+
+/* Speakto body message default type new message.
+ * controls size/placement; sets spacing around/inside the element.
+ * Source rule 3629.
+ */
+.speakto-body-message-default-type-new-message {
+  padding-left: var(--spacing-small---8);
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+/* Speakto button additional actions selector property 1 default.
+ * Changes text/foreground colour; sets the background fill; sets the outline/corner shape; controls
+ * size/placement.
+ * Source rule 3630.
+ */
+.speakto-button-additional-actions-selector-property-1-default {
+  margin: 0;
+  padding: 4px var(--spacing-tiles);
+  background-color: var(--midnight);
+  color: var(--skin-text-secondary);
+  justify-content: center;
+  align-items: center;
+  border-radius: var(--spacing-tiles) var(--spacing-tiles) var(--numbers-border-radius-null) var(--numbers-border-radius-null);
+  border-top-width: 1px;
+  border-top-color: var(--skin-on-media-alpha-35);
+  border-right-width: 1px;
+  border-right-color: var(--skin-on-media-alpha-35);
+  border-left-width: 1px;
+  border-left-color: var(--skin-on-media-alpha-35);
+  flex-direction: var(--row-direction-normal);
+  cursor: var(--cursor-clickable-1x-url) var(--cursor-clickable-1x-hotspot-x) var(--cursor-clickable-1x-hotspot-y);
+}
+
+/* Speakto button interaction additional choices dropdown.
+ * sets spacing around/inside the element.
+ * Source rule 3631.
+ */
+.speakto-button-interaction-additional-choices-dropdown {
+  margin: 2px 4px 2px 4px;
+}
+
+/* Speakto button interaction button choices.
+ * sets the background fill; sets the outline/corner shape; controls size/placement; sets spacing
+ * around/inside the element.
+ * Source rule 3632.
+ */
+.speakto-button-interaction-button-choices {
+  margin: 0;
+  padding: var(--spacing-tiles) var(--spacing-medium---16);
+  background-color: var(--none);
+  flex-direction: column;
+  align-items: flex-start;
+  border-top-width: 1px;
+  border-top-color: var(--skin-on-media-alpha-16);
+}
+
+/* SI dropdown selection field.
+ * sets the background fill; sets the background artwork; sets the outline/corner shape; controls
+ * size/placement.
+ * Source rule 3633.
+ */
+.speakto-button-interaction-button-choices-dropdown > .si-dropdown__selection-field {
+  margin: 0;
+  padding: 0;
+  border-width: 0;
+  background-color: var(--skin-transparent);
+  background-image: none;
+  min-height: 0;
+  max-height: none;
+  align-items: flex-start;
+  flex-direction: column;
+}
+
+/* Primary conversation choice.
+ * The Volt fill and dark action ink must stay paired as the choice changes state.
+ * Source rule 3634.
+ */
+.speakto-button-interaction-button-choices-primary {
+  margin: 0;
+  padding: var(--spacing-tiles) var(--spacing-medium---16);
+  background-color: var(--skin-action-primary-background);
+  color: var(--skin-action-primary-foreground);
+  flex-direction: column;
+  align-items: flex-start;
+  border-top-width: 1px;
+  border-top-color: var(--skin-action-primary-border);
+  transition: background-color var(--global-transition-buttons) var(--global-transition-animation-buttons);
+}
+
+/* Speakto button interaction button exit property 1 default.
+ * Changes text/foreground colour; sets the background fill; sets the outline/corner shape; controls
+ * size/placement.
+ * Source rule 3635.
+ */
+.speakto-button-interaction-button-exit-property-1-default {
+  margin: 0;
+  padding: var(--spacing-extra-small---4) 16px;
+  border-width: 1px;
+  border-color: var(--skin-border-subtle);
+  background-color: var(--skin-control-background);
+  color: var(--skin-text-primary);
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: var(--skin-radius-control);
+  transition: background-color var(--global-transition-long) ease-in-out, border-color var(--global-transition-long) ease-in-out;
+}
+
+/* Speakto button interaction button tag.
+ * sets the outline/corner shape; controls size/placement.
+ * Source rule 3636.
+ */
+.speakto-button-interaction-button-tag {
+  justify-content: center;
+  align-items: center;
+  flex-direction: var(--row-direction-normal);
+  border-radius: 9px;
+}
+
+/* Speakto button interaction button tag frame.
+ * sets the outline/corner shape; controls size/placement; sets spacing around/inside the element.
+ * Source rule 3637.
+ */
+.speakto-button-interaction-button-tag-frame {
+  padding: 1px var(--spacing-small---8) 1px var(--spacing-new-ex);
+  border-width: 1px;
+  border-color: var(--skin-on-media-alpha-35);
+  justify-content: center;
+  align-items: center;
+  border-radius: var(--skin-radius-control);
+  flex-direction: var(--row-direction-normal);
+  overflow: hidden;
+}
+
+/* Speakto button interaction button tag induction gradient.
+ * sets the gradient colours drawn by this component.
+ * Source rule 3638.
+ */
+.speakto-button-interaction-button-tag-induction-gradient {
+  --start-colour: var(--skin-component-speakto-button-interaction-button-tag-induction-gradient-start-colour);
+  --end-colour: var(--skin-component-speakto-button-interaction-button-tag-induction-gradient-end-colour);
+}
+
+/* Speakto button interaction button tag promise gradient.
+ * sets the gradient colours drawn by this component.
+ * Source rule 3639.
+ */
+.speakto-button-interaction-button-tag-promise-gradient {
+  --start-colour: var(--skin-component-speakto-button-interaction-button-tag-promise-gradient-start-colour);
+  --end-colour: var(--skin-component-speakto-button-interaction-button-tag-promise-gradient-end-colour);
+}
+
+/* Speakto button interaction button tag target gradient.
+ * sets the gradient colours drawn by this component.
+ * Source rule 3640.
+ */
+.speakto-button-interaction-button-tag-target-gradient {
+  --start-colour: var(--skin-component-speakto-button-interaction-button-tag-target-gradient-start-colour);
+  --end-colour: var(--skin-component-speakto-button-interaction-button-tag-target-gradient-end-colour);
+}
+
+/* Speakto exit buttons inset.
+ * sets spacing around/inside the element.
+ * Source rule 3641.
+ */
+.speakto-exit-buttons-inset {
+  margin-left: var(--global-gap-distant);
+  margin-right: var(--global-gap-distant);
+  margin-bottom: var(--global-gap-distant);
+}
+
+/* Speakto frame sender message response.
+ * sets the background fill; controls size/placement.
+ * Source rule 3642.
+ */
+.speakto-frame-sender-message-response {
+  background-color: var(--colours-speak-to-background-dark);
+  flex-direction: column;
+  overflow: hidden;
+  flex-grow: 1;
+  align-items: stretch;
+}
+
+/* Speakto header with messages navigation.
+ * sets the background fill; controls size/placement; sets spacing around/inside the element.
+ * Source rule 3643.
+ */
+.speakto-header-with-messages-navigation {
+  height: 64px;
+  padding: 12px 8px;
+  background-color: var(--skin-control-background);
+}
+
+/* Speakto header with messages navigation button.
+ * controls size/placement; sets spacing around/inside the element.
+ * Source rule 3644.
+ */
+.speakto-header-with-messages-navigation-button {
+  width: 120px;
+  height: 40px;
+  margin: 8px;
+}
+
+/* Speakto induction gradient.
+ * sets the gradient colours drawn by this component.
+ * Source rule 3645.
+ */
+.speakto-induction-gradient {
+  --start-colour: var(--skin-transparent);
+  --end-colour: var(--skin-component-speakto-induction-gradient-end-colour);
+}
+
+/* Speakto inductions progress bar default property 1 default.
+ * sets the background fill; sets the outline/corner shape; controls size/placement; sets spacing
+ * around/inside the element.
+ * Source rule 3646.
+ */
+.speakto-inductions-progress-bar-default-property-1-default {
+  padding: 4px var(--spacing-tiles);
+  background-color: var(--midnight);
+  justify-content: center;
+  align-items: center;
+  border-radius: var(--spacing-tiles) var(--spacing-tiles) 0 0;
+  border-top-width: 1px;
+  border-top-color: var(--skin-on-media-alpha-35);
+  border-right-width: 1px;
+  border-right-color: var(--skin-on-media-alpha-35);
+  border-left-width: 1px;
+  border-left-color: var(--skin-on-media-alpha-35);
+  flex-direction: var(--row-direction-normal);
+}
+
+/* Speakto meeting bubbles.
+ * controls size/placement.
+ * Source rule 3647.
+ */
+.speakto-meeting-bubbles {
+  height: 111px;
+  align-self: stretch;
+}
+
+/* Streamed list view item animation in.
+ * defines how state changes animate; changes opacity for the whole element and its contents.
+ * Source rule 3648.
+ */
+.speakto-message--animation-in .streamed-list-view-item--animation-in {
+  opacity: 1;
+  translate: 0 0;
+  transition-property: var(--transition-props-paint);
+  transition-duration: var(--global-transition-long);
+  transition-timing-function: ease-in;
+}
+
+/* Streamed list view item animation start.
+ * defines how state changes animate; changes opacity for the whole element and its contents.
+ * Source rule 3649.
+ */
+.speakto-message--animation-start .streamed-list-view-item--animation-start {
+  opacity: 0;
+  translate: 0 100%;
+  transition: opacity var(--global-transition-long) ease-in-out;
+  transition-duration: var(--global-transition-long);
+  transition-timing-function: ease-in;
+}
+
+/* Speakto message frame default default property 1 default.
+ * controls size/placement; sets spacing around/inside the element.
+ * Source rule 3650.
+ */
+.speakto-message-frame-default-default-property-1-default {
+  padding: var(--spacing-tiles);
+  align-items: center;
+}
+
+/* Speakto message frame suggested action label type advice.
+ * Changes text/foreground colour; sets the background fill; sets the outline/corner shape; controls
+ * size/placement.
+ * Source rule 3651.
+ */
+.speakto-message-frame-suggested-action-label-type-advice {
+  padding: 4px 8px;
+  background-color: var(--colours-base-purple-base);
+  color: var(--skin-text-primary);
+  align-items: center;
+  border-radius: var(--numbers-border-radius-null) 11px;
+  flex-direction: var(--row-direction-normal);
+}
+
+/* Speakto message frame suggested action label type induction.
+ * Changes text/foreground colour; sets the background fill; sets the outline/corner shape; controls
+ * size/placement.
+ * Source rule 3652.
+ */
+.speakto-message-frame-suggested-action-label-type-induction {
+  padding: 4px 8px;
+  background-color: var(--colours-base-teal-base);
+  color: var(--skin-text-primary);
+  align-items: center;
+  border-radius: var(--numbers-border-radius-null) 11px;
+  flex-direction: var(--row-direction-normal);
+}
+
+/* Speakto message frame suggested action label type required.
+ * Changes text/foreground colour; sets the background fill; sets the outline/corner shape; controls
+ * size/placement.
+ * Source rule 3653.
+ */
+.speakto-message-frame-suggested-action-label-type-required {
+  padding: 4px 8px;
+  background-color: var(--colours-base-orange-base);
+  color: var(--skin-text-primary);
+  align-items: center;
+  border-radius: var(--numbers-border-radius-null) 11px;
+  flex-direction: var(--row-direction-normal);
+}
+
+/* Speakto messages processing.
+ * supplies local values read by the component styling.
+ * Source rule 3654.
+ */
+.speakto-messages---processing {
+  --animate: true;
+  --time-between-items: 0.3;
+  --animate-existing-items: false;
+}
+
+/* Speakto mobile visible.
+ * controls size/placement.
+ * Source rule 3655.
+ */
+.speakto-mobile-visible {
+  flex-grow: 1;
+  flex-basis: 0;
+}
+
+/* Speakto optional interaction button.
+ * sets the background fill; defines how state changes animate.
+ * Source rule 3656.
+ */
+.speakto-optional-interaction-button {
+  background-color: var(--skin-on-media-alpha-16);
+  transition: background-color var(--global-transition-buttons) var(--global-transition-animation-buttons), border-top-color var(--global-transition-buttons) var(--global-transition-animation-buttons);
+}
+
+/* Speakto optional interaction button — disabled.
+ * sets the background fill; sets the outline/corner shape.
+ * Source rule 3657.
+ */
+.speakto-optional-interaction-button:disabled {
+  background-color: var(--skin-on-media-alpha-08);
+  border-top-color: var(--skin-on-media-alpha-16);
+}
+
+/* Speakto optional interaction button — pointer hover.
+ * sets the background fill; sets the outline/corner shape.
+ * Source rule 3658.
+ */
+.speakto-optional-interaction-button:hover {
+  background-color: var(--skin-on-media-alpha-20);
+  border-top-color: var(--skin-on-media-alpha-16);
+}
+
+/* Optional primary conversation action.
+ * Keep its Volt fill paired with dark action text; disabled uses neutral roles.
+ * Source rule 3659.
+ */
+.speakto-optional-interaction-primary-button {
+  background-color: var(--skin-action-primary-background);
+  color: var(--skin-action-primary-foreground);
+  transition: background-color var(--global-transition-buttons) var(--global-transition-animation-buttons), border-top-color var(--global-transition-buttons) var(--global-transition-animation-buttons);
+}
+
+/* Speakto optional interaction primary button — disabled.
+ * sets the background fill; sets the outline/corner shape.
+ * Source rule 3660.
+ */
+.speakto-optional-interaction-primary-button:disabled {
+  background-color: var(--skin-action-disabled-background);
+  color: var(--skin-action-disabled-foreground);
+  border-top-color: var(--skin-action-disabled-border);
+}
+
+/* Conversation labels have their own native text classes, so parent color alone
+ * cannot guarantee legibility on the Volt fill. Group the three label sizes by role. */
+.speakto-button-interaction-button-choices-primary .sitext,
+.speakto-button-interaction-button-choices-primary .sitextmedium,
+.speakto-button-interaction-button-choices-primary .sitextsmall,
+.speakto-optional-interaction-primary-button:enabled .sitext,
+.speakto-optional-interaction-primary-button:enabled .sitextmedium,
+.speakto-optional-interaction-primary-button:enabled .sitextsmall {
+  color: var(--skin-action-primary-foreground);
+}
+
+.speakto-optional-interaction-primary-button:disabled .sitext,
+.speakto-optional-interaction-primary-button:disabled .sitextmedium,
+.speakto-optional-interaction-primary-button:disabled .sitextsmall {
+  color: var(--skin-action-disabled-foreground);
+}
+
+/* Speakto optional interaction primary button — pointer hover.
+ * sets the background fill; sets the outline/corner shape.
+ * Source rule 3661.
+ */
+.speakto-optional-interaction-primary-button:hover {
+  background-color: var(--skin-action-primary-hover);
+  border-top-color: var(--skin-action-primary-border);
+}
+
+/* Speakto required gradient.
+ * sets the gradient colours drawn by this component.
+ * Source rule 3662.
+ */
+.speakto-required-gradient {
+  --start-colour: var(--skin-transparent);
+  --end-colour: var(--skin-component-speakto-required-gradient-end-colour);
+}
+
+/* Special date calendar.
+ * sets the outline/corner shape; controls size/placement.
+ * Source rule 3663.
+ */
+.special-date-calendar {
+  width: 32px;
+  flex-direction: column;
+  align-items: flex-start;
+  border-radius: var(--skin-radius-compact);
+}
+
+/* Specific rules property 1 without league.
+ * controls size/placement; sets spacing around/inside the element.
+ * Source rule 3664.
+ */
+.specific-rules-property-1-without-league {
+  width: 944px;
+  padding-bottom: var(--spacing-padding-tiles);
+  padding-top: var(--spacing-padding-tiles);
+  padding-left: var(--spacing-padding-tiles);
+  padding-right: 0;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+/* Speech background type npc message.
+ * sets the outline/corner shape; controls size/placement; sets spacing around/inside the element.
+ * Source rule 3665.
+ */
+.speech-background-type-npc-message {
+  padding: 8px 16px;
+  align-items: flex-start;
+  flex: 1 0 0;
+  border-radius: var(--skin-radius-shell);
+  flex-direction: var(--row-direction-normal);
+  overflow: hidden;
+}
+
+/* Speech background type reply.
+ * sets the background fill; sets the outline/corner shape; controls size/placement; sets spacing
+ * around/inside the element.
+ * Source rule 3666.
+ */
+.speech-background-type-reply {
+  padding: 8px 16px;
+  background-color: var(--colours-base-blue-strong);
+  align-items: flex-end;
+  flex: 1 0 0;
+  border-radius: var(--skin-radius-shell);
+  flex-direction: var(--row-direction-normal);
+}
+
+/* Speech background type reply phone.
+ * sets the background fill; sets the outline/corner shape; controls size/placement; sets spacing
+ * around/inside the element.
+ * Source rule 3667.
+ */
+.speech-background-type-reply-phone {
+  padding: 8px 16px;
+  background-color: var(--skin-action-primary-background);
+  color: var(--skin-action-primary-foreground);
+  align-items: flex-end;
+  flex: 1 0 0;
+  border-radius: var(--skin-radius-shell);
+  flex-direction: var(--row-direction-normal);
+}
+
+/* Phone reply bubbles inherit Volt ink even when native text classes specify their own colour. */
+.speech-background-type-reply-phone .sitext,
+.speech-background-type-reply-phone .sitextmedium,
+.speech-background-type-reply-phone .sitextsmall {
+  color: var(--skin-action-primary-foreground);
+}
+
+/* Speech bubble major warning colour.
+ * sets the background fill; sets the outline/corner shape.
+ * Source rule 3668.
+ */
+.speech-bubble-major-warning-colour {
+  border-width: 1px;
+  border-color: var(--linear-ranges-5-values-2);
+  background-color: var(--skin-transparent);
+}
+
+/* Speech bubble major warning gradient.
+ * sets the gradient colours drawn by this component.
+ * Source rule 3669.
+ */
+.speech-bubble-major-warning-gradient {
+  --start-colour: var(--skin-component-speech-bubble-major-warning-gradient-start-colour);
+  --end-colour: var(--skin-component-speech-bubble-major-warning-gradient-end-colour);
+}
+
+/* Speech bubble minor warning colour.
+ * sets the background fill; sets the outline/corner shape.
+ * Source rule 3670.
+ */
+.speech-bubble-minor-warning-colour {
+  border-width: 1px;
+  border-color: var(--linear-ranges-5-values-4);
+  background-color: var(--skin-transparent);
+}
+
+/* Speech bubble minor warning gradient.
+ * sets the gradient colours drawn by this component.
+ * Source rule 3671.
+ */
+.speech-bubble-minor-warning-gradient {
+  --start-colour: var(--skin-component-speech-bubble-minor-warning-gradient-start-colour);
+  --end-colour: var(--skin-component-speech-bubble-minor-warning-gradient-end-colour);
+}
+
+/* Speech bubble negative colour.
+ * sets the background fill; sets the outline/corner shape.
+ * Source rule 3672.
+ */
+.speech-bubble-negative-colour {
+  border-width: 1px;
+  border-color: var(--linear-ranges-5-values-1);
+  background-color: var(--skin-transparent);
+}
+
+/* Speech bubble negative gradient.
+ * sets the gradient colours drawn by this component.
+ * Source rule 3673.
+ */
+.speech-bubble-negative-gradient {
+  --start-colour: var(--skin-component-speech-bubble-negative-gradient-start-colour);
+  --end-colour: var(--skin-component-speech-bubble-negative-gradient-end-colour);
+}
+
+/* Speech bubble new message colour.
+ * sets the background fill.
+ * Shared rule for 2 selectors. Editing a declaration here affects the whole group below.
+ * Source rule 3674.
+ */
+.speech-bubble-new-message-colour,
+.navigation-main-calendar-button-default:hover {
+  background-color: var(--skin-surface-page-alpha-60);
+}
+
+/* Speech bubble no gradient.
+ * sets the gradient colours drawn by this component.
+ * Source rule 3675.
+ */
+.speech-bubble-no-gradient {
+  --start-colour: var(--skin-transparent);
+  --end-colour: var(--skin-transparent);
+}
+
+/* Speech bubble positive colour.
+ * sets the background fill; sets the outline/corner shape.
+ * Source rule 3676.
+ */
+.speech-bubble-positive-colour {
+  border-width: 1px;
+  border-color: var(--linear-ranges-5-values-5);
+  background-color: var(--skin-transparent);
+}
+
+/* Speech bubble positive gradient.
+ * sets the gradient colours drawn by this component.
+ * Source rule 3677.
+ */
+.speech-bubble-positive-gradient {
+  --start-colour: var(--skin-component-speech-bubble-positive-gradient-start-colour);
+  --end-colour: var(--skin-component-speech-bubble-positive-gradient-end-colour);
+}
+
+/* Speech tail frame.
+ * controls size/placement; sets spacing around/inside the element.
+ * Source rule 3678.
+ */
+.speech-tail-frame {
+  align-self: flex-start;
+  margin-top: 14px;
+}
+
+/* Speech tail major warning colour.
+ * tints background artwork.
+ * Source rule 3679.
+ */
+.speech-tail-major-warning-colour {
+  -unity-background-image-tint-color: var(--linear-ranges-5-values-2);
+}
+
+/* Speech tail minor warning colour.
+ * tints background artwork.
+ * Shared rule for 2 selectors. Editing a declaration here affects the whole group below.
+ * Source rule 3680.
+ */
+.speech-tail-minor-warning-colour,
+.youth-team-performance-good-image {
+  -unity-background-image-tint-color: var(--linear-ranges-5-values-4);
+}
+
+/* Speech tail new message colour.
+ * tints background artwork.
+ * Source rule 3681.
+ */
+.speech-tail-new-message-colour {
+  -unity-background-image-tint-color: var(--skin-surface-page-alpha-100);
+}
+
+/* Speech tail positive colour.
+ * tints background artwork.
+ * Shared rule for 2 selectors. Editing a declaration here affects the whole group below.
+ * Source rule 3682.
+ */
+.speech-tail-positive-colour,
+.youth-team-performance-very-good-image {
+  -unity-background-image-tint-color: var(--linear-ranges-5-values-5);
+}
+
+/* Speech tail reply colour phone.
+ * tints background artwork.
+ * Source rule 3683.
+ */
+.speech-tail-reply-colour-phone {
+  -unity-background-image-tint-color: var(--skin-action-primary-background);
+}
+
+/* Spider graph class.
+ * sets the background fill; controls size/placement.
+ * Source rule 3684.
+ */
+.spider-graph-class {
+  width: 70%;
+  height: 1.5px;
+  background-color: var(--skin-surface-raised);
+  flex-grow: 1;
+  align-self: center;
+  flex-shrink: 0;
+}
+
+/* Spider graph label.
+ * Changes text/foreground colour; controls size/placement; sets spacing around/inside the element.
+ * Source rule 3685.
+ */
+.spider-graph-label {
+  height: 16px;
+  color: var(--skin-text-secondary);
+  align-self: auto;
+  max-width: 100px;
+  margin-bottom: 4px;
+}
+
+/* Sponsor primary.
+ * sets the background fill.
+ * Source rule 3686.
+ */
+.sponsor-primary {
+  background-color: var(--colours-base-red-strong);
+}
+
+/* Sponsor secondary piechart series.
+ * Changes text/foreground colour.
+ * Shared rule for 6 selectors. Editing a declaration here affects the whole group below.
+ * Source rule 3687.
+ */
+.sponsor-secondary-piechart-series,
+.tactics-player-instruction-tweaked-text-colour,
+.player-instruction-tile--tweaked .tile-title-color,
+.team-instruction-tile--tweaked .tile-title-color,
+.team-instruction-cell--tweaked #text-second,
+.team-instruction-tile--tweaked .mentality-text {
+  color: var(--colours-base-cyan-strong);
+}
+
+/* Sponsor shorts.
+ * sets the background fill.
+ * Source rule 3688.
+ */
+.sponsor-shorts {
+  background-color: var(--colours-base-pink-strong);
+}
+
+/* Selected surface and label use the paired Volt/ink tokens from the default Dugout theme.
+ */
+.speakto-body-header-suggestion-button--action-primary .sitext,
+.speakto-body-header-suggestion-button--action-primary .sitextmedium,
+.speakto-body-header-suggestion-button--action-primary .sitextsmall {
+  color: var(--skin-selection-foreground);
+}
+
+/* News-page banners retain the current club colour while cropping the native
+ * fade, like Club/Player overview. Clip only the header's paint wrapper; news
+ * artwork and body cards are separate. The equal padding/margin preserves height.
+ */
+#ReportBody #SiteHeaderDynamicItem #BindingExpect {
+  overflow: hidden;
+}
+#ReportBody #SiteHeaderDynamicItem #BindingExpect > .unity-image > .sigradient {
+  padding-bottom: var(--skin-header-gradient-extension);
+  margin-bottom: var(--skin-header-gradient-overlap);
+  flex-shrink: 0;
+}
+
+/* Linked news section headings share the straight Volt underline of the
+ * Portal overview titles. This is a heading link, not a rounded action button.
+ */
+#ReportBody .news-story-block-header-foreground-content-area > .buttons-button-tertiary-default,
+#ReportBody .news-sub-content-block > .buttons-button-tertiary-default {
+  border-bottom-color: var(--skin-nav-active-indicator);
+  border-radius: 0;
+}
+
+/* Recommended meeting answers retain the secondary card class while gaining
+ * the primary class. The later secondary fill is neutral, so its body needs
+ * light ink. Target its body rows only; the small filled tag keeps dark ink. */
+.speakto-body-header-suggestion-button--action-primary.speakto-body-header-suggestion-button--action-secondary {
+  background-color: var(--skin-control-background);
+  color: var(--skin-text-primary);
+}
+.speakto-body-header-suggestion-button--action-primary.speakto-body-header-suggestion-button--action-secondary:hover:enabled {
+  background-color: var(--skin-control-hover);
+}
+.speakto-body-header-suggestion-button--action-primary.speakto-body-header-suggestion-button--action-secondary:active:enabled {
+  background-color: var(--skin-control-pressed);
+}
+.speakto-body-header-suggestion-button--action-primary.speakto-body-header-suggestion-button--action-secondary:enabled > .row-direction-normal > .sitext,
+.speakto-body-header-suggestion-button--action-primary.speakto-body-header-suggestion-button--action-secondary:enabled #SubstitleVisible > .row-direction-normal > .sitext {
+  color: var(--skin-text-primary);
+}
+.speakto-body-header-suggestion-button--action-primary.speakto-body-header-suggestion-button--action-secondary:disabled > .row-direction-normal > .sitext,
+.speakto-body-header-suggestion-button--action-primary.speakto-body-header-suggestion-button--action-secondary:disabled #SubstitleVisible > .row-direction-normal > .sitext {
+  color: var(--skin-action-disabled-foreground);
+}
+.speakto-button-interaction-button-tag-frame .ui-concepts-thumbs-up_small {
+  -unity-background-image-tint-color: var(--skin-selection-foreground);
+}
+
+/* NewsSocialReactionRow authors both utilities on its Description. Native
+ * wrap follows ellipsis; split people/utilities imports reverse that tie.
+ * Restore only this reaction family's wrapping, retaining overflow/ellipsis.
+ */
+.news-social-reactions-card #Description.content-ellipsis.text-wrap-normal {
+  white-space: normal;
+}

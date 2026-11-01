@@ -1,0 +1,20 @@
+/* Plain USS template. Edit, save, then reload the skin.
+ * Shared values first; component rules next; explicit helpers and local overrides last.
+ */
+@import url("styles/fm-defaults.uss");
+@import url("theme.uss");
+@import url("theme-scout.uss");
+@import url("styles/fm-contracts.uss");
+@import url("styles/core.uss");
+@import url("styles/typography.uss");
+@import url("styles/panels.uss");
+@import url("styles/controls.uss");
+@import url("styles/data.uss");
+@import url("styles/people.uss");
+@import url("styles/tactics.uss");
+@import url("styles/match.uss");
+@import url("styles/screens.uss");
+@import url("styles/messages.uss");
+@import url("styles/navigation.uss");
+@import url("styles/utilities.uss");
+@import url("custom.uss");

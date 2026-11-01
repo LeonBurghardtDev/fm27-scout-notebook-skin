@@ -1,0 +1,2664 @@
+/* Explicit utility classes load after component defaults so spacing/text helpers retain their purpose. */
+
+/* Cascading menu folder.
+ * controls size/placement.
+ * Shared rule for 9 selectors. Editing a declaration here affects the whole group below.
+ * Source rule 174.
+ */
+.content-base-element,
+.flex-grow-class {
+  flex-grow: 1;
+}
+
+/* Flex grow initial class.
+ * controls size/placement.
+ * Source rule 175.
+ */
+.flex-grow-initial-class {
+  flex-grow: initial;
+}
+
+/* Justify content center class.
+ * controls size/placement.
+ * Source rule 177.
+ */
+.justify-content-center-class {
+  justify-content: center;
+}
+
+/* Justify content space evenly.
+ * controls size/placement.
+ * Source rule 178.
+ */
+.justify-content-space-evenly {
+  justify-content: space-evenly;
+}
+
+/* Pane drag anchor.
+ * controls size/placement.
+ * Shared rule for 3 selectors. Editing a declaration here affects the whole group below.
+ * Source rule 193.
+ */
+.position-absolute-class {
+  position: absolute;
+}
+
+/* Pane drag line.
+ * controls size/placement.
+ * Shared rule for 2 selectors. Editing a declaration here affects the whole group below.
+ * Source rule 194.
+ */
+.flex-no-shrink-class {
+  flex-shrink: 0;
+}
+
+/* Position picker.
+ * Changes text/foreground colour; sets the background fill; sets the outline/corner shape; sets spacing
+ * around/inside the element.
+ * Source rule 202.
+ */
+.position-picker {
+  background-color: var(--skin-surface-raised);
+  color: var(--skin-text-primary);
+  border-left-width: 1px;
+  border-right-width: 1px;
+  border-top-width: 1px;
+  border-bottom-width: 1px;
+  border-top-left-radius: var(--skin-radius-small);
+  border-bottom-left-radius: var(--skin-radius-small);
+  border-top-right-radius: var(--skin-radius-small);
+  border-bottom-right-radius: var(--skin-radius-small);
+  margin-left: 4px;
+  margin-right: 4px;
+  margin-top: 4px;
+  margin-bottom: 4px;
+}
+
+/* Position disc.
+ * sets the background artwork; sets spacing around/inside the element.
+ * Native image/font declarations stay with the game; their omitted positions are marked below.
+ * Source rule 265.
+ */
+.position-disc {
+  margin-right: 16px;
+  margin-left: 16px;
+}
+
+/* Position disc highlighted.
+ * sets the background artwork; tints background artwork; sets spacing around/inside the element.
+ * Native image/font declarations stay with the game; their omitted positions are marked below.
+ * Source rule 266.
+ */
+.position-disc--highlighted {
+  margin-right: 16px;
+  margin-left: 16px;
+  -unity-background-image-tint-color: var(--skin-component-position-disc-highlighted-image-tint);
+}
+
+/* Flex autosize vertical.
+ * controls size/placement.
+ * Source rule 288.
+ */
+.flex-autosize-vertical {
+  flex-grow: initial;
+  flex-shrink: 0;
+}
+
+/* Align self center class.
+ * controls size/placement.
+ * Source rule 289.
+ */
+.align-self-center-class {
+  align-self: center;
+}
+
+/* Align self stretch class.
+ * controls size/placement.
+ * Source rule 290.
+ */
+.align-self-stretch-class {
+  align-self: stretch;
+}
+
+/* Flex basis 0.
+ * controls size/placement.
+ * Source rule 308.
+ */
+.flex-basis-0 {
+  flex-basis: 0;
+}
+
+/* Justify content flex start.
+ * controls size/placement.
+ * Source rule 325.
+ */
+.justify-content-flex-start {
+  justify-content: flex-start;
+}
+
+/* Row direction normal full width no grow.
+ * controls size/placement.
+ * Source rule 623.
+ */
+.row-direction-normal-full-width-no-grow {
+  width: 100%;
+  overflow: hidden;
+  flex-direction: var(--row-direction-normal);
+  flex-grow: 0;
+}
+
+/* Row direction normal full width grow.
+ * controls size/placement.
+ * Source rule 624.
+ */
+.row-direction-normal-full-width-grow {
+  width: 100%;
+  overflow: hidden;
+  flex-direction: var(--row-direction-normal);
+  flex-grow: 1;
+}
+
+/* Width auto.
+ * controls size/placement.
+ * Source rule 697.
+ */
+.width-auto {
+  width: auto;
+}
+
+/* Position disc.
+ * sets the background artwork; sets spacing around/inside the element.
+ * Native image/font declarations stay with the game; their omitted positions are marked below.
+ * Source rule 711.
+ */
+.position-disc {
+  margin-right: 16px;
+  margin-left: 16px;
+}
+
+/* Heading no wrap.
+ * sets font/text presentation.
+ * Shared rule for 2 selectors. Editing a declaration here affects the whole group below.
+ * Source rule 753.
+ */
+.content-no-wrap {
+  white-space: nowrap;
+}
+
+/* Content wrap.
+ * sets font/text presentation.
+ * Source rule 754.
+ */
+.content-wrap {
+  white-space: normal;
+}
+
+/* Content left align.
+ * sets font/text presentation.
+ * Shared rule for 2 selectors. Editing a declaration here affects the whole group below.
+ * Source rule 755.
+ */
+.content-left-align {
+  -unity-text-align: middle-left;
+}
+
+/* Content center align.
+ * sets font/text presentation.
+ * Shared rule for 2 selectors. Editing a declaration here affects the whole group below.
+ * Source rule 756.
+ */
+.content-center-align {
+  -unity-text-align: middle-center;
+}
+
+/* Content top align.
+ * sets font/text presentation.
+ * Source rule 757.
+ */
+.content-top-align {
+  -unity-text-align: upper-left;
+}
+
+/* Content right align.
+ * sets font/text presentation.
+ * Source rule 758.
+ */
+.content-right-align {
+  -unity-text-align: middle-right;
+}
+
+/* Content ellipsis.
+ * sets font/text presentation.
+ * Source rule 759.
+ */
+.content-ellipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* Content ellipsis wrap.
+ * sets font/text presentation.
+ * Source rule 760.
+ */
+.content-ellipsis-wrap {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: normal;
+}
+
+/* Global text focus women primary.
+ * Changes text/foreground colour.
+ * Source rule 766.
+ */
+.global-text-focus-women-primary {
+  color: var(--colours-base-teal-soft);
+}
+
+/* UI concepts placeholder.
+ * controls size/placement.
+ * Shared rule for 3 selectors. Editing a declaration here affects the whole group below.
+ * Source rule 947.
+ */
+.position-depth-shirt {
+  max-height: 16px;
+  max-width: 16px;
+}
+
+/* No Phase.
+ * sets spacing around/inside the element.
+ * Shared rule for 5 selectors. Editing a declaration here affects the whole group below.
+ * Source rule 949.
+ */
+.margin-bottom-8 {
+  margin-bottom: 8px;
+}
+
+/* Phase Header.
+ * sets spacing around/inside the element.
+ * Shared rule for 2 selectors. Editing a declaration here affects the whole group below.
+ * Source rule 950.
+ */
+.margin-bottom-4 {
+  margin-bottom: 4px;
+}
+
+/* Calendar button.
+ * sets spacing around/inside the element.
+ * Shared rule for 3 selectors. Editing a declaration here affects the whole group below.
+ * Source rule 964.
+ */
+.margin-left-8 {
+  margin-left: 8px;
+}
+
+/* SI dropdown selection field.
+ * controls size/placement.
+ * Shared rule for 2 selectors. Editing a declaration here affects the whole group below.
+ * Source rule 965.
+ */
+.max-height-32 {
+  max-height: 32px;
+}
+
+/* Full width row.
+ * controls size/placement.
+ * Shared rule for 7 selectors. Editing a declaration here affects the whole group below.
+ * Source rule 971.
+ */
+.width-100-percent {
+  width: 100%;
+}
+
+/* About rules block row.
+ * sets spacing around/inside the element.
+ * Shared rule for 3 selectors. Editing a declaration here affects the whole group below.
+ * Source rule 980.
+ */
+.margin-top-16 {
+  margin-top: 16px;
+}
+
+/* Spacing Layout
+ * Reusable geometry, spacing, borders and colour helper classes.
+ */
+
+/* Align content auto.
+ * controls size/placement.
+ * Source rule 1022.
+ */
+.align-content-auto {
+  align-content: auto;
+}
+
+/* Align content center.
+ * controls size/placement.
+ * Source rule 1023.
+ */
+.align-content-center {
+  align-content: center;
+}
+
+/* Align content stretch.
+ * controls size/placement.
+ * Source rule 1024.
+ */
+.align-content-stretch {
+  align-content: stretch;
+}
+
+/* Align flex start.
+ * controls size/placement.
+ * Source rule 1025.
+ */
+.align-flex-start {
+  align-items: var(--align-flex-start);
+}
+
+/* Align items center.
+ * controls size/placement.
+ * Shared rule for 3 selectors. Editing a declaration here affects the whole group below.
+ * Source rule 1026.
+ */
+.align-items-center,
+.align-items-centre {
+  align-items: var(--align-centre);
+}
+
+/* Align items flex end.
+ * controls size/placement.
+ * Source rule 1027.
+ */
+.align-items-flex-end {
+  align-items: flex-end;
+}
+
+/* Align items flex start.
+ * controls size/placement.
+ * Shared rule for 3 selectors. Editing a declaration here affects the whole group below.
+ * Source rule 1028.
+ */
+.align-items-flex-start {
+  align-items: flex-start;
+}
+
+/* Align items stretch.
+ * controls size/placement.
+ * Shared rule for 2 selectors. Editing a declaration here affects the whole group below.
+ * Source rule 1029.
+ */
+.align-items-stretch {
+  align-items: var(--align-stretch);
+}
+
+/* Align self auto.
+ * controls size/placement.
+ * Source rule 1030.
+ */
+.align-self-auto {
+  align-self: auto;
+}
+
+/* Align self centre.
+ * controls size/placement.
+ * Shared rule for 6 selectors. Editing a declaration here affects the whole group below.
+ * Source rule 1031.
+ */
+.align-self-centre {
+  align-self: center;
+}
+
+/* Align self flex end.
+ * controls size/placement.
+ * Source rule 1032.
+ */
+.align-self-flex-end {
+  align-self: flex-end;
+}
+
+/* Align self flex start.
+ * controls size/placement.
+ * Source rule 1033.
+ */
+.align-self-flex-start {
+  align-self: flex-start;
+}
+
+/* Align self stretch.
+ * controls size/placement.
+ * Shared rule for 2 selectors. Editing a declaration here affects the whole group below.
+ * Source rule 1034.
+ */
+.align-self-stretch {
+  align-self: stretch;
+}
+
+/* Form bar range 0 to 59.
+ * controls size/placement.
+ * Shared rule for 2 selectors. Editing a declaration here affects the whole group below.
+ * Source rule 1219.
+ */
+.height-50-percent {
+  height: 50%;
+}
+
+/* Base component tutorial image.
+ * controls size/placement.
+ * Shared rule for 3 selectors. Editing a declaration here affects the whole group below.
+ * Source rule 1227.
+ */
+.height-100-px {
+  height: 100px;
+}
+
+/* Bookmark item icon.
+ * controls size/placement.
+ * Shared rule for 4 selectors. Editing a declaration here affects the whole group below.
+ * Source rule 1267.
+ */
+.width-height-16px {
+  width: 16px;
+  height: 16px;
+}
+
+/* Unity radio button group container.
+ * controls size/placement.
+ * Shared rule for 6 selectors. Editing a declaration here affects the whole group below.
+ * Source rule 1305.
+ */
+.row-direction-normal {
+  flex-direction: var(--row-direction-normal);
+}
+
+/* Buttongroup controller icon left.
+ * sets spacing around/inside the element.
+ * Shared rule for 2 selectors. Editing a declaration here affects the whole group below.
+ * Source rule 1315.
+ */
+.padding-right-8px {
+  padding-right: 8px;
+}
+
+/* Buttongroup controller icon right.
+ * sets spacing around/inside the element.
+ * Shared rule for 2 selectors. Editing a declaration here affects the whole group below.
+ * Source rule 1316.
+ */
+.padding-left-8px {
+  padding-left: 8px;
+}
+
+/* Dropdown var padding.
+ * sets spacing around/inside the element.
+ * Shared rule for 2 selectors. Editing a declaration here affects the whole group below.
+ * Source rule 1383.
+ */
+.padding-right-4px {
+  padding-right: 4px;
+}
+
+/* Calender event4x4.
+ * sets spacing around/inside the element.
+ * Shared rule for 3 selectors. Editing a declaration here affects the whole group below.
+ * Source rule 1609.
+ */
+.margin-right-4 {
+  margin-right: var(--global-gap-close);
+}
+
+/* Card states card states promises.
+ * controls size/placement.
+ * Shared rule for 4 selectors. Editing a declaration here affects the whole group below.
+ * Source rule 1615.
+ */
+.content-speakto-response-frame-default-expand,
+.content-speakto-response-required-frame-default-default {
+  flex-direction: column;
+  align-items: stretch;
+}
+
+/* Unity radio button container.
+ * controls size/placement.
+ * Shared rule for 5 selectors. Editing a declaration here affects the whole group below.
+ * Source rule 1644.
+ */
+.justify-content-center {
+  justify-content: center;
+}
+
+/* Column direction normal.
+ * controls size/placement.
+ * Source rule 1715.
+ */
+.column-direction-normal {
+  flex-direction: column;
+}
+
+/* Virtualised list item.
+ * sets spacing around/inside the element.
+ * Shared rule for 4 selectors. Editing a declaration here affects the whole group below.
+ * Source rule 1717.
+ */
+.margin-right-16 {
+  margin-right: 16px;
+}
+
+/* Comp site child only grid selector.
+ * sets spacing around/inside the element.
+ * Shared rule for 6 selectors. Editing a declaration here affects the whole group below.
+ * Source rule 1718.
+ */
+.margin-bottom-16 {
+  margin-bottom: 16px;
+}
+
+/* Content block site nation content block active max res.
+ * controls size/placement.
+ * Source rule 1734.
+ */
+.content-block-site-nation-content-block-active-max-res {
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  flex-direction: var(--row-direction-normal);
+}
+
+/* Content block site nation content block national teams.
+ * controls size/placement.
+ * Source rule 1735.
+ */
+.content-block-site-nation-content-block-national-teams {
+  justify-content: center;
+  align-items: flex-start;
+}
+
+/* Content block site national team content block max res.
+ * controls size/placement.
+ * Source rule 1736.
+ */
+.content-block-site-national-team-content-block-max-res {
+  width: 100%;
+  height: 100%;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+/* Content portal agenda list item next match.
+ * controls size/placement; sets spacing around/inside the element.
+ * Source rule 1737.
+ */
+.content-portal-agenda-list-item-next-match {
+  width: 100%;
+  padding: var(--spacing-padding-extra-small---4) var(--spacing-padding-small---8);
+  align-items: center;
+  flex-direction: var(--row-direction-normal);
+}
+
+/* Content speakto response required buttons frame.
+ * controls size/placement; sets spacing around/inside the element.
+ * Source rule 1738.
+ */
+.content-speakto-response-required-buttons-frame {
+  padding: var(--numbers-border-radius-null) var(--spacing-tiles);
+  flex-direction: column;
+  align-items: stretch;
+  align-self: stretch;
+  margin-bottom: var(--spacing-tiles);
+}
+
+/* Content speakto response required text frame.
+ * controls size/placement; sets spacing around/inside the element.
+ * Source rule 1739.
+ */
+.content-speakto-response-required-text-frame {
+  padding: var(--numbers-border-radius-null) var(--spacing-tiles);
+  justify-content: center;
+  align-items: center;
+  flex-direction: var(--row-direction-normal);
+  flex-grow: 1;
+  margin-bottom: var(--spacing-tiles);
+}
+
+/* Content tactics visualiser player indicator simple.
+ * sets the outline/corner shape; controls size/placement; sets spacing around/inside the element.
+ * Source rule 1740.
+ */
+.content-tactics-visualiser-player-indicator-simple {
+  width: 80px;
+  padding: 0 4px 1px 4px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0 0 var(--skin-radius-control) var(--skin-radius-control);
+  margin-right: 16px;
+}
+
+/* Emoticon background colour negative.
+ * sets the background fill.
+ * Source rule 2097.
+ */
+.position-depth-and-quality-colour-bad {
+  background-color: var(--skin-component-position-depth-and-quality-colour-bad-background);
+}
+
+/* Emoticon background colour positive.
+ * sets the background fill.
+ * Shared rule for 4 selectors. Editing a declaration here affects the whole group below.
+ * Source rule 2098.
+ */
+.position-depth-and-quality-colour-good {
+  background-color: var(--theme-color-green-soft-surface);
+}
+
+/* First team position selector.
+ * controls size/placement.
+ * Shared rule for 2 selectors. Editing a declaration here affects the whole group below.
+ * Source rule 2156.
+ */
+.row-direction-always-normal {
+  flex-direction: var(--row-direction-always-normal);
+}
+
+/* Flex 1 0 0.
+ * sets the native component presentation.
+ * Source rule 2168.
+ */
+.flex-1-0-0 {
+  flex: 1 0 0;
+}
+
+/* Flex no grow class.
+ * controls size/placement.
+ * Source rule 2169.
+ */
+.flex-no-grow-class {
+  flex-grow: 0;
+}
+
+/* Flex no shrink class.
+ * controls size/placement.
+ * Shared rule for 4 selectors. Editing a declaration here affects the whole group below.
+ * Source rule 2170.
+ */
+.flex-no-shrink-class {
+  flex-shrink: 0;
+}
+
+/* Flex no shrink grow self stretch class.
+ * controls size/placement.
+ * Source rule 2171.
+ */
+.flex-no-shrink-grow-self-stretch-class {
+  flex-shrink: 0;
+  flex-grow: 1;
+  align-self: stretch;
+}
+
+/* Flex row max width 100 percent.
+ * controls size/placement.
+ * Shared rule for 2 selectors. Editing a declaration here affects the whole group below.
+ * Source rule 2172.
+ */
+.flex-row-max-width-100-percent,
+.max-width-100-percent {
+  max-width: 100%;
+}
+
+/* Flex wrap class.
+ * controls size/placement.
+ * Source rule 2173.
+ */
+.flex-wrap-class {
+  flex-wrap: wrap;
+}
+
+/* Bindable uxml list subsequent row.
+ * sets spacing around/inside the element.
+ * Shared rule for 2 selectors. Editing a declaration here affects the whole group below.
+ * Source rule 2217.
+ */
+.margin-top-10 {
+  margin-top: 10px;
+}
+
+/* Half width element.
+ * controls size/placement.
+ * Shared rule for 5 selectors. Editing a declaration here affects the whole group below.
+ * Source rule 2391.
+ */
+.width-50-percent {
+  width: 50%;
+}
+
+/* Global text tertiary underline.
+ * sets the outline/corner shape.
+ * Source rule 2408.
+ */
+.global-text-tertiary-underline {
+  border-bottom-color: var(--skin-control-background);
+  border-bottom-width: 1px;
+}
+
+/* Spacing Layout
+ * Reusable geometry, spacing, borders and colour helper classes.
+ */
+
+/* Height 100 percent.
+ * controls size/placement.
+ * Shared rule for 2 selectors. Editing a declaration here affects the whole group below.
+ * Source rule 2437.
+ */
+.height-100-percent {
+  height: 100%;
+}
+
+/* Height 20 percent.
+ * controls size/placement.
+ * Source rule 2438.
+ */
+.height-20-percent {
+  height: 20%;
+}
+
+/* Height 20px.
+ * controls size/placement.
+ * Source rule 2439.
+ */
+.height-20px {
+  height: 20px;
+}
+
+/* Height 28.
+ * controls size/placement.
+ * Source rule 2440.
+ */
+.height-28 {
+  height: var(--width-height-28);
+}
+
+/* Height 30px.
+ * controls size/placement.
+ * Source rule 2441.
+ */
+.height-30px {
+  height: 30px;
+}
+
+/* Height 34px.
+ * controls size/placement.
+ * Source rule 2442.
+ */
+.height-34px {
+  height: 34px;
+}
+
+/* Height 36px.
+ * controls size/placement.
+ * Source rule 2443.
+ */
+.height-36px {
+  height: 36px;
+}
+
+/* Height 44px.
+ * controls size/placement.
+ * Source rule 2444.
+ */
+.height-44px {
+  height: 44px;
+}
+
+/* Height 4px.
+ * controls size/placement.
+ * Source rule 2445.
+ */
+.height-4px {
+  height: 4px;
+}
+
+/* Height 64px.
+ * controls size/placement.
+ * Source rule 2446.
+ */
+.height-64px {
+  height: 64px;
+}
+
+/* Virtualised list item.
+ * sets spacing around/inside the element.
+ * Shared rule for 3 selectors. Editing a declaration here affects the whole group below.
+ * Source rule 2455.
+ */
+.margin-right-4 {
+  margin-right: 4px;
+}
+
+/* Virtualised list horizontal list wrapped.
+ * controls size/placement.
+ * Shared rule for 3 selectors. Editing a declaration here affects the whole group below.
+ * Source rule 2456.
+ */
+.flex-shrink-class {
+  flex-shrink: 1;
+}
+
+/* Justify content space around.
+ * controls size/placement.
+ * Source rule 2670.
+ */
+.justify-content-space-around {
+  justify-content: space-around;
+}
+
+/* Justify content space between.
+ * controls size/placement.
+ * Source rule 2671.
+ */
+.justify-content-space-between {
+  justify-content: space-between;
+}
+
+/* Justify content space evenly.
+ * controls size/placement.
+ * Source rule 2672.
+ */
+.justify-content-space-evenly {
+  justify-content: space-evenly;
+}
+
+/* Virtualised list item.
+ * sets spacing around/inside the element.
+ * Shared rule for 3 selectors. Editing a declaration here affects the whole group below.
+ * Source rule 2721.
+ */
+.margin-right-8 {
+  margin-right: 8px;
+}
+
+/* Main header club badge medium.
+ * controls size/placement.
+ * Shared rule for 2 selectors. Editing a declaration here affects the whole group below.
+ * Source rule 2732.
+ */
+.width-height-64px {
+  width: 64px;
+  height: 64px;
+}
+
+/* Spacing Layout
+ * Reusable geometry, spacing, borders and colour helper classes.
+ */
+
+/* Margin bottom 10.
+ * sets spacing around/inside the element.
+ * Source rule 2828.
+ */
+.margin-bottom-10 {
+  margin-bottom: 10px;
+}
+
+/* Margin bottom 12.
+ * sets spacing around/inside the element.
+ * Source rule 2829.
+ */
+.margin-bottom-12 {
+  margin-bottom: 12px;
+}
+
+/* Margin bottom 2.
+ * sets spacing around/inside the element.
+ * Source rule 2830.
+ */
+.margin-bottom-2 {
+  margin-bottom: var(--spacing-padding-small---2);
+}
+
+/* Margin bottom 24.
+ * sets spacing around/inside the element.
+ * Source rule 2831.
+ */
+.margin-bottom-24 {
+  margin-bottom: 24px;
+}
+
+/* Margin bottom 32.
+ * sets spacing around/inside the element.
+ * Source rule 2832.
+ */
+.margin-bottom-32 {
+  margin-bottom: var(--spacing-padding-large---32);
+}
+
+/* Margin bottom 6.
+ * sets spacing around/inside the element.
+ * Source rule 2833.
+ */
+.margin-bottom-6 {
+  margin-bottom: 6px;
+}
+
+/* Margin bottom minus 4.
+ * sets spacing around/inside the element.
+ * Source rule 2834.
+ */
+.margin-bottom-minus-4 {
+  margin-bottom: -4px;
+}
+
+/* Margin left 1.
+ * sets spacing around/inside the element.
+ * Source rule 2835.
+ */
+.margin-left-1 {
+  margin-left: 1px;
+}
+
+/* Margin left 16.
+ * sets spacing around/inside the element.
+ * Source rule 2836.
+ */
+.margin-left-16 {
+  margin-left: 16px;
+}
+
+/* Margin left 2.
+ * sets spacing around/inside the element.
+ * Source rule 2837.
+ */
+.margin-left-2 {
+  margin-left: 2px;
+}
+
+/* Margin left 32.
+ * sets spacing around/inside the element.
+ * Source rule 2838.
+ */
+.margin-left-32 {
+  margin-left: var(--spacing-padding-large---32);
+}
+
+/* Margin left 4.
+ * sets spacing around/inside the element.
+ * Shared rule for 2 selectors. Editing a declaration here affects the whole group below.
+ * Source rule 2839.
+ */
+.margin-left-4 {
+  margin-left: 4px;
+}
+
+/* Margin left 64.
+ * sets spacing around/inside the element.
+ * Source rule 2840.
+ */
+.margin-left-64 {
+  margin-left: 64px;
+}
+
+/* Margin right 1.
+ * sets spacing around/inside the element.
+ * Source rule 2841.
+ */
+.margin-right-1 {
+  margin-right: 1px;
+}
+
+/* Margin right 12.
+ * sets spacing around/inside the element.
+ * Shared rule for 2 selectors. Editing a declaration here affects the whole group below.
+ * Source rule 2842.
+ */
+.margin-right-12 {
+  margin-right: 12px;
+}
+
+/* Margin right 2.
+ * sets spacing around/inside the element.
+ * Source rule 2843.
+ */
+.margin-right-2 {
+  margin-right: 2px;
+}
+
+/* Margin right 32.
+ * sets spacing around/inside the element.
+ * Source rule 2844.
+ */
+.margin-right-32 {
+  margin-right: var(--spacing-padding-large---32);
+}
+
+/* Margin right 64.
+ * sets spacing around/inside the element.
+ * Source rule 2845.
+ */
+.margin-right-64 {
+  margin-right: 64px;
+}
+
+/* Margin top 12.
+ * sets spacing around/inside the element.
+ * Source rule 2846.
+ */
+.margin-top-12 {
+  margin-top: 12px;
+}
+
+/* Margin top 2.
+ * sets spacing around/inside the element.
+ * Source rule 2847.
+ */
+.margin-top-2 {
+  margin-top: var(--spacing-padding-small---2);
+}
+
+/* Margin top 24.
+ * sets spacing around/inside the element.
+ * Source rule 2848.
+ */
+.margin-top-24 {
+  margin-top: 24px;
+}
+
+/* Margin top 32.
+ * sets spacing around/inside the element.
+ * Source rule 2849.
+ */
+.margin-top-32 {
+  margin-top: var(--spacing-padding-large---32);
+}
+
+/* Margin top 4.
+ * sets spacing around/inside the element.
+ * Source rule 2850.
+ */
+.margin-top-4 {
+  margin-top: 4px;
+}
+
+/* Margin top 48.
+ * sets spacing around/inside the element.
+ * Source rule 2851.
+ */
+.margin-top-48 {
+  margin-top: 48px;
+}
+
+/* Margin top 8.
+ * sets spacing around/inside the element.
+ * Source rule 2852.
+ */
+.margin-top-8 {
+  margin-top: var(--spacing-padding-small---8);
+}
+
+/* Margin top bottom 0.
+ * sets spacing around/inside the element.
+ * Source rule 2853.
+ */
+.margin-top-bottom-0 {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+/* Match load heavy text.
+ * Changes text/foreground colour.
+ * Shared rule for 3 selectors. Editing a declaration here affects the whole group below.
+ * Source rule 2857.
+ */
+.position-depth-and-quality-text-colour-average {
+  color: var(--linear-ranges-4-values-2);
+}
+
+/* Match load light text.
+ * Changes text/foreground colour.
+ * Shared rule for 5 selectors. Editing a declaration here affects the whole group below.
+ * Source rule 2858.
+ */
+.position-depth-and-quality-text-colour-good {
+  color: var(--linear-ranges-4-values-4);
+}
+
+/* Match load very heavy text.
+ * Changes text/foreground colour.
+ * Shared rule for 3 selectors. Editing a declaration here affects the whole group below.
+ * Source rule 2860.
+ */
+.position-depth-and-quality-text-colour-bad {
+  color: var(--linear-ranges-4-values-1);
+}
+
+/* Match preview header teams.
+ * controls size/placement.
+ * Shared rule for 2 selectors. Editing a declaration here affects the whole group below.
+ * Source rule 2869.
+ */
+.width-100px {
+  width: 100px;
+}
+
+/* Max height two lines body medium.
+ * controls size/placement.
+ * Shared rule for 2 selectors. Editing a declaration here affects the whole group below.
+ * Source rule 2887.
+ */
+.max-height-two-lines-body-md {
+  max-height: 36px;
+}
+
+/* Max width 160.
+ * controls size/placement.
+ * Source rule 2889.
+ */
+.max-width-160 {
+  max-width: 160px;
+}
+
+/* Max width 220.
+ * controls size/placement.
+ * Shared rule for 2 selectors. Editing a declaration here affects the whole group below.
+ * Source rule 2890.
+ */
+.max-width-220 {
+  max-width: 220px;
+}
+
+/* Min height 16.
+ * controls size/placement.
+ * Shared rule for 2 selectors. Editing a declaration here affects the whole group below.
+ * Source rule 2954.
+ */
+.min-height-16 {
+  min-height: 16px;
+}
+
+/* Min height 20.
+ * controls size/placement.
+ * Shared rule for 2 selectors. Editing a declaration here affects the whole group below.
+ * Source rule 2955.
+ */
+.min-height-20 {
+  min-height: 20px;
+}
+
+/* Min height 22.
+ * controls size/placement.
+ * Source rule 2956.
+ */
+.min-height-22 {
+  min-height: 22px;
+}
+
+/* Min height 28px.
+ * controls size/placement.
+ * Source rule 2957.
+ */
+.min-height-28px {
+  min-height: 28px;
+}
+
+/* Min height 32.
+ * controls size/placement.
+ * Source rule 2958.
+ */
+.min-height-32 {
+  min-height: 32px;
+}
+
+/* Min width 200.
+ * controls size/placement.
+ * Source rule 2959.
+ */
+.min-width-200 {
+  min-width: 200px;
+}
+
+/* Min width 28px.
+ * controls size/placement.
+ * Source rule 2960.
+ */
+.min-width-28px {
+  min-width: 28px;
+}
+
+/* Min width 30px.
+ * controls size/placement.
+ * Source rule 2961.
+ */
+.min-width-30px {
+  min-width: 30px;
+}
+
+/* Min width 48.
+ * controls size/placement.
+ * Source rule 2962.
+ */
+.min-width-48 {
+  min-width: var(--width-height-48);
+}
+
+/* Negotiations button height.
+ * controls size/placement.
+ * Shared rule for 2 selectors. Editing a declaration here affects the whole group below.
+ * Source rule 3066.
+ */
+.height-32px {
+  height: 32px;
+}
+
+/* Global Shared
+ * Shared native selectors, grouped rules, and cross-component helpers. A grouped rule stays whole even when its selectors span several products.
+ */
+
+/* No margin.
+ * sets spacing around/inside the element.
+ * Source rule 3101.
+ */
+.no-margin {
+  margin: 0 0 0 0;
+}
+
+/* No padding.
+ * sets spacing around/inside the element.
+ * Source rule 3105.
+ */
+.no-padding {
+  padding: 0 0 0 0;
+}
+
+/* Opacity 075.
+ * changes opacity for the whole element and its contents.
+ * Shared rule for 5 selectors. Editing a declaration here affects the whole group below.
+ * Source rule 3138.
+ */
+.opacity-075 {
+  opacity: 0.75;
+}
+
+/* Spacing Layout
+ * Reusable geometry, spacing, borders and colour helper classes.
+ */
+
+/* Padding 6 vertical 8 horizontal.
+ * sets spacing around/inside the element.
+ * Source rule 3149.
+ */
+.padding-6-vertical-8-horizontal {
+  padding-left: 8px;
+  padding-right: 8px;
+  padding-top: 6px;
+  padding-bottom: 6px;
+}
+
+/* Padding bottom 32.
+ * sets spacing around/inside the element.
+ * Source rule 3150.
+ */
+.padding-bottom-32 {
+  padding-bottom: var(--spacing-padding-large---32);
+}
+
+/* Padding bottom 4px.
+ * sets spacing around/inside the element.
+ * Source rule 3151.
+ */
+.padding-bottom-4px {
+  padding-bottom: 4px;
+}
+
+/* Padding extra small.
+ * sets spacing around/inside the element.
+ * Source rule 3152.
+ */
+.padding-extra-small {
+  padding: var(--spacing-padding-extra-small---4);
+}
+
+/* Padding left 16px.
+ * sets spacing around/inside the element.
+ * Source rule 3153.
+ */
+.padding-left-16px {
+  padding-left: 16px;
+}
+
+/* Padding left 30px.
+ * sets spacing around/inside the element.
+ * Source rule 3154.
+ */
+.padding-left-30px {
+  padding-left: 30px;
+}
+
+/* Padding left 4px.
+ * sets spacing around/inside the element.
+ * Source rule 3155.
+ */
+.padding-left-4px {
+  padding-left: 4px;
+}
+
+/* Padding left 84px.
+ * sets spacing around/inside the element.
+ * Source rule 3156.
+ */
+.padding-left-84px {
+  padding-left: 84px;
+}
+
+/* Padding right 16px.
+ * sets spacing around/inside the element.
+ * Source rule 3157.
+ */
+.padding-right-16px {
+  padding-right: 16px;
+}
+
+/* Padding right 30px.
+ * sets spacing around/inside the element.
+ * Source rule 3158.
+ */
+.padding-right-30px {
+  padding-right: 30px;
+}
+
+/* Padding right 84px.
+ * sets spacing around/inside the element.
+ * Source rule 3159.
+ */
+.padding-right-84px {
+  padding-right: 84px;
+}
+
+/* Padding top 16px.
+ * sets spacing around/inside the element.
+ * Source rule 3160.
+ */
+.padding-top-16px {
+  padding-top: 16px;
+}
+
+/* Padding top 4px.
+ * sets spacing around/inside the element.
+ * Source rule 3161.
+ */
+.padding-top-4px {
+  padding-top: 4px;
+}
+
+/* Position absolute.
+ * controls size/placement.
+ * Source rule 3269.
+ */
+.position-absolute {
+  position: absolute;
+}
+
+/* Position absolute right centered.
+ * controls size/placement.
+ * Source rule 3270.
+ */
+.position-absolute-right-centered {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  translate: 0 -57%;
+}
+
+/* Position attribute indicator.
+ * sets the background fill; sets the outline/corner shape; controls size/placement.
+ * Source rule 3271.
+ */
+.position-attribute-indicator {
+  width: 12px;
+  height: 12px;
+  border-width: 1.25px;
+  background-color: var(--skin-surface-canvas-alpha-56);
+  border-radius: 6px;
+}
+
+/* Position attribute indicator extra small.
+ * sets the background fill; sets the outline/corner shape; controls size/placement.
+ * Source rule 3272.
+ */
+.position-attribute-indicator__extra-small {
+  width: 4px;
+  height: 4px;
+  border-width: 1.25px;
+  background-color: var(--skin-on-media-alpha-35);
+  border-radius: 2px;
+}
+
+/* Position attribute indicator extra small dark.
+ * sets the background fill; sets the outline/corner shape; controls size/placement.
+ * Source rule 3273.
+ */
+.position-attribute-indicator__extra-small-dark {
+  width: 4px;
+  height: 4px;
+  border-width: 1.25px;
+  background-color: var(--skin-surface-canvas-alpha-56);
+  border-radius: 2px;
+}
+
+/* Position attribute indicator extra small green.
+ * sets the background fill; sets the outline/corner shape; controls size/placement.
+ * Source rule 3274.
+ */
+.position-attribute-indicator__extra-small-green {
+  width: 4.5px;
+  height: 4.5px;
+  border-width: 1px;
+  border-color: var(--skin-surface-canvas-alpha-56);
+  background-color: var(--linear-ranges-6-values-6);
+  flex-shrink: 0;
+  border-radius: 7px;
+}
+
+/* Position attribute indicator smaller.
+ * sets the background fill; sets the outline/corner shape; controls size/placement.
+ * Shared rule for 2 selectors. Editing a declaration here affects the whole group below.
+ * Source rule 3275.
+ */
+.position-attribute-indicator__smaller,
+.position-attribute-indicator__smaller-simple {
+  width: 8px;
+  height: 8px;
+  border-width: 1.25px;
+  background-color: var(--skin-on-media-alpha-35);
+  border-radius: 6px;
+}
+
+/* Position attribute indicator smaller dark.
+ * sets the background fill; sets the outline/corner shape; controls size/placement.
+ * Source rule 3276.
+ */
+.position-attribute-indicator__smaller-dark {
+  width: 6px;
+  height: 6px;
+  border-width: 1.25px;
+  background-color: var(--skin-surface-canvas-alpha-56);
+  border-radius: 3px;
+}
+
+/* Position attribute indicator white.
+ * sets the background fill; sets the outline/corner shape; controls size/placement.
+ * Source rule 3277.
+ */
+.position-attribute-indicator__white {
+  width: 5px;
+  height: 5px;
+  border-width: 1px;
+  border-color: var(--skin-surface-canvas-alpha-56);
+  background-color: var(--colours-base-neutral-white);
+  flex-shrink: 0;
+  border-radius: 7px;
+}
+
+/* Position attribute indicator extra small dark.
+ * sets the outline/corner shape; controls size/placement.
+ * Shared rule for 4 selectors. Editing a declaration here affects the whole group below.
+ * Source rule 3278.
+ */
+.position-attribute-indicator__extra-small {
+  width: 5px;
+  height: 5px;
+  border-radius: 2.5px;
+}
+
+/* Position attribute rating label accomplished.
+ * Changes text/foreground colour; tints background artwork.
+ * Source rule 3282.
+ */
+.position-attribute-rating-label-accomplished {
+  color: var(--colours-linear-scale-strong-8);
+  -unity-background-image-tint-color: var(--colours-linear-scale-strong-8);
+}
+
+/* Position attribute rating label natural.
+ * Changes text/foreground colour; tints background artwork.
+ * Source rule 3283.
+ */
+.position-attribute-rating-label-natural {
+  color: var(--colours-linear-scale-strong-5);
+  -unity-background-image-tint-color: var(--colours-linear-scale-strong-5);
+}
+
+/* Position depth and quality colour average.
+ * sets the background fill.
+ * Source rule 3285.
+ */
+.position-depth-and-quality-colour-average {
+  background-color: var(--skin-component-position-depth-and-quality-colour-average-background);
+}
+
+/* Position depth image color average.
+ * tints background artwork.
+ * Source rule 3286.
+ */
+.position-depth-image-color--average {
+  -unity-background-image-tint-color: var(--skin-component-position-depth-image-color-average-image-tint);
+}
+
+/* Position depth image color bad.
+ * tints background artwork.
+ * Source rule 3287.
+ */
+.position-depth-image-color--bad {
+  -unity-background-image-tint-color: var(--skin-component-position-depth-image-color-bad-image-tint);
+}
+
+/* Position depth image color good.
+ * tints background artwork.
+ * Source rule 3288.
+ */
+.position-depth-image-color--good {
+  -unity-background-image-tint-color: var(--skin-component-position-depth-image-color-good-image-tint);
+}
+
+/* Position relative.
+ * controls size/placement.
+ * Shared rule for 2 selectors. Editing a declaration here affects the whole group below.
+ * Source rule 3289.
+ */
+.position-relative {
+  position: relative;
+}
+
+/* Position suitability visualiser large.
+ * sets the background artwork; sets the outline/corner shape; controls size/placement; sets spacing
+ * around/inside the element.
+ * Native image/font declarations stay with the game; their omitted positions are marked below.
+ * Source rule 3290.
+ */
+.position-suitability-visualiser-large {
+  width: 32px;
+  height: 32px;
+  border-width: var(--global-border-width-regular);
+  border-color: var(--visualiser-pitch-accent-border);
+  margin-bottom: var(--global-gap-none);
+  padding-right: var(--global-padding-none);
+  padding-left: var(--global-padding-none);
+  border-radius: var(--global-radius-extra-small);
+}
+
+/* Position suitability visualiser large value.
+ * controls size/placement.
+ * Source rule 3291.
+ */
+.position-suitability-visualiser-large-value {
+  width: 8px;
+  height: 4px;
+}
+
+/* Row direction always inverted.
+ * controls size/placement.
+ * Shared rule for 2 selectors. Editing a declaration here affects the whole group below.
+ * Source rule 3417.
+ */
+.row-direction-always-inverted {
+  flex-direction: var(--row-direction-always-reverse);
+}
+
+/* Row direction inverted.
+ * controls size/placement.
+ * Shared rule for 5 selectors. Editing a declaration here affects the whole group below.
+ * Source rule 3418.
+ */
+.row-direction-inverted {
+  flex-direction: var(--row-direction-reverse);
+}
+
+/* SI dropdown selection field.
+ * controls size/placement.
+ * Shared rule for 3 selectors. Editing a declaration here affects the whole group below.
+ * Source rule 3475.
+ */
+.height-auto {
+  height: auto;
+}
+
+/* Secondary navigation padding box.
+ * sets spacing around/inside the element.
+ * Source rule 3476.
+ */
+.secondary-navigation-padding-box {
+  padding-left: var(--padding-padding-6);
+  padding-right: var(--padding-padding-6);
+}
+
+/* Sender bubbles frame.
+ * controls size/placement.
+ * Shared rule for 3 selectors. Editing a declaration here affects the whole group below.
+ * Source rule 3491.
+ */
+.justify-content-end {
+  justify-content: flex-end;
+}
+
+/* Hide bubbles.
+ * controls size/placement.
+ * Shared rule for 3 selectors. Editing a declaration here affects the whole group below.
+ * Source rule 3492.
+ */
+.justify-content-flex-start {
+  justify-content: flex-start;
+}
+
+/* Shuffle draft draft panel side frame width.
+ * controls size/placement.
+ * Shared rule for 2 selectors. Editing a declaration here affects the whole group below.
+ * Source rule 3540.
+ */
+.width-300px {
+  width: 300px;
+}
+
+/* Stepper step.
+ * controls size/placement.
+ * Shared rule for 2 selectors. Editing a declaration here affects the whole group below.
+ * Source rule 3591.
+ */
+.min-width-none-class {
+  min-width: 0;
+}
+
+/* Tifo dropdown noborder nopadding.
+ * sets the outline/corner shape; controls size/placement; sets spacing around/inside the element.
+ * Source rule 4084.
+ */
+.tifo-dropdown-noborder-nopadding {
+  padding: 0;
+  border-width: 0;
+  align-items: center;
+  border-radius: 0;
+}
+
+/* SI dropdown selection field.
+ * Changes text/foreground colour; sets the outline/corner shape; controls size/placement; sets spacing
+ * around/inside the element.
+ * Source rule 4085.
+ */
+.tifo-dropdown-noborder-nopadding .si-dropdown__selection-field {
+  height: 100%;
+  padding: 0;
+  border-width: 0;
+  border-color: var(--skin-border-subtle);
+  color: var(--skin-text-primary);
+  align-items: center;
+  border-radius: 0;
+  flex-direction: var(--row-direction-normal);
+}
+
+/* Non Diegetic Button.
+ * sets the outline/corner shape.
+ * Source rule 4086.
+ */
+.tifo-dropdown-noborder-nopadding.nonDiegeticButton {
+  border-radius: var(--interaction-global-radius-md);
+}
+
+/* Spacing Layout
+ * Reusable geometry, spacing, borders and colour helper classes.
+ */
+
+/* Width 130px.
+ * controls size/placement.
+ * Source rule 4284.
+ */
+.width-130px {
+  width: 130px;
+}
+
+/* Width 15 percent.
+ * controls size/placement.
+ * Source rule 4285.
+ */
+.width-15-percent {
+  width: 15%;
+}
+
+/* Width 16px.
+ * controls size/placement.
+ * Shared rule for 2 selectors. Editing a declaration here affects the whole group below.
+ * Source rule 4286.
+ */
+.width-16px {
+  width: 16px;
+}
+
+/* Width 20 percent.
+ * controls size/placement.
+ * Shared rule for 2 selectors. Editing a declaration here affects the whole group below.
+ * Source rule 4287.
+ */
+.width-20-percent {
+  width: 20%;
+}
+
+/* Width 25 percent.
+ * controls size/placement.
+ * Shared rule for 2 selectors. Editing a declaration here affects the whole group below.
+ * Source rule 4288.
+ */
+.width-25-percent {
+  width: 25%;
+}
+
+/* Width 28 percent.
+ * controls size/placement.
+ * Source rule 4289.
+ */
+.width-28-percent {
+  width: 28%;
+}
+
+/* Width 28px.
+ * controls size/placement.
+ * Source rule 4290.
+ */
+.width-28px {
+  width: 28px;
+}
+
+/* Width 30 percent.
+ * controls size/placement.
+ * Source rule 4291.
+ */
+.width-30-percent {
+  width: 30%;
+}
+
+/* Width 32px.
+ * controls size/placement.
+ * Source rule 4292.
+ */
+.width-32px {
+  width: 32px;
+}
+
+/* Width 33 percent.
+ * controls size/placement.
+ * Source rule 4293.
+ */
+.width-33-percent {
+  width: 33%;
+}
+
+/* Width 35 percent no shrink.
+ * controls size/placement.
+ * Source rule 4294.
+ */
+.width-35-percent-no-shrink {
+  width: 35%;
+  flex-shrink: 0;
+}
+
+/* Width 38 percent.
+ * controls size/placement.
+ * Source rule 4295.
+ */
+.width-38-percent {
+  width: 38%;
+}
+
+/* Width 400px.
+ * controls size/placement.
+ * Shared rule for 2 selectors. Editing a declaration here affects the whole group below.
+ * Source rule 4296.
+ */
+.width-400px {
+  width: 400px;
+}
+
+/* Width 42px.
+ * controls size/placement.
+ * Source rule 4297.
+ */
+.width-42px {
+  width: 42px;
+}
+
+/* Width 48 percent.
+ * controls size/placement.
+ * Source rule 4298.
+ */
+.width-48-percent {
+  width: 48%;
+}
+
+/* Width 70 percent.
+ * controls size/placement.
+ * Source rule 4299.
+ */
+.width-70-percent {
+  width: 70%;
+}
+
+/* Width 75 percent.
+ * controls size/placement.
+ * Source rule 4300.
+ */
+.width-75-percent {
+  width: 75%;
+}
+
+/* Width 80px.
+ * controls size/placement.
+ * Source rule 4301.
+ */
+.width-80px {
+  width: 80px;
+}
+
+/* Width 88px.
+ * controls size/placement.
+ * Source rule 4302.
+ */
+.width-88px {
+  width: 88px;
+}
+
+/* Width height 100 percent.
+ * controls size/placement.
+ * Shared rule for 2 selectors. Editing a declaration here affects the whole group below.
+ * Source rule 4303.
+ */
+.width-height-100-percent {
+  width: 100%;
+  height: 100%;
+}
+
+/* Width height 24px.
+ * controls size/placement.
+ * Shared rule for 7 selectors. Editing a declaration here affects the whole group below.
+ * Source rule 4304.
+ */
+.width-height-24px {
+  width: 24px;
+  height: 24px;
+}
+
+/* Width height 32px.
+ * controls size/placement.
+ * Source rule 4305.
+ */
+.width-height-32px {
+  width: 32px;
+  height: 32px;
+  flex-shrink: 0;
+}
+
+/* Global text primary.
+ * Changes text/foreground colour.
+ * Source rule 4883.
+ */
+.global-text-primary {
+  color: var(--skin-text-primary);
+}
+
+/* Global text secondary.
+ * Changes text/foreground colour.
+ * Source rule 4884.
+ */
+.global-text-secondary {
+  color: var(--skin-text-secondary);
+}
+
+/* Height button global height regular.
+ * controls size/placement.
+ * Source rule 4885.
+ */
+.height-button-global-height-regular {
+  height: var(--buttons-global-height-regular);
+}
+
+/* Height button global height small.
+ * controls size/placement.
+ * Source rule 4886.
+ */
+.height-button-global-height-small {
+  height: var(--buttons-global-height-small);
+}
+
+/* Margin bottom global gap extra extra large.
+ * sets spacing around/inside the element.
+ * Source rule 4890.
+ */
+.margin-bottom-global-gap-extra-extra-large {
+  margin-bottom: var(--global-gap-generous);
+}
+
+/* Margin bottom global gap extra large.
+ * sets spacing around/inside the element.
+ * Source rule 4891.
+ */
+.margin-bottom-global-gap-extra-large {
+  margin-bottom: var(--global-gap-seperation);
+}
+
+/* Margin bottom global gap extra small.
+ * sets spacing around/inside the element.
+ * Source rule 4892.
+ */
+.margin-bottom-global-gap-extra-small {
+  margin-bottom: var(--global-padding-extra-small);
+}
+
+/* Margin bottom global gap huge.
+ * sets spacing around/inside the element.
+ * Source rule 4893.
+ */
+.margin-bottom-global-gap-huge {
+  margin-bottom: var(--global-gap-huge);
+}
+
+/* Margin bottom global gap large.
+ * sets spacing around/inside the element.
+ * Source rule 4894.
+ */
+.margin-bottom-global-gap-large {
+  margin-bottom: var(--global-gap-distant);
+}
+
+/* Margin bottom global gap none.
+ * sets spacing around/inside the element.
+ * Source rule 4895.
+ */
+.margin-bottom-global-gap-none {
+  margin-bottom: var(--global-gap-none);
+}
+
+/* Margin bottom global gap regular.
+ * sets spacing around/inside the element.
+ * Source rule 4896.
+ */
+.margin-bottom-global-gap-regular {
+  margin-bottom: var(--global-gap-regular);
+}
+
+/* Margin bottom global gap segmented tab spacing.
+ * sets spacing around/inside the element.
+ * Source rule 4897.
+ */
+.margin-bottom-global-gap-segmented-tab-spacing {
+  margin-bottom: var(--global-gap-micro);
+}
+
+/* Margin bottom global gap small.
+ * sets spacing around/inside the element.
+ * Source rule 4898.
+ */
+.margin-bottom-global-gap-small {
+  margin-bottom: var(--global-gap-close);
+}
+
+/* Margin bottom global padding new ex.
+ * sets spacing around/inside the element.
+ * Source rule 4899.
+ */
+.margin-bottom-global-padding-new-ex {
+  margin-bottom: var(--global-padding-new-ex);
+}
+
+/* Margin gap none.
+ * sets spacing around/inside the element.
+ * Shared rule for 2 selectors. Editing a declaration here affects the whole group below.
+ * Source rule 4900.
+ */
+.margin-gap-none,
+.margin-global-gap-none {
+  margin: var(--global-gap-none);
+}
+
+/* Margin global gap extra extra large.
+ * sets spacing around/inside the element.
+ * Source rule 4901.
+ */
+.margin-global-gap-extra-extra-large {
+  margin: var(--global-gap-generous);
+}
+
+/* Margin global gap extra large.
+ * sets spacing around/inside the element.
+ * Source rule 4902.
+ */
+.margin-global-gap-extra-large {
+  margin: var(--global-gap-seperation);
+}
+
+/* Margin global gap extra small.
+ * sets spacing around/inside the element.
+ * Source rule 4903.
+ */
+.margin-global-gap-extra-small {
+  margin: var(--global-gap-micro);
+}
+
+/* Margin global gap huge.
+ * sets spacing around/inside the element.
+ * Source rule 4904.
+ */
+.margin-global-gap-huge {
+  margin: var(--global-gap-spacious);
+}
+
+/* Margin global gap large.
+ * sets spacing around/inside the element.
+ * Source rule 4905.
+ */
+.margin-global-gap-large {
+  margin: var(--global-gap-distant);
+}
+
+/* Margin global gap regular.
+ * sets spacing around/inside the element.
+ * Source rule 4906.
+ */
+.margin-global-gap-regular {
+  margin: var(--global-gap-regular);
+}
+
+/* Margin global gap small.
+ * sets spacing around/inside the element.
+ * Source rule 4907.
+ */
+.margin-global-gap-small {
+  margin: var(--global-gap-close);
+}
+
+/* Margin horizontal global gap extra extra large.
+ * sets spacing around/inside the element.
+ * Source rule 4908.
+ */
+.margin-horizontal-global-gap-extra-extra-large {
+  margin-left: var(--global-gap-generous);
+  margin-right: var(--global-gap-generous);
+}
+
+/* Margin horizontal global gap extra huge.
+ * sets spacing around/inside the element.
+ * Source rule 4909.
+ */
+.margin-horizontal-global-gap-extra-huge {
+  margin-left: var(--global-gap-extra-huge);
+  margin-right: var(--global-gap-extra-huge);
+}
+
+/* Margin horizontal global gap extra large.
+ * sets spacing around/inside the element.
+ * Source rule 4910.
+ */
+.margin-horizontal-global-gap-extra-large {
+  margin-left: var(--global-gap-seperation);
+  margin-right: var(--global-gap-seperation);
+}
+
+/* Margin horizontal global gap extra small.
+ * sets spacing around/inside the element.
+ * Shared rule for 2 selectors. Editing a declaration here affects the whole group below.
+ * Source rule 4911.
+ */
+.margin-horizontal-global-gap-extra-small,
+.margin-horizontal-global-gap-segmented-tab-spacing {
+  margin-left: var(--global-gap-micro);
+  margin-right: var(--global-gap-micro);
+}
+
+/* Margin horizontal global gap huge.
+ * sets spacing around/inside the element.
+ * Source rule 4912.
+ */
+.margin-horizontal-global-gap-huge {
+  margin-left: var(--global-gap-spacious);
+  margin-right: var(--global-gap-spacious);
+}
+
+/* Margin horizontal global gap large.
+ * sets spacing around/inside the element.
+ * Source rule 4913.
+ */
+.margin-horizontal-global-gap-large {
+  margin-left: var(--global-gap-distant);
+  margin-right: var(--global-gap-distant);
+}
+
+/* Margin horizontal global gap none.
+ * sets spacing around/inside the element.
+ * Source rule 4914.
+ */
+.margin-horizontal-global-gap-none {
+  margin-left: var(--global-gap-none);
+  margin-right: var(--global-gap-none);
+}
+
+/* Margin horizontal global gap regular.
+ * sets spacing around/inside the element.
+ * Source rule 4915.
+ */
+.margin-horizontal-global-gap-regular {
+  margin-left: var(--global-gap-regular);
+  margin-right: var(--global-gap-regular);
+}
+
+/* Margin horizontal global gap small.
+ * sets spacing around/inside the element.
+ * Source rule 4916.
+ */
+.margin-horizontal-global-gap-small {
+  margin-left: var(--global-gap-close);
+  margin-right: var(--global-gap-close);
+}
+
+/* Margin left global gap 6px.
+ * sets spacing around/inside the element.
+ * Source rule 4917.
+ */
+.margin-left-global-gap-6px {
+  margin-left: 6px;
+}
+
+/* Margin left global gap regular.
+ * sets spacing around/inside the element.
+ * Source rule 4918.
+ */
+.margin-left-global-gap-regular {
+  margin-left: var(--global-gap-regular);
+}
+
+/* Margin right global gap 6px.
+ * sets spacing around/inside the element.
+ * Source rule 4919.
+ */
+.margin-right-global-gap-6px {
+  margin-right: 6px;
+}
+
+/* Margin right global gap large.
+ * sets spacing around/inside the element.
+ * Source rule 4920.
+ */
+.margin-right-global-gap-large {
+  margin-right: var(--global-gap-distant);
+}
+
+/* Margin right global gap small.
+ * sets spacing around/inside the element.
+ * Source rule 4921.
+ */
+.margin-right-global-gap-small {
+  margin-right: var(--global-gap-close);
+}
+
+/* Margin right global gap spacious.
+ * sets spacing around/inside the element.
+ * Source rule 4922.
+ */
+.margin-right-global-gap-spacious {
+  margin-right: var(--global-gap-spacious);
+}
+
+/* Margin top global gap extra extra large.
+ * sets spacing around/inside the element.
+ * Source rule 4923.
+ */
+.margin-top-global-gap-extra-extra-large {
+  margin-top: var(--global-gap-generous);
+}
+
+/* Margin top global gap extra large.
+ * sets spacing around/inside the element.
+ * Source rule 4924.
+ */
+.margin-top-global-gap-extra-large {
+  margin-top: var(--global-gap-seperation);
+}
+
+/* Margin top global gap extra small.
+ * sets spacing around/inside the element.
+ * Source rule 4925.
+ */
+.margin-top-global-gap-extra-small {
+  margin-top: var(--global-padding-extra-small);
+}
+
+/* Margin top global gap large.
+ * sets spacing around/inside the element.
+ * Source rule 4926.
+ */
+.margin-top-global-gap-large {
+  margin-top: var(--global-gap-distant);
+}
+
+/* Margin top global gap none.
+ * sets spacing around/inside the element.
+ * Source rule 4927.
+ */
+.margin-top-global-gap-none {
+  margin-top: var(--global-gap-none);
+}
+
+/* Margin top global gap regular.
+ * sets spacing around/inside the element.
+ * Source rule 4928.
+ */
+.margin-top-global-gap-regular {
+  margin-top: var(--global-gap-regular);
+}
+
+/* Margin top global gap small.
+ * sets spacing around/inside the element.
+ * Source rule 4929.
+ */
+.margin-top-global-gap-small {
+  margin-top: var(--global-gap-close);
+}
+
+/* Margin vertical global gap extra extra large.
+ * sets spacing around/inside the element.
+ * Source rule 4930.
+ */
+.margin-vertical-global-gap-extra-extra-large {
+  margin-top: var(--global-gap-generous);
+  margin-bottom: var(--global-gap-generous);
+}
+
+/* Margin vertical global gap extra large.
+ * sets spacing around/inside the element.
+ * Source rule 4931.
+ */
+.margin-vertical-global-gap-extra-large {
+  margin-top: var(--global-gap-seperation);
+  margin-bottom: var(--global-gap-seperation);
+}
+
+/* Margin vertical global gap extra small.
+ * sets spacing around/inside the element.
+ * Source rule 4932.
+ */
+.margin-vertical-global-gap-extra-small {
+  margin-top: var(--global-gap-micro);
+  margin-bottom: var(--global-gap-micro);
+}
+
+/* Margin vertical global gap huge.
+ * sets spacing around/inside the element.
+ * Source rule 4933.
+ */
+.margin-vertical-global-gap-huge {
+  margin-top: var(--global-gap-spacious);
+  margin-bottom: var(--global-gap-spacious);
+}
+
+/* Margin vertical global gap large.
+ * sets spacing around/inside the element.
+ * Source rule 4934.
+ */
+.margin-vertical-global-gap-large {
+  margin-top: var(--global-gap-distant);
+  margin-bottom: var(--global-gap-distant);
+}
+
+/* Margin vertical global gap none.
+ * sets spacing around/inside the element.
+ * Source rule 4935.
+ */
+.margin-vertical-global-gap-none {
+  margin-top: var(--global-gap-none);
+  margin-bottom: var(--global-gap-none);
+}
+
+/* Margin vertical global gap regular.
+ * sets spacing around/inside the element.
+ * Source rule 4936.
+ */
+.margin-vertical-global-gap-regular {
+  margin-top: var(--global-gap-regular);
+  margin-bottom: var(--global-gap-regular);
+}
+
+/* Margin vertical global gap small.
+ * sets spacing around/inside the element.
+ * Source rule 4937.
+ */
+.margin-vertical-global-gap-small {
+  margin-top: var(--global-gap-close);
+  margin-bottom: var(--global-gap-close);
+}
+
+/* Padding bottom global padding extra large.
+ * sets spacing around/inside the element.
+ * Source rule 4938.
+ */
+.padding-bottom-global-padding-extra-large {
+  padding-bottom: var(--global-padding-extra-large);
+}
+
+/* Padding bottom global padding extra small.
+ * sets spacing around/inside the element.
+ * Source rule 4939.
+ */
+.padding-bottom-global-padding-extra-small {
+  padding-bottom: var(--global-padding-extra-small);
+}
+
+/* Padding bottom global padding huge.
+ * sets spacing around/inside the element.
+ * Source rule 4940.
+ */
+.padding-bottom-global-padding-huge {
+  padding-bottom: var(--global-padding-huge);
+}
+
+/* Padding bottom global padding large.
+ * sets spacing around/inside the element.
+ * Source rule 4941.
+ */
+.padding-bottom-global-padding-large {
+  padding-bottom: var(--global-padding-large);
+}
+
+/* Padding bottom global padding none.
+ * sets spacing around/inside the element.
+ * Source rule 4942.
+ */
+.padding-bottom-global-padding-none {
+  padding-bottom: var(--global-padding-none);
+}
+
+/* Padding bottom global padding regular.
+ * sets spacing around/inside the element.
+ * Source rule 4943.
+ */
+.padding-bottom-global-padding-regular {
+  padding-bottom: var(--global-padding-regular);
+}
+
+/* Padding bottom global padding small.
+ * sets spacing around/inside the element.
+ * Source rule 4944.
+ */
+.padding-bottom-global-padding-small {
+  padding-bottom: var(--global-padding-small);
+}
+
+/* Padding gap none.
+ * sets spacing around/inside the element.
+ * Shared rule for 2 selectors. Editing a declaration here affects the whole group below.
+ * Source rule 4945.
+ */
+.padding-gap-none,
+.padding-global-padding-none {
+  padding: var(--global-padding-none);
+}
+
+/* Padding global padding extra extra large.
+ * sets spacing around/inside the element.
+ * Source rule 4946.
+ */
+.padding-global-padding-extra-extra-large {
+  padding: var(--global-padding-extra-extra-large);
+}
+
+/* Padding global padding extra large.
+ * sets spacing around/inside the element.
+ * Source rule 4947.
+ */
+.padding-global-padding-extra-large {
+  padding: var(--global-padding-extra-large);
+}
+
+/* Padding global padding extra small.
+ * sets spacing around/inside the element.
+ * Source rule 4948.
+ */
+.padding-global-padding-extra-small {
+  padding: var(--global-padding-extra-small);
+}
+
+/* Padding global padding huge.
+ * sets spacing around/inside the element.
+ * Source rule 4949.
+ */
+.padding-global-padding-huge {
+  padding: var(--global-padding-huge);
+}
+
+/* Padding global padding large.
+ * sets spacing around/inside the element.
+ * Source rule 4950.
+ */
+.padding-global-padding-large {
+  padding: var(--global-padding-large);
+}
+
+/* Padding global padding regular.
+ * sets spacing around/inside the element.
+ * Source rule 4951.
+ */
+.padding-global-padding-regular {
+  padding: var(--global-padding-regular);
+}
+
+/* Padding global padding small.
+ * sets spacing around/inside the element.
+ * Source rule 4952.
+ */
+.padding-global-padding-small {
+  padding: var(--global-padding-small);
+}
+
+/* Padding horizontal global padding extra extra large.
+ * sets spacing around/inside the element.
+ * Source rule 4953.
+ */
+.padding-horizontal-global-padding-extra-extra-large {
+  padding-left: var(--global-padding-extra-extra-large);
+  padding-right: var(--global-padding-extra-extra-large);
+}
+
+/* Padding horizontal global padding extra huge.
+ * sets spacing around/inside the element.
+ * Source rule 4954.
+ */
+.padding-horizontal-global-padding-extra-huge {
+  padding-left: var(--global-padding-extra-huge);
+  padding-right: var(--global-padding-extra-huge);
+}
+
+/* Padding horizontal global padding extra large.
+ * sets spacing around/inside the element.
+ * Source rule 4955.
+ */
+.padding-horizontal-global-padding-extra-large {
+  padding-left: var(--global-padding-extra-large);
+  padding-right: var(--global-padding-extra-large);
+}
+
+/* Padding horizontal global padding extra small.
+ * sets spacing around/inside the element.
+ * Source rule 4956.
+ */
+.padding-horizontal-global-padding-extra-small {
+  padding-left: var(--global-padding-extra-small);
+  padding-right: var(--global-padding-extra-small);
+}
+
+/* Padding horizontal global padding huge.
+ * sets spacing around/inside the element.
+ * Source rule 4957.
+ */
+.padding-horizontal-global-padding-huge {
+  padding-left: var(--global-padding-huge);
+  padding-right: var(--global-padding-huge);
+}
+
+/* Padding horizontal global padding large.
+ * sets spacing around/inside the element.
+ * Source rule 4958.
+ */
+.padding-horizontal-global-padding-large {
+  padding-left: var(--global-padding-large);
+  padding-right: var(--global-padding-large);
+}
+
+/* Padding horizontal global padding none.
+ * sets spacing around/inside the element.
+ * Source rule 4959.
+ */
+.padding-horizontal-global-padding-none {
+  padding-left: var(--global-padding-none);
+  padding-right: var(--global-padding-none);
+}
+
+/* Padding horizontal global padding regular.
+ * sets spacing around/inside the element.
+ * Source rule 4960.
+ */
+.padding-horizontal-global-padding-regular {
+  padding-left: var(--global-padding-regular);
+  padding-right: var(--global-padding-regular);
+}
+
+/* Padding horizontal global padding small.
+ * sets spacing around/inside the element.
+ * Source rule 4961.
+ */
+.padding-horizontal-global-padding-small {
+  padding-left: var(--global-padding-small);
+  padding-right: var(--global-padding-small);
+}
+
+/* Padding top global padding extra large.
+ * sets spacing around/inside the element.
+ * Source rule 4962.
+ */
+.padding-top-global-padding-extra-large {
+  padding-top: var(--global-padding-extra-large);
+}
+
+/* Padding top global padding extra small.
+ * sets spacing around/inside the element.
+ * Source rule 4963.
+ */
+.padding-top-global-padding-extra-small {
+  padding-top: var(--global-padding-extra-small);
+}
+
+/* Padding top global padding huge.
+ * sets spacing around/inside the element.
+ * Source rule 4964.
+ */
+.padding-top-global-padding-huge {
+  padding-top: var(--global-padding-huge);
+}
+
+/* Padding top global padding large.
+ * sets spacing around/inside the element.
+ * Source rule 4965.
+ */
+.padding-top-global-padding-large {
+  padding-top: var(--global-padding-large);
+}
+
+/* Padding top global padding none.
+ * sets spacing around/inside the element.
+ * Source rule 4966.
+ */
+.padding-top-global-padding-none {
+  padding-top: var(--global-padding-none);
+}
+
+/* Padding top global padding regular.
+ * sets spacing around/inside the element.
+ * Source rule 4967.
+ */
+.padding-top-global-padding-regular {
+  padding-top: var(--global-padding-regular);
+}
+
+/* Padding top global padding small.
+ * sets spacing around/inside the element.
+ * Source rule 4968.
+ */
+.padding-top-global-padding-small {
+  padding-top: var(--global-padding-small);
+}
+
+/* Padding vertical global padding extra extra large.
+ * sets spacing around/inside the element.
+ * Source rule 4969.
+ */
+.padding-vertical-global-padding-extra-extra-large {
+  padding-top: var(--global-padding-extra-extra-large);
+  padding-bottom: var(--global-padding-extra-extra-large);
+}
+
+/* Padding vertical global padding extra large.
+ * sets spacing around/inside the element.
+ * Source rule 4970.
+ */
+.padding-vertical-global-padding-extra-large {
+  padding-top: var(--global-padding-extra-large);
+  padding-bottom: var(--global-padding-extra-large);
+}
+
+/* Padding vertical global padding extra small.
+ * sets spacing around/inside the element.
+ * Source rule 4971.
+ */
+.padding-vertical-global-padding-extra-small {
+  padding-top: var(--global-padding-extra-small);
+  padding-bottom: var(--global-padding-extra-small);
+}
+
+/* Padding vertical global padding huge.
+ * sets spacing around/inside the element.
+ * Source rule 4972.
+ */
+.padding-vertical-global-padding-huge {
+  padding-top: var(--global-padding-huge);
+  padding-bottom: var(--global-padding-huge);
+}
+
+/* Padding vertical global padding large.
+ * sets spacing around/inside the element.
+ * Source rule 4973.
+ */
+.padding-vertical-global-padding-large {
+  padding-top: var(--global-padding-large);
+  padding-bottom: var(--global-padding-large);
+}
+
+/* Padding vertical global padding none.
+ * sets spacing around/inside the element.
+ * Source rule 4974.
+ */
+.padding-vertical-global-padding-none {
+  padding-top: var(--global-padding-none);
+  padding-bottom: var(--global-padding-none);
+}
+
+/* Padding vertical global padding regular.
+ * sets spacing around/inside the element.
+ * Source rule 4975.
+ */
+.padding-vertical-global-padding-regular {
+  padding-top: var(--global-padding-regular);
+  padding-bottom: var(--global-padding-regular);
+}
+
+/* Padding vertical global padding small.
+ * sets spacing around/inside the element.
+ * Source rule 4976.
+ */
+.padding-vertical-global-padding-small {
+  padding-top: var(--global-padding-small);
+  padding-bottom: var(--global-padding-small);
+}
+
+/* Neutral lift is a surface utility, not a coaching-rating state. Keep the
+ * personnel status class in people.uss on its domain palette. */
+.background-color-global-lift-surface-base {
+  background-color: var(--global-lift-surface-base);
+}

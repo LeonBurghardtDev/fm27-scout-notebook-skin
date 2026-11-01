@@ -1,0 +1,6086 @@
+/* Edit this stylesheet directly, then reload the skin. Shared values live in theme.uss. */
+
+/* Club facilities rating text colour 0.
+ * Changes text/foreground colour.
+ * Source rule 1658.
+ */
+.club-facilities-rating-text-colour-0 {
+  color: var(--communication-coaching-adjective-ratings-reasonable-text);
+}
+
+/* Club facilities rating text colour 1.
+ * Changes text/foreground colour.
+ * Source rule 1659.
+ */
+.club-facilities-rating-text-colour-1 {
+  color: var(--communication-coaching-adjective-ratings-competent-text);
+}
+
+/* Club headers site national team header max res.
+ * controls size/placement; sets spacing around/inside the element.
+ * Source rule 1660.
+ */
+.club-headers-site-national-team-header-max-res {
+  width: 100%;
+  height: 166px;
+  justify-content: center;
+  align-items: center;
+  padding-right: 24px;
+  padding-left: 24px;
+  padding-top: 12px;
+}
+
+/* Club highlighted personnel card status background 1.
+ * sets the background fill.
+ * Shared rule for 2 selectors. Editing a declaration here affects the whole group below.
+ * Source rule 1661.
+ */
+.club-highlighted-personnel-card-status-background-1 {
+  background-color: var(--communication-coaching-adjective-ratings-competent-surface);
+}
+
+/* Club highlighted personnel card status background 2.
+ * sets the background fill.
+ * Source rule 1662.
+ */
+.club-highlighted-personnel-card-status-background-2 {
+  background-color: var(--communication-coaching-adjective-ratings-good-surface);
+}
+
+/* Club highlighted personnel card status background 3.
+ * sets the background fill.
+ * Source rule 1663.
+ */
+.club-highlighted-personnel-card-status-background-3 {
+  background-color: var(--communication-coaching-adjective-ratings-elite-surface);
+}
+
+/* Club highlighted personnel card status text 1.
+ * Changes text/foreground colour.
+ * Source rule 1664.
+ */
+.club-highlighted-personnel-card-status-text-1 {
+  color: var(--favoured-personnel-at-club-status-favoured);
+}
+
+/* Club highlighted personnel card status text 2.
+ * Changes text/foreground colour.
+ * Source rule 1665.
+ */
+.club-highlighted-personnel-card-status-text-2 {
+  color: var(--favoured-personnel-at-club-status-icon);
+}
+
+/* Club highlighted personnel card status text 3.
+ * Changes text/foreground colour.
+ * Shared rule for 2 selectors. Editing a declaration here affects the whole group below.
+ * Source rule 1666.
+ */
+.club-highlighted-personnel-card-status-text-3,
+.training-improvement-superb-color {
+  color: var(--favoured-personnel-at-club-status-legend);
+}
+
+/* Club icon 24px.
+ * controls size/placement; sets spacing around/inside the element.
+ * Source rule 1667.
+ */
+.club-icon-24px {
+  width: 24px;
+  height: 24px;
+  justify-content: center;
+  align-items: center;
+  margin-right: var(--global-gap-close);
+}
+
+/* Club icon small.
+ * controls size/placement; sets spacing around/inside the element.
+ * Source rule 1668.
+ */
+.club-icon-small {
+  width: 16px;
+  height: 16px;
+  justify-content: center;
+  align-items: center;
+  margin-right: var(--global-gap-close);
+}
+
+/* Club icon small new.
+ * controls size/placement; sets spacing around/inside the element.
+ * Source rule 1669.
+ */
+.club-icon-small-new {
+  width: 14px;
+  height: 14px;
+  justify-content: center;
+  align-items: center;
+  margin-right: var(--global-gap-close);
+}
+
+/* Club icon xlarge 48px.
+ * controls size/placement.
+ * Source rule 1670.
+ */
+.club-icon-xlarge-48px {
+  width: 48px;
+  height: 48px;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Club info header.
+ * sets the outline/corner shape.
+ * Source rule 1671.
+ */
+.club-info-header {
+  border-top-left-radius: var(--global-radius-large);
+  border-top-right-radius: var(--global-radius-large);
+}
+
+/* Club nation team info banner.
+ * sets the outline/corner shape; controls size/placement; sets spacing around/inside the element.
+ * Source rule 1672.
+ */
+.club-nation-team-info-banner {
+  border-width: var(--skin-card-border-width);
+  border-color: var(--skin-card-border-colour);
+  flex-grow: 0;
+  align-self: stretch;
+  border-radius: var(--global-radius-regular);
+  margin-bottom: var(--global-gap-extra-large);
+}
+
+/* Club nation team info banner background.
+ * sets the background fill.
+ * Source rule 1673.
+ */
+.club-nation-team-info-banner-background {
+  background-color: var(--club-nation-info-badge-background);
+}
+
+/* Club nation team info next fixture comp container.
+ * sets the background fill; sets the outline/corner shape; controls size/placement; sets spacing
+ * around/inside the element.
+ * Source rule 1674.
+ */
+.club-nation-team-info-next-fixture-comp-container {
+  height: var(--interaction-global-height-xs);
+  background-color: var(--skin-surface-panel);
+  align-self: stretch;
+  padding-top: var(--global-padding-extra-small);
+  padding-bottom: var(--global-padding-extra-small);
+  border-radius: var(--global-radius-small);
+}
+
+/* Club nation team info next fixture container.
+ * sets the background fill; sets the outline/corner shape; controls size/placement; sets spacing
+ * around/inside the element.
+ * Source rule 1675.
+ */
+.club-nation-team-info-next-fixture-container {
+  padding: var(--global-padding-regular);
+  background-color: var(--skin-surface-panel);
+  align-self: stretch;
+  border-radius: var(--global-radius-small);
+}
+
+/* Club radio button bg.
+ * sets the background fill; sets the outline/corner shape; controls size/placement.
+ * Source rule 1676.
+ */
+.club-radio-button-bg {
+  width: 100%;
+  border-width: 1px;
+  border-color: var(--skin-border-subtle);
+  background-color: var(--skin-transparent);
+  flex-direction: column;
+  align-items: var(--flex-start-normal);
+  border-radius: var(--numbers-border-radius-small);
+}
+
+/* Club screen board vision.
+ * controls size/placement.
+ * Shared rule for 3 selectors. Editing a declaration here affects the whole group below.
+ * Source rule 1677.
+ */
+.club-screen-board-vision,
+.club-screen-staff,
+.manager-creation-manager-rt {
+  width: 50%;
+  height: 100%;
+}
+
+/* Club selection button.
+ * sets the background fill; sets the outline/corner shape; controls size/placement.
+ * Source rule 1678.
+ */
+.club-selection-button {
+  background-color: var(--skin-surface-page);
+  border-radius: var(--global-radius-small);
+  overflow: hidden;
+  flex-grow: 1;
+}
+
+/* Club selection team name.
+ * sets font/text presentation; controls size/placement.
+ * Source rule 1679.
+ */
+.club-selection-team-name {
+  width: 216px;
+  height: 36px;
+  min-width: 216px;
+  min-height: 36px;
+  max-width: 216px;
+  max-height: 36px;
+  white-space: normal;
+}
+
+/* Club selector preset button — pointer hover.
+ * sets the background fill.
+ * Shared rule for 3 selectors. Editing a declaration here affects the whole group below.
+ * Source rule 1680.
+ */
+.club-selector-preset-button:hover,
+.virtualised-list__item--selected:hover > .club-selector-preset-button,
+.virtualised-list__item--selected .club-selector-preset-button {
+  background-color: var(--skin-control-hover);
+}
+
+/* Club vision background colour default.
+ * sets the background fill.
+ * Shared rule for 2 selectors. Editing a declaration here affects the whole group below.
+ * Source rule 1681.
+ */
+.club-vision-background-colour-default,
+.fitness-test-result-background-colour-tbc {
+  background-color: var(--skin-on-media-alpha-16);
+}
+
+/* Club vision background colour negative.
+ * sets the background fill.
+ * Source rule 1682.
+ */
+.club-vision-background-colour-negative {
+  background-color: var(--skin-component-club-vision-background-colour-negative-background);
+}
+
+/* Club vision background colour negative.
+ * sets the background fill.
+ * Source rule 1682.
+ */
+.fitness-test-result-background-colour-fail {
+  background-color: var(--skin-component-fitness-test-result-background-colour-fail-background);
+}
+
+/* Club vision background colour neutral.
+ * sets the background fill.
+ * Source rule 1683.
+ */
+.club-vision-background-colour-neutral {
+  background-color: var(--skin-component-club-vision-background-colour-neutral-background);
+}
+
+/* Club vision background colour positive.
+ * sets the background fill.
+ * Source rule 1684.
+ */
+.club-vision-background-colour-positive {
+  background-color: var(--skin-component-club-vision-background-colour-positive-background);
+}
+
+/* Club vision background colour positive.
+ * sets the background fill.
+ * Source rule 1684.
+ */
+.fitness-test-result-background-colour-pass {
+  background-color: var(--skin-component-fitness-test-result-background-colour-pass-background);
+}
+
+/* Club vision background colour progress.
+ * sets the background fill.
+ * Source rule 1685.
+ */
+.club-vision-background-colour-progress {
+  background-color: var(--skin-component-club-vision-background-colour-progress-background);
+}
+
+/* Club vision background colour slightly negative.
+ * sets the background fill.
+ * Source rule 1686.
+ */
+.club-vision-background-colour-slightly-negative {
+  background-color: var(--skin-component-club-vision-background-colour-slightly-negative-background);
+}
+
+/* Club vision background colour slightly positive.
+ * sets the background fill.
+ * Source rule 1687.
+ */
+.club-vision-background-colour-slightly-positive {
+  background-color: var(--skin-component-club-vision-background-colour-slightly-positive-background);
+}
+
+/* Club vision card states board vision.
+ * sets the background fill; sets the outline/corner shape; controls size/placement; sets spacing
+ * around/inside the element.
+ * Source rule 1688.
+ */
+.club-vision-card-states-board-vision {
+  padding: 16px;
+  border-width: var(--layout-modules-block-border-thickness);
+  border-color: var(--skin-border-subtle);
+  background-color: var(--skin-surface-panel);
+  flex-direction: column;
+  align-items: flex-start;
+  border-radius: var(--layout-modules-block-radius);
+}
+
+/* Club vision continue.
+ * controls size/placement.
+ * Source rule 1689.
+ */
+.club-vision-continue {
+  position: absolute;
+  width: 208px;
+  height: 44px;
+  top: 0;
+  left: 0;
+  overflow: visible;
+}
+
+/* Club vision continue gradient.
+ * controls size/placement.
+ * Source rule 1690.
+ */
+.club-vision-continue-gradient {
+  width: 208px;
+  height: 44px;
+  overflow: visible;
+  flex-shrink: 0;
+}
+
+/* Club vision objective progress container.
+ * sets the outline/corner shape; controls size/placement; sets spacing around/inside the element.
+ * Source rule 1691.
+ */
+.club-vision-objective-progress-container {
+  height: 28px;
+  align-self: center;
+  flex-direction: var(--row-direction-normal);
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+  border-bottom-left-radius: 15px;
+  border-top-width: 1px;
+  border-right-width: 1px;
+  border-bottom-width: 1px;
+  border-left-width: 1px;
+  border-left-color: var(--skin-on-media-alpha-08);
+  border-right-color: var(--skin-on-media-alpha-08);
+  border-top-color: var(--skin-on-media-alpha-08);
+  border-bottom-color: var(--skin-on-media-alpha-08);
+  padding-right: 8px;
+  padding-left: 8px;
+}
+
+/* Club vision tab buttons.
+ * sets spacing around/inside the element.
+ * Source rule 1692.
+ */
+.club-vision-tab-buttons {
+  padding: 0;
+  margin-top: var(--global-gap-seperation);
+  margin-bottom: var(--global-gap-seperation);
+  margin-left: var(--none);
+  margin-right: var(--none);
+}
+
+/* Club vision text colour neutral.
+ * Changes text/foreground colour.
+ * Shared rule for 7 selectors. Editing a declaration here affects the whole group below.
+ * Source rule 1693.
+ */
+.club-vision-text-colour-neutral,
+.fitness-test-result-text-colour-partial-pass,
+.player-interest-yellow,
+.squad-dynamics-pro-con-neutral-text,
+.transfer-overview-restrict-text,
+.relationship-with-you-text-colour-distant,
+.happiness-happy-text-colour {
+  color: var(--colours-base-yellow-soft);
+}
+
+/* Club vision text colour slightly negative.
+ * Changes text/foreground colour.
+ * Shared rule for 5 selectors. Editing a declaration here affects the whole group below.
+ * Source rule 1694.
+ */
+.club-vision-text-colour-slightly-negative,
+.player-interest-orange,
+.relationship-with-you-text-colour-adversary,
+.happiness-unhappy-text-colour,
+.colours-base-orange-soft {
+  color: var(--colours-base-orange-soft);
+}
+
+/* Club vision text colour slightly positive.
+ * Changes text/foreground colour.
+ * Shared rule for 4 selectors. Editing a declaration here affects the whole group below.
+ * Source rule 1695.
+ */
+.club-vision-text-colour-slightly-positive,
+.player-interest-lime,
+.relationship-with-you-text-colour-acquaintance,
+.happiness-very-happy-text-colour {
+  color: var(--colours-base-lime-soft);
+}
+
+/* Clubcolours border.
+ * sets the outline/corner shape; controls size/placement.
+ * Source rule 1696.
+ */
+.clubcolours-border {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-color: var(--skin-on-media-alpha-35);
+  top: 0;
+  left: 0;
+  border-top-width: 1px;
+  border-right-width: 1px;
+  border-bottom-width: 1px;
+  border-left-width: 0;
+  border-radius: 0 var(--skin-radius-micro) var(--skin-radius-micro) 0;
+}
+
+/* Club Player Staff
+ * Native club player staff selectors, with adjacent shared rules in source order.
+ */
+
+/* Injury risk background colour high.
+ * sets the background fill.
+ * Source rule 2498.
+ */
+.injury-risk-background-colour-high {
+  background-color: var(--skin-medical-risk-high-background);
+}
+
+/* Injury risk background colour increased.
+ * sets the background fill.
+ * Shared rule for 2 selectors. Editing a declaration here affects the whole group below.
+ * Source rule 2499.
+ */
+.injury-risk-background-colour-increased,
+.team-comparison-rating-below-average {
+  background-color: var(--colours-linear-scale-strong-3-alpha-16);
+}
+
+/* Injury risk background colour none.
+ * sets the background fill.
+ * Source rule 2500.
+ */
+.injury-risk-background-colour-none {
+  background-color: var(--skin-data-injury-risk-background-colour-none-background);
+}
+
+/* Injury risk background colour normal.
+ * sets the background fill.
+ * Source rule 2501.
+ */
+.injury-risk-background-colour-normal {
+  background-color: var(--colours-linear-scale-strong-6-alpha-16);
+}
+
+/* Progress bar value.
+ * sets the background fill.
+ * Shared rule for 7 selectors. Editing a declaration here affects the whole group below.
+ * Source rule 2502.
+ */
+.injury-risk-none-progress > .progress-bar-value,
+.injury-risk-normal-progress > .progress-bar-value,
+.injury-susceptibility-average-progress > .progress-bar-value,
+.pagination-page-marker-ellipse-selected,
+.player_position_dropdown .micro-pitch-tactics .not-gk,
+.training-load-medium-progress,
+.nav-on-dark .calendar-widget-time-container {
+  background-color: var(--colours-base-neutral-white);
+}
+
+/* Injury risk siradialgauge colour high.
+ * supplies local values read by the component styling.
+ * Source rule 2503.
+ */
+.injury-risk-siradialgauge-colour-high {
+  --current-colour: var(--colours-linear-scale-strong-2);
+}
+
+/* Injury risk siradialgauge colour increased.
+ * supplies local values read by the component styling.
+ * Source rule 2504.
+ */
+.injury-risk-siradialgauge-colour-increased {
+  --current-colour: var(--colours-linear-scale-strong-3);
+}
+
+/* Injury risk siradialgauge colour low.
+ * supplies local values read by the component styling.
+ * Source rule 2505.
+ */
+.injury-risk-siradialgauge-colour-low {
+  --current-colour: var(--colours-linear-scale-strong-5);
+}
+
+/* Injury risk siradialgauge colour none.
+ * supplies local values read by the component styling.
+ * Source rule 2506.
+ */
+.injury-risk-siradialgauge-colour-none {
+  --current-colour: var(--skin-data-injury-risk-siradialgauge-colour-none-current-colour);
+}
+
+/* Injury risk siradialgauge colour normal.
+ * supplies local values read by the component styling.
+ * Source rule 2507.
+ */
+.injury-risk-siradialgauge-colour-normal {
+  --current-colour: var(--colours-linear-scale-strong-6);
+}
+
+/* Injury risk siradialgauge colour very high.
+ * supplies local values read by the component styling.
+ * Source rule 2508.
+ */
+.injury-risk-siradialgauge-colour-very-high {
+  --current-colour: var(--colours-linear-scale-strong-1);
+}
+
+/* Injury risk text colour none.
+ * Changes text/foreground colour.
+ * Source rule 2509.
+ */
+.injury-risk-text-colour-none {
+  color: var(--skin-data-injury-risk-text-colour-none-foreground);
+}
+
+/* Injury severity background image colour major.
+ * tints background artwork.
+ * Shared rule for 3 selectors. Editing a declaration here affects the whole group below.
+ * Source rule 2510.
+ */
+.injury-severity-background-image-colour-major,
+.injury-severity-image-colour-major,
+.training-review-extra-curricular {
+  -unity-background-image-tint-color: var(--colours-base-red-strong);
+}
+
+/* Injury severity background image colour minor.
+ * tints background artwork.
+ * Shared rule for 5 selectors. Editing a declaration here affects the whole group below.
+ * Source rule 2511.
+ */
+.injury-severity-background-image-colour-minor,
+.injury-severity-image-colour-minor,
+.injury-severity-background-image-colour-moderate,
+.injury-severity-image-colour-moderate,
+.training-review-physical-and-recovery {
+  -unity-background-image-tint-color: var(--colours-base-yellow-strong);
+}
+
+/* Injury severity background image colour slight.
+ * tints background artwork.
+ * Shared rule for 4 selectors. Editing a declaration here affects the whole group below.
+ * Source rule 2512.
+ */
+.injury-severity-background-image-colour-slight,
+.injury-severity-image-colour-slight,
+.speech-tail-reply-colour,
+.player_position-md-tint {
+  -unity-background-image-tint-color: var(--colours-base-blue-strong);
+}
+
+/* Injury severity image colour recurring.
+ * tints background artwork.
+ * Shared rule for 2 selectors. Editing a declaration here affects the whole group below.
+ * Source rule 2513.
+ */
+.injury-severity-image-colour-recurring,
+.training-review-tactical-understanding {
+  -unity-background-image-tint-color: var(--colours-base-purple-strong);
+}
+
+/* Injury severity stepper.
+ * controls size/placement.
+ * Shared rule for 2 selectors. Editing a declaration here affects the whole group below.
+ * Source rule 2514.
+ */
+.injury-severity-stepper,
+.si-input-stepper__step-display {
+  width: 68px;
+  height: 4px;
+}
+
+/* Injury severity stepper major colour.
+ * sets the background fill.
+ * Source rule 2515.
+ */
+.injury-severity-stepper-major-colour {
+  background-color: var(--status-linear-4-values-strong-1);
+}
+
+/* Injury severity stepper minor colour.
+ * sets the background fill.
+ * Source rule 2516.
+ */
+.injury-severity-stepper-minor-colour {
+  background-color: var(--status-linear-4-values-strong-3);
+}
+
+/* Injury severity stepper moderate colour.
+ * sets the background fill.
+ * Source rule 2517.
+ */
+.injury-severity-stepper-moderate-colour {
+  background-color: var(--status-linear-4-values-strong-2);
+}
+
+/* Injury severity stepper slight colour.
+ * sets the background fill.
+ * Shared rule for 3 selectors. Editing a declaration here affects the whole group below.
+ * Source rule 2518.
+ */
+.injury-severity-stepper-slight-colour,
+.sponsor-training,
+.transfer-offer-colour-bonus {
+  background-color: var(--colours-base-blue-strong);
+}
+
+/* Progress bar value.
+ * sets the background fill.
+ * Shared rule for 2 selectors. Editing a declaration here affects the whole group below.
+ * Source rule 2519.
+ */
+.injury-susceptibility-above-average-progress > .progress-bar-value,
+.data_display-graphs-stepper-step_indicator-type-checked-size-small-above-average {
+  background-color: var(--linear-ranges-6-values-3);
+}
+
+/* Injury susceptibility above average text.
+ * Changes text/foreground colour.
+ * Shared rule for 2 selectors. Editing a declaration here affects the whole group below.
+ * Source rule 2520.
+ */
+.injury-susceptibility-above-average-text,
+.youth-development-squad-strength-average-text {
+  color: var(--linear-ranges-6-values-3);
+}
+
+/* Progress bar value.
+ * sets the background fill.
+ * Shared rule for 2 selectors. Editing a declaration here affects the whole group below.
+ * Source rule 2521.
+ */
+.injury-susceptibility-below-average-progress > .progress-bar-value,
+.data_display-graphs-stepper-step_indicator-type-checked-size-small-below-average {
+  background-color: var(--linear-ranges-6-values-4);
+}
+
+/* Injury susceptibility below average text.
+ * Changes text/foreground colour.
+ * Shared rule for 2 selectors. Editing a declaration here affects the whole group below.
+ * Source rule 2522.
+ */
+.injury-susceptibility-below-average-text,
+.youth-development-squad-strength-strong-text {
+  color: var(--linear-ranges-6-values-4);
+}
+
+/* Progress bar value.
+ * sets the background fill.
+ * Shared rule for 2 selectors. Editing a declaration here affects the whole group below.
+ * Source rule 2523.
+ */
+.injury-susceptibility-high-progress > .progress-bar-value,
+.data_display-graphs-stepper-step_indicator-type-checked-size-small-high {
+  background-color: var(--linear-ranges-6-values-2);
+}
+
+/* Injury susceptibility high text.
+ * Changes text/foreground colour.
+ * Shared rule for 2 selectors. Editing a declaration here affects the whole group below.
+ * Source rule 2524.
+ */
+.injury-susceptibility-high-text,
+.youth-development-squad-strength-below-average-text {
+  color: var(--linear-ranges-6-values-2);
+}
+
+/* Progress bar value.
+ * sets the background fill.
+ * Shared rule for 2 selectors. Editing a declaration here affects the whole group below.
+ * Source rule 2525.
+ */
+.injury-susceptibility-low-progress > .progress-bar-value,
+.data_display-graphs-stepper-step_indicator-type-checked-size-small-low {
+  background-color: var(--linear-ranges-6-values-5);
+}
+
+/* Injury susceptibility low text.
+ * Changes text/foreground colour.
+ * Shared rule for 2 selectors. Editing a declaration here affects the whole group below.
+ * Source rule 2526.
+ */
+.injury-susceptibility-low-text,
+.youth-development-squad-strength-very-strong-text {
+  color: var(--linear-ranges-6-values-5);
+}
+
+/* Progress bar value.
+ * sets the background fill.
+ * Shared rule for 2 selectors. Editing a declaration here affects the whole group below.
+ * Source rule 2527.
+ */
+.injury-susceptibility-very-high-progress > .progress-bar-value,
+.data_display-graphs-stepper-step_indicator-type-checked-size-small-very-high {
+  background-color: var(--linear-ranges-6-values-1);
+}
+
+/* Injury susceptibility very high text.
+ * Changes text/foreground colour.
+ * Source rule 2528.
+ */
+.injury-susceptibility-very-high-text {
+  color: var(--linear-ranges-6-values-1);
+}
+
+/* Progress bar value.
+ * sets the background fill.
+ * Shared rule for 2 selectors. Editing a declaration here affects the whole group below.
+ * Source rule 2529.
+ */
+.injury-susceptibility-very-low-progress > .progress-bar-value,
+.data_display-graphs-stepper-step_indicator-type-checked-size-small-very-low {
+  background-color: var(--linear-ranges-6-values-6);
+}
+
+/* Injury susceptibility very low text.
+ * Changes text/foreground colour.
+ * Shared rule for 2 selectors. Editing a declaration here affects the whole group below.
+ * Source rule 2530.
+ */
+.injury-susceptibility-very-low-text,
+.youth-development-squad-strength-amazing-text {
+  color: var(--linear-ranges-6-values-6);
+}
+
+/* Club Player Staff
+ * Native club player staff selectors, with adjacent shared rules in source order.
+ */
+
+/* Manager accessories side button toggle container.
+ * controls size/placement; sets spacing around/inside the element.
+ * Source rule 2749.
+ */
+.manager-accessories-side-button-toggle-container {
+  height: 16px;
+  align-self: stretch;
+  flex-shrink: 0;
+  margin-bottom: 12px;
+}
+
+/* Unity radio button checkmark background.
+ * Shows these elements; sets the outline/corner shape.
+ * Shared rule for 4 selectors. Editing a declaration here affects the whole group below.
+ * Source rule 2750.
+ */
+.manager-background-highest-level-radiogroup .unity-radio-button__checkmark-background,
+.manager-background-nonplaying-career-radiogroup .unity-radio-button__checkmark-background,
+.manager-creation-color-button--selected .manager-creation-color-button-checkbox,
+.manager-creation-mobile-grid-button-selected .manager-creation-mobile-grid-button-checkmark {
+  display: flex;
+  border-width: 3px;
+  border-color: var(--skin-radio-ring-foreground);
+  border-radius: 3px;
+}
+
+/* Sicontainer horizontal align.
+ * sets font/text presentation; controls size/placement.
+ * Source rule 2751.
+ */
+.manager-background-phone-radio-group .sicontainer_horizontal_align {
+  width: 100%;
+  -unity-font-style: var(--typography-weight-regular);
+}
+
+/* Unity radio button container.
+ * controls size/placement.
+ * Source rule 2752.
+ */
+.manager-background-phone-radio-group .unity-radio-button__container {
+  width: 100%;
+  align-self: center;
+}
+
+/* Manager coaching badge radiobutton.
+ * sets spacing around/inside the element.
+ * Source rule 2753.
+ */
+.manager-coaching-badge-radio-group .manager-coaching-badge-radiobutton {
+  margin-right: var(--global-gap-distant);
+}
+
+/* Unity radio button input.
+ * sets spacing around/inside the element.
+ * Source rule 2754.
+ */
+.manager-coaching-badge-radio-group .unity-radio-button__input {
+  margin-left: var(--global-gap-distant);
+}
+
+/* Manager coaching badge radiobutton.
+ * sets the background fill; sets the outline/corner shape; controls size/placement.
+ * Source rule 2755.
+ */
+.manager-coaching-badge-radiobutton {
+  border-width: 1px;
+  border-color: var(--skin-border-subtle);
+  background-color: var(--skin-transparent);
+  flex-direction: var(--row-direction-normal);
+  flex-wrap: nowrap;
+  overflow: hidden;
+  border-radius: var(--numbers-border-radius-small);
+}
+
+/* Manager creation accessory selection container.
+ * sets the background fill; sets the outline/corner shape; controls size/placement; sets spacing
+ * around/inside the element.
+ * Source rule 2756.
+ */
+.manager-creation-accessory-selection-container {
+  width: 676px;
+  padding: 32px;
+  border-width: 2px;
+  border-color: var(--skin-border-default);
+  background-color: var(--skin-surface-panel);
+  border-radius: var(--skin-radius-medium);
+  flex-shrink: 0;
+}
+
+/* Manager creation appearance preview phone.
+ * controls size/placement; sets spacing around/inside the element.
+ * Source rule 2757.
+ */
+.manager-creation-appearance-preview-phone {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  flex-shrink: 0;
+  flex-grow: 1;
+  padding-bottom: 50px;
+  padding-right: 50px;
+  left: 100px;
+}
+
+/* Manager creation bottom bar phone.
+ * sets the background fill; controls size/placement; sets spacing around/inside the element.
+ * Source rule 2758.
+ */
+.manager-creation-bottom-bar-phone {
+  background-color: var(--skin-surface-canvas-alpha-85);
+  min-height: 64px;
+  align-items: center;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  justify-content: space-between;
+  flex-direction: var(--row-direction-normal);
+}
+
+/* Manager creation color button.
+ * sets the outline/corner shape.
+ * Source rule 2759.
+ */
+.manager-creation-color-button {
+  border-width: 0.1px;
+  border-color: var(--skin-on-media-alpha-20);
+  border-radius: var(--skin-radius-small);
+}
+
+/* Manager creation color button.
+ * sets the outline/corner shape.
+ * Source rule 2760.
+ */
+.manager-creation-color-button--selected .manager-creation-color-button {
+  border-width: 2px;
+  border-color: var(--colours-base-neutral-white);
+  border-radius: 5px;
+}
+
+/* Manager creation colour remap button.
+ * sets the background fill; sets spacing around/inside the element.
+ * Source rule 2761.
+ */
+.manager-creation-colour-remap-button {
+  margin: 0;
+  padding: var(--global-padding-regular) var(--global-padding-regular) 0 0;
+  background-color: var(--skin-transparent);
+}
+
+/* Manager creation dropdown role options.
+ * controls size/placement.
+ * Source rule 2762.
+ */
+.manager-creation-dropdown-role-options {
+  width: 250px;
+  min-width: 250px;
+  max-width: 250px;
+}
+
+/* Manager creation eye patch selection container.
+ * sets the background fill; sets the outline/corner shape; controls size/placement; sets spacing
+ * around/inside the element.
+ * Source rule 2763.
+ */
+.manager-creation-eye-patch-selection-container {
+  background-color: var(--skin-surface-panel);
+  border-top-left-radius: var(--skin-radius-medium);
+  border-top-right-radius: var(--skin-radius-medium);
+  border-bottom-right-radius: var(--skin-radius-medium);
+  border-bottom-left-radius: var(--skin-radius-medium);
+  border-top-width: 2px;
+  border-right-width: 2px;
+  border-bottom-width: 2px;
+  border-left-width: 2px;
+  border-left-color: var(--skin-border-default);
+  border-right-color: var(--skin-border-default);
+  border-top-color: var(--skin-border-default);
+  border-bottom-color: var(--skin-border-default);
+  padding-top: 30px;
+  padding-bottom: 30px;
+  flex-shrink: 0;
+}
+
+/* Manager creation face sculpt dropdown active false.
+ * Changes text/foreground colour; sets the background fill; sets the outline/corner shape; controls
+ * size/placement.
+ * Source rule 2764.
+ */
+.manager-creation-face-sculpt-dropdown--active-false {
+  padding: var(--spacing-new-ex) var(--spacing-tiles);
+  border-width: 2px;
+  background-color: var(--skin-transparent);
+  color: var(--skin-text-secondary);
+  justify-content: center;
+  align-items: center;
+  flex-direction: var(--row-direction-normal);
+  border-bottom-color: var(--skin-transparent);
+  border-left-color: var(--skin-transparent);
+  border-right-color: var(--skin-transparent);
+  border-top-color: var(--skin-transparent);
+}
+
+/* Manager creation face sculpt dropdown active true.
+ * Changes text/foreground colour; sets the background fill; sets the outline/corner shape; controls
+ * size/placement.
+ * Source rule 2765.
+ */
+.manager-creation-face-sculpt-dropdown--active-true {
+  padding: var(--spacing-new-ex) var(--spacing-tiles);
+  border-width: 2px;
+  background-color: var(--skin-transparent);
+  justify-content: center;
+  align-items: center;
+  border-left-color: var(--skin-transparent);
+  border-right-color: var(--skin-transparent);
+  border-top-color: var(--skin-transparent);
+  border-bottom-color: var(--colours-base-neutral-white);
+  flex-direction: var(--row-direction-normal);
+}
+
+/* Manager creation height radio button element.
+ * sets the outline/corner shape; controls size/placement; sets spacing around/inside the element.
+ * Source rule 2766.
+ */
+.manager-creation-height-radio-button-element {
+  border-width: 0;
+  flex-direction: var(--row-direction-normal);
+  flex-wrap: nowrap;
+  margin-right: var(--global-gap-seperation);
+  padding-right: var(--global-gap-close);
+}
+
+/* Unity radio button input.
+ * controls size/placement.
+ * Source rule 2767.
+ */
+.manager-creation-height-unit .unity-radio-button > .unity-radio-button__input {
+  flex-grow: 1;
+  flex-shrink: 0;
+}
+
+/* Unity radio button group child active.
+ * sets the background fill; sets the outline/corner shape.
+ * Shared rule for 2 selectors. Editing a declaration here affects the whole group below.
+ * Source rule 2768.
+ */
+.manager-creation-height-unit .unity-radio-button-group__child-active,
+.transfer-interest-radio-button-phone .unity-radio-button-group__child-active {
+  border-color: var(--skin-transparent);
+  background-color: var(--skin-transparent);
+}
+
+/* Manager creation lhs panel.
+ * controls size/placement.
+ * Source rule 2769.
+ */
+.manager-creation-lhs-panel {
+  width: 71%;
+}
+
+/* Manager creation lhs panel min res.
+ * controls size/placement.
+ * Source rule 2770.
+ */
+.manager-creation-lhs-panel-min-res {
+  width: 66%;
+}
+
+/* Manager creation main interaction panel.
+ * controls size/placement; sets spacing around/inside the element.
+ * Source rule 2771.
+ */
+.manager-creation-main-interaction-panel {
+  flex-grow: 1;
+  flex-direction: var(--row-direction-normal);
+  padding-top: var(--spacing-large---32);
+  padding-right: var(--spacing-extra-large---64);
+  padding-bottom: var(--spacing-large---32);
+  padding-left: var(--spacing-extra-large---64);
+}
+
+/* Manager creation manager frame.
+ * controls size/placement; sets spacing around/inside the element.
+ * Source rule 2772.
+ */
+.manager-creation-manager-frame {
+  flex-grow: 1;
+  margin-left: var(--spacing-medium---16);
+  min-width: 29%;
+}
+
+/* Manager creation menu text element.
+ * sets font/text presentation.
+ * Source rule 2773.
+ */
+.manager-creation-menu .enabled-sub-menu .manager-creation-menu-text-element {
+  font-size: var(--typography-size-14);
+  -unity-font-style: var(--typography-weight-regular);
+}
+
+/* Sigradient.
+ * sets the gradient colours drawn by this component.
+ * Shared rule for 3 selectors. Editing a declaration here affects the whole group below.
+ * Source rule 2774.
+ */
+.manager-creation-menu .enabled-sub-menu .sigradient,
+.manager-creation-menu .menu-element .sigradient,
+.messages-optional-gradient {
+  --start-colour: var(--none);
+  --end-colour: var(--none);
+}
+
+/* Manager creation menu text element.
+ * sets font/text presentation.
+ * Source rule 2775.
+ */
+.manager-creation-menu .enabled-sub-menu .virtualised-list__item--selected .manager-creation-menu-text-element {
+  font-size: var(--typography-size-14);
+  -unity-font-style: var(--typography-weight-bold);
+}
+
+/* Sigradient.
+ * sets the gradient colours drawn by this component.
+ * Source rule 2776.
+ */
+.manager-creation-menu .enabled-sub-menu .virtualised-list__item--selected .sigradient {
+  --start-colour: var(--skin-component-manager-creation-menu-enabled-sub-menu-virtualised-list-item-selected-sigradient-start-colour);
+  --end-colour: var(--skin-component-manager-creation-menu-enabled-sub-menu-virtualised-list-item-selected-sigradient-end-colour);
+}
+
+/* Sigradient.
+ * sets the gradient colours drawn by this component.
+ * Shared rule for 2 selectors. Editing a declaration here affects the whole group below.
+ * Source rule 2776.
+ */
+.manager-creation-menu .virtualised-list__item--selected > .list-element-wrapper > .streamed-object-list-item .switch-element > #root > .sigradient,
+.manager-creation-menu .virtualised-list__item--selected > .list-element-wrapper > .streamed-object-list-item .switch-element > #LapelVisible > #root > .sigradient {
+  --start-colour: var(--skin-component-manager-creation-menu-virtualised-list-item-selected-list-element-wrapper-streamed-object-list-item-switch-element--start-colour);
+  --end-colour: var(--skin-component-manager-creation-menu-virtualised-list-item-selected-list-element-wrapper-streamed-object-list-item-switch-element--end-colour);
+}
+
+/* Menu element.
+ * controls size/placement; sets spacing around/inside the element.
+ * Source rule 2777.
+ */
+.manager-creation-menu .menu-element {
+  padding: 0;
+  align-self: stretch;
+}
+
+/* Manager creation menu option border.
+ * sets the outline/corner shape.
+ * Source rule 2778.
+ */
+.manager-creation-menu-option-border {
+  border-radius: var(--global-radius-small);
+  overflow: hidden;
+}
+
+/* Manager creation menu option selection border.
+ * Hides these elements; sets the background fill; sets the outline/corner shape; controls size/placement.
+ * Source rule 2779.
+ */
+.manager-creation-menu-option-selection-border {
+  position: relative;
+  display: none;
+  width: 8px;
+  height: 40px;
+  background-color: var(--skin-action-primary-background);
+  flex-shrink: 0;
+  border-radius: var(--global-radius-small);
+}
+
+/* Manager creation menu text block.
+ * sets the background fill; controls size/placement; sets spacing around/inside the element; chooses the
+ * pointer and hotspot.
+ * Source rule 2780.
+ */
+.manager-creation-menu-text-block {
+  height: 40px;
+  padding: var(--global-padding-regular) var(--global-padding-extra-large);
+  background-color: var(--skin-control-background);
+  align-items: center;
+  flex-grow: 1;
+  cursor: var(--cursor-clickable-1x-url) var(--cursor-clickable-1x-hotspot-x) var(--cursor-clickable-1x-hotspot-y);
+}
+
+/* Manager creation menu text block — pointer hover.
+ * sets the background fill.
+ * Shared rule for 4 selectors. Editing a declaration here affects the whole group below.
+ * Source rule 2781.
+ */
+.manager-creation-menu-text-block:hover,
+.navigation-identity-entity-selector-default-switch-type-nation:hover,
+.buttons-button-base-soft:hover,
+.tactics-collapsable-pitch-header-button-group .buttongroup__button:hover {
+  background-color: var(--skin-control-hover);
+}
+
+/* Manager creation mobile grid button.
+ * Changes text/foreground colour; sets the outline/corner shape; sets font/text presentation; sets spacing
+ * around/inside the element.
+ * Source rule 2782.
+ */
+.manager-creation-mobile-grid-button {
+  border-width: 1px;
+  border-color: var(--skin-on-media-alpha-20);
+  color: var(--skin-text-primary);
+  font-size: var(--typography-size-14);
+  -unity-font-definition: var(--skin-font-body);
+  border-radius: var(--skin-radius-control);
+  overflow: hidden;
+  margin-right: 6px;
+  margin-top: 8px;
+  padding-top: 10px;
+  padding-right: 10px;
+  padding-bottom: 10px;
+  padding-left: 10px;
+}
+
+/* Manager creation mobile grid button checkmark background.
+ * sets the outline/corner shape.
+ * Source rule 2783.
+ */
+.manager-creation-mobile-grid-button-checkmark-background {
+  border-width: 1px;
+  border-color: var(--skin-on-media-alpha-20);
+  border-radius: 8px;
+}
+
+/* Manager creation mobile grid button checkmark background.
+ * sets the outline/corner shape.
+ * Source rule 2784.
+ */
+.manager-creation-mobile-grid-button-selected .manager-creation-mobile-grid-button-checkmark-background {
+  border-width: 2px;
+  border-color: var(--colours-base-neutral-white);
+}
+
+/* Manager creation name step screen.
+ * controls size/placement.
+ * Source rule 2785.
+ */
+.manager-creation-name-step-screen {
+  min-height: 1000px;
+}
+
+/* Manager creation option none container.
+ * controls size/placement.
+ * Source rule 2786.
+ */
+.manager-creation-option-none-container {
+  flex-shrink: 0;
+  flex-grow: 1;
+  justify-content: center;
+  align-self: stretch;
+}
+
+/* UI concepts restricted large.
+ * controls size/placement.
+ * Source rule 2787.
+ */
+.manager-creation-option-none-container .ui-concepts-restricted_large {
+  width: 120px;
+  height: 120px;
+  align-self: center;
+}
+
+/* Manager creation option picture container.
+ * controls size/placement.
+ * Source rule 2788.
+ */
+.manager-creation-option-picture-container {
+  width: 188px;
+  height: 188px;
+}
+
+/* Manager creation popups background.
+ * sets the background fill; controls size/placement.
+ * Source rule 2789.
+ */
+.manager-creation-popups-background {
+  background-color: var(--skin-surface-canvas-alpha-70);
+  flex-grow: 1;
+  justify-content: center;
+}
+
+/* Manager creation save reset buttons container.
+ * controls size/placement; sets spacing around/inside the element.
+ * Source rule 2790.
+ */
+.manager-creation-save-reset-buttons-container {
+  padding: 0 40px 28px 40px;
+  flex-shrink: 0;
+  justify-content: space-between;
+}
+
+/* SI dropdown selection field.
+ * sets the background fill; sets the background artwork; sets the outline/corner shape; controls
+ * size/placement.
+ * Source rule 2791.
+ */
+.manager-creation-screen-face-shape-dropdown .si-dropdown__selection-field {
+  margin: 0;
+  padding: 0;
+  border-width: 0;
+  background-color: var(--none);
+  background-image: none;
+  border-radius: 0;
+  align-items: center;
+}
+
+/* Manager creation screen navigation side menu.
+ * controls size/placement; sets spacing around/inside the element.
+ * Source rule 2792.
+ */
+.manager-creation-screen-navigation-side-menu {
+  width: 187px;
+  margin-right: 16px;
+}
+
+/* Unity toggle checkmark.
+ * sets the background fill; tints background artwork; sets the outline/corner shape.
+ * Source rule 2793.
+ */
+.manager-creation-screen-reset-changes-checkbox .unity-toggle__checkmark {
+  border-color: var(--light);
+  background-color: var(--none);
+  border-radius: var(--skin-radius-small);
+  -unity-background-image-tint-color: var(--light);
+}
+
+/* Manager creation screen slider.
+ * controls size/placement.
+ * Source rule 2794.
+ */
+.manager-creation-screen-slider {
+  width: 264px;
+  justify-content: center;
+  align-items: center;
+  flex-direction: var(--row-direction-normal);
+}
+
+/* Sislider dragger.
+ * sets the background fill; sets the outline/corner shape; controls size/placement; sets spacing
+ * around/inside the element.
+ * Source rule 2795.
+ */
+.manager-creation-screen-slider .sislider--dragger {
+  width: 16px;
+  height: 16px;
+  border-width: 2px;
+  border-color: var(--skin-on-media-alpha-35);
+  background-color: var(--skin-range-marker);
+  border-radius: 8px;
+  margin-top: -8px;
+}
+
+/* Sislider tracker.
+ * sets the background fill; sets the outline/corner shape; controls size/placement; sets spacing
+ * around/inside the element.
+ * Source rule 2796.
+ */
+.manager-creation-screen-slider .sislider--tracker {
+  height: 8px;
+  border-color: var(--skin-range-track-border);
+  background-color: var(--skin-range-track-background);
+  border-radius: var(--skin-radius-compact);
+  margin-top: -4px;
+}
+
+/* Manager creation screen slider text.
+ * controls size/placement.
+ * Source rule 2797.
+ */
+.manager-creation-screen-slider-text {
+  width: 24%;
+  flex-shrink: 0;
+  min-width: 96px;
+}
+
+/* Manager creation screen tab group mobile.
+ * sets spacing around/inside the element.
+ * Source rule 2798.
+ */
+.manager-creation-screen-tab-group-mobile {
+  margin: 0 2px 0 0;
+  padding: 0;
+}
+
+/* Unity text element inner input field component.
+ * Changes text/foreground colour; sets font/text presentation; controls size/placement.
+ * Source rule 2799.
+ */
+.manager-creation-search-box-text .unity-text-element--inner-input-field-component {
+  color: var(--skin-text-primary);
+  font-size: var(--typography-size-16);
+  -unity-font-definition: var(--skin-font-body);
+  -unity-text-align: middle-left;
+  flex-wrap: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* Sislider dragger.
+ * sets the background fill; sets the outline/corner shape; controls size/placement.
+ * Source rule 2800.
+ */
+.manager-creation-slider .sislider--dragger {
+  width: 16px;
+  height: 16px;
+  border-width: 2px;
+  border-color: var(--skin-on-media-alpha-35);
+  background-color: var(--skin-range-marker);
+  border-radius: 16px;
+  top: auto;
+}
+
+/* Sislider tracker.
+ * sets the background fill; sets the outline/corner shape; controls size/placement.
+ * Source rule 2801.
+ */
+.manager-creation-slider .sislider--tracker {
+  height: 8px;
+  border-width: 1px;
+  border-color: var(--skin-range-track-border);
+  background-color: var(--skin-range-track-background);
+  border-radius: var(--skin-radius-small);
+  top: auto;
+}
+
+/* Manager creation tab.
+ * sets spacing around/inside the element.
+ * Source rule 2802.
+ */
+.manager-creation-tab {
+  margin-top: 52px;
+  margin-bottom: 28px;
+  margin-left: 47px;
+}
+
+/* Tabgroup tab.
+ * controls size/placement; sets spacing around/inside the element.
+ * Shared rule for 2 selectors. Editing a declaration here affects the whole group below.
+ * Source rule 2803.
+ */
+.manager-creation-tab > .tabgroup > * > .tabgroup__tab,
+.manager-creation-tab > .buttongroup > .buttongroup__button {
+  width: auto;
+  height: auto;
+  padding: 8px 12px;
+}
+
+/* Selected fill and foreground use the paired default Dugout Volt/ink roles.
+ */
+.manager-creation-tab > .tabgroup > * > .tabgroup__tab--active,
+.manager-creation-tab > .buttongroup > .buttongroup__button--active {
+  border-width: 1px;
+  border-color: var(--skin-border-default);
+  background-color: var(--skin-selection-background);
+  color: var(--skin-selection-foreground);
+}
+
+/* Manager creator bg.
+ * sets the background fill.
+ * Source rule 2805.
+ */
+.manager-creator-bg {
+  background-color: var(--internal-design-system-surface-frame-background);
+}
+
+/* Manager persona background image phone landscape.
+ * controls size/placement.
+ * Source rule 2806.
+ */
+.manager-persona-background-image-phone-landscape {
+  width: 350px;
+  height: 600px;
+  align-items: flex-start;
+}
+
+/* Manager persona image phone landscape.
+ * controls size/placement; sets spacing around/inside the element.
+ * Source rule 2807.
+ */
+.manager-persona-image-phone-landscape {
+  width: 350px;
+  height: 600px;
+  margin-bottom: 0px;
+  margin-top: 8px;
+}
+
+/* Manager persona setup name.
+ * controls size/placement.
+ * Source rule 2808.
+ */
+.manager-persona-setup-name {
+  max-width: 500px;
+  align-self: var(--flex-start-normal);
+  min-width: 500px;
+  flex-grow: 1;
+}
+
+/* Manager preset button.
+ * sets the background fill; sets the outline/corner shape; controls size/placement; sets spacing
+ * around/inside the element.
+ * Shared rule for 3 selectors. Editing a declaration here affects the whole group below.
+ * Source rule 2809.
+ */
+.manager-preset-button,
+.ige-kit-style-selected-button,
+.club-selector-preset-button {
+  margin: 0;
+  background-color: var(--skin-transparent);
+  align-self: stretch;
+  align-items: center;
+  border-radius: var(--numbers-border-radius-small);
+  transition: background-color var(--global-transition-buttons) var(--global-transition-animation-buttons);
+}
+
+/* Unity toggle checkmark — checked/selected.
+ * sets the background artwork; sets the outline/corner shape; controls size/placement.
+ * Source rule 2810.
+ */
+.manager-preset-button-active-toggle .unity-toggle__input:checked > .unity-toggle__checkmark {
+  width: 9px;
+  height: 8px;
+  border-width: 0;
+  border-color: var(--skin-text-secondary);
+  background-image: none;
+  border-radius: var(--skin-radius-small);
+}
+
+/* Unity toggle checkmark — pointer hover, checked/selected.
+ * sets the background artwork.
+ * Source rule 2811.
+ */
+.manager-preset-button-active-toggle:checked:hover .unity-toggle__input > .unity-toggle__checkmark {
+  background-image: none;
+}
+
+/* Manager preset button bg.
+ * sets the background fill; sets the outline/corner shape; controls size/placement; defines how state
+ * changes animate.
+ * Source rule 2812.
+ */
+.manager-preset-button-bg {
+  width: 188px;
+  border-width: 1px;
+  border-color: var(--skin-border-subtle);
+  background-color: var(--skin-transparent);
+  flex-direction: column;
+  align-items: flex-start;
+  border-radius: var(--numbers-border-radius-small);
+  transition: background-color 0.15s ease;
+}
+
+/* Appearance picture choices share ordinary neutral pointer feedback until
+ * their virtualised item is selected. Keep the portrait/model artwork intact;
+ * only the small control mark consumes the selected foreground. */
+.manager-preset-button:hover:enabled {
+  background-color: var(--skin-radio-hover-background);
+  color: var(--skin-radio-interaction-foreground);
+}
+.manager-preset-button:active:enabled {
+  background-color: var(--skin-radio-pressed-background);
+  color: var(--skin-radio-interaction-foreground);
+}
+.virtualised-list__item--selected .manager-preset-button {
+  --skin-radio-hover-background: var(--skin-selection-hover);
+  --skin-radio-pressed-background: var(--skin-selection-pressed);
+  --skin-radio-interaction-foreground: var(--skin-selection-foreground);
+}
+.manager-preset-button:hover:enabled .sitext,
+.manager-preset-button:hover:enabled .sitextmedium,
+.manager-preset-button:hover:enabled .sitextsmall,
+.manager-preset-button:active:enabled .sitext,
+.manager-preset-button:active:enabled .sitextmedium,
+.manager-preset-button:active:enabled .sitextsmall {
+  color: var(--skin-radio-interaction-foreground);
+}
+.virtualised-list__item--selected .manager-preset-button-active-toggle .unity-toggle__input {
+  border-color: var(--skin-selection-foreground);
+}
+.virtualised-list__item--selected .manager-preset-button-active-toggle .unity-toggle__input > .unity-toggle__checkmark {
+  background-color: var(--skin-selection-foreground);
+  border-color: var(--skin-selection-foreground);
+  -unity-background-image-tint-color: var(--skin-selection-foreground);
+}
+
+/* Manager preset button bg border.
+ * sets the background fill; sets the outline/corner shape; controls size/placement; defines how state
+ * changes animate.
+ * Source rule 2813.
+ */
+.manager-preset-button-bg-border {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-width: 1px;
+  border-color: var(--skin-border-subtle);
+  background-color: var(--skin-transparent);
+  left: 0px;
+  top: 0px;
+  border-radius: var(--numbers-border-radius-small);
+  transition: border-color 0.15s ease-out, border-radius 0.15s ease-out;
+}
+
+/* Manager preset button image.
+ * controls size/placement.
+ * Source rule 2814.
+ */
+.manager-preset-button-image {
+  width: 172px;
+  height: 172px;
+}
+
+/* Manager preset button navigatable element.
+ * sets the background fill; sets the outline/corner shape.
+ * Source rule 2815.
+ */
+.manager-preset-button-navigatable-element {
+  border-width: 1px;
+  border-color: var(--skin-border-subtle);
+  background-color: var(--skin-transparent);
+  border-radius: var(--numbers-border-radius-small);
+}
+
+/* Manager preset button toggle container.
+ * controls size/placement; sets spacing around/inside the element.
+ * Source rule 2816.
+ */
+.manager-preset-button-toggle-container {
+  justify-content: flex-start;
+  flex-grow: 0;
+  flex-shrink: 0;
+  margin-bottom: 12px;
+  align-self: stretch;
+}
+
+/* Manager preset button toggle container absolute.
+ * controls size/placement.
+ * Source rule 2817.
+ */
+.manager-preset-button-toggle-container-absolute {
+  position: absolute;
+  top: 4px;
+  right: 4px;
+  justify-content: flex-start;
+  flex-grow: 0;
+  flex-shrink: 0;
+  align-self: flex-end;
+}
+
+/* Manager preset side container.
+ * controls size/placement.
+ * Source rule 2818.
+ */
+.manager-preset-side-container {
+  width: 188px;
+  height: 216px;
+}
+
+/* Manager preset side image.
+ * sets the outline/corner shape; controls size/placement.
+ * Source rule 2819.
+ */
+.manager-preset-side-image {
+  border-width: 1px;
+  border-color: var(--skin-on-media-alpha-08);
+  flex-grow: 1;
+  border-radius: var(--skin-radius-small);
+}
+
+/* Manager reputation container.
+ * Shows these elements; sets the background fill; sets the outline/corner shape; controls size/placement.
+ * Source rule 2820.
+ */
+.manager-reputation-container {
+  display: flex;
+  padding: 8px 16px 8px 16px;
+  border-width: 1px;
+  background-color: var(--internal-design-system-surface-tile);
+  align-self: stretch;
+  flex-direction: column;
+  align-items: var(--flex-start-normal);
+  border-radius: var(--skin-radius-control);
+}
+
+/* Manager reputation tooltip.
+ * sets the background fill; sets the outline/corner shape; controls size/placement; sets spacing
+ * around/inside the element.
+ * Source rule 2821.
+ */
+.manager-reputation-tooltip {
+  padding: 12px;
+  background-color: var(--skin-surface-raised);
+  max-width: 416px;
+  border-radius: var(--skin-radius-shell);
+}
+
+/* Manager selection manager picture container.
+ * sets the background fill; sets the outline/corner shape; controls size/placement.
+ * Source rule 2822.
+ */
+.manager-selection-manager-picture-container {
+  width: 40px;
+  height: 40px;
+  background-color: var(--skin-on-media-alpha-12);
+  max-height: 44px;
+  max-width: 44px;
+  overflow: hidden;
+  justify-content: center;
+  align-items: center;
+  border-radius: 22px;
+  flex-direction: var(--row-direction-normal);
+  flex-shrink: 0;
+}
+
+/* Manager selection padding 32.
+ * sets spacing around/inside the element.
+ * Source rule 2823.
+ */
+.manager-selection-padding-32 {
+  padding: 32px;
+}
+
+/* Manager selection padding 48.
+ * sets spacing around/inside the element.
+ * Source rule 2824.
+ */
+.manager-selection-padding-48 {
+  padding: 48px;
+}
+
+/* Manager style grid item checkbox.
+ * sets the background fill; sets the outline/corner shape; controls size/placement; sets spacing
+ * around/inside the element.
+ * Source rule 2825.
+ */
+.manager-style-grid-item-checkbox {
+  margin: 0px;
+  border-width: 0px;
+  background-color: var(--skin-transparent);
+  flex-direction: var(--row-direction-normal);
+  flex-wrap: nowrap;
+  overflow: hidden;
+  border-radius: var(--skin-choice-card-radius);
+}
+
+/* Unity base field input.
+ * controls size/placement.
+ * Source rule 2826.
+ */
+.manager-style-grid-item-checkbox > .unity-base-field__input {
+  max-width: 0px;
+  max-height: 0px;
+}
+
+/* Inputs hybrid task switch button large active false type default — checked/selected.
+ * sets the background fill; sets the outline/corner shape; controls size/placement; sets spacing
+ * around/inside the element.
+ * Source rule 2827.
+ */
+.manager-style-grid-item-checkbox:checked .inputs-hybrid-task_switch_button-large-active-false--type-default {
+  width: 491px;
+  padding: var(--spacing-medium---16);
+  border-width: 1px;
+  border-color: var(--skin-border-subtle);
+  background-color: var(--skin-choice-card-background);
+  align-items: center;
+  border-radius: var(--skin-choice-card-radius);
+  margin-bottom: 0px;
+  flex-direction: var(--row-direction-normal);
+}
+
+/* ManagementStyleTemplate hides its outer native input and paints a child
+ * card plus a named, visible checkbox. Standalone-checkbox fills must never
+ * paint the whole wrapper. Keep the native grid dimensions and input visibility. */
+.manager-style-grid-item-checkbox .inputs-hybrid-task_switch_button-large-active-false--type-default {
+  background-color: var(--skin-choice-card-background);
+  border-radius: var(--skin-choice-card-radius);
+}
+.manager-style-grid-item-checkbox.inputs-switch-checkbox-default-switch-false--icon-none,
+.manager-style-grid-item-checkbox.inputs-switch-checkbox-default-switch-false--icon-none:checked:enabled,
+.manager-style-grid-item-checkbox.inputs-switch-checkbox-default-switch-false--icon-none:checked:hover:enabled,
+.manager-style-grid-item-checkbox.inputs-switch-checkbox-default-switch-false--icon-none:checked:active:enabled,
+.manager-style-grid-item-checkbox.inputs-switch-checkbox-default-switch-false--icon-none:disabled {
+  background-color: var(--skin-transparent);
+}
+.manager-style-grid-item-checkbox:enabled {
+  color: var(--skin-choice-foreground);
+}
+.manager-style-grid-item-checkbox:enabled .global-text-secondary {
+  color: var(--skin-text-secondary);
+}
+/* The compact native grid keeps the same fixed-height cards at a narrower
+ * width. Use its smaller text roles so full descriptions fit inside the frame;
+ * preserve the game's grid, control, artwork and selection geometry. */
+#GridBreakpointSmallCoachingStep,
+#GridBreakpointSmallMentalStep {
+  --skin-choice-card-title-size: var(--skin-choice-card-compact-title-size);
+  --skin-choice-card-description-size: var(--skin-choice-card-compact-description-size);
+}
+.manager-style-grid-item-checkbox .heading-md {
+  font-size: var(--skin-choice-card-title-size);
+}
+.manager-style-grid-item-checkbox .body-sm {
+  font-size: var(--skin-choice-card-description-size);
+}
+.manager-style-grid-item-checkbox:checked:enabled .inputs-hybrid-task_switch_button-large-active-false--type-default {
+  background-color: var(--skin-choice-card-selected);
+  border-color: var(--skin-choice-marker);
+}
+.manager-style-grid-item-checkbox:hover:enabled .inputs-hybrid-task_switch_button-large-active-false--type-default {
+  background-color: var(--skin-control-hover);
+}
+.manager-style-grid-item-checkbox:active:enabled .inputs-hybrid-task_switch_button-large-active-false--type-default {
+  background-color: var(--skin-control-pressed);
+}
+.manager-style-grid-item-checkbox:focus:enabled .inputs-hybrid-task_switch_button-large-active-false--type-default {
+  border-color: var(--skin-focus-ring);
+}
+/* The named square is control artwork. Concept icons elsewhere in the card
+ * retain their native tint; only the tick receives the filled-square ink. */
+.manager-style-grid-item-checkbox:checked:enabled #inputs-switch-checkbox {
+  background-color: var(--skin-choice-marker);
+  border-color: var(--skin-choice-marker);
+}
+.manager-style-grid-item-checkbox:checked:hover:enabled #inputs-switch-checkbox {
+  background-color: var(--skin-selection-hover);
+}
+.manager-style-grid-item-checkbox:checked:active:enabled #inputs-switch-checkbox {
+  background-color: var(--skin-selection-pressed);
+}
+.manager-style-grid-item-checkbox:checked:enabled #inputs-switch-checkbox .unity-toggle__checkmark {
+  background-color: var(--skin-transparent);
+  -unity-background-image-tint-color: var(--skin-selection-foreground);
+}
+.manager-style-grid-item-checkbox:disabled .inputs-hybrid-task_switch_button-large-active-false--type-default,
+.manager-style-grid-item-checkbox:disabled #inputs-switch-checkbox {
+  background-color: var(--skin-action-disabled-background);
+  border-color: var(--skin-border-subtle);
+}
+.manager-style-grid-item-checkbox:disabled .sitext {
+  color: var(--skin-text-disabled);
+}
+.manager-style-grid-item-checkbox:disabled #inputs-switch-checkbox .unity-toggle__checkmark {
+  -unity-background-image-tint-color: var(--skin-text-disabled);
+}
+
+/* Selected surface and label use the paired Volt/ink tokens from the default Dugout theme.
+ */
+.manager-creation-tab > .tabgroup > * > .tabgroup__tab--active .sitext,
+.manager-creation-tab > .tabgroup > * > .tabgroup__tab--active .sitextmedium,
+.manager-creation-tab > .tabgroup > * > .tabgroup__tab--active .sitextsmall,
+.manager-creation-tab > .buttongroup > .buttongroup__button--active .sitext,
+.manager-creation-tab > .buttongroup > .buttongroup__button--active .sitextmedium,
+.manager-creation-tab > .buttongroup > .buttongroup__button--active .sitextsmall {
+  color: var(--skin-selection-foreground);
+}
+
+/* Club Player Staff
+ * Native club player staff selectors, with adjacent shared rules in source order.
+ */
+
+/* Player active injury ellipse.
+ * sets the background fill; sets the outline/corner shape; controls size/placement.
+ * Source rule 3190.
+ */
+.player-active-injury-ellipse {
+  width: 8px;
+  height: 8px;
+  background-color: var(--colours-base-red-strong);
+  border-radius: 4px;
+}
+
+/* Player attribute color point.
+ * sets the outline/corner shape; controls size/placement.
+ * Source rule 3191.
+ */
+.player-attribute-color-point {
+  width: 14px;
+  height: 14px;
+  border-radius: 8px;
+}
+
+/* Player attribute line chart color point.
+ * sets the outline/corner shape; controls size/placement; changes opacity for the whole element and its
+ * contents.
+ * Source rule 3192.
+ */
+.player-attribute-line-chart-color-point {
+  opacity: 0;
+  width: 10px;
+  height: 10px;
+  border-radius: 8px;
+}
+
+/* Player attribute rating text max width.
+ * controls size/placement.
+ * Source rule 3193.
+ */
+.player-attribute-rating-text-max-width {
+  max-width: 130px;
+}
+
+/* Player cell button.
+ * sets font/text presentation; controls size/placement; sets spacing around/inside the element.
+ * Source rule 3194.
+ */
+.player-cell-button {
+  width: auto;
+  margin: var(--global-gap-none);
+  padding: var(--global-padding-none) var(--global-padding-small);
+  flex-grow: 1;
+  flex-shrink: 0;
+  justify-content: center;
+  white-space: nowrap;
+}
+
+/* Player comparison overview block.
+ * sets the background fill; sets the outline/corner shape; sets spacing around/inside the element.
+ * Source rule 3195.
+ */
+.player-comparison-overview-block {
+  padding: var(--global-padding-extra-large);
+  background-color: var(--skin-on-media-alpha-08);
+  border-radius: var(--skin-radius-card);
+}
+
+/* Player comparison spider graph.
+ * controls size/placement; sets spacing around/inside the element; changes opacity for the whole element
+ * and its contents.
+ * Source rule 3196.
+ */
+.player-comparison-spider-graph {
+  opacity: 0.72;
+  width: 100%;
+  height: 100%;
+  flex-grow: 1;
+  align-self: center;
+  margin-top: 16px;
+  margin-bottom: 12px;
+}
+
+/* Player database filters block frame.
+ * sets the outline/corner shape; controls size/placement; sets spacing around/inside the element.
+ * Source rule 3197.
+ */
+.player-database-filters-block-frame {
+  height: 56px;
+  border-width: var(--layout-modules-block-border-thickness);
+  border-color: var(--skin-border-subtle);
+  align-items: center;
+  flex-shrink: 0;
+  flex-direction: var(--row-direction-normal);
+  padding-top: var(--global-padding-large);
+  padding-right: var(--global-padding-extra-large);
+  padding-bottom: var(--global-padding-large);
+  padding-left: var(--global-padding-extra-large);
+  border-radius: var(--layout-modules-block-radius);
+}
+
+/* Player database suggested player active.
+ * sets the background fill.
+ * Source rule 3198.
+ */
+.player-database-suggested-player-active {
+  background-color: var(--skin-surface-panel);
+}
+
+/* Player fitness active injury recurring overlap.
+ * controls size/placement; sets spacing around/inside the element.
+ * Source rule 3199.
+ */
+.player-fitness-active-injury-recurring-overlap {
+  position: relative;
+  align-self: center;
+  flex-direction: column;
+  padding-top: 1px;
+  padding-bottom: 1px;
+}
+
+/* Player fitness active injury recurring.
+ * sets the background artwork; controls size/placement; sets spacing around/inside the element; changes
+ * opacity for the whole element and its contents.
+ * Source rule 3200.
+ */
+.player-fitness-active-injury-recurring:enabled {
+  position: relative;
+  opacity: 1;
+  width: 100%;
+  height: 200px;
+  background-image: none;
+  flex-grow: 1;
+  margin-bottom: 0;
+  align-self: stretch;
+}
+
+/* Bar chart item.
+ * controls size/placement.
+ * Source rule 3201.
+ */
+.player-form-chart .bar-chart-item {
+  width: 5px;
+  height: 20px;
+}
+
+/* Bar chart item small.
+ * controls size/placement.
+ * Source rule 3202.
+ */
+.player-form-chart .bar-chart-item-small {
+  width: 5px;
+  height: 19px;
+}
+
+/* Player form data display tooltip hover default with fixture.
+ * controls size/placement.
+ * Source rule 3203.
+ */
+.player-form-data_display-tooltip-hover-default-with-fixture {
+  width: 353px;
+}
+
+/* Player form data display tooltip hover player form default.
+ * sets the background fill; sets the outline/corner shape; controls size/placement; sets spacing
+ * around/inside the element.
+ * Source rule 3204.
+ */
+.player-form-data_display-tooltip-hover-player-form-default {
+  padding: var(--spacing-padding-extra-small---4) var(--spacing-padding-small---8);
+  border-width: 1px;
+  border-color: var(--skin-border-subtle);
+  background-color: var(--skin-surface-raised);
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  border-radius: var(--skin-radius-small);
+}
+
+/* Bar chart item.
+ * controls size/placement; sets spacing around/inside the element.
+ * Shared rule for 4 selectors. Editing a declaration here affects the whole group below.
+ * Source rule 3205.
+ */
+.player-form-fixed-bars .bar-chart-item,
+.player-form-fixed-bars .bar-chart-item-small,
+.team-form-fixed-bars .bar-chart-item,
+.team-form-fixed-bars .bar-chart-item-small {
+  width: var(--width-height-08);
+  flex-grow: 0;
+  flex-shrink: 0;
+  margin-left: var(--global-gap-none);
+  margin-right: var(--global-gap-none);
+}
+
+/* Data display graphs bar chart bar.
+ * sets the outline/corner shape; controls size/placement.
+ * Shared rule for 2 selectors. Editing a declaration here affects the whole group below.
+ * Source rule 3206.
+ */
+.player-form-fixed-bars .data_display-graphs-bar_chart-bar,
+.team-form-fixed-bars .data_display-graphs-bar_chart-bar {
+  width: var(--width-height-06);
+  align-self: center;
+  border-radius: var(--skin-form-bar-radius);
+  flex-grow: 0;
+}
+
+/* Streamed list view item.
+ * controls size/placement.
+ * Shared rule for 2 selectors. Editing a declaration here affects the whole group below.
+ * Source rule 3207.
+ */
+.player-form-fixed-bars .streamed-list-view-item,
+.team-form-fixed-bars .streamed-list-view-item {
+  flex-grow: 0;
+  flex-shrink: 0;
+}
+
+/* Player info block small title.
+ * sets the background fill.
+ * Source rule 3208.
+ */
+.player-info-block-small-title {
+  background-color: var(--skin-on-media-alpha-08);
+}
+
+/* Player info property 1 overview mode.
+ * sets the background fill; controls size/placement.
+ * Source rule 3209.
+ */
+.player-info-property-1-overview-mode {
+  background-color: var(--skin-on-media-alpha-08);
+  flex-direction: column;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+/* Sitext.
+ * Changes text/foreground colour.
+ * Shared rule for 6 selectors. Editing a declaration here affects the whole group below.
+ * Source rule 3210.
+ */
+.player-injury-cell-active-injury .sitext,
+.fitness-test-result-text-colour-fail,
+.injury-severity-text-colour-major,
+.player-interest-red,
+.squad-dynamics-pro-con-negative-text,
+.transfer-overview-closed-text {
+  color: var(--colours-base-red-soft);
+}
+
+/* A tweaked instruction remains marked by its cyan status outline even though
+ * ordinary card-tile borders are suppressed at the shared frame.
+ * Shared rule for 3 selectors. Editing a declaration here affects the whole group below.
+ * Source rule 3211.
+ */
+.player-instruction-tile--tweaked .surfaces-card-tile-border,
+.team-instruction-tile--tweaked .surfaces-card-tile-border,
+.team-instruction-tile--phase-relevant .team-instruction-tile--tweaked .surfaces-card-tile-border {
+  border-width: var(--global-border-width-tile-card);
+  border-color: var(--colours-base-cyan-50);
+}
+
+/* Player instruction tile tweak icon.
+ * Hides these elements; controls size/placement.
+ * Source rule 3212.
+ */
+.player-instruction-tile__tweak-icon {
+  position: absolute;
+  display: none;
+  width: 16px;
+  height: 16px;
+  top: 8px;
+  right: 8px;
+}
+
+/* Player match simulation circle.
+ * sets the outline/corner shape; controls size/placement.
+ * Source rule 3213.
+ */
+.player-match-simulation-circle {
+  width: 20px;
+  height: 20px;
+  border-width: 1.5px;
+  border-color: var(--skin-text-secondary);
+  flex-shrink: 0;
+  border-radius: 20px;
+}
+
+/* Player match simulation circle fullscreen.
+ * sets the outline/corner shape; controls size/placement.
+ * Source rule 3214.
+ */
+.player-match-simulation-circle-fullscreen {
+  width: 30px;
+  height: 30px;
+  border-width: 1.5px;
+  border-color: var(--skin-text-secondary);
+  flex-shrink: 0;
+  border-radius: 30px;
+}
+
+/* Player match simulation circle small.
+ * sets the outline/corner shape; controls size/placement.
+ * Source rule 3215.
+ */
+.player-match-simulation-circle-small {
+  width: 10px;
+  height: 10px;
+  border-width: 1.5px;
+  border-color: var(--skin-text-secondary);
+  flex-shrink: 0;
+  border-radius: 10px;
+}
+
+/* Player match simulation direction.
+ * controls size/placement.
+ * Source rule 3216.
+ */
+.player-match-simulation-direction {
+  width: 12px;
+  height: 16px;
+  flex-shrink: 0;
+}
+
+/* Player on loan colour.
+ * Changes text/foreground colour.
+ * Shared rule for 2 selectors. Editing a declaration here affects the whole group below.
+ * Source rule 3217.
+ */
+.player-on-loan-colour,
+.biography-property1-stepper .stepper-text {
+  color: var(--communication-feedback-information);
+}
+
+/* Player picked position down arrow.
+ * controls size/placement.
+ * Source rule 3218.
+ */
+.player-picked-position-down-arrow {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  right: 0px;
+  top: 0px;
+}
+
+/* Player property 1 1.
+ * sets the background fill; sets the outline/corner shape; controls size/placement.
+ * Source rule 3219.
+ */
+.player-property-1-1 {
+  width: 160px;
+  height: 124px;
+  border-width: var(--layout-modules-block-border-thickness);
+  border-color: var(--skin-border-subtle);
+  background-color: var(--skin-surface-strong);
+  flex-direction: column;
+  align-items: center;
+  flex-shrink: 0;
+  border-radius: var(--layout-modules-block-radius);
+}
+
+/* Player prospect level decent text.
+ * Changes text/foreground colour.
+ * Shared rule for 3 selectors. Editing a declaration here affects the whole group below.
+ * Source rule 3220.
+ */
+.player-prospect-level-decent-text,
+.squad-happiness-unhappy-players-3,
+.training-load-heavy-text {
+  color: var(--linear-ranges-5-values-2);
+}
+
+/* Player recommendations block fmc.
+ * sets the background fill; sets the outline/corner shape; sets spacing around/inside the element.
+ * Source rule 3221.
+ */
+.player-recommendations-block-fmc {
+  padding: 12px;
+  border-width: var(--layout-modules-block-border-thickness);
+  border-color: var(--skin-border-subtle);
+  background-color: var(--skin-surface-panel);
+  border-radius: var(--layout-modules-block-radius);
+}
+
+/* Player recommendations property 1 empty.
+ * sets the background fill; sets the outline/corner shape; controls size/placement; sets spacing
+ * around/inside the element.
+ * Source rule 3222.
+ */
+.player-recommendations-property-1-empty {
+  padding: 12px;
+  border-width: var(--layout-modules-block-border-thickness);
+  border-color: var(--skin-border-subtle);
+  background-color: var(--skin-surface-panel);
+  flex-direction: column;
+  align-items: flex-start;
+  flex: 1 0 0;
+  align-self: stretch;
+  border-radius: var(--layout-modules-block-radius);
+}
+
+/* Player recommendations top bar fmc.
+ * sets the background fill; sets the outline/corner shape; controls size/placement; sets spacing
+ * around/inside the element.
+ * Source rule 3223.
+ */
+.player-recommendations-top-bar-fmc {
+  border-width: var(--layout-modules-block-border-thickness);
+  border-color: var(--skin-border-subtle);
+  background-color: var(--colours-brand-tints-horizon-alpha-8);
+  align-items: center;
+  flex-shrink: 0;
+  flex-direction: var(--row-direction-normal);
+  padding-top: var(--global-padding-large);
+  padding-right: var(--global-padding-extra-large);
+  padding-bottom: var(--global-padding-large);
+  padding-left: var(--global-padding-extra-large);
+  border-radius: var(--layout-modules-block-radius);
+}
+
+/* Player recurring injury ellipse.
+ * sets the background fill; sets the outline/corner shape; controls size/placement.
+ * Source rule 3224.
+ */
+.player-recurring-injury-ellipse {
+  width: 8px;
+  height: 8px;
+  background-color: var(--colours-base-purple-strong);
+  border-radius: 4px;
+}
+
+/* Player report role selector roles size high possession ip.
+ * controls size/placement.
+ * Source rule 3225.
+ */
+.player-report-role-selector-roles-size-high-possession-ip {
+  width: 100%;
+  height: 100%;
+  min-width: 380px;
+  max-width: 420px;
+  flex-direction: column;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+/* Player report role selector roles size min res.
+ * controls size/placement; sets spacing around/inside the element.
+ * Source rule 3226.
+ */
+.player-report-role-selector-roles-size-min-res {
+  width: 132px;
+  height: 452px;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-right: var(--spacing-padding-tiles);
+}
+
+/* Player report role selector roles size min res possession ip.
+ * controls size/placement.
+ * Source rule 3227.
+ */
+.player-report-role-selector-roles-size-min-res-possession-ip {
+  width: 170px;
+  flex-direction: column;
+  align-items: center;
+  flex-shrink: 1;
+}
+
+/* Player role dropdown left.
+ * controls size/placement.
+ * Source rule 3228.
+ */
+.player-role-dropdown-left {
+  width: 44px;
+  height: 28px;
+}
+
+/* Player role dropdown right.
+ * controls size/placement.
+ * Shared rule for 2 selectors. Editing a declaration here affects the whole group below.
+ * Source rule 3229.
+ */
+.player-role-dropdown-right,
+.tactical-tweaks-tabs .buttongroup__button {
+  height: 28px;
+}
+
+/* Player search dialog fmc.
+ * controls size/placement.
+ * Source rule 3230.
+ */
+.player-search-dialog-fmc {
+  width: 622px;
+  align-items: center;
+}
+
+/* Player search pitch.
+ * controls size/placement.
+ * Shared rule for 2 selectors. Editing a declaration here affects the whole group below.
+ * Source rule 3231.
+ */
+.player-search-pitch,
+.player-fitness-injury-frame:enabled {
+  width: 250px;
+}
+
+/* Player thumbnail shirt rounded.
+ * sets the background fill; sets the outline/corner shape.
+ * Source rule 3232.
+ */
+.player-thumbnail-shirt-rounded {
+  background-color: var(--skin-on-media-alpha-12);
+  border-radius: 40px;
+}
+
+/* Player position dm tint.
+ * tints background artwork.
+ * Shared rule for 2 selectors. Editing a declaration here affects the whole group below.
+ * Source rule 3233.
+ */
+.player_position-dm-tint,
+.transfer-comment-notification-icon-colour {
+  -unity-background-image-tint-color: var(--colours-base-green-strong);
+}
+
+/* Player position goalkeeper tint.
+ * tints background artwork.
+ * Source rule 3234.
+ */
+.player_position-goalkeeper-tint {
+  -unity-background-image-tint-color: var(--skin-ink);
+}
+
+/* Player position strikers tint.
+ * tints background artwork.
+ * Source rule 3235.
+ */
+.player_position-strikers-tint {
+  -unity-background-image-tint-color: var(--colours-base-pink-base);
+}
+
+/* Player position dropdown.
+ * controls size/placement.
+ * Source rule 3236.
+ */
+.player_position_dropdown {
+  width: 100%;
+  height: 80px;
+  flex-grow: 1;
+  flex-shrink: 0;
+  flex-direction: var(--row-direction-normal);
+  min-width: 100%;
+}
+
+/* Micro pitch parent.
+ * sets the background fill; sets the outline/corner shape.
+ * Source rule 3237.
+ */
+.player_position_dropdown .micro-pitch-parent {
+  border-width: 2px;
+  border-color: var(--skin-on-media-alpha-35);
+  background-color: var(--skin-data-player-position-dropdown-micro-pitch-parent-background);
+  border-radius: var(--skin-radius-compact);
+}
+
+/* Micro pitch tactics.
+ * sets the outline/corner shape; controls size/placement.
+ * Source rule 3238.
+ */
+.player_position_dropdown .micro-pitch-tactics {
+  width: 100%;
+  height: 100%;
+  border-radius: var(--skin-radius-micro);
+}
+
+/* Is gk.
+ * sets the background fill.
+ * Source rule 3239.
+ */
+.player_position_dropdown .micro-pitch-tactics .is-gk {
+  background-color: var(--colours-base-grey-deep);
+}
+
+/* Pitch dot 2px.
+ * sets the outline/corner shape; controls size/placement.
+ * Source rule 3240.
+ */
+.player_position_dropdown .micro-pitch-tactics .pitch-dot-2px {
+  width: 2px;
+  height: 2px;
+  border-radius: 2px;
+}
+
+/* Pitch dot 4px.
+ * sets the outline/corner shape; controls size/placement.
+ * Source rule 3241.
+ */
+.player_position_dropdown .micro-pitch-tactics .pitch-dot-4px {
+  width: 4px;
+  height: 4px;
+  border-radius: 4px;
+}
+
+/* Pitch dot 6px.
+ * sets the outline/corner shape; controls size/placement.
+ * Source rule 3242.
+ */
+.player_position_dropdown .micro-pitch-tactics .pitch-dot-6px {
+  width: 6px;
+  height: 6px;
+  border-radius: 6px;
+}
+
+/* SI dropdown down arrow.
+ * sets the outline/corner shape.
+ * Source rule 3243.
+ */
+.player_position_dropdown .si-dropdown__down-arrow {
+  border-left-width: 1px;
+  border-left-color: var(--skin-on-media-alpha-12);
+  background-size: 35px 25px;
+}
+
+/* SI dropdown selection field.
+ * Changes text/foreground colour; sets the background fill; sets the outline/corner shape; controls
+ * size/placement.
+ * Source rule 3244.
+ */
+.player_position_dropdown .si-dropdown__selection-field {
+  width: 100%;
+  padding: 7px;
+  border-width: var(--global-border-regular);
+  border-color: var(--skin-control-border);
+  background-color: var(--skin-control-background);
+  color: var(--skin-text-primary);
+  min-width: 100%;
+  min-height: 80px;
+  max-height: 80px;
+}
+
+/* Playerindicator bottom.
+ * sets the background fill; sets the outline/corner shape.
+ * Source rule 3245.
+ */
+.playerindicator_bottom {
+  background-color: var(--skin-surface-page);
+  border-bottom-left-radius: var(--skin-radius-control);
+  border-bottom-right-radius: var(--skin-radius-control);
+  overflow: hidden;
+}
+
+/* Playerindicator top.
+ * sets the background fill; sets the outline/corner shape; controls size/placement.
+ * Source rule 3246.
+ */
+.playerindicator_top {
+  height: 28px;
+  background-color: var(--skin-surface-page-alpha-60);
+  border-top-left-radius: var(--skin-radius-control);
+  border-top-right-radius: var(--skin-radius-control);
+}
+
+/* Playerreport Tooltip Popup.
+ * controls size/placement; sets spacing around/inside the element.
+ * Source rule 3247.
+ */
+.playerreportTooltipPopup {
+  width: 16px;
+  height: 16px;
+  min-width: 16px;
+  margin-right: 2px;
+}
+
+/* Position attribute rating accomplished.
+ * sets the outline/corner shape; controls size/placement.
+ * Shared rule for 3 selectors. Editing a declaration here affects the whole group below.
+ * Source rule 3248.
+ */
+.playerreport_positional_data_points .position-attribute-indicator.position-attribute-rating-accomplished,
+.playerreport_positional_data_points .position-attribute-indicator.position-attribute-rating-competent,
+.playerreport_positional_data_points .position-attribute-indicator.position-attribute-rating-natural {
+  width: 15px;
+  height: 15px;
+  border-radius: 7.5px;
+}
+
+/* Club Player Staff
+ * Native club player staff selectors, with adjacent shared rules in source order.
+ */
+
+/* Recruitment budget adjustment body text.
+ * sets font/text presentation; sets spacing around/inside the element.
+ * Source rule 3340.
+ */
+.recruitment-budget-adjustment-body-text {
+  margin-bottom: 5px;
+  margin-top: 5px;
+  -unity-font-style: var(--typography-weight-regular);
+}
+
+/* Recruitment focus block recruitment focus.
+ * sets the outline/corner shape; controls size/placement.
+ * Source rule 3341.
+ */
+.recruitment-focus-block-recruitment-focus {
+  border-width: 1px;
+  border-color: var(--skin-border-subtle);
+  flex-direction: column;
+  align-items: flex-start;
+  border-radius: var(--skin-radius-card);
+}
+
+/* Recruitment focus completed header.
+ * sets the background fill; sets the outline/corner shape; sets spacing around/inside the element.
+ * Source rule 3342.
+ */
+.recruitment-focus-completed-header {
+  padding: 12px;
+  background-color: var(--skin-on-media-alpha-04);
+  border-radius: var(--skin-radius-control) var(--skin-radius-control) 0 0;
+}
+
+/* SI dropdown selection field.
+ * sets the outline/corner shape; sets spacing around/inside the element.
+ * Shared rule for 2 selectors. Editing a declaration here affects the whole group below.
+ * Source rule 3343.
+ */
+.recruitment-focus-dropdown > .si-dropdown__selection-field,
+.secondary-navigation-tab-dropdown > .si-dropdown__selection-field {
+  padding: 0;
+  border-width: 0;
+}
+
+/* Recruitment focus duplicate warning.
+ * sets the background fill; sets the outline/corner shape; sets spacing around/inside the element.
+ * Source rule 3344.
+ */
+.recruitment-focus-duplicate-warning {
+  border-width: 1px;
+  border-color: var(--staff-coaching-assistant-manager-20);
+  background-color: var(--internal-design-system-surface-wireframe-background);
+  padding-right: var(--global-padding-extra-large);
+  padding-left: var(--global-padding-extra-large);
+  padding-top: var(--global-padding-large);
+  padding-bottom: var(--global-padding-large);
+  border-radius: var(--skin-radius-control);
+}
+
+/* Recruitment focus first segment.
+ * sets the background fill; sets the outline/corner shape.
+ * Source rule 3345.
+ */
+.recruitment-focus-first-segment {
+  border-width: 1px;
+  border-color: var(--skin-on-media-alpha-35);
+  background-color: var(--colours-data-ratings-star-ability-orange);
+}
+
+/* Recruitment focus fmc table block.
+ * sets the outline/corner shape.
+ * Source rule 3346.
+ */
+.recruitment-focus-fmc-table-block {
+  border-width: 1px;
+  border-color: var(--skin-border-subtle);
+  border-radius: var(--spacing-padding-small---8);
+}
+
+/* Recruitment focus header.
+ * sets the background fill; sets the outline/corner shape; sets spacing around/inside the element.
+ * Source rule 3347.
+ */
+.recruitment-focus-header {
+  padding: 12px;
+  background-color: var(--skin-component-recruitment-focus-header-background);
+  border-radius: var(--skin-radius-control) var(--skin-radius-control) 0 0;
+}
+
+/* Recruitment focus second segment.
+ * sets the background fill; sets the outline/corner shape.
+ * Source rule 3348.
+ */
+.recruitment-focus-second-segment {
+  border-width: 1px;
+  border-color: var(--skin-on-media-alpha-35);
+  background-color: var(--colours-base-lime-soft);
+}
+
+/* Recruitment focus selector button fmc.
+ * sets the outline/corner shape; sets spacing around/inside the element.
+ * Source rule 3349.
+ */
+.recruitment-focus-selector-button-fmc {
+  padding: 12px;
+  border-radius: var(--skin-radius-control);
+}
+
+/* Recruitment focus third segment.
+ * sets the background fill; sets the outline/corner shape.
+ * Source rule 3350.
+ */
+.recruitment-focus-third-segment {
+  border-width: 1px;
+  border-color: var(--skin-on-media-alpha-35);
+  background-color: var(--skin-text-primary);
+}
+
+/* Recruitment focus tool table block main frame.
+ * sets the outline/corner shape; sets spacing around/inside the element.
+ * Source rule 3351.
+ */
+.recruitment-focus-tool-table-block-main-frame {
+  padding: 12px;
+  border-width: 1px;
+  flex: 1 0 0;
+  border-radius: var(--skin-radius-card);
+}
+
+/* Recruitment objectives row.
+ * controls size/placement; sets spacing around/inside the element.
+ * Source rule 3352.
+ */
+.recruitment-objectives-row {
+  width: 288px;
+  justify-content: flex-start;
+  align-items: center;
+  align-self: stretch;
+  flex-direction: var(--row-direction-normal);
+  margin-bottom: 12px;
+  margin-top: 0;
+  margin-right: 0;
+  margin-left: 0;
+}
+
+/* Recruitment player scouted grade header.
+ * sets the outline/corner shape; sets spacing around/inside the element.
+ * Source rule 3353.
+ */
+.recruitment-player-scouted-grade-header {
+  padding: 8px;
+  border-radius: var(--skin-radius-control);
+}
+
+/* Recruitment player scouted grade header has report.
+ * sets the background fill.
+ * Source rule 3354.
+ */
+.recruitment-player-scouted-grade-header--has-report {
+  background-color: var(--skin-data-recruitment-player-scouted-grade-header-has-report-background);
+}
+
+/* Recruitment player search foldout bar.
+ * sets the background fill; sets the outline/corner shape; controls size/placement; sets spacing
+ * around/inside the element.
+ * Source rule 3355.
+ */
+.recruitment-player-search-foldout-bar {
+  height: 40px;
+  margin: 0 0 0 0;
+  background-color: var(--skin-surface-panel);
+  padding-top: var(--global-padding-regular);
+  padding-right: var(--global-padding-extra-large);
+  padding-bottom: var(--global-padding-regular);
+  padding-left: var(--global-padding-extra-large);
+  justify-content: space-between;
+  align-items: center;
+  flex-shrink: 0;
+  border-radius: 0 0 var(--skin-radius-control) var(--skin-radius-control);
+  border-top-width: 1px;
+  border-top-color: var(--skin-border-subtle);
+  flex-direction: var(--row-direction-normal);
+  transition: background-color 0.15s ease;
+}
+
+/* Recruitment player search foldout bar — pointer hover.
+ * sets the background fill.
+ * Shared rule for 2 selectors. Editing a declaration here affects the whole group below.
+ * Source rule 3356.
+ */
+.recruitment-player-search-foldout-bar:hover,
+.squad-overview-item:hover {
+  background-color: var(--skin-surface-strong);
+}
+
+/* Recruitment search pitch large size.
+ * controls size/placement; sets spacing around/inside the element.
+ * Source rule 3357.
+ */
+.recruitment-search-pitch-large-size {
+  width: 512px;
+  height: 430px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+/* Recruitment search pitch standard size.
+ * controls size/placement.
+ * Source rule 3358.
+ */
+.recruitment-search-pitch-standard-size {
+  width: 280px;
+  height: 250px;
+}
+
+/* Recruitment squad planner pitch column small.
+ * controls size/placement.
+ * Source rule 3359.
+ */
+.recruitment-squad-planner-pitch-column-small {
+  width: 330px;
+}
+
+/* Recruitment squad planner pitch content.
+ * controls size/placement.
+ * Source rule 3360.
+ */
+.recruitment-squad-planner-pitch-column-small .recruitment-squad-planner-pitch-content {
+  max-width: 240px;
+  max-height: 200px;
+}
+
+/* Recruitment squad planner pitch content.
+ * controls size/placement.
+ * Source rule 3361.
+ */
+.recruitment-squad-planner-pitch-content {
+  max-height: 344px;
+}
+
+/* Recruitment squad planner tactic dropdown.
+ * controls size/placement.
+ * Source rule 3362.
+ */
+.recruitment-squad-planner-tactic-dropdown {
+  max-width: 150px;
+}
+
+/* Recruitment budgets banner.
+ * sets the outline/corner shape; controls size/placement; sets spacing around/inside the element.
+ * Source rule 3363.
+ */
+.recruitment_budgets_banner {
+  height: 44px;
+  padding: 12px;
+  border-width: 1px;
+  border-color: var(--skin-border-subtle);
+  align-self: stretch;
+  border-radius: var(--skin-radius-control);
+  margin-top: 16px;
+  margin-bottom: 16px;
+  flex-direction: var(--row-direction-normal);
+}
+
+/* Recruitment budgets banner gradient.
+ * sets the gradient colours drawn by this component.
+ * Source rule 3364.
+ */
+.recruitment_budgets_banner_gradient {
+  --end-colour: var(--skin-brand-primary-alpha-16);
+  --start-colour: var(--skin-surface-page-alpha-60);
+}
+
+/* Recruitment database carousel widget block.
+ * controls size/placement.
+ * Source rule 3365.
+ */
+.recruitment_database_carousel_widget__block {
+  width: 324px;
+  align-items: stretch;
+  flex-grow: 1;
+}
+
+/* Carousel page indicator.
+ * controls size/placement.
+ * Source rule 3366.
+ */
+.recruitment_database_carousel_widget__block .carousel-page-indicator {
+  position: relative;
+  right: auto;
+  top: auto;
+  align-self: center;
+}
+
+/* Recruitment database carousel widget body.
+ * sets the background fill; sets the outline/corner shape; controls size/placement; sets spacing
+ * around/inside the element.
+ * Source rule 3367.
+ */
+.recruitment_database_carousel_widget__body {
+  padding: var(--global-padding-extra-large);
+  background-color: var(--internal-design-system-surface-tile);
+  border-bottom-left-radius: var(--skin-radius-control);
+  border-bottom-right-radius: var(--skin-radius-control);
+  flex-grow: 1;
+}
+
+/* Recruitment database carousel widget header.
+ * sets the background fill; sets the outline/corner shape; controls size/placement; sets spacing
+ * around/inside the element.
+ * Source rule 3368.
+ */
+.recruitment_database_carousel_widget__header {
+  padding: var(--global-padding-regular) var(--global-padding-extra-large) var(--global-padding-regular) var(--global-padding-extra-large);
+  background-color: var(--skin-component-recruitment-database-carousel-widget-header-background);
+  border-top-left-radius: var(--skin-radius-control);
+  border-top-right-radius: var(--skin-radius-control);
+  align-items: var(--flex-start-normal);
+}
+
+/* Club Player Staff
+ * Native club player staff selectors, with adjacent shared rules in source order.
+ */
+
+/* Report header site main cells frame.
+ * controls size/placement.
+ * Source rule 3383.
+ */
+.report-header-site-main-cells-frame {
+  height: 32px;
+  flex-direction: var(--row-direction-normal);
+}
+
+/* Report non player banner max human manager.
+ * sets the outline/corner shape; controls size/placement; sets spacing around/inside the element.
+ * Source rule 3384.
+ */
+.report-non-player-banner-max-human-manager {
+  width: 1624px;
+  height: 92px;
+  padding-top: 6px;
+  padding-right: 12px;
+  padding-bottom: 6px;
+  padding-left: 12px;
+  align-items: center;
+  flex-shrink: 0;
+  border-radius: 0 var(--skin-radius-card) 0 0;
+  flex-direction: var(--row-direction-normal);
+}
+
+/* Report non player banner mid human manager.
+ * sets the outline/corner shape; controls size/placement; sets spacing around/inside the element.
+ * Source rule 3385.
+ */
+.report-non-player-banner-mid-human-manager {
+  width: 1174px;
+  height: 92px;
+  padding-top: 6px;
+  padding-right: 12px;
+  padding-bottom: 6px;
+  padding-left: 12px;
+  align-items: center;
+  flex-shrink: 0;
+  border-radius: 0 var(--skin-radius-card) 0 0;
+  flex-direction: var(--row-direction-normal);
+}
+
+/* Report non player banner min human club manager.
+ * sets the outline/corner shape; controls size/placement; sets spacing around/inside the element.
+ * Source rule 3386.
+ */
+.report-non-player-banner-min-human-club-manager {
+  padding-top: 6px;
+  padding-right: 12px;
+  padding-bottom: 6px;
+  padding-left: 12px;
+  align-items: center;
+  flex: 1 0 0;
+  align-self: stretch;
+  border-radius: 0 var(--skin-radius-card) 0 0;
+  flex-direction: var(--row-direction-normal);
+}
+
+/* Report non player banner min human manager.
+ * sets the outline/corner shape; controls size/placement; sets spacing around/inside the element.
+ * Source rule 3387.
+ */
+.report-non-player-banner-min-human-manager {
+  width: 844px;
+  height: 92px;
+  padding-top: 6px;
+  padding-right: 12px;
+  padding-bottom: 6px;
+  padding-left: 12px;
+  align-items: center;
+  flex-shrink: 0;
+  border-radius: 0 var(--skin-radius-card) 0 0;
+  flex-direction: var(--row-direction-normal);
+}
+
+/* Report non player full header max type player.
+ * controls size/placement.
+ * Shared rule for 2 selectors. Editing a declaration here affects the whole group below.
+ * Source rule 3388.
+ */
+.report-non-player-full-header-max-type-player,
+.report-player-full-header-max-type-player {
+  width: auto;
+  height: 188px;
+  align-items: flex-start;
+  flex-shrink: 0;
+  flex-direction: var(--row-direction-normal);
+}
+
+/* Report player banner max human mockup.
+ * sets the outline/corner shape; controls size/placement; sets spacing around/inside the element.
+ * Source rule 3389.
+ */
+.report-player-banner-max-human-mockup {
+  width: auto;
+  height: 92px;
+  padding: 16px 12px 6px 12px;
+  align-items: center;
+  flex-shrink: 0;
+  border-radius: 0 var(--skin-radius-card) 0 0;
+  flex-direction: var(--row-direction-normal);
+}
+
+/* Report player banner max human retirement saved state.
+ * sets the outline/corner shape; controls size/placement; sets spacing around/inside the element.
+ * Source rule 3390.
+ */
+.report-player-banner-max-human-retirement---saved-state {
+  width: auto;
+  height: 92px;
+  padding-top: 12px;
+  padding-right: 12px;
+  padding-bottom: 6px;
+  padding-left: 12px;
+  align-items: center;
+  flex-shrink: 0;
+  border-radius: 0 var(--skin-radius-card) 0 0;
+  flex-direction: var(--row-direction-normal);
+}
+
+/* Report player banner mid human mockup.
+ * sets the outline/corner shape; controls size/placement; sets spacing around/inside the element.
+ * Shared rule for 2 selectors. Editing a declaration here affects the whole group below.
+ * Source rule 3391.
+ */
+.report-player-banner-mid-human-mockup,
+.report-player-banner-min-human-mockup {
+  width: auto;
+  height: 92px;
+  padding: 6px 12px;
+  align-items: center;
+  flex-shrink: 0;
+  border-radius: 0 var(--skin-radius-card) 0 0;
+  flex-direction: var(--row-direction-normal);
+}
+
+/* Report player banner mid human retirement saved state.
+ * sets the outline/corner shape; controls size/placement; sets spacing around/inside the element.
+ * Shared rule for 2 selectors. Editing a declaration here affects the whole group below.
+ * Source rule 3392.
+ */
+.report-player-banner-mid-human-retirement---saved-state,
+.report-player-banner-min-human-retirement---saved-state {
+  width: auto;
+  height: 92px;
+  padding-top: 6px;
+  padding-right: 12px;
+  padding-bottom: 6px;
+  padding-left: 12px;
+  align-items: center;
+  flex-shrink: 0;
+  border-radius: 0 var(--skin-radius-card) 0 0;
+  flex-direction: var(--row-direction-normal);
+}
+
+/* Thumbnails alt person picture player report.
+ * controls size/placement.
+ * Source rule 3393.
+ */
+.report-player-full-header-max-type-player .thumbnails-alt-person-picture-player-report {
+  width: 141px;
+  height: 180px;
+}
+
+/* Report player full header mid type player.
+ * controls size/placement.
+ * Source rule 3394.
+ */
+.report-player-full-header-mid-type-player {
+  width: auto;
+  height: 92px;
+  align-items: flex-start;
+  flex-direction: var(--row-direction-normal);
+}
+
+/* Thumbnails alt person picture player report.
+ * controls size/placement; sets spacing around/inside the element.
+ * Shared rule for 2 selectors. Editing a declaration here affects the whole group below.
+ * Source rule 3395.
+ */
+.report-player-full-header-mid-type-player .thumbnails-alt-person-picture-player-report,
+.report-player-full-header-min-type-player .thumbnails-alt-person-picture-player-report {
+  width: 66px;
+  height: 84px;
+  margin-bottom: -1px;
+}
+
+/* Report player full header min type player.
+ * controls size/placement.
+ * Source rule 3396.
+ */
+.report-player-full-header-min-type-player {
+  width: auto;
+  height: 92px;
+  align-items: center;
+  flex-shrink: 0;
+  flex-direction: var(--row-direction-normal);
+}
+
+/* Report player tabs type standard.
+ * controls size/placement; sets spacing around/inside the element.
+ * Source rule 3397.
+ */
+.report-player-tabs-type-standard {
+  padding: 0 12px 0 36px;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-end;
+  flex: 1 0 0;
+  align-self: stretch;
+}
+
+/* Report states card states FM menu load game.
+ * sets the outline/corner shape; controls size/placement.
+ * Source rule 3398.
+ */
+.report-states-card-states-fm-menu_load-game {
+  height: 626px;
+  min-width: 992px;
+  flex-direction: column;
+  align-items: flex-start;
+  border-radius: var(--skin-radius-small);
+}
+
+/* Report states card states save load generic.
+ * sets the outline/corner shape; controls size/placement.
+ * Source rule 3399.
+ */
+.report-states-card-states-save-load-generic {
+  flex-direction: column;
+  align-items: flex-start;
+  border-radius: var(--skin-radius-small);
+  flex-grow: 1;
+}
+
+/* Reports focus header subject subject news outlet.
+ * controls size/placement; sets spacing around/inside the element.
+ * Source rule 3400.
+ */
+.reports-focus-header-subject-subject-news-outlet {
+  width: 820px;
+  height: var(--spacing-extra-large---64);
+  padding: var(--spacing-small---8) var(--spacing-medium---16);
+  align-items: center;
+  flex-direction: var(--row-direction-normal);
+}
+
+/* Reports focus header subject subject player.
+ * controls size/placement.
+ * Source rule 3401.
+ */
+.reports-focus-header-subject-subject-player {
+  width: 820px;
+  height: var(--spacing-extra-large---64);
+  justify-content: space-between;
+  align-items: center;
+  flex-shrink: 0;
+  flex-direction: var(--row-direction-normal);
+}
+
+/* Reports focus header subject subject vector.
+ * controls size/placement; sets spacing around/inside the element.
+ * Source rule 3402.
+ */
+.reports-focus-header-subject-subject-vector {
+  width: 820px;
+  height: var(--spacing-extra-large---64);
+  padding: var(--spacing-small---8) var(--spacing-extra-small---4);
+  justify-content: center;
+  align-items: center;
+  flex-direction: var(--row-direction-normal);
+}
+
+/* Reports header fmpedia button.
+ * sets the background fill; sets the outline/corner shape; controls size/placement; sets spacing
+ * around/inside the element.
+ * Source rule 3403.
+ */
+.reports-header-fmpedia-button {
+  width: 100px;
+  height: 28px;
+  padding: 0 var(--spacing-small---8);
+  border-width: 1px;
+  border-color: var(--skin-border-subtle);
+  background-color: var(--skin-transparent);
+  justify-content: center;
+  align-items: center;
+  border-radius: var(--numbers-border-radius-extra-small);
+  flex-direction: var(--row-direction-normal);
+}
+
+/* Reports header navigation default type card header.
+ * controls size/placement; sets spacing around/inside the element.
+ * Source rule 3404.
+ */
+.reports-header-navigation-default-type-card-header {
+  height: 40px;
+  padding: var(--spacing-extra-small---4) var(--spacing-medium---16);
+  align-items: center;
+  align-self: var(--flex-start-normal);
+  flex-direction: var(--row-direction-normal);
+  padding-right: 0;
+  padding-left: 0;
+}
+
+/* Reports header navigation default type menu header.
+ * controls size/placement; sets spacing around/inside the element.
+ * Source rule 3405.
+ */
+.reports-header-navigation-default-type-menu-header {
+  height: 40px;
+  padding: var(--spacing-extra-small---4) var(--spacing-medium---16);
+  align-items: center;
+  align-self: stretch;
+  flex-direction: var(--row-direction-normal);
+}
+
+/* Reports header navigation default type report header.
+ * controls size/placement.
+ * Source rule 3406.
+ */
+.reports-header-navigation-default-type-report-header {
+  height: 40px;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: var(--row-direction-normal);
+  align-self: flex-start;
+}
+
+/* Reports header navigation default type site header.
+ * controls size/placement; sets spacing around/inside the element.
+ * Source rule 3407.
+ */
+.reports-header-navigation-default-type-site-header {
+  padding: var(--spacing-padding-small---8) var(--spacing-padding-medium---16);
+  align-items: center;
+  flex-direction: var(--row-direction-normal);
+  justify-content: space-between;
+}
+
+/* Reports header navigation url display.
+ * sets the background fill; sets the outline/corner shape; controls size/placement; sets spacing
+ * around/inside the element.
+ * Source rule 3408.
+ */
+.reports-header-navigation-url_display {
+  height: 32px;
+  padding: var(--spacing-padding-small---8) var(--spacing-padding-tiles);
+  border-width: 1px;
+  border-color: var(--skin-border-subtle);
+  background-color: var(--skin-surface-page-alpha-100);
+  align-items: center;
+  border-radius: var(--numbers-border-radius-small);
+  flex-direction: var(--row-direction-normal);
+}
+
+/* Reports main site default.
+ * controls size/placement.
+ * Source rule 3409.
+ */
+.reports-main-site-default {
+  width: 1366px;
+  height: 826px;
+}
+
+/* Reports main tabs default type site competition platform FM desktop.
+ * controls size/placement.
+ * Source rule 3410.
+ */
+.reports-main-tabs-default-type-site-competition-platform-fm-pc {
+  width: 1366px;
+  height: 836px;
+  flex-shrink: 0;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Reputation highlight color.
+ * Changes text/foreground colour.
+ * Source rule 3411.
+ */
+.reputation-highlight-color {
+  color: var(--skin-component-reputation-highlight-color-foreground);
+}
+
+/* Reputation highlight color.
+ * Changes text/foreground colour.
+ * Source rule 3411.
+ */
+.reputation-highlight-color-heading-text .data-display-data_display-table-heading-default-default .text-header-container .sitext {
+  color: var(--skin-component-reputation-highlight-color-heading-text-data-display-data-display-table-heading-default-default-text-header-contain-foreground);
+}
+
+/* Reputation radial.
+ * controls size/placement.
+ * Source rule 3412.
+ */
+.reputation-radial {
+  width: var(--height-height-16);
+  height: var(--height-height-16);
+}
+
+/* Unity radio button checkmark background.
+ * Shows these elements; sets the background fill; sets the outline/corner shape.
+ * Source rule 3413.
+ */
+.ring-radio-button-group .unity-radio-button__checkmark-background {
+  display: flex;
+  border-color: var(--skin-text-secondary);
+  background-color: var(--skin-transparent);
+}
+
+/* Role selector standard property 1 variant2.
+ * controls size/placement; sets spacing around/inside the element.
+ * Source rule 3414.
+ */
+.role_selector-standard-property-1-variant2 {
+  width: 295px;
+  height: 452px;
+  flex-direction: column;
+  align-items: flex-start;
+  flex-shrink: 0;
+  margin-right: var(--spacing-tiles);
+}
+
+/* Rotate minus ninety degrees.
+ * sets the native component presentation.
+ * Source rule 3415.
+ */
+.rotate-minus-ninety-degrees {
+  rotate: -90deg;
+}
+
+/* Rotate ninety degrees.
+ * sets the native component presentation.
+ * Source rule 3416.
+ */
+.rotate-ninety-degrees {
+  rotate: 90deg;
+}
+
+/* Row direction always inverted.
+ * controls size/placement.
+ * Shared rule for 2 selectors. Editing a declaration here affects the whole group below.
+ * Source rule 3417.
+ */
+.speakto-panel-right-aligned {
+  flex-direction: var(--row-direction-always-reverse);
+}
+
+/* Row direction inverted.
+ * controls size/placement.
+ * Shared rule for 5 selectors. Editing a declaration here affects the whole group below.
+ * Source rule 3418.
+ */
+.row-direction-inverted .embedded-button,
+.row-direction-inverted .cell-large,
+.row-direction-inverted .cell-medium,
+.row-direction-inverted .cell-small {
+  flex-direction: var(--row-direction-reverse);
+}
+
+/* Row property 1 neutral.
+ * sets the background fill; controls size/placement; sets spacing around/inside the element.
+ * Source rule 3419.
+ */
+.row-property-1-neutral {
+  background-color: var(--skin-on-media-alpha-04);
+  padding-top: var(--global-padding-small);
+  padding-right: var(--global-padding-regular);
+  padding-bottom: var(--global-padding-small);
+  padding-left: var(--global-padding-regular);
+  align-items: center;
+  align-self: stretch;
+  flex-direction: var(--row-direction-normal);
+}
+
+/* Row property 1 warning blocker row.
+ * sets the background fill; controls size/placement; sets spacing around/inside the element.
+ * Source rule 3420.
+ */
+.row-property-1-warning--blocker-row {
+  background-color: var(--staff-medical-physio-16);
+  padding-top: var(--global-padding-small);
+  padding-right: var(--global-padding-regular);
+  padding-bottom: var(--global-padding-small);
+  padding-left: var(--global-padding-regular);
+  align-items: center;
+  align-self: stretch;
+  margin-bottom: var(--global-gap-regular);
+  flex-direction: var(--row-direction-normal);
+}
+
+/* Rules all ucl.
+ * sets the outline/corner shape; controls size/placement; sets spacing around/inside the element.
+ * Source rule 3421.
+ */
+.rules-all---ucl {
+  width: 312px;
+  height: 804px;
+  padding: var(--spacing-medium---16) var(--spacing-tiles);
+  border-width: var(--skin-card-border-width);
+  border-color: var(--skin-card-border-colour);
+  flex-direction: column;
+  /* Constrain rule cards and explanatory copy to the sidebar's content width;
+   * intrinsic text width otherwise overflows with the template's body face. */
+  align-items: var(--align-stretch);
+  border-radius: var(--skin-radius-card);
+}
+
+/* Rules min.
+ * sets the background fill; sets the outline/corner shape; controls size/placement; sets spacing
+ * around/inside the element.
+ * Source rule 3422.
+ */
+.rules-min {
+  border-width: var(--layout-modules-block-border-thickness);
+  border-color: var(--skin-border-subtle);
+  background-color: var(--skin-surface-panel);
+  padding-top: var(--global-padding-extra-large);
+  padding-right: var(--global-padding-large);
+  padding-bottom: var(--global-padding-extra-large);
+  padding-left: var(--global-padding-large);
+  align-items: flex-start;
+  border-radius: var(--layout-modules-block-radius);
+  flex-direction: var(--row-direction-normal);
+}
+
+/* Save block buttons frame.
+ * controls size/placement.
+ * Source rule 3423.
+ */
+.save-block-buttons-frame {
+  align-self: stretch;
+  min-height: 32px;
+}
+
+/* Save browse top frame.
+ * controls size/placement; sets spacing around/inside the element.
+ * Source rule 3424.
+ */
+.save-browse-top-frame {
+  width: 100%;
+  min-height: 32px;
+  margin-bottom: 8px;
+}
+
+/* Club Player Staff
+ * Native club player staff selectors, with adjacent shared rules in source order.
+ */
+
+/* Squad depth fmc block.
+ * controls size/placement.
+ * Source rule 3689.
+ */
+.squad-depth-fmc-block {
+  flex-direction: column;
+  align-self: stretch;
+}
+
+/* Squad depth fmc carousel widget.
+ * sets the outline/corner shape; sets spacing around/inside the element.
+ * Source rule 3690.
+ */
+.squad-depth-fmc-carousel-widget {
+  padding: 4px 8px 4px 8px;
+  border-radius: var(--skin-radius-small);
+}
+
+/* Squad depth fmc header.
+ * sets the background fill; sets the outline/corner shape; controls size/placement; sets spacing
+ * around/inside the element.
+ * Source rule 3691.
+ */
+.squad-depth-fmc-header {
+  height: 56px;
+  padding: 8px;
+  background-color: var(--colours-tactics-base-80);
+  border-radius: var(--skin-radius-control) var(--skin-radius-control) 0px 0px;
+  align-self: stretch;
+  align-items: center;
+}
+
+/* Squad depth fmc lacking depth border colour.
+ * sets the outline/corner shape.
+ * Source rule 3692.
+ */
+.squad-depth-fmc-lacking-depth-border-colour {
+  border-color: var(--colours-base-orange-strong);
+}
+
+/* Squad depth fmc lacking depth colour.
+ * sets the background fill; sets the outline/corner shape.
+ * Source rule 3693.
+ */
+.squad-depth-fmc-lacking-depth-colour {
+  border-color: var(--colours-base-orange-strong);
+  background-color: var(--colours-base-orange-deep);
+}
+
+/* Squad depth fmc large widget.
+ * controls size/placement.
+ * Source rule 3694.
+ */
+.squad-depth-fmc-large-widget {
+  min-width: 200px;
+  min-height: 100px;
+}
+
+/* Squad depth fmc min res widget.
+ * controls size/placement.
+ * Source rule 3695.
+ */
+.squad-depth-fmc-min-res-widget {
+  min-width: 138px;
+  min-height: 60px;
+}
+
+/* Squad depth fmc pitch container.
+ * sets the outline/corner shape; controls size/placement.
+ * Source rule 3696.
+ */
+.squad-depth-fmc-pitch-container {
+  border-width: 2px;
+  border-color: var(--colours-base-neutral-white);
+  border-radius: var(--skin-radius-control);
+  align-self: stretch;
+  flex-direction: column;
+}
+
+/* Squad depth fmc player depth cell body.
+ * sets the background fill; sets the outline/corner shape; controls size/placement; sets spacing
+ * around/inside the element.
+ * Source rule 3697.
+ */
+.squad-depth-fmc-player-depth-cell-body {
+  padding: var(--spacing-padding-extra-small---4);
+  border-width: 0px 1px 1px 1px;
+  background-color: var(--skin-surface-canvas-alpha-90);
+  flex-direction: column;
+  align-items: flex-start;
+  align-self: stretch;
+  border-radius: 0px 0px var(--skin-radius-control) var(--skin-radius-control);
+}
+
+/* Squad depth fmc player depth cell header.
+ * sets the outline/corner shape; controls size/placement; sets spacing around/inside the element.
+ * Source rule 3698.
+ */
+.squad-depth-fmc-player-depth-cell-header {
+  padding: var(--spacing-padding-extra-small---4) var(--spacing-padding-small---8);
+  border-width: 1px 1px 0px 1px;
+  justify-content: space-between;
+  align-items: center;
+  align-self: stretch;
+  flex-direction: var(--row-direction-normal);
+  border-radius: var(--skin-radius-control) var(--skin-radius-control) 0px 0px;
+}
+
+/* Squad depth fmc player depth cell text.
+ * sets spacing around/inside the element.
+ * Source rule 3699.
+ */
+.squad-depth-fmc-player-depth-cell-text {
+  padding-top: 2px;
+}
+
+/* Squad depth fmc player name and ability row.
+ * controls size/placement.
+ * Source rule 3700.
+ */
+.squad-depth-fmc-player-name-and-ability-row {
+  width: 100%;
+  height: 20px;
+}
+
+/* Squad depth fmc poor depth border colour.
+ * sets the outline/corner shape.
+ * Source rule 3701.
+ */
+.squad-depth-fmc-poor-depth-border-colour {
+  border-color: var(--colours-linear-scale-strong-1);
+}
+
+/* Squad depth fmc poor depth colour.
+ * sets the background fill; sets the outline/corner shape.
+ * Source rule 3702.
+ */
+.squad-depth-fmc-poor-depth-colour {
+  border-color: var(--colours-linear-scale-strong-1);
+  background-color: var(--colours-brand-tints-highlight-red-80);
+}
+
+/* Squad depth fmc standard widget.
+ * controls size/placement.
+ * Source rule 3703.
+ */
+.squad-depth-fmc-standard-widget {
+  min-width: 200px;
+  min-height: 60px;
+}
+
+/* Squad depth fmc transfer offer recap.
+ * sets the outline/corner shape; sets spacing around/inside the element.
+ * Source rule 3704.
+ */
+.squad-depth-fmc-transfer-offer-recap {
+  padding: 4px 8px 4px 8px;
+  border-radius: var(--skin-radius-shell);
+}
+
+/* States templates tile content.
+ * sets spacing around/inside the element.
+ * Source rule 3705.
+ */
+.squad-number-tile-2x1 .states-templates-tile-content {
+  padding-right: 0;
+}
+
+/* Squad numbers disaplay table view.
+ * sets the background fill; sets the outline/corner shape; controls size/placement; sets spacing
+ * around/inside the element.
+ * Source rule 3706.
+ */
+.squad-numbers-disaplay-table-view {
+  width: auto;
+  height: auto;
+  padding: var(--spacing-tiles);
+  border-width: var(--layout-modules-block-border-thickness);
+  border-color: var(--skin-border-subtle);
+  background-color: var(--skin-surface-panel);
+  flex-direction: column;
+  align-items: flex-start;
+  flex-shrink: 0;
+  border-radius: var(--layout-modules-block-radius);
+}
+
+/* Squad overview block.
+ * sets the background fill; sets the outline/corner shape.
+ * Source rule 3707.
+ */
+.squad-overview-block {
+  border-width: var(--layout-modules-block-border-thickness);
+  border-color: var(--skin-border-subtle);
+  background-color: var(--midnight);
+  border-radius: var(--layout-modules-block-radius);
+}
+
+/* Squad overview item.
+ * sets the background fill; sets the outline/corner shape.
+ * Source rule 3708.
+ */
+.squad-overview-item {
+  border-color: var(--skin-border-subtle);
+  background-color: var(--midnight);
+  border-top-width: 0px;
+  border-right-width: 1px;
+  border-bottom-width: 0px;
+  border-left-width: 0px;
+}
+
+/* SI dropdown selection field.
+ * sets the outline/corner shape; defines how state changes animate.
+ * Source rule 3709.
+ */
+.squad-overview-player-block .si-dropdown__selection-field {
+  border-radius: var(--global-radius-none);
+  transition: background-color var(--global-transition-buttons) var(--global-transition-animation-buttons);
+}
+
+/* SI dropdown selection field — pressed.
+ * sets the background fill.
+ * Source rule 3710.
+ */
+.squad-overview-player-block .si-dropdown__selection-field:active {
+  background-color: var(--skin-border-subtle);
+}
+
+/* SI dropdown selection field — disabled.
+ * sets the background fill.
+ * Source rule 3711.
+ */
+.squad-overview-player-block .si-dropdown__selection-field:disabled {
+  background-color: var(--skin-border-subtle);
+}
+
+/* Squad reg ineligble table row.
+ * sets the background fill.
+ * Source rule 3712.
+ */
+.squad-reg-ineligble-table-row {
+  background-color: var(--interaction-input-switch-active-row-table-warning);
+}
+
+/* Squad registration notification bar warning.
+ * sets the background fill; sets the outline/corner shape; controls size/placement; sets spacing
+ * around/inside the element.
+ * Source rule 3713.
+ */
+.squad-registration-notification-bar-warning {
+  border-width: 1px;
+  border-color: var(--interaction-input-switch-active-surface-warning);
+  background-color: var(--colours-base-orange-base);
+  padding-top: var(--global-padding-regular);
+  padding-right: var(--global-padding-regular);
+  padding-bottom: var(--global-padding-regular);
+  padding-left: var(--global-padding-regular);
+  flex-direction: column;
+  align-items: flex-start;
+  border-radius: var(--global-radius-small);
+}
+
+/* Stadium sponsor.
+ * sets the background fill.
+ * Source rule 3714.
+ */
+.stadium-sponsor {
+  background-color: var(--colours-base-yellow-strong);
+}
+
+/* Staff additionals property 1 manager.
+ * controls size/placement.
+ * Source rule 3715.
+ */
+.staff-additionals-property-1-manager {
+  width: 22%;
+  height: 100%;
+  align-items: flex-start;
+  flex-direction: var(--row-direction-normal);
+}
+
+/* Staff feedback row type base.
+ * sets spacing around/inside the element.
+ * Source rule 3716.
+ */
+.staff-feedback-row-type-base {
+  padding-left: 8px;
+  padding-right: 8px;
+  padding-bottom: 6px;
+  padding-top: 6px;
+}
+
+/* Staff role stack property 1 manager.
+ * controls size/placement.
+ * Source rule 3717.
+ */
+.staff-role-stack-property-1-manager {
+  width: 26%;
+  height: 100%;
+  flex-direction: column;
+  align-items: flex-start;
+  align-self: stretch;
+}
+
+/* Club Player Staff
+ * Native club player staff selectors, with adjacent shared rules in source order.
+ */
+
+/* Club icon small.
+ * sets spacing around/inside the element.
+ * Shared rule for 2 selectors. Editing a declaration here affects the whole group below.
+ * Source rule 4023.
+ */
+.team-cell-small-reversed-override .club-icon-small,
+.nation-cell-short-reversed-override .margin-right-global-gap-small {
+  margin-right: var(--global-gap-none);
+  margin-left: var(--global-gap-close);
+}
+
+/* Team comparison rating above average.
+ * sets the background fill.
+ * Source rule 4024.
+ */
+.team-comparison-rating-above-average {
+  background-color: var(--colours-linear-scale-strong-8-alpha-16);
+}
+
+/* Team comparison rating average text.
+ * Changes text/foreground colour.
+ * Shared rule for 3 selectors. Editing a declaration here affects the whole group below.
+ * Source rule 4025.
+ */
+.team-comparison-rating-average-text,
+.transfer-window-restricted,
+.data_knowledge_level_3_decent {
+  color: var(--theme-color-yellow-soft-soft);
+}
+
+/* Team comparison rating below average thumb colour.
+ * tints background artwork.
+ * Source rule 4026.
+ */
+.team-comparison-rating-below-average-thumb-colour {
+  -unity-background-image-tint-color: var(--colours-linear-scale-strong-3);
+}
+
+/* Team field row odd.
+ * sets the background fill; controls size/placement.
+ * Source rule 4027.
+ */
+.team-field-row-odd {
+  background-color: var(--skin-surface-raised);
+  align-self: stretch;
+}
+
+/* Team form defeat.
+ * sets the background fill; controls size/placement.
+ * Source rule 4028.
+ */
+.team-form-defeat {
+  height: 60%;
+  background-color: var(--communication-feedback-negative);
+}
+
+/* Team form draw.
+ * sets the background fill; controls size/placement.
+ * Source rule 4029.
+ */
+.team-form-draw {
+  height: 30%;
+  background-color: var(--skin-on-media-alpha-35);
+}
+
+/* Team form panel.
+ * sets the background fill; sets the outline/corner shape.
+ * Source rule 4030.
+ */
+.team-form-panel {
+  background-color: var(--skin-surface-panel);
+  border-radius: var(--skin-radius-small);
+}
+
+/* Team form win.
+ * sets the background fill; controls size/placement.
+ * Source rule 4031.
+ */
+.team-form-win {
+  height: 60%;
+  background-color: var(--communication-feedback-positive);
+}
+
+/* Team instruction cell pending.
+ * sets the background fill; sets the outline/corner shape; controls size/placement.
+ * Source rule 4032.
+ */
+.team-instruction-cell--pending {
+  height: auto;
+  border-width: var(--global-border-width-thin);
+  border-color: var(--colours-tactics-tweak-pending);
+  background-color: var(--colours-tactics-tweak-pending-background);
+  border-top-left-radius: var(--global-radius-small);
+  border-top-right-radius: var(--global-radius-small);
+  border-bottom-right-radius: var(--global-radius-small);
+  border-bottom-left-radius: var(--global-radius-small);
+}
+
+/* Team instruction cell tweaked.
+ * sets the background fill; sets the outline/corner shape; controls size/placement.
+ * Source rule 4033.
+ */
+.team-instruction-cell--tweaked {
+  height: auto;
+  border-width: var(--global-border-width-thin);
+  border-color: var(--colours-base-cyan-50);
+  background-color: var(--skin-component-team-instruction-cell-tweaked-background);
+  border-top-left-radius: var(--global-radius-small);
+  border-top-right-radius: var(--global-radius-small);
+  border-bottom-right-radius: var(--global-radius-small);
+  border-bottom-left-radius: var(--global-radius-small);
+}
+
+/* Text second.
+ * sets spacing around/inside the element.
+ * Shared rule for 2 selectors. Editing a declaration here affects the whole group below.
+ * Source rule 4034.
+ */
+.team-instruction-cell--tweaked #text-second,
+.team-instruction-cell--pending #text-second {
+  padding-right: var(--global-padding-small);
+}
+
+/* Team instruction cell tweak icon.
+ * Hides these elements; controls size/placement.
+ * Shared rule for 3 selectors. Editing a declaration here affects the whole group below.
+ * Source rule 4035.
+ */
+.team-instruction-cell__tweak-icon,
+.team-instruction-tile__tweak-icon,
+.team-instruction-tile__tweak-icon-pending {
+  display: none;
+  width: 16px;
+  height: 16px;
+}
+
+/* Team instruction cell tweak icon holder.
+ * controls size/placement.
+ * Source rule 4036.
+ */
+.team-instruction-cell__tweak-icon-holder {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: var(--global-padding-regular);
+  align-items: center;
+  justify-content: center;
+}
+
+/* Team instruction option list tweak footer.
+ * Hides these elements; controls size/placement.
+ * Source rule 4037.
+ */
+.team-instruction-option-list__tweak-footer {
+  display: none;
+  flex-direction: var(--row-direction-normal);
+  align-items: flex-start;
+}
+
+/* Team instruction option tweak badge.
+ * Hides these elements; controls size/placement.
+ * Source rule 4038.
+ */
+.team-instruction-option__tweak-badge {
+  display: none;
+  flex-direction: var(--row-direction-normal);
+  align-items: center;
+}
+
+/* Team instruction option tweak tooltip.
+ * sets font/text presentation; controls size/placement.
+ * Source rule 4039.
+ */
+.team-instruction-option__tweak-tooltip {
+  white-space: normal;
+  max-width: 250px;
+}
+
+/* The phase-relevant tactic tile keeps its accent outline as a meaningful
+ * state, while ordinary card tiles rely on their surface layers.
+ * Source rule 4040.
+ */
+.team-instruction-tile--phase-relevant .surfaces-card-tile-border {
+  border-width: var(--global-border-width-tile-card);
+  border-color: var(--skin-brand-accent);
+  background-color: var(--colours-tactics-phase-highlight-background);
+}
+
+/* Team instruction tile list item.
+ * controls size/placement.
+ * Source rule 4041.
+ */
+.team-instruction-tile-list-item {
+  width: 148px;
+  height: 148px;
+  flex-shrink: 0;
+}
+
+/* Team picker.
+ * sets the background fill; sets the outline/corner shape; controls size/placement.
+ * Source rule 4042.
+ */
+.team-picker {
+  width: 24px;
+  height: 24px;
+  border-color: var(--skin-border-subtle);
+  background-color: var(--skin-surface-canvas-alpha-56);
+  border-top-left-radius: var(--skin-radius-compact);
+  border-top-right-radius: var(--skin-radius-compact);
+  border-bottom-right-radius: var(--skin-radius-compact);
+  border-bottom-left-radius: var(--skin-radius-compact);
+  align-items: center;
+  align-self: center;
+  justify-content: center;
+  border-top-width: 1px;
+  border-right-width: 1px;
+  border-bottom-width: 1px;
+  border-left-width: 1px;
+}
+
+/* Team picker foreground.
+ * sets the background fill; sets the outline/corner shape; controls size/placement.
+ * Source rule 4043.
+ */
+.team-picker-foreground {
+  width: 24px;
+  height: 24px;
+  border-color: var(--skin-border-subtle);
+  background-color: var(--skin-text-disabled);
+  border-top-left-radius: var(--skin-radius-compact);
+  border-top-right-radius: var(--skin-radius-compact);
+  border-bottom-right-radius: var(--skin-radius-compact);
+  border-bottom-left-radius: var(--skin-radius-compact);
+  align-items: center;
+  align-self: center;
+  justify-content: center;
+  border-top-width: 1px;
+  border-right-width: 1px;
+  border-bottom-width: 1px;
+  border-left-width: 1px;
+}
+
+/* Team report assist summary record.
+ * sets spacing around/inside the element.
+ * Source rule 4044.
+ */
+.team-report-assist-summary-record {
+  margin: 0 0 12px 0;
+}
+
+/* Team report assist type record.
+ * controls size/placement; sets spacing around/inside the element.
+ * Source rule 4045.
+ */
+.team-report-assist-type-record {
+  margin: 0 0 12px 0;
+  align-items: flex-end;
+}
+
+/* Team report formation circle.
+ * sets the background fill; sets the outline/corner shape; controls size/placement.
+ * Source rule 4046.
+ */
+.team-report-formation-circle {
+  width: 6px;
+  height: 6px;
+  background-color: var(--colours-base-neutral-white);
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+  border-bottom-left-radius: 3px;
+  align-self: center;
+  align-content: center;
+}
+
+/* Team report goal analysis positions item goals conceding.
+ * sets the background fill; sets the outline/corner shape; controls size/placement; sets spacing
+ * around/inside the element.
+ * Source rule 4047.
+ */
+.team-report-goal-analysis-positions-item-goals-conceding {
+  width: var(--spacing-padding-extra-large---64);
+  height: 48px;
+  padding: var(--numbers-border-radius-null) var(--spacing-padding-new-ex);
+  border-width: 2px;
+  border-color: var(--skin-text-primary);
+  background-color: var(--colours-base-red-base);
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  border-radius: var(--skin-radius-micro);
+}
+
+/* Team report goal analysis positions item goals scoring.
+ * sets the background fill; sets the outline/corner shape; controls size/placement; sets spacing
+ * around/inside the element.
+ * Source rule 4048.
+ */
+.team-report-goal-analysis-positions-item-goals-scoring {
+  width: var(--spacing-padding-extra-large---64);
+  height: 48px;
+  padding: var(--numbers-border-radius-null) var(--spacing-padding-new-ex);
+  border-width: 2px;
+  border-color: var(--skin-text-primary);
+  background-color: var(--colours-base-teal-base);
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  border-radius: var(--skin-radius-micro);
+}
+
+/* Team report goal analysis positions item no goals.
+ * sets the background fill; sets the outline/corner shape; controls size/placement; sets spacing
+ * around/inside the element.
+ * Source rule 4049.
+ */
+.team-report-goal-analysis-positions-item-no-goals {
+  width: var(--spacing-padding-extra-large---64);
+  height: 48px;
+  padding: var(--numbers-border-radius-null) var(--spacing-padding-new-ex);
+  border-width: 2px;
+  border-color: var(--skin-surface-canvas-alpha-85);
+  background-color: var(--skin-surface-page);
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  border-radius: var(--skin-radius-micro);
+}
+
+/* Team report header team icon.
+ * controls size/placement; sets spacing around/inside the element.
+ * Source rule 4050.
+ */
+.team-report-header-team-icon {
+  width: 42.667px;
+  height: 42.667px;
+  padding: 0.014px 4.696px 0.044px 4.931px;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  flex-direction: var(--row-direction-normal);
+}
+
+/* Team report segmented bar chart segment container.
+ * controls size/placement; sets spacing around/inside the element.
+ * Source rule 4051.
+ */
+.team-report-segmented-bar-chart-segment-container {
+  flex-direction: var(--row-direction-normal);
+  flex-shrink: 0;
+  align-self: flex-start;
+  margin-right: 2px;
+  margin-top: 0;
+  margin-bottom: 8px;
+}
+
+/* Team report segmented bar chart segment container element.
+ * Shows these elements; sets the background fill; sets the outline/corner shape; controls size/placement.
+ * Source rule 4052.
+ */
+.team-report-segmented-bar-chart-segment-container-element {
+  display: flex;
+  height: 34px;
+  padding: 8px 16px;
+  border-width: 1px;
+  border-color: var(--skin-on-media-alpha-20);
+  background-color: var(--skin-transparent);
+  align-items: center;
+  margin-right: 2px;
+}
+
+/* Team report team badge.
+ * controls size/placement; sets spacing around/inside the element.
+ * Source rule 4053.
+ */
+.team-report-team-badge {
+  width: 24px;
+  height: 24px;
+  padding: 0.008px 2.641px 0.024px 2.774px;
+  justify-content: center;
+  align-items: center;
+  margin-right: 4px;
+  flex-direction: var(--row-direction-normal);
+}
+
+/* Team report upcoming match kit.
+ * controls size/placement; sets spacing around/inside the element.
+ * Source rule 4054.
+ */
+.team-report-upcoming-match-kit {
+  width: 128px;
+  height: 128px;
+  min-width: 128px;
+  min-height: 128px;
+  margin-bottom: 8px;
+}
+
+/* Team talk block 8x4.
+ * sets the outline/corner shape; controls size/placement; sets spacing around/inside the element.
+ * Source rule 4055.
+ */
+.team-talk-block-8x4 {
+  padding: var(--spacing-medium---16);
+  border-width: 1px;
+  border-color: var(--skin-border-subtle);
+  flex-direction: var(--row-direction-normal);
+  align-items: flex-start;
+  border-radius: var(--skin-radius-card);
+}
+
+/* Team talk block8x4 row.
+ * sets spacing around/inside the element.
+ * Source rule 4056.
+ */
+.team-talk-block8x4-row {
+  padding-left: 8px;
+  padding-right: 8px;
+}
+
+/* Team talk header.
+ * controls size/placement; sets spacing around/inside the element.
+ * Source rule 4057.
+ */
+.team-talk-header {
+  height: 80px;
+  padding-left: 16px;
+  padding-right: 16px;
+  padding-top: 16px;
+  padding-bottom: 16px;
+}
+
+/* SI dropdown selection field.
+ * sets the background fill; sets the outline/corner shape; controls size/placement; sets spacing
+ * around/inside the element.
+ * Source rule 4058.
+ */
+.team_card_quick_pick_dropdown .si-dropdown__selection-field {
+  padding: var(--spacing-small---8) var(--global-padding-regular);
+  border-width: 1px;
+  border-color: var(--skin-border-subtle);
+  background-color: var(--skin-control-background);
+  max-height: 32px;
+  align-items: center;
+  border-top-right-radius: var(--numbers-border-radius-small);
+  border-bottom-right-radius: var(--numbers-border-radius-small);
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  flex-direction: var(--row-direction-normal);
+  transition-property: var(--transition-props-paint);
+  transition-duration: var(--global-transition-long);
+  transition-timing-function: ease-in-out;
+}
+
+/* Text align upper left.
+ * sets font/text presentation.
+ * Source rule 4059.
+ */
+.text-align-upper-left {
+  -unity-text-align: upper-left;
+}
+
+/* Text colour surface icon standard.
+ * Changes text/foreground colour.
+ * Source rule 4060.
+ */
+.text-colour-surface-icon-standard {
+  color: var(--skin-text-primary);
+}
+
+/* Text wrap normal.
+ * sets font/text presentation.
+ * Source rule 4061.
+ */
+.text-wrap-normal {
+  white-space: normal;
+}
+
+/* Club Player Staff
+ * Native club player staff selectors, with adjacent shared rules in source order.
+ */
+
+/* Training improvement very good color.
+ * Changes text/foreground colour.
+ * Source rule 4176.
+ */
+.training-improvement-very-good-color {
+  color: var(--skin-component-training-improvement-very-good-color-foreground);
+}
+
+/* Training intensity block training intensity.
+ * sets the outline/corner shape; controls size/placement; sets spacing around/inside the element.
+ * Source rule 4177.
+ */
+.training-intensity-block-training-intensity {
+  width: 100%;
+  padding: var(--spacing-medium---16);
+  border-width: 1px;
+  border-color: var(--skin-border-subtle);
+  flex-direction: column;
+  align-items: flex-start;
+  border-radius: var(--skin-radius-card);
+}
+
+/* Training intensity block upcoming fixtures.
+ * sets the background fill; sets spacing around/inside the element.
+ * Source rule 4178.
+ */
+.training-intensity-block-upcoming-fixtures {
+  padding: var(--padding-padding-12);
+  background-color: var(--skin-surface-panel);
+}
+
+/* Training load heavy progress.
+ * sets the background fill.
+ * Source rule 4179.
+ */
+.training-load-heavy-progress {
+  background-color: var(--linear-ranges-5-values-2);
+}
+
+/* Training match prep selector popup.
+ * controls size/placement.
+ * Source rule 4180.
+ */
+.training-match-prep-selector-popup {
+  width: 566px;
+  height: 288px;
+  align-items: flex-start;
+  flex-direction: var(--row-direction-normal);
+}
+
+/* Training review match preparation.
+ * tints background artwork.
+ * Shared rule for 2 selectors. Editing a declaration here affects the whole group below.
+ * Source rule 4181.
+ */
+.training-review-match-preparation,
+.player_position-de-tint {
+  -unity-background-image-tint-color: var(--colours-base-cyan-strong);
+}
+
+/* Training schedule block two weeks.
+ * sets the outline/corner shape; controls size/placement; sets spacing around/inside the element.
+ * Source rule 4182.
+ */
+.training-schedule-block-two-weeks {
+  width: 640px;
+  padding: var(--spacing-medium---16) var(--spacing-medium---16);
+  border-width: 1px;
+  border-color: var(--skin-border-subtle);
+  align-items: flex-start;
+  border-radius: var(--skin-radius-control);
+  flex-direction: var(--row-direction-normal);
+}
+
+/* Training schedule impact row.
+ * controls size/placement.
+ * Source rule 4183.
+ */
+.training-schedule-impact-row {
+  width: 90px;
+  height: auto;
+  align-self: auto;
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-direction: column;
+}
+
+/* Data display graphs see saw bar to left regular type huge.
+ * controls size/placement.
+ * Shared rule for 2 selectors. Editing a declaration here affects the whole group below.
+ * Source rule 4184.
+ */
+.training-schedule-impact-row .data_display-graphs-see-saw-bar-to-left-regular-type-huge,
+.training-schedule-impact-row .data_display-graphs-see-saw-bar-to-right-regular-type-huge {
+  width: 45px;
+}
+
+/* Training schedule selector background.
+ * sets the background fill.
+ * Shared rule for 2 selectors. Editing a declaration here affects the whole group below.
+ * Source rule 4185.
+ */
+.training-schedule-selector-background,
+.virtualised-list__item--selected:hover .manager-creation-menu-text-block {
+  background-color: var(--skin-control-background);
+}
+
+/* Training schedule selector popup.
+ * controls size/placement.
+ * Source rule 4186.
+ */
+.training-schedule-selector-popup {
+  height: 385px;
+  align-items: flex-start;
+  flex-direction: var(--row-direction-normal);
+}
+
+/* Training schedule selector preview.
+ * controls size/placement; sets spacing around/inside the element.
+ * Source rule 4187.
+ */
+.training-schedule-selector-preview {
+  width: 350px;
+  padding: var(--global-padding-large) var(--global-padding-extra-extra-large);
+  align-self: stretch;
+}
+
+/* Training schedule selector row.
+ * controls size/placement; sets spacing around/inside the element.
+ * Source rule 4188.
+ */
+.training-schedule-selector-row {
+  height: 32px;
+  padding: var(--global-padding-regular);
+  flex-direction: var(--row-direction-normal);
+}
+
+/* Training see saw bar left regular.
+ * sets the background fill; sets the outline/corner shape; controls size/placement; defines how state
+ * changes animate.
+ * Source rule 4189.
+ */
+.training-see-saw-bar-left-regular {
+  width: 100px;
+  height: 8px;
+  background-color: var(--skin-on-media-alpha-16);
+  align-items: center;
+  flex-shrink: 0;
+  border-radius: var(--skin-radius-small) 0px 0px var(--skin-radius-small);
+  transition: flex-grow var(--global-transition-short) ease-out-bounce, width var(--global-transition-short) ease-out-bounce;
+}
+
+/* Training see saw bar right regular.
+ * sets the background fill; sets the outline/corner shape; controls size/placement; defines how state
+ * changes animate.
+ * Source rule 4190.
+ */
+.training-see-saw-bar-right-regular {
+  width: 100px;
+  height: 8px;
+  background-color: var(--skin-on-media-alpha-16);
+  align-items: center;
+  flex-shrink: 0;
+  border-radius: 0px var(--skin-radius-small) var(--skin-radius-small) 0px;
+  transition: flex-grow var(--global-transition-short) ease-out-bounce, width var(--global-transition-short) ease-out-bounce;
+}
+
+/* Training button property 1 default.
+ * sets the outline/corner shape; controls size/placement; sets spacing around/inside the element.
+ * Source rule 4191.
+ */
+.training_button-property-1-default {
+  padding: var(--spacing-padding-medium---16);
+  border-width: 1px;
+  border-color: var(--skin-border-subtle);
+  align-items: center;
+  align-self: stretch;
+  border-radius: var(--skin-radius-card);
+  flex-direction: var(--row-direction-normal);
+  margin-top: 4px;
+  margin-bottom: 4px;
+}
+
+/* Selected fill and foreground use the paired default Dugout Volt/ink roles.
+ */
+.training_tab-group .unity-radio-button-group__child-active {
+  border-color: var(--skin-action-primary-border);
+  background-color: var(--skin-selection-background);
+  color: var(--skin-selection-foreground);
+}
+
+/* Transfer budget banner over budget.
+ * sets the background fill; sets the outline/corner shape; controls size/placement.
+ * Source rule 4193.
+ */
+.transfer-budget-banner-over-budget {
+  height: 20px;
+  background-color: var(--skin-component-transfer-budget-banner-over-budget-background);
+  border-radius: var(--border-radius-radius-8);
+}
+
+/* Transfer budget banner scouting required.
+ * sets the background fill; sets the outline/corner shape; controls size/placement.
+ * Source rule 4194.
+ */
+.transfer-budget-banner-scouting-required {
+  height: 20px;
+  background-color: var(--skin-on-media-alpha-08);
+  border-radius: var(--border-radius-radius-8);
+}
+
+/* Transfer budget banner within budget.
+ * sets the background fill; sets the outline/corner shape; controls size/placement.
+ * Source rule 4195.
+ */
+.transfer-budget-banner-within-budget {
+  height: 20px;
+  background-color: var(--staff-recruitment-loan-manager-16);
+  border-radius: var(--border-radius-radius-8);
+}
+
+/* Transfer hub story.
+ * controls size/placement.
+ * Source rule 4196.
+ */
+.transfer-hub-story {
+  min-width: 220px;
+}
+
+/* Transfer in property 1 club adverts property 2 user.
+ * sets the background fill; sets the outline/corner shape; controls size/placement; sets spacing
+ * around/inside the element.
+ * Source rule 4197.
+ */
+.transfer-in-property-1-club-adverts-property-2-user {
+  width: auto;
+  height: auto;
+  padding: 12px;
+  border-width: var(--layout-modules-block-border-thickness);
+  border-color: var(--skin-border-subtle);
+  background-color: var(--skin-surface-panel);
+  flex-direction: column;
+  align-items: flex-start;
+  flex-shrink: 0;
+  border-radius: var(--layout-modules-block-radius);
+  padding-top: 0;
+  padding-right: 0;
+  padding-bottom: 0;
+  padding-left: 0;
+}
+
+/* Transfer interest rating label extremely doubtful.
+ * Changes text/foreground colour.
+ * Shared rule for 2 selectors. Editing a declaration here affects the whole group below.
+ * Source rule 4198.
+ */
+.transfer-interest-rating-label-extremely-doubtful {
+  color: var(--colours-linear-scale-strong-2);
+}
+/* Medical High badges pair orange ink with their opaque semantic backplate.
+ * Transfer interest and radial gauges keep their independent football scale. */
+.injury-risk-text-colour-high {
+  color: var(--skin-medical-risk-high-foreground);
+}
+
+/* Transfer interest rating label none.
+ * Changes text/foreground colour.
+ * Source rule 4199.
+ */
+.transfer-interest-rating-label-none {
+  color: var(--skin-text-secondary);
+}
+
+/* Transfer loan offer footer.
+ * sets the background fill; sets the outline/corner shape; sets spacing around/inside the element.
+ * Source rule 4200.
+ */
+.transfer-loan-offer-footer {
+  padding: var(--padding-padding-12) var(--interaction-global-padding-horizontal-md);
+  border-width: var(--global-border-width-regular);
+  background-color: var(--skin-on-media-alpha-04);
+  border-radius: 0 0 var(--global-radius-regular) var(--global-radius-regular);
+}
+
+/* Transfer loan offer footer breakdown bar.
+ * controls size/placement.
+ * Source rule 4201.
+ */
+.transfer-loan-offer-footer-breakdown-bar {
+  width: 100%;
+  height: 8px;
+}
+
+/* Transfer loan offer footer frame breakdown.
+ * sets spacing around/inside the element.
+ * Source rule 4202.
+ */
+.transfer-loan-offer-footer-frame-breakdown {
+  padding: 0 var(--padding-padding-12);
+}
+
+/* Transfer loan offer footer frame breakdown bar.
+ * sets spacing around/inside the element.
+ * Source rule 4203.
+ */
+.transfer-loan-offer-footer-frame-breakdown-bar {
+  padding: var(--interaction-global-padding-horizontal-md) var(--padding-padding-12);
+}
+
+/* Transfer loan offer footer frame cost.
+ * sets the background fill; sets the outline/corner shape; controls size/placement; sets spacing
+ * around/inside the element.
+ * Source rule 4204.
+ */
+.transfer-loan-offer-footer-frame-cost {
+  height: 48px;
+  padding: var(--padding-padding-12) var(--interaction-global-padding-horizontal-md);
+  background-color: var(--skin-on-media-alpha-08);
+  min-height: 48px;
+  max-height: 48px;
+  align-items: center;
+  border-radius: var(--border-radius-radius-4);
+}
+
+/* Transfer loan offer footer frame cost invalid.
+ * sets the background fill.
+ * Source rule 4205.
+ */
+.transfer-loan-offer-footer-frame-cost-invalid {
+  background-color: var(--skin-component-transfer-loan-offer-footer-frame-cost-invalid-background);
+}
+
+/* Transfer loan offer footer frame transfer value.
+ * sets the background fill; sets the outline/corner shape; sets spacing around/inside the element.
+ * Source rule 4206.
+ */
+.transfer-loan-offer-footer-frame-transfer-value {
+  padding: var(--padding-padding-4) var(--interaction-global-padding-horizontal-md);
+  border-width: 1px;
+  border-color: var(--skin-surface-canvas);
+  background-color: var(--skin-surface-canvas);
+  border-radius: var(--border-radius-radius-4);
+}
+
+/* Transfer news property 1 closed.
+ * sets the background fill; sets the outline/corner shape; controls size/placement; sets spacing
+ * around/inside the element.
+ * Source rule 4207.
+ */
+.transfer-news-property-1-closed {
+  height: 34px;
+  padding: var(--spacing-small---8);
+  background-color: var(--skin-component-transfer-news-property-1-closed-background);
+  flex-direction: var(--row-direction-normal);
+  align-items: center;
+  border-radius: var(--global-radius-small);
+}
+
+/* Transfer news property 1 open.
+ * sets the background fill; sets the outline/corner shape; controls size/placement; sets spacing
+ * around/inside the element.
+ * Source rule 4208.
+ */
+.transfer-news-property-1-open {
+  height: 34px;
+  padding: var(--spacing-small---8);
+  border-width: 1px;
+  border-color: var(--skin-surface-panel);
+  background-color: var(--skin-component-transfer-news-property-1-open-background);
+  flex-direction: var(--row-direction-normal);
+  align-items: center;
+  border-radius: var(--global-radius-small);
+}
+
+/* Transfer news property 1 restriet.
+ * sets the background fill; sets the outline/corner shape; controls size/placement; sets spacing
+ * around/inside the element.
+ * Source rule 4209.
+ */
+.transfer-news-property-1-restriet {
+  height: 34px;
+  padding: var(--spacing-small---8);
+  background-color: var(--skin-component-transfer-news-property-1-restriet-background);
+  flex-direction: var(--row-direction-normal);
+  align-items: center;
+  border-top-left-radius: var(--global-radius-extra-small);
+  border-top-right-radius: var(--global-radius-extra-small);
+}
+
+/* Transfer offer action footer.
+ * sets the outline/corner shape; controls size/placement; sets spacing around/inside the element.
+ * Source rule 4210.
+ */
+.transfer-offer-action-footer {
+  width: 100%;
+  height: 80px;
+  justify-content: space-between;
+  flex-direction: var(--row-direction-normal);
+  border-bottom-left-radius: var(--global-radius-large);
+  border-bottom-right-radius: var(--global-radius-large);
+  padding-top: var(--global-padding-small);
+  padding-bottom: var(--global-padding-small);
+  padding-left: var(--global-padding-extra-large);
+  padding-right: var(--global-padding-extra-large);
+}
+
+/* Transfer offer fill frame.
+ * sets the background fill; sets the outline/corner shape; controls size/placement; sets spacing
+ * around/inside the element.
+ * Source rule 4211.
+ */
+.transfer-offer-fill-frame {
+  width: 4px;
+  height: 32px;
+  background-color: var(--skin-brand-accent);
+  align-self: stretch;
+  border-radius: 14px;
+  flex-direction: column;
+  margin-right: 12px;
+  border-top-left-radius: var(--skin-radius-small);
+  border-top-right-radius: var(--skin-radius-small);
+  border-bottom-right-radius: var(--skin-radius-small);
+  border-bottom-left-radius: var(--skin-radius-small);
+}
+
+/* Transfer offer tabgroup.
+ * sets the background fill; sets spacing around/inside the element.
+ * Source rule 4212.
+ */
+.transfer-offer-tabgroup {
+  margin: 0;
+  padding: 8px 12px;
+  background-color: var(--skin-on-media-alpha-04);
+}
+
+/* Transfer overview frame.
+ * sets the outline/corner shape; controls size/placement; sets spacing around/inside the element.
+ * Source rule 4213.
+ */
+.transfer-overview-frame {
+  border-width: 1px;
+  padding-left: 0px;
+  padding-right: 0px;
+  padding-bottom: 0px;
+  padding-top: 0px;
+  align-items: flex-start;
+  align-self: stretch;
+  border-bottom-left-radius: var(--global-radius-regular);
+  border-bottom-right-radius: var(--global-radius-regular);
+}
+
+/* Transfer overview net button.
+ * controls size/placement.
+ * Source rule 4214.
+ */
+.transfer-overview-net-button {
+  max-width: 90px;
+  justify-content: center;
+}
+
+/* Transfer overview tiles.
+ * sets the background fill; sets the outline/corner shape; sets spacing around/inside the element.
+ * Source rule 4215.
+ */
+.transfer-overview-tiles {
+  background-color: var(--skin-surface-canvas);
+  padding-left: 4px;
+  padding-right: 4px;
+  padding-bottom: 12px;
+  padding-top: 12px;
+  border-radius: var(--skin-radius-small);
+}
+
+/* Transfer room tab text.
+ * Changes text/foreground colour.
+ * Source rule 4216.
+ */
+.transfer-room-tab-text {
+  color: var(--skin-text-primary);
+}
+
+/* Transfer status fake column.
+ * controls size/placement; sets spacing around/inside the element.
+ * Source rule 4217.
+ */
+.transfer-status-fake-column {
+  width: 80px;
+  overflow: hidden;
+  margin-left: 8px;
+}
+
+/* Transfer window progress timeline restricted.
+ * sets the background fill.
+ * Source rule 4218.
+ */
+.transfer-window-progress-timeline-restricted:enabled {
+  background-color: var(--skin-feedback-warning);
+}
+
+/* Transfer window status label.
+ * controls size/placement.
+ * Source rule 4219.
+ */
+.transfer-window-status-label {
+  width: 100%;
+  height: 24px;
+}
+
+/* Transfers panel type all active empty.
+ * Changes text/foreground colour; sets the outline/corner shape; controls size/placement; sets spacing
+ * around/inside the element.
+ * Shared rule for 2 selectors. Editing a declaration here affects the whole group below.
+ * Source rule 4220.
+ */
+.transfers-panel-type-all-active-empty,
+.transfers-panel-type-trades-active-no {
+  width: 312px;
+  padding: var(--spacing-medium---16);
+  border-width: 1px;
+  border-color: var(--skin-border-subtle);
+  color: var(--skin-text-primary);
+  min-height: 475px;
+  max-height: 580px;
+  flex-direction: column;
+  align-items: flex-start;
+  border-radius: var(--skin-radius-card);
+}
+
+/* Transfers panel type all active no.
+ * sets the outline/corner shape; controls size/placement; sets spacing around/inside the element.
+ * Shared rule for 6 selectors. Editing a declaration here affects the whole group below.
+ * Source rule 4221.
+ */
+.transfers-panel-type-all-active-no,
+.transfers-panel-type-in-active-no,
+.transfers-panel-type-in-active-yes,
+.transfers-panel-type-out-active-no,
+.transfers-panel-type-out-active-yes,
+.transfers-panel-type-trades-active-yes {
+  width: 312px;
+  padding: var(--spacing-medium---16);
+  border-width: 1px;
+  border-color: var(--skin-border-subtle);
+  min-height: 475px;
+  max-height: 580px;
+  flex-direction: column;
+  align-items: flex-start;
+  border-radius: var(--skin-radius-card);
+}
+
+/* Transfers panel type all active yes.
+ * controls size/placement; sets spacing around/inside the element.
+ * Source rule 4222.
+ */
+.transfers-panel-type-all-active-yes {
+  width: 312px;
+  padding: var(--spacing-medium---16);
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+/* Transform scale half.
+ * sets the native component presentation.
+ * Source rule 4223.
+ */
+.transform-scale-half {
+  scale: 0.5 0.5;
+}
+
+/* Trophy gold color text.
+ * Changes text/foreground colour.
+ * Shared rule for 2 selectors. Editing a declaration here affects the whole group below.
+ * Source rule 4224.
+ */
+.trophy_gold_color-text,
+.squadplanner_data-point-ability-text-colour {
+  color: var(--colours-data-ratings-star-ability-orange);
+}
+
+/* Tutorial anchor offset default y.
+ * supplies local values read by the component styling.
+ * Source rule 4225.
+ */
+.tutorial-anchor-offset-default-y {
+  --anchor-offset-x: 0;
+  --anchor-offset-y: 16;
+}
+
+/* Tutorial background.
+ * controls size/placement.
+ * Source rule 4226.
+ */
+.tutorial-background {
+  width: 590.681px;
+  height: 358.029px;
+  flex-shrink: 0;
+}
+
+/* Tutorial chevron small.
+ * tints background artwork.
+ * Shared rule for 2 selectors. Editing a declaration here affects the whole group below.
+ * Source rule 4227.
+ */
+.tutorial-chevron-small,
+.tactics-position-circle-goalkeeper {
+  -unity-background-image-tint-color: var(--colours-base-neutral-black);
+}
+
+/* Tutorial floating continue button.
+ * controls size/placement; sets spacing around/inside the element.
+ * Source rule 4228.
+ */
+.tutorial-floating-continue-button {
+  margin: 2px 8px 2px 8px;
+  align-items: center;
+  flex-direction: var(--row-direction-normal);
+}
+
+/* Tutorial floating continue button back part.
+ * sets the background fill; sets the outline/corner shape; controls size/placement; sets spacing
+ * around/inside the element.
+ * Source rule 4229.
+ */
+.tutorial-floating-continue-button-back-part {
+  width: 24px;
+  height: 32px;
+  margin: 0;
+  padding: 0;
+  border-width: 1px 0.5px 1px 1px;
+  border-color: var(--skin-surface-page-alpha-20);
+  background-color: var(--skin-surface-panel-alpha-14);
+  justify-content: center;
+  align-items: flex-start;
+  border-radius: var(--border-radius-leading-small);
+}
+
+/* Tutorial floating continue button back part — pointer hover.
+ * sets the background fill.
+ * Shared rule for 2 selectors. Editing a declaration here affects the whole group below.
+ * Source rule 4230.
+ */
+.tutorial-floating-continue-button-back-part:hover,
+.tutorial-floating-continue-button-back-part:active:enabled {
+  background-color: var(--skin-surface-panel-alpha-14);
+}
+
+/* Tutorial floating continue button continue part.
+ * sets the background fill; sets the outline/corner shape; controls size/placement; sets spacing
+ * around/inside the element.
+ * Source rule 4231.
+ */
+.tutorial-floating-continue-button-continue-part {
+  height: 32px;
+  margin: 0;
+  padding: 0 16px;
+  border-width: 1px 1px 1px 0.5px;
+  border-color: var(--skin-surface-page-alpha-20);
+  background-color: var(--skin-action-primary-background);
+  color: var(--skin-action-primary-foreground);
+  --buttons-icons-default: var(--skin-action-primary-foreground);
+  --buttons-global-icon-surface: var(--skin-action-primary-foreground);
+  --core-controls-icon-default: var(--skin-action-primary-foreground);
+  --layout-ui-core-controls-icon-default: var(--skin-action-primary-foreground);
+  align-items: center;
+  border-radius: var(--border-radius-trailing-small);
+  flex-direction: var(--row-direction-normal);
+}
+
+/* The tutorial continue label is a child text element with its own native text colour.
+ * Keep it paired with the Volt fill across default, hover and active states. */
+.tutorial-floating-continue-button-continue-part .sitext,
+.tutorial-floating-continue-button-continue-part .sitextmedium,
+.tutorial-floating-continue-button-continue-part .sitextsmall {
+  color: var(--skin-action-primary-foreground);
+}
+
+/* Tutorial floating continue button continue part disabled.
+ * sets the background fill; sets the outline/corner shape; controls size/placement; sets spacing
+ * around/inside the element.
+ * Source rule 4232.
+ */
+.tutorial-floating-continue-button-continue-part-disabled {
+  height: 32px;
+  margin: 0;
+  padding: 0 16px;
+  border-width: 1px 1px 1px 0.5px;
+  border-color: var(--skin-surface-page-alpha-20);
+  background-color: var(--skin-surface-panel-alpha-14);
+  align-items: center;
+  border-radius: var(--border-radius-trailing-small);
+  flex-direction: var(--row-direction-normal);
+}
+
+/* Selected surface and label use the paired Volt/ink tokens from the default Dugout theme.
+ */
+.training_tab-group .unity-radio-button-group__child-active .sitext,
+.training_tab-group .unity-radio-button-group__child-active .sitextmedium,
+.training_tab-group .unity-radio-button-group__child-active .sitextsmall {
+  color: var(--skin-selection-foreground);
+}
+
+/* Club Player Staff
+ * Native club player staff selectors, with adjacent shared rules in source order.
+ */
+
+/* Contract negotiation status fill colour negative.
+ * sets the background fill.
+ * Source rule 4424.
+ */
+.contract-negotiation-status-fill-colour-negative {
+  background-color: var(--communication-feedback-negative);
+}
+
+/* Contract negotiation status fill colour neutral.
+ * sets the background fill.
+ * Source rule 4425.
+ */
+.contract-negotiation-status-fill-colour-neutral {
+  background-color: var(--communication-feedback-information);
+}
+
+/* Contract negotiation status fill colour positive.
+ * sets the background fill.
+ * Source rule 4426.
+ */
+.contract-negotiation-status-fill-colour-positive {
+  background-color: var(--communication-feedback-positive);
+}
+
+/* Contract negotiation status icon colour invalid.
+ * tints background artwork.
+ * Source rule 4427.
+ */
+.contract-negotiation-status-icon-colour-invalid {
+  -unity-background-image-tint-color: var(--colours-base-orange-strong);
+}
+
+/* Contract negotiation status icon colour negative.
+ * tints background artwork.
+ * Source rule 4428.
+ */
+.contract-negotiation-status-icon-colour-negative {
+  -unity-background-image-tint-color: var(--communication-feedback-negative);
+}
+
+/* Contract negotiation status icon colour neutral.
+ * tints background artwork.
+ * Shared rule for 2 selectors. Editing a declaration here affects the whole group below.
+ * Source rule 4429.
+ */
+.contract-negotiation-status-icon-colour-neutral,
+.communication-feedback-information-icon-colour {
+  -unity-background-image-tint-color: var(--communication-feedback-information);
+}
+
+/* Contract negotiation status icon colour positive.
+ * tints background artwork.
+ * Source rule 4430.
+ */
+.contract-negotiation-status-icon-colour-positive {
+  -unity-background-image-tint-color: var(--communication-feedback-positive);
+}
+
+/* Contract negotiation status invalid.
+ * sets the background fill.
+ * Shared rule for 2 selectors. Editing a declaration here affects the whole group below.
+ * Source rule 4431.
+ */
+.contract-negotiation-status-invalid,
+.transfer-negotiation-status-colour-invalid {
+  background-color: var(--contract-negotiation-invalid-background);
+}
+
+/* Contract negotiation status rejected.
+ * sets the background fill.
+ * Source rule 4432.
+ */
+.contract-negotiation-status-rejected {
+  background-color: var(--colours-base-red-base);
+}
+
+/* Contract negotiation status rejected image.
+ * tints background artwork.
+ * Source rule 4433.
+ */
+.contract-negotiation-status-rejected-image {
+  -unity-background-image-tint-color: var(--colours-base-red-base);
+}
+
+/* Contract negotiation status unchanged.
+ * sets the background fill.
+ * Shared rule for 3 selectors. Editing a declaration here affects the whole group below.
+ * Source rule 4434.
+ */
+.contract-negotiation-status-unchanged,
+.transfer-negotiation-status-neutral,
+.negotiate-payoff-contract-terms-default-background {
+  background-color: var(--skin-transparent);
+}
+
+/* Transfer negotiation status neutral fmc.
+ * sets the background fill.
+ * Source rule 4435.
+ */
+.transfer-negotiation-status-neutral-fmc {
+  background-color: var(--skin-on-media-alpha-04);
+}
+
+/* Dark green.
+ * Changes text/foreground colour.
+ * Source rule 4436.
+ */
+.dark_green {
+  color: var(--colours-base-green-deep);
+}
+
+/* Dual progress bar negative primary colour.
+ * sets the background fill.
+ * Source rule 4437.
+ */
+.dual-progress-bar-negative-primary-colour {
+  background-color: var(--colours-base-red-strong);
+}
+
+/* Club Player Staff
+ * Native club player staff selectors, with adjacent shared rules in source order.
+ */
+
+/* Staff feedback colour negative.
+ * tints background artwork.
+ * Source rule 4618.
+ */
+.staff-feedback-colour-negative {
+  -unity-background-image-tint-color: var(--linear-ranges-4-values-1);
+}
+
+/* Staff feedback colour positive.
+ * tints background artwork.
+ * Source rule 4619.
+ */
+.staff-feedback-colour-positive {
+  -unity-background-image-tint-color: var(--linear-ranges-4-values-4);
+}
+
+/* Staff role coaching assistant manager.
+ * sets the background fill.
+ * Source rule 4620.
+ */
+.staff-role-coaching-assistant-manager {
+  background-color: var(--staff-coaching-assistant-manager-16);
+}
+
+/* Staff role coaching assistant manager icon colour.
+ * tints background artwork.
+ * Source rule 4621.
+ */
+.staff-role-coaching-assistant-manager-icon-colour {
+  -unity-background-image-tint-color: var(--staff-coaching-assistant-manager-20);
+}
+
+/* Staff role coaching assistant manager text.
+ * Changes text/foreground colour.
+ * Source rule 4622.
+ */
+.staff-role-coaching-assistant-manager-text {
+  color: var(--staff-coaching-assistant-manager-20);
+}
+
+/* Staff role coaching coach fitness.
+ * sets the background fill.
+ * Source rule 4623.
+ */
+.staff-role-coaching-coach-fitness {
+  background-color: var(--staff-coaching-coach-fitness-16);
+}
+
+/* Staff role coaching coach fitness icon colour.
+ * tints background artwork.
+ * Source rule 4624.
+ */
+.staff-role-coaching-coach-fitness-icon-colour {
+  -unity-background-image-tint-color: var(--staff-coaching-coach-fitness-20);
+}
+
+/* Staff role coaching coach fitness text.
+ * Changes text/foreground colour.
+ * Source rule 4625.
+ */
+.staff-role-coaching-coach-fitness-text {
+  color: var(--staff-coaching-coach-fitness-20);
+}
+
+/* Staff role coaching coach general.
+ * sets the background fill.
+ * Source rule 4626.
+ */
+.staff-role-coaching-coach-general {
+  background-color: var(--staff-coaching-coach-general-16);
+}
+
+/* Staff role coaching coach general icon colour.
+ * tints background artwork.
+ * Source rule 4627.
+ */
+.staff-role-coaching-coach-general-icon-colour {
+  -unity-background-image-tint-color: var(--staff-coaching-coach-general-20);
+}
+
+/* Staff role coaching coach general text.
+ * Changes text/foreground colour.
+ * Source rule 4628.
+ */
+.staff-role-coaching-coach-general-text {
+  color: var(--staff-coaching-coach-general-20);
+}
+
+/* Staff role coaching coach goalkeeping.
+ * sets the background fill.
+ * Source rule 4629.
+ */
+.staff-role-coaching-coach-goalkeeping {
+  background-color: var(--staff-coaching-coach-goalkeeping-16);
+}
+
+/* Staff role coaching coach goalkeeping icon colour.
+ * tints background artwork.
+ * Source rule 4630.
+ */
+.staff-role-coaching-coach-goalkeeping-icon-colour {
+  -unity-background-image-tint-color: var(--staff-coaching-coach-goalkeeping-20);
+}
+
+/* Staff role coaching coach goalkeeping text.
+ * Changes text/foreground colour.
+ * Source rule 4631.
+ */
+.staff-role-coaching-coach-goalkeeping-text {
+  color: var(--staff-coaching-coach-goalkeeping-20);
+}
+
+/* Staff role coaching coach perf analyst.
+ * sets the background fill.
+ * Source rule 4632.
+ */
+.staff-role-coaching-coach-perf-analyst {
+  background-color: var(--staff-coaching-coach-perf-analyst-16);
+}
+
+/* Staff role coaching coach perf analyst icon colour.
+ * tints background artwork.
+ * Source rule 4633.
+ */
+.staff-role-coaching-coach-perf-analyst-icon-colour {
+  -unity-background-image-tint-color: var(--staff-coaching-coach-perf-analyst-20);
+}
+
+/* Staff role coaching coach perf analyst text.
+ * Changes text/foreground colour.
+ * Source rule 4634.
+ */
+.staff-role-coaching-coach-perf-analyst-text {
+  color: var(--staff-coaching-coach-perf-analyst-20);
+}
+
+/* Staff role coaching head of youth dev.
+ * sets the background fill.
+ * Source rule 4635.
+ */
+.staff-role-coaching-head-of-youth-dev {
+  background-color: var(--staff-coaching-head-of-youth-dev-16);
+}
+
+/* Staff role coaching head of youth dev icon colour.
+ * tints background artwork.
+ * Source rule 4636.
+ */
+.staff-role-coaching-head-of-youth-dev-icon-colour {
+  -unity-background-image-tint-color: var(--staff-coaching-head-of-youth-dev-20);
+}
+
+/* Staff role coaching head of youth dev text.
+ * Changes text/foreground colour.
+ * Source rule 4637.
+ */
+.staff-role-coaching-head-of-youth-dev-text {
+  color: var(--staff-coaching-head-of-youth-dev-20);
+}
+
+/* Staff role coaching head perf analyst.
+ * sets the background fill.
+ * Source rule 4638.
+ */
+.staff-role-coaching-head-perf-analyst {
+  background-color: var(--staff-coaching-head-perf-analyst-16);
+}
+
+/* Staff role coaching head perf analyst icon colour.
+ * tints background artwork.
+ * Source rule 4639.
+ */
+.staff-role-coaching-head-perf-analyst-icon-colour {
+  -unity-background-image-tint-color: var(--staff-coaching-head-perf-analyst-20);
+}
+
+/* Staff role coaching head perf analyst text.
+ * Changes text/foreground colour.
+ * Source rule 4640.
+ */
+.staff-role-coaching-head-perf-analyst-text {
+  color: var(--staff-coaching-head-perf-analyst-20);
+}
+
+/* Staff role coaching manager.
+ * sets the background fill.
+ * Source rule 4641.
+ */
+.staff-role-coaching-manager {
+  background-color: var(--staff-coaching-manager-16);
+}
+
+/* Staff role coaching manager icon colour.
+ * tints background artwork.
+ * Source rule 4642.
+ */
+.staff-role-coaching-manager-icon-colour {
+  -unity-background-image-tint-color: var(--staff-coaching-manager-20);
+}
+
+/* Staff role coaching manager text.
+ * Changes text/foreground colour.
+ * Source rule 4643.
+ */
+.staff-role-coaching-manager-text {
+  color: var(--staff-coaching-manager-20);
+}
+
+/* Staff role coaching set piece coach.
+ * sets the background fill.
+ * Source rule 4644.
+ */
+.staff-role-coaching-set-piece-coach {
+  background-color: var(--staff-coaching-set-piece-coach-16);
+}
+
+/* Staff role coaching set piece coach icon colour.
+ * tints background artwork.
+ * Source rule 4645.
+ */
+.staff-role-coaching-set-piece-coach-icon-colour {
+  -unity-background-image-tint-color: var(--staff-coaching-set-piece-coach-20);
+}
+
+/* Staff role coaching set piece coach text.
+ * Changes text/foreground colour.
+ * Source rule 4646.
+ */
+.staff-role-coaching-set-piece-coach-text {
+  color: var(--staff-coaching-set-piece-coach-20);
+}
+
+/* Staff role medical chief doctor.
+ * sets the background fill.
+ * Source rule 4647.
+ */
+.staff-role-medical-chief-doctor {
+  background-color: var(--staff-medical-chief-doctor-16);
+}
+
+/* Staff role medical chief doctor icon colour.
+ * tints background artwork.
+ * Source rule 4648.
+ */
+.staff-role-medical-chief-doctor-icon-colour {
+  -unity-background-image-tint-color: var(--staff-medical-chief-doctor-20);
+}
+
+/* Staff role medical chief doctor text.
+ * Changes text/foreground colour.
+ * Source rule 4649.
+ */
+.staff-role-medical-chief-doctor-text {
+  color: var(--staff-medical-chief-doctor-20);
+}
+
+/* Staff role medical doctor.
+ * sets the background fill.
+ * Source rule 4650.
+ */
+.staff-role-medical-doctor {
+  background-color: var(--staff-medical-doctor-16);
+}
+
+/* Staff role medical doctor icon colour.
+ * tints background artwork.
+ * Source rule 4651.
+ */
+.staff-role-medical-doctor-icon-colour {
+  -unity-background-image-tint-color: var(--staff-medical-doctor-20);
+}
+
+/* Staff role medical doctor text.
+ * Changes text/foreground colour.
+ * Source rule 4652.
+ */
+.staff-role-medical-doctor-text {
+  color: var(--staff-medical-doctor-20);
+}
+
+/* Staff role medical head of sports science.
+ * sets the background fill.
+ * Source rule 4653.
+ */
+.staff-role-medical-head-of-sports-science {
+  background-color: var(--staff-medical-head-of-sports-science-16);
+}
+
+/* Staff role medical head of sports science icon colour.
+ * tints background artwork.
+ * Source rule 4654.
+ */
+.staff-role-medical-head-of-sports-science-icon-colour {
+  -unity-background-image-tint-color: var(--staff-medical-head-of-sports-science-20);
+}
+
+/* Staff role medical head of sports science text.
+ * Changes text/foreground colour.
+ * Source rule 4655.
+ */
+.staff-role-medical-head-of-sports-science-text {
+  color: var(--staff-medical-head-of-sports-science-20);
+}
+
+/* Staff role medical head physio.
+ * sets the background fill.
+ * Source rule 4656.
+ */
+.staff-role-medical-head-physio {
+  background-color: var(--staff-medical-head-physio-16);
+}
+
+/* Staff role medical head physio icon colour.
+ * tints background artwork.
+ * Source rule 4657.
+ */
+.staff-role-medical-head-physio-icon-colour {
+  -unity-background-image-tint-color: var(--staff-medical-head-physio-20);
+}
+
+/* Staff role medical head physio text.
+ * Changes text/foreground colour.
+ * Source rule 4658.
+ */
+.staff-role-medical-head-physio-text {
+  color: var(--staff-medical-head-physio-20);
+}
+
+/* Staff role medical physio.
+ * sets the background fill.
+ * Source rule 4659.
+ */
+.staff-role-medical-physio {
+  background-color: var(--staff-medical-physio-16);
+}
+
+/* Staff role medical physio icon colour.
+ * tints background artwork.
+ * Source rule 4660.
+ */
+.staff-role-medical-physio-icon-colour {
+  -unity-background-image-tint-color: var(--staff-medical-physio-20);
+}
+
+/* Staff role medical physio text.
+ * Changes text/foreground colour.
+ * Source rule 4661.
+ */
+.staff-role-medical-physio-text {
+  color: var(--staff-medical-physio-20);
+}
+
+/* Staff role medical sports scientist.
+ * sets the background fill.
+ * Source rule 4662.
+ */
+.staff-role-medical-sports-scientist {
+  background-color: var(--staff-medical-sports-scientist-16);
+}
+
+/* Staff role medical sports scientist icon colour.
+ * tints background artwork.
+ * Source rule 4663.
+ */
+.staff-role-medical-sports-scientist-icon-colour {
+  -unity-background-image-tint-color: var(--staff-medical-sports-scientist-20);
+}
+
+/* Staff role medical sports scientist text.
+ * Changes text/foreground colour.
+ * Source rule 4664.
+ */
+.staff-role-medical-sports-scientist-text {
+  color: var(--staff-medical-sports-scientist-20);
+}
+
+/* Staff role recruitment chief scout.
+ * sets the background fill.
+ * Source rule 4665.
+ */
+.staff-role-recruitment-chief-scout {
+  background-color: var(--staff-recruitment-chief-scout-16);
+}
+
+/* Staff role recruitment chief scout icon colour.
+ * tints background artwork.
+ * Source rule 4666.
+ */
+.staff-role-recruitment-chief-scout-icon-colour {
+  -unity-background-image-tint-color: var(--staff-recruitment-chief-scout-20);
+}
+
+/* Staff role recruitment chief scout text.
+ * Changes text/foreground colour.
+ * Source rule 4667.
+ */
+.staff-role-recruitment-chief-scout-text {
+  color: var(--staff-recruitment-chief-scout-20);
+}
+
+/* Staff role recruitment director of football.
+ * sets the background fill.
+ * Source rule 4668.
+ */
+.staff-role-recruitment-director-of-football {
+  background-color: var(--staff-recruitment-director-of-football-16);
+}
+
+/* Staff role recruitment director of football icon colour.
+ * tints background artwork.
+ * Source rule 4669.
+ */
+.staff-role-recruitment-director-of-football-icon-colour {
+  -unity-background-image-tint-color: var(--staff-recruitment-director-of-football-20);
+}
+
+/* Staff role recruitment director of football text.
+ * Changes text/foreground colour.
+ * Source rule 4670.
+ */
+.staff-role-recruitment-director-of-football-text {
+  color: var(--staff-recruitment-director-of-football-20);
+}
+
+/* Staff role recruitment loan manager.
+ * sets the background fill.
+ * Shared rule for 2 selectors. Editing a declaration here affects the whole group below.
+ * Source rule 4671.
+ */
+.staff-role-recruitment-loan-manager,
+.suggested-lineup-selected-player-background-row {
+  background-color: var(--staff-recruitment-loan-manager-16);
+}
+
+/* Staff role recruitment loan manager icon colour.
+ * tints background artwork.
+ * Source rule 4672.
+ */
+.staff-role-recruitment-loan-manager-icon-colour {
+  -unity-background-image-tint-color: var(--staff-recruitment-loan-manager-20);
+}
+
+/* Staff role recruitment loan manager text.
+ * Changes text/foreground colour.
+ * Source rule 4673.
+ */
+.staff-role-recruitment-loan-manager-text {
+  color: var(--staff-recruitment-loan-manager-20);
+}
+
+/* Staff role recruitment recruitment analyst.
+ * sets the background fill.
+ * Source rule 4674.
+ */
+.staff-role-recruitment-recruitment-analyst {
+  background-color: var(--staff-recruitment-recruitment-analyst-16);
+}
+
+/* Staff role recruitment recruitment analyst icon colour.
+ * tints background artwork.
+ * Source rule 4675.
+ */
+.staff-role-recruitment-recruitment-analyst-icon-colour {
+  -unity-background-image-tint-color: var(--staff-recruitment-recruitment-analyst-20);
+}
+
+/* Staff role recruitment recruitment analyst text.
+ * Changes text/foreground colour.
+ * Source rule 4676.
+ */
+.staff-role-recruitment-recruitment-analyst-text {
+  color: var(--staff-recruitment-recruitment-analyst-20);
+}
+
+/* Staff role recruitment scout.
+ * sets the background fill.
+ * Source rule 4677.
+ */
+.staff-role-recruitment-scout {
+  background-color: var(--staff-recruitment-scout-16);
+}
+
+/* Staff role recruitment scout icon colour.
+ * tints background artwork.
+ * Source rule 4678.
+ */
+.staff-role-recruitment-scout-icon-colour {
+  -unity-background-image-tint-color: var(--staff-recruitment-scout-20);
+}
+
+/* Staff role recruitment scout text.
+ * Changes text/foreground colour.
+ * Source rule 4679.
+ */
+.staff-role-recruitment-scout-text {
+  color: var(--staff-recruitment-scout-20);
+}
+
+/* Staff role recruitment technical director.
+ * sets the background fill.
+ * Source rule 4680.
+ */
+.staff-role-recruitment-technical-director {
+  background-color: var(--staff-recruitment-technical-director-16);
+}
+
+/* Staff role recruitment technical director icon colour.
+ * tints background artwork.
+ * Source rule 4681.
+ */
+.staff-role-recruitment-technical-director-icon-colour {
+  -unity-background-image-tint-color: var(--staff-recruitment-technical-director-20);
+}
+
+/* Staff role recruitment technical director text.
+ * Changes text/foreground colour.
+ * Source rule 4682.
+ */
+.staff-role-recruitment-technical-director-text {
+  color: var(--staff-recruitment-technical-director-20);
+}
+
+/* Suggested lineup selected player background.
+ * sets the background fill.
+ * Source rule 4683.
+ */
+.suggested-lineup-selected-player-background {
+  background-color: var(--colours-tactics-green-50);
+}
+
+/* Suggested lineup selected player background top.
+ * sets the background fill.
+ * Source rule 4684.
+ */
+.suggested-lineup-selected-player-background-top {
+  background-color: var(--colours-tactics-base-20);
+}
+
+/* Navigatable tactics position.
+ * sets the outline/corner shape.
+ * Source rule 4685.
+ */
+.suggested-lineup-selected-player-border .navigatable-tactics-position {
+  border-color: var(--colours-base-neutral-white);
+}
+
+/* Suggested lineup unselected player background.
+ * sets the background fill.
+ * Source rule 4686.
+ */
+.suggested-lineup-unselected-player-background {
+  background-color: var(--none);
+}
+
+/* Supporters casual.
+ * Changes text/foreground colour.
+ * Source rule 4687.
+ */
+.supporters-casual {
+  color: var(--colours-base-green-base);
+}
+
+/* Scouting pros text.
+ * Changes text/foreground colour.
+ * Source rule 4688.
+ */
+.scouting-pros-text {
+  color: var(--colours-base-green-strong);
+}
+
+/* Scouting cons text.
+ * Changes text/foreground colour.
+ * Source rule 4689.
+ */
+.scouting-cons-text {
+  color: var(--colours-base-red-strong);
+}
+
+/* Supporters core.
+ * Changes text/foreground colour.
+ * Shared rule for 2 selectors. Editing a declaration here affects the whole group below.
+ * Source rule 4690.
+ */
+.supporters-core,
+.set-piece-pie-chart-routine-one {
+  color: var(--colours-base-green-soft);
+}
+
+/* Team report form win.
+ * Changes text/foreground colour.
+ * Source rule 4691.
+ */
+.team-report-form-win {
+  color: var(--colours-base-green-strong);
+}
+
+/* Supporters corporate.
+ * Changes text/foreground colour.
+ * Source rule 4692.
+ */
+.supporters-corporate {
+  color: var(--colours-base-purple-strong);
+}
+
+/* Supporters fair weather.
+ * Changes text/foreground colour.
+ * Source rule 4693.
+ */
+.supporters-fair-weather {
+  color: var(--colours-base-pink-soft);
+}
+
+/* Supporters family.
+ * Changes text/foreground colour.
+ * Shared rule for 2 selectors. Editing a declaration here affects the whole group below.
+ * Source rule 4694.
+ */
+.supporters-family,
+.set-piece-pie-chart-routine-two {
+  color: var(--colours-base-blue-soft);
+}
+
+/* Supporters hardcore.
+ * Changes text/foreground colour.
+ * Shared rule for 2 selectors. Editing a declaration here affects the whole group below.
+ * Source rule 4695.
+ */
+.supporters-hardcore,
+.colours-base-orange-50 {
+  color: var(--colours-base-orange-strong);
+}
+
+/* Team report form draw.
+ * Changes text/foreground colour.
+ * Source rule 4696.
+ */
+.team-report-form-draw {
+  color: var(--colours-base-yellow-soft);
+}
+
+
+/* A form chart is not a striped table: its bars carry the result meaning. */
+.player-form-chart .virtualised-list__item,
+.player-form-chart .virtualised-list__item--odd,
+.player-form-fixed-bars .virtualised-list__item,
+.player-form-fixed-bars .virtualised-list__item--odd {
+  background-color: var(--skin-transparent);
+}
+
+/* The same form-chart class also appears on full data tables (for example
+ * supporter squad feedback). Restore row states there; only bar-list items
+ * above remain transparent. Nested chart glyphs keep their result colours. */
+.player-form-chart.streamed-table .streamed-table__row {
+  background-color: var(--skin-table-row-background);
+}
+.player-form-chart.streamed-table .streamed-table__row.virtualised-list__item--odd {
+  background-color: var(--skin-table-row-alternate-background);
+}
+.player-form-chart.streamed-table .streamed-table__row:hover {
+  background-color: var(--skin-control-hover);
+}
+.player-form-chart.streamed-table .streamed-table__row.virtualised-list__item--selected {
+  background-color: var(--skin-list-selection-background);
+}
+.player-form-chart.streamed-table .streamed-table__row.virtualised-list__item--selected:hover {
+  background-color: var(--skin-list-selection-hover);
+}
+
+/* Keep FM's bound club colour, but push the native alpha fade outside the
+ * visible header. Equal padding/negative margin retain its natural height at
+ * each breakpoint; clipping belongs to the wrapper, not the player content. */
+#ReportBody #PlayerReport #PlayerReportHeaderRemapper {
+  overflow: hidden;
+}
+#ReportBody #PlayerReport #PlayerReportHeaderGradient.sigradient {
+  padding-bottom: var(--skin-player-header-gradient-extension);
+  margin-bottom: var(--skin-player-header-gradient-overlap);
+  flex-shrink: 0;
+}
+
+/* The authored content body is a sibling of the portrait. Protect its text
+ * over light club colours while retaining bound paint and full-colour artwork. */
+#ReportBody #PlayerReport #PlayerReportHeaderRemapper > #PlayerReportHeaderGradient > #PlayerReportHeaderSetter > #report-player-full-header-max > #report-player-full-header-max-body {
+  background-color: var(--skin-player-header-content-scrim);
+}
+
+/* ClubSiteHeader owns its content inside the gradient. Extend only the
+ * paint box with padding, cancel its layout footprint, and clip at the club
+ * wrapper so the bound club colour stays solid through the visible header. */
+#ReportBody .ios-site-header {
+  overflow: hidden;
+}
+#ReportBody .ios-site-header > .sigradient {
+  padding-bottom: var(--skin-club-header-gradient-extension);
+  margin-bottom: var(--skin-club-header-gradient-overlap);
+  flex-shrink: 0;
+}
+
+/* The club-details template is separate from the summary-card template.
+ * Darken only its backplate: retain bound club paint and full-colour kits,
+ * crests, reputation and linked women's-team identity above it. */
+#ReportBody .ios-site-header > .sigradient #NonPhoneLayout .site-active-property-1-club-property-2-header-components-property-3-club-details-property-4-max-res {
+  background-color: var(--skin-club-details-scrim);
+}
+
+/* Competition sites use a sibling gradient beneath their header content.
+ * Crop only that paint element, preserving the native competition colour and
+ * the header's natural size. This excludes the score/fixture artwork below it.
+ */
+#ReportBody .comp-site-header > * > .sigradient {
+  padding-bottom: var(--skin-header-gradient-extension);
+  margin-bottom: var(--skin-header-gradient-overlap);
+  flex-shrink: 0;
+}
+
+/* Career contract is an ordinary report card, rather than a floating dialog. */
+#ReportBody #MyContractBlock #Border {
+  border-width: var(--skin-card-border-width);
+}
+/* Wage percentage is supporting contract data, not a brand/status signal. */
+#ReportBody #WagesData .colours-base-purple-soft {
+  color: var(--skin-text-secondary);
+}
+
+/* Club overview's balance is neutral financial data. The native helper name
+ * refers to the old purple brand, not a positive/negative account status. */
+#ClubScreenOverviewBlock .colours-brand-foundation-horizon-soft {
+  color: var(--skin-finance-value-foreground);
+}
+
+/* Staff/Career headers bind a horizontal club gradient. Extend paint only,
+ * counterbalance its margin, and clip at the original content wrapper. */
+#ReportBody #ReportHeader #ContractSetter > .entity-background-header {
+  overflow: hidden;
+}
+#ReportBody #ReportHeader #ContractSetter > .entity-background-header > .sigradient {
+  padding-right: var(--skin-staff-header-gradient-extension);
+  margin-right: var(--skin-staff-header-gradient-overlap);
+  flex-shrink: 0;
+}
+
+/* Medical low-risk badge: retain its positive green meaning with a paired
+ * subdued surface, rather than green text on the unrelated mustard scale.
+ * Separate roles allow alternative themes without changing global status data. */
+.injury-risk-background-colour-low {
+  background-color: var(--skin-medical-risk-low-background);
+}
+.injury-risk-text-colour-low {
+  color: var(--skin-medical-risk-low-foreground);
+}
+
+/* Discipline history cards are ordinary inset report cards, not fields.
+ * Use the shared raised surface and ordinary-card edge/radius roles.
+ * Source rule 1711.
+ */
+.code-of-conduct-previous-offender {
+  width: 144px;
+  padding: 16px 8px;
+  border-width: var(--skin-card-border-width);
+  border-color: var(--skin-card-border-colour);
+  background-color: var(--skin-surface-raised);
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: var(--skin-radius-card);
+}
+
+
+/* Dynamics summary sentences are prose, not table labels. The native row
+ * leaves this text unwrapped, so the atmosphere explanation escapes its
+ * half-width panel with the template body font. Keep natural panel sizing. */
+#SquadYouthDynamics #Heading-frame #BottomFrame #text.sitext {
+  white-space: normal;
+  flex-shrink: 1;
+}
+
+/* Competition summary headers bind arbitrary competition colours in game code.
+ * Darken only their content backplate, not artwork or whole-card opacity. Move
+ * the existing gap from margin to padding so bounds and content spacing stay
+ * the same while the scrim reaches the full header and its outer corners. */
+#CompetitionsOverviewTool #Frame > .flex-no-shrink-class > .flex-no-shrink-class.flex-grow-class > #Content {
+  background-color: var(--skin-competition-summary-scrim);
+  margin: var(--global-gap-none);
+  padding: var(--global-gap-regular);
+  border-radius: var(--global-gap-none);
+}
+#CompetitionsOverviewTool #Frame.siblock-border {
+  border-radius: var(--skin-radius-card);
+  overflow: hidden;
+}
+
+/* A fixture's relative date and “vs” form one inline phrase. Native body-md
+ * wrapping split the phrase from its opponent in the horizontal summary. */
+.training-intensity-block-upcoming-fixtures #FixturesList .row-direction-normal > #text.sitext {
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+/* Club team reports use the same horizontal fade family as staff headers.
+ * Crop its paint extension without enlarging the content or replacing club ink. */
+#ReportBody #TeamReportSite #ReportHeader .entity-background-header {
+  overflow: hidden;
+}
+#ReportBody #TeamReportSite #ReportHeader .entity-background-header > .sigradient {
+  padding-right: var(--skin-team-report-header-gradient-extension);
+  margin-right: var(--skin-team-report-header-gradient-overlap);
+  flex-shrink: 0;
+}
+
+/* Position/role selection is a regular outlined field, not a white media wash.
+ * Leave the miniature pitch and player data colours intact. */
+.player_position_dropdown:hover:enabled .si-dropdown__selection-field {
+  background-color: var(--skin-control-hover);
+}
+.player_position_dropdown:active:enabled .si-dropdown__selection-field {
+  background-color: var(--skin-control-pressed);
+}
+
+/* Club News uses the compact dynamic header instead of ClubSiteHeader.
+ * Crop its verified outer paint chain only; story-image gradients below are
+ * content and must keep their native treatment. Equal offsets preserve layout. */
+#ReportBody #NewsTeamSite #SiteHeaderDynamicItem {
+  overflow: hidden;
+}
+#ReportBody #NewsTeamSite #SiteHeaderDynamicItem #BindingExpect > * > .unity-image > .sigradient {
+  padding-bottom: var(--skin-club-header-gradient-extension);
+  margin-bottom: var(--skin-club-header-gradient-overlap);
+  flex-shrink: 0;
+}
+/* Current NewsClubSiteHeader places the crest, club title and metadata inside
+ * this direct content child. Share the overview's backplate without tinting
+ * child artwork or the separate news-story images. */
+#ReportBody #NewsTeamSite #SiteHeaderDynamicItem #BindingExpect > * > .unity-image > .sigradient > #Container.ios-site-header {
+  background-color: var(--skin-club-details-scrim);
+}
+/* NewsClubBlock_Large gives this title a native 10% column and an ellipsis
+ * utility. Let the larger Poppins metrics wrap at the existing size instead
+ * of losing "Table" or widening the league's data columns. */
+#ReportBody #NewsTeamSite #LeagueTable > .thematic-md.content-ellipsis {
+  white-space: normal;
+  height: auto;
+  min-height: 0;
+  max-height: none;
+  text-overflow: clip;
+}
+
+/* Competition News uses the same native dynamic header chain as Club News.
+ * Keep its competition-bound colour and crop the fade within that header only;
+ * the story artwork below is outside SiteHeaderDynamicItem. */
+#ReportBody #NewsCompetitionSite #SiteHeaderDynamicItem {
+  overflow: hidden;
+}
+#ReportBody #NewsCompetitionSite #SiteHeaderDynamicItem #BindingExpect > * > .unity-image > .sigradient {
+  padding-bottom: var(--skin-header-gradient-extension);
+  margin-bottom: var(--skin-header-gradient-overlap);
+  flex-shrink: 0;
+}
+
+/* This header binds the secondary club colour, which may be almost white.
+ * Darken only its content backplate, preserving club identity beneath it and
+ * avoiding opacity on the text, badge or football artwork. */
+#ReportBody #ClubInfo .club-info-header > * {
+  background-color: var(--skin-club-info-header-scrim);
+}
+
+/* Biography paragraphs must grow with the selected theme font, not paint over
+ * the cover or introductory paragraph when the native measured height differs. */
+#NonPlayerReportPersonal .siscrollview > .align-self-stretch-class.align-items-start > .align-self-stretch-class.align-items-start > .sitext {
+  -unity-text-align: upper-left;
+  height: auto;
+  flex-shrink: 0;
+}
+
+/* Keep the biography cover's measured space before its natural-height prose. */
+#NonPlayerReportPersonal .siscrollview > .align-self-stretch-class.align-items-start > .width-100-percent,
+#NonPlayerReportPersonal .siscrollview > .align-self-stretch-class.align-items-start > .align-self-stretch-class.align-items-start {
+  flex-shrink: 0;
+}
+
+#NonPlayerReportPersonal .siscrollview > .align-self-stretch-class.align-items-start > .width-100-percent {
+  margin-bottom: var(--skin-biography-cover-gap);
+}
+
+
+/* Height units are plain choices on the appearance canvas, not filled pills.
+ * Native selected rows already stay transparent; retain readable light labels
+ * through selection/hover/press and leave the Volt radio dot as the marker. */
+.manager-creation-height-unit .unity-radio-button:enabled .sitext,
+.manager-creation-height-unit .unity-radio-button.unity-radio-button-group__child-active:active:enabled .sitext {
+  color: var(--skin-choice-foreground);
+}
+.manager-creation-height-unit .unity-radio-button:hover:enabled {
+  background-color: var(--skin-choice-hover);
+  border-radius: var(--skin-choice-radius);
+}
+.manager-creation-height-unit .unity-radio-button:active:enabled {
+  background-color: var(--skin-choice-pressed);
+}
+.manager-creation-height-unit .unity-radio-button:disabled .sitext {
+  color: var(--skin-text-disabled);
+}
+.manager-creation-height-unit .unity-radio-button:focus:enabled .unity-radio-button__checkmark-background {
+  border-color: var(--skin-focus-ring);
+}
+
+
+/* Appearance Sculpt/height sliders use the ordinary control accent, not an
+ * information/status colour. Both native families retain their own dimensions. */
+.manager-creation-screen-slider:hover:enabled .sislider--dragger,
+.manager-creation-slider:hover:enabled .sislider--dragger {
+  background-color: var(--skin-range-marker-hover);
+}
+.manager-creation-screen-slider:active:enabled .sislider--dragger,
+.manager-creation-screen-slider .sislider--dragger:active:enabled,
+.manager-creation-slider:active:enabled .sislider--dragger,
+.manager-creation-slider .sislider--dragger:active:enabled {
+  background-color: var(--skin-range-marker-pressed);
+}
+.manager-creation-screen-slider:disabled .sislider--dragger,
+.manager-creation-slider:disabled .sislider--dragger {
+  background-color: var(--skin-range-marker-disabled);
+}
+.manager-creation-screen-slider .sislider--dragger:focus:enabled,
+.manager-creation-slider .sislider--dragger:focus:enabled {
+  border-color: var(--skin-focus-ring);
+}
+
+/* None is a monochrome UI glyph, unlike adjacent head/clothing thumbnails.
+ * Its named native host may create the restricted-icon leaf dynamically. */
+.manager-preset-button:enabled #NoneIcon,
+.manager-preset-button:enabled .manager-creation-option-none-container .ui-concepts-restricted_large {
+  -unity-background-image-tint-color: var(--skin-text-primary);
+}
+.virtualised-list__item--selected .manager-preset-button:enabled #NoneIcon,
+.virtualised-list__item--selected .manager-preset-button:enabled .manager-creation-option-none-container .ui-concepts-restricted_large {
+  -unity-background-image-tint-color: var(--skin-selection-foreground);
+}
+.manager-preset-button:disabled #NoneIcon,
+.manager-preset-button:disabled .manager-creation-option-none-container .ui-concepts-restricted_large {
+  -unity-background-image-tint-color: var(--skin-text-disabled);
+}
+
+
+/* Milestones All omits the category icon, leaving its label against the radio
+ * mark. Keep the shared field gap without moving icon-bearing categories. */
+.frames-milestone-list-size-size3 .unity-radio-button-group__child-first .sitext {
+  margin-left: var(--skin-field-label-gap);
+}
+
+
+/* Player contract and comparison headers bind horizontal club fades. Clip the
+ * extended paint at their existing wrappers, preserving native club binding and
+ * content size. The contract padding includes its original 12px end inset. */
+#ReportBody #contractcontainer > .align-self-stretch-class.flex-no-shrink-class {
+  overflow: hidden;
+  border-top-left-radius: var(--skin-radius-card);
+  border-top-right-radius: var(--skin-radius-card);
+}
+#ReportBody #contractcontainer .loan-report-header.sigradient {
+  padding-right: var(--skin-contract-header-gradient-padding);
+  margin-right: var(--skin-contract-header-gradient-overlap);
+  flex-shrink: 0;
+}
+#ReportBody .player-comparison-player-widget {
+  overflow: hidden;
+  border-radius: var(--skin-radius-card);
+}
+/* Hover previews are hosted inside their source row, outside ReportBody.
+ * Clip their actual header tile while preserving the bound club colour. */
+#PlayerReportHeaderTooltip {
+  overflow: hidden;
+}
+/* These two headers set child width and gradient padding in game code.
+ * Expanding layout would move trailing contract data outside the clip. Scale
+ * paint about the shared centre, then counter-scale the single full-width
+ * content row. Symmetric native insets keep the two centres aligned. */
+#ReportBody .player-comparison-header #LeftSIGradient.sigradient,
+#ReportBody .player-comparison-header #RightSIGradient.sigradient,
+#ReportBody #PlayerInfoBlock .entity-background-header > .sigradient,
+#PlayerReportHeaderTooltip .sigradient {
+  scale: var(--skin-player-header-horizontal-paint-scale) 1;
+  transform-origin: center;
+}
+#ReportBody .player-comparison-header #LeftSIGradient.sigradient > #left-full,
+#ReportBody .player-comparison-header #RightSIGradient.sigradient > #right-full,
+#ReportBody #PlayerInfoBlock .entity-background-header > .sigradient > .row-direction-normal,
+#PlayerReportHeaderTooltip .sigradient > .row-direction-normal {
+  scale: var(--skin-player-header-horizontal-content-scale) 1;
+  transform-origin: center;
+}
+
+/* Compact overview assessment prose uses a body role, rather than the same
+ * size as its tile title. Preserve the native report/status variants. */
+#PlayerTrainingOverview #HeaderText .heading-xsmall-14px {
+  font-size: var(--skin-player-training-summary-size);
+}
+
+/* Full club Facts has a native inline 192px label lane and matching header
+ * spacer. A minimum preserves longer Poppins labels with the shared field gap,
+ * without replacing inline widths, changing fonts or increasing row height.
+ * The authored card/row chains keep this separate from compact Facts rows. */
+#ReportBody #ElementBindingRoot > #Nonphone-FigmaBaseCardTemplate #Row > #Baseline_192 {
+  min-width: var(--skin-facts-label-min-width);
+  padding-right: var(--skin-field-label-gap);
+}
+#ReportBody #ElementBindingRoot > #Nonphone-FigmaBaseCardTemplate #Content > #Horizontal1 > #BaseSpace {
+  min-width: var(--skin-facts-label-min-width);
+}
+
+/* Club Profile's compact stadium pairs already have a 16px label gutter.
+ * Limit the native 140px value lanes together so flexible labels keep that
+ * space. Retain row height, label ellipsis and all value/football bindings. */
+#ReportBody #ClubProfileCard #MainTeamStadiumDetailsFrame > * > #TotalCapacityTextFrame,
+#ReportBody #ClubProfileCard #MainTeamStadiumDetailsFrame > * > #SurfaceFrame,
+#ReportBody #ClubProfileCard #MainTeamStadiumDetailsFrame > * > #ConditionTextFrame,
+#ReportBody #ClubProfileCard #MainTeamStadiumDetailsFrame > * > #PitchDimensionsTextFrame,
+#ReportBody #ClubProfileCard #MainTeamStadiumDetailsFrame > * > #YearBuiltTextFrame,
+#ReportBody #ClubProfileCard #MainTeamStadiumDetailsFrame > * > #SeasonTicketHoldersTextFrame,
+#ReportBody #ClubProfileCard #MainTeamStadiumDetailsFrame > * > #SeasonTicketPriceTextFrame,
+#ReportBody #ClubProfileCard #MainTeamStadiumDetailsFrame > * > #MatchTicketPriceTextFrame {
+  max-width: var(--skin-club-profile-value-max-width);
+}
+
+/* Advice titles explicitly request start alignment in both the static round-up
+ * row and the shared advice-giver row. Preserve that authored intent against
+ * the imported centering helper; descriptions and owner fields keep their layout. */
+#ReportBody #Frame-RoundUpFrequency > #TextContainer > #data_display-cell-standard-regular-0-unpacked > .regular-horizontal-container-center-all.justify-content-start,
+#ReportBody #binding_expect > .row-direction-normal.align-items-start.justify-content-center > #TextContainer > #data_display-cell-standard-regular-0-unpacked > #data_display-cell-standard-regular.regular-horizontal-container-center-all.justify-content-start {
+  justify-content: flex-start;
+}
+
+/* Compact selected-manager results have a native inline 220px allocation.
+ * Reclaim only authored inter-group and badge-label gaps, retaining badge
+ * dimensions, typography, ellipsis protection and the neighbouring groups. */
+#ReportBody #SelectedManagerBlock > #selected-manager-info > #info #percent-gauge-wins.margin-right-global-gap-regular,
+#ReportBody #SelectedManagerBlock > #selected-manager-info > #info #percent-gauge-draws.margin-right-global-gap-regular {
+  margin-right: var(--skin-manager-history-record-group-gap);
+}
+#ReportBody #SelectedManagerBlock > #selected-manager-info > #info #percent-gauge-wins > .data_display-graphs-elements-data_badge-colour-green-text_type-primary.margin-right-global-gap-small,
+#ReportBody #SelectedManagerBlock > #selected-manager-info > #info #percent-gauge-draws > .data_display-graphs-elements-data_badge-colour-green-text_type-primary.margin-right-global-gap-small,
+#ReportBody #SelectedManagerBlock > #selected-manager-info > #info #percent-gauge-losses > .data_display-graphs-elements-data_badge-colour-green-text_type-primary.margin-right-global-gap-small {
+  margin-right: var(--skin-manager-history-record-label-gap);
+}
+
+/* The 4x2 history tile uses ManagerHistoryShortCell, whose name column has
+ * inline width55%. Bound only that column so the dates sibling can grow;
+ * preserve name/date ellipsis, portraits, separator and native row height. */
+#ReportBody #tile-wide-4x2 #ManagersInfoStreamedList BindingExpect > .row-direction-normal.flex-grow-class > .row-direction-normal.padding-right-global-padding-regular.padding-left-global-padding-none.align-items-center {
+  max-width: var(--skin-manager-history-tile-name-max-width);
+}
+
+/* Transfer Activity's imported potential summary root carries both classes.
+ * Native AlwaysApplied orders the column variant after the row helper; the
+ * loose utilities import reverses that tie. Restore only this authored root's
+ * native column direction, leaving its host alignment and spacing unchanged. */
+#player-list-frame #bottom-frame #potential-stacked.potential-stacked-variant.row-direction-normal {
+  flex-direction: column;
+}

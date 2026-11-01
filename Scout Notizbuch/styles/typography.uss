@@ -1,0 +1,1170 @@
+/* Edit this stylesheet directly, then reload the skin. Shared values live in theme.uss. */
+
+/* Typography
+ * Native text families, weights and sizes. Asset-backed families require the native font resources.
+ */
+
+/* Body regular 13px regular.
+ * sets font/text presentation.
+ * Source rule 736.
+ */
+.body-regular-13px-regular {
+  font-size: var(--typography-size-13);
+  white-space: normal;
+  -unity-font-definition: var(--skin-font-body);
+  -unity-text-align: middle-left;
+}
+
+/* Body small.
+ * sets font/text presentation.
+ * Shared rule for 5 selectors. Editing a declaration here affects the whole group below.
+ * Source rule 737.
+ */
+.body-sm,
+.body-sm-regular,
+.body-regular-12px-regular,
+.body-small-12px-regular,
+.tactics-advice-dropdown .sitext {
+  font-size: var(--body-sm-size);
+  white-space: normal;
+  -unity-font-definition: var(--body-sm-family);
+  -unity-text-align: middle-left;
+}
+
+/* Body small strong.
+ * sets font/text presentation.
+ * Shared rule for 3 selectors. Editing a declaration here affects the whole group below.
+ * Source rule 738.
+ */
+.body-sm-strong,
+.body-regular-12px-bold,
+.body-small-12px-bold {
+  font-size: var(--body-sm-size);
+  white-space: normal;
+  -unity-font-definition: var(--body-sm-family);
+  -unity-text-align: middle-left;
+  -unity-font-style: var(--typography-weight-bold);
+}
+
+/* Heading small.
+ * sets font/text presentation.
+ * Source rule 739.
+ */
+.heading-sm {
+  font-size: var(--heading-sm-size);
+  white-space: normal;
+  -unity-font-style: var(--heading-sm-weight);
+  -unity-font-definition: var(--heading-sm-family);
+  -unity-text-align: middle-left;
+}
+
+/* Heading medium.
+ * sets font/text presentation.
+ * Shared rule for 2 selectors. Editing a declaration here affects the whole group below.
+ * Source rule 740.
+ */
+.heading-md,
+.heading-small-16px {
+  font-size: var(--heading-md-size);
+  white-space: normal;
+  -unity-font-style: var(--heading-md-weight);
+  -unity-font-definition: var(--heading-md-family);
+  -unity-text-align: middle-left;
+}
+
+/* Heading large.
+ * sets font/text presentation.
+ * Shared rule for 2 selectors. Editing a declaration here affects the whole group below.
+ * Source rule 741.
+ */
+.heading-lg,
+.heading-regular-18px {
+  font-size: var(--heading-lg-size);
+  white-space: normal;
+  -unity-font-definition: var(--heading-lg-family);
+  -unity-text-align: middle-left;
+  -unity-font-style: var(--heading-lg-weight);
+}
+
+/* Heading extra large.
+ * sets font/text presentation.
+ * Shared rule for 2 selectors. Editing a declaration here affects the whole group below.
+ * Source rule 742.
+ */
+.heading-xl,
+.heading-large-22px {
+  font-size: var(--heading-xl-size);
+  white-space: normal;
+  -unity-font-definition: var(--heading-xl-family);
+  -unity-text-align: middle-left;
+  -unity-font-style: var(--heading-xl-weight);
+}
+
+/* Heading xxl.
+ * sets font/text presentation.
+ * Shared rule for 2 selectors. Editing a declaration here affects the whole group below.
+ * Source rule 743.
+ */
+.heading-xxl,
+.heading-xlarge-30px {
+  font-size: var(--heading-xxl-size);
+  -unity-font-definition: var(--heading-xxl-family);
+  -unity-font-style: var(--heading-xxl-weight);
+}
+
+/* Body large 16px regular.
+ * sets font/text presentation.
+ * Source rule 744.
+ */
+.body-large-16px-regular {
+  font-size: var(--heading-md-size);
+  white-space: normal;
+  -unity-font-definition: var(--skin-font-body);
+  -unity-text-align: middle-left;
+}
+
+/* Body large 16px bold.
+ * Uses the mapped FM medium-heading family and weight; keep the size role unchanged.
+ * Source rule 745.
+ */
+.body-large-16px-bold {
+  font-size: var(--heading-md-size);
+  white-space: normal;
+  -unity-font-definition: var(--heading-md-family);
+  -unity-font-style: var(--heading-md-weight);
+  -unity-text-align: middle-left;
+}
+
+/* Text middle center.
+ * sets font/text presentation.
+ * Source rule 746.
+ */
+.text-middle-center {
+  -unity-text-align: middle-center;
+}
+
+/* Text right.
+ * sets font/text presentation.
+ * Source rule 747.
+ */
+.body-small-12px-regular.text-right {
+  -unity-text-align: middle-right;
+}
+
+/* Tactics overlay text container.
+ * controls size/placement; sets spacing around/inside the element.
+ * Source rule 748.
+ */
+.tactics-overlay-text-container {
+  height: 70px;
+  margin-top: 16px;
+  padding-top: 24px;
+}
+
+/* Heading small 12px.
+ * sets font/text presentation.
+ * Source rule 749.
+ */
+.heading-small-12px {
+  font-size: var(--body-sm-size);
+  white-space: normal;
+  -unity-font-definition: var(--body-md-family);
+  -unity-font-style: var(--typography-weight-bold);
+  -unity-text-align: middle-left;
+}
+
+/* Body medium strong.
+ * sets font/text presentation.
+ * Shared rule for 4 selectors. Editing a declaration here affects the whole group below.
+ * Source rule 750.
+ */
+.body-md-strong,
+.body-regular-14px-bold,
+.heading-small-14px,
+.heading-xsmall-14px {
+  font-size: var(--body-md-size);
+  white-space: normal;
+  -unity-font-definition: var(--body-md-family);
+  -unity-font-style: var(--typography-weight-bold);
+  -unity-text-align: middle-left;
+}
+
+/* Body extra small strong.
+ * sets font/text presentation.
+ * Shared rule for 2 selectors. Editing a declaration here affects the whole group below.
+ * Source rule 751.
+ */
+.body-xs-strong,
+.body-xsmall-10px-bold {
+  font-size: var(--body-xs-size);
+  white-space: normal;
+  -unity-font-definition: var(--body-xs-family);
+  -unity-font-style: var(--typography-weight-bold);
+  -unity-text-align: middle-left;
+}
+
+/* Typography
+ * Native text families, weights and sizes. Asset-backed families require the native font resources.
+ */
+
+/* Tifo h.
+ * Changes text/foreground colour; sets font/text presentation.
+ * Source rule 808.
+ */
+.tifo-h {
+  color: var(--skin-text-primary);
+  font-size: var(--heading-md-size);
+  white-space: normal;
+  -unity-font-style: var(--heading-md-weight);
+  -unity-font-definition: var(--heading-md-family);
+  -unity-text-align: middle-left;
+}
+
+/* Tifo hp.
+ * Changes text/foreground colour; sets font/text presentation.
+ * Source rule 809.
+ */
+.tifo-hp {
+  color: var(--skin-text-secondary);
+  font-size: var(--body-md-size);
+  white-space: normal;
+  -unity-font-definition: var(--body-md-family);
+  -unity-text-align: middle-left;
+}
+
+/* Tifo ph.
+ * Changes text/foreground colour; sets font/text presentation.
+ * Source rule 810.
+ */
+.tifo-ph {
+  color: var(--skin-text-secondary);
+  font-size: var(--body-sm-size);
+  white-space: normal;
+  -unity-font-definition: var(--body-sm-family);
+  -unity-text-align: middle-left;
+}
+
+/* Tifo ph alt.
+ * Changes text/foreground colour; sets font/text presentation.
+ * Source rule 811.
+ */
+.tifo-ph-alt {
+  color: var(--skin-text-primary);
+  font-size: var(--body-sm-size);
+  white-space: normal;
+  -unity-font-definition: var(--body-sm-family);
+  -unity-text-align: middle-left;
+}
+
+/* Tifo ph m.
+ * Changes text/foreground colour; sets font/text presentation; sets spacing around/inside the element.
+ * Source rule 812.
+ */
+.tifo-ph-m {
+  color: var(--skin-text-secondary);
+  font-size: var(--body-sm-size);
+  white-space: normal;
+  -unity-font-definition: var(--body-sm-family);
+  -unity-text-align: middle-left;
+  margin-bottom: var(--global-gap-close);
+}
+
+/* Tifo p.
+ * Changes text/foreground colour; sets font/text presentation.
+ * Source rule 813.
+ */
+.tifo-p {
+  color: var(--skin-text-primary);
+  font-size: var(--body-md-size);
+  white-space: normal;
+  -unity-font-definition: var(--body-md-family);
+  -unity-text-align: middle-left;
+}
+
+/* Tifo pb.
+ * Changes text/foreground colour; sets font/text presentation.
+ * Source rule 814.
+ */
+.tifo-pb {
+  color: var(--skin-text-primary);
+  font-size: var(--body-md-size);
+  -unity-font-style: var(--typography-weight-bold);
+  white-space: normal;
+  -unity-font-definition: var(--body-md-family);
+  -unity-text-align: middle-left;
+}
+
+/* Content ellipsis.
+ * sets font/text presentation.
+ * Shared rule for 11 selectors. Editing a declaration here affects the whole group below.
+ * Source rule 815.
+ */
+.tifo-p.content-ellipsis,
+.tifo-ph.content-ellipsis,
+.tifo-h.content-ellipsis,
+.tifo-hp.content-ellipsis,
+.match-simulation-player-10px-bold.content-ellipsis,
+.body-regular-14px-regular.content-ellipsis,
+.body-regular-13px-regular.content-ellipsis,
+.body-small-12px-regular.content-ellipsis,
+.heading-small-14px.content-ellipsis,
+.heading-small-12px.content-ellipsis,
+.heading-regular-16p.content-ellipsisx {
+  white-space: nowrap;
+}
+
+/* Colours brand foundation horizon soft.
+ * Changes text/foreground colour.
+ * Source rule 816.
+ */
+.colours-brand-foundation-horizon-soft {
+  color: var(--colours-brand-tints-horizon-120);
+}
+
+/* Tifo text women primary.
+ * Changes text/foreground colour.
+ * Shared rule for 2 selectors. Editing a declaration here affects the whole group below.
+ * Source rule 817.
+ */
+.tifo-text-women-primary,
+.tifo-text-women-primary .cell-primary-text {
+  color: var(--global-text-women-primary);
+}
+
+/* Cell primary text.
+ * sets font/text presentation.
+ * Source rule 818.
+ */
+.heading-md .cell-primary-text {
+  font-size: var(--heading-md-size);
+  -unity-font-style: var(--heading-md-weight);
+  -unity-font-definition: var(--heading-md-family);
+  -unity-text-align: middle-left;
+}
+
+/* Tifo text brand horizon.
+ * Changes text/foreground colour.
+ * Source rule 819.
+ */
+.tifo-text-brand-horizon {
+  color: var(--skin-text-link);
+}
+
+/* Tifo text neutral black.
+ * Changes text/foreground colour.
+ * Source rule 820.
+ */
+.tifo-text-neutral-black {
+  color: var(--colours-base-neutral-black);
+}
+
+/* Tifo text red 20.
+ * Changes text/foreground colour.
+ * Source rule 821.
+ */
+.tifo-text-red-20 {
+  color: var(--colours-base-red-soft);
+}
+
+/* Tifo text men primary.
+ * Changes text/foreground colour.
+ * Shared rule for 2 selectors. Editing a declaration here affects the whole group below.
+ * Source rule 822.
+ */
+.tifo-text-men-primary,
+.tifo-text-men-primary .cell-primary-text {
+  color: var(--global-text-men-primary);
+}
+
+/* License text premier league purple.
+ * Changes text/foreground colour.
+ * Source rule 823.
+ */
+.license-text-premier-league-purple {
+  color: var(--premier-league-purple);
+}
+
+/* Tifo text communication feedback positive.
+ * Changes text/foreground colour.
+ * Source rule 824.
+ */
+.tifo-text-communication-feedback-positive {
+  color: var(--communication-feedback-positive);
+}
+
+/* Tifo text communication feedback negative.
+ * Changes text/foreground colour.
+ * Source rule 825.
+ */
+.tifo-text-communication-feedback-negative {
+  color: var(--communication-feedback-negative);
+}
+
+/* FM title text.
+ * sets font/text presentation.
+ * Source rule 826.
+ */
+.fm-title-text {
+  font-size: var(--typography-size-50);
+  -unity-font-definition: var(--skin-font-body);
+  -unity-font-style: var(--typography-weight-bold);
+  -unity-text-align: middle-center;
+}
+
+/* Tifo text alpha light alpha 8.
+ * Changes text/foreground colour.
+ * Source rule 827.
+ */
+.tifo-text-alpha-light-alpha-8 {
+  color: var(--skin-on-media-alpha-08);
+}
+
+/* Tifo text alpha light alpha 12.
+ * Changes text/foreground colour.
+ * Source rule 828.
+ */
+.tifo-text-alpha-light-alpha-12 {
+  color: var(--skin-on-media-alpha-12);
+}
+
+/* Tifo text alpha light alpha 20.
+ * Changes text/foreground colour.
+ * Source rule 829.
+ */
+.tifo-text-alpha-light-alpha-20 {
+  color: var(--skin-on-media-alpha-20);
+}
+
+/* Tifo text alpha light alpha 35.
+ * Changes text/foreground colour.
+ * Source rule 830.
+ */
+.tifo-text-alpha-light-alpha-35 {
+  color: var(--skin-on-media-alpha-35);
+}
+
+/* Tifo text alpha light alpha 65.
+ * Changes text/foreground colour.
+ * Source rule 831.
+ */
+.tifo-text-alpha-light-alpha-65 {
+  color: var(--skin-on-media-alpha-65);
+}
+
+/* Tifo text alpha light alpha 85.
+ * Changes text/foreground colour.
+ * Source rule 832.
+ */
+.tifo-text-alpha-light-alpha-85 {
+  color: var(--skin-on-media-alpha-85);
+}
+
+/* Tifo text alpha transparent 0.
+ * Changes text/foreground colour.
+ * Source rule 833.
+ */
+.tifo-text-alpha-transparent-0 {
+  color: var(--skin-transparent);
+}
+
+/* Tifo text base blue 20.
+ * Changes text/foreground colour.
+ * Source rule 834.
+ */
+.tifo-text-base-blue-20 {
+  color: var(--colours-base-blue-soft);
+}
+
+/* Tifo text base blue 50.
+ * Changes text/foreground colour.
+ * Source rule 835.
+ */
+.tifo-text-base-blue-50 {
+  color: var(--colours-base-blue-strong);
+}
+
+/* Tifo text base blue 60.
+ * Changes text/foreground colour.
+ * Source rule 836.
+ */
+.tifo-text-base-blue-60 {
+  color: var(--colours-base-blue-base);
+}
+
+/* Tifo text base blue 80.
+ * Changes text/foreground colour.
+ * Source rule 837.
+ */
+.tifo-text-base-blue-80 {
+  color: var(--colours-base-blue-deep);
+}
+
+/* Tifo text base cyan 20.
+ * Changes text/foreground colour.
+ * Source rule 838.
+ */
+.tifo-text-base-cyan-20 {
+  color: var(--colours-base-cyan-soft);
+}
+
+/* Tifo text base cyan 40.
+ * Changes text/foreground colour.
+ * Source rule 839.
+ */
+.tifo-text-base-cyan-40 {
+  color: var(--colours-base-cyan-soft);
+}
+
+/* Tifo text base cyan 50.
+ * Changes text/foreground colour.
+ * Source rule 840.
+ */
+.tifo-text-base-cyan-50 {
+  color: var(--colours-base-cyan-strong);
+}
+
+/* Tifo text base green 20.
+ * Changes text/foreground colour.
+ * Source rule 841.
+ */
+.tifo-text-base-green-20 {
+  color: var(--colours-base-green-soft);
+}
+
+/* Tifo text base green 40.
+ * Changes text/foreground colour.
+ * Source rule 842.
+ */
+.tifo-text-base-green-40 {
+  color: var(--colours-base-green-soft);
+}
+
+/* Tifo text base green 50.
+ * Changes text/foreground colour.
+ * Source rule 843.
+ */
+.tifo-text-base-green-50 {
+  color: var(--colours-base-green-strong);
+}
+
+/* Tifo text base green 60.
+ * Changes text/foreground colour.
+ * Source rule 844.
+ */
+.tifo-text-base-green-60 {
+  color: var(--colours-base-green-base);
+}
+
+/* Tifo text base grey 20.
+ * Changes text/foreground colour.
+ * Source rule 845.
+ */
+.tifo-text-base-grey-20 {
+  color: var(--colours-base-grey-soft);
+}
+
+/* Tifo text base grey 50.
+ * Changes text/foreground colour.
+ * Source rule 846.
+ */
+.tifo-text-base-grey-50 {
+  color: var(--colours-base-grey-strong);
+}
+
+/* Tifo text base grey 60.
+ * Changes text/foreground colour.
+ * Source rule 847.
+ */
+.tifo-text-base-grey-60 {
+  color: var(--colours-base-grey-base);
+}
+
+/* Tifo text base lime 40.
+ * Changes text/foreground colour.
+ * Source rule 848.
+ */
+.tifo-text-base-lime-40 {
+  color: var(--colours-base-lime-soft);
+}
+
+/* Tifo text base lime 50.
+ * Changes text/foreground colour.
+ * Source rule 849.
+ */
+.tifo-text-base-lime-50 {
+  color: var(--colours-base-lime-strong);
+}
+
+/* Tifo text base orange 50.
+ * Changes text/foreground colour.
+ * Source rule 850.
+ */
+.tifo-text-base-orange-50 {
+  color: var(--colours-base-orange-strong);
+}
+
+/* Tifo text base pink 40.
+ * Changes text/foreground colour.
+ * Source rule 851.
+ */
+.tifo-text-base-pink-40 {
+  color: var(--colours-base-pink-soft);
+}
+
+/* Tifo text base purple 50.
+ * Changes text/foreground colour.
+ * Source rule 852.
+ */
+.tifo-text-base-purple-50 {
+  color: var(--colours-base-purple-strong);
+}
+
+/* Tifo text base purple 60.
+ * Changes text/foreground colour.
+ * Source rule 853.
+ */
+.tifo-text-base-purple-60 {
+  color: var(--colours-base-purple-base);
+}
+
+/* Tifo text base purple 80.
+ * Changes text/foreground colour.
+ * Source rule 854.
+ */
+.tifo-text-base-purple-80 {
+  color: var(--colours-base-purple-deep);
+}
+
+/* Tifo text base red 40.
+ * Changes text/foreground colour.
+ * Source rule 855.
+ */
+.tifo-text-base-red-40 {
+  color: var(--colours-base-red-soft);
+}
+
+/* Tifo text base red 50.
+ * Changes text/foreground colour.
+ * Source rule 856.
+ */
+.tifo-text-base-red-50 {
+  color: var(--colours-base-red-strong);
+}
+
+/* Tifo text base teal 20.
+ * Changes text/foreground colour.
+ * Source rule 857.
+ */
+.tifo-text-base-teal-20 {
+  color: var(--colours-base-teal-soft);
+}
+
+/* Tifo text base teal 50.
+ * Changes text/foreground colour.
+ * Source rule 858.
+ */
+.tifo-text-base-teal-50 {
+  color: var(--colours-base-teal-strong);
+}
+
+/* Tifo text base yellow 20.
+ * Changes text/foreground colour.
+ * Source rule 859.
+ */
+.tifo-text-base-yellow-20 {
+  color: var(--colours-base-yellow-soft);
+}
+
+/* Tifo text base yellow 40.
+ * Changes text/foreground colour.
+ * Source rule 860.
+ */
+.tifo-text-base-yellow-40 {
+  color: var(--colours-base-yellow-soft);
+}
+
+/* Tifo text base yellow 50.
+ * Changes text/foreground colour.
+ * Source rule 861.
+ */
+.tifo-text-base-yellow-50 {
+  color: var(--colours-base-yellow-strong);
+}
+
+/* Tifo text brand foundation air.
+ * Changes text/foreground colour.
+ * Source rule 862.
+ */
+.tifo-text-brand-foundation-air {
+  color: var(--skin-text-primary);
+}
+
+/* Tifo text brand foundation cloud.
+ * Changes text/foreground colour.
+ * Source rule 863.
+ */
+.tifo-text-brand-foundation-cloud {
+  color: var(--skin-text-secondary);
+}
+
+/* Tifo text brand foundation midnight.
+ * Changes text/foreground colour.
+ * Source rule 864.
+ */
+.tifo-text-brand-foundation-midnight {
+  color: var(--skin-surface-page);
+}
+
+/* Tifo text brand foundation midnight 60.
+ * Changes text/foreground colour.
+ * Source rule 865.
+ */
+.tifo-text-brand-foundation-midnight-60 {
+  color: var(--skin-surface-page-alpha-60);
+}
+
+/* Tifo text brand foundation white.
+ * Changes text/foreground colour.
+ * Source rule 866.
+ */
+.tifo-text-brand-foundation-white {
+  color: var(--skin-text-primary);
+}
+
+/* Tifo text brand tints horizon 120.
+ * Changes text/foreground colour.
+ * Source rule 867.
+ */
+.tifo-text-brand-tints-horizon-120 {
+  color: var(--colours-brand-tints-horizon-120);
+}
+
+/* Tifo text brand tints midnight 80.
+ * Changes text/foreground colour.
+ * Source rule 868.
+ */
+.tifo-text-brand-tints-midnight-80 {
+  color: var(--colours-brand-tints-midnight-80);
+}
+
+/* Tifo text brand highlight orange.
+ * Changes text/foreground colour.
+ * Source rule 869.
+ */
+.tifo-text-brand-highlight-orange {
+  color: var(--skin-feedback-warning);
+}
+
+/* Tifo text brand highlight pink.
+ * Changes text/foreground colour.
+ * Source rule 870.
+ */
+.tifo-text-brand-highlight-pink {
+  color: var(--skin-text-link);
+}
+
+/* Tifo text data ratings star ability orange.
+ * Changes text/foreground colour.
+ * Source rule 871.
+ */
+.tifo-text-data-ratings-star-ability-orange {
+  color: var(--colours-data-ratings-star-ability-orange);
+}
+
+/* Tifo text linear scale 17.
+ * Changes text/foreground colour.
+ * Source rule 872.
+ */
+.tifo-text-linear-scale-17 {
+  color: var(--colours-linear-scale-strong-9);
+}
+
+/* Tifo text linear scale 20.
+ * Changes text/foreground colour.
+ * Source rule 873.
+ */
+.tifo-text-linear-scale-20 {
+  color: var(--colours-linear-scale-strong-5);
+}
+
+/* Tifo text tactics base 50.
+ * Changes text/foreground colour.
+ * Source rule 874.
+ */
+.tifo-text-tactics-base-50 {
+  color: var(--colours-tactics-base-50);
+}
+
+/* Tifo text staff medical head physio 20.
+ * Changes text/foreground colour.
+ * Source rule 875.
+ */
+.tifo-text-staff-medical-head-physio-20 {
+  color: var(--staff-medical-head-physio-20);
+}
+
+/* Tifo text staff medical head of sports science 20.
+ * Changes text/foreground colour.
+ * Source rule 876.
+ */
+.tifo-text-staff-medical-head-of-sports-science-20 {
+  color: var(--staff-medical-head-of-sports-science-20);
+}
+
+/* Typography
+ * Native text families, weights and sizes. Asset-backed families require the native font resources.
+ */
+
+/* Body language morph label.
+ * changes opacity for the whole element and its contents.
+ * Shared rule for 10 selectors. Editing a declaration here affects the whole group below.
+ * Source rule 1246.
+ */
+.body-language-changed .body-language-morph-label,
+.ios-navigation-tab-property-1-default--selected > #text,
+.ui-concepts-object-preview_small:hover,
+.ui-concepts-object-preview_small:active:enabled,
+.match-focus-available,
+.menu-element--selected .main-menu-navigation-default:hover .navigation-tab-dropdown,
+.navigation-tab-portal-default-active-false:hover .portal-text,
+.player-attribute-line-chart-color-point:hover:enabled,
+.navigation-tab-portal-default-active-true .navigation-chip,
+.object-preview-hover-hotspot:hover .ui-concepts-object-preview_small {
+  opacity: 1;
+}
+
+/* Body language complacent background colour.
+ * sets the background fill.
+ * Source rule 1247.
+ */
+.body-language-complacent-background-colour {
+  background-color: var(--colours-base-purple-deep);
+}
+
+/* Body language morph label.
+ * controls size/placement; defines how state changes animate; changes opacity for the whole element and its
+ * contents.
+ * Source rule 1248.
+ */
+.body-language-morph-label {
+  position: absolute;
+  opacity: 0;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  align-items: center;
+  justify-content: center;
+  transition-property: opacity;
+  transition-duration: 0.3s;
+  transition-timing-function: ease-in-out;
+}
+
+/* Body language morph rest.
+ * defines how state changes animate; changes opacity for the whole element and its contents.
+ * Source rule 1249.
+ */
+.body-language-morph-rest {
+  opacity: 1;
+  transition-property: opacity;
+  transition-duration: 0.3s;
+  transition-timing-function: ease-in-out;
+}
+
+/* Body language negative background colour.
+ * sets the background fill.
+ * Shared rule for 4 selectors. Editing a declaration here affects the whole group below.
+ * Source rule 1250.
+ */
+.body-language-negative-background-colour,
+.body-language-slightly-negative-background-colour,
+.emoticon-background-colour-neutral-negative,
+.grades-background-colour-disappointed {
+  background-color: var(--theme-color-orange-soft-surface);
+}
+
+/* Body language neutral background colour.
+ * sets the background fill.
+ * Shared rule for 2 selectors. Editing a declaration here affects the whole group below.
+ * Source rule 1251.
+ */
+.body-language-neutral-background-colour,
+.nav-on-light .calendar-widget-time-container {
+  background-color: var(--colours-base-neutral-black);
+}
+
+/* Body language none background colour.
+ * sets the background fill.
+ * Shared rule for 4 selectors. Editing a declaration here affects the whole group below.
+ * Source rule 1252.
+ */
+.body-language-none-background-colour,
+.body-language-mixed-background-colour,
+.emoticon-background-colour-neutral,
+.calendar-day-future.portal-messages-item-default-style-unread-property-1-message-property-2-default:hover {
+  background-color: var(--skin-surface-panel);
+}
+
+/* Body language positive text colour.
+ * Changes text/foreground colour.
+ * Shared rule for 4 selectors. Editing a declaration here affects the whole group below.
+ * Source rule 1253.
+ */
+.body-language-positive-text-colour,
+.emoticon-text-colour-slightly-positive,
+.team-comparison-rating-above-average-text,
+.transfer-interest-rating-label-very-interested {
+  color: var(--theme-color-lime-soft-soft);
+}
+
+/* Body language sad background colour.
+ * sets the background fill.
+ * Source rule 1254.
+ */
+.body-language-sad-background-colour {
+  background-color: var(--colours-base-blue-deep);
+}
+
+/* Body language slightly positive background colour.
+ * sets the background fill.
+ * Shared rule for 5 selectors. Editing a declaration here affects the whole group below.
+ * Source rule 1255.
+ */
+.body-language-slightly-positive-background-colour,
+.emoticon-background-colour-slightly-positive,
+.team-comparison-rating-average,
+.emoticon-background-colour-positive-neutral {
+  background-color: var(--status-linear-5-values-soft-3);
+}
+
+/* Body language slightly positive text colour.
+ * Changes text/foreground colour.
+ * Shared rule for 8 selectors. Editing a declaration here affects the whole group below.
+ * Source rule 1256.
+ */
+.body-language-slightly-positive-text-colour,
+.player-injury-cell-recurring-injury .sitext,
+.club-vision-text-colour-progress,
+.injury-severity-text-colour-recurring,
+.player-interest-purple,
+.relationship-with-you-text-colour-neutral,
+.happiness-content-text-colour,
+.tactical-effectiveness-provisional-score-text {
+  color: var(--colours-base-purple-soft);
+}
+
+/* Body language very negative background colour.
+ * sets the background fill.
+ * Shared rule for 4 selectors. Editing a declaration here affects the whole group below.
+ * Source rule 1257.
+ */
+.body-language-very-negative-background-colour,
+.injury-risk-background-colour-very-high,
+.team-comparison-rating-worst,
+.match-outcome-chip-defeat {
+  background-color: var(--theme-color-red-soft-surface);
+}
+
+/* Body language very negative text colour.
+ * Changes text/foreground colour.
+ * Shared rule for 6 selectors. Editing a declaration here affects the whole group below.
+ * Source rule 1258.
+ */
+.body-language-very-negative-text-colour,
+.injury-risk-text-colour-very-high,
+.relationship-with-you-text-colour-rival,
+.team-comparison-rating-worst-text,
+.transfer-interest-rating-label-prefers-stay,
+.theme-color-red-soft-soft {
+  color: var(--theme-color-red-soft-soft);
+}
+
+/* Body language very positive background colour.
+ * Changes text/foreground colour.
+ * Shared rule for 2 selectors. Editing a declaration here affects the whole group below.
+ * Source rule 1259.
+ */
+.body-language-very-positive-background-colour,
+.team-comparison-rating-best {
+  color: var(--theme-color-green-soft-surface);
+}
+
+/* Body language very positive text colour.
+ * Changes text/foreground colour.
+ * Shared rule for 7 selectors. Editing a declaration here affects the whole group below.
+ * Source rule 1260.
+ */
+.body-language-very-positive-text-colour,
+.emoticon-text-colour-positive,
+.team-comparison-rating-best-text,
+.transfer-interest-rating-label-extremely-interested,
+.data_knowledge_level_8_exceptional,
+.theme-color-green-soft-soft {
+  color: var(--theme-color-green-soft-soft);
+}
+
+/* Typography
+ * Native text families, weights and sizes. Asset-backed families require the native font resources.
+ */
+
+/* Tifo dm.
+ * controls size/placement; sets spacing around/inside the element.
+ * Source rule 4081.
+ */
+.tifo-dm {
+  width: 100%;
+  margin-top: var(--global-gap-regular);
+  margin-bottom: var(--global-gap-regular);
+}
+
+/* Tifo dm l.
+ * controls size/placement; sets spacing around/inside the element.
+ * Source rule 4082.
+ */
+.tifo-dm-l {
+  width: 100%;
+  margin-top: var(--global-gap-distant);
+  margin-bottom: var(--global-gap-distant);
+}
+
+/* SI dropdown selection field.
+ * Changes text/foreground colour; sets the outline/corner shape; controls size/placement; sets spacing
+ * around/inside the element.
+ * Source rule 4083.
+ */
+.tifo-dropdown-noborder .si-dropdown__selection-field {
+  padding: var(--spacing-small---8) var(--spacing-medium---16);
+  border-width: 0;
+  border-color: var(--skin-border-subtle);
+  color: var(--skin-text-primary);
+  max-height: 32px;
+  align-items: center;
+  border-radius: 0;
+  flex-direction: var(--row-direction-normal);
+  min-height: 32px;
+}
+
+/* SI dropdown selection field.
+ * Changes text/foreground colour; sets the background fill; sets the outline/corner shape; controls
+ * size/placement.
+ * Source rule 4087.
+ */
+.tifo-dropdown-nopadding .si-dropdown__selection-field {
+  padding: 0;
+  border-width: 1px;
+  border-color: var(--skin-border-subtle);
+  background-color: var(--skin-control-background);
+  color: var(--skin-text-primary);
+  min-height: 32px;
+  max-height: 32px;
+  align-items: center;
+  border-radius: var(--spacing-small---8);
+  flex-direction: var(--row-direction-normal);
+}
+
+/* SI dropdown selection field.
+ * Changes text/foreground colour; sets the outline/corner shape; controls size/placement; sets spacing
+ * around/inside the element.
+ * Shared rule for 2 selectors. Editing a declaration here affects the whole group below.
+ * Source rule 4088.
+ */
+.tifo-dropdown-secondary .si-dropdown__selection-field,
+.manager-creation-dropdown-secondary .si-dropdown__selection-field {
+  padding: var(--spacing-small---8) var(--spacing-medium---16);
+  border-width: 1px;
+  border-color: var(--skin-border-default);
+  color: var(--skin-text-primary);
+  max-height: 32px;
+  align-items: center;
+  border-radius: var(--spacing-small---8);
+  flex-direction: var(--row-direction-normal);
+  min-height: 32px;
+}
+
+/* Tifo icon brand horizon.
+ * tints background artwork.
+ * Source rule 4089.
+ */
+.tifo-icon-brand-horizon {
+  -unity-background-image-tint-color: var(--colours-feature-draft-shortlist-base);
+}
+
+/* Tifo scale 080.
+ * sets the native component presentation.
+ * Source rule 4090.
+ */
+.tifo-scale-080 {
+  scale: 0.8 0.8 1;
+}
+
+/* Tile 4x2 height.
+ * controls size/placement.
+ * Source rule 4091.
+ */
+.tile-4x2-height {
+  min-height: 148px;
+}
+
+/* Tile background gradient to transparent.
+ * sets the gradient colours drawn by this component.
+ * Source rule 4092.
+ */
+.tile-background-gradient--to-transparent {
+  --start-colour: var(--skin-surface-panel);
+  --end-colour: var(--none);
+}
+
+/* Tile hierarchy squad 2x4 custom numbers on right.
+ * controls size/placement.
+ * Source rule 4093.
+ */
+.tile-hierarchy-squad-2x4--custom-numbers-on-right {
+  flex-grow: 1;
+  align-items: center;
+  align-self: center;
+  align-content: auto;
+  flex-wrap: nowrap;
+  flex-direction: var(--row-direction-normal);
+}
+
+/* Tile mockups navigation core primary hi res.
+ * controls size/placement; sets spacing around/inside the element.
+ * Source rule 4094.
+ */
+.tile-mockups-navigation-core-primary-hi-res {
+  width: 100%;
+  min-height: 54px;
+  max-height: 54px;
+  padding-right: var(--global-padding-regular);
+  align-items: center;
+  flex-direction: var(--row-direction-normal);
+}
+
+/* News page section headings use thematic-md without the tile-title hook.
+ * Match the established Portal section face without changing nav/data labels.
+ */
+#ReportBody #ForYou > .sitext.thematic-md,
+#ReportBody #AroundTheWorld > .sitext.thematic-md,
+#ReportBody #TransferNews > .sitext.thematic-md,
+#ReportBody .news-story-block-header-foreground-content-area > .buttons-button-tertiary-default .thematic-md,
+#ReportBody .news-sub-content-block > .buttons-button-tertiary-default .thematic-md {
+  -unity-font-definition: var(--skin-font-section-heading);
+  -unity-font-style: var(--skin-font-section-heading-weight);
+}
+
+/* Competition overview links are section headings, not navigation/body copy. */
+#ReportBody #LeagueTable > .buttons-button-tertiary-default .thematic-md,
+#ReportBody #PlayerStats > .buttons-button-tertiary-default .thematic-md,
+#ReportBody #TeamStatsVar > .buttons-button-tertiary-default .thematic-md,
+#ReportBody #CompNews > .buttons-button-tertiary-default .thematic-md {
+  -unity-font-definition: var(--skin-font-section-heading);
+  -unity-font-style: var(--skin-font-section-heading-weight);
+}
+
+/* Club Info's green thematic labels are section headings, not action/status
+ * indicators. Match the common section face and primary foreground. */
+#ReportBody #ClubInfo .sitext.thematic-md.brand-foundation-horizon-color {
+  color: var(--skin-text-primary);
+  -unity-font-definition: var(--skin-font-section-heading);
+  -unity-font-style: var(--skin-font-section-heading-weight);
+}

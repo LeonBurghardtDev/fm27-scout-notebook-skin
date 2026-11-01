@@ -1,0 +1,2129 @@
+/* Edit this stylesheet directly, then reload the skin. Shared values live in theme.uss. */
+
+/* Navigation
+ * Native navigation selectors, with adjacent shared rules in source order.
+ */
+
+/* Tabgroup tab.
+ * controls size/placement.
+ * Source rule 37.
+ */
+.tabgroup > .tabgroup__tabs .tabgroup__tab {
+  height: 34px;
+}
+
+/* Buttongroup button.
+ * controls size/placement.
+ * Source rule 38.
+ */
+.buttongroup__button {
+  height: 34px;
+}
+
+/* Tab button height store fmc.
+ * controls size/placement.
+ * Source rule 39.
+ */
+.tabgroup > .tabgroup__tabs .tab-button-height-store-fmc {
+  height: 34px;
+}
+
+/* Manager creation tab button mobile.
+ * controls size/placement.
+ * Source rule 40.
+ */
+.tabgroup > .buttongroup .manager-creation-tab-button-mobile {
+  height: 34px;
+}
+
+/* Manager creation tab button.
+ * controls size/placement; sets spacing around/inside the element.
+ * Source rule 41.
+ */
+.tabgroup > .row-direction-normal > .buttongroup .manager-creation-tab-button {
+  height: 34px;
+  padding: 0 16px 0 16px;
+}
+
+/* Tabgroup tab.
+ * controls size/placement.
+ * Source rule 42.
+ */
+.tabgroup.largetabs > .tabgroup__tabs .tabgroup__tab {
+  height: 34px;
+}
+
+/* Tabgroup tab leading.
+ * sets the outline/corner shape; sets spacing around/inside the element.
+ * Shared rule for 2 selectors. Editing a declaration here affects the whole group below.
+ * Source rule 43.
+ */
+.tabgroup.SegmentedButtonRow > .tabgroup__tabs .tabgroup__tab--leading,
+.buttongroup.SegmentedButtonRow .buttongroup__button--leading {
+  margin: 0 1px 0 0;
+  border-radius: var(--border-radius-leading-small);
+}
+
+/* Tabgroup tab trailing.
+ * sets the outline/corner shape; sets spacing around/inside the element.
+ * Shared rule for 2 selectors. Editing a declaration here affects the whole group below.
+ * Source rule 44.
+ */
+.tabgroup.SegmentedButtonRow > .tabgroup__tabs .tabgroup__tab--trailing,
+.buttongroup.SegmentedButtonRow .buttongroup__button--trailing {
+  margin: 0 0 0 1px;
+  border-radius: var(--border-radius-trailing-small);
+}
+
+/* Generated rows can retain both active/inactive placement classes. The live
+ * group state owns selection; unselected labels stay readable on neutral paint. */
+.buttongroup.SegmentedButtonRow .buttongroup__button {
+  color: var(--skin-text-primary);
+}
+.buttongroup.SegmentedButtonRow .buttongroup__button .sitext,
+.buttongroup.SegmentedButtonRow .buttongroup__button .sitextmedium,
+.buttongroup.SegmentedButtonRow .buttongroup__button .sitextsmall {
+  color: var(--skin-text-primary);
+}
+.buttongroup.SegmentedButtonRow .buttongroup__button .global-text-secondary {
+  color: var(--skin-text-secondary);
+}
+
+/* Tabgroup tab active.
+ * sets the background fill; sets the background artwork; sets the outline/corner shape.
+ * Shared rule for 2 selectors. Editing a declaration here affects the whole group below.
+ * Source rule 45.
+ */
+.tabgroup.SegmentedButtonRow > .tabgroup__tabs .tabgroup__tab--active,
+.buttongroup.SegmentedButtonRow .buttongroup__button--active {
+  border-color: var(--skin-border-default);
+  background-color: var(--skin-selection-background);
+  background-image: none;
+}
+
+/* Selected fill and foreground use the paired default Dugout Volt/ink roles.
+ */
+.tabgroup.SegmentedButtonRow > .tabgroup__tabs .tabgroup__tab--active,
+.buttongroup.SegmentedButtonRow .buttongroup__button--active {
+  --custom-focus-background: var(--skin-selection-background);
+  color: var(--skin-selection-foreground);
+}
+
+/* Tabgroup tab active.
+ * Changes text/foreground colour.
+ * Shared rule for 7 selectors. Editing a declaration here affects the whole group below.
+ * Source rule 46.
+ */
+.buttons-segmented-button-row-active-regular-placement-leading,
+.buttons-segmented-button-row-active-regular-placement-middle,
+.buttons-segmented-button-row-active-regular-placement-trailing,
+.buttons-segmented-button-row-active-small-placement-leading,
+.buttons-segmented-button-row-active-small-placement-middle,
+.buttons-segmented-button-row-active-small-placement-trailing,
+.buttons-segmented-button-row-active-default-placement-leading {
+  --custom-focus-background: var(--skin-selection-background);
+}
+
+/* Tabgroup tab active.
+ * Changes text/foreground colour.
+ * Source rule 46.
+ */
+.buttons-segmented-button-row-active-default-placement-middle {
+  color: var(--skin-text-primary);
+  --custom-focus-background: var(--skin-selection-background);
+}
+
+/* Tabgroup tab active.
+ * Changes text/foreground colour.
+ * Source rule 46.
+ */
+.buttons-segmented-button-row-active-default-placement-trailing {
+  --custom-focus-background: var(--skin-selection-background);
+}
+
+/* Global text secondary.
+ * Active segmented rows are Volt, so nested secondary labels need the same
+ * dark selection foreground as their primary labels.
+ * Shared rule for 11 selectors. Editing a declaration here affects the whole group below.
+ * Source rule 47.
+ */
+.tabgroup.SegmentedButtonRow > .tabgroup__tabs .tabgroup__tab--active .global-text-secondary,
+.buttongroup.SegmentedButtonRow .buttongroup__button--active .global-text-secondary,
+.buttons-segmented-button-row-active-regular-placement-leading .global-text-secondary,
+.buttons-segmented-button-row-active-regular-placement-middle .global-text-secondary,
+.buttons-segmented-button-row-active-regular-placement-trailing .global-text-secondary,
+.buttons-segmented-button-row-active-small-placement-leading .global-text-secondary,
+.buttons-segmented-button-row-active-small-placement-middle .global-text-secondary,
+.buttons-segmented-button-row-active-small-placement-trailing .global-text-secondary,
+.buttons-segmented-button-row-active-default-placement-leading .global-text-secondary,
+.buttons-segmented-button-row-active-default-placement-middle .global-text-secondary,
+.buttons-segmented-button-row-active-default-placement-trailing .global-text-secondary {
+  color: var(--skin-selection-foreground);
+}
+
+/* Selected fill and foreground use the paired default Dugout Volt/ink roles.
+ */
+.tabgroup.SegmentedButtonRow > .tabgroup__tabs .tabgroup__tab:hover:enabled {
+  background-color: var(--skin-selection-hover);
+  color: var(--skin-selection-foreground);
+}
+
+/* Buttongroup button — pointer hover.
+ * sets the background fill.
+ * Source rule 49.
+ */
+.buttongroup.SegmentedButtonRow .buttongroup__button:hover:enabled {
+  background-color: var(--skin-control-hover);
+  color: var(--skin-text-primary);
+}
+
+/* A selected segmented control lightens slightly on hover while preserving its
+ * selected state and the paired dark Volt foreground.
+ */
+.buttongroup.SegmentedButtonRow .buttongroup__button--active:hover:enabled {
+  background-color: var(--skin-selection-hover);
+  cursor: var(--cursor-default-1x-url) var(--cursor-default-1x-hotspot-x) var(--cursor-default-1x-hotspot-y);
+  color: var(--skin-selection-foreground);
+}
+
+/* Held feedback follows the same selected/unselected distinction and wins
+ * over hover, including rows with both generated placement classes. */
+.buttongroup.SegmentedButtonRow .buttongroup__button:active:enabled {
+  background-color: var(--skin-control-pressed);
+  color: var(--skin-text-primary);
+}
+.buttongroup.SegmentedButtonRow .buttongroup__button--active:active:enabled {
+  background-color: var(--skin-selection-pressed);
+  color: var(--skin-selection-foreground);
+}
+
+/* Sitext hover cursor — pointer hover.
+ * chooses the pointer and hotspot.
+ * Source rule 51.
+ */
+.buttongroup.SegmentedButtonRow .buttongroup__button--active:hover:enabled .sitext-hover-cursor {
+  cursor: var(--cursor-default-1x-url) var(--cursor-default-1x-hotspot-x) var(--cursor-default-1x-hotspot-y);
+}
+
+/* Selected surface and label use the paired Volt/ink tokens from the default Dugout theme.
+ */
+.tabgroup.SegmentedButtonRow > .tabgroup__tabs .tabgroup__tab--active .sitext,
+.tabgroup.SegmentedButtonRow > .tabgroup__tabs .tabgroup__tab--active .sitextmedium,
+.tabgroup.SegmentedButtonRow > .tabgroup__tabs .tabgroup__tab--active .sitextsmall,
+.buttongroup.SegmentedButtonRow .buttongroup__button--active .sitext,
+.buttongroup.SegmentedButtonRow .buttongroup__button--active .sitextmedium,
+.buttongroup.SegmentedButtonRow .buttongroup__button--active .sitextsmall,
+.tabgroup.SegmentedButtonRow > .tabgroup__tabs .tabgroup__tab:hover:enabled .sitext,
+.tabgroup.SegmentedButtonRow > .tabgroup__tabs .tabgroup__tab:hover:enabled .sitextmedium,
+.tabgroup.SegmentedButtonRow > .tabgroup__tabs .tabgroup__tab:hover:enabled .sitextsmall,
+.buttongroup.SegmentedButtonRow .buttongroup__button--active:hover:enabled .sitext,
+.buttongroup.SegmentedButtonRow .buttongroup__button--active:hover:enabled .sitextmedium,
+.buttongroup.SegmentedButtonRow .buttongroup__button--active:hover:enabled .sitextsmall {
+  color: var(--skin-selection-foreground);
+}
+
+/* Possession selectors use plain glyph elements, not Unity Image children.
+ * Verified on Squad Overview: inherited text colour does not tint their art.
+ * Keep this limited to the two stock glyphs so badges/portraits are untouched. */
+.buttongroup.SegmentedButtonRow .buttongroup__button--active:enabled .game-concepts-in-possession_small,
+.buttongroup.SegmentedButtonRow .buttongroup__button--active:enabled .game-concepts-out-of-possession_small,
+.tabgroup.SegmentedButtonRow > .tabgroup__tabs .tabgroup__tab--active:enabled .game-concepts-in-possession_small,
+.tabgroup.SegmentedButtonRow > .tabgroup__tabs .tabgroup__tab--active:enabled .game-concepts-out-of-possession_small,
+.tabgroup.SegmentedButtonRow > .tabgroup__tabs .tabgroup__tab:hover:enabled .game-concepts-in-possession_small,
+.tabgroup.SegmentedButtonRow > .tabgroup__tabs .tabgroup__tab:hover:enabled .game-concepts-out-of-possession_small {
+  -unity-background-image-tint-color: var(--skin-selection-foreground);
+}
+
+.buttongroup.SegmentedButtonRow .buttongroup__button--active:disabled .game-concepts-in-possession_small,
+.buttongroup.SegmentedButtonRow .buttongroup__button--active:disabled .game-concepts-out-of-possession_small,
+.tabgroup.SegmentedButtonRow > .tabgroup__tabs .tabgroup__tab--active:disabled .game-concepts-in-possession_small,
+.tabgroup.SegmentedButtonRow > .tabgroup__tabs .tabgroup__tab--active:disabled .game-concepts-out-of-possession_small {
+  -unity-background-image-tint-color: var(--skin-action-disabled-foreground);
+}
+
+/* Scout/Analyst segmented tabs create plain monochrome concept leaves.
+ * Their text colour does not tint the artwork. Pair only these verified glyphs
+ * with the real group selection, keeping portraits and status art untouched. */
+.buttongroup.SegmentedButtonRow .buttongroup__button .game-concepts-scouting-binoculars_small,
+.buttongroup.SegmentedButtonRow .buttongroup__button .game-concepts-analyst-bar-chart_small {
+  -unity-background-image-tint-color: var(--skin-text-primary);
+}
+.buttongroup.SegmentedButtonRow .buttongroup__button:disabled .game-concepts-scouting-binoculars_small,
+.buttongroup.SegmentedButtonRow .buttongroup__button:disabled .game-concepts-analyst-bar-chart_small {
+  -unity-background-image-tint-color: var(--skin-text-disabled);
+}
+.buttongroup.SegmentedButtonRow .buttongroup__button--active:enabled .game-concepts-scouting-binoculars_small,
+.buttongroup.SegmentedButtonRow .buttongroup__button--active:enabled .game-concepts-analyst-bar-chart_small,
+.buttongroup.SegmentedButtonRow .buttongroup__button--active:disabled .game-concepts-scouting-binoculars_small,
+.buttongroup.SegmentedButtonRow .buttongroup__button--active:disabled .game-concepts-analyst-bar-chart_small {
+  -unity-background-image-tint-color: var(--skin-selection-foreground);
+}
+
+/* Navigation
+ * Native navigation selectors, with adjacent shared rules in source order.
+ */
+
+/* Ribbon button left.
+ * sets the outline/corner shape.
+ * Source rule 492.
+ */
+.ribbon__button-left {
+  border-bottom-right-radius: 0;
+  border-top-right-radius: 0;
+  border-right-color: var(--skin-transparent);
+  border-right-width: 0;
+}
+
+/* Ribbon button right.
+ * sets the outline/corner shape.
+ * Source rule 493.
+ */
+.ribbon__button-right {
+  border-bottom-left-radius: 0;
+  border-top-left-radius: 0;
+  border-left-width: 0;
+}
+
+/* Ribbon button middle.
+ * sets the outline/corner shape.
+ * Source rule 494.
+ */
+.ribbon__button-middle {
+  border-radius: 0;
+  border-left-width: 0;
+  border-right-width: 0;
+  border-right-color: var(--skin-transparent);
+}
+
+/* Ribbon button content selected.
+ * sets the background fill; sets the outline/corner shape; controls size/placement; sets spacing
+ * around/inside the element.
+ * Source rule 495.
+ */
+.ribbon-button-content__selected {
+  height: 32px;
+  padding: var(--spacing-padding-small---8);
+  border-color: var(--skin-on-media-alpha-40);
+  background-color: var(--skin-text-secondary);
+  justify-content: center;
+  align-items: center;
+  border-radius: var(--skin-radius-card);
+  flex-direction: var(--row-direction-normal);
+}
+
+/* Sitext.
+ * Hides these elements.
+ * Shared rule for 2 selectors. Editing a declaration here affects the whole group below.
+ * Source rule 496.
+ */
+.ribbon-button-no-text .sitext,
+.ribbon-button-selected-with-text .sitext {
+  display: none;
+}
+
+/* Sitext.
+ * Shows these elements; Changes text/foreground colour; sets font/text presentation.
+ * Source rule 497.
+ */
+.ribbon-button-selected-with-text .ribbon-button-content__selected .sitext {
+  display: flex;
+  color: var(--skin-selection-foreground);
+  -unity-font-definition: var(--skin-font-display);
+}
+
+/* Unity image.
+ * tints background artwork.
+ * Source rule 498.
+ */
+.ribbon-button-content__selected .unity-image {
+  -unity-background-image-tint-color: var(--skin-surface-page);
+}
+
+/* Home ribbon root.
+ * controls size/placement; sets spacing around/inside the element.
+ * Source rule 499.
+ */
+.home-ribbon-root {
+  position: absolute;
+  flex-grow: 1;
+  bottom: 0;
+  padding-bottom: 24px;
+  align-self: flex-end;
+}
+
+/* Home ribbon root.
+ * defines how state changes animate.
+ * Source rule 500.
+ */
+.overlay-ribbon .home-ribbon-root {
+  transition-property: translate;
+  transition-duration: 0.5s;
+  transition-timing-function: ease-in-out;
+  translate: 0 0;
+}
+
+/* Home ribbon root.
+ * defines how state changes animate.
+ * Source rule 501.
+ */
+.overlay-ribbon--hidden .home-ribbon-root {
+  transition-property: translate;
+  transition-duration: 0.5s;
+  transition-timing-function: ease-in-out;
+  translate: 0 100px;
+}
+
+/* Virtualised list item.
+ * Changes text/foreground colour; sets the background fill; sets the outline/corner shape; sets font/text
+ * presentation.
+ * Source rule 502.
+ */
+.si-dropdown-iphone .virtualised-list__item {
+  width: 220px;
+  height: 40px;
+  margin: 0;
+  padding: 3px 0;
+  background-color: var(--skin-surface-canvas-alpha-90);
+  color: var(--skin-text-primary);
+  font-size: var(--typography-size-14);
+  -unity-font-style: var(--typography-weight-bold);
+  -unity-font-definition: var(--skin-font-body);
+  white-space: nowrap;
+  -unity-text-align: middle-left;
+  flex-direction: var(--row-direction-normal);
+  flex-grow: 1;
+  border-bottom-width: 1px;
+  border-bottom-color: var(--skin-on-media-alpha-10);
+}
+
+/* Unity radio button group container.
+ * controls size/placement.
+ * Shared rule for 3 selectors. Editing a declaration here affects the whole group below.
+ * Source rule 503.
+ */
+.game-creation-radiogroup .unity-radio-button-group__container,
+.game-creation-radiogroup .unity-radio-button__container,
+.grow_radiogroup .unity-radio-button-group__container {
+  flex-grow: 1;
+  align-self: stretch;
+  justify-content: flex-start;
+}
+
+/* Shortcut fake button.
+ * sets the background fill; sets spacing around/inside the element.
+ * Shared rule for 2 selectors. Editing a declaration here affects the whole group below.
+ * Source rule 504.
+ */
+.shortcut-fake-button,
+.search-fake-button > SIButton {
+  margin: 0;
+  padding: 0;
+  background-color: var(--skin-transparent);
+}
+
+/* Shortcuts panel.
+ * controls size/placement.
+ * Source rule 505.
+ */
+.shortcuts-panel {
+  position: absolute;
+  translate: 0 100px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+/* Shortcuts panel gradient.
+ * sets the gradient colours drawn by this component.
+ * Source rule 506.
+ */
+.shortcuts-panel-gradient {
+  --start-colour: var(--skin-transparent);
+  --end-colour: var(--skin-surface-canvas-alpha-94);
+}
+
+/* Tab Button Scroll View.
+ * controls size/placement.
+ * Source rule 507.
+ */
+#TabButtonScrollView {
+  width: 100%;
+  flex-shrink: 0;
+}
+
+/* Quick action buttons template layout.
+ * controls size/placement.
+ * Source rule 509.
+ */
+.quick-action-buttons-template-layout {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  bottom: 0;
+}
+
+/* Quick action buttons.
+ * sets spacing around/inside the element.
+ * Source rule 510.
+ */
+.quick-action-buttons {
+  padding-left: 64px;
+  padding-bottom: 24px;
+}
+
+/* SI card title bar header.
+ * sets the background fill; sets the background artwork; controls size/placement; sets spacing
+ * around/inside the element.
+ * Source rule 511.
+ */
+.si-card-title-bar-header {
+  height: 24px;
+  background-color: var(--skin-transparent);
+  background-image: none;
+  margin-top: 4px;
+  margin-bottom: 4px;
+  flex-direction: var(--row-direction-normal);
+  padding-right: 12px;
+  padding-left: 12px;
+  flex-shrink: 0;
+  flex-grow: 1;
+}
+
+/* Sidropdown iphone card header.
+ * Changes text/foreground colour; sets font/text presentation.
+ * Source rule 512.
+ */
+.sidropdown-iphone-card-header {
+  color: var(--skin-text-primary);
+  font-size: var(--typography-size-16);
+  -unity-font-definition: var(--skin-font-body);
+  -unity-font-style: var(--typography-weight-bold);
+  -unity-text-align: middle-left;
+}
+
+/* Bg hover transparency 50 — pointer hover.
+ * sets the background fill; chooses the pointer and hotspot.
+ * Source rule 513.
+ */
+.bg-hover-transparency-50:hover:enabled {
+  background-color: var(--skin-surface-canvas-alpha-50);
+  cursor: var(--cursor-clickable-1x-url) var(--cursor-clickable-1x-hotspot-x) var(--cursor-clickable-1x-hotspot-y);
+}
+
+/* Sibutton — pointer hover.
+ * sets the background fill; sets the outline/corner shape.
+ * Source rule 514.
+ */
+.search-fake-button > .sibutton:hover {
+  border-color: var(--skin-transparent);
+  background-color: var(--skin-transparent);
+}
+
+/* SI grid element margin top.
+ * sets spacing around/inside the element.
+ * Source rule 515.
+ */
+.si-grid-element-margin-top {
+  margin-top: var(--spacing-padding-medium---16);
+}
+
+/* Global search card container.
+ * sets the background fill; controls size/placement; sets spacing around/inside the element.
+ * Source rule 516.
+ */
+.global-search-card-container {
+  background-color: var(--skin-surface-page-alpha-80);
+  flex-grow: 1;
+  align-items: center;
+  padding-top: 16px;
+  padding-right: 16px;
+  padding-bottom: 16px;
+  padding-left: 16px;
+}
+
+/* Round border centered content.
+ * sets the background fill; sets the outline/corner shape; controls size/placement; sets spacing
+ * around/inside the element.
+ * Source rule 517.
+ */
+.round-border-centered-content {
+  padding: var(--spacing-small---8) var(--spacing-medium---16);
+  border-width: 1px;
+  border-color: var(--skin-border-subtle);
+  background-color: var(--colours-speak-to-background-default);
+  justify-content: center;
+  align-items: center;
+  border-radius: var(--skin-radius-card);
+  flex-direction: var(--row-direction-normal);
+  flex-grow: 1;
+}
+
+/* Quick-action dropdown uses the same Volt action surface as a primary button.
+ * Pair its label with dark action ink; generic dropdown text otherwise stays white.
+ * Source rule 518.
+ */
+.si-dropdown-quick-action > .si-dropdown__selection-field {
+  padding: var(--spacing-small---8) var(--spacing-tiles);
+  border-color: var(--skin-action-primary-border);
+  background-color: var(--skin-action-primary-background);
+  color: var(--skin-action-primary-foreground);
+  background-image: none;
+  border-left-width: 1px;
+  border-right-width: 1px;
+  border-top-width: 1px;
+  border-bottom-width: 1px;
+  border-radius: var(--skin-radius-control);
+  flex-direction: var(--row-direction-normal);
+  flex-shrink: 1;
+  max-height: 32px;
+  overflow: visible;
+}
+
+/* Keep the whole quick-action family paired across default, hover, pressed and
+ * disabled states. Only text is recoloured: badges and other artwork keep their
+ * own image colours. */
+.si-dropdown-quick-action > .si-dropdown__selection-field .sitext,
+.si-dropdown-quick-action > .si-dropdown__selection-field .sitextmedium,
+.si-dropdown-quick-action > .si-dropdown__selection-field .sitextsmall {
+  color: var(--skin-action-primary-foreground);
+}
+
+.si-dropdown-quick-action > .si-dropdown__selection-field:hover:enabled {
+  background-color: var(--skin-action-primary-hover);
+}
+
+.si-dropdown-quick-action > .si-dropdown__selection-field:active:enabled {
+  background-color: var(--skin-action-primary-pressed);
+}
+
+.si-dropdown-quick-action > .si-dropdown__selection-field:disabled {
+  border-color: var(--skin-action-disabled-border);
+  background-color: var(--skin-action-disabled-background);
+  color: var(--skin-action-disabled-foreground);
+}
+
+.si-dropdown-quick-action > .si-dropdown__selection-field:disabled .sitext,
+.si-dropdown-quick-action > .si-dropdown__selection-field:disabled .sitextmedium,
+.si-dropdown-quick-action > .si-dropdown__selection-field:disabled .sitextsmall {
+  color: var(--skin-action-disabled-foreground);
+}
+
+/* Block background.
+ * sets the background fill.
+ * Shared rule for 2 selectors. Editing a declaration here affects the whole group below.
+ * Source rule 519.
+ */
+.block-background,
+.tactic-position-overview-widget-item__unfilled {
+  background-color: var(--skin-surface-page-alpha-80);
+}
+
+/* Sitooltip.
+ * sets the background fill; sets the outline/corner shape; sets spacing around/inside the element.
+ * Source rule 520.
+ */
+.sitooltip {
+  padding: 8px;
+  border-width: 1px;
+  border-color: var(--skin-border-subtle);
+  background-color: var(--skin-surface-raised);
+  border-radius: var(--skin-radius-small);
+}
+
+/* Sitooltip floating element.
+ * controls size/placement.
+ * Source rule 521.
+ */
+.sitooltip-floating-element {
+  align-items: center;
+}
+
+/* Sitext tooltip.
+ * sets the background fill; sets the outline/corner shape; controls size/placement.
+ * Source rule 522.
+ */
+.sitext-tooltip {
+  border-width: 1px;
+  border-color: var(--skin-border-subtle);
+  background-color: var(--skin-surface-panel);
+  flex-direction: column;
+  align-items: auto;
+  max-width: 312px;
+  border-radius: var(--skin-radius-small);
+}
+
+/* Sitext tooltip text.
+ * Changes text/foreground colour; sets spacing around/inside the element.
+ * Source rule 523.
+ */
+.sitext-tooltip-text {
+  padding: 4px 8px;
+  color: var(--skin-text-primary);
+  -unity-text-generator: advanced;
+}
+
+/* Unity scroll view content container.
+ * controls size/placement.
+ * Source rule 524.
+ */
+.right-to-left-streamed-object-list .unity-scroll-view__content-container {
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+
+/* Unity scroll view content container.
+ * controls size/placement.
+ * Source rule 525.
+ */
+.right-to-left-justify-content-streamed-object-list .unity-scroll-view__content-container {
+  justify-content: flex-end;
+}
+
+/* Unity radio button group container.
+ * controls size/placement.
+ * Source rule 526.
+ */
+.matchpreferences-radiogroup > .unity-radio-button-group__container SIRadioButton {
+  height: 32px;
+}
+
+/* Unity radio button group container.
+ * sets spacing around/inside the element.
+ * Source rule 527.
+ */
+.matchpreferences-replaysblock-radiogroup > .unity-radio-button-group__container SIRadioButton {
+  margin-left: 1px;
+  margin-right: 1px;
+}
+
+/* Unity radio button group child first.
+ * sets the outline/corner shape.
+ * Source rule 528.
+ */
+.matchpreferences-replaysblock-radiogroup > .unity-radio-button-group__container SIRadioButton.unity-radio-button-group__child-first {
+  border-radius: var(--border-radius-leading-medium-small);
+}
+
+/* Unity radio button group child last.
+ * sets the outline/corner shape.
+ * Source rule 529.
+ */
+.matchpreferences-replaysblock-radiogroup > .unity-radio-button-group__container SIRadioButton.unity-radio-button-group__child-last {
+  border-radius: var(--border-radius-trailing-medium-small);
+}
+
+/* Matchpreferences hightlightmodes radialgauge.
+ * supplies local values read by the component styling.
+ * Source rule 530.
+ */
+.matchpreferences-hightlightmodes-radialgauge {
+  --current-colour: var(--skin-surface-raised);
+}
+
+/* Navigation
+ * Native navigation selectors, with adjacent shared rules in source order.
+ */
+
+/* Dashboard focus header default.
+ * controls size/placement; sets spacing around/inside the element.
+ * Source rule 1831.
+ */
+.dashboard-focus-header-default {
+  padding: var(--spacing-small---8) var(--spacing-large---32);
+  align-items: center;
+  flex-direction: var(--row-direction-normal);
+}
+
+/* SI dropdown selection field.
+ * sets the outline/corner shape; controls size/placement; sets spacing around/inside the element.
+ * Uses the shared control radius while retaining the native 8px default.
+ * Source rule 1832.
+ */
+.dashboard-hud-additional-buttons .si-dropdown__selection-field {
+  width: 32px;
+  height: 32px;
+  margin: 0;
+  border-width: 0;
+  align-items: stretch;
+  border-radius: var(--skin-radius-control);
+  justify-content: center;
+}
+
+/* Dashboard hud additional buttons.
+ * sets the background fill; sets the outline/corner shape; controls size/placement; sets spacing
+ * around/inside the element.
+ * Uses the shared control radius for these compact dashboard actions.
+ * Shared rule for 2 selectors. Editing a declaration here affects the whole group below.
+ * Source rule 1833.
+ */
+.dashboard-hud-additional-buttons,
+.dashboard-hud-search-button {
+  width: 32px;
+  height: 32px;
+  margin: 0;
+  padding: 8px;
+  border-width: 0;
+  background-color: var(--skin-transparent);
+  align-items: center;
+  border-radius: var(--skin-radius-control);
+}
+
+/* Dashboard hud continue button calendar.
+ * sets the background fill; sets the outline/corner shape; controls size/placement.
+ * Uses the compact radius role for this calendar control.
+ * Source rule 1834.
+ */
+.dashboard-hud-continue_button-calendar {
+  width: 32px;
+  height: 32px;
+  background-color: var(--colours-base-neutral-white);
+  flex-shrink: 0;
+  border-radius: var(--skin-radius-compact);
+}
+
+/* Dashboard hud continue button default.
+ * sets the background fill; sets the outline/corner shape; controls size/placement; sets spacing
+ * around/inside the element.
+ * Uses the shared control radius without changing the current 8px shape.
+ * Source rule 1835.
+ */
+.dashboard-hud-continue_button-default {
+  height: 48px;
+  padding: 0 12px 0 8px;
+  border-width: 1px;
+  border-color: var(--skin-on-media-alpha-35);
+  background-color: var(--skin-on-media-alpha-08);
+  align-items: center;
+  flex-shrink: 0;
+  border-radius: var(--skin-radius-control);
+  flex-direction: var(--row-direction-normal);
+}
+
+/* Dashboard hud continue button default — pressed.
+ * sets the background fill; sets the outline/corner shape.
+ * Source rule 1836.
+ */
+/* Pressed Continue uses a Volt fill; pair its own text leaves with dark ink. */
+.dashboard-hud-continue_button-default:active:enabled {
+  border-color: var(--skin-action-primary-border);
+  background-color: var(--skin-action-primary-hover);
+  color: var(--skin-action-primary-foreground);
+  --buttons-icons-default: var(--skin-action-primary-foreground);
+  --buttons-global-icon-surface: var(--skin-action-primary-foreground);
+}
+
+.dashboard-hud-continue_button-default:active:enabled .sitext,
+.dashboard-hud-continue_button-default:active:enabled .sitextmedium,
+.dashboard-hud-continue_button-default:active:enabled .sitextsmall {
+  color: var(--skin-action-primary-foreground);
+}
+
+/* SI dropdown selection field.
+ * sets the background fill; sets the outline/corner shape; controls size/placement; sets spacing
+ * around/inside the element.
+ * Uses the shared control radius while retaining the native 8px default.
+ * Source rule 1837.
+ */
+.dashboard-hud-manager-dropdown .si-dropdown__selection-field {
+  width: 200px;
+  height: var(--interaction-global-height-lg);
+  padding: 0 var(--interaction-global-padding-horizontal-md);
+  border-width: 1px;
+  border-color: var(--skin-on-media-alpha-35);
+  background-color: var(--skin-on-media-alpha-08);
+  align-items: center;
+  flex-shrink: 0;
+  border-radius: var(--skin-radius-control);
+  flex-direction: var(--row-direction-normal);
+}
+
+/* SI dropdown selection field.
+ * sets the background fill; sets the outline/corner shape; controls size/placement; sets spacing
+ * around/inside the element.
+ * Uses the shared control radius while retaining the native 8px default.
+ * Source rule 1838.
+ */
+.dashboard-hud-manager-dropdown-condensed .si-dropdown__selection-field {
+  width: 110px;
+  height: var(--interaction-global-height-lg);
+  padding: 0 var(--interaction-global-padding-horizontal-md);
+  border-width: 1px;
+  border-color: var(--skin-on-media-alpha-35);
+  background-color: var(--skin-on-media-alpha-08);
+  align-items: center;
+  flex-shrink: 0;
+  border-radius: var(--skin-radius-control);
+  flex-direction: var(--row-direction-normal);
+}
+
+/* Data display data display cell icon string transfer value.
+ * sets the background fill; sets the outline/corner shape; controls size/placement; sets spacing
+ * around/inside the element.
+ * Source rule 1839.
+ */
+.data-display-data_display-cell-icon-string-transfer-value {
+  height: 28px;
+  padding: 0 var(--spacing-padding-small---8);
+  border-width: 1px;
+  border-color: var(--skin-border-subtle);
+  background-color: var(--skin-control-hover);
+  justify-content: center;
+  align-items: center;
+  border-radius: var(--skin-radius-small);
+  flex-direction: var(--row-direction-normal);
+}
+
+/* Data display data display graph shotmap bottom layout.
+ * controls size/placement.
+ * Source rule 1840.
+ */
+.data-display-data_display-graph-shotmap-bottom-layout {
+  height: 68px;
+}
+
+/* Data display data display graph shotmap default.
+ * controls size/placement.
+ * Source rule 1841.
+ */
+.data-display-data_display-graph-shotmap-default {
+  width: 288px;
+  height: 226px;
+}
+
+/* Data display data display graph shotmap layout.
+ * sets the outline/corner shape; controls size/placement.
+ * Source rule 1842.
+ */
+.data-display-data_display-graph-shotmap-layout {
+  width: 288px;
+  height: 226px;
+  border-width: 2px;
+  border-color: var(--skin-text-secondary);
+  flex-direction: column;
+  align-items: flex-start;
+  flex-shrink: 0;
+  border-radius: var(--skin-radius-small);
+}
+
+/* Data display data display graph shotmap pitch.
+ * sets the background fill; sets the outline/corner shape; controls size/placement.
+ * Source rule 1843.
+ */
+.data-display-data_display-graph-shotmap-pitch {
+  width: 288px;
+  height: 226px;
+  border-width: 1px;
+  border-color: var(--visualiser-pitch-thematic-pitch-lines);
+  background-color: var(--visualiser-pitch-default-background);
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  flex-shrink: 0;
+  border-radius: var(--skin-radius-micro);
+}
+
+/* Data display data display squad planner player depth body.
+ * sets the background fill; controls size/placement; sets spacing around/inside the element.
+ * Source rule 1844.
+ */
+.data-display-data_display-squad_planner-player_depth-body {
+  padding: var(--spacing-padding-extra-small---4) 0;
+  background-color: var(--skin-surface-panel);
+  flex-direction: column;
+  align-items: flex-start;
+  align-self: stretch;
+}
+
+/* Navigation
+ * Native navigation selectors, with adjacent shared rules in source order.
+ */
+
+/* Nav menu property 1 team shape.
+ * sets the outline/corner shape; controls size/placement; sets spacing around/inside the element.
+ * Source rule 2987.
+ */
+.nav-menu-property-1-team-shape {
+  padding: 8px;
+  border-width: 1px;
+  border-color: var(--skin-border-subtle);
+  align-items: center;
+  border-radius: var(--skin-radius-control);
+  flex-direction: var(--row-direction-normal);
+}
+
+/* Buttons controls desktop default active true.
+ * sets the background fill; sets the outline/corner shape.
+ * Shared rule for 2 selectors. Editing a declaration here affects the whole group below.
+ * Source rule 2988.
+ */
+.nav-on-dark .buttons-controls-pc-default--active-true,
+.nav-on-dark .buttons-controls-pc-default--active-false {
+  border-width: 1px;
+  border-color: var(--skin-surface-raised);
+  background-color: var(--skin-surface-raised);
+  border-radius: var(--skin-radius-control);
+}
+
+/* Buttons controls desktop default active true — pointer hover.
+ * sets the background fill.
+ * Source rule 2989.
+ */
+.nav-on-dark .buttons-controls-pc-default--active-true:hover {
+  background-color: var(--skin-control-hover);
+  border-color: var(--skin-control-hover);
+}
+
+/* Navigation primary nav calendar wiget calendar.
+ * sets the background fill; sets the outline/corner shape.
+ * Source rule 2990.
+ */
+.nav-on-dark .navigation-primary-nav-calendar-wiget-calendar {
+  border-color: var(--skin-surface-panel);
+  background-color: var(--skin-surface-canvas-alpha-40);
+}
+
+/* Navigation primary nav calendar wiget calendar — pointer hover.
+ * sets the background fill.
+ * Source rule 2991.
+ */
+.nav-on-dark .navigation-primary-nav-calendar-wiget-calendar:hover {
+  background-color: var(--skin-surface-canvas-alpha-48);
+}
+
+/* Nd flat black.
+ * Changes text/foreground colour; tints background artwork.
+ * Shared rule for 2 selectors. Editing a declaration here affects the whole group below.
+ * Source rule 2992.
+ */
+.nav-on-dark .nd-flat-black,
+.nd-flat-black {
+  color: var(--skin-text-primary);
+  -unity-background-image-tint-color: var(--skin-text-primary);
+}
+
+/* Global text primary.
+ * Changes text/foreground colour.
+ * Shared rule for 8 selectors. Editing a declaration here affects the whole group below.
+ * Source rule 2993.
+ */
+.nav-on-light #DateAndFixture .global-text-primary,
+.nav-on-light #TeamInfo .global-text-primary,
+.nav-on-light #InstantResultEnabled .global-text-primary,
+.nav-on-dark .calendar-widget-time-container .global-text-primary,
+.nav-on-light .dashboard-hud-manager-dropdown .si-dropdown__selection-field .global-text-primary,
+.nav-on-light .dashboard-hud-manager-dropdown-condensed .si-dropdown__selection-field .global-text-primary,
+.nav-on-light .dashboard-hud-manager-dropdown .global-text-primary,
+.nav-on-light .dashboard-hud-manager-dropdown-condensed .global-text-primary {
+  color: var(--global-text-primary);
+}
+
+/* Global text secondary.
+ * Changes text/foreground colour.
+ * Shared rule for 2 selectors. Editing a declaration here affects the whole group below.
+ * Source rule 2994.
+ */
+.nav-on-light #DateAndFixture .global-text-secondary,
+.nav-on-light #TeamInfo .global-text-secondary {
+  color: var(--colours-nav-on-light-text);
+}
+
+/* Buttons button base default — pointer hover.
+ * sets the background fill.
+ * Source rule 2995.
+ */
+.nav-on-light #InstantResultEnabled .buttons-button-base-default:hover:enabled {
+  background-color: var(--skin-surface-canvas-alpha-14);
+}
+
+/* Layout layout divider solid vertical.
+ * sets the background fill.
+ * Source rule 2996.
+ */
+.nav-on-light #TeamInfo .layout-layout-divider-solid-vertical {
+  background-color: var(--colours-nav-on-light-text);
+}
+
+/* Buttons controls desktop default active true.
+ * sets the background fill; sets the outline/corner shape.
+ * Shared rule for 2 selectors. Editing a declaration here affects the whole group below.
+ * Source rule 2997.
+ */
+.nav-on-light .buttons-controls-pc-default--active-true,
+.nav-on-light .buttons-controls-pc-default--active-false {
+  border-width: 1px;
+  border-color: var(--skin-surface-canvas);
+  background-color: var(--skin-surface-canvas);
+}
+
+/* SI dropdown selection field.
+ * sets the background fill; sets the outline/corner shape.
+ * Shared rule for 3 selectors. Editing a declaration here affects the whole group below.
+ * Source rule 2998.
+ */
+.nav-on-light .dashboard-hud-manager-dropdown .si-dropdown__selection-field,
+.nav-on-light .dashboard-hud-manager-dropdown-condensed .si-dropdown__selection-field,
+.nav-on-light #InstantResultEnabled .buttons-button-base-default {
+  border-color: var(--skin-surface-canvas-alpha-35);
+  background-color: var(--skin-surface-canvas-alpha-08);
+}
+
+/* UI concepts chevron down small.
+ * tints background artwork.
+ * Shared rule for 5 selectors. Editing a declaration here affects the whole group below.
+ * Source rule 2999.
+ */
+.nav-on-light .dashboard-hud-manager-dropdown .ui-concepts-chevron-down_small,
+.nav-on-light .dashboard-hud-manager-dropdown-condensed .ui-concepts-chevron-down_small,
+.nav-on-light .ui-concepts-chevron-left_small,
+.nav-on-light .ui-concepts-chevron-right_small,
+.nav-on-light #InstantResultEnabled #leading-icon {
+  -unity-background-image-tint-color: var(--skin-surface-canvas);
+}
+
+/* Navigation chip.
+ * sets the background fill.
+ * Source rule 3000.
+ */
+.nav-on-light .navigation-chip {
+  background-color: var(--skin-surface-canvas-alpha-70);
+}
+
+/* Navigation primary nav calendar wiget calendar.
+ * sets the background fill; sets the outline/corner shape.
+ * Source rule 3001.
+ */
+.nav-on-light .navigation-primary-nav-calendar-wiget-calendar {
+  border-color: var(--skin-surface-canvas);
+  background-color: var(--skin-on-media-alpha-24);
+}
+
+/* Portal image.
+ * tints background artwork.
+ * Shared rule for 6 selectors. Editing a declaration here affects the whole group below.
+ * Source rule 3002.
+ */
+.nav-on-light .navigation-tab-portal-default-active-true .portal-image,
+.nav-on-light .navigation-tab-portal-default-active-true:hover .portal-image,
+.nav-on-light .navigation-tab-portal-default-active-false .portal-image,
+.nav-on-light .navigation-tab-portal-default-active-false:hover .portal-image,
+.nav-on-light .navigation-tab-portal-default-active-true:hover #NavTabDropdownIndicator,
+.nav-on-light .navigation-tab-portal-default-active-false:hover #NavTabDropdownIndicator {
+  -unity-background-image-tint-color: var(--skin-ink);
+}
+
+/* Portal text.
+ * Changes text/foreground colour.
+ * Shared rule for 4 selectors. Editing a declaration here affects the whole group below.
+ * Source rule 3003.
+ */
+.nav-on-light .navigation-tab-portal-default-active-true .portal-text,
+.nav-on-light .navigation-tab-portal-default-active-true:hover .portal-text,
+.nav-on-light .navigation-tab-portal-default-active-false .portal-text,
+.nav-on-light .navigation-tab-portal-default-active-false:hover .portal-text {
+  color: var(--global-text-primary);
+}
+
+/* Nd flat black.
+ * Changes text/foreground colour; tints background artwork.
+ * Source rule 3004.
+ */
+.nav-on-light .nd-flat-black {
+  color: var(--skin-ink);
+  -unity-background-image-tint-color: var(--skin-ink);
+}
+
+/* Non Diegetic Button — pointer hover.
+ * sets the background fill.
+ * Shared rule for 4 selectors. Editing a declaration here affects the whole group below.
+ * Source rule 3005.
+ */
+.nav-on-light .nonDiegeticButton:hover,
+.inputs-switch-checkbox-default-switch-false--icon-none:checked:active:enabled,
+.player-comparison-row-highlighted,
+.nav-on-light .navigation-primary-nav-calendar-wiget-calendar:hover {
+  background-color: var(--skin-on-media-alpha-35);
+}
+
+/* Navigatable tactics empty position button.
+ * sets the background fill; sets the outline/corner shape; controls size/placement; sets spacing
+ * around/inside the element.
+ * Source rule 3006.
+ */
+.navigatable-tactics-empty-position-button {
+  height: 40px;
+  margin: 0;
+  padding: 0;
+  border-width: 2px;
+  border-color: var(--skin-transparent);
+  background-color: var(--skin-transparent);
+  border-radius: var(--skin-radius-card);
+}
+
+/* Navigatable tactics position.
+ * sets the background fill; sets the outline/corner shape; controls size/placement; sets spacing
+ * around/inside the element.
+ * Source rule 3007.
+ */
+.navigatable-tactics-position {
+  width: 80px;
+  height: 44px;
+  margin: 0;
+  padding: 0;
+  background-color: var(--skin-transparent);
+  border-radius: var(--skin-radius-control);
+}
+
+/* Navigation navigation dropdown menu item base default.
+ * sets the background fill; controls size/placement; sets spacing around/inside the element; defines how
+ * state changes animate.
+ * Source rule 3008.
+ */
+.navigation-_navigation-dropdown-menu_item_base-default {
+  height: 32px;
+  padding: 0;
+  background-color: var(--skin-transparent);
+  align-items: center;
+  align-self: stretch;
+  max-height: 32px;
+  min-height: 32px;
+  transition-property: var(--transition-props-paint);
+  transition-duration: 0.15s;
+  transition-timing-function: ease;
+}
+
+/* Navigation bookmarks expanded default type bookmark settings.
+ * Shows these elements; sets the outline/corner shape; controls size/placement; sets spacing around/inside
+ * the element.
+ * Source rule 3009.
+ */
+.navigation-bookmarks-expanded-default-type-bookmark-settings {
+  display: flex;
+  width: 550px;
+  height: 633px;
+  flex-direction: column;
+  align-items: flex-start;
+  flex-shrink: 0;
+  border-radius: var(--layout-surfaces-border-radius, var(--skin-radius-small));
+  margin-bottom: 64px;
+}
+
+/* This is a floating popup, so use the dialog edge instead of ordinary cards.
+ * Template wrappers extend beyond its bottom margin; they must not paint art
+ * behind the rounded content panel. Keep their layout and hit testing intact. */
+.bookmark-edit-panel.navigation-bookmarks-expanded-default-type-bookmark-settings {
+  border-width: var(--skin-dialog-border-width);
+  border-color: var(--skin-dialog-border);
+  border-radius: var(--skin-dialog-radius);
+}
+
+.bookmark-edit-panel-floating-element > VisualElement,
+.bookmark-edit-panel-floating-element > VisualElement > VisualElement,
+.bookmark-edit-panel-floating-element > VisualElement > VisualElement > VisualElement {
+  background-color: var(--skin-transparent);
+  background-image: none;
+}
+
+/* Pin glyphs are direct concept-art leaves, not inherited text. Pair each
+ * saved state with its surface while leaving arbitrary bookmark images alone. */
+.bookmark-edit-panel #PinButton.input-toggle-icon-default-active-true:enabled {
+  background-color: var(--skin-selection-background);
+}
+.bookmark-edit-panel #PinButton.input-toggle-icon-default-active-true:hover:enabled {
+  background-color: var(--skin-selection-hover);
+}
+.bookmark-edit-panel #PinButton.input-toggle-icon-default-active-true:active:enabled {
+  background-color: var(--skin-selection-pressed);
+}
+.bookmark-edit-panel #PinButton.input-toggle-icon-default-active-true:enabled #PinIconStyleSetter {
+  -unity-background-image-tint-color: var(--skin-selection-foreground);
+}
+.bookmark-edit-panel #PinButton.input-toggle-icon-default-active-false:enabled {
+  background-color: var(--skin-control-background);
+}
+.bookmark-edit-panel #PinButton.input-toggle-icon-default-active-false:hover:enabled {
+  background-color: var(--skin-control-hover);
+}
+.bookmark-edit-panel #PinButton.input-toggle-icon-default-active-false:active:enabled {
+  background-color: var(--skin-control-pressed);
+}
+.bookmark-edit-panel #PinButton.input-toggle-icon-default-active-false:enabled #PinIconStyleSetter {
+  -unity-background-image-tint-color: var(--skin-text-primary);
+}
+.bookmark-edit-panel #PinButton:disabled {
+  background-color: var(--skin-action-disabled-background);
+}
+.bookmark-edit-panel #PinButton:disabled #PinIconStyleSetter {
+  -unity-background-image-tint-color: var(--skin-action-disabled-foreground);
+}
+
+/* Navigation browser tab label default menu true.
+ * Changes text/foreground colour; sets the outline/corner shape; controls size/placement; sets spacing
+ * around/inside the element.
+ * Source rule 3010.
+ */
+.navigation-browser_tab-label-default--menu-true {
+  height: 40px;
+  padding: var(--numbers-border-radius-null) var(--spacing-small---8);
+  color: var(--skin-text-primary);
+  align-items: center;
+  flex-shrink: 0;
+  border-radius: var(--skin-radius-control);
+  flex-direction: var(--row-direction-normal);
+}
+
+/* Navigation chip.
+ * sets the background fill; sets the outline/corner shape; controls size/placement; defines how state
+ * changes animate.
+ * Source rule 3011.
+ */
+.navigation-chip {
+  width: 100%;
+  height: 3px;
+  background-color: var(--skin-nav-active-indicator);
+  border-radius: var(--border-radius-radius-1);
+  overflow: hidden;
+  transition: background-color 0.1s ease-out, opacity 0.1s ease-out, width 0.1s ease-out;
+}
+
+/* Navigation chip container.
+ * controls size/placement.
+ * Source rule 3012.
+ */
+.navigation-chip-container {
+  position: absolute;
+  bottom: -4px;
+  left: 0px;
+}
+
+/* Navigation core clubname kit.
+ * sets the outline/corner shape; controls size/placement.
+ * Source rule 3013.
+ */
+.navigation-core-clubname-kit {
+  height: 48px;
+  justify-content: center;
+  align-items: flex-start;
+  border-radius: var(--border-radius-trailing-extra-small);
+  overflow: hidden;
+}
+
+/* Navigation dropdown menu item base default.
+ * sets the background fill; controls size/placement; sets spacing around/inside the element.
+ * Source rule 3014.
+ */
+.navigation-dropdown-menu_item_base-default {
+  width: 195px;
+  margin: 0;
+  padding: 0;
+  background-color: var(--skin-transparent);
+  align-items: flex-start;
+  flex-direction: var(--row-direction-normal);
+}
+
+/* Navigation dropdown menu item base default — pressed.
+ * sets the background fill.
+ * Source rule 3015.
+ */
+.navigation-dropdown-menu_item_base-default:active:enabled {
+  background-color: var(--skin-selection-pressed);
+  color: var(--skin-selection-foreground);
+}
+
+/* Navigation dropdown menu item base default — pointer hover.
+ * sets the background fill.
+ * Source rule 3016.
+ */
+.navigation-dropdown-menu_item_base-default:hover:enabled {
+  background-color: var(--skin-selection-hover);
+  color: var(--skin-selection-foreground);
+}
+
+/* This older menu family is separate from the secondary-nav sub-dropdown.
+ * Only enabled pointer states receive the paired selection fill and ink. */
+.navigation-dropdown-menu_item_base-default:hover:enabled .sitext,
+.navigation-dropdown-menu_item_base-default:active:enabled .sitext {
+  color: var(--skin-selection-foreground);
+}
+
+/* Press wins when both pseudo-states are present. */
+.navigation-dropdown-menu_item_base-default:hover:active:enabled {
+  background-color: var(--skin-selection-pressed);
+}
+
+/* Navigation global diagetic button.
+ * controls size/placement; sets spacing around/inside the element; defines how state changes animate.
+ * Source rule 3017.
+ */
+.navigation-global-diagetic-button {
+  width: 32px;
+  height: 40px;
+  margin: var(--global-gap-none);
+  padding: var(--global-padding-none) var(--global-padding-small);
+  max-width: 32px;
+  transition: min-width var(--global-transition-buttons) var(--global-transition-animation-buttons), width var(--global-transition-buttons) var(--global-transition-animation-buttons);
+  align-items: center;
+  justify-content: center;
+}
+
+/* Sibutton.
+ * sets the outline/corner shape; controls size/placement; sets spacing around/inside the element.
+ * Source rule 3018.
+ */
+.navigation-global-diagetic-button .sibutton {
+  width: 32px;
+  height: 40px;
+  margin: var(--global-gap-none);
+  padding: var(--global-padding-none) var(--global-padding-small);
+  max-width: 32px;
+  border-radius: var(--global-radius-small);
+  align-items: center;
+  justify-content: center;
+}
+
+/* SI dropdown selection field.
+ * controls size/placement; sets spacing around/inside the element.
+ * Shared rule for 7 selectors. Editing a declaration here affects the whole group below.
+ * Source rule 3019.
+ */
+.navigation-global-diagetic-button.trailing-button-var .si-dropdown__selection-field,
+.navigation-global-diagetic-button.trailing-button-var,
+.navigation-global-diagetic-button.trailing-button-var:hover,
+.navigation-global-diagetic-button.trailing-button-var .sibutton,
+.navigation-global-diagetic-button.trailing-button-var:hover .sibutton,
+.navigation-global-diagetic-button.leading-button-var,
+.navigation-global-diagetic-button.leading-button-var .sibutton {
+  width: auto;
+  padding: var(--global-padding-none) var(--global-padding-small);
+  min-width: 40px;
+}
+
+/* Navigation identity entity selector default switch type nation.
+ * sets the background fill; sets the outline/corner shape; controls size/placement; sets spacing
+ * around/inside the element.
+ * Source rule 3020.
+ */
+.navigation-identity-entity-selector-default-switch-type-nation {
+  width: 20px;
+  border-width: 1px;
+  border-color: var(--skin-border-subtle);
+  background-color: var(--skin-control-background);
+  padding-top: 2px;
+  padding-right: 0px;
+  padding-bottom: 2px;
+  padding-left: 0px;
+  justify-content: center;
+  align-items: center;
+  border-radius: var(--interaction-global-radius-sm);
+  flex-direction: var(--row-direction-normal);
+}
+
+/* Navigation main calendar button default.
+ * sets the background fill; sets the outline/corner shape; controls size/placement; sets spacing
+ * around/inside the element.
+ * Source rule 3021.
+ */
+.navigation-main-calendar-button-default {
+  height: 42px;
+  background-color: var(--skin-surface-page);
+  align-items: center;
+  flex-shrink: 0;
+  border-radius: var(--skin-radius-control);
+  margin-right: 0;
+  transition: background-color var(--global-transition-buttons) var(--global-transition-animation-buttons);
+}
+
+/* Navigation primary nav calendar wiget calendar.
+ * sets the background fill; sets the outline/corner shape; controls size/placement; sets spacing
+ * around/inside the element.
+ * Source rule 3022.
+ */
+.navigation-primary-nav-calendar-wiget-calendar {
+  height: var(--interaction-global-height-lg);
+  padding: var(--interaction-global-padding-vertical) var(--global-gap-regular);
+  border-width: 1px;
+  border-color: var(--skin-border-subtle);
+  background-color: var(--skin-surface-canvas);
+  flex-direction: var(--row-direction-normal);
+  justify-content: center;
+  align-items: center;
+  border-radius: var(--interaction-global-radius-md);
+  transition: background-color var(--global-transition-buttons) var(--global-transition-animation-buttons), border-color var(--global-transition-buttons) var(--global-transition-animation-buttons);
+}
+
+/* Sigradient.
+ * changes opacity for the whole element and its contents.
+ * Shared rule for 3 selectors. Editing a declaration here affects the whole group below.
+ * Source rule 3023.
+ */
+.navigation-secondary-tab-portal-default-active-false .sigradient,
+.body-language-changed .body-language-morph-rest,
+.navigation-tab-portal-default-active-false .navigation-chip {
+  opacity: 0;
+}
+
+/* Sigradient.
+ * sets the background fill; controls size/placement; changes opacity for the whole element and its
+ * contents; sets the gradient colours drawn by this component.
+ * Source rule 3024.
+ */
+.navigation-secondary-tab-portal-default-active-true .sigradient {
+  opacity: 1;
+  width: 100%;
+  height: 2px;
+  background-color: var(--skin-transparent);
+  --start-colour: var(--skin-nav-active-indicator);
+  --end-colour: var(--skin-nav-active-indicator);
+}
+
+/* Secondary navigation tab text.
+ * Changes text/foreground colour; sets spacing around/inside the element; defines how state changes
+ * animate; changes opacity for the whole element and its contents.
+ * Shared rule for 2 selectors. Editing a declaration here affects the whole group below.
+ * Source rule 3025.
+ */
+.navigation-secondary-text-portal-default-active-false .secondary-navigation-tab-text,
+.secondary-navigation-tab-dropdown .secondary-navigation-tab-text {
+  opacity: 0.75;
+  margin: 0;
+  color: var(--skin-text-primary);
+  font-size: var(--skin-font-secondary-navigation-size);
+  -unity-font-definition: var(--skin-font-secondary-navigation);
+  -unity-font-style: var(--skin-font-secondary-navigation-weight);
+  transition: color 0.15s ease, opacity 0.15s ease;
+}
+
+/* Secondary navigation tab icon — pointer hover.
+ * tints background artwork.
+ * Source rule 3026.
+ */
+.navigation-secondary-text-portal-default-active-false:hover .secondary-navigation-tab-icon {
+  -unity-background-image-tint-color: var(--skin-text-primary);
+}
+
+/* Secondary navigation tab text — pointer hover.
+ * Changes text/foreground colour; changes opacity for the whole element and its contents.
+ * Shared rule for 2 selectors. Editing a declaration here affects the whole group below.
+ * Source rule 3027.
+ */
+.navigation-secondary-text-portal-default-active-false:hover .secondary-navigation-tab-text,
+.secondary-navigation-tab-dropdown:hover .secondary-navigation-tab-text {
+  opacity: 1;
+  color: var(--skin-text-primary);
+}
+
+/* Secondary navigation tab text.
+ * Changes text/foreground colour; sets spacing around/inside the element; defines how state changes
+ * animate.
+ * Source rule 3028.
+ */
+.navigation-secondary-text-portal-default-active-true .secondary-navigation-tab-text {
+  margin: 0;
+  color: var(--skin-text-primary);
+  font-size: var(--skin-font-secondary-navigation-size);
+  -unity-font-definition: var(--skin-font-secondary-navigation);
+  -unity-font-style: var(--skin-font-secondary-navigation-weight);
+  transition-property: var(--transition-props-paint);
+  transition-duration: 0.15s;
+  transition-timing-function: ease;
+}
+
+/* Header bookmark labels — keeps longer shortcuts clear of the overflow button. */
+.bookmarks-button .bookmark-label {
+  font-size: var(--skin-font-bookmark-label-size);
+  -unity-font-definition: var(--skin-font-bookmark-label);
+  -unity-font-style: var(--skin-font-bookmark-label-weight);
+}
+
+/* Header bookmarks are shortcuts, quieter than the current navigation tab.
+ * Share its typography role, with quiet borderless controls and preserve
+ * bookmark images rather than tinting arbitrary club/content artwork. */
+#MenuTitle #SecondaryNavigationBar .bookmarks-button {
+  background-color: var(--skin-bookmark-background);
+  border-color: var(--skin-bookmark-border);
+  border-width: var(--skin-bookmark-border-width);
+  border-radius: var(--skin-radius-control);
+  color: var(--skin-bookmark-foreground);
+}
+#MenuTitle #SecondaryNavigationBar .bookmarks-button:hover:enabled {
+  background-color: var(--skin-bookmark-hover);
+}
+#MenuTitle #SecondaryNavigationBar .bookmarks-button:active:enabled {
+  background-color: var(--skin-bookmark-pressed);
+}
+#MenuTitle #SecondaryNavigationBar .bookmarks-button:focus:enabled {
+  border-width: var(--skin-bookmark-focus-border-width);
+  border-color: var(--skin-focus-ring);
+}
+/* The overflow glyph is painted on the clickable host itself. Native button
+ * height/padding stretched its 16px artwork into a narrow tall chevron. Keep
+ * a square target and an independently sized, centred background image. */
+#MenuTitle #SecondaryNavigationBar #BookmarksPopupWidget.bookmarks-button {
+  width: var(--skin-bookmark-overflow-size);
+  height: var(--skin-bookmark-overflow-size);
+  min-width: var(--skin-bookmark-overflow-size);
+  max-height: var(--skin-bookmark-overflow-size);
+  padding: var(--skin-bookmark-overflow-padding);
+  background-size: var(--skin-bookmark-overflow-icon-size) var(--skin-bookmark-overflow-icon-size);
+  background-position: center;
+  -unity-background-image-tint-color: var(--skin-bookmark-foreground);
+  align-self: center;
+}
+#MenuTitle #SecondaryNavigationBar .bookmark-label,
+#MenuTitle #SecondaryNavigationBar #BookmarksText {
+  font-size: var(--skin-font-bookmark-label-size);
+  -unity-font-definition: var(--skin-font-bookmark-label);
+  -unity-font-style: var(--skin-font-bookmark-label-weight);
+  color: var(--skin-bookmark-foreground);
+}
+
+/* Compact quick links share the row with the overflow control; use the small
+ * spacing token so the final visible label is not hidden behind “+N”. */
+.bookmarks-button.padding-horizontal-global-padding-regular {
+  padding-left: var(--interaction-global-padding-horizontal-sm);
+  padding-right: var(--interaction-global-padding-horizontal-sm);
+}
+
+/* Navigation tab default default text.
+ * Changes text/foreground colour; sets font/text presentation; defines how state changes animate.
+ * Shared rule for 2 selectors. Editing a declaration here affects the whole group below.
+ * Source rule 3029.
+ */
+.navigation-tab-default-default--active-false .navigation-tab-default-default-text,
+.navigation-tab-default-default--active-false .body-md {
+  color: var(--skin-text-secondary);
+  font-size: var(--typography-size-16);
+  white-space: normal;
+  -unity-font-definition: var(--skin-font-body);
+  -unity-text-align: middle-left;
+  transition-property: color;
+  transition-duration: var(--global-transition-buttons);
+  transition-timing-function: var(--global-transition-animation-buttons);
+}
+
+/* Navigation tab settings circle empty icon.
+ * tints background artwork; defines how state changes animate.
+ * Source rule 3030.
+ */
+.navigation-tab-default-default--active-false .navigation-tab-settings-circle-empty-icon {
+  -unity-background-image-tint-color: var(--skin-on-media-alpha-65);
+  transition-property: -unity-background-image-tint-color;
+  transition-duration: var(--global-transition-buttons);
+  transition-timing-function: var(--global-transition-animation-buttons);
+}
+
+/* Navigation tab settings circle filled icon.
+ * tints background artwork; defines how state changes animate.
+ * Source rule 3031.
+ */
+.navigation-tab-default-default--active-false .navigation-tab-settings-circle-filled-icon {
+  -unity-background-image-tint-color: var(--skin-transparent);
+  transition-property: -unity-background-image-tint-color;
+  transition-duration: var(--global-transition-buttons);
+  transition-timing-function: var(--global-transition-animation-buttons);
+}
+
+/* Navigation tab default default active false.
+ * Changes text/foreground colour; sets the background fill; sets the outline/corner shape; controls
+ * size/placement.
+ * Shared rule for 2 selectors. Editing a declaration here affects the whole group below.
+ * Source rule 3032.
+ */
+.navigation-tab-default-default--active-false,
+.menu-element .navigation-tab-default-default--active-false {
+  border-width: 1.5px;
+  background-color: var(--none);
+  color: var(--skin-text-secondary);
+  padding-top: 0px;
+  padding-right: var(--global-padding-extra-large);
+  padding-bottom: 0px;
+  padding-left: var(--global-padding-extra-large);
+  justify-content: center;
+  align-items: center;
+  flex-direction: var(--row-direction-normal);
+  transition-property: color, background-color, border-color;
+  transition-duration: var(--global-transition-buttons);
+  transition-timing-function: var(--global-transition-animation-buttons);
+}
+
+/* Navigation tab default default active false — disabled.
+ * Changes text/foreground colour.
+ * Source rule 3033.
+ */
+.navigation-tab-default-default--active-false:disabled {
+  color: var(--skin-text-disabled);
+}
+
+/* Navigation tab default default text.
+ * Changes text/foreground colour; sets font/text presentation; defines how state changes animate.
+ * Shared rule for 4 selectors. Editing a declaration here affects the whole group below.
+ * Source rule 3034.
+ */
+.navigation-tab-default-default--active-true .navigation-tab-default-default-text,
+.manager-creation-face-sculpt-dropdown--active-true,
+.virtualised-list__item--selected .navigation-tab-default-default-text,
+.navigation-tab-default-default--active-true.navigation-tab-default-default--active-false .sitext {
+  color: var(--skin-text-primary);
+  font-size: var(--typography-size-16);
+  white-space: normal;
+  -unity-font-definition: var(--skin-font-body);
+  -unity-font-style: var(--typography-weight-bold);
+  -unity-text-align: middle-left;
+  transition-property: color;
+  transition-duration: var(--global-transition-buttons);
+  transition-timing-function: var(--global-transition-animation-buttons);
+}
+
+/* Navigation tab default default active true.
+ * Changes text/foreground colour; sets the background fill; sets the outline/corner shape; controls
+ * size/placement.
+ * Shared rule for 2 selectors. Editing a declaration here affects the whole group below.
+ * Source rule 3035.
+ */
+.navigation-tab-default-default--active-true,
+.virtualised-list__item--selected .navigation-tab-default-default--active-false {
+  padding: 0 var(--global-padding-extra-large);
+  border-width: 1.5px;
+  background-color: var(--skin-transparent);
+  color: var(--skin-text-primary);
+  justify-content: center;
+  align-items: center;
+  border-left-color: var(--skin-transparent);
+  border-right-color: var(--skin-transparent);
+  border-top-color: var(--skin-transparent);
+  border-bottom-color: var(--colours-base-neutral-white);
+  flex-direction: var(--row-direction-normal);
+  cursor: var(--cursor-default-1x-url) var(--cursor-default-1x-hotspot-x) var(--cursor-default-1x-hotspot-y);
+}
+
+/* Navigation tab default default text.
+ * sets font/text presentation.
+ * Shared rule for 3 selectors. Editing a declaration here affects the whole group below.
+ * Source rule 3036.
+ */
+.navigation-tab-default-small-text .navigation-tab-default-default-text,
+.standard-breakpoint .breakpoint-text,
+.portal-messages-small-res .portal-messages-header-text {
+  font-size: var(--typography-size-14);
+}
+
+/* Navigation tab dropdown.
+ * controls size/placement.
+ * Source rule 3037.
+ */
+.navigation-tab-dropdown {
+  width: 24px;
+  align-items: center;
+  justify-content: center;
+}
+
+/* SI dropdown selection field.
+ * sets the outline/corner shape; controls size/placement; sets spacing around/inside the element; defines
+ * how state changes animate.
+ * Source rule 3038.
+ */
+.navigation-tab-dropdown > .si-dropdown__selection-field {
+  opacity: 0.65;
+  padding: 0;
+  border-width: 0;
+  flex-direction: var(--row-direction-normal);
+  flex-grow: 0;
+  flex-shrink: 1;
+  transition: opacity var(--global-transition-long) ease-in-out;
+  border-radius: var(--skin-radius-card);
+  align-items: center;
+}
+
+/* Navigation tab group box.
+ * sets spacing around/inside the element.
+ * Source rule 3039.
+ */
+.navigation-tab-group-box {
+  margin-top: var(--global-gap-none);
+  padding-top: var(--global-gap-none);
+}
+
+/* Navigation tab no dropdown padding element.
+ * controls size/placement.
+ * Source rule 3040.
+ */
+.navigation-tab-no-dropdown-padding-element {
+  width: 10px;
+}
+
+/* Navigation tab dropdown.
+ * sets spacing around/inside the element; defines how state changes animate.
+ * Shared rule for 4 selectors. Editing a declaration here affects the whole group below.
+ * Source rule 3041.
+ */
+.navigation-tab-portal-default-active-false .navigation-tab-dropdown,
+.navigation-tab-portal-default-active-true .navigation-tab-dropdown,
+.navigation-tab-portal-default-active-false .navigation-tab-dropdown:hover,
+.navigation-tab-portal-default-active-true .navigation-tab-dropdown:hover {
+  padding: 0;
+  transition: background-color 0.3s ease-in-out, border-radius 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+
+/* Portal image.
+ * tints background artwork.
+ * Source rule 3042.
+ */
+.navigation-tab-portal-default-active-false .portal-image {
+  -unity-background-image-tint-color: var(--skin-component-navigation-tab-portal-default-active-false-portal-image-image-tint);
+}
+
+/* Inactive primary portal text.
+ * The shared thematic-md role owns its font; keep inactive labels quieter.
+ * Source rule 3043.
+ */
+.navigation-tab-portal-default-active-false .portal-text {
+  opacity: 0.75;
+  color: var(--skin-text-primary);
+  transition: color 0.15s ease, opacity 0.15s ease;
+}
+
+/* Navigation tab portal default active false.
+ * sets the background fill; controls size/placement; sets spacing around/inside the element; defines how
+ * state changes animate.
+ * Shared rule for 2 selectors. Editing a declaration here affects the whole group below.
+ * Source rule 3044.
+ */
+.navigation-tab-portal-default-active-false,
+.navigation-tab-portal-default-active-true {
+  height: var(--main-header-tab-height);
+  margin: 0;
+  padding: 0;
+  background-color: var(--skin-transparent);
+  flex-direction: column;
+  align-items: flex-start;
+  transition-property: var(--transition-props-continuous);
+  transition-duration: var(--global-transition-long);
+  transition-timing-function: ease-in-out;
+}
+
+/* SI dropdown selection field — pointer hover.
+ * sets the background artwork; controls size/placement; sets spacing around/inside the element; defines how
+ * state changes animate.
+ * Shared rule for 2 selectors. Editing a declaration here affects the whole group below.
+ * Source rule 3045.
+ */
+.navigation-tab-portal-default-active-false:hover .navigation-tab-dropdown > .si-dropdown__selection-field,
+.navigation-tab-portal-default-active-true:hover .navigation-tab-dropdown > .si-dropdown__selection-field {
+  opacity: 1;
+  padding: 0;
+  background-image: none;
+  flex-direction: var(--row-direction-normal);
+  flex-shrink: 1;
+  transition-property: var(--transition-props-paint);
+  transition-duration: var(--global-transition-long);
+  transition-timing-function: ease-in-out;
+}
+
+/* Navigation tab dropdown — pointer hover.
+ * sets the background fill; sets the outline/corner shape; sets spacing around/inside the element; changes
+ * opacity for the whole element and its contents.
+ * Shared rule for 2 selectors. Editing a declaration here affects the whole group below.
+ * Source rule 3046.
+ */
+.navigation-tab-portal-default-active-false:hover .navigation-tab-dropdown,
+.navigation-tab-portal-default-active-true:hover .navigation-tab-dropdown {
+  opacity: 1;
+  padding: 0;
+  background-color: var(--skin-transparent);
+  border-radius: 0;
+}
+
+/* Visual highlighted — pointer hover.
+ * Changes text/foreground colour.
+ * Source rule 3047.
+ */
+.navigation-tab-portal-default-active-false:hover .portal-text > .si-dropdown__selection-field.visual-highlighted {
+  color: var(--skin-text-secondary);
+}
+
+/* Navigation chip.
+ * controls size/placement; changes opacity for the whole element and its contents.
+ * Source rule 3048.
+ */
+.navigation-tab-portal-default-active-true .navigation-chip {
+  opacity: 1;
+  width: 12px;
+}
+
+/* Active primary portal text.
+ * The shared thematic-md role owns its font; keep full active-state contrast.
+ * Shared rule for 2 selectors. Editing a declaration here affects the whole group below.
+ * Source rule 3049.
+ */
+.navigation-tab-portal-default-active-true .portal-text,
+.navigation-tab-portal-default-active-true:hover .portal-text {
+  opacity: 1;
+  color: var(--skin-text-primary);
+}
+
+/* FM applies thematic-md after portal-tab rules. This role-scoped selector
+ * keeps the primary-nav face from falling back to the condensed game font;
+ * secondary nav and metadata keep their own body/data roles.
+ */
+.nav-on-dark .navigation-tab-portal-default-active-false .portal-text.thematic-md,
+.nav-on-dark .navigation-tab-portal-default-active-true .portal-text.thematic-md {
+  -unity-font-definition: var(--skin-font-primary-navigation);
+  -unity-font-style: var(--skin-font-primary-navigation-weight);
+}
+
+/* Navigation tab regular default active false.
+ * sets the background fill; sets the outline/corner shape; controls size/placement; sets spacing
+ * around/inside the element.
+ * Shared rule for 2 selectors. Editing a declaration here affects the whole group below.
+ * Source rule 3050.
+ */
+.navigation-tab-regular-default--active-false,
+.buttongroup.Default .navigation-tab-regular-default--active-false {
+  height: var(--interaction-global-height-md);
+  padding: var(--global-padding-regular) var(--global-padding-none);
+  background-color: var(--none);
+  justify-content: center;
+  align-items: center;
+  align-self: stretch;
+  border-left-color: var(--none);
+  border-right-color: var(--none);
+  border-top-color: var(--none);
+  border-bottom-width: var(--global-border-thick);
+  margin-right: var(--spacing-padding-medium---16);
+  flex-direction: var(--row-direction-normal);
+}
+
+/* Navigation tab regular default active false — pointer hover.
+ * sets the outline/corner shape.
+ * Shared rule for 2 selectors. Editing a declaration here affects the whole group below.
+ * Source rule 3051.
+ */
+.navigation-tab-regular-default--active-false:hover,
+.navigation-tab-regular-default--active-true:hover {
+  border-bottom-color: var(--colours-base-neutral-white);
+}
+
+/* Navigation tab regular default active true.
+ * sets the outline/corner shape; controls size/placement; sets spacing around/inside the element.
+ * Shared rule for 2 selectors. Editing a declaration here affects the whole group below.
+ * Source rule 3052.
+ */
+.navigation-tab-regular-default--active-true,
+.buttongroup.Default .navigation-tab-regular-default--active-true {
+  height: var(--interaction-global-height-md);
+  padding: var(--global-padding-regular) var(--global-padding-none);
+  justify-content: center;
+  align-items: center;
+  border-bottom-width: var(--global-border-thick);
+  border-bottom-color: var(--colours-base-neutral-white);
+  margin-right: var(--spacing-padding-medium---16);
+  flex-direction: var(--row-direction-normal);
+}
+
+/* Navigation tab settings.
+ * controls size/placement.
+ * Source rule 3053.
+ */
+.navigation-tab-settings {
+  width: 202px;
+  height: 34px;
+  flex-grow: 1;
+  flex-direction: var(--row-direction-normal);
+  align-items: center;
+}
+
+/* Detailed Preferences is a navigation list, not a list of section headings.
+ * The native Default buttongroup forces selected heading-md labels back to
+ * primary white at higher specificity. Scope the actual template label so its
+ * selection ink and navigation type survive that shared native contract. */
+.fmc-preferences-radio-buttons .navigation-tab-settings #navigation-tab-title-text {
+  font-size: var(--skin-font-secondary-navigation-size);
+  -unity-font-definition: var(--skin-font-secondary-navigation);
+  -unity-font-style: var(--skin-font-secondary-navigation-weight);
+}
+.fmc-preferences-radio-buttons.buttongroup__button:hover:enabled > .navigation-tab-settings #navigation-tab-title-text,
+.fmc-preferences-radio-buttons.buttongroup__button:active:enabled > .navigation-tab-settings #navigation-tab-title-text,
+.tabgroup__tab-settings--active .navigation-tab-settings #navigation-tab-title-text,
+.fmc-preferences-radio-buttons .navigation-tab-settings:hover:enabled #navigation-tab-title-text,
+.fmc-preferences-radio-buttons .navigation-tab-settings:active:enabled #navigation-tab-title-text {
+  color: var(--skin-radio-interaction-foreground);
+}
+.fmc-preferences-radio-buttons .navigation-tab-settings:disabled #navigation-tab-title-text {
+  color: var(--skin-text-disabled);
+}
+
+/* Navigation tab small default.
+ * Changes text/foreground colour; sets the background fill; sets the outline/corner shape; controls
+ * size/placement.
+ * Source rule 3054.
+ */
+.navigation-tab-small-default {
+  height: var(--interaction-global-height-sm);
+  padding: var(--global-padding-regular) var(--global-padding-none);
+  background-color: var(--none);
+  color: var(--skin-text-secondary);
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  flex-direction: var(--row-direction-normal);
+  border-bottom-width: var(--global-border-thick);
+  border-bottom-color: var(--none);
+}
+
+/* Navigation tab small default text.
+ * Changes text/foreground colour; sets font/text presentation; defines how state changes animate.
+ * Source rule 3055.
+ */
+.navigation-tab-small-default--active-false .navigation-tab-small-default-text {
+  color: var(--skin-text-secondary);
+  font-size: var(--typography-size-14);
+  white-space: normal;
+  -unity-font-definition: var(--skin-font-body);
+  -unity-text-align: middle-left;
+  -unity-font-style: var(--typography-weight-bold);
+  transition: color var(--global-transition-buttons) var(--global-transition-animation-buttons);
+}
+
+/* Navigation tab small default active false.
+ * sets the background fill; sets the outline/corner shape; controls size/placement; sets spacing
+ * around/inside the element.
+ * Shared rule for 2 selectors. Editing a declaration here affects the whole group below.
+ * Source rule 3056.
+ */
+.navigation-tab-small-default--active-false,
+.buttongroup.Default .navigation-tab-small-default--active-false {
+  height: var(--interaction-global-height-sm);
+  padding: var(--global-padding-regular) var(--global-padding-none);
+  background-color: var(--none);
+  justify-content: center;
+  align-items: center;
+  margin-right: var(--spacing-tiles);
+  flex-direction: var(--row-direction-normal);
+  transition-property: var(--transition-props-continuous);
+  transition-duration: var(--global-transition-buttons);
+  transition-timing-function: var(--global-transition-animation-buttons);
+  border-bottom-width: var(--global-border-thick);
+  border-bottom-color: var(--none);
+}
+
+/* Navigation tab small default text.
+ * Changes text/foreground colour; sets font/text presentation; defines how state changes animate.
+ * Source rule 3057.
+ */
+.navigation-tab-small-default--active-true .navigation-tab-small-default-text {
+  color: var(--skin-text-primary);
+  font-size: var(--typography-size-14);
+  white-space: normal;
+  -unity-font-definition: var(--skin-font-body);
+  -unity-text-align: middle-left;
+  -unity-font-style: var(--typography-weight-bold);
+  transition-property: var(--transition-props-paint);
+  transition-duration: var(--global-transition-buttons);
+  transition-timing-function: var(--global-transition-animation-buttons);
+}
+
+/* Navigation tab small default active true.
+ * sets the background fill; sets the outline/corner shape; controls size/placement; sets spacing
+ * around/inside the element.
+ * Shared rule for 2 selectors. Editing a declaration here affects the whole group below.
+ * Source rule 3058.
+ */
+.navigation-tab-small-default--active-true,
+.buttongroup.Default .navigation-tab-small-default--active-true {
+  height: var(--interaction-global-height-sm);
+  padding: var(--global-padding-regular) var(--global-padding-none);
+  background-color: var(--none);
+  justify-content: center;
+  align-items: center;
+  border-bottom-width: var(--global-border-thick);
+  border-bottom-color: var(--colours-base-neutral-white);
+  margin-right: var(--spacing-tiles);
+  flex-direction: var(--row-direction-normal);
+  transition-property: var(--transition-props-paint);
+  transition-duration: var(--global-transition-buttons);
+  transition-timing-function: var(--global-transition-animation-buttons);
+}
+
+/* Tabgroup tab active.
+ * Changes text/foreground colour; sets the outline/corner shape.
+ * Shared rule for 2 selectors. Editing a declaration here affects the whole group below.
+ * Source rule 3059.
+ */
+.navigation-tab-small-default.tabgroup__tab--active,
+.navigation-tab-small-default.buttongroup__button--active {
+  color: var(--skin-text-primary);
+  border-bottom-width: var(--global-border-thick);
+  border-bottom-color: var(--colours-base-neutral-white);
+}
+
+/* Navigation type competition.
+ * controls size/placement; sets spacing around/inside the element.
+ * Source rule 3060.
+ */
+.navigation-type-competition {
+  width: 100%;
+  height: 30px;
+  max-height: 30px;
+  padding-right: var(--global-padding-regular);
+  align-items: center;
+  flex-direction: var(--row-direction-normal);
+}
+
+/* Non Diegetic Button.
+ * sets the background fill; sets the outline/corner shape; controls size/placement; sets spacing
+ * around/inside the element.
+ * Source rule 3111.
+ */
+.nonDiegeticButton {
+  height: var(--interaction-global-height-lg);
+  margin: 0px;
+  padding: var(--interaction-global-padding-vertical) var(--global-gap-regular);
+  border-width: var(--none);
+  background-color: var(--none);
+  flex-direction: var(--row-direction-normal);
+  justify-content: center;
+  align-items: center;
+  border-radius: var(--interaction-global-radius-md);
+  transition: background-color 0.15s ease;
+}
+
+/* Selection Field.
+ * sets the outline/corner shape; controls size/placement; sets spacing around/inside the element.
+ * Source rule 3112.
+ */
+.nonDiegeticButton #SelectionField {
+  margin: var(--none);
+  padding: var(--none);
+  border-width: var(--none);
+  justify-content: center;
+  border-radius: var(--interaction-global-radius-md);
+}
+
+/* The action and clock are anchors in the top bar, not secondary metadata.
+ * Use the explicit bold font file rather than synthetic weight selection. */
+#MenuTitle .continue-button #text,
+.continue-button---match #text,
+#MenuTitle .calendar-widget-time-container #Time {
+  -unity-font-definition: var(--skin-font-action-emphasis);
+  -unity-font-style: var(--skin-font-action-emphasis-weight);
+}
+
+/* Navigation items are not table rows. Let the secondary bar own the surface,
+ * while its existing active underline and text hover remain visible. */
+#MenuTitle #SecondaryNavigationTabs .virtualised-list__item,
+#MenuTitle #SecondaryNavigationTabs .virtualised-list__item--odd {
+  background-color: var(--skin-transparent);
+}
+
+/* Recruitment priority is a filled segmented choice. Native FocusPriorityButtons
+ * uses plain glyph elements (including the stock ggame spelling). Tint only
+ * selected glyphs; unselected Top keeps its meaningful amber priority artwork. */
+.buttongroup.SegmentedButtonRow .buttongroup__button--active:enabled .game-concepts-focus-top_small,
+.buttongroup.SegmentedButtonRow .buttongroup__button--active:enabled .ggame-concepts-focus-standard_small,
+.buttongroup.SegmentedButtonRow .buttongroup__button--active:enabled .game-concepts-focus-ongoing_small {
+  -unity-background-image-tint-color: var(--skin-selection-foreground);
+}
+.buttongroup.SegmentedButtonRow .buttongroup__button--active:disabled .game-concepts-focus-top_small,
+.buttongroup.SegmentedButtonRow .buttongroup__button--active:disabled .ggame-concepts-focus-standard_small,
+.buttongroup.SegmentedButtonRow .buttongroup__button--active:disabled .game-concepts-focus-ongoing_small {
+  -unity-background-image-tint-color: var(--skin-action-disabled-foreground);
+}

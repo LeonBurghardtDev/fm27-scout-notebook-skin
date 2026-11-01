@@ -1,0 +1,174 @@
+/* Optional local overrides, loaded last by main.uss.
+ * Edit, save, then reload the skin.
+ * Use shared theme tokens and preserve game states such as read/unread and disabled.
+ */
+
+/* Scout Notizbuch: the start screen / loading background is a bound image
+ * (MainMenuBackground UXML, class startScreen_background_texuture). Replace the
+ * purple neon artwork with the plain desk colour. */
+.startScreen_background_texuture,
+.manager-creator-bg {
+  background-image: none;
+  background-color: var(--skin-surface-canvas);
+  -unity-background-image-tint-color: var(--skin-transparent);
+}
+
+/* The animated start-screen / loading backdrop is a live 3D render
+ * (IntroPanelBackground: #BackgroundRenderTexture / #BackgroundPrerenderTexture),
+ * not the bound image above. Let only a faint, gold-tinted trace of it through
+ * over the desk colour so the purple neon disappears. Covers both Image tint
+ * and background-image tint, whichever SIRenderTextureImage uses. */
+#BackgroundRenderTexture,
+#BackgroundPrerenderTexture {
+  background-color: var(--skin-surface-canvas);
+  -unity-background-image-tint-color: rgba(183, 160, 110, 0.10);
+  --unity-image-tint-color: rgba(183, 160, 110, 0.10);
+}
+#MainMenuBackgroundVisible,
+#PrerenderedVisible,
+#RenderedVisible {
+  background-color: var(--skin-surface-canvas);
+}
+
+/* Save-game / database loading screens: hide the club artwork behind the
+ * progress panel and use the desk colour instead. */
+#panel_root.panel-fade > #Background.modal-sheet-background {
+  background-color: var(--skin-surface-canvas);
+}
+#panel_root.panel-fade > #Background.modal-sheet-background > .menu-tile-background {
+  visibility: hidden;
+}
+#BackgroundsSwitch,
+#PhonesBackground,
+.components-persona-bg {
+  background-image: none;
+  background-color: var(--skin-surface-canvas);
+}
+
+/* Top bar: FM flags the header "nav-on-light" from the club colour and then
+ * tints icons dark. Scout Notizbuch keeps the header dark, so keep icons light. */
+.nav-on-light .dashboard-hud-manager-dropdown .ui-concepts-chevron-down_small,
+.nav-on-light .dashboard-hud-manager-dropdown-condensed .ui-concepts-chevron-down_small,
+.nav-on-light .ui-concepts-chevron-left_small,
+.nav-on-light .ui-concepts-chevron-right_small,
+.nav-on-light #InstantResultEnabled #leading-icon,
+.nav-on-light .navigation-tab-portal-default-active-true .portal-image,
+.nav-on-light .navigation-tab-portal-default-active-true:hover .portal-image,
+.nav-on-light .navigation-tab-portal-default-active-false .portal-image,
+.nav-on-light .navigation-tab-portal-default-active-false:hover .portal-image,
+.nav-on-light .navigation-tab-portal-default-active-true:hover #NavTabDropdownIndicator,
+.nav-on-light .navigation-tab-portal-default-active-false:hover #NavTabDropdownIndicator {
+  -unity-background-image-tint-color: var(--skin-text-secondary);
+}
+.nav-on-light .nd-flat-black {
+  color: var(--skin-text-secondary);
+  -unity-background-image-tint-color: var(--skin-text-secondary);
+}
+.nav-on-light #DateAndFixture .global-text-secondary,
+.nav-on-light #TeamInfo .global-text-secondary {
+  color: var(--skin-text-secondary);
+}
+.nav-on-light #TeamInfo .layout-layout-divider-solid-vertical {
+  background-color: var(--skin-border-default);
+}
+.nav-on-light .buttons-controls-pc-default--active-true,
+.nav-on-light .buttons-controls-pc-default--active-false {
+  border-color: var(--skin-border-subtle);
+  background-color: var(--skin-control-background);
+}
+.nav-on-light .navigation-chip {
+  background-color: var(--skin-surface-raised);
+}
+/* icon buttons in the header (search, inbox, calendar…) without nav-on-light */
+.nonDiegeticButton #leading-icon,
+.main-navigation-button #leading-icon {
+  -unity-background-image-tint-color: var(--skin-text-secondary);
+}
+.nonDiegeticButton:hover #leading-icon,
+.main-navigation-button:hover #leading-icon {
+  -unity-background-image-tint-color: var(--skin-brand-primary);
+}
+
+/* ---------- Start menu (Intro / MainMenu, root #intro-panel) ---------- */
+
+/* Hide the 3D neon backdrop; the menu root carries the notebook desk instead:
+ * dot grid plus a faint gold tactics sketch on the empty right-hand side. */
+#BackgroundRenderTexture,
+#BackgroundPrerenderTexture {
+  visibility: hidden;
+}
+#intro-panel {
+  background-color: var(--skin-surface-canvas);
+  background-image: url("assets/backgrounds/scout-desk.png");
+  -unity-background-scale-mode: scale-and-crop;
+}
+
+/* Tiles: hairline card edge, gold headings with a rule underneath,
+ * gold edge on hover. */
+#intro-panel .surfaces-card-tile-border {
+  border-width: 1px;
+  border-color: var(--skin-border-subtle);
+}
+#intro-panel .layout-tile-base-container:hover .surfaces-card-tile-border {
+  border-color: var(--skin-brand-primary);
+}
+#intro-panel .tile-title-color {
+  color: var(--skin-brand-primary);
+  font-size: var(--heading-sm-size);
+  letter-spacing: 0px;
+}
+#intro-panel .tile-title-frame {
+  border-bottom-width: 1px;
+  border-bottom-color: rgba(183, 160, 110, 0.24);
+  margin-bottom: 8px;
+}
+
+/* "Aktuelle Karriere fortsetzen": plain panel with a gold tab edge
+ * instead of the club-colour wash and the big FM ball. */
+.startscreenVar {
+  background-color: var(--skin-surface-panel);
+  background-image: none;
+  border-left-width: 3px;
+  border-left-color: var(--skin-brand-primary);
+}
+.startscreen-load-most-recent-opacity {
+  visibility: hidden;
+}
+
+/* Shuffle draft + national team: plain panel; the national-team flag collage
+ * stays but printed in sepia (multiply by gold), pictograms in gold. */
+.shuffle-draft-player-tile-background,
+VisualElement#Background.startnewcareer_custom_bg_tile {
+  background-image: none;
+  background-color: var(--skin-surface-panel);
+}
+/* SIImage ignores USS tint: hide the red artwork, keep its children visible */
+SIImage#BackgroundImage.startnewcareer_custom_bg_tile {
+  visibility: hidden;
+}
+SIImage#BackgroundImage.startnewcareer_custom_bg_tile > * {
+  visibility: visible;
+}
+.shuffle-draft-logo,
+.startnewcareer_custom_bg_tile #ManagerImage {
+  -unity-background-image-tint-color: var(--skin-brand-primary);
+  --unity-image-tint-color: var(--skin-brand-primary);
+  opacity: 0.45;
+}
+
+/* Marketing banner ("Video Guides"): same sepia print treatment. */
+/* marketing video banner -> newspaper-style "Video Guides" strip, still clickable */
+SIImage#banner,
+SIImage#SimpleBanner {
+  visibility: hidden;
+}
+#ClickableBannerButton {
+  background-color: var(--skin-surface-panel);
+  background-image: url("assets/backgrounds/guides-banner.png");
+  -unity-background-scale-mode: scale-and-crop;
+  border-width: 1px;
+  border-color: var(--skin-border-subtle);
+}
+#ClickableBannerButton:hover {
+  border-color: var(--skin-brand-primary);
+}

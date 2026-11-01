@@ -1,0 +1,4120 @@
+/* Edit this stylesheet directly, then reload the skin. Shared values live in theme.uss. */
+
+/* This full-window host sits above the 3D renderer even when its scene child
+ * is hidden. Page panels own their surfaces; the host must stay transparent. */
+#Background {
+  background-color: var(--skin-transparent);
+  background-image: none;
+}
+
+/* FM shows this scene backdrop between highlights and hides it for the pitch.
+ * Paint this conditional layer rather than the always-present root/HUD. */
+#Background > #GameWorldBackground.panel {
+  background-color: var(--skin-surface-page);
+}
+
+/* Popup Background reuses the layer name but keeps the explicit dialog scrim
+ * role. Its inner frame owns the modal surface; the page remains visible. */
+#Background.sipopup-container {
+  background-color: var(--skin-dialog-backdrop);
+  background-image: none;
+}
+
+/* Native style setters also use Background for duration/status badges.
+ * Their bound semantic class owns the fill, independent of the transparent
+ * scene host above. Keep native thresholds, text and badge geometry intact. */
+#Background.badge-string-thematic-default-size-small-status-positive {
+  background-color: var(--skin-data-badge-string-thematic-default-size-small-status-positive-background);
+}
+#Background.badge-string-thematic-default-size-small-status-neutral {
+  background-color: var(--skin-control-hover);
+}
+#Background.badge-string-thematic-default-size-small-status-negative {
+  background-color: var(--skin-data-badge-string-thematic-default-size-small-status-negative-background);
+}
+
+/* The average-rating style setter also uses Background. Its bound rating
+ * class owns this data fill; scene transparency must not erase performance
+ * bands. Preserve the native rating classes, thresholds and geometry. */
+#Background.data_display-average_rating-default-default-rating-null {
+  background-color: var(--data-average-rating-surface-not-available);
+}
+#Background.data_display-average_rating-default-default-rating-less-than-6 {
+  background-color: var(--data-average-rating-surface-0-6);
+}
+#Background.data_display-average_rating-default-default-rating-6 {
+  background-color: var(--data-average-rating-surface-6-7);
+}
+#Background.data_display-average_rating-default-default-rating-7 {
+  background-color: var(--data-average-rating-surface-7-8);
+}
+#Background.data_display-average_rating-default-default-rating-8 {
+  background-color: var(--data-average-rating-surface-8-9);
+}
+#Background.data_display-average_rating-default-default-rating-9 {
+  background-color: var(--data-average-rating-surface-9-10);
+}
+
+/* Layer hosts exist even when empty. Painting ReportBody covers the main menu
+ * and leaves a solid screen after an overlay closes. The visible screen/report
+ * panel owns the workspace fill; empty hosts preserve the native scene below. */
+#MenuBody,
+#ReportBody {
+  background-color: var(--skin-transparent);
+  background-image: none;
+}
+
+#MenuBody > .panel,
+#ReportBody > .panel {
+  background-color: var(--skin-surface-page);
+}
+
+/* The live-match HUD fills the viewport but its empty area is the pitch. */
+#MenuBody > #OverviewPrototype.panel {
+  background-color: var(--skin-transparent);
+  background-image: none;
+}
+
+/* Half/full-time reports sit over the live stadium scene. Both the screen and its
+ * reused conversation frame are layout hosts; the report tiles own the fill. */
+#MenuBody > #HalfTimeTeamReport.panel,
+#MenuBody > #FullTimeTeamReport.panel,
+#HalfTimeTeamReport #Card-frame,
+#FullTimeTeamReport #Card-frame {
+  background-color: var(--skin-transparent);
+  background-image: none;
+}
+/* Card-frame is also a Unity Image; tint its own retained native image only,
+ * never whole-element opacity, which would also hide the report children. */
+#HalfTimeTeamReport #Card-frame,
+#FullTimeTeamReport #Card-frame {
+  --unity-image-tint-color: var(--skin-transparent);
+  -unity-background-image-tint-color: var(--skin-transparent);
+}
+/* The native SIImage keeps bound paint after tint resets. Visibility suppresses
+ * that element's own drawing; visible children retain the report and layout. */
+#HalfTimeTeamReport #Card-frame,
+#FullTimeTeamReport #Card-frame {
+  visibility: hidden;
+}
+#HalfTimeTeamReport #Card-frame > #GridSafeArea,
+#FullTimeTeamReport #Card-frame > #GridSafeArea {
+  visibility: visible;
+}
+
+/* CTRL background target: make native backdrop artwork transparent while keeping an opaque Navy surface.
+ */
+#background_image,
+#Card-frame {
+  background-color: var(--skin-surface-page);
+  --unity-image-tint-color: var(--skin-background-image-tint);
+  -unity-background-image-tint-color: var(--skin-background-image-tint);
+  opacity: 1;
+}
+
+/* Hide this decorative backdrop/gradient only. Its content and bindings keep their layout.
+ */
+#GameWorldBackground #background_image,
+#MenuTitle .navigation-header-gradient {
+  opacity: 0;
+}
+
+/* Global game navigation matches Dugout's sidebar canvas without club-colour bleed.
+ */
+#MenuTitle {
+  background-color: var(--skin-transparent);
+  background-image: none;
+  border-bottom-width: 0;
+  border-bottom-color: var(--skin-transparent);
+}
+#MenuTitle #MainNav {
+  background-color: var(--skin-surface-canvas);
+  background-image: none;
+  border-bottom-width: 0;
+  border-bottom-color: var(--skin-transparent);
+}
+
+/* The primary bar contains a separate club gradient layer; suppress it so the canvas stays solid.
+ */
+#MenuTitle #MainNav #Club.sigradient {
+  opacity: 0;
+}
+
+/* A quieter workspace-Navy row distinguishes secondary navigation without a club strip or claret seam. */
+#MenuTitle #SecondaryNavigationBar {
+  background-color: var(--skin-surface-page);
+  background-image: none;
+  border-top-width: 0;
+  border-top-color: var(--skin-transparent);
+}
+
+/* Fill the native 1px gap between nav rows with the secondary-row surface, preventing colour bleed. */
+#MenuTitle .main-navigation-overview-container {
+  background-color: var(--skin-surface-page);
+  background-image: none;
+  border-bottom-width: 0;
+  border-bottom-color: var(--skin-transparent);
+}
+
+/* The native title panel extends one pixel beyond its content. Give that exposed edge the
+ * secondary-nav surface so a club-colour line cannot show below the row. The club overview
+ * header is a separate panel below #MenuTitle and retains its own colours.
+ */
+#MenuTitle #OverviewTitleBar {
+  background-color: var(--skin-surface-page);
+  /* Separate the full header from content without changing the tab layout. */
+  border-bottom-width: var(--skin-nav-secondary-edge-width);
+  border-bottom-color: var(--skin-nav-secondary-edge);
+}
+
+/* Suppress only the secondary club gradient; the global bar already uses the sidebar canvas. */
+#MenuTitle #SecondaryNavigationBar #Club.sigradient {
+  opacity: 0;
+}
+
+/* Club pages render this second, separately named gradient over the secondary row.
+ * Neutralize its paint here while leaving the coloured club overview header below intact.
+ */
+#MenuTitle #SecondaryNavigationBar #ClubGradient,
+#MenuTitle #SecondaryNavigationBar #PlayerGradient {
+  --start-colour: var(--skin-surface-page);
+  --end-colour: var(--skin-surface-page);
+}
+
+/* These absolute decorative layers carry the remaining club-colour seam even when their
+ * gradient variables are neutral. Leave the text, tabs and club identity in the row visible.
+ */
+#MenuTitle #SecondaryNavigationBar #EntityGradient,
+#MenuTitle #SecondaryNavigationBar #PrimaryTabGraidient {
+  opacity: 0;
+}
+
+/* This 1px native divider binds the club colour between rows; collapse it to remove the tinted seam. */
+#MenuTitle #NavBarBindingSetter #IsEmployedDivider {
+  display: none;
+}
+
+#MenuTitle #SecondaryNavigationBar .main-nav-secondary-bar {
+  background-color: var(--skin-surface-page);
+  background-image: none;
+  border-top-width: 0;
+  border-top-color: var(--skin-transparent);
+}
+
+/* Solid image backplate remains visible at transparent/cropped edges while preserving the native article
+ * image.
+ */
+#MenuBody .news-button .dynamicImageFrame,
+#ReportBody .news-button .dynamicImageFrame,
+#MenuBody .news-button #dynamicImageFrame,
+#ReportBody .news-button #dynamicImageFrame {
+  background-color: var(--skin-surface-strong);
+  border-radius: var(--skin-radius-control);
+  overflow: hidden;
+}
+
+/* Panels
+ * Panels, cards, tiles, frames and layout containers. Some adjacent cross-component rules retain their original place.
+ */
+
+/* Module block outline.
+ * Shared panel/frame outline. This can affect several kinds of content container.
+ * Source rule 86.
+ */
+.siblock-border {
+  border-width: var(--layout-modules-block-border-thickness);
+  border-color: var(--skin-border-subtle);
+  background-color: var(--skin-surface-panel);
+  border-radius: var(--layout-modules-block-radius);
+}
+
+/* Grid element editor border.
+ * sets the outline/corner shape.
+ * Source rule 87.
+ */
+.grid-element--editor-border {
+  border-width: 1px;
+  border-color: var(--skin-on-media-alpha-35);
+}
+
+/* Grid element editor border — pointer hover.
+ * sets the outline/corner shape.
+ * Source rule 88.
+ */
+.grid-element--editor-border:hover {
+  border-color: var(--skin-on-media-alpha-65);
+}
+
+/* Grid element drop preview.
+ * sets the background fill; sets the outline/corner shape.
+ * Source rule 89.
+ */
+.grid-element--drop-preview {
+  border-width: 2px;
+  border-color: var(--colours-brand-accent);
+  background-color: var(--colours-brand-accent-alpha-20);
+}
+
+/* Grid composition editor dragged element.
+ * changes opacity for the whole element and its contents.
+ * Source rule 90.
+ */
+.grid-composition-editor-dragged-element {
+  opacity: 0.6;
+}
+
+/* Grid element info header.
+ * sets the background fill; sets the outline/corner shape; controls size/placement; sets spacing
+ * around/inside the element.
+ * Source rule 91.
+ */
+.grid-element__info-header {
+  background-color: var(--skin-surface-canvas-alpha-55);
+  flex-direction: var(--row-direction-normal);
+  align-items: center;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  padding-left: 6px;
+  padding-right: 4px;
+  border-bottom-width: 1px;
+  border-bottom-color: var(--skin-on-media-alpha-08);
+}
+
+/* Grid element info name.
+ * Changes text/foreground colour; sets font/text presentation; controls size/placement.
+ * Source rule 92.
+ */
+.grid-element__info-name {
+  color: var(--skin-text-primary);
+  font-size: var(--skin-font-size-11);
+  flex-grow: 1;
+  flex-shrink: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  -unity-font-style: bold;
+}
+
+/* Grid element info size.
+ * Changes text/foreground colour; sets font/text presentation; controls size/placement; sets spacing
+ * around/inside the element.
+ * Source rule 93.
+ */
+.grid-element__info-size {
+  color: var(--colours-brand-accent);
+  font-size: var(--skin-font-size-10);
+  flex-shrink: 0;
+  margin-left: 6px;
+  margin-right: 2px;
+}
+
+/* SI dropdown selection field.
+ * sets the outline/corner shape.
+ * Source rule 94.
+ */
+.secondary-navigation-tab-dropdown > .si-dropdown__selection-field {
+  border-radius: 0px;
+}
+
+/* Grid element info button.
+ * Changes text/foreground colour; sets the background fill; sets the outline/corner shape; sets font/text
+ * presentation.
+ * Source rule 95.
+ */
+.grid-element__info-button {
+  border-width: 1px;
+  border-color: var(--skin-on-media-alpha-18);
+  background-color: var(--skin-on-media-alpha-06);
+  color: var(--skin-text-primary);
+  font-size: var(--skin-font-size-10);
+  flex-shrink: 0;
+  margin-left: 3px;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-top: 1px;
+  padding-bottom: 1px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-radius: var(--skin-radius-small);
+  -unity-font-style: bold;
+}
+
+/* Grid element info button — pointer hover.
+ * Changes text/foreground colour; sets the background fill; sets the outline/corner shape.
+ * Source rule 96.
+ */
+.unity-button.grid-element__info-button:hover {
+  border-color: var(--skin-on-media-alpha-40);
+  background-color: var(--skin-on-media-alpha-14);
+  color: var(--skin-text-primary);
+}
+
+/* Siblock padding.
+ * sets spacing around/inside the element.
+ * Source rule 97.
+ */
+.siblock-padding {
+  padding: var(--spacing-padding-medium---16);
+}
+
+/* Plugin context menu bindings overlay.
+ * chooses the pointer and hotspot.
+ * Source rule 98.
+ */
+.plugin-context-menu-bindings-overlay {
+  cursor: var(--cursor-clickable-1x-url) var(--cursor-clickable-1x-hotspot-x) var(--cursor-clickable-1x-hotspot-y);
+}
+
+/* Sitext hover cursor.
+ * chooses the pointer and hotspot.
+ * Shared rule for 2 selectors. Editing a declaration here affects the whole group below.
+ * Source rule 99.
+ */
+.sitext-hover-cursor,
+.draggable-hover-cursor {
+  cursor: var(--cursor-clickable-1x-url) var(--cursor-clickable-1x-hotspot-x) var(--cursor-clickable-1x-hotspot-y);
+}
+
+/* Sitext.
+ * chooses the pointer and hotspot.
+ * Shared rule for 2 selectors. Editing a declaration here affects the whole group below.
+ * Source rule 100.
+ */
+.sibutton .sitext,
+.si-dropdown__selection-field .sitext {
+  cursor: var(--cursor-clickable-1x-url) var(--cursor-clickable-1x-hotspot-x) var(--cursor-clickable-1x-hotspot-y);
+}
+
+/* Panels
+ * Panels, cards, tiles, frames and layout containers. Some adjacent cross-component rules retain their original place.
+ */
+
+/* Card modal invite friends.
+ * sets the outline/corner shape; controls size/placement.
+ * Source rule 1610.
+ */
+.card-modal-invite-friends {
+  height: 660px;
+  flex-direction: column;
+  align-items: center;
+  border-radius: var(--spacing-medium---16);
+}
+
+/* Card states border.
+ * sets the background fill; sets the outline/corner shape.
+ * Shared rule for 2 selectors. Editing a declaration here affects the whole group below.
+ * Source rule 1611.
+ */
+.card-states-border,
+.club-to-manage-border {
+  border-width: var(--layout-modules-block-border-thickness);
+  border-color: var(--skin-border-subtle);
+  background-color: var(--skin-surface-panel);
+  border-radius: var(--layout-modules-block-radius);
+}
+
+/* Card states card states career stats.
+ * sets the background fill; sets the outline/corner shape; controls size/placement; sets spacing
+ * around/inside the element.
+ * Shared rule for 2 selectors. Editing a declaration here affects the whole group below.
+ * Source rule 1612.
+ */
+.card-states-card-states-career-stats,
+.frame-states-favoured-personnel-template-filled {
+  padding: 12px;
+  border-width: var(--layout-modules-block-border-thickness);
+  border-color: var(--skin-border-subtle);
+  background-color: var(--skin-surface-panel);
+  flex-direction: column;
+  align-items: flex-start;
+  border-radius: var(--layout-modules-block-radius);
+}
+
+/* Card states card states player recommendations report.
+ * sets the outline/corner shape; controls size/placement.
+ * Source rule 1613.
+ */
+.card-states-card-states-player-recommendations-report {
+  height: 960px;
+  flex-direction: column;
+  align-items: flex-start;
+  border-radius: var(--skin-radius-card);
+}
+
+/* Card states card states preferences.
+ * sets the outline/corner shape; controls size/placement.
+ * Source rule 1614.
+ */
+.card-states-card-states-preferences {
+  align-items: flex-start;
+  border-radius: var(--skin-radius-small);
+  flex-grow: 1;
+  align-self: stretch;
+}
+
+/* Card states card states promises.
+ * controls size/placement.
+ * Shared rule for 4 selectors. Editing a declaration here affects the whole group below.
+ * Source rule 1615.
+ */
+.card-states-card-states-promises,
+.single-npc .content-speakto-response-frame-default-default {
+  flex-direction: column;
+  align-items: stretch;
+}
+
+/* Card states card states targets.
+ * controls size/placement.
+ * Shared rule for 13 selectors. Editing a declaration here affects the whole group below.
+ * Source rule 1616.
+ */
+.card-states-card-states-targets,
+.focus-priority-property-1-top,
+.frame-2-tactics-visualiser-player-name-default,
+.frame-states-full-screen-press-conference-template-start,
+.frame-states-property-1-job-market-property-2-hi-res-property-3-v2,
+.minor-components-multiple-choice-section,
+.states-foot-counters-with-texts-side-left-align,
+.tool-states-tool-states-all-players,
+.card-notifications-modal-dialog-quit-without-saving,
+.data-display-data_display-range_slider-budgets-default,
+.tool-variants-dialog-contract-negotiations-mls-budget-adjustments,
+.potential-stacked-variant,
+.frame-states-staff-responsibilities-template-tab-overview {
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+/* Card states card states team report priorities.
+ * sets the background fill; sets the outline/corner shape; controls size/placement; sets spacing
+ * around/inside the element.
+ * Source rule 1617.
+ */
+.card-states-card-states-team-report-priorities {
+  padding: 16px;
+  border-width: var(--layout-modules-block-border-thickness);
+  border-color: var(--skin-border-subtle);
+  background-color: var(--skin-surface-panel);
+  flex-direction: column;
+  align-items: flex-end;
+  border-radius: var(--layout-modules-block-radius);
+}
+
+/* Card states match feedback board past tab highlights.
+ * controls size/placement.
+ * Shared rule for 3 selectors. Editing a declaration here affects the whole group below.
+ * Source rule 1618.
+ */
+.card-states-match-feedback-board-past-tab-highlights,
+.dashboard-hud-location-default,
+.selected-targets-property-1-single-target {
+  flex-direction: column;
+  align-items: flex-start;
+  flex-shrink: 0;
+}
+
+/* Card states medical risk assessment property 1 card states property 2 medical property 3 risk assessment
+ * property 4 v2.
+ * sets the outline/corner shape; controls size/placement.
+ * Shared rule for 2 selectors. Editing a declaration here affects the whole group below.
+ * Source rule 1619.
+ */
+.card-states-medical-risk-assessment-property-1-card-states-property-2-medical-property-3-risk-assessment-property-4-v2,
+.card-states-youth-environment-property-1-issues {
+  flex-direction: column;
+  align-items: flex-start;
+  flex-shrink: 0;
+  border-radius: var(--skin-radius-small);
+}
+
+/* Card states modal states chose nations.
+ * controls size/placement; sets spacing around/inside the element.
+ * Source rule 1620.
+ */
+.card-states-modal-states-chose-nations {
+  flex-direction: column;
+  align-items: flex-start;
+  flex: 1 0 0;
+  align-self: stretch;
+  margin-bottom: 16px;
+}
+
+/* Card states my contract template unemployed.
+ * sets the outline/corner shape; controls size/placement.
+ * Source rule 1621.
+ */
+.card-states-my-contract-template-unemployed {
+  height: 640px;
+  flex-direction: column;
+  align-items: flex-start;
+  flex-shrink: 0;
+  border-radius: var(--global-padding-tile-padding);
+}
+
+/* Card states property 1 variant3.
+ * sets the outline/corner shape; controls size/placement.
+ * Source rule 1622.
+ */
+.card-states-property-1-variant3 {
+  width: 640px;
+  height: 640px;
+  flex-direction: column;
+  align-items: flex-start;
+  flex-shrink: 0;
+  border-radius: var(--spacing-small---8);
+}
+
+/* Card states report agent banner max.
+ * sets the outline/corner shape; controls size/placement; sets spacing around/inside the element.
+ * Source rule 1623.
+ */
+.card-states-report-agent-banner-max {
+  width: 1500px;
+  height: 92px;
+  padding-top: 6px;
+  padding-right: 12px;
+  padding-bottom: 6px;
+  padding-left: 12px;
+  align-items: center;
+  border-radius: 0 var(--skin-radius-card) 0 0;
+  flex-direction: var(--row-direction-normal);
+}
+
+/* Card states report agent banner mid.
+ * sets the outline/corner shape; controls size/placement; sets spacing around/inside the element.
+ * Source rule 1624.
+ */
+.card-states-report-agent-banner-mid {
+  width: 1174px;
+  height: 92px;
+  padding-top: 6px;
+  padding-right: 12px;
+  padding-bottom: 6px;
+  padding-left: 12px;
+  align-items: center;
+  border-radius: 0 var(--skin-radius-card) 0 0;
+  flex-direction: var(--row-direction-normal);
+}
+
+/* Card states report agent banner min.
+ * sets the outline/corner shape; controls size/placement; sets spacing around/inside the element.
+ * Source rule 1625.
+ */
+.card-states-report-agent-banner-min {
+  width: 844px;
+  height: 92px;
+  padding-top: 6px;
+  padding-right: 12px;
+  padding-bottom: 6px;
+  padding-left: 12px;
+  align-items: center;
+  border-radius: 0 var(--skin-radius-card) 0 0;
+  flex-direction: var(--row-direction-normal);
+}
+
+/* Card states report agent full header max.
+ * controls size/placement.
+ * Source rule 1626.
+ */
+.card-states-report-agent-full-header-max {
+  width: 1624px;
+  height: 148px;
+  align-items: flex-start;
+  flex-direction: var(--row-direction-normal);
+}
+
+/* Card states report agent full header mid.
+ * controls size/placement.
+ * Source rule 1627.
+ */
+.card-states-report-agent-full-header-mid {
+  width: 1298px;
+  align-items: flex-start;
+  flex-direction: var(--row-direction-normal);
+}
+
+/* Card states report agent full header min.
+ * controls size/placement.
+ * Source rule 1628.
+ */
+.card-states-report-agent-full-header-min {
+  width: 968px;
+  height: 148px;
+  align-items: center;
+  flex-direction: var(--row-direction-normal);
+}
+
+/* Card states reporting.
+ * controls size/placement; sets spacing around/inside the element.
+ * Source rule 1629.
+ */
+.card-states-reporting {
+  padding: 8px;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: var(--spacing-medium---16);
+}
+
+/* Card states scouting report property 1 scout default.
+ * sets the outline/corner shape; controls size/placement; sets spacing around/inside the element.
+ * Source rule 1630.
+ */
+.card-states-scouting-report-property-1-scout---default {
+  padding: 12px;
+  flex-direction: column;
+  align-items: flex-start;
+  flex-shrink: 0;
+  border-radius: var(--skin-radius-card);
+}
+
+/* Coach report message block.
+ * controls size/placement.
+ * Shared rule for 2 selectors. Editing a declaration here affects the whole group below.
+ * Source rule 1631.
+ */
+.card-states-scouting-report-property-1-scout---default.coach-report-message-block,
+.virtualised-list--horizontal-list-wrapped > .streamed-list-view-item {
+  width: auto;
+  height: auto;
+}
+
+/* Card states tool states pitch via transfer room club targets.
+ * sets the background fill; sets the outline/corner shape; controls size/placement; sets spacing
+ * around/inside the element.
+ * Source rule 1632.
+ */
+.card-states-tool-states-pitch-via-transfer-room-club-targets {
+  width: 640px;
+  height: 476px;
+  padding: 16px;
+  border-width: var(--layout-modules-block-border-thickness);
+  border-color: var(--skin-border-subtle);
+  background-color: var(--skin-surface-panel);
+  flex-direction: column;
+  align-items: flex-start;
+  border-radius: var(--layout-modules-block-radius);
+}
+
+/* Card states welcome pack.
+ * sets the background fill; sets the outline/corner shape; controls size/placement.
+ * Source rule 1633.
+ */
+.card-states-welcome-pack {
+  width: 1000px;
+  height: 673px;
+  border-width: var(--layout-modules-block-border-thickness);
+  border-color: var(--skin-border-subtle);
+  background-color: var(--skin-surface-page);
+  flex-direction: column;
+  align-items: flex-start;
+  border-radius: var(--layout-modules-block-radius);
+}
+
+/* Cards side menu multiple choice.
+ * sets the outline/corner shape; controls size/placement; sets spacing around/inside the element.
+ * Source rule 1634.
+ */
+.cards-side-menu---multiple-choice {
+  padding: 12px;
+  border-width: 2px;
+  border-color: var(--skin-on-media-alpha-07);
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex: 1 0 0;
+  border-radius: var(--skin-radius-control);
+}
+
+/* Panels
+ * Panels, cards, tiles, frames and layout containers. Some adjacent cross-component rules retain their original place.
+ */
+
+/* Frame 324 tactics visualiser pitch default.
+ * sets the background fill; controls size/placement.
+ * Source rule 2235.
+ */
+.frame-324-tactics-visualiser-pitch-default {
+  width: 452px;
+  height: 554px;
+  background-color: var(--skin-data-frame-324-tactics-visualiser-pitch-default-background);
+}
+
+/* Frame 330 tactics visualiser player indicator.
+ * sets the background fill; sets the outline/corner shape; controls size/placement.
+ * Source rule 2236.
+ */
+.frame-330-tactics-visualiser-player-indicator {
+  width: 80px;
+  height: 44px;
+  border-width: 2px;
+  background-color: var(--skin-transparent);
+  border-radius: var(--skin-radius-control);
+  flex-shrink: 0;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Frame 330 tactics visualiser player indicator empty.
+ * sets the background fill; sets the outline/corner shape; controls size/placement.
+ * Source rule 2237.
+ */
+.frame-330-tactics-visualiser-player-indicator-empty {
+  height: 36px;
+  border-width: 2px;
+  background-color: var(--skin-surface-canvas-alpha-40);
+  border-radius: var(--skin-radius-medium);
+  flex-shrink: 0;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Frame 330 tactics visualiser player indicator empty half width.
+ * sets the background fill; sets the outline/corner shape; controls size/placement.
+ * Source rule 2238.
+ */
+.frame-330-tactics-visualiser-player-indicator-empty-half-width {
+  height: 36px;
+  border-width: 2px;
+  background-color: var(--skin-surface-canvas-alpha-40);
+  max-width: 36px;
+  border-radius: var(--skin-radius-medium);
+  flex-shrink: 0;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Frame block balance default.
+ * sets the background fill; sets the outline/corner shape; controls size/placement; sets spacing
+ * around/inside the element.
+ * Source rule 2239.
+ */
+.frame-block-balance-default {
+  width: 835px;
+  height: 96px;
+  padding: var(--spacing-padding-medium---16);
+  border-width: var(--layout-modules-block-border-thickness);
+  border-color: var(--skin-border-subtle);
+  background-color: var(--skin-surface-panel);
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  border-radius: var(--layout-modules-block-radius);
+  flex-direction: var(--row-direction-normal);
+}
+
+/* Frame block balance default selected.
+ * sets the outline/corner shape.
+ * Shared rule for 2 selectors. Editing a declaration here affects the whole group below.
+ * Source rule 2240.
+ */
+.frame-block-balance-default-selected,
+.frame-block-mindset-selected {
+  border-color: var(--internal-design-system-surface-variant-frame);
+}
+
+/* Frame block mindset.
+ * sets the background fill; sets the outline/corner shape; controls size/placement; sets spacing
+ * around/inside the element.
+ * Source rule 2241.
+ */
+.frame-block-mindset {
+  width: 428px;
+  height: 212px;
+  padding: var(--spacing-padding-medium---16);
+  border-width: var(--layout-modules-block-border-thickness);
+  border-color: var(--skin-border-subtle);
+  background-color: var(--skin-surface-panel);
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex: 1 0 0;
+  align-self: stretch;
+  border-radius: var(--layout-modules-block-radius);
+  flex-basis: initial;
+  flex-grow: 0;
+}
+
+/* Frame block mindset.
+ * controls size/placement.
+ * Source rule 2242.
+ */
+.frame-block-mindset-compact .frame-block-mindset {
+  width: 296px;
+  height: 245px;
+}
+
+/* Frame calendar monthly monthly calendar.
+ * sets the outline/corner shape; controls size/placement; sets spacing around/inside the element.
+ * Source rule 2243.
+ */
+.frame-calendar-monthly-monthly-calendar {
+  width: 640px;
+  padding: var(--spacing-tiles);
+  border-width: 1px;
+  border-color: var(--skin-border-subtle);
+  flex-direction: column;
+  align-items: flex-start;
+  border-radius: var(--spacing-tiles);
+}
+
+/* Frame enabled content responsibility resolution high.
+ * sets the background fill; sets the outline/corner shape; controls size/placement; sets spacing
+ * around/inside the element.
+ * Source rule 2244.
+ */
+.frame-enabled-content-responsibility-resolution-high {
+  height: auto;
+  padding: var(--spacing-padding-tiles) var(--spacing-padding-tiles) var(--spacing-padding-tiles) 16px;
+  border-width: 1px;
+  border-color: var(--skin-border-subtle);
+  background-color: var(--skin-transparent);
+  align-content: stretch;
+  align-items: center;
+  align-self: stretch;
+  border-radius: var(--global-radius-regular);
+  flex-direction: var(--row-direction-normal);
+  margin-bottom: 16px;
+  transition: background-color 0.15s ease;
+  flex-grow: 1;
+}
+
+/* Frame enabled content staff resolution low.
+ * sets the background fill; sets the outline/corner shape; controls size/placement; sets spacing
+ * around/inside the element.
+ * Source rule 2245.
+ */
+.frame-enabled-content-staff-resolution-low {
+  height: auto;
+  padding: var(--spacing-padding-tiles) var(--spacing-padding-tiles) var(--spacing-padding-tiles) 16px;
+  border-width: 1px;
+  border-color: var(--skin-border-subtle);
+  background-color: var(--skin-transparent);
+  align-content: stretch;
+  align-items: center;
+  align-self: stretch;
+  border-radius: var(--global-radius-regular);
+  flex-direction: var(--row-direction-normal);
+  margin-bottom: 16px;
+  flex-grow: 1;
+  transition: background-color 0.15s ease;
+}
+
+/* Frame fiance summary graph.
+ * controls size/placement.
+ * Source rule 2246.
+ */
+.frame-fiance-summary-graph {
+  width: 100%;
+  height: 384px;
+}
+
+/* Frame fitness energy.
+ * sets the outline/corner shape; controls size/placement; sets spacing around/inside the element.
+ * Shared rule for 3 selectors. Editing a declaration here affects the whole group below.
+ * Source rule 2247.
+ */
+.frame-fitness-energy,
+.frame-fitness-match-load-medium,
+.frame-fitness-training-loads {
+  width: 100%;
+  height: 100%;
+  padding: 12px;
+  border-width: 1px;
+  border-color: var(--skin-border-subtle);
+  flex-grow: 1;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  flex-shrink: 0;
+  border-radius: var(--skin-radius-card);
+}
+
+/* Frame fitness injury risk no injury.
+ * sets the outline/corner shape; controls size/placement; sets spacing around/inside the element.
+ * Shared rule for 4 selectors. Editing a declaration here affects the whole group below.
+ * Source rule 2248.
+ */
+.frame-fitness-injury-risk-no-injury,
+.frame-fitness-injury-susceptibility,
+.frame-fitness-injury-risk,
+.frame-tactics-intensity {
+  width: 100%;
+  height: 100%;
+  padding: var(--spacing-tiles);
+  border-width: 1px;
+  border-color: var(--skin-border-subtle);
+  flex-grow: 1;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  flex-shrink: 0;
+  border-radius: var(--spacing-tiles);
+}
+
+/* Frame fitness injury risks injured.
+ * sets the outline/corner shape; controls size/placement; sets spacing around/inside the element.
+ * Source rule 2249.
+ */
+.frame-fitness-injury-risks-injured {
+  width: 312px;
+  height: 312px;
+  padding: 12px;
+  border-width: 1px;
+  border-color: var(--skin-border-subtle);
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-shrink: 0;
+  border-radius: var(--skin-radius-card);
+}
+
+/* Frame generic with padding.
+ * sets the background fill; sets the outline/corner shape; sets spacing around/inside the element.
+ * Shared rule for 2 selectors. Editing a declaration here affects the whole group below.
+ * Source rule 2250.
+ */
+.frame-generic-with-padding,
+.frame-generic-with-padding-12px-border-8px {
+  padding: 12px;
+  border-width: var(--layout-modules-block-border-thickness);
+  border-color: var(--skin-border-subtle);
+  background-color: var(--skin-surface-panel);
+  border-radius: var(--layout-modules-block-radius);
+}
+
+/* Frame generic with padding 16px border 8px.
+ * sets the background fill; sets the outline/corner shape; controls size/placement; sets spacing
+ * around/inside the element.
+ * Uses the shared control radius so generic frames follow the skin-wide shape scale.
+ * Source rule 2251.
+ */
+.frame-generic-with-padding-16px-border-8px {
+  padding: 16px;
+  background-color: var(--skin-on-media-alpha-08);
+  border-radius: var(--skin-radius-control);
+  justify-content: center;
+  align-items: center;
+}
+
+/* Frame inner team squad.
+ * Shows these elements; controls size/placement; sets spacing around/inside the element.
+ * Source rule 2252.
+ */
+.frame-inner-team-squad {
+  display: flex;
+  margin: 0 16px 16px 16px;
+  padding: 16px;
+  flex-direction: column;
+  align-items: flex-start;
+  align-self: stretch;
+}
+
+/* Frame medical centre season summary standard.
+ * sets the background fill; sets the outline/corner shape; controls size/placement; sets spacing
+ * around/inside the element.
+ * Source rule 2253.
+ */
+.frame-medical-centre-season-summary-standard {
+  padding: 16px 12px;
+  border-width: var(--layout-modules-block-border-thickness);
+  border-color: var(--skin-border-subtle);
+  background-color: var(--skin-surface-panel);
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-shrink: 0;
+  border-radius: var(--layout-modules-block-radius);
+}
+
+/* Frame offer made banner.
+ * sets the outline/corner shape; controls size/placement; sets spacing around/inside the element; sets the
+ * gradient colours drawn by this component.
+ * Source rule 2254.
+ */
+.frame-offer-made-banner {
+  height: 48px;
+  padding: var(--padding-padding-12);
+  border-width: var(--global-border-width-regular);
+  border-color: var(--skin-component-frame-offer-made-banner-border-color);
+  --start-colour: var(--skin-component-frame-offer-made-banner-start-colour);
+  --end-colour: var(--skin-component-frame-offer-made-banner-end-colour);
+  border-radius: var(--global-radius-regular) var(--global-radius-regular) 0 0;
+}
+
+/* Frame panel squad.
+ * sets the background fill; sets the outline/corner shape; controls size/placement; sets spacing
+ * around/inside the element.
+ * Source rule 2255.
+ */
+.frame-panel-squad {
+  padding: 12px;
+  border-width: var(--layout-modules-block-border-thickness);
+  border-color: var(--skin-border-subtle);
+  background-color: var(--skin-surface-panel);
+  flex-direction: column;
+  align-items: flex-end;
+  flex-shrink: 0;
+  border-radius: var(--layout-modules-block-radius);
+}
+
+/* Frame set piece responsibility.
+ * sets the outline/corner shape; controls size/placement.
+ * Source rule 2256.
+ */
+.frame-set-piece-responsibility {
+  align-items: center;
+  align-self: stretch;
+  border-radius: var(--global-radius-regular);
+  flex-direction: var(--row-direction-normal);
+}
+
+/* Frame size small.
+ * sets the outline/corner shape; controls size/placement.
+ * Source rule 2257.
+ */
+.frame-size-small {
+  align-items: flex-start;
+  flex: 1 0 0;
+  border-radius: var(--global-radius-regular);
+  flex-direction: var(--row-direction-normal);
+}
+
+/* Frame states about average points property 1 empty.
+ * sets the outline/corner shape; controls size/placement; sets spacing around/inside the element.
+ * Source rule 2258.
+ */
+.frame-states-about_average-points-property-1-empty {
+  padding: var(--spacing-padding-tiles);
+  border-width: 1px;
+  border-color: var(--skin-border-subtle);
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  border-radius: var(--global-radius-regular);
+}
+
+/* Frame states about draft history template table.
+ * sets the outline/corner shape; controls size/placement; sets spacing around/inside the element.
+ * Shared rule for 4 selectors. Editing a declaration here affects the whole group below.
+ * Source rule 2259.
+ */
+.frame-states-about_draft-history-template-table,
+.frame-states-manager_movements-template-empty-state,
+.frame-states-manager_movements-template-table,
+.frame-states-stats_injury-list-template-empty-state {
+  height: 100%;
+  padding: var(--spacing-padding-tiles);
+  border-width: 1px;
+  border-color: var(--skin-border-subtle);
+  flex-direction: column;
+  align-items: flex-start;
+  flex-shrink: 0;
+  border-radius: var(--global-radius-regular);
+}
+
+/* Frame states about past winners template empty state.
+ * sets the background fill; sets the outline/corner shape; controls size/placement; sets spacing
+ * around/inside the element.
+ * Source rule 2260.
+ */
+.frame-states-about_past-winners-template-empty-state {
+  width: 968px;
+  height: 592px;
+  padding: var(--spacing-padding-tiles);
+  border-width: var(--layout-modules-block-border-thickness);
+  border-color: var(--skin-border-subtle);
+  background-color: var(--skin-surface-panel);
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  flex-shrink: 0;
+  border-radius: var(--layout-modules-block-radius);
+}
+
+/* Frame states about past winners template empty state fmc.
+ * sets the background fill; sets the outline/corner shape; controls size/placement; sets spacing
+ * around/inside the element.
+ * Source rule 2261.
+ */
+.frame-states-about_past-winners-template-empty-state-fmc {
+  padding: var(--spacing-padding-tiles);
+  border-width: var(--layout-modules-block-border-thickness);
+  border-color: var(--skin-border-subtle);
+  background-color: var(--skin-surface-panel);
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  flex-shrink: 0;
+  border-radius: var(--layout-modules-block-radius);
+}
+
+/* Frame states advanced settings.
+ * sets the background fill; sets the outline/corner shape; controls size/placement; sets spacing
+ * around/inside the element.
+ * Source rule 2262.
+ */
+.frame-states-advanced-settings {
+  padding: var(--spacing-padding-tiles);
+  border-width: var(--layout-modules-block-border-thickness);
+  border-color: var(--skin-border-subtle);
+  background-color: var(--skin-surface-panel);
+  flex-direction: column;
+  align-items: flex-start;
+  border-radius: var(--layout-modules-block-radius);
+}
+
+/* Frame states affiliates property 1 default.
+ * sets the background fill; sets the outline/corner shape; controls size/placement; sets spacing
+ * around/inside the element.
+ * Source rule 2263.
+ */
+.frame-states-affiliates-property-1-default {
+  padding: 12px;
+  border-width: var(--layout-modules-block-border-thickness);
+  border-color: var(--skin-border-subtle);
+  background-color: var(--skin-surface-panel);
+  flex-direction: column;
+  align-items: flex-start;
+  flex-shrink: 0;
+  border-radius: var(--layout-modules-block-radius);
+}
+
+/* Frame states analysis block states advanced.
+ * sets the background fill; sets the outline/corner shape; controls size/placement; sets spacing
+ * around/inside the element.
+ * Source rule 2264.
+ */
+.frame-states-analysis-block-states-advanced {
+  width: 312px;
+  padding: var(--spacing-padding-tiles);
+  border-width: var(--layout-modules-block-border-thickness);
+  border-color: var(--skin-border-subtle);
+  background-color: var(--skin-surface-panel);
+  flex-direction: column;
+  align-items: flex-start;
+  border-radius: var(--layout-modules-block-radius);
+}
+
+/* Frame states coaching qualifications template frame states property 2 coaching qualifications.
+ * sets the background fill; sets the outline/corner shape; controls size/placement; sets spacing
+ * around/inside the element.
+ * Source rule 2265.
+ */
+.frame-states-coaching_qualifications-template-frame-states-property-2-coaching_qualifications {
+  height: 100%;
+  padding: 16px;
+  border-width: var(--layout-modules-block-border-thickness);
+  border-color: var(--skin-border-subtle);
+  background-color: var(--skin-surface-panel);
+  flex-direction: column;
+  align-items: flex-start;
+  flex-shrink: 0;
+  border-radius: var(--layout-modules-block-radius);
+}
+
+/* Frame states competitions template empty.
+ * sets the background fill; sets the outline/corner shape; controls size/placement; sets spacing
+ * around/inside the element.
+ * Source rule 2266.
+ */
+.frame-states-competitions-template-empty {
+  padding: var(--spacing-padding-tiles);
+  border-width: var(--layout-modules-block-border-thickness);
+  border-color: var(--skin-border-subtle);
+  background-color: var(--skin-surface-panel);
+  flex-direction: column;
+  align-items: center;
+  flex-shrink: 0;
+  border-radius: var(--layout-modules-block-radius);
+}
+
+/* Frame states data analysis zone map template defensive actions.
+ * sets the outline/corner shape; controls size/placement; sets spacing around/inside the element.
+ * Shared rule for 3 selectors. Editing a declaration here affects the whole group below.
+ * Source rule 2267.
+ */
+.frame-states-data-analysis-zone-map-template-defensive-actions,
+.frame-states-data-analysis-zone-map-template-set-piece-first-contacts,
+.frame-states-xg-graph-template-empty {
+  width: 640px;
+  height: 476px;
+  padding: var(--spacing-padding-tiles);
+  border-width: 1px;
+  border-color: var(--skin-border-subtle);
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  border-radius: var(--global-radius-regular);
+}
+
+/* Frame states data analysis zone map template defensive actions 4 col.
+ * sets the outline/corner shape; controls size/placement; sets spacing around/inside the element.
+ * Source rule 2268.
+ */
+.frame-states-data-analysis-zone-map-template-defensive-actions-4-col {
+  width: 640px;
+  height: 640px;
+  border-width: 1px;
+  border-color: var(--skin-border-subtle);
+  padding-top: var(--global-padding-large);
+  padding-right: var(--global-padding-large);
+  padding-bottom: var(--global-padding-large);
+  padding-left: var(--global-padding-large);
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  border-radius: var(--global-radius-regular);
+}
+
+/* Frame states data analysis zone map template defensive actions 6 col.
+ * sets the outline/corner shape; controls size/placement; sets spacing around/inside the element.
+ * Shared rule for 2 selectors. Editing a declaration here affects the whole group below.
+ * Source rule 2269.
+ */
+.frame-states-data-analysis-zone-map-template-defensive-actions-6-col,
+.frame-states-data-analysis-zone-map-template-set-piece-first-contacts-6-col {
+  width: 968px;
+  height: 640px;
+  border-width: 1px;
+  border-color: var(--skin-border-subtle);
+  padding-top: var(--global-padding-large);
+  padding-right: var(--global-padding-large);
+  padding-bottom: var(--global-padding-large);
+  padding-left: var(--global-padding-large);
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  border-radius: var(--global-radius-regular);
+}
+
+/* Frame states finances wages tab default.
+ * sets the outline/corner shape; controls size/placement; sets spacing around/inside the element.
+ * Source rule 2270.
+ */
+.frame-states-finances_wages-tab-default {
+  width: 640px;
+  padding: var(--spacing-padding-tiles);
+  border-width: 1px;
+  border-color: var(--skin-border-subtle);
+  flex-direction: column;
+  align-items: flex-start;
+  border-radius: var(--global-radius-regular);
+}
+
+/* Frame states FM menu load game template choose picture.
+ * sets the outline/corner shape; controls size/placement; sets spacing around/inside the element.
+ * Source rule 2271.
+ */
+.frame-states-fm-menu_load-game-template-choose-picture {
+  flex-direction: column;
+  flex: 1 0 0;
+  align-self: stretch;
+  align-items: stretch;
+  border-radius: var(--global-radius-regular);
+  padding-left: var(--spacing-padding-medium---16);
+  padding-right: var(--spacing-padding-medium---16);
+  padding-bottom: var(--spacing-padding-medium---16);
+}
+
+/* Frame states FM menu load game template choose picture middle block.
+ * sets the background fill; sets the outline/corner shape; controls size/placement; sets spacing
+ * around/inside the element.
+ * Source rule 2272.
+ */
+.frame-states-fm-menu_load-game-template-choose-picture-middle-block {
+  height: 560px;
+  padding: var(--spacing-padding-tiles);
+  border-width: var(--layout-modules-block-border-thickness);
+  border-color: var(--skin-border-subtle);
+  background-color: var(--skin-surface-panel);
+  align-items: stretch;
+  align-self: stretch;
+  border-radius: var(--layout-modules-block-radius);
+}
+
+/* Frame states FM menu privacy policies template tab.
+ * sets the outline/corner shape; controls size/placement; sets spacing around/inside the element.
+ * Source rule 2273.
+ */
+.frame-states-fm-menu_privacy-policies-template-tab {
+  width: 968px;
+  padding: 12px;
+  border-width: 1px;
+  border-color: var(--skin-border-subtle);
+  flex-direction: column;
+  align-items: var(--flex-start-normal);
+  flex: 1 0 0;
+  border-radius: var(--global-radius-regular);
+}
+
+/* Frame states full screen team talk template given.
+ * sets the background fill; sets the outline/corner shape; controls size/placement; sets spacing
+ * around/inside the element.
+ * Source rule 2274.
+ */
+.frame-states-full-screen-team-talk-template-given {
+  padding: 12px;
+  border-width: var(--layout-modules-block-border-thickness);
+  border-color: var(--skin-border-subtle);
+  background-color: var(--skin-surface-panel);
+  justify-content: center;
+  flex-shrink: 0;
+  border-radius: var(--layout-modules-block-radius);
+}
+
+/* Frame states hi res property 1 coach assignments property 2 high res property 3 row selected.
+ * sets the background fill; sets the outline/corner shape; controls size/placement; sets spacing
+ * around/inside the element.
+ * Source rule 2275.
+ */
+.frame-states-hi-res-property-1-coach-assignments-property-2-high-res-property-3-row-selected {
+  padding: 16px;
+  border-width: var(--layout-modules-block-border-thickness);
+  border-color: var(--skin-border-subtle);
+  background-color: var(--skin-surface-panel);
+  flex-direction: column;
+  align-items: flex-start;
+  flex-shrink: 0;
+  border-radius: var(--layout-modules-block-radius);
+}
+
+/* Frame states history template table.
+ * sets the outline/corner shape; controls size/placement; sets spacing around/inside the element.
+ * Source rule 2276.
+ */
+.frame-states-history-template-table {
+  padding: var(--spacing-padding-tiles);
+  border-width: 1px;
+  border-color: var(--skin-border-subtle);
+  flex-direction: column;
+  align-items: flex-start;
+  flex-shrink: 0;
+  border-radius: var(--global-radius-regular);
+}
+
+/* Frame states interested clubs size hi res.
+ * sets the background fill; sets the outline/corner shape; controls size/placement; sets spacing
+ * around/inside the element.
+ * Source rule 2277.
+ */
+.frame-states-interested-clubs-size-hi-res {
+  padding: var(--spacing-padding-tiles);
+  border-width: var(--layout-modules-block-border-thickness);
+  border-color: var(--skin-border-subtle);
+  background-color: var(--skin-surface-panel);
+  flex-direction: column;
+  align-items: var(--flex-start-normal);
+  flex: 1 0 0;
+  align-self: stretch;
+  border-radius: var(--layout-modules-block-radius);
+}
+
+/* Frame states invite friends filled.
+ * controls size/placement.
+ * Source rule 2278.
+ */
+.frame-states-invite-friends-filled {
+  width: 500px;
+  flex-direction: column;
+  align-items: flex-start;
+  flex: 1 0 0;
+}
+
+/* Frame states league table stages template league table.
+ * sets the outline/corner shape; controls size/placement; sets spacing around/inside the element.
+ * Source rule 2279.
+ */
+.frame-states-league-table_stages-template-league-table {
+  width: 968px;
+  height: 568px;
+  padding: 12px;
+  border-width: 1px;
+  border-color: var(--skin-border-subtle);
+  flex-direction: column;
+  align-items: flex-start;
+  flex-shrink: 0;
+  border-radius: var(--global-radius-regular);
+}
+
+/* Frame states match momentum template default.
+ * sets the outline/corner shape; controls size/placement; sets spacing around/inside the element.
+ * Source rule 2280.
+ */
+.frame-states-match-momentum-template-default {
+  width: 640px;
+  height: 640px;
+  padding: var(--spacing-padding-tiles);
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  border-radius: var(--global-radius-regular);
+}
+
+/* Frame states opinions template table.
+ * sets the outline/corner shape; controls size/placement; sets spacing around/inside the element.
+ * Source rule 2281.
+ */
+.frame-states-opinions-template-table {
+  padding: var(--spacing-tiles);
+  border-width: 1px;
+  border-color: var(--skin-border-subtle);
+  align-items: flex-start;
+  flex: 1 0 0;
+  align-self: stretch;
+  border-radius: var(--global-radius-regular);
+  flex-direction: var(--row-direction-normal);
+}
+
+/* Frame states property 1 season preview property 2 dream eleven property 3 max res.
+ * sets the background fill; sets the outline/corner shape; controls size/placement; sets spacing
+ * around/inside the element.
+ * Source rule 2282.
+ */
+.frame-states-property-1-season_preview-property-2-dream-eleven-property-3-max-res {
+  width: 799px;
+  border-width: 1px;
+  border-color: var(--global-border-width-regular);
+  background-color: var(--skin-on-media-alpha-08);
+  padding-top: 12px;
+  padding-right: 12px;
+  padding-bottom: 12px;
+  padding-left: 12px;
+  align-items: flex-start;
+  border-radius: var(--global-radius-regular);
+  flex-direction: var(--row-direction-normal);
+}
+
+/* Frame states property 1 season preview property 2 ins and outs property 3 max res.
+ * sets the background fill; sets the outline/corner shape; controls size/placement; sets spacing
+ * around/inside the element.
+ * Shared rule for 4 selectors. Editing a declaration here affects the whole group below.
+ * Source rule 2283.
+ */
+.frame-states-property-1-season_preview-property-2-ins-and-outs-property-3-max-res,
+.frames-frame-states-season_preview-key-personnel,
+.frames-frame-states-season_preview-key-players,
+.frames-frame-states-season_preview-transfer-spend {
+  border-width: var(--layout-modules-block-border-thickness);
+  border-color: var(--skin-border-subtle);
+  background-color: var(--skin-surface-panel);
+  padding-top: 12px;
+  padding-right: 12px;
+  padding-bottom: 12px;
+  padding-left: 12px;
+  flex-direction: column;
+  align-items: flex-start;
+  border-radius: var(--layout-modules-block-radius);
+}
+
+/* Frame states radar polygon graph template 4 col.
+ * sets the outline/corner shape; controls size/placement; sets spacing around/inside the element.
+ * Source rule 2284.
+ */
+.frame-states-radar-polygon-graph-template-4-col {
+  width: 640px;
+  height: 640px;
+  padding-top: var(--global-padding-large);
+  padding-right: 0;
+  padding-bottom: var(--global-padding-large);
+  padding-left: 0;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  border-radius: var(--global-radius-regular);
+}
+
+/* Frame states radar polygon graph template template3.
+ * sets the outline/corner shape; controls size/placement; sets spacing around/inside the element.
+ * Source rule 2285.
+ */
+.frame-states-radar-polygon-graph-template-template3 {
+  width: 968px;
+  height: 640px;
+  padding-top: var(--global-padding-large);
+  padding-right: 0;
+  padding-bottom: var(--global-padding-large);
+  padding-left: 0;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  border-radius: var(--global-radius-regular);
+}
+
+/* Frame states scatter graph template players 6 col.
+ * sets the outline/corner shape; controls size/placement; sets spacing around/inside the element.
+ * Source rule 2286.
+ */
+.frame-states-scatter-graph-template-players-6-col {
+  width: 968px;
+  height: 640px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  border-radius: var(--global-radius-regular);
+  margin-bottom: 0;
+}
+
+/* Frame states scatter graph template template5.
+ * sets the outline/corner shape; controls size/placement.
+ * Source rule 2287.
+ */
+.frame-states-scatter-graph-template-template5 {
+  width: 640px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: var(--global-radius-regular);
+}
+
+/* Frame states stats suspensions template table.
+ * Ordinary report chrome uses shared card roles; suspension data retains its
+ * native table, status colours and spacing.
+ * Source rule 2288.
+ */
+.frame-states-stats_suspensions-template-table {
+  padding: var(--spacing-tiles);
+  border-width: var(--skin-card-border-width);
+  border-color: var(--skin-card-border-colour);
+  flex-direction: column;
+  align-items: flex-start;
+  border-radius: var(--skin-radius-card);
+}
+
+/* Frame states transfer information.
+ * sets the background fill; sets the outline/corner shape; controls size/placement; sets spacing
+ * around/inside the element.
+ * Source rule 2289.
+ */
+.frame-states-transfer-information {
+  width: auto;
+  padding: var(--global-padding-none);
+  border-width: var(--layout-modules-block-border-thickness);
+  border-color: var(--skin-border-subtle);
+  background-color: var(--skin-surface-panel);
+  flex-direction: column;
+  flex-grow: 1;
+  align-items: var(--flex-start-normal);
+  border-radius: var(--layout-modules-block-radius);
+  overflow: hidden;
+}
+
+/* Frame states transfer information states mls size hi res.
+ * sets the background fill; sets the outline/corner shape; controls size/placement; sets spacing
+ * around/inside the element.
+ * Source rule 2290.
+ */
+.frame-states-transfer-information-states-mls-size-hi-res {
+  width: 968px;
+  padding: var(--spacing-padding-tiles);
+  border-width: var(--layout-modules-block-border-thickness);
+  border-color: var(--skin-border-subtle);
+  background-color: var(--skin-surface-panel);
+  flex-direction: column;
+  align-items: var(--flex-start-normal);
+  border-radius: var(--layout-modules-block-radius);
+}
+
+/* Frame states transfer window report large template filled.
+ * sets the outline/corner shape; controls size/placement.
+ * Source rule 2291.
+ */
+.frame-states-transfer-window_report-large-template-filled {
+  width: 100%;
+  height: 100%;
+  border-width: 1px;
+  align-items: flex-start;
+  flex-shrink: 0;
+  border-radius: var(--global-radius-regular);
+}
+
+/* Frame states transfer window report small template filled.
+ * sets the background fill; sets the outline/corner shape; controls size/placement.
+ * Source rule 2292.
+ */
+.frame-states-transfer-window_report-small-template-filled {
+  width: 100%;
+  height: 100%;
+  border-width: var(--layout-modules-block-border-thickness);
+  border-color: var(--skin-border-subtle);
+  background-color: var(--skin-surface-panel);
+  flex-direction: column;
+  align-items: flex-start;
+  flex-shrink: 0;
+  border-radius: var(--layout-modules-block-radius);
+}
+
+/* Frame states transfer window report standard template filled.
+ * sets the outline/corner shape; controls size/placement.
+ * Source rule 2293.
+ */
+.frame-states-transfer-window_report-standard-template-filled {
+  width: 100%;
+  height: 100%;
+  border-width: 1px;
+  flex-direction: column;
+  align-items: flex-start;
+  flex-shrink: 0;
+  border-radius: var(--global-radius-regular);
+}
+
+/* Frame states transfer window transfers template empty.
+ * sets the background fill; sets the outline/corner shape; controls size/placement; sets spacing
+ * around/inside the element.
+ * Source rule 2294.
+ */
+.frame-states-transfer-window_transfers-template-empty {
+  padding: 12px;
+  border-width: var(--layout-modules-block-border-thickness);
+  border-color: var(--skin-border-subtle);
+  background-color: var(--skin-surface-panel);
+  border-radius: var(--layout-modules-block-radius);
+  flex-grow: 1;
+}
+
+/* Frame states xg graph template 6 col.
+ * sets the outline/corner shape; controls size/placement.
+ * Shared rule for 2 selectors. Editing a declaration here affects the whole group below.
+ * Source rule 2295.
+ */
+.frame-states-xg-graph-template-6-col,
+.frame-states-match-momentum-template-template3 {
+  width: 100%;
+  height: 100%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  border-radius: var(--global-radius-regular);
+}
+
+/* Expanded xG reports sit inside a floating card. Their native attribute-frame
+ * utility adds a second outline and canvas backing; use ordinary report roles
+ * while leaving the plot's own contrasting surface and team series intact. */
+.frame-states-xg-graph-template-6-col #frames-attributes-full-frame-min-res {
+  border-width: var(--skin-card-border-width);
+  border-color: var(--skin-card-border-colour);
+}
+.frame-states-xg-graph-template-6-col .background-color-global-sink-surface-strong {
+  background-color: var(--skin-report-chart-surface);
+}
+
+/* Frame states xg table template 6 col.
+ * sets the outline/corner shape; controls size/placement; sets spacing around/inside the element.
+ * Source rule 2296.
+ */
+.frame-states-xg-table-template-6-col {
+  width: 968px;
+  height: 640px;
+  padding: var(--global-padding-large);
+  border-width: 1px;
+  border-color: var(--skin-border-subtle);
+  flex-direction: column;
+  align-items: flex-start;
+  flex-shrink: 0;
+  border-radius: var(--global-radius-regular);
+}
+
+/* Frame tactics nav menu.
+ * sets the outline/corner shape; controls size/placement; sets spacing around/inside the element.
+ * Source rule 2297.
+ */
+.frame-tactics-nav-menu {
+  height: 89px;
+  border-width: var(--skin-tactics-border-width);
+  border-color: var(--skin-data-frame-tactics-nav-menu-border-color);
+  flex-direction: column;
+  align-items: flex-start;
+  align-self: stretch;
+  border-radius: var(--skin-radius-control);
+  margin-bottom: var(--spacing-padding-tiles);
+}
+
+/* Frame tactics nav menu group box.
+ * sets spacing around/inside the element.
+ * Source rule 2298.
+ */
+.frame-tactics-nav-menu-group-box {
+  margin-left: 0;
+  margin-top: 0;
+  margin-right: 0;
+  margin-bottom: 0;
+  padding-left: 0;
+  padding-top: 0;
+  padding-right: 0;
+  padding-bottom: 0;
+}
+
+/* Frame work permits card.
+ * sets the background fill; sets the outline/corner shape; controls size/placement; sets spacing
+ * around/inside the element.
+ * Source rule 2299.
+ */
+.frame-work-permits-card {
+  padding: var(--spacing-tiles);
+  border-width: 1px;
+  border-color: var(--skin-border-subtle);
+  background-color: var(--skin-surface-panel);
+  flex-direction: column;
+  align-items: flex-start;
+  flex-shrink: 0;
+  flex-grow: 1;
+  border-radius: var(--skin-radius-card);
+}
+
+/* Frames agreement blocks.
+ * sets the background fill; sets the outline/corner shape; controls size/placement; sets spacing
+ * around/inside the element.
+ * Source rule 2300.
+ */
+.frames-agreement-blocks {
+  padding: var(--spacing-padding-medium---16);
+  border-width: var(--layout-modules-block-border-thickness);
+  border-color: var(--skin-border-subtle);
+  background-color: var(--skin-surface-panel);
+  flex-direction: column;
+  align-items: flex-start;
+  flex-shrink: 0;
+  border-radius: var(--layout-modules-block-radius);
+}
+
+/* Frames biography summary state9.
+ * sets the background fill; sets the outline/corner shape; controls size/placement; sets spacing
+ * around/inside the element.
+ * Source rule 2301.
+ */
+.frames-biography-summary-state9 {
+  padding: 24px;
+  border-width: var(--layout-modules-block-border-thickness);
+  border-color: var(--skin-border-subtle);
+  background-color: var(--skin-surface-panel);
+  flex-direction: var(--row-direction-normal);
+  align-items: flex-start;
+  flex-shrink: 0;
+  border-radius: var(--layout-modules-block-radius);
+}
+
+/* Frames cards yellow warning.
+ * sets the background fill; sets the outline/corner shape; controls size/placement; sets spacing
+ * around/inside the element.
+ * Source rule 2302.
+ */
+.frames-cards-yellow-warning {
+  padding: 12px;
+  border-width: var(--layout-modules-block-border-thickness);
+  border-color: var(--skin-border-subtle);
+  background-color: var(--skin-surface-panel);
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-shrink: 0;
+  border-radius: var(--layout-modules-block-radius);
+}
+
+/* Frames clauses competition bonus property 1 complete selection southampton.
+ * Shows these elements; sets the outline/corner shape; sets spacing around/inside the element.
+ * Source rule 2303.
+ */
+/* Reused by instalment, bonus, appearance and buy-back reports. These are
+ * inline information cards, so use card depth/edge roles rather than dialog edges. */
+.frames-clauses-competition-bonus-property-1-complete-selection-southampton {
+  display: flex;
+  padding: 16px 16px 16px 16px;
+  border-width: var(--skin-card-border-width);
+  border-color: var(--skin-card-border-colour);
+  border-radius: var(--skin-radius-card);
+  background-color: var(--skin-surface-raised);
+}
+
+/* Frames clauses player type money in.
+ * controls size/placement; sets spacing around/inside the element.
+ * Source rule 2304.
+ */
+.frames-clauses-player-type-money-in {
+  padding-top: 36px;
+  flex-direction: column;
+  align-items: flex-start;
+  flex: 1 0 0;
+}
+
+/* Frames confirm numbers.
+ * controls size/placement.
+ * Source rule 2305.
+ */
+.frames-confirm-numbers {
+  height: 32px;
+  justify-content: flex-end;
+  align-items: flex-end;
+  flex-shrink: 0;
+  align-self: stretch;
+  flex-direction: var(--row-direction-normal);
+}
+
+/* Frames contract negotiations contract terms.
+ * controls size/placement; sets spacing around/inside the element.
+ * Source rule 2306.
+ */
+.frames-contract-negotiations-contract-terms {
+  padding: 12px;
+  flex-direction: column;
+}
+
+/* Frames contract negotiations contract terms property 1 preliminary.
+ * controls size/placement.
+ * Source rule 2307.
+ */
+.frames-contract-negotiations-contract-terms-property-1-preliminary {
+  align-items: flex-start;
+  flex-grow: 1;
+}
+
+/* Frames contract terms fill no boxes 2 icon yes lock yes bin no.
+ * sets the outline/corner shape; controls size/placement; sets spacing around/inside the element.
+ * Source rule 2308.
+ */
+.frames-contract-terms-fill-no-boxes-2-icon-yes-lock-yes-bin-no {
+  height: 38px;
+  padding: 0 12px;
+  align-items: center;
+  border-radius: var(--skin-radius-micro);
+  flex-direction: var(--row-direction-normal);
+  padding-top: 0;
+  padding-right: 12px;
+  padding-bottom: 0;
+  padding-left: 0;
+  margin-bottom: 12px;
+  border-top-left-radius: var(--skin-radius-small);
+  border-top-right-radius: var(--skin-radius-small);
+  border-bottom-right-radius: var(--skin-radius-small);
+  border-bottom-left-radius: var(--skin-radius-small);
+}
+
+/* Frames contract terms fill yes boxes 1 icon yes lock no bin no.
+ * sets the background fill; sets the outline/corner shape; controls size/placement; sets spacing
+ * around/inside the element.
+ * Source rule 2309.
+ */
+.frames-contract-terms-fill-yes-boxes-1-icon-yes-lock-no-bin-no {
+  background-color: var(--skin-component-frames-contract-terms-fill-yes-boxes-1-icon-yes-lock-no-bin-no-background);
+  min-height: 38px;
+  padding-right: 12px;
+  align-items: center;
+  border-radius: var(--skin-radius-micro);
+  flex-direction: var(--row-direction-normal);
+}
+
+/* Frames custom portal contract offer info incoming.
+ * controls size/placement.
+ * Source rule 2310.
+ */
+.frames-custom-portal-contract-offer-info-incoming {
+  width: 608px;
+  min-height: 420px;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+/* Frames custom portal domestic round up message max property 1 national manager.
+ * sets the background fill; sets the outline/corner shape; controls size/placement.
+ * Source rule 2311.
+ */
+.frames-custom-portal-domestic-round-up-message-max-property-1-national-manager {
+  border-width: var(--layout-modules-block-border-thickness);
+  border-color: var(--skin-border-subtle);
+  background-color: var(--skin-surface-panel);
+  flex-grow: 1;
+  align-self: stretch;
+  flex-direction: column;
+  align-items: flex-start;
+  border-radius: var(--layout-modules-block-radius);
+}
+
+/* Frames custom portal players with valid mls rights scout report.
+ * sets the background fill; sets the outline/corner shape; controls size/placement; sets spacing
+ * around/inside the element.
+ * Source rule 2312.
+ */
+.frames-custom-portal-players-with-valid-mls-rights-scout-report {
+  padding: var(--spacing-padding-medium---16);
+  border-width: var(--layout-modules-block-border-thickness);
+  border-color: var(--skin-border-subtle);
+  background-color: var(--skin-surface-panel);
+  align-items: flex-start;
+  flex: 1 0 0;
+  border-radius: var(--layout-modules-block-radius);
+  flex-direction: var(--row-direction-normal);
+}
+
+/* Frames custom portal scouting focus suggestion scout report.
+ * controls size/placement.
+ * Source rule 2313.
+ */
+.frames-custom-portal-scouting-focus-suggestion-scout-report {
+  width: 608px;
+  height: 444px;
+  align-items: flex-start;
+  flex-shrink: 0;
+  flex-direction: var(--row-direction-normal);
+}
+
+/* Frames feedback board.
+ * sets the outline/corner shape; controls size/placement; sets spacing around/inside the element.
+ * Source rule 2314.
+ */
+.frames-feedback-board {
+  padding: var(--spacing-medium---16);
+  border-width: 1px;
+  border-color: var(--skin-border-subtle);
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  align-self: stretch;
+  border-radius: var(--spacing-tiles);
+}
+
+/* Frames finance graph property.
+ * sets the outline/corner shape; controls size/placement; sets spacing around/inside the element.
+ * Shared rule for 2 selectors. Editing a declaration here affects the whole group below.
+ * Source rule 2315.
+ */
+.frames-finance-graph-property,
+.frames-transfer-budget-graph-full {
+  width: 100%;
+  height: 100%;
+  padding: var(--spacing-padding-medium---16);
+  border-width: var(--skin-card-border-width);
+  border-color: var(--skin-card-border-colour);
+  flex-direction: column;
+  align-items: flex-start;
+  border-radius: var(--global-radius-regular);
+}
+
+/* Frames fitness summary states fully fit.
+ * sets the outline/corner shape; controls size/placement; sets spacing around/inside the element.
+ * Source rule 2316.
+ */
+.frames-fitness-summary-states-fully-fit {
+  padding: 32px;
+  border-width: var(--skin-card-border-width);
+  border-color: var(--skin-card-border-colour);
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  border-radius: var(--skin-radius-card);
+}
+
+/* Frames frame.
+ * controls size/placement; sets spacing around/inside the element.
+ * Source rule 2317.
+ */
+.frames-frame {
+  width: 944px;
+  padding: var(--spacing-padding-small---8) var(--spacing-padding-medium---16);
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 8px;
+}
+
+/* Frames frame principles affinity.
+ * sets the background fill; sets the outline/corner shape; controls size/placement; sets spacing
+ * around/inside the element.
+ * Source rule 2318.
+ */
+.frames-frame-principles_affinity {
+  width: 595.931px;
+  height: 159px;
+  padding: var(--spacing-padding-medium---16);
+  border-width: var(--layout-modules-block-border-thickness);
+  border-color: var(--skin-border-subtle);
+  background-color: var(--skin-surface-panel);
+  justify-content: center;
+  align-items: flex-start;
+  border-radius: var(--layout-modules-block-radius);
+  flex-direction: var(--row-direction-normal);
+}
+
+/* Frames frame principles information.
+ * sets the background fill; sets the outline/corner shape; controls size/placement; sets spacing
+ * around/inside the element.
+ * Source rule 2319.
+ */
+.frames-frame-principles_information {
+  padding: var(--spacing-padding-medium---16);
+  border-width: var(--layout-modules-block-border-thickness);
+  border-color: var(--skin-border-subtle);
+  background-color: var(--skin-surface-panel);
+  flex-direction: column;
+  align-items: flex-start;
+  flex: 1 0 0;
+  align-self: stretch;
+  border-radius: var(--layout-modules-block-radius);
+}
+
+/* Frames frame principles selection.
+ * sets the background fill; sets the outline/corner shape; controls size/placement; sets spacing
+ * around/inside the element.
+ * Source rule 2320.
+ */
+.frames-frame-principles_selection {
+  padding: var(--spacing-padding-medium---16);
+  border-width: var(--layout-modules-block-border-thickness);
+  border-color: var(--skin-border-subtle);
+  background-color: var(--skin-surface-panel);
+  flex-direction: column;
+  align-items: center;
+  flex: 1 0 0;
+  align-self: stretch;
+  border-radius: var(--layout-modules-block-radius);
+}
+
+/* Frames frame transfer offer budget footer.
+ * controls size/placement.
+ * Source rule 2321.
+ */
+.frames-frame-transfer-offer-budget-footer {
+  height: 114px;
+  min-height: 114px;
+  max-height: 114px;
+}
+
+/* Frames frame transfer offer player header.
+ * sets the background fill; sets the outline/corner shape; controls size/placement; sets spacing
+ * around/inside the element.
+ * Source rule 2322.
+ */
+.frames-frame-transfer-offer-player-header {
+  padding: var(--spacing-padding-small---8);
+  border-width: 1px;
+  background-color: var(--layout-ui-cell-transfer-offer-player-header-background);
+  flex-direction: var(--row-direction-normal);
+  align-self: stretch;
+  border-radius: var(--numbers-border-radius-small);
+}
+
+/* Frames frame transfer offer tabgroup.
+ * sets spacing around/inside the element.
+ * Source rule 2323.
+ */
+.frames-frame-transfer-offer-tabgroup {
+  padding: var(--global-padding-large) var(--global-padding-extra-large);
+}
+
+/* Frames frames contract negotiations salary cap adjustments.
+ * sets the background fill; sets the outline/corner shape; controls size/placement; sets spacing
+ * around/inside the element.
+ * Source rule 2324.
+ */
+.frames-frames-contract-negotiations-salary-cap-adjustments {
+  padding: var(--spacing-padding-medium---16);
+  border-width: var(--layout-modules-block-border-thickness);
+  border-color: var(--skin-border-subtle);
+  background-color: var(--skin-surface-panel);
+  align-items: flex-start;
+  align-self: stretch;
+  border-radius: var(--layout-modules-block-radius);
+  margin-bottom: 16px;
+  flex-direction: var(--row-direction-normal);
+}
+
+/* Frames frames eligibility.
+ * sets the background fill; sets the outline/corner shape; controls size/placement; sets spacing
+ * around/inside the element.
+ * Source rule 2325.
+ */
+.frames-frames-eligibility {
+  width: 640px;
+  height: 640px;
+  padding: var(--spacing-medium---16) var(--spacing-tiles);
+  border-width: var(--layout-modules-block-border-thickness);
+  border-color: var(--skin-border-subtle);
+  background-color: var(--skin-surface-panel);
+  flex-direction: column;
+  align-items: flex-start;
+  border-radius: var(--layout-modules-block-radius);
+}
+
+/* Frames general view.
+ * sets the background fill; sets the outline/corner shape; controls size/placement; sets spacing
+ * around/inside the element.
+ * Source rule 2326.
+ */
+.frames-general-view {
+  padding: 16px;
+  border-width: var(--layout-modules-block-border-thickness);
+  border-color: var(--skin-border-subtle);
+  background-color: var(--skin-surface-panel);
+  flex-direction: column;
+  align-items: flex-end;
+  flex-shrink: 0;
+  border-radius: var(--layout-modules-block-radius);
+}
+
+/* Expandable footer block padding overide.
+ * sets spacing around/inside the element.
+ * Source rule 2327.
+ */
+.frames-general-view.expandable-footer-block-padding-overide {
+  padding-bottom: 48px;
+}
+
+/* Frames income breakdown.
+ * sets the background fill; sets the outline/corner shape; controls size/placement; sets spacing
+ * around/inside the element.
+ * Source rule 2328.
+ */
+.frames-income-breakdown {
+  padding: var(--spacing-padding-medium---16);
+  border-width: var(--layout-modules-block-border-thickness);
+  border-color: var(--skin-border-subtle);
+  background-color: var(--skin-surface-panel);
+  flex-direction: column;
+  align-items: flex-start;
+  border-radius: var(--layout-modules-block-radius);
+}
+
+/* Frames left side intensity.
+ * sets the background fill; sets the outline/corner shape; controls size/placement; sets spacing
+ * around/inside the element.
+ * Source rule 2329.
+ */
+.frames-left_side_intensity {
+  height: 332px;
+  padding: var(--spacing-padding-medium---16);
+  border-width: var(--layout-modules-block-border-thickness);
+  border-color: var(--skin-border-subtle);
+  background-color: var(--skin-surface-panel);
+  flex-direction: column;
+  align-items: flex-start;
+  border-radius: var(--layout-modules-block-radius);
+}
+
+/* Frames medicial injury history list.
+ * sets the background fill; sets the outline/corner shape; controls size/placement; sets spacing
+ * around/inside the element.
+ * Source rule 2330.
+ */
+.frames-medicial-injury-history-list {
+  padding: 24px 12px;
+  border-width: var(--layout-modules-block-border-thickness);
+  border-color: var(--skin-border-subtle);
+  background-color: var(--skin-surface-panel);
+  align-items: flex-start;
+  border-radius: var(--layout-modules-block-radius);
+  flex-direction: var(--row-direction-normal);
+}
+
+/* Frames milestone list size size3.
+ * sets the background fill; sets the outline/corner shape; controls size/placement; sets spacing
+ * around/inside the element.
+ * Source rule 2331.
+ */
+.frames-milestone-list-size-size3 {
+  padding: 16px;
+  border-width: var(--layout-modules-block-border-thickness);
+  border-color: var(--skin-border-subtle);
+  background-color: var(--skin-surface-panel);
+  flex-direction: column;
+  align-items: center;
+  border-radius: var(--layout-modules-block-radius);
+}
+
+/* Frames national team overview property 1 standard.
+ * sets the outline/corner shape; controls size/placement; sets spacing around/inside the element.
+ * Source rule 2332.
+ */
+.frames-national-team-overview-property-1-standard {
+  width: 640px;
+  padding: 12px;
+  border-width: 1px;
+  border-color: var(--skin-border-subtle);
+  flex-direction: column;
+  align-items: flex-start;
+  flex-shrink: 0;
+  border-radius: var(--skin-radius-card);
+}
+
+/* Frames player attributes fixed column position outfeild highlighted no masked no.
+ * controls size/placement; sets spacing around/inside the element.
+ * Source rule 2333.
+ */
+.frames-player-attributes-fixed-column-position-outfeild-highlighted-no-masked-no {
+  width: 875px;
+  height: 452px;
+  align-items: flex-start;
+  margin-right: var(--spacing-padding-tiles);
+  flex-direction: var(--row-direction-normal);
+}
+
+/* Frames player attributes fixed column position outfeild highlighted no masked no possession n a.
+ * controls size/placement.
+ * Source rule 2334.
+ */
+.frames-player-attributes-fixed-column-position-outfeild-highlighted-no-masked-no-possession-n-a {
+  width: 960px;
+  height: 452px;
+  align-items: flex-start;
+  flex-shrink: 0;
+  flex-direction: var(--row-direction-normal);
+}
+
+/* Frames player attributes full block size max rows.
+ * sets the background fill; sets the outline/corner shape; controls size/placement; sets spacing
+ * around/inside the element.
+ * Source rule 2335.
+ */
+.frames-player-attributes-full-block-size-max-rows {
+  padding: var(--spacing-padding-tiles);
+  border-width: 0;
+  border-color: var(--skin-transparent);
+  background-color: var(--skin-surface-panel);
+  align-items: flex-start;
+  flex-shrink: 1;
+  border-radius: var(--layout-modules-block-radius);
+  flex-direction: var(--row-direction-normal);
+  flex-grow: 1;
+}
+
+/* Frames player attributes full block size mid player attributes property 3 compact.
+ * sets the background fill; sets the outline/corner shape; controls size/placement; sets spacing
+ * around/inside the element.
+ * Source rule 2336.
+ */
+.frames-player-attributes-full-block-size-mid-player-attributes-property-3-compact {
+  height: 100%;
+  padding: var(--global-padding-large);
+  border-width: 0;
+  border-color: var(--skin-transparent);
+  background-color: var(--skin-surface-panel);
+  align-items: flex-start;
+  flex-shrink: 0;
+  border-radius: var(--layout-modules-block-radius);
+  flex-direction: var(--row-direction-normal);
+}
+
+/* Frames player attributes full block size min player attributes property 3 compact.
+ * sets the background fill; sets the outline/corner shape; controls size/placement; sets spacing
+ * around/inside the element.
+ * Source rule 2337.
+ */
+.frames-player-attributes-full-block-size-min-player-attributes-property-3-compact {
+  height: 100%;
+  border-width: 0;
+  border-color: var(--skin-transparent);
+  background-color: var(--skin-surface-panel);
+  padding-top: var(--global-padding-large);
+  padding-right: var(--global-padding-large);
+  padding-bottom: var(--global-padding-large);
+  padding-left: var(--global-padding-large);
+  align-items: flex-start;
+  flex-shrink: 0;
+  border-radius: var(--layout-modules-block-radius);
+  flex-direction: var(--row-direction-normal);
+}
+
+/* Frames player attributes high res position outfeild highlighted yes masked no.
+ * controls size/placement.
+ * Source rule 2338.
+ */
+.frames-player-attributes-high-res-position-outfeild-highlighted-yes-masked-no {
+  width: auto;
+  height: auto;
+  align-items: flex-start;
+  flex-shrink: 0;
+  flex-direction: var(--row-direction-normal);
+}
+
+/* Frames playing time upcoming property 1 pathway playing time v2.
+ * sets the background fill; sets the outline/corner shape; controls size/placement; sets spacing
+ * around/inside the element.
+ * Shared rule for 2 selectors. Editing a declaration here affects the whole group below.
+ * Source rule 2339.
+ */
+.frames-playing-time-upcoming-property-1-pathway-playing-time-v2,
+.frames-playing-time-vertical-scale-property-1-base {
+  padding: 16px;
+  border-width: var(--layout-modules-block-border-thickness);
+  border-color: var(--skin-border-subtle);
+  background-color: var(--skin-surface-panel);
+  flex-direction: column;
+  align-items: flex-start;
+  align-self: stretch;
+  flex-grow: 1;
+  border-radius: var(--layout-modules-block-radius);
+  margin-bottom: 0;
+}
+
+/* Frames promises.
+ * sets the outline/corner shape; controls size/placement; sets spacing around/inside the element.
+ * Source rule 2340.
+ */
+.frames-promises {
+  padding: var(--spacing-medium---16);
+  border-width: var(--skin-card-border-width);
+  border-color: var(--skin-card-border-colour);
+  flex-direction: var(--row-direction-normal);
+  align-items: flex-start;
+  flex: 1 0 0;
+  border-radius: var(--skin-radius-card);
+}
+
+/* Frames property 1 code of conduct list.
+ * sets the outline/corner shape; controls size/placement; sets spacing around/inside the element.
+ * Source rule 2341.
+ */
+.frames-property-1-code-of-conduct-list {
+  height: 640px;
+  padding: 24px 12px 12px 12px;
+  border-width: 1px;
+  border-color: var(--skin-border-subtle);
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  border-radius: var(--skin-radius-card);
+}
+
+/* Frames property 1 default.
+ * sets the outline/corner shape; controls size/placement; sets spacing around/inside the element.
+ * Source rule 2342.
+ */
+.frames-property-1-default {
+  width: 968px;
+  height: 804px;
+  padding: 16px 12px 24px 12px;
+  border-width: var(--skin-card-border-width);
+  border-color: var(--skin-card-border-colour);
+  flex-direction: column;
+  align-items: flex-end;
+  border-radius: var(--skin-radius-card);
+}
+
+/* Frames property 1 squad number unassigned.
+ * sets the background fill; sets the outline/corner shape; controls size/placement; sets spacing
+ * around/inside the element.
+ * Shared rule for 2 selectors. Editing a declaration here affects the whole group below.
+ * Source rule 2343.
+ */
+.frames-property-1-squad-number-unassigned,
+.frames-squad-numbers-assigned-registration-close {
+  width: 328px;
+  padding: var(--spacing-medium---16);
+  border-width: var(--layout-modules-block-border-thickness);
+  border-color: var(--skin-border-subtle);
+  background-color: var(--skin-surface-panel);
+  flex-direction: column;
+  align-items: flex-start;
+  border-radius: var(--layout-modules-block-radius);
+}
+
+/* Frames right side intensity.
+ * sets the background fill; sets the outline/corner shape; controls size/placement; sets spacing
+ * around/inside the element.
+ * Source rule 2344.
+ */
+.frames-right_side_intensity {
+  width: 481px;
+  height: 347px;
+  padding: var(--spacing-padding-medium---16);
+  border-width: var(--layout-modules-block-border-thickness);
+  border-color: var(--skin-border-subtle);
+  background-color: var(--skin-surface-panel);
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+  border-radius: var(--layout-modules-block-radius);
+}
+
+/* Frames scouting budget remaining budget property 1 adjusted.
+ * sets the background fill; sets the outline/corner shape; controls size/placement; sets spacing
+ * around/inside the element.
+ * Shared rule for 3 selectors. Editing a declaration here affects the whole group below.
+ * Source rule 2345.
+ */
+.frames-scouting-budget-remaining-budget-property-1-adjusted,
+.frames-wage-info-property-1-default,
+.mentoring-block-mentoring_name {
+  width: 640px;
+  padding: var(--spacing-padding-medium---16);
+  border-width: var(--layout-modules-block-border-thickness);
+  border-color: var(--skin-border-subtle);
+  background-color: var(--skin-surface-panel);
+  flex-direction: column;
+  align-items: flex-start;
+  border-radius: var(--layout-modules-block-radius);
+}
+
+/* Frames staff attributes full frame min states manager.
+ * sets the background fill; sets the outline/corner shape; controls size/placement; sets spacing
+ * around/inside the element.
+ * Source rule 2346.
+ */
+.frames-staff-attributes-full-frame-min-states-manager {
+  width: 968px;
+  height: 476px;
+  padding: 12px;
+  border-width: var(--layout-modules-block-border-thickness);
+  border-color: var(--skin-border-subtle);
+  background-color: var(--skin-surface-panel);
+  align-items: flex-start;
+  border-radius: var(--layout-modules-block-radius);
+  flex-direction: var(--row-direction-normal);
+}
+
+/* Frames staff attributes low res tab managerial highlighted no masked no.
+ * controls size/placement.
+ * Source rule 2347.
+ */
+.frames-staff-attributes-low-res-tab-managerial-highlighted-no-masked-no {
+  height: 452px;
+  flex-direction: column;
+  align-items: var(--flex-start-normal);
+  flex: 1 0 0;
+}
+
+/* Frames staff attributes tab managerial highlighted no masked no.
+ * controls size/placement.
+ * Source rule 2348.
+ */
+.frames-staff-attributes-tab-managerial-highlighted-no-masked-no {
+  width: 52%;
+  height: 100%;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+/* Frames staff attributes full frame standard states manager.
+ * sets the outline/corner shape; controls size/placement; sets spacing around/inside the element.
+ * Source rule 2349.
+ */
+/* Inline staff attributes follow ordinary report-card edges, like players. */
+.frames-staff_attributes-full_frame-standard-states-manager {
+  width: auto;
+  height: 476px;
+  padding: var(--spacing-tiles);
+  border-width: var(--skin-card-border-width);
+  border-color: var(--skin-card-border-colour);
+  align-items: flex-start;
+  flex-shrink: 0;
+  border-radius: var(--skin-radius-card);
+  flex-direction: var(--row-direction-normal);
+}
+
+/* Frames staff role stack low res property 1 manager.
+ * controls size/placement.
+ * Source rule 2350.
+ */
+.frames-staff_role_stack-low-res-property-1-manager {
+  width: 180px;
+  flex-direction: column;
+  align-items: flex-start;
+  flex-shrink: 0;
+}
+
+/* Frames summary property 1 board.
+ * sets the outline/corner shape; controls size/placement; sets spacing around/inside the element.
+ * Source rule 2351.
+ */
+/* Board/supporter feedback is inline report content, not a floating dialog. */
+.frames-summary-property-1-board {
+  padding: var(--spacing-padding-medium---16);
+  border-width: var(--skin-card-border-width);
+  border-color: var(--skin-card-border-colour);
+  align-items: center;
+  align-self: stretch;
+  border-radius: var(--skin-radius-card);
+  flex-direction: var(--row-direction-normal);
+}
+
+/* Frames terms block top bar.
+ * sets the background fill; sets the outline/corner shape; sets spacing around/inside the element.
+ * Source rule 2352.
+ */
+.frames-terms-block-top-bar {
+  padding: var(--padding-padding-12);
+  background-color: var(--skin-surface-page-alpha-80);
+  border-top-left-radius: var(--global-radius-regular);
+  border-top-right-radius: var(--global-radius-regular);
+}
+
+/* Frames wage info property 1 auto width.
+ * sets the background fill; sets the outline/corner shape; controls size/placement; sets spacing
+ * around/inside the element.
+ * Source rule 2353.
+ */
+.frames-wage-info-property-1-auto-width {
+  width: auto;
+  padding: var(--spacing-padding-medium---16);
+  border-width: var(--layout-modules-block-border-thickness);
+  border-color: var(--skin-border-subtle);
+  background-color: var(--skin-surface-panel);
+  flex-direction: column;
+  align-items: flex-start;
+  border-radius: var(--layout-modules-block-radius);
+}
+
+/* Frames world knowledge property 1 nations.
+ * sets the outline/corner shape; controls size/placement; sets spacing around/inside the element.
+ * Source rule 2354.
+ */
+.frames-world-knowledge-property-1-nations {
+  width: 640px;
+  height: 640px;
+  padding: var(--spacing-medium---16);
+  border-width: 1px;
+  border-color: var(--skin-border-subtle);
+  flex-direction: column;
+  align-items: flex-start;
+  flex-shrink: 0;
+  border-radius: var(--skin-radius-card);
+}
+
+/* Full capacity widget.
+ * sets the background fill; sets the outline/corner shape; controls size/placement; sets spacing
+ * around/inside the element.
+ * Source rule 2355.
+ */
+.full-capacity-widget {
+  border-width: 0.5px;
+  border-color: var(--staff-coaching-assistant-manager-20);
+  background-color: var(--internal-design-system-surface-wireframe-background);
+  padding-top: var(--global-padding-regular);
+  padding-right: var(--global-padding-large);
+  padding-bottom: var(--global-padding-regular);
+  padding-left: var(--global-padding-large);
+  align-items: center;
+  align-self: stretch;
+  border-radius: var(--global-gap-regular);
+  flex-direction: var(--row-direction-normal);
+}
+
+/* Fullscreen experience header.
+ * sets the background fill; controls size/placement; sets spacing around/inside the element.
+ * Source rule 2356.
+ */
+.fullscreen-experience-header {
+  height: var(--main-header-height);
+  padding: 0;
+  background-color: var(--skin-surface-page);
+}
+
+/* Speakto size.
+ * controls size/placement.
+ * Source rule 2357.
+ */
+.fullscreen-meeting-with-larger-speakto .speakto-size {
+  width: 475px;
+}
+
+/* Future playing time property 1 default.
+ * controls size/placement; sets spacing around/inside the element.
+ * Source rule 2358.
+ */
+.future-playing-time-property-1-default {
+  padding-top: 0;
+  padding-right: var(--global-padding-large);
+  padding-bottom: 0;
+  padding-left: var(--global-padding-large);
+  align-items: flex-start;
+  flex-direction: var(--row-direction-normal);
+}
+
+/* Panels
+ * Panels, cards, tiles, frames and layout containers. Some adjacent cross-component rules retain their original place.
+ */
+
+/* Layout block base container compact.
+ * sets the background fill; sets the outline/corner shape; controls size/placement; sets spacing
+ * around/inside the element.
+ * Source rule 2687.
+ */
+.layout-block-base-container-compact {
+  padding: 8px;
+  border-width: var(--layout-modules-block-border-thickness);
+  border-color: var(--skin-border-subtle);
+  background-color: var(--skin-surface-panel);
+  flex-direction: column;
+  align-items: flex-start;
+  align-self: stretch;
+  border-radius: var(--layout-modules-block-radius);
+}
+
+/* Layout block tactics.
+ * sets the background fill; sets the outline/corner shape; sets spacing around/inside the element.
+ * Source rule 2688.
+ */
+.layout-block-tactics {
+  padding: var(--spacing-medium---16) var(--spacing-tiles);
+  border-width: 1px;
+  border-color: var(--colours-tactics-base-20);
+  background-color: var(--colours-tactics-teaminstruction-background);
+  border-radius: var(--layout-modules-block-radius);
+}
+
+/* Layout card content default.
+ * sets the background fill; sets the outline/corner shape; controls size/placement; sets spacing
+ * around/inside the element.
+ * Source rule 2689.
+ */
+.layout-card-content-default {
+  padding: var(--spacing-medium---16);
+  border-width: 1px;
+  border-color: var(--internal-design-system-surface-wireframe-border);
+  background-color: var(--internal-design-system-surface-wireframe-background);
+  align-items: flex-start;
+  flex-shrink: 0;
+  border-radius: var(--skin-radius-small);
+  flex-direction: var(--row-direction-normal);
+}
+
+/* Layout card content table default.
+ * sets the outline/corner shape; controls size/placement; sets spacing around/inside the element.
+ * Source rule 2690.
+ */
+.layout-card-content-table-default {
+  padding: var(--spacing-medium---16);
+  border-width: 1px;
+  border-color: var(--skin-border-subtle);
+  align-items: flex-start;
+  flex-shrink: 0;
+  border-radius: var(--skin-radius-small);
+  flex-direction: var(--row-direction-normal);
+}
+
+/* Layout card default default.
+ * controls size/placement.
+ * Source rule 2691.
+ */
+.layout-card-default-default {
+  flex-direction: column;
+  justify-content: space-between;
+  align-self: stretch;
+  align-items: flex-start;
+  flex-grow: 1;
+}
+
+/* Layout card pop up default.
+ * controls size/placement.
+ * Source rule 2692.
+ */
+.layout-card-pop-up-default {
+  width: 429px;
+  align-items: flex-start;
+  flex-direction: var(--row-direction-normal);
+}
+
+/* Layout divider solid horizontal.
+ * sets the background fill; controls size/placement.
+ * Source rule 2693.
+ */
+.layout-divider-solid-horizontal {
+  height: 1px;
+  background-color: var(--skin-on-media-alpha-20);
+  flex-shrink: 0;
+  align-self: stretch;
+}
+
+/* Layout divider solid horizontal white.
+ * sets the background fill; controls size/placement.
+ * Source rule 2694.
+ */
+.layout-divider-solid-horizontal-white {
+  height: 1px;
+  background-color: var(--skin-text-primary);
+  flex-shrink: 0;
+  align-self: stretch;
+}
+
+/* Layout divider solid vertical.
+ * sets the background fill; controls size/placement.
+ * Source rule 2695.
+ */
+.layout-divider-solid-vertical {
+  width: 1px;
+  height: 100%;
+  background-color: var(--skin-on-media-alpha-20);
+  max-width: 1px;
+}
+
+/* Layout divider solid vertical stretch.
+ * sets the background fill; controls size/placement.
+ * Source rule 2696.
+ */
+.layout-divider-solid-vertical-stretch {
+  width: 1px;
+  background-color: var(--skin-on-media-alpha-20);
+  align-self: stretch;
+}
+
+/* Layout divider thematic horizontal.
+ * controls size/placement.
+ * Source rule 2697.
+ */
+.layout-divider-thematic-horizontal {
+  width: 100%;
+  align-items: center;
+  flex-direction: var(--row-direction-normal);
+}
+
+/* Layout layout divider solid horizontal.
+ * sets the background fill; controls size/placement.
+ * Source rule 2698.
+ */
+.layout-layout-divider-solid-horizontal {
+  height: 1px;
+  background-color: var(--skin-border-subtle);
+  align-self: stretch;
+}
+
+/* Layout layout divider solid vertical.
+ * sets the background fill; controls size/placement.
+ * Source rule 2699.
+ */
+.layout-layout-divider-solid-vertical {
+  width: 1px;
+  height: 100%;
+  background-color: var(--skin-border-subtle);
+  align-self: stretch;
+}
+
+/* Tile base container.
+ * The base surface/geometry behind native tile content. Changing it can affect tiles across screens.
+ * Source rule 2700.
+ */
+.layout-tile-base-container {
+  height: 100%;
+  border-width: 0;
+  border-color: var(--skin-border-subtle);
+  flex-direction: column;
+  align-items: flex-start;
+  align-self: stretch;
+  flex-shrink: 0;
+  flex-grow: 0;
+  border-radius: var(--skin-radius-control);
+  overflow: hidden;
+}
+
+/* Interactive tile.
+ * Clickable tile presentation. Hover and pressed rules may override this normal state.
+ * Shared rule for 2 selectors. Editing a declaration here affects the whole group below.
+ * Source rule 2701.
+ */
+.layout-tile-interaction-button,
+.layout-tile-interaction-none {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  border-width: 0;
+  border-color: var(--skin-transparent);
+  flex-direction: column;
+  align-items: flex-start;
+  align-self: stretch;
+  flex-shrink: 0;
+  flex-grow: 0;
+  border-radius: var(--interaction-global-radius-lg);
+  transition-property: background-color;
+  transition-duration: var(--global-transition-short);
+  transition-timing-function: var(--transition-cb-ui);
+}
+
+/* Interactive tile background.
+ * Background layer beneath a clickable tile. Separate from the content and title.
+ * Shared rule for 2 selectors. Editing a declaration here affects the whole group below.
+ * Source rule 2702.
+ */
+.layout-tile-interaction-button-background,
+.layout-tile-interaction-none {
+  background-color: var(--skin-surface-panel);
+}
+
+/* Layout tile interaction button background golden.
+ * sets the background fill.
+ * Source rule 2703.
+ */
+.layout-tile-interaction-button-background-golden {
+  background-color: var(--theme-color-yellow-strong-soft);
+}
+
+/* Selected fill and foreground use the paired default Dugout Volt/ink roles.
+ */
+.layout-tile-interaction-button-background-highlighted {
+  background-color: var(--skin-selection-background);
+  color: var(--skin-selection-foreground);
+}
+
+/* Startscreen Var.
+ * sets the background fill.
+ * Shared rule for 3 selectors. Editing a declaration here affects the whole group below.
+ * Source rule 2705.
+ */
+.layout-tile-interaction-button.startscreenVar,
+.layout-tile-tactics .layout-tile-interaction-button,
+.recruitment-player-scouted-grade-header--no-report {
+  background-color: var(--skin-on-media-alpha-08);
+}
+
+/* Startscreen Var — pressed.
+ * sets the background fill.
+ * Shared rule for 6 selectors. Editing a declaration here affects the whole group below.
+ * Source rule 2706.
+ */
+.layout-tile-interaction-button.startscreenVar:active:enabled,
+.layout-tile-interaction-button.startscreenVar:hover,
+.layout-tile-tactics .layout-tile-interaction-button:active:enabled,
+.layout-tile-tactics .layout-tile-interaction-button:hover,
+.startnewcareer_custom_bg_tile .layout-tile-interaction-button:active:enabled,
+.startnewcareer_custom_bg_tile .layout-tile-interaction-button:hover {
+  background-color: var(--skin-on-media-alpha-12);
+}
+
+/* Interactive tile — pressed.
+ * sets the background fill.
+ * Shared rule for 3 selectors. Editing a declaration here affects the whole group below.
+ * Source rule 2707.
+ */
+.layout-tile-interaction-button:active:enabled,
+.layout-tile-interaction-button:hover,
+.surfaces-card-tile-border.startscreenVar:hover {
+  background-color: var(--skin-control-hover);
+}
+
+/* Layout tile interaction border tactics.
+ * sets the outline/corner shape; controls size/placement.
+ * Source rule 2708.
+ */
+.layout-tile-interaction_border_tactics {
+  position: absolute;
+  border-width: 2px;
+  border-color: var(--skin-on-media-alpha-12);
+  border-radius: var(--skin-radius-control);
+}
+
+/* Layout tile scalable default background true.
+ * sets the background fill; sets the outline/corner shape; controls size/placement.
+ * Source rule 2709.
+ */
+.layout-tile-scalable-default--background-true {
+  border-width: 1px;
+  border-color: var(--skin-on-media-alpha-08);
+  background-color: var(--skin-surface-panel);
+  flex-grow: 1;
+  flex-direction: column;
+  align-items: flex-start;
+  flex-shrink: 0;
+  border-radius: var(--skin-radius-control);
+}
+
+/* Layout tile base container.
+ * sets the background fill; sets the outline/corner shape.
+ * Source rule 2710.
+ */
+.layout-tile-tactics .layout-tile-base-container {
+  border-width: var(--numbers-border-radius-null);
+  border-color: var(--skin-border-subtle);
+  background-color: var(--pitch-tile-default-background);
+}
+
+/* Layered Dugout Navy fill replaces the outline: large panels use panel Navy and nested tiles use raised
+ * Navy.
+ */
+#MenuBody .grid-element-scope,
+#ReportBody .grid-element-scope,
+#MenuBody .siblock-border,
+#ReportBody .siblock-border {
+  background-color: var(--skin-surface-panel);
+  background-image: none;
+  border-width: 0;
+  border-color: var(--skin-transparent);
+  border-radius: var(--skin-radius-card);
+}
+
+/* The open message detail sits one layer above its containing report panel; the surface provides the
+ * separation, so the native frame outline is unnecessary.
+ */
+#ReportBody .message-container-frame {
+  background-color: var(--skin-message-surface);
+  background-image: none;
+  border-width: var(--skin-card-border-width);
+  border-color: var(--skin-transparent);
+  border-radius: var(--skin-message-radius);
+}
+
+/* Layered Dugout Navy fill replaces the outline: large panels use panel Navy and nested tiles use raised
+ * Navy.
+ */
+#MenuBody .layout-tile-base-container,
+#ReportBody .layout-tile-base-container,
+#MenuBody .layout-tile-interaction-button-background,
+#ReportBody .layout-tile-interaction-button-background,
+#MenuBody .layout-block-base-container,
+#ReportBody .layout-block-base-container,
+#MenuBody .messages-tile-background,
+#ReportBody .messages-tile-background {
+  background-color: var(--skin-surface-raised);
+  background-image: none;
+  border-width: 0;
+  border-color: var(--skin-transparent);
+  border-radius: var(--skin-radius-card);
+}
+
+/* The native messages switch draws a frame around the complete list/detail split. Remove the frame;
+ * keep the list and detail as separate raised surfaces using the shared module radius. The split
+ * wrapper must show the page Navy through the space between those surfaces.
+ */
+#ReportBody .tool-messages-list {
+  border-width: 0;
+  border-color: var(--skin-transparent);
+}
+
+/* MessagesBlock is a generic tile with a panel fill. Here it only lays out the two message
+ * surfaces, so let its 16px inter-column gap reveal the workspace colour underneath. */
+#ReportBody #MessagesBlock.grid-element-scope {
+  background-color: var(--skin-transparent);
+}
+
+#ReportBody .tool-messages-list .messages-tool-list-container {
+  margin-right: var(--global-gap-seperation);
+}
+
+/* The outer Grid has a separate 16px right margin. Remove only that inset so the detail reaches
+ * the right edge while the list keeps its intended transparent gap. */
+#ReportBody .tool-messages-list #Grid {
+  margin-right: var(--global-gap-none);
+  background-color: var(--skin-transparent);
+}
+
+/* Action suggestions are neutral guidance, not a branded status. Remove FM's purple Horizon
+ * stripe and use the normal Dugout text treatment. */
+#ReportBody .notificationmessagestatus-action-colour {
+  background-color: var(--skin-transparent);
+  border-top-width: var(--global-border-width-none);
+  border-top-color: var(--skin-transparent);
+  border-radius: 0;
+}
+
+#ReportBody .notificationmessagestatus-action-colour .action-header {
+  color: var(--skin-text-primary);
+}
+
+/* This message footer inherits a native text colour on some action-button templates. Keep
+ * its Volt label and icon paired with the dark action foreground in every enabled state. */
+#ReportBody .notificationmessagestatus .buttons-button-primary-default,
+#ReportBody .notificationmessagestatus .buttons-button-primary-default .sitext,
+#ReportBody .notificationmessagestatus .buttons-button-primary-default .sitextmedium,
+#ReportBody .notificationmessagestatus .buttons-button-primary-default .sitextsmall {
+  color: var(--skin-action-primary-foreground);
+  --buttons-icons-default: var(--skin-action-primary-foreground);
+  --buttons-global-icon-surface: var(--skin-action-primary-foreground);
+  --core-controls-icon-default: var(--skin-action-primary-foreground);
+  --layout-ui-core-controls-icon-default: var(--skin-action-primary-foreground);
+}
+
+/* Tint every monochrome icon leaf inside this Volt action. The native footer can
+ * use different image classes across message action templates, so target the
+ * Unity image element rather than guessing the icon's class. */
+#ReportBody .notificationmessagestatus .buttons-button-primary-default:enabled .unity-image {
+  -unity-background-image-tint-color: var(--skin-action-primary-foreground);
+}
+
+#ReportBody .notificationmessagestatus .buttons-button-primary-default:disabled,
+#ReportBody .notificationmessagestatus .buttons-button-primary-default:disabled .sitext,
+#ReportBody .notificationmessagestatus .buttons-button-primary-default:disabled .sitextmedium,
+#ReportBody .notificationmessagestatus .buttons-button-primary-default:disabled .sitextsmall {
+  color: var(--skin-action-disabled-foreground);
+}
+
+#ReportBody .notificationmessagestatus .buttons-button-primary-default:disabled .unity-image {
+  -unity-background-image-tint-color: var(--skin-action-disabled-foreground);
+}
+
+/* Selected surface and label use the paired Volt/ink tokens from the default Dugout theme.
+ */
+.layout-tile-interaction-button-background-highlighted .sitext,
+.layout-tile-interaction-button-background-highlighted .sitextmedium,
+.layout-tile-interaction-button-background-highlighted .sitextsmall {
+  color: var(--skin-selection-foreground);
+}
+
+/* Club overview summary cards blend with the dynamic club banner. Use alpha
+ * on the surface only: text, badges and state icons keep their own opacity.
+ * Preserve the shared card radius and keep the treatment out of other headers. */
+#ReportBody #ClubSite .ios-site-header .background-color-global-sink-surface-base.border-radius-global-border-extra-small {
+  background-color: var(--skin-club-summary-surface);
+  border-radius: var(--skin-radius-card);
+}
+
+/* Panels
+ * Panels, cards, tiles, frames and layout containers. Some adjacent cross-component rules retain their original place.
+ */
+
+/* Tile mockups navigation hi res bookmarks secondary nav.
+ * controls size/placement.
+ * Source rule 4095.
+ */
+.tile-mockups-navigation-hi-res-bookmarks-secondary-nav {
+  height: 30px;
+  justify-content: flex-end;
+  align-items: center;
+  flex-direction: var(--row-direction-normal);
+}
+
+/* Tile mockups navigation secondary entity default.
+ * controls size/placement; sets spacing around/inside the element.
+ * Source rule 4096.
+ */
+/* The entity strip intentionally aligns to the right even when its template also
+ * supplies the generic justify-content-center helper. Keep this component intent explicit. */
+.tile-mockups-navigation-secondary-entity-default,
+.tile-mockups-navigation-secondary-entity-default.justify-content-center {
+  width: 144px;
+  height: 30px;
+  padding-left: var(--global-padding-small);
+  justify-content: flex-end;
+  align-items: center;
+  flex-shrink: 0;
+  flex-direction: var(--row-direction-normal);
+}
+
+/* Tile mockups navigation secondary nav hi standard res default.
+ * controls size/placement.
+ * Source rule 4097.
+ */
+.tile-mockups-navigation-secondary-nav-hi-standard-res-default {
+  align-items: flex-start;
+  flex: 1 0 0;
+  flex-direction: var(--row-direction-normal);
+}
+
+/* Tile online game size large.
+ * controls size/placement.
+ * Source rule 4098.
+ */
+.tile-online-game-size-large {
+  width: 340px;
+  flex-direction: column;
+  justify-content: space-between;
+  align-self: stretch;
+  align-items: flex-start;
+}
+
+/* Tile player fitness.
+ * sets the background fill; sets the outline/corner shape; controls size/placement; sets spacing
+ * around/inside the element.
+ * Source rule 4099.
+ */
+.tile-player-fitness {
+  width: 100%;
+  height: 120px;
+  margin: 8px;
+  padding: 8px;
+  background-color: var(--skin-on-media-alpha-04);
+  flex-shrink: 1;
+  flex-grow: 0;
+  border-top-left-radius: var(--skin-radius-small);
+  border-top-right-radius: var(--skin-radius-small);
+  border-bottom-right-radius: var(--skin-radius-small);
+  border-bottom-left-radius: var(--skin-radius-small);
+}
+
+/* Tile search results.
+ * sets the outline/corner shape; controls size/placement.
+ * Source rule 4100.
+ */
+.tile-search-results {
+  width: 148px;
+  height: 114px;
+  align-items: flex-start;
+  flex-shrink: 0;
+  border-radius: 0 0 var(--skin-radius-card) var(--skin-radius-card);
+  flex-direction: var(--row-direction-normal);
+}
+
+/* Tile states about award winners medium empty.
+ * controls size/placement.
+ * Shared rule for 5 selectors. Editing a declaration here affects the whole group below.
+ * Source rule 4101.
+ */
+.tile-states-about_award-winners-medium-empty,
+.tile-states-competitions_clubs-medium-filled,
+.tile-states-finances_debts-and-loans-medium-filled,
+.tile-states-finances_projections-large-not-designed,
+.tile-states-finances_wages-large {
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  align-self: stretch;
+  flex-grow: 1;
+  flex-shrink: 0;
+}
+
+/* Tile states competitions clubs hero template.
+ * controls size/placement.
+ * Shared rule for 5 selectors. Editing a declaration here affects the whole group below.
+ * Source rule 4102.
+ */
+.tile-states-competitions_clubs-hero-template,
+.tile-states-transfer-window_drafts-hero-upcoming,
+.tile-templates-2x2-states-templates-2x2-empty,
+.tile-states-match-momentum-hero,
+.tile-templates-4x4-states-templates-4x4-empty {
+  align-items: flex-start;
+  align-self: stretch;
+  flex-grow: 1;
+  flex-shrink: 0;
+  flex-direction: var(--row-direction-normal);
+}
+
+/* Tile states footedness medium.
+ * controls size/placement.
+ * Source rule 4103.
+ */
+.tile-states-footedness-medium {
+  justify-content: center;
+  align-items: center;
+  align-self: stretch;
+  flex-grow: 1;
+  flex-shrink: 0;
+  flex-direction: var(--row-direction-normal);
+}
+
+/* Tile states internationals small on.
+ * controls size/placement.
+ * Shared rule for 2 selectors. Editing a declaration here affects the whole group below.
+ * Source rule 4104.
+ */
+.tile-states-internationals-small-on,
+.tile-states-relationship-with-you-small-template {
+  flex-direction: column;
+  align-items: flex-start;
+  align-self: stretch;
+  flex-grow: 1;
+}
+
+/* Tile states match 2d pitch 12x4.
+ * sets the background fill; controls size/placement.
+ * Source rule 4105.
+ */
+.tile-states-match-2d-pitch-12x4 {
+  width: 100%;
+  height: 100%;
+  background-color: var(--skin-data-tile-states-match-2d-pitch-12x4-background);
+  flex-shrink: 0;
+  flex-grow: 1;
+  --grass-colour: var(--skin-surface-page-alpha-14);
+}
+
+/* Tile states match simulation club.
+ * sets the outline/corner shape; controls size/placement.
+ * Source rule 4106.
+ */
+.tile-states-match-simulation-club {
+  width: 32px;
+  height: 32px;
+  border-width: 1px;
+  border-color: var(--colours-base-neutral-white);
+  border-radius: var(--skin-radius-pill);
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+/* Tile states match simulation hero 2d.
+ * sets the background fill; sets the outline/corner shape; controls size/placement; sets spacing
+ * around/inside the element.
+ * Source rule 4107.
+ */
+.tile-states-match-simulation-hero-2d {
+  padding: 16px;
+  border-width: 2px;
+  border-color: var(--skin-on-media-alpha-20);
+  background-color: var(--skin-component-tile-states-match-simulation-hero-2d-background);
+  justify-content: space-between;
+  align-items: stretch;
+  align-content: stretch;
+  border-radius: var(--skin-radius-card);
+  flex-grow: 1;
+  flex-direction: var(--row-direction-always-normal);
+}
+
+/* Tile states match simulation hero 2d 12x4.
+ * sets the outline/corner shape; sets spacing around/inside the element.
+ * Source rule 4108.
+ */
+.tile-states-match-simulation-hero-2d-12x4 {
+  padding: 16px;
+  border-width: 2px;
+  border-color: var(--skin-on-media-alpha-20);
+  border-radius: var(--skin-radius-card);
+}
+
+/* Tile states match simulation hero 2d fullscreen.
+ * sets the background fill; controls size/placement; sets spacing around/inside the element.
+ * Source rule 4109.
+ */
+.tile-states-match-simulation-hero-2d-fullscreen {
+  padding: 40px;
+  background-color: var(--skin-component-tile-states-match-simulation-hero-2d-fullscreen-background);
+  justify-content: space-between;
+  align-items: stretch;
+  align-content: stretch;
+  flex-grow: 1;
+  flex-direction: var(--row-direction-normal);
+}
+
+/* Tile states match simulation hero 2d fullscreen phone.
+ * sets the background fill; controls size/placement; sets spacing around/inside the element.
+ * Source rule 4110.
+ */
+.tile-states-match-simulation-hero-2d-fullscreen-phone {
+  padding: 64px;
+  background-color: var(--skin-component-tile-states-match-simulation-hero-2d-fullscreen-phone-background);
+  justify-content: space-between;
+  align-items: stretch;
+  align-content: stretch;
+  flex-grow: 1;
+  flex-direction: var(--row-direction-normal);
+}
+
+/* Tile states match simulation hero 2d pitch.
+ * controls size/placement.
+ * Source rule 4111.
+ */
+.tile-states-match-simulation-hero-2d-pitch {
+  width: 100%;
+  height: 100%;
+  flex-shrink: 0;
+  flex-grow: 1;
+  --grass-colour: var(--skin-surface-page-alpha-14);
+}
+
+/* Tile states match simulation hero 2d pitch parent.
+ * controls size/placement; sets spacing around/inside the element.
+ * Source rule 4112.
+ */
+.tile-states-match-simulation-hero-2d-pitch-parent {
+  width: 100%;
+  height: 100%;
+  flex-grow: 1;
+  padding-right: 13px;
+  padding-left: 13px;
+}
+
+/* Tile states match simulation hero 2d pitch parent squad expanded.
+ * sets spacing around/inside the element.
+ * Source rule 4113.
+ */
+.tile-states-match-simulation-hero-2d-pitch-parent-squad-expanded {
+  padding-bottom: var(--match-simulation-2d-squad-expanded-inset);
+}
+
+/* Tile states match simulation hero 2d side info.
+ * controls size/placement.
+ * Source rule 4114.
+ */
+.tile-states-match-simulation-hero-2d-side-info {
+  width: 100%;
+  height: 32px;
+  min-width: 264px;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: var(--row-direction-always-normal);
+  flex-shrink: 0;
+}
+
+/* Tile states opposition instructions medium instructions set.
+ * controls size/placement; sets spacing around/inside the element.
+ * Source rule 4115.
+ */
+.tile-states-opposition-instructions-medium-instructions-set {
+  width: 290px;
+  height: 101px;
+  margin: 0 12px 8px 12px;
+}
+
+/* Tile states pass maps.
+ * Shows these elements; sets the outline/corner shape; controls size/placement.
+ * Source rule 4116.
+ */
+.tile-states-pass-maps {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  border-radius: var(--global-radius-regular);
+}
+
+/* Block.
+ * sets the background fill; sets the outline/corner shape; controls size/placement; sets spacing
+ * around/inside the element.
+ * Source rule 4117.
+ */
+.tile-states-pass-maps.block {
+  padding: var(--global-padding-large);
+  border-width: var(--layout-modules-block-border-thickness);
+  border-color: var(--skin-border-subtle);
+  background-color: var(--skin-surface-panel);
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border-radius: var(--layout-modules-block-radius);
+}
+
+/* Extra large vertical.
+ * sets spacing around/inside the element.
+ * Source rule 4118.
+ */
+.tile-states-pass-maps.extra-large-vertical {
+  padding: var(--global-padding-large);
+}
+
+/* Hero.
+ * controls size/placement; sets spacing around/inside the element.
+ * Source rule 4119.
+ */
+.tile-states-pass-maps.hero {
+  padding: var(--global-padding-large);
+  flex-direction: var(--row-direction-normal);
+}
+
+/* Medium.
+ * sets spacing around/inside the element.
+ * Source rule 4120.
+ */
+.tile-states-pass-maps.medium {
+  padding: var(--global-padding-regular);
+}
+
+/* Tile states scalable empty.
+ * sets the outline/corner shape; controls size/placement; sets spacing around/inside the element.
+ * Source rule 4121.
+ */
+.tile-states-scalable-empty {
+  padding: 0 12px 8px 12px;
+  flex-grow: 1;
+  flex-direction: column;
+  align-items: flex-start;
+  flex-shrink: 0;
+  border-radius: 0 0 var(--skin-radius-card) var(--skin-radius-card);
+}
+
+/* Tile states stats injury list hero filled.
+ * controls size/placement.
+ * Shared rule for 2 selectors. Editing a declaration here affects the whole group below.
+ * Source rule 4122.
+ */
+.tile-states-stats_injury-list-hero-filled,
+.transfer-loan-offer-footer-frame-breakdown-data {
+  align-items: flex-start;
+  flex-direction: var(--row-direction-normal);
+}
+
+/* Tile states tile states match simulation hero min res.
+ * sets the background fill; sets the outline/corner shape; controls size/placement; sets spacing
+ * around/inside the element.
+ * Source rule 4123.
+ */
+.tile-states-tile-states-match-simulation-hero-min-res {
+  padding: 16px;
+  border-width: 2px;
+  border-color: var(--skin-on-media-alpha-20);
+  background-color: var(--skin-component-tile-states-tile-states-match-simulation-hero-min-res-background);
+  border-radius: var(--skin-radius-card);
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+  flex-direction: var(--row-direction-normal);
+}
+
+/* Tile states transfer room pitch opportunities small states property 2 templates property 3 2x2 property 4
+ * property 42.
+ * sets the outline/corner shape; controls size/placement; sets spacing around/inside the element.
+ * Source rule 4124.
+ */
+.tile-states-transfer-room-pitch-opportunities-small-states-property-2-templates-property-3-2x2-property-4-property-42 {
+  width: 148px;
+  padding: 0 12px;
+  flex-direction: column;
+  align-items: flex-start;
+  border-radius: 0 0 var(--skin-radius-card) var(--skin-radius-card);
+}
+
+/* Tile t 2x2 states template headings 35 icon string.
+ * controls size/placement.
+ * Source rule 4125.
+ */
+.tile-t-2x2-states-template-headings-35-icon-string {
+  width: 124px;
+  height: 45.5px;
+  align-items: flex-start;
+  align-content: flex-start;
+  flex-wrap: wrap;
+  flex-direction: var(--row-direction-normal);
+}
+
+/* Tile t 2x4 states template headings 5 icon string.
+ * controls size/placement.
+ * Source rule 4126.
+ */
+.tile-t-2x4-states-template-headings-5-icon-string {
+  height: 65px;
+  align-items: flex-start;
+  align-content: flex-start;
+  flex-shrink: 0;
+  align-self: stretch;
+  flex-wrap: wrap;
+  flex-direction: var(--row-direction-normal);
+}
+
+/* Tile t 2x4 states template headings 8 icon string.
+ * controls size/placement.
+ * Source rule 4127.
+ */
+.tile-t-2x4-states-template-headings-8-icon-string {
+  height: 65px;
+  align-items: flex-start;
+  flex-shrink: 0;
+  flex-direction: var(--row-direction-normal);
+  align-self: stretch;
+}
+
+/* Tile t 4x4 states template 25 player ability.
+ * controls size/placement.
+ * Source rule 4128.
+ */
+.tile-t-4x4-states-template-25-player-ability {
+  height: 44px;
+  align-self: stretch;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+/* Tile t 4x4 states template 25 player average rating avg.
+ * controls size/placement.
+ * Source rule 4129.
+ */
+.tile-t-4x4-states-template-25-player-average-rating-avg {
+  height: 45px;
+  flex-direction: column;
+  align-items: flex-start;
+  align-self: stretch;
+}
+
+/* Tile t template supplementry 2 string.
+ * controls size/placement.
+ * Source rule 4130.
+ */
+.tile-t-template-supplementry-2-string {
+  height: 26px;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+/* Tile t template supplementry 2 1 string.
+ * controls size/placement.
+ * Source rule 4131.
+ */
+.tile-t-template-supplementry-2_1-string {
+  height: 26px;
+  flex-direction: column;
+  align-items: flex-start;
+  flex-shrink: 0;
+  align-self: stretch;
+}
+
+/* Tile t template supplementry 35 icon and string.
+ * controls size/placement.
+ * Source rule 4132.
+ */
+.tile-t-template-supplementry-35-icon-and-string {
+  width: 124px;
+  height: 45.5px;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+/* Tile templates 1x2 states templates 1x2 empty.
+ * controls size/placement.
+ * Source rule 4133.
+ */
+.tile-templates-1x2-states-templates-1x2-empty {
+  align-self: stretch;
+  flex-grow: 1;
+  flex-shrink: 0;
+}
+
+/* Tile templates 1x2 tile t 1x2 states template headings 2 icon and string.
+ * controls size/placement.
+ * Source rule 4134.
+ */
+.tile-templates-1x2-tile-t-1x2-states-template-headings-2-icon-and-string {
+  height: 26px;
+  align-items: center;
+  flex-shrink: 0;
+  flex-direction: var(--row-direction-normal);
+}
+
+/* Tile templates 2x4 states templates 2x4 empty.
+ * sets the outline/corner shape; controls size/placement.
+ * Source rule 4135.
+ */
+.tile-templates-2x4-states-templates-2x4-empty {
+  flex-shrink: 0;
+  flex-grow: 1;
+  align-self: stretch;
+  border-radius: 0 0 var(--skin-radius-card) var(--skin-radius-card);
+}
+
+/* Tile templates 2x8 states templates 2x8 empty.
+ * sets the outline/corner shape; controls size/placement.
+ * Source rule 4136.
+ */
+.tile-templates-2x8-states-templates-2x8-empty {
+  width: 100%;
+  flex-shrink: 0;
+  flex-grow: 0;
+  flex-direction: var(--row-direction-normal);
+  align-self: stretch;
+  border-radius: 0 0 var(--skin-radius-card) var(--skin-radius-card);
+}
+
+/* Tile templates 4x8 states templates 4x8 empty.
+ * controls size/placement.
+ * Shared rule for 4 selectors. Editing a declaration here affects the whole group below.
+ * Source rule 4137.
+ */
+.tile-templates-4x8-states-templates-4x8-empty,
+.tile-templates-6x4-states-templates-6x4-empty,
+.tile-templates-8x4-states-templates-8x4-empty,
+.tile-templates-8x6-states-templates-8x6-empty {
+  align-items: flex-start;
+  align-self: stretch;
+  flex-grow: 1;
+  flex-shrink: 0;
+}
+
+/* Tile heading colour.
+ * Changes the tile heading rather than all text in the tile.
+ * Source rule 4138.
+ */
+.tile-title-color {
+  color: var(--skin-text-primary);
+}
+
+/* Actual panel titles use FM's centrally mapped heading-small family and
+ * weight. Keep thematic-small uses such as dense game data on their native
+ * face and weight.
+ */
+.tile-title-color.thematic-sm,
+.title-link-button .title-link-primary-text.thematic-sm {
+  -unity-font-definition: var(--heading-sm-family);
+  -unity-font-style: var(--heading-sm-weight);
+}
+
+/* Tile title color permanent.
+ * supplies local values read by the component styling.
+ * Source rule 4139.
+ */
+.tile-title-color-permanent {
+  --layout-tiles-heading: var(--skin-text-primary);
+}
+
+/* Fmpediatile.
+ * Changes text/foreground colour.
+ * Source rule 4140.
+ */
+.tile-title-color.fmpediatile {
+  color: var(--colours-base-teal-strong);
+}
+
+/* Tile title frame.
+ * controls size/placement; sets spacing around/inside the element.
+ * Source rule 4141.
+ */
+.tile-title-frame {
+  height: 34px;
+  padding: 2px 12px 0 12px;
+  align-self: stretch;
+  min-height: 34px;
+  max-height: 34px;
+}
+
+/* Tiles players meetings type standard.
+ * sets the outline/corner shape; controls size/placement; sets spacing around/inside the element.
+ * Source rule 4142.
+ */
+.tiles-players-meetings--type-standard {
+  border-width: 1px;
+  border-color: var(--skin-on-media-alpha-20);
+  padding-bottom: 4px;
+  flex-direction: column;
+  align-items: center;
+  flex: 1 0 0;
+  border-radius: var(--skin-radius-card);
+  margin-right: 8px;
+}
+
+/* Tiles players meetings cell active.
+ * sets the outline/corner shape.
+ * Source rule 4143.
+ */
+.tiles-players-meetings-cell--active {
+  border-width: var(--global-border-width-regular);
+  border-left-color: var(--skin-border-subtle);
+  border-right-color: var(--skin-border-subtle);
+  border-top-color: var(--skin-border-subtle);
+  border-bottom-color: var(--skin-border-subtle);
+}
+
+/* Tiles players meetings cell inactive.
+ * sets the outline/corner shape.
+ * Source rule 4144.
+ */
+.tiles-players-meetings-cell--inactive {
+  border-width: var(--global-border-width-regular);
+  border-left-color: var(--skin-border-subtle);
+  border-right-color: var(--skin-border-subtle);
+  border-top-color: var(--skin-border-subtle);
+  border-bottom-color: var(--skin-border-subtle);
+}
+
+/* Neutral section heading on a Navy panel; the link underline carries the brand accent.
+ */
+#MenuBody .tile-title-color,
+#ReportBody .tile-title-color {
+  color: var(--skin-text-primary);
+}
+
+/* Panels
+ * Panels, cards, tiles, frames and layout containers. Some adjacent cross-component rules retain their original place.
+ */
+
+/* Tile states medical injury history hero 1.
+ * sets the outline/corner shape; controls size/placement; sets spacing around/inside the element.
+ * Source rule 5047.
+ */
+.tile-states-medical-injury-history-hero-1 {
+  position: absolute;
+  width: 640px;
+  height: 278px;
+  padding: 0 12px 12px 12px;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: var(--flex-start-normal);
+  left: 0.424px;
+  bottom: 0;
+  border-radius: 0 0 var(--skin-radius-card) var(--skin-radius-card);
+}
+
+/* Tile states promises hero.
+ * sets the outline/corner shape; controls size/placement; sets spacing around/inside the element.
+ * Source rule 5048.
+ */
+.tile-states-promises-hero {
+  position: absolute;
+  width: 640px;
+  height: 278px;
+  padding: var(--numbers-border-radius-null) 12px 8px 12px;
+  align-items: var(--flex-start-normal);
+  left: 0.424px;
+  bottom: 0;
+  border-radius: var(--numbers-border-radius-null) var(--numbers-border-radius-null) var(--skin-radius-card) var(--skin-radius-card);
+  flex-direction: var(--row-direction-normal);
+}
+
+/* Tile states promises large.
+ * sets the outline/corner shape; controls size/placement; sets spacing around/inside the element.
+ * Shared rule for 2 selectors. Editing a declaration here affects the whole group below.
+ * Source rule 5049.
+ */
+.tile-states-promises-large,
+.tile-states-squad-atmosphere-large {
+  width: 316px;
+  height: 275px;
+  padding: var(--numbers-border-radius-null) 12px 8px 12px;
+  flex-direction: column;
+  align-items: var(--flex-start-normal);
+  flex-shrink: 0;
+  border-radius: var(--numbers-border-radius-null) var(--numbers-border-radius-null) var(--skin-radius-card) var(--skin-radius-card);
+}
+
+/* Tile states promises medium.
+ * sets the outline/corner shape; controls size/placement; sets spacing around/inside the element.
+ * Source rule 5050.
+ */
+.tile-states-promises-medium {
+  width: 316px;
+  height: 118px;
+  padding: var(--numbers-border-radius-null) var(--spacing-tiles) 8px var(--spacing-tiles);
+  flex-direction: column;
+  align-items: var(--flex-start-normal);
+  flex-shrink: 0;
+  border-radius: var(--numbers-border-radius-null) var(--numbers-border-radius-null) var(--spacing-tiles) var(--spacing-tiles);
+}
+
+/* Tile states promises small.
+ * sets the outline/corner shape; controls size/placement; sets spacing around/inside the element.
+ * Source rule 5051.
+ */
+.tile-states-promises-small {
+  width: 150px;
+  height: 118px;
+  padding: var(--numbers-border-radius-null) var(--spacing-tiles) 8px var(--spacing-tiles);
+  flex-direction: column;
+  align-items: var(--flex-start-normal);
+  flex-shrink: 0;
+  border-radius: var(--numbers-border-radius-null) var(--numbers-border-radius-null) var(--spacing-tiles) var(--spacing-tiles);
+}
+
+/* Tile states promises tiny.
+ * sets the outline/corner shape; controls size/placement; sets spacing around/inside the element.
+ * Shared rule for 2 selectors. Editing a declaration here affects the whole group below.
+ * Source rule 5052.
+ */
+.tile-states-promises-tiny,
+.tile-states-targets-tiny {
+  position: absolute;
+  width: 148px;
+  height: 32px;
+  padding: 0 12px 8px 12px;
+  flex-direction: column;
+  align-items: flex-start;
+  left: 0.424px;
+  bottom: 0;
+  border-radius: 0 0 var(--skin-radius-card) var(--skin-radius-card);
+}
+
+/* Tile states targets small.
+ * sets the outline/corner shape; controls size/placement; sets spacing around/inside the element.
+ * Shared rule for 2 selectors. Editing a declaration here affects the whole group below.
+ * Source rule 5053.
+ */
+.tile-states-targets-small,
+.tile-states-squad-atmosphere-small {
+  padding: 0 12px 8px 12px;
+  flex-direction: column;
+  align-items: var(--flex-start-normal);
+  flex: 1 0 0;
+  align-self: stretch;
+  border-radius: 0 0 var(--skin-radius-card) var(--skin-radius-card);
+}
+
+/* Tile states targets medium.
+ * sets the outline/corner shape; controls size/placement; sets spacing around/inside the element.
+ * Shared rule for 2 selectors. Editing a declaration here affects the whole group below.
+ * Source rule 5054.
+ */
+.tile-states-targets-medium,
+.tile-states-squad-atmosphere-medium {
+  position: absolute;
+  width: 312px;
+  height: 114px;
+  padding: 0 12px 8px 12px;
+  flex-direction: column;
+  align-items: var(--flex-start-normal);
+  bottom: 0;
+  border-radius: 0 0 var(--skin-radius-card) var(--skin-radius-card);
+}
+
+/* Tile states targets large.
+ * sets the outline/corner shape; controls size/placement; sets spacing around/inside the element.
+ * Source rule 5055.
+ */
+.tile-states-targets-large {
+  position: absolute;
+  width: 312px;
+  height: 278px;
+  padding: 0 12px 8px 12px;
+  flex-direction: column;
+  align-items: var(--flex-start-normal);
+  left: 0;
+  bottom: 0;
+  border-radius: 0 0 var(--skin-radius-card) var(--skin-radius-card);
+}
+
+/* Tile states targets hero.
+ * sets the outline/corner shape; controls size/placement; sets spacing around/inside the element.
+ * Shared rule for 2 selectors. Editing a declaration here affects the whole group below.
+ * Source rule 5056.
+ */
+.tile-states-targets-hero,
+.tile-states-squad-atmosphere-hero {
+  position: absolute;
+  width: 640px;
+  height: 278px;
+  padding: 0 12px 8px 12px;
+  flex-direction: column;
+  align-items: var(--flex-start-normal);
+  left: 0.424px;
+  bottom: 0;
+  border-radius: 0 0 var(--skin-radius-card) var(--skin-radius-card);
+}
+
+/* Virtualised list item.
+ * sets the outline/corner shape.
+ * Source rule 5057.
+ */
+.vertical_llist_item_separator > VirtualisedList > .unity-scroll-view--vertical > #View > .virtualised-list__item {
+  border-bottom-color: var(--skin-on-media-alpha-08);
+  border-bottom-width: 1px;
+}
+
+/* Virtualised list item last.
+ * sets the outline/corner shape.
+ * Source rule 5058.
+ */
+.vertical_llist_item_separator > VirtualisedList > .unity-scroll-view--vertical > #View > .virtualised-list__item--last {
+  border-bottom-width: 0;
+}
+
+/* Virtualised list item.
+ * sets spacing around/inside the element.
+ * Source rule 5059.
+ */
+.vertical_list_item_margin-bottom > VirtualisedList > .unity-scroll-view--vertical > #View > .virtualised-list__item {
+  margin-bottom: var(--list_with_item_separator_spacing);
+}
+
+/* Virtualised list item last.
+ * sets spacing around/inside the element.
+ * Source rule 5060.
+ */
+.vertical_list_item_border-bottom > VirtualisedList > .unity-scroll-view--vertical > #View > .virtualised-list__item--last {
+  margin-bottom: 0;
+}
+
+/* Virtualised list item.
+ * sets spacing around/inside the element.
+ * Source rule 5061.
+ */
+.vertical_list_item_padding-bottom > VirtualisedList > .unity-scroll-view--vertical > #View > .virtualised-list__item {
+  padding-bottom: var(--list_with_item_separator_spacing);
+}
+
+/* Virtualised list item last.
+ * sets spacing around/inside the element.
+ * Source rule 5062.
+ */
+.vertical_list_item_padding-bottom > VirtualisedList > .unity-scroll-view--vertical > #View > .virtualised-list__item--last {
+  padding-bottom: 0;
+}
+
+/* Tile states fixture shedule medium.
+ * sets the outline/corner shape; controls size/placement; sets spacing around/inside the element.
+ * Source rule 5063.
+ */
+.tile-states-fixture-shedule-medium {
+  flex-direction: column;
+  align-items: flex-start;
+  flex: 1 0 0;
+  align-self: stretch;
+  border-radius: 0 0 var(--skin-radius-card) var(--skin-radius-card);
+  padding-top: 4px;
+}
+
+/* Tile states fixture shedule large.
+ * sets the outline/corner shape; controls size/placement; sets spacing around/inside the element.
+ * Source rule 5064.
+ */
+.tile-states-fixture-shedule-large {
+  position: absolute;
+  width: 312px;
+  height: 278px;
+  padding: 8px 12px 8px 12px;
+  flex-direction: column;
+  align-items: flex-start;
+  border-radius: 0 0 var(--skin-radius-card) var(--skin-radius-card);
+}
+
+/* Tile states fixture shedule hero.
+ * sets the outline/corner shape; controls size/placement; sets spacing around/inside the element.
+ * Source rule 5065.
+ */
+.tile-states-fixture-shedule-hero {
+  width: 640px;
+  height: 278px;
+  padding: 16px 12px 16px 12px;
+  flex-direction: column;
+  align-items: flex-start;
+  bottom: 0;
+  border-radius: 0 0 var(--skin-radius-card) var(--skin-radius-card);
+}
+
+/* Siradialgauge width 10px.
+ * supplies local values read by the component styling.
+ * Source rule 5066.
+ */
+.siradialgauge_width_10px {
+  --track-width: 10;
+}
+
+/* Grid.
+ * controls size/placement.
+ * Source rule 5067.
+ */
+.Grid {
+  flex-direction: var(--row-direction-normal);
+  flex-grow: 1;
+  align-items: flex-start;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* Grid Empty Slot.
+ * sets the outline/corner shape; controls size/placement; sets spacing around/inside the element.
+ * Source rule 5068.
+ */
+.GridEmptySlot {
+  width: 150px;
+  height: 150px;
+  margin-left: 5px;
+  margin-right: 5px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  border-left-color: var(--colours-base-grey-deep);
+  border-right-color: var(--colours-base-grey-deep);
+  border-top-color: var(--colours-base-grey-deep);
+  border-bottom-color: var(--colours-base-grey-deep);
+  border-left-width: 1px;
+  border-right-width: 1px;
+  border-top-width: 1px;
+  border-bottom-width: 1px;
+}
+
+/* Card Background.
+ * sets the background fill; sets the outline/corner shape; sets spacing around/inside the element.
+ * Source rule 5069.
+ */
+.CardBackground {
+  background-color: var(--skin-surface-panel);
+  padding-left: 5px;
+  padding-right: 5px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  margin-left: 5px;
+  margin-right: 5px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  border-left-width: 1px;
+  border-right-width: 1px;
+  border-top-width: 1px;
+  border-bottom-width: 1px;
+}
+
+/* Card Title.
+ * Changes text/foreground colour; sets font/text presentation.
+ * Source rule 5070.
+ */
+.CardTitle {
+  color: var(--skin-text-primary);
+  font-size: var(--typography-size-18);
+  -unity-font-definition: var(--skin-font-body);
+}
+
+/* Card1x1.
+ * controls size/placement.
+ * Source rule 5071.
+ */
+.Card1x1 {
+  min-width: 150px;
+  min-height: 150px;
+}
+
+/* Card2x2.
+ * controls size/placement.
+ * Source rule 5072.
+ */
+.Card2x2 {
+  min-width: 310px;
+  min-height: 310px;
+}
+
+/* Card1x2.
+ * controls size/placement.
+ * Source rule 5073.
+ */
+.Card1x2 {
+  min-width: 310px;
+  min-height: 150px;
+}
+
+/* Card3x3.
+ * controls size/placement.
+ * Source rule 5074.
+ */
+.Card3x3 {
+  min-width: 470px;
+  min-height: 470px;
+}
+
+/* Native floating card frames already own an absolute border element, so
+ * restoring its stroke separates dialogs without changing content sizing or
+ * adding outlines to ordinary report cards. Card is the alternate floating
+ * document host used by manager summaries; its frame owns the same stroke.
+ * Keep radius aligned with the fill. */
+#CardBody .surfaces-card-block-border,
+#Card .card-template-inner-frame > .surfaces-card-block-border {
+  border-width: var(--skin-dialog-border-width);
+  border-color: var(--skin-dialog-border);
+  border-radius: var(--skin-dialog-radius);
+}
+#CardBody .card-template-inner-frame,
+#Card .card-template-inner-frame {
+  border-radius: var(--skin-dialog-radius);
+}
+
+/* Keep linked report headings consistent with the overview standard. */
+#ReportBody #LeagueTable > .buttons-button-tertiary-default,
+#ReportBody #PlayerStats > .buttons-button-tertiary-default,
+#ReportBody #TeamStatsVar > .buttons-button-tertiary-default,
+#ReportBody #CompNews > .buttons-button-tertiary-default {
+  border-bottom-color: var(--skin-nav-active-indicator);
+  border-radius: 0;
+}
+
+/* Clause lists wrap rounded cards in square virtualised rows. Move selection
+ * and hover paint onto the inner card so it cannot fill the card's outer gaps.
+ * Scope this to the detail list; player choices on the left retain table stripes. */
+#RecruitmentClausesCard #StreamedObjectList .virtualised-list__item--selected,
+#RecruitmentClausesCard #StreamedObjectList .virtualised-list__item:hover {
+  background-color: var(--skin-transparent);
+}
+#RecruitmentClausesCard #StreamedObjectList .virtualised-list__item--selected .frames-clauses-competition-bonus-property-1-complete-selection-southampton {
+  background-color: var(--skin-list-selection-background);
+}
+#RecruitmentClausesCard #StreamedObjectList .virtualised-list__item:hover .frames-clauses-competition-bonus-property-1-complete-selection-southampton {
+  background-color: var(--skin-control-hover);
+}
+
+
+/* Background is also the name of a content tile in the manager summary.
+ * It is not the full-window canvas: painting it leaves dark square corners
+ * behind the tile's own rounded surface. Native content retains its paint. */
+#Background.si-tile {
+  background-color: var(--skin-transparent);
+}
+
+
+/* Contract report header/body are ordinary joined report panels. Native side
+ * utilities otherwise restore outlined edges after the shared module frame. */
+#ReportBody .loan-report-header {
+  border-top-width: var(--skin-card-border-width);
+  border-right-width: var(--skin-card-border-width);
+  border-left-width: var(--skin-card-border-width);
+  border-top-color: var(--skin-card-border-colour);
+  border-right-color: var(--skin-card-border-colour);
+  border-left-color: var(--skin-card-border-colour);
+}
+#ReportBody .loan-report-body {
+  border-bottom-width: var(--skin-card-border-width);
+  border-right-width: var(--skin-card-border-width);
+  border-left-width: var(--skin-card-border-width);
+  border-bottom-color: var(--skin-card-border-colour);
+  border-right-color: var(--skin-card-border-colour);
+  border-left-color: var(--skin-card-border-colour);
+}

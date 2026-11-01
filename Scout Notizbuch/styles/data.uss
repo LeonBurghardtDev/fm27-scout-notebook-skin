@@ -1,0 +1,5571 @@
+/* Edit this stylesheet directly, then reload the skin. Shared values live in theme.uss. */
+
+/* Shared single-line fixture rows reserve 16px for the bound home/away letter.
+ * Honour their authored zero horizontal inset instead of .sitextmedium's 5px
+ * sides, which leave too little room for Poppins in compact report widgets.
+ * Match the shared row itself: Training Overview's tile can sit outside the
+ * report-body host used by other consumers of this exact component.
+ */
+#BindingRoot_FixtureRow > #Container > SIText#FixtureVenueShort {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+/* Tables Data
+ * Table/list rows, cells, attributes and data display roles; names do not prove table-exclusive use.
+ */
+
+/* Silinechart.
+ * sets font/text presentation; controls size/placement.
+ * Source rule 336.
+ */
+.silinechart {
+  width: 100%;
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-direction: var(--row-direction-normal);
+  justify-content: center;
+  --axis-colour: var(--skin-on-media-alpha-80);
+  --axis-font-size: 12;
+  --axis-width: 4;
+  --line-width: 4;
+  --line-colour: var(--skin-surface-raised);
+  --fill-colour: var(--skin-data-silinechart-fill-colour);
+  --datapoint-radius: 5;
+  --datapoint-stroke-colour: var(--skin-on-media-alpha-40);
+  --datapoint-fill-colour: var(--skin-data-silinechart-datapoint-fill-colour);
+  -unity-font-definition: var(--skin-font-body);
+}
+
+/* FM progress table line chart.
+ * supplies local values read by the component styling.
+ * Source rule 337.
+ */
+.silinechart.fm-progress-table-line-chart {
+  /* Native row sizing can stretch this miniature plot to the cell edges.
+   * Cap only progress sparklines, preserving full chart layouts and data. */
+  max-height: var(--skin-chart-compact-height);
+  /* The end points straddle the plot edge; the height cap leaves row space. */
+  overflow: visible;
+  flex-grow: 0;
+  margin-top: auto;
+  margin-bottom: auto;
+  --line-width: 1;
+}
+
+/* FM attribute history chart.
+ * supplies local values read by the component styling.
+ * Source rule 338.
+ */
+.silinechart.fm-attribute-history-chart {
+  --line-width: 2;
+  --line-colour: var(--skin-surface-raised);
+  --fill-colour: var(--skin-data-silinechart-fm-attribute-history-chart-fill-colour);
+  --line-colour-1: var(--colours-player-chart-attribute-line-0);
+  --line-colour-2: var(--colours-player-chart-attribute-line-1);
+  --line-colour-3: var(--colours-player-chart-attribute-line-2);
+  --line-colour-4: var(--colours-player-chart-attribute-line-3);
+  --line-colour-5: var(--colours-player-chart-attribute-line-4);
+  --line-colour-6: var(--colours-player-chart-attribute-line-5);
+  --line-colour-7: var(--colours-player-chart-attribute-line-6);
+  --line-colour-8: var(--colours-player-chart-attribute-line-7);
+  --line-colour-9: var(--colours-player-chart-attribute-line-8);
+  --line-colour-10: var(--colours-player-chart-attribute-line-9);
+  --line-colour-11: var(--colours-player-chart-attribute-line-10);
+  --line-colour-12: var(--colours-player-chart-attribute-line-11);
+  --line-colour-13: var(--colours-player-chart-attribute-line-12);
+  --line-colour-14: var(--colours-player-chart-attribute-line-13);
+  --line-colour-15: var(--colours-player-chart-attribute-line-14);
+  --line-colour-16: var(--colours-player-chart-attribute-line-15);
+  --line-colour-17: var(--colours-player-chart-attribute-line-16);
+  --line-colour-18: var(--colours-player-chart-attribute-line-17);
+  --line-colour-19: var(--colours-player-chart-attribute-line-18);
+  --line-colour-20: var(--colours-player-chart-attribute-line-19);
+  --line-colour-21: var(--colours-player-chart-attribute-line-20);
+  --line-colour-22: var(--colours-player-chart-attribute-line-21);
+  --line-colour-23: var(--colours-player-chart-attribute-line-22);
+  --line-colour-24: var(--colours-player-chart-attribute-line-23);
+  --line-colour-25: var(--colours-player-chart-attribute-line-24);
+  --line-colour-26: var(--colours-player-chart-attribute-line-25);
+  --line-colour-27: var(--colours-player-chart-attribute-line-26);
+  --line-colour-28: var(--colours-player-chart-attribute-line-27);
+  --line-colour-29: var(--colours-player-chart-attribute-line-28);
+  --line-colour-30: var(--colours-player-chart-attribute-line-29);
+  --line-colour-31: var(--colours-player-chart-attribute-line-30);
+  --line-colour-32: var(--colours-player-chart-attribute-line-31);
+  --line-colour-33: var(--colours-player-chart-attribute-line-32);
+  --line-colour-34: var(--colours-player-chart-attribute-line-33);
+  --line-colour-35: var(--colours-player-chart-attribute-line-34);
+  --line-colour-36: var(--colours-player-chart-attribute-line-35);
+  --line-colour-37: var(--colours-player-chart-attribute-line-36);
+  --line-colour-38: var(--colours-player-chart-attribute-line-37);
+  --line-colour-39: var(--colours-player-chart-attribute-line-38);
+  --line-colour-40: var(--colours-player-chart-attribute-line-39);
+  --line-colour-41: var(--colours-player-chart-attribute-line-40);
+  --line-colour-42: var(--colours-player-chart-attribute-line-41);
+  --line-colour-43: var(--colours-player-chart-attribute-line-42);
+  --line-colour-44: var(--colours-player-chart-attribute-line-43);
+  --line-colour-45: var(--colours-player-chart-attribute-line-44);
+  --line-colour-46: var(--colours-player-chart-attribute-line-45);
+  --line-colour-47: var(--colours-player-chart-attribute-line-46);
+  --line-colour-48: var(--colours-player-chart-attribute-line-47);
+}
+
+/* FM ability history chart.
+ * supplies local values read by the component styling.
+ * Source rule 339.
+ */
+.silinechart.fm-ability-history-chart {
+  --line-width: 2;
+  --line-colour: var(--skin-on-media-alpha-80);
+  --fill-colour: var(--skin-data-silinechart-fm-ability-history-chart-fill-colour);
+}
+
+/* FM ability recent history chart.
+ * supplies local values read by the component styling.
+ * Source rule 340.
+ */
+.silinechart.fm-ability-recent-history-chart {
+  --line-width: 2;
+  --line-colour: var(--skin-data-silinechart-fm-ability-recent-history-chart-line-colour);
+  --fill-colour: var(--skin-data-silinechart-fm-ability-recent-history-chart-fill-colour);
+}
+
+/* FM budget chart.
+ * supplies local values read by the component styling.
+ * Source rule 341.
+ */
+.silinechart.fm-budget-chart {
+  --line-width: 2;
+  --line-colour: var(--skin-chart-finance-line);
+  --fill-colour: var(--skin-chart-finance-fill);
+  --axis-colour: var(--skin-chart-axis-foreground);
+  --datapoint-fill-colour: var(--skin-chart-finance-line);
+  --datapoint-stroke-colour: var(--skin-chart-finance-line);
+}
+
+/* FMLineChart creates its final marker as a separate visual element. Keep
+ * invisible historical markers untouched and pair the visible endpoint with
+ * the finance series, including its pointer state. */
+.silinechart.fm-budget-chart .data_display-graphs-data_points-medium-circle-purple,
+.silinechart.fm-budget-chart .data_display-graphs-data_points-medium-circle-purple:hover {
+  background-color: var(--skin-chart-finance-line);
+  border-color: var(--skin-chart-finance-line);
+}
+
+/* FM budget graph.
+ * sets the background fill.
+ * Source rule 342.
+ */
+.silinechart.fm-budget-graph {
+  background-color: var(--skin-chart-finance-background);
+  --line-width: 2;
+  --line-colour: var(--skin-chart-finance-line);
+  --fill-colour: var(--skin-chart-finance-fill);
+  --axis-colour: var(--skin-chart-axis-foreground);
+}
+
+/* FM budget wage graph.
+ * supplies local values read by the component styling.
+ * Source rule 343.
+ */
+.silinechart.fm-budget-wage-graph {
+  --line-width: 2;
+  --line-colour: var(--skin-chart-finance-line);
+  --fill-colour: var(--skin-chart-finance-fill);
+  --axis-colour: var(--skin-chart-axis-foreground);
+}
+
+/* FM financial history chart.
+ * supplies local values read by the component styling.
+ * Source rule 344.
+ */
+.silinechart.fm-financial-history-chart {
+  --line-width: 2;
+  --line-colour: var(--skin-data-silinechart-fm-financial-history-chart-line-colour);
+}
+
+/* FM wage expenditure history chart.
+ * supplies local values read by the component styling.
+ * Source rule 345.
+ */
+.silinechart.fm-wage-expenditure-history-chart {
+  --line-width: 2;
+  --line-colour: var(--skin-data-silinechart-fm-wage-expenditure-history-chart-line-colour);
+  --line-colour-1: var(--skin-data-silinechart-fm-wage-expenditure-history-chart-line-colour-1);
+  --line-colour-2: var(--skin-data-silinechart-fm-wage-expenditure-history-chart-line-colour-2);
+}
+
+/* FM recruitment chart.
+ * controls size/placement.
+ * Source rule 346.
+ */
+.silinechart.fm-recruitment-chart {
+  flex-grow: 0;
+  --line-width: 0;
+  --axis-width: 4;
+  --datapoint-radius: 4;
+  --axis-colour: var(--skin-surface-canvas-alpha-30);
+  --datapoint-stroke-colour: var(--skin-transparent);
+  --datapoint-fill-colour: var(--skin-on-media-alpha-89);
+}
+
+/* FM league history chart.
+ * supplies local values read by the component styling.
+ * Source rule 347.
+ */
+.silinechart.fm-league-history-chart {
+  --line-width: 2;
+  --line-colour: var(--skin-on-media-alpha-35);
+  --line-colour-1: var(--skin-on-media-alpha-35);
+  --line-colour-2: var(--skin-data-silinechart-fm-league-history-chart-line-colour-2);
+}
+
+/* FM fifa ranking history chart.
+ * supplies local values read by the component styling.
+ * Source rule 348.
+ */
+.silinechart.fm-fifa-ranking-history-chart {
+  --line-width: 2;
+  --line-colour: var(--skin-data-silinechart-fm-fifa-ranking-history-chart-line-colour);
+}
+
+/* FM squad injury chart.
+ * supplies local values read by the component styling.
+ * Source rule 349.
+ */
+.silinechart.fm-squad-injury-chart {
+  --line-width: 2;
+  --fill-colour-1: var(--skin-data-silinechart-fm-squad-injury-chart-fill-colour-1);
+  --line-colour-1: var(--skin-data-silinechart-fm-squad-injury-chart-line-colour-1);
+  --fill-colour-2: var(--skin-data-silinechart-fm-squad-injury-chart-fill-colour-2);
+  --line-colour-2: var(--skin-data-silinechart-fm-squad-injury-chart-line-colour-2);
+}
+
+/* Tables Data
+ * Table/list rows, cells, attributes and data display roles; names do not prove table-exclusive use.
+ */
+
+/* Data display graphs tile elements y axis label.
+ * Changes text/foreground colour.
+ * Shared rule for 2 selectors. Editing a declaration here affects the whole group below.
+ * Source rule 561.
+ */
+.data_display-graphs-tile_elements-y_axis_label,
+.data_display-graphs-tile_elements-x_axis_label {
+  color: var(--skin-text-secondary);
+}
+
+/* Data display graphs data points medium circle grey.
+ * sets the background fill; sets the outline/corner shape; controls size/placement.
+ * Source rule 562.
+ */
+.data_display-graphs-data_points-medium-circle-grey {
+  width: 8px;
+  height: 8px;
+  background-color: var(--skin-surface-raised);
+  flex-shrink: 0;
+  border-left-color: var(--skin-on-media-alpha-35);
+  border-right-color: var(--skin-on-media-alpha-35);
+  border-top-color: var(--skin-on-media-alpha-35);
+  border-bottom-color: var(--skin-on-media-alpha-35);
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+  border-bottom-left-radius: 4px;
+  border-top-width: 1px;
+  border-right-width: 1px;
+  border-bottom-width: 1px;
+  border-left-width: 1px;
+}
+
+/* Data display graphs data points large square.
+ * sets the outline/corner shape; controls size/placement.
+ * Source rule 563.
+ */
+.data_display-graphs-data_points-large-square {
+  width: 16px;
+  height: 16px;
+  border-width: 1px;
+  flex-shrink: 0;
+}
+
+/* Data display graphs data points medium circle.
+ * sets the outline/corner shape; controls size/placement; defines how state changes animate; chooses the
+ * pointer and hotspot.
+ * Source rule 564.
+ */
+.data_display-graphs-data_points-medium-circle {
+  width: 8px;
+  height: 8px;
+  border-width: 1px;
+  flex-shrink: 0;
+  border-radius: 4px;
+  transition: background-color var(--global-transition-short) ease;
+  cursor: var(--cursor-clickable-1x-url) var(--cursor-clickable-1x-hotspot-x) var(--cursor-clickable-1x-hotspot-y);
+}
+
+/* Data display graphs data points medium circle — pointer hover.
+ * sets the background fill.
+ * Source rule 565.
+ */
+.data_display-graphs-data_points-medium-circle:hover {
+  background-color: var(--colours-base-neutral-white);
+}
+
+/* Contract negotiations tab value changed icon medium circle.
+ * sets the background fill; sets the outline/corner shape; controls size/placement.
+ * Source rule 566.
+ */
+.contract-negotiations-tab-value-changed-icon-medium-circle {
+  width: 8px;
+  height: 8px;
+  border-width: 1px;
+  background-color: var(--colours-linear-scale-strong-3);
+  flex-shrink: 0;
+  border-radius: 4px;
+}
+
+/* Data display graphs data points large circle.
+ * sets the outline/corner shape; controls size/placement.
+ * Source rule 567.
+ */
+.data_display-graphs-data_points-large-circle {
+  width: 16px;
+  height: 16px;
+  border-width: 1px;
+  border-color: var(--skin-on-media-alpha-35);
+  flex-shrink: 0;
+  border-radius: 8px;
+}
+
+/* Data display graphs data points medium circle purple.
+ * sets the background fill; sets the outline/corner shape.
+ * Source rule 568.
+ */
+.data_display-graphs-data_points-medium-circle-purple {
+  border-color: var(--skin-on-media-alpha-35);
+  background-color: var(--skin-data-data-display-graphs-data-points-medium-circle-purple-background);
+}
+
+/* Data display graphs data points small circle purple.
+ * sets the background fill; sets the outline/corner shape; controls size/placement.
+ * Source rule 569.
+ */
+.data_display-graphs-data_points-small-circle-purple {
+  width: 5px;
+  height: 5px;
+  border-width: 1px;
+  border-color: var(--skin-on-media-alpha-35);
+  background-color: var(--skin-data-data-display-graphs-data-points-small-circle-purple-background);
+  flex-shrink: 0;
+  border-radius: 2.5px;
+}
+
+/* Data display graphs data points medium circle invisible.
+ * sets the background fill; sets the outline/corner shape.
+ * Source rule 570.
+ */
+.data_display-graphs-data_points-medium-circle-invisible {
+  border-color: var(--skin-transparent);
+  background-color: var(--skin-transparent);
+}
+
+/* Data display graphs data points medium circle invisible — pointer hover.
+ * sets the background fill; sets the outline/corner shape.
+ * Source rule 571.
+ */
+.data_display-graphs-data_points-medium-circle-invisible:hover {
+  border-color: var(--skin-on-media-alpha-35);
+  background-color: var(--skin-surface-raised);
+}
+
+/* Data display league history chart data points circle base blue.
+ * sets the background fill; sets the outline/corner shape; controls size/placement.
+ * Source rule 572.
+ */
+.data_display-league-history-chart-data_points-circle-base-blue {
+  width: 8px;
+  height: 8px;
+  border-width: 1px;
+  border-color: var(--skin-on-media-alpha-35);
+  background-color: var(--colours-base-blue-20);
+  flex-shrink: 0;
+  border-radius: 4px;
+}
+
+/* Data display league history chart data points circle base purple.
+ * sets the background fill; sets the outline/corner shape; controls size/placement.
+ * Source rule 573.
+ */
+.data_display-league-history-chart-data_points-circle-base-purple {
+  width: 8px;
+  height: 8px;
+  border-width: 1px;
+  border-color: var(--skin-on-media-alpha-35);
+  background-color: var(--colours-base-purple-50);
+  flex-shrink: 0;
+  border-radius: 4px;
+}
+
+/* Data display league history chart data points circle base neutral.
+ * sets the background fill; sets the outline/corner shape; controls size/placement.
+ * Source rule 574.
+ */
+.data_display-league-history-chart-data_points-circle-base-neutral {
+  width: 8px;
+  height: 8px;
+  border-width: 1px;
+  border-color: var(--skin-on-media-alpha-35);
+  background-color: var(--colours-base-grey-strong);
+  flex-shrink: 0;
+  border-radius: 4px;
+}
+
+/* Data display league history chart data points circle base green.
+ * sets the background fill; sets the outline/corner shape; controls size/placement.
+ * Source rule 575.
+ */
+.data_display-league-history-chart-data_points-circle-base-green {
+  width: 8px;
+  height: 8px;
+  border-width: 1px;
+  border-color: var(--skin-on-media-alpha-35);
+  background-color: var(--colours-base-green-base);
+  flex-shrink: 0;
+  border-radius: 4px;
+}
+
+/* Data display league history chart data points circle base red.
+ * sets the background fill; sets the outline/corner shape; controls size/placement.
+ * Source rule 576.
+ */
+.data_display-league-history-chart-data_points-circle-base-red {
+  width: 8px;
+  height: 8px;
+  border-width: 1px;
+  border-color: var(--skin-on-media-alpha-35);
+  background-color: var(--colours-base-red-base);
+  flex-shrink: 0;
+  border-radius: 4px;
+}
+
+/* Data display graphs data points large type circle cyan.
+ * sets the background fill; sets the outline/corner shape; controls size/placement.
+ * Source rule 577.
+ */
+.data_display-graphs-data_points-large-type-circle-cyan {
+  width: 12px;
+  height: 12px;
+  background-color: var(--skin-data-data-display-graphs-data-points-large-type-circle-cyan-background);
+  flex-shrink: 0;
+  border-left-color: var(--skin-on-media-alpha-35);
+  border-right-color: var(--skin-on-media-alpha-35);
+  border-top-color: var(--skin-on-media-alpha-35);
+  border-bottom-color: var(--skin-on-media-alpha-35);
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+  border-bottom-left-radius: 8px;
+  border-top-width: 1px;
+  border-right-width: 1px;
+  border-bottom-width: 1px;
+  border-left-width: 1px;
+}
+
+/* Tables Data
+ * Table/list rows, cells, attributes and data display roles; names do not prove table-exclusive use.
+ */
+
+/* Attribute history chart line colour 12.
+ * sets the background fill.
+ * Source rule 1050.
+ */
+.attribute-history-chart-line-colour-12 {
+  background-color: var(--colours-player-chart-attribute-line-12);
+}
+
+/* Attribute history chart line colour 13.
+ * sets the background fill.
+ * Source rule 1051.
+ */
+.attribute-history-chart-line-colour-13 {
+  background-color: var(--colours-player-chart-attribute-line-13);
+}
+
+/* Attribute history chart line colour 14.
+ * sets the background fill.
+ * Source rule 1052.
+ */
+.attribute-history-chart-line-colour-14 {
+  background-color: var(--colours-player-chart-attribute-line-14);
+}
+
+/* Attribute history chart line colour 15.
+ * sets the background fill.
+ * Source rule 1053.
+ */
+.attribute-history-chart-line-colour-15 {
+  background-color: var(--colours-player-chart-attribute-line-15);
+}
+
+/* Attribute history chart line colour 16.
+ * sets the background fill.
+ * Source rule 1054.
+ */
+.attribute-history-chart-line-colour-16 {
+  background-color: var(--colours-player-chart-attribute-line-16);
+}
+
+/* Attribute history chart line colour 17.
+ * sets the background fill.
+ * Source rule 1055.
+ */
+.attribute-history-chart-line-colour-17 {
+  background-color: var(--colours-player-chart-attribute-line-17);
+}
+
+/* Attribute history chart line colour 18.
+ * sets the background fill.
+ * Source rule 1056.
+ */
+.attribute-history-chart-line-colour-18 {
+  background-color: var(--colours-player-chart-attribute-line-18);
+}
+
+/* Attribute history chart line colour 19.
+ * sets the background fill.
+ * Source rule 1057.
+ */
+.attribute-history-chart-line-colour-19 {
+  background-color: var(--colours-player-chart-attribute-line-19);
+}
+
+/* Attribute history chart line colour 2.
+ * sets the background fill.
+ * Source rule 1058.
+ */
+.attribute-history-chart-line-colour-2 {
+  background-color: var(--colours-player-chart-attribute-line-2);
+}
+
+/* Attribute history chart line colour 20.
+ * sets the background fill.
+ * Source rule 1059.
+ */
+.attribute-history-chart-line-colour-20 {
+  background-color: var(--colours-player-chart-attribute-line-20);
+}
+
+/* Attribute history chart line colour 21.
+ * sets the background fill.
+ * Source rule 1060.
+ */
+.attribute-history-chart-line-colour-21 {
+  background-color: var(--colours-player-chart-attribute-line-21);
+}
+
+/* Attribute history chart line colour 22.
+ * sets the background fill.
+ * Source rule 1061.
+ */
+.attribute-history-chart-line-colour-22 {
+  background-color: var(--colours-player-chart-attribute-line-22);
+}
+
+/* Attribute history chart line colour 23.
+ * sets the background fill.
+ * Source rule 1062.
+ */
+.attribute-history-chart-line-colour-23 {
+  background-color: var(--colours-player-chart-attribute-line-23);
+}
+
+/* Attribute history chart line colour 24.
+ * sets the background fill.
+ * Source rule 1063.
+ */
+.attribute-history-chart-line-colour-24 {
+  background-color: var(--colours-player-chart-attribute-line-24);
+}
+
+/* Attribute history chart line colour 25.
+ * sets the background fill.
+ * Source rule 1064.
+ */
+.attribute-history-chart-line-colour-25 {
+  background-color: var(--colours-player-chart-attribute-line-25);
+}
+
+/* Attribute history chart line colour 26.
+ * sets the background fill.
+ * Source rule 1065.
+ */
+.attribute-history-chart-line-colour-26 {
+  background-color: var(--colours-player-chart-attribute-line-26);
+}
+
+/* Attribute history chart line colour 27.
+ * sets the background fill.
+ * Source rule 1066.
+ */
+.attribute-history-chart-line-colour-27 {
+  background-color: var(--colours-player-chart-attribute-line-27);
+}
+
+/* Attribute history chart line colour 28.
+ * sets the background fill.
+ * Source rule 1067.
+ */
+.attribute-history-chart-line-colour-28 {
+  background-color: var(--colours-player-chart-attribute-line-28);
+}
+
+/* Attribute history chart line colour 29.
+ * sets the background fill.
+ * Source rule 1068.
+ */
+.attribute-history-chart-line-colour-29 {
+  background-color: var(--colours-player-chart-attribute-line-29);
+}
+
+/* Attribute history chart line colour 3.
+ * sets the background fill.
+ * Source rule 1069.
+ */
+.attribute-history-chart-line-colour-3 {
+  background-color: var(--colours-player-chart-attribute-line-3);
+}
+
+/* Attribute history chart line colour 30.
+ * sets the background fill.
+ * Source rule 1070.
+ */
+.attribute-history-chart-line-colour-30 {
+  background-color: var(--colours-player-chart-attribute-line-30);
+}
+
+/* Attribute history chart line colour 31.
+ * sets the background fill.
+ * Source rule 1071.
+ */
+.attribute-history-chart-line-colour-31 {
+  background-color: var(--colours-player-chart-attribute-line-31);
+}
+
+/* Attribute history chart line colour 32.
+ * sets the background fill.
+ * Source rule 1072.
+ */
+.attribute-history-chart-line-colour-32 {
+  background-color: var(--colours-player-chart-attribute-line-32);
+}
+
+/* Attribute history chart line colour 33.
+ * sets the background fill.
+ * Source rule 1073.
+ */
+.attribute-history-chart-line-colour-33 {
+  background-color: var(--colours-player-chart-attribute-line-33);
+}
+
+/* Attribute history chart line colour 34.
+ * sets the background fill.
+ * Source rule 1074.
+ */
+.attribute-history-chart-line-colour-34 {
+  background-color: var(--colours-player-chart-attribute-line-34);
+}
+
+/* Attribute history chart line colour 35.
+ * sets the background fill.
+ * Source rule 1075.
+ */
+.attribute-history-chart-line-colour-35 {
+  background-color: var(--colours-player-chart-attribute-line-35);
+}
+
+/* Attribute history chart line colour 36.
+ * sets the background fill.
+ * Source rule 1076.
+ */
+.attribute-history-chart-line-colour-36 {
+  background-color: var(--colours-player-chart-attribute-line-36);
+}
+
+/* Attribute history chart line colour 37.
+ * sets the background fill.
+ * Source rule 1077.
+ */
+.attribute-history-chart-line-colour-37 {
+  background-color: var(--colours-player-chart-attribute-line-37);
+}
+
+/* Attribute history chart line colour 38.
+ * sets the background fill.
+ * Source rule 1078.
+ */
+.attribute-history-chart-line-colour-38 {
+  background-color: var(--colours-player-chart-attribute-line-38);
+}
+
+/* Attribute history chart line colour 39.
+ * sets the background fill.
+ * Source rule 1079.
+ */
+.attribute-history-chart-line-colour-39 {
+  background-color: var(--colours-player-chart-attribute-line-39);
+}
+
+/* Attribute history chart line colour 4.
+ * sets the background fill.
+ * Source rule 1080.
+ */
+.attribute-history-chart-line-colour-4 {
+  background-color: var(--colours-player-chart-attribute-line-4);
+}
+
+/* Attribute history chart line colour 40.
+ * sets the background fill.
+ * Source rule 1081.
+ */
+.attribute-history-chart-line-colour-40 {
+  background-color: var(--colours-player-chart-attribute-line-40);
+}
+
+/* Attribute history chart line colour 41.
+ * sets the background fill.
+ * Source rule 1082.
+ */
+.attribute-history-chart-line-colour-41 {
+  background-color: var(--colours-player-chart-attribute-line-41);
+}
+
+/* Attribute history chart line colour 42.
+ * sets the background fill.
+ * Source rule 1083.
+ */
+.attribute-history-chart-line-colour-42 {
+  background-color: var(--colours-player-chart-attribute-line-42);
+}
+
+/* Attribute history chart line colour 43.
+ * sets the background fill.
+ * Source rule 1084.
+ */
+.attribute-history-chart-line-colour-43 {
+  background-color: var(--colours-player-chart-attribute-line-43);
+}
+
+/* Attribute history chart line colour 44.
+ * sets the background fill.
+ * Source rule 1085.
+ */
+.attribute-history-chart-line-colour-44 {
+  background-color: var(--colours-player-chart-attribute-line-44);
+}
+
+/* Attribute history chart line colour 45.
+ * sets the background fill.
+ * Source rule 1086.
+ */
+.attribute-history-chart-line-colour-45 {
+  background-color: var(--colours-player-chart-attribute-line-45);
+}
+
+/* Attribute history chart line colour 46.
+ * sets the background fill.
+ * Source rule 1087.
+ */
+.attribute-history-chart-line-colour-46 {
+  background-color: var(--colours-player-chart-attribute-line-46);
+}
+
+/* Attribute history chart line colour 47.
+ * sets the background fill.
+ * Source rule 1088.
+ */
+.attribute-history-chart-line-colour-47 {
+  background-color: var(--colours-player-chart-attribute-line-47);
+}
+
+/* Attribute history chart line colour 48.
+ * sets the background fill.
+ * Source rule 1089.
+ */
+.attribute-history-chart-line-colour-48 {
+  background-color: var(--colours-player-chart-attribute-line-48);
+}
+
+/* Attribute history chart line colour 5.
+ * sets the background fill.
+ * Source rule 1090.
+ */
+.attribute-history-chart-line-colour-5 {
+  background-color: var(--colours-player-chart-attribute-line-5);
+}
+
+/* Attribute history chart line colour 6.
+ * sets the background fill.
+ * Source rule 1091.
+ */
+.attribute-history-chart-line-colour-6 {
+  background-color: var(--colours-player-chart-attribute-line-6);
+}
+
+/* Attribute history chart line colour 7.
+ * sets the background fill.
+ * Source rule 1092.
+ */
+.attribute-history-chart-line-colour-7 {
+  background-color: var(--colours-player-chart-attribute-line-7);
+}
+
+/* Attribute history chart line colour 8.
+ * sets the background fill.
+ * Source rule 1093.
+ */
+.attribute-history-chart-line-colour-8 {
+  background-color: var(--colours-player-chart-attribute-line-8);
+}
+
+/* Attribute history chart line colour 9.
+ * sets the background fill.
+ * Source rule 1094.
+ */
+.attribute-history-chart-line-colour-9 {
+  background-color: var(--colours-player-chart-attribute-line-9);
+}
+
+/* Attribute history chart point colour 0.
+ * sets the background fill.
+ * Source rule 1095.
+ */
+.attribute-history-chart-point-colour-0 {
+  background-color: var(--colours-player-chart-attribute-point-0);
+}
+
+/* Attribute history chart point colour 1.
+ * sets the background fill.
+ * Source rule 1096.
+ */
+.attribute-history-chart-point-colour-1 {
+  background-color: var(--colours-player-chart-attribute-point-1);
+}
+
+/* Attribute history chart point colour 10.
+ * sets the background fill.
+ * Source rule 1097.
+ */
+.attribute-history-chart-point-colour-10 {
+  background-color: var(--colours-player-chart-attribute-point-10);
+}
+
+/* Attribute history chart point colour 11.
+ * sets the background fill.
+ * Source rule 1098.
+ */
+.attribute-history-chart-point-colour-11 {
+  background-color: var(--colours-player-chart-attribute-point-11);
+}
+
+/* Attribute history chart point colour 12.
+ * sets the background fill.
+ * Source rule 1099.
+ */
+.attribute-history-chart-point-colour-12 {
+  background-color: var(--colours-player-chart-attribute-point-12);
+}
+
+/* Attribute history chart point colour 13.
+ * sets the background fill.
+ * Source rule 1100.
+ */
+.attribute-history-chart-point-colour-13 {
+  background-color: var(--colours-player-chart-attribute-point-13);
+}
+
+/* Attribute history chart point colour 14.
+ * sets the background fill.
+ * Source rule 1101.
+ */
+.attribute-history-chart-point-colour-14 {
+  background-color: var(--colours-player-chart-attribute-point-14);
+}
+
+/* Attribute history chart point colour 15.
+ * sets the background fill.
+ * Source rule 1102.
+ */
+.attribute-history-chart-point-colour-15 {
+  background-color: var(--colours-player-chart-attribute-point-15);
+}
+
+/* Attribute history chart point colour 16.
+ * sets the background fill.
+ * Source rule 1103.
+ */
+.attribute-history-chart-point-colour-16 {
+  background-color: var(--colours-player-chart-attribute-point-16);
+}
+
+/* Attribute history chart point colour 17.
+ * sets the background fill.
+ * Source rule 1104.
+ */
+.attribute-history-chart-point-colour-17 {
+  background-color: var(--colours-player-chart-attribute-point-17);
+}
+
+/* Attribute history chart point colour 18.
+ * sets the background fill.
+ * Source rule 1105.
+ */
+.attribute-history-chart-point-colour-18 {
+  background-color: var(--colours-player-chart-attribute-point-18);
+}
+
+/* Attribute history chart point colour 19.
+ * sets the background fill.
+ * Source rule 1106.
+ */
+.attribute-history-chart-point-colour-19 {
+  background-color: var(--colours-player-chart-attribute-point-19);
+}
+
+/* Attribute history chart point colour 2.
+ * sets the background fill.
+ * Source rule 1107.
+ */
+.attribute-history-chart-point-colour-2 {
+  background-color: var(--colours-player-chart-attribute-point-2);
+}
+
+/* Attribute history chart point colour 20.
+ * sets the background fill.
+ * Source rule 1108.
+ */
+.attribute-history-chart-point-colour-20 {
+  background-color: var(--colours-player-chart-attribute-point-20);
+}
+
+/* Attribute history chart point colour 21.
+ * sets the background fill.
+ * Source rule 1109.
+ */
+.attribute-history-chart-point-colour-21 {
+  background-color: var(--colours-player-chart-attribute-point-21);
+}
+
+/* Attribute history chart point colour 22.
+ * sets the background fill.
+ * Source rule 1110.
+ */
+.attribute-history-chart-point-colour-22 {
+  background-color: var(--colours-player-chart-attribute-point-22);
+}
+
+/* Attribute history chart point colour 23.
+ * sets the background fill.
+ * Source rule 1111.
+ */
+.attribute-history-chart-point-colour-23 {
+  background-color: var(--colours-player-chart-attribute-point-23);
+}
+
+/* Attribute history chart point colour 24.
+ * sets the background fill.
+ * Source rule 1112.
+ */
+.attribute-history-chart-point-colour-24 {
+  background-color: var(--colours-player-chart-attribute-point-24);
+}
+
+/* Attribute history chart point colour 25.
+ * sets the background fill.
+ * Source rule 1113.
+ */
+.attribute-history-chart-point-colour-25 {
+  background-color: var(--colours-player-chart-attribute-point-25);
+}
+
+/* Attribute history chart point colour 26.
+ * sets the background fill.
+ * Source rule 1114.
+ */
+.attribute-history-chart-point-colour-26 {
+  background-color: var(--colours-player-chart-attribute-point-26);
+}
+
+/* Attribute history chart point colour 27.
+ * sets the background fill.
+ * Source rule 1115.
+ */
+.attribute-history-chart-point-colour-27 {
+  background-color: var(--colours-player-chart-attribute-point-27);
+}
+
+/* Attribute history chart point colour 28.
+ * sets the background fill.
+ * Source rule 1116.
+ */
+.attribute-history-chart-point-colour-28 {
+  background-color: var(--colours-player-chart-attribute-point-28);
+}
+
+/* Attribute history chart point colour 29.
+ * sets the background fill.
+ * Source rule 1117.
+ */
+.attribute-history-chart-point-colour-29 {
+  background-color: var(--colours-player-chart-attribute-point-29);
+}
+
+/* Attribute history chart point colour 3.
+ * sets the background fill.
+ * Source rule 1118.
+ */
+.attribute-history-chart-point-colour-3 {
+  background-color: var(--colours-player-chart-attribute-point-3);
+}
+
+/* Attribute history chart point colour 30.
+ * sets the background fill.
+ * Source rule 1119.
+ */
+.attribute-history-chart-point-colour-30 {
+  background-color: var(--colours-player-chart-attribute-point-30);
+}
+
+/* Attribute history chart point colour 31.
+ * sets the background fill.
+ * Source rule 1120.
+ */
+.attribute-history-chart-point-colour-31 {
+  background-color: var(--colours-player-chart-attribute-point-31);
+}
+
+/* Attribute history chart point colour 32.
+ * sets the background fill.
+ * Source rule 1121.
+ */
+.attribute-history-chart-point-colour-32 {
+  background-color: var(--colours-player-chart-attribute-point-32);
+}
+
+/* Attribute history chart point colour 33.
+ * sets the background fill.
+ * Source rule 1122.
+ */
+.attribute-history-chart-point-colour-33 {
+  background-color: var(--colours-player-chart-attribute-point-33);
+}
+
+/* Attribute history chart point colour 34.
+ * sets the background fill.
+ * Source rule 1123.
+ */
+.attribute-history-chart-point-colour-34 {
+  background-color: var(--colours-player-chart-attribute-point-34);
+}
+
+/* Attribute history chart point colour 35.
+ * sets the background fill.
+ * Source rule 1124.
+ */
+.attribute-history-chart-point-colour-35 {
+  background-color: var(--colours-player-chart-attribute-point-35);
+}
+
+/* Attribute history chart point colour 36.
+ * sets the background fill.
+ * Source rule 1125.
+ */
+.attribute-history-chart-point-colour-36 {
+  background-color: var(--colours-player-chart-attribute-point-36);
+}
+
+/* Attribute history chart point colour 37.
+ * sets the background fill.
+ * Source rule 1126.
+ */
+.attribute-history-chart-point-colour-37 {
+  background-color: var(--colours-player-chart-attribute-point-37);
+}
+
+/* Attribute history chart point colour 38.
+ * sets the background fill.
+ * Source rule 1127.
+ */
+.attribute-history-chart-point-colour-38 {
+  background-color: var(--colours-player-chart-attribute-point-38);
+}
+
+/* Attribute history chart point colour 39.
+ * sets the background fill.
+ * Source rule 1128.
+ */
+.attribute-history-chart-point-colour-39 {
+  background-color: var(--colours-player-chart-attribute-point-39);
+}
+
+/* Attribute history chart point colour 4.
+ * sets the background fill.
+ * Source rule 1129.
+ */
+.attribute-history-chart-point-colour-4 {
+  background-color: var(--colours-player-chart-attribute-point-4);
+}
+
+/* Attribute history chart point colour 40.
+ * sets the background fill.
+ * Source rule 1130.
+ */
+.attribute-history-chart-point-colour-40 {
+  background-color: var(--colours-player-chart-attribute-point-40);
+}
+
+/* Attribute history chart point colour 41.
+ * sets the background fill.
+ * Source rule 1131.
+ */
+.attribute-history-chart-point-colour-41 {
+  background-color: var(--colours-player-chart-attribute-point-41);
+}
+
+/* Attribute history chart point colour 42.
+ * sets the background fill.
+ * Source rule 1132.
+ */
+.attribute-history-chart-point-colour-42 {
+  background-color: var(--colours-player-chart-attribute-point-42);
+}
+
+/* Attribute history chart point colour 43.
+ * sets the background fill.
+ * Source rule 1133.
+ */
+.attribute-history-chart-point-colour-43 {
+  background-color: var(--colours-player-chart-attribute-point-43);
+}
+
+/* Attribute history chart point colour 44.
+ * sets the background fill.
+ * Source rule 1134.
+ */
+.attribute-history-chart-point-colour-44 {
+  background-color: var(--colours-player-chart-attribute-point-44);
+}
+
+/* Attribute history chart point colour 45.
+ * sets the background fill.
+ * Source rule 1135.
+ */
+.attribute-history-chart-point-colour-45 {
+  background-color: var(--colours-player-chart-attribute-point-45);
+}
+
+/* Attribute history chart point colour 46.
+ * sets the background fill.
+ * Source rule 1136.
+ */
+.attribute-history-chart-point-colour-46 {
+  background-color: var(--colours-player-chart-attribute-point-46);
+}
+
+/* Attribute history chart point colour 47.
+ * sets the background fill.
+ * Source rule 1137.
+ */
+.attribute-history-chart-point-colour-47 {
+  background-color: var(--colours-player-chart-attribute-point-47);
+}
+
+/* Attribute history chart point colour 48.
+ * sets the background fill.
+ * Source rule 1138.
+ */
+.attribute-history-chart-point-colour-48 {
+  background-color: var(--colours-player-chart-attribute-point-48);
+}
+
+/* Attribute history chart point colour 5.
+ * sets the background fill.
+ * Source rule 1139.
+ */
+.attribute-history-chart-point-colour-5 {
+  background-color: var(--colours-player-chart-attribute-point-5);
+}
+
+/* Attribute history chart point colour 6.
+ * sets the background fill.
+ * Source rule 1140.
+ */
+.attribute-history-chart-point-colour-6 {
+  background-color: var(--colours-player-chart-attribute-point-6);
+}
+
+/* Attribute history chart point colour 7.
+ * sets the background fill.
+ * Source rule 1141.
+ */
+.attribute-history-chart-point-colour-7 {
+  background-color: var(--colours-player-chart-attribute-point-7);
+}
+
+/* Attribute history chart point colour 8.
+ * sets the background fill.
+ * Source rule 1142.
+ */
+.attribute-history-chart-point-colour-8 {
+  background-color: var(--colours-player-chart-attribute-point-8);
+}
+
+/* Attribute history chart point colour 9.
+ * sets the background fill.
+ * Source rule 1143.
+ */
+.attribute-history-chart-point-colour-9 {
+  background-color: var(--colours-player-chart-attribute-point-9);
+}
+
+/* Attribute text player left.
+ * Changes text/foreground colour.
+ * Shared rule for 9 selectors. Editing a declaration here affects the whole group below.
+ * Source rule 1144.
+ */
+.squad-dynamics-pro-con-positive-text,
+.club-vision-text-colour-positive,
+.fitness-test-result-text-colour-pass,
+.player-interest-green,
+.colours-base-green-20,
+.transfer-overview-open-text,
+.relationship-with-you-text-colour-very-close,
+.happiness-delighted-text-colour {
+  color: var(--colours-base-green-soft);
+}
+
+/* Attribute text player right.
+ * Changes text/foreground colour.
+ * Shared rule for 4 selectors. Editing a declaration here affects the whole group below.
+ * Source rule 1145.
+ */
+.relationship-with-you-text-colour-no-relationship,
+.loaned-out-color .cell-primary-text,
+.body-language-sad-text-colour {
+  color: var(--colours-base-blue-soft);
+}
+
+/* Attributes comparison bar fill left.
+ * sets the background fill; sets the outline/corner shape; controls size/placement.
+ * Source rule 1146.
+ */
+.attributes-comparison-bar-fill-left {
+  background-color: var(--skin-comparison-left);
+  border-radius: var(--border-radius-leading-small);
+  flex-wrap: var(--flex-wrap-reverse);
+}
+
+/* Attributes comparison bar fill right.
+ * sets the background fill; sets the outline/corner shape; controls size/placement.
+ * Source rule 1147.
+ */
+.attributes-comparison-bar-fill-right {
+  background-color: var(--skin-comparison-right);
+  border-radius: var(--border-radius-trailing-small);
+  flex-wrap: var(--flex-wrap-normal);
+}
+
+/* Attributes comparison bar left.
+ * sets the outline/corner shape; controls size/placement.
+ * Source rule 1148.
+ */
+.attributes-comparison-bar-left {
+  border-radius: var(--border-radius-leading-small);
+  flex-wrap: var(--flex-wrap-reverse);
+}
+
+/* Attributes comparison bar right.
+ * controls size/placement.
+ * Source rule 1149.
+ */
+.attributes-comparison-bar-right {
+  flex-wrap: var(--flex-wrap-normal);
+}
+
+/* Attributes comparison bar right.
+ * sets the outline/corner shape.
+ * Shared rule for 6 selectors. Editing a declaration here affects the whole group below.
+ * Source rule 1150.
+ */
+.attributes-comparison-bar-right,
+.tab-button-segmented-selected.tabgroup__tab--trailing,
+.team-report-segmented-bar-chart-segment-container-element.tabgroup__tab--trailing,
+.tab-button-segmented-selected.buttongroup__button--trailing,
+.team-report-segmented-bar-chart-segment-container-element.buttongroup__button--trailing,
+.buttongroup__button--trailing .sigradient {
+  border-radius: var(--border-radius-trailing-small);
+}
+
+/* Attributes key.
+ * sets the outline/corner shape; controls size/placement; sets spacing around/inside the element.
+ * Source rule 1151.
+ */
+.attributes-key {
+  padding: 5px var(--spacing-tiles);
+  justify-content: center;
+  align-items: center;
+  border-radius: var(--skin-radius-card) var(--skin-radius-card) 0 0;
+  border-top-width: 1px;
+  border-top-color: var(--skin-border-subtle);
+  border-right-width: 1px;
+  border-right-color: var(--skin-border-subtle);
+  border-left-width: 1px;
+  border-left-color: var(--skin-border-subtle);
+  flex-direction: var(--row-direction-normal);
+}
+
+/* Attributes key ip.
+ * sets the outline/corner shape; controls size/placement; sets spacing around/inside the element.
+ * Source rule 1152.
+ */
+.attributes-key-ip {
+  padding: 5px var(--global-padding-large);
+  justify-content: center;
+  align-items: center;
+  border-radius: var(--skin-radius-small) var(--skin-radius-small) 0 0;
+  border-top-width: 1px;
+  border-top-color: var(--skin-border-subtle);
+  border-right-width: 1px;
+  border-right-color: var(--skin-border-subtle);
+  border-left-width: 1px;
+  border-left-color: var(--skin-border-subtle);
+  flex-direction: var(--row-direction-normal);
+}
+
+/* Attributes key ip size min.
+ * sets the outline/corner shape; controls size/placement; sets spacing around/inside the element.
+ * Source rule 1153.
+ */
+.attributes-key-ip-size-min {
+  padding-top: 2px;
+  padding-right: 8px;
+  padding-bottom: 2px;
+  padding-left: 8px;
+  justify-content: center;
+  align-items: center;
+  border-radius: var(--skin-radius-small) var(--skin-radius-small) 0 0;
+  border-top-width: 1px;
+  border-top-color: var(--skin-border-subtle);
+  border-right-width: 1px;
+  border-right-color: var(--skin-border-subtle);
+  border-left-width: 1px;
+  border-left-color: var(--skin-border-subtle);
+  flex-direction: var(--row-direction-normal);
+}
+
+/* Attributes key key.
+ * tints background artwork.
+ * Shared rule for 2 selectors. Editing a declaration here affects the whole group below.
+ * Source rule 1154.
+ */
+.training-review-footballing-development {
+  -unity-background-image-tint-color: var(--colours-base-teal-strong);
+}
+
+/* Attributes key key oop.
+ * tints background artwork.
+ * Source rule 1155.
+ */
+.attributes-key-key-oop {
+  -unity-background-image-tint-color: var(--skin-attribute-key);
+}
+
+/* Attributes key preferable.
+ * tints background artwork.
+ * Source rule 1156.
+ */
+.attributes-key-preferable {
+  -unity-background-image-tint-color: var(--skin-attribute-preferred);
+}
+
+/* Attributes key preferable oop.
+ * tints background artwork.
+ * Shared rule for 2 selectors. Editing a declaration here affects the whole group below.
+ * Source rule 1157.
+ */
+.player_position-am-tint {
+  -unity-background-image-tint-color: var(--colours-base-purple-deep);
+}
+
+/* Attributes key training focus.
+ * tints background artwork.
+ * Source rule 1158.
+ */
+.attributes-key-training-focus {
+  -unity-background-image-tint-color: var(--skin-attribute-training);
+}
+
+/* Attributes row number.
+ * sets the outline/corner shape; controls size/placement; defines how state changes animate.
+ * Source rule 1159.
+ */
+.attributes-row-number {
+  align-items: center;
+  flex-direction: var(--row-direction-normal);
+  border-left-width: 2px;
+  border-left-color: var(--skin-transparent);
+  transition-property: var(--transition-props-paint);
+  transition-duration: var(--global-transition-long);
+  transition-timing-function: ease;
+  align-self: stretch;
+}
+
+/* Attributes row number key.
+ * sets the background fill; sets the outline/corner shape; controls size/placement.
+ * Source rule 1160.
+ */
+.attributes-row-number-key {
+  background-color: var(--skin-attribute-key-fill);
+  align-items: center;
+  flex-direction: var(--row-direction-normal);
+  align-self: stretch;
+  border-left-width: 2px;
+  border-left-color: var(--skin-attribute-key);
+}
+
+/* Attributes row number key no border.
+ * sets the background fill; controls size/placement.
+ * Source rule 1161.
+ */
+.attributes-row-number-key-no-border {
+  background-color: var(--skin-attribute-key-fill);
+  align-items: flex-start;
+  flex-direction: var(--row-direction-normal);
+  align-self: stretch;
+}
+
+/* Attributes row number key oop.
+ * sets the background fill; sets the outline/corner shape; controls size/placement.
+ * Source rule 1162.
+ */
+.attributes-row-number-key-oop {
+  background-color: var(--skin-attribute-key-fill);
+  align-items: center;
+  flex-direction: var(--row-direction-normal);
+  align-self: stretch;
+  border-left-width: 2px;
+  border-left-color: var(--skin-attribute-key);
+}
+
+/* Attributes row number no border.
+ * controls size/placement; defines how state changes animate.
+ * Source rule 1163.
+ */
+.attributes-row-number-no-border {
+  align-items: flex-start;
+  flex-direction: var(--row-direction-normal);
+  align-self: stretch;
+  transition-property: var(--transition-props-paint);
+  transition-duration: var(--global-transition-long);
+  transition-timing-function: ease;
+}
+
+/* Attributes row number preference.
+ * sets the background fill; sets the outline/corner shape; controls size/placement.
+ * Source rule 1164.
+ */
+.attributes-row-number-preference {
+  background-color: var(--skin-attribute-preferred-fill);
+  align-items: flex-start;
+  flex-direction: var(--row-direction-normal);
+  align-self: stretch;
+  border-left-width: 2px;
+  border-left-color: var(--skin-attribute-preferred);
+}
+
+/* Attributes row number preference no border.
+ * sets the background fill; controls size/placement.
+ * Source rule 1165.
+ */
+.attributes-row-number-preference-no-border {
+  background-color: var(--skin-attribute-preferred-fill);
+  align-items: flex-start;
+  flex-direction: var(--row-direction-normal);
+  align-self: stretch;
+}
+
+/* Attributes row number preference oop.
+ * sets the background fill; sets the outline/corner shape; controls size/placement.
+ * Source rule 1166.
+ */
+.attributes-row-number-preference-oop {
+  background-color: var(--skin-attribute-preferred-fill);
+  align-items: flex-start;
+  flex-direction: var(--row-direction-normal);
+  align-self: stretch;
+  border-left-width: 2px;
+  border-left-color: var(--skin-attribute-preferred);
+}
+
+/* Attributes row number training focus.
+ * sets the background fill; sets the outline/corner shape; controls size/placement.
+ * Source rule 1167.
+ */
+.attributes-row-number-training-focus {
+  background-color: var(--skin-attribute-training-fill);
+  align-items: flex-start;
+  flex-direction: var(--row-direction-normal);
+  align-self: stretch;
+  border-left-width: 2px;
+  border-left-color: var(--skin-attribute-training);
+}
+
+/* Attributes row number training focus no border.
+ * sets the background fill; controls size/placement.
+ * Source rule 1168.
+ */
+.attributes-row-number-training-focus-no-border {
+  background-color: var(--skin-attribute-training-fill);
+  align-items: flex-start;
+  flex-direction: var(--row-direction-normal);
+  align-self: stretch;
+}
+
+/* Data display graph spider graph labelled tile x large.
+ * controls size/placement.
+ * Source rule 1169.
+ */
+.attributespiderchartplayerreport.data_display-graph-spider-graph-labelled--tile-x-large {
+  width: 100%;
+  height: auto;
+  min-width: 504px;
+  max-width: 800px;
+  min-height: 408px;
+  max-height: 648px;
+}
+
+/* Five fixed sectioned reference bands, with the game drawing the live player outline above them. Band
+ * artwork is not player data.
+ */
+.attributespiderchartplayerreport.fmspiderchartlarge,
+#MatchPlayerReport #AttributeSpiderChart .fmspiderchartlarge {
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  -unity-background-image-tint-color: var(--skin-on-media);
+  --chart-outline-colour: var(--skin-border-default);
+  --chart-axis-colour: var(--skin-transparent);
+  --chart-inner-ring-colour: var(--skin-transparent);
+  --chart-fill-colour: var(--skin-transparent);
+  --chart-outline-line-width: 1;
+  --chart-axis-line-width: 0;
+  --chart-inner-ring-line-width: 0;
+  --series-line-width: 2;
+  --series-1-chartpoint-radius: 0;
+  --series-2-chartpoint-radius: 0;
+  background-image: var(--skin-radar-profile-artwork);
+  --series-fill-alpha: 0;
+  --series-1-stroke-colour: var(--skin-radar-profile-line);
+  --series-1-fill-colour: var(--skin-transparent);
+  --series-1-chartpoint-colour: var(--skin-radar-profile-line);
+  --series-2-stroke-colour: var(--skin-text-secondary);
+  --series-2-fill-colour: var(--skin-transparent);
+  --chart-graded-colour-1: var(--skin-radar-profile-line);
+  --chart-graded-colour-2: var(--skin-radar-profile-line);
+  --chart-graded-colour-3: var(--skin-radar-profile-line);
+  --chart-graded-colour-4: var(--skin-radar-profile-line);
+  --chart-graded-colour-5: var(--skin-radar-profile-line);
+}
+
+/* Hide only the numeric profile radar labels; category names and live polygon stay visible.
+ */
+.attributespiderchartplayerreport.fmspiderchartlarge #Value,
+#MatchPlayerReport #AttributeSpiderChart .fmspiderchartlarge #Value {
+  display: none;
+}
+
+/* Center category labels on the native radar anchors, preserving the existing live bindings.
+ */
+.attributespiderchartplayerreport.fmspiderchartlarge #Label,
+#MatchPlayerReport #AttributeSpiderChart .fmspiderchartlarge #Label {
+  margin-left: 0;
+  margin-right: 0;
+  padding-left: 0;
+  padding-right: 0;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 200px;
+  height: 24px;
+  translate: -50% -50%;
+  white-space: nowrap;
+  -unity-text-align: middle-center;
+  overflow: visible;
+}
+
+/* Align category names with the existing chart anchors, matching the prior working radar treatment.
+ */
+.attributespiderchartplayerreport.fmspiderchartlarge .margin-right-global-gap-extra-small,
+.attributespiderchartplayerreport.fmspiderchartlarge .margin-left-global-gap-extra-small,
+.attributespiderchartplayerreport.fmspiderchartlarge .margin-left-global-gap-small,
+#MatchPlayerReport #AttributeSpiderChart .fmspiderchartlarge .margin-right-global-gap-extra-small,
+#MatchPlayerReport #AttributeSpiderChart .fmspiderchartlarge .margin-left-global-gap-extra-small,
+#MatchPlayerReport #AttributeSpiderChart .fmspiderchartlarge .margin-left-global-gap-small {
+  margin-left: 0;
+  margin-right: 0;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+/* Anchor boxes do not push category names off the polygon; labels retain their own visible size.
+ */
+.attributespiderchartplayerreport.fmspiderchartlarge > *,
+#MatchPlayerReport #AttributeSpiderChart .fmspiderchartlarge > * {
+  width: 0;
+  min-width: 0;
+  max-width: 0;
+  height: 0;
+  min-height: 0;
+  max-height: 0;
+  overflow: visible;
+}
+
+/* Two live comparison polygons over muted bands: series 1 is the right player; series 2 is the
+ * left player. Both consume the same identities as comparison bars and copy.
+ */
+.player-comparison-spider-graph .fmspiderchartlarge.flex-grow-class {
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  -unity-background-image-tint-color: var(--skin-on-media);
+  --chart-outline-colour: var(--skin-border-default);
+  --chart-axis-colour: var(--skin-transparent);
+  --chart-inner-ring-colour: var(--skin-transparent);
+  --chart-fill-colour: var(--skin-transparent);
+  --chart-outline-line-width: 1;
+  --chart-axis-line-width: 0;
+  --chart-inner-ring-line-width: 0;
+  --series-line-width: 2;
+  --series-1-chartpoint-radius: 0;
+  --series-2-chartpoint-radius: 0;
+  background-image: var(--skin-radar-comparison-artwork);
+  --series-fill-alpha: 0.10;
+  --series-1-stroke-colour: var(--skin-radar-comparison-line);
+  --series-1-fill-colour: var(--skin-radar-comparison-fill);
+  --series-1-chartpoint-colour: var(--skin-radar-comparison-line);
+  --series-2-stroke-colour: var(--skin-radar-subject-line);
+  --series-2-fill-colour: var(--skin-radar-subject-fill);
+  --series-2-chartpoint-colour: var(--skin-radar-subject-line);
+  opacity: 1;
+}
+
+/* The value key uses the same colour as its player outline, keeping the comparison identifiable.
+ */
+.player-comparison-spider-graph .fmspiderchartlarge.flex-grow-class #subject_Value {
+  color: var(--skin-radar-subject-line);
+  background-color: var(--skin-transparent);
+  padding-left: 0;
+  padding-right: 0;
+  border-radius: 0;
+}
+
+/* The value key uses the same colour as its player outline, keeping the comparison identifiable.
+ */
+.player-comparison-spider-graph .fmspiderchartlarge.flex-grow-class #comparison_Value {
+  color: var(--skin-radar-comparison-line);
+  background-color: var(--skin-transparent);
+  padding-left: 0;
+  padding-right: 0;
+  border-radius: 0;
+}
+
+/* Tables Data
+ * Table/list rows, cells, attributes and data display roles; names do not prove table-exclusive use.
+ */
+
+/* Cell border default extra small.
+ * sets the outline/corner shape.
+ * Source rule 1635.
+ */
+.cell-border-default-extra-small {
+  border-width: 1px;
+  border-color: var(--layout-ui-cell-focus-default-border);
+  border-radius: var(--numbers-border-radius-extra-small);
+}
+
+/* Cell border width 1 radius 4.
+ * sets the outline/corner shape.
+ * Shared rule for 3 selectors. Editing a declaration here affects the whole group below.
+ * Source rule 1636.
+ */
+.cell-border-width-1-radius-4,
+.multi-box-container,
+.sub-phone-cell-empty-slot {
+  border-width: 1px;
+  border-color: var(--skin-border-subtle);
+  border-radius: var(--skin-radius-small);
+}
+
+/* Cell button.
+ * sets the background fill; sets the outline/corner shape; sets spacing around/inside the element; chooses
+ * the pointer and hotspot.
+ * Source rule 1637.
+ */
+.cell-button {
+  margin: var(--global-gap-none);
+  padding: var(--global-padding-none);
+  border-color: var(--skin-transparent);
+  background-color: var(--skin-transparent);
+  cursor: var(--cursor-clickable-1x-url) var(--cursor-clickable-1x-hotspot-x) var(--cursor-clickable-1x-hotspot-y);
+}
+
+/* Cell primary text — pointer hover.
+ * sets the background fill.
+ * Source rule 1638.
+ */
+.cell-button:hover .cell-primary-text {
+  background-color: var(--underline-hover-background);
+}
+
+/* Cell large.
+ * controls size/placement; sets spacing around/inside the element.
+ * Source rule 1639.
+ */
+.cell-large {
+  height: var(--interaction-global-height-sm);
+  flex-direction: var(--row-direction-normal);
+  align-items: center;
+  align-self: var(--flex-start-normal);
+  margin-right: var(--global-gap-close);
+  margin-left: var(--global-gap-close);
+  overflow: hidden;
+}
+
+/* Cell medium.
+ * controls size/placement; sets spacing around/inside the element; chooses the pointer and hotspot.
+ * Source rule 1640.
+ */
+.cell-medium {
+  height: 16px;
+  flex-direction: var(--row-direction-normal);
+  align-items: center;
+  margin-right: var(--none);
+  margin-left: var(--none);
+  cursor: var(--cursor-clickable-1x-url) var(--cursor-clickable-1x-hotspot-x) var(--cursor-clickable-1x-hotspot-y);
+  overflow: hidden;
+}
+
+/* Cell primary text.
+ * defines how state changes animate.
+ * Source rule 1641.
+ */
+.cell-primary-text {
+  transition: background-color var(--global-transition-buttons) var(--global-transition-animation-buttons), color var(--global-transition-buttons) var(--global-transition-animation-buttons);
+}
+
+/* Cell secondary text.
+ * Changes text/foreground colour; sets the outline/corner shape; sets spacing around/inside the element.
+ * Source rule 1642.
+ */
+.cell-secondary-text {
+  border-color: var(--skin-transparent);
+  color: var(--skin-text-secondary);
+  margin-left: var(--global-gap-close);
+  border-bottom-width: var(--global-border-regular);
+}
+
+/* Cell text underline.
+ * sets the background fill; controls size/placement.
+ * Source rule 1643.
+ */
+.cell-text-underline {
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  background-color: var(--skin-transparent);
+  bottom: 1px;
+  left: 0px;
+}
+
+/* Unity radio button container.
+ * controls size/placement.
+ * Shared rule for 5 selectors. Editing a declaration here affects the whole group below.
+ * Source rule 1644.
+ */
+.center-radio-button-template-content .unity-radio-button__container,
+.team-form-container-draw,
+.team-news-panel-comp-info,
+.player-form-fixed-bars .unity-scroll-view__content-container {
+  justify-content: center;
+}
+
+/* Change next week block schedule details.
+ * sets the outline/corner shape; controls size/placement; sets spacing around/inside the element.
+ * Source rule 1645.
+ */
+.change-next-week-block-schedule-details {
+  width: 640px;
+  padding: var(--spacing-medium---16);
+  border-width: 1px;
+  border-color: var(--skin-border-default);
+  align-items: flex-start;
+  border-radius: var(--skin-radius-card);
+  flex-direction: var(--row-direction-normal);
+}
+
+/* Chart category indicator budget additional.
+ * sets the background fill; controls size/placement; sets spacing around/inside the element.
+ * Source rule 1646.
+ */
+.chart-category-indicator-budget-additional {
+  width: 10px;
+  height: 10px;
+  background-color: var(--data-tables-accent-blue);
+  margin-right: var(--global-gap-close);
+}
+
+/* Chart category indicator budget remaining.
+ * sets the background fill; controls size/placement; sets spacing around/inside the element.
+ * Source rule 1647.
+ */
+.chart-category-indicator-budget-remaining {
+  width: 10px;
+  height: 10px;
+  background-color: var(--interaction-input-switch-border-color-warning);
+  margin-right: var(--global-gap-close);
+}
+
+/* Chart category indicator budget total.
+ * sets the background fill; controls size/placement; sets spacing around/inside the element.
+ * Source rule 1648.
+ */
+.chart-category-indicator-budget-total {
+  width: 10px;
+  height: 10px;
+  background-color: var(--colours-brand-tints-twilight-120);
+  margin-right: var(--global-gap-close);
+}
+
+/* Chart category indicator supporters casual.
+ * sets the background fill; controls size/placement; sets spacing around/inside the element.
+ * Source rule 1649.
+ */
+.chart-category-indicator-supporters-casual {
+  width: 10px;
+  height: 10px;
+  background-color: var(--colours-base-green-base);
+  margin-right: var(--spacing-padding-small---8);
+}
+
+/* Chart category indicator supporters core.
+ * sets the background fill; controls size/placement; sets spacing around/inside the element.
+ * Source rule 1650.
+ */
+.chart-category-indicator-supporters-core {
+  width: 10px;
+  height: 10px;
+  background-color: var(--colours-base-green-soft);
+  margin-right: var(--spacing-padding-small---8);
+}
+
+/* Chart category indicator supporters corporate.
+ * sets the background fill; controls size/placement; sets spacing around/inside the element.
+ * Source rule 1651.
+ */
+.chart-category-indicator-supporters-corporate {
+  width: 10px;
+  height: 10px;
+  background-color: var(--colours-base-purple-strong);
+  margin-right: var(--spacing-padding-small---8);
+}
+
+/* Chart category indicator supporters fair weather.
+ * sets the background fill; controls size/placement; sets spacing around/inside the element.
+ * Source rule 1652.
+ */
+.chart-category-indicator-supporters-fair-weather {
+  width: 10px;
+  height: 10px;
+  background-color: var(--colours-base-pink-soft);
+  margin-right: var(--spacing-padding-small---8);
+}
+
+/* Chart category indicator supporters family.
+ * sets the background fill; controls size/placement; sets spacing around/inside the element.
+ * Source rule 1653.
+ */
+.chart-category-indicator-supporters-family {
+  width: 10px;
+  height: 10px;
+  background-color: var(--colours-base-blue-soft);
+  margin-right: var(--spacing-padding-small---8);
+}
+
+/* Chart category indicator supporters hardcore.
+ * sets the background fill; controls size/placement; sets spacing around/inside the element.
+ * Source rule 1654.
+ */
+.chart-category-indicator-supporters-hardcore {
+  width: 10px;
+  height: 10px;
+  background-color: var(--colours-base-orange-strong);
+  margin-right: var(--spacing-padding-small---8);
+}
+
+/* Checkbox no border.
+ * sets the outline/corner shape.
+ * Source rule 1655.
+ */
+.checkbox-no-border {
+  border-width: 0px;
+}
+
+/* Choose numbers.
+ * sets the background fill; sets the outline/corner shape; controls size/placement; sets spacing
+ * around/inside the element.
+ * Source rule 1656.
+ */
+.choose-numbers {
+  width: 77px;
+  height: 77px;
+  padding: var(--spacing-small---8) var(--spacing-extra-small---4);
+  background-color: var(--skin-on-media-alpha-08);
+  justify-content: center;
+  align-items: center;
+  border-radius: var(--spacing-small---8);
+  flex-direction: var(--row-direction-normal);
+}
+
+/* Tables Data
+ * Table/list rows, cells, attributes and data display roles; names do not prove table-exclusive use.
+ */
+
+/* Data display data display string list item default.
+ * sets the outline/corner shape; controls size/placement; sets spacing around/inside the element.
+ * Source rule 1845.
+ */
+.data-display-data_display-string-list-item-default {
+  width: 283.5px;
+  padding: var(--numbers-border-radius-null);
+  align-items: center;
+  border-radius: var(--numbers-border-radius-null);
+  flex-direction: var(--row-direction-normal);
+}
+
+/* Data display data display table heading default default.
+ * sets the outline/corner shape; controls size/placement; sets spacing around/inside the element.
+ * Source rule 1846.
+ */
+.data-display-data_display-table-heading-default-default {
+  height: 24px;
+  padding: 0px var(--numbers-spacing-tables-compact);
+  align-items: center;
+  border-bottom-width: 1px;
+  border-bottom-color: var(--skin-border-subtle);
+  flex-direction: var(--row-direction-normal);
+  justify-content: center;
+}
+
+/* Data display data display timeline default row thematic.
+ * sets the outline/corner shape; controls size/placement; sets spacing around/inside the element.
+ * Source rule 1847.
+ */
+.data-display-data_display-timeline-default-row-thematic {
+  width: 720px;
+  padding: var(--spacing-padding-tiles);
+  justify-content: space-between;
+  align-items: center;
+  border-radius: var(--spacing-padding-extra-small---4);
+  flex-direction: var(--row-direction-normal);
+}
+
+/* Data display mindset ring 2.
+ * controls size/placement; sets spacing around/inside the element.
+ * Source rule 1848.
+ */
+.data-display-mindset-ring-2 {
+  width: 30px;
+  height: 120px;
+  padding: 6px 6px 6px 6px;
+  justify-content: center;
+  align-items: center;
+  margin-right: var(--spacing-padding-extra-small---4);
+  flex-direction: var(--row-direction-normal);
+}
+
+/* Data display player report header property 1 1.
+ * sets the outline/corner shape; controls size/placement; sets spacing around/inside the element.
+ * Source rule 1849.
+ */
+.data-display-player-report-header-property-1-1 {
+  width: 640px;
+  padding: 8px 12px;
+  border-width: 1px;
+  border-color: var(--skin-border-subtle);
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  border-radius: var(--skin-radius-card);
+}
+
+/* Data hub block left frame 135.
+ * controls size/placement.
+ * Source rule 1850.
+ */
+.data-hub-block-left-frame-135 {
+  width: 135px;
+  height: 600px;
+}
+
+/* Data hub block left frame 245.
+ * controls size/placement.
+ * Source rule 1851.
+ */
+.data-hub-block-left-frame-245 {
+  width: 245px;
+  height: 576px;
+}
+
+/* Data hub graph legend.
+ * sets the outline/corner shape; controls size/placement; sets spacing around/inside the element.
+ * Source rule 1852.
+ */
+.data-hub-graph-legend {
+  padding: var(--global-gap-close) var(--global-gap-regular);
+  border-color: var(--skin-on-media-alpha-35);
+  align-self: center;
+  margin-top: var(--global-gap-close);
+  border-top-left-radius: var(--global-radius-regular);
+  border-top-right-radius: var(--global-radius-regular);
+  border-top-width: 1px;
+  border-right-width: 1px;
+  border-left-width: 1px;
+}
+
+/* Data hub ios tabs left.
+ * sets the outline/corner shape; controls size/placement.
+ * Source rule 1853.
+ */
+.data-hub-ios-tabs-left {
+  height: 34px;
+  border-top-left-radius: var(--global-radius-small);
+  border-bottom-left-radius: var(--global-radius-small);
+}
+
+/* Data hub ios tabs right.
+ * sets the outline/corner shape; controls size/placement.
+ * Source rule 1854.
+ */
+.data-hub-ios-tabs-right {
+  height: 34px;
+  border-top-right-radius: var(--global-radius-small);
+  border-bottom-right-radius: var(--global-radius-small);
+}
+
+/* Virtualised list item.
+ * sets spacing around/inside the element.
+ * Source rule 1855.
+ */
+.data-hub-observations-containers .virtualised-list__item {
+  margin-right: 16px;
+  margin-bottom: 16px;
+}
+
+/* Virtualised list item last.
+ * sets spacing around/inside the element.
+ * Shared rule for 2 selectors. Editing a declaration here affects the whole group below.
+ * Source rule 1856.
+ */
+.data-hub-observations-containers .virtualised-list__item--last,
+.zone_map_container .streamed-object-list-item {
+  margin-right: 0;
+  margin-bottom: 16px;
+}
+
+/* Virtualised list item.
+ * sets spacing around/inside the element.
+ * Source rule 1857.
+ */
+.data-hub-observations-small-containers .virtualised-list__item {
+  margin-right: 8px;
+  margin-bottom: 8px;
+}
+
+/* Virtualised list item last.
+ * sets spacing around/inside the element.
+ * Shared rule for 2 selectors. Editing a declaration here affects the whole group below.
+ * Source rule 1858.
+ */
+.data-hub-observations-small-containers .virtualised-list__item--last,
+.zone_map_container .streamed-object-list-item {
+  margin-right: 0;
+  margin-bottom: 8px;
+}
+
+/* Data analysis much better label.
+ * Changes text/foreground colour; tints background artwork.
+ * Source rule 1859.
+ */
+.data_analysis_much_better_label {
+  color: var(--theme-color-green-soft-soft);
+  -unity-background-image-tint-color: var(--theme-color-green-soft-soft);
+}
+
+/* Data display average rating default default rating 6.
+ * sets the background fill; sets the outline/corner shape; controls size/placement; sets spacing
+ * around/inside the element.
+ * Source rule 1860.
+ */
+.data_display-average_rating-default-default-rating-6 {
+  height: 16px;
+  padding: 0 var(--spacing-small---8);
+  border-width: 1px;
+  border-color: var(--data-average-rating-border-default);
+  background-color: var(--data-average-rating-surface-6-7);
+  min-width: 42px;
+  max-width: 50px;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  border-radius: var(--skin-radius-control);
+  flex-direction: var(--row-direction-normal);
+}
+
+/* Data display average rating default default rating 7.
+ * sets the background fill; sets the outline/corner shape; controls size/placement; sets spacing
+ * around/inside the element.
+ * Source rule 1861.
+ */
+.data_display-average_rating-default-default-rating-7 {
+  height: 16px;
+  padding: 0 var(--spacing-small---8);
+  border-width: 1px;
+  border-color: var(--data-average-rating-border-default);
+  background-color: var(--data-average-rating-surface-7-8);
+  min-width: 42px;
+  max-width: 50px;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  border-radius: var(--skin-radius-control);
+  flex-direction: var(--row-direction-normal);
+}
+
+/* Data display average rating default default rating 8.
+ * sets the background fill; sets the outline/corner shape; controls size/placement; sets spacing
+ * around/inside the element.
+ * Source rule 1862.
+ */
+.data_display-average_rating-default-default-rating-8 {
+  height: 16px;
+  padding: 0 var(--spacing-small---8);
+  border-width: 1px;
+  border-color: var(--data-average-rating-border-default);
+  background-color: var(--data-average-rating-surface-8-9);
+  min-width: 42px;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  border-radius: var(--skin-radius-control);
+  flex-direction: var(--row-direction-normal);
+}
+
+/* Data display average rating default default rating 9.
+ * Changes text/foreground colour; sets the background fill; sets the outline/corner shape; controls
+ * size/placement.
+ * Source rule 1863.
+ */
+.data_display-average_rating-default-default-rating-9 {
+  height: 16px;
+  padding: 0 var(--spacing-small---8);
+  border-width: 1px;
+  border-color: var(--data-average-rating-border-default);
+  background-color: var(--data-average-rating-surface-9-10);
+  color: var(--skin-text-primary);
+  min-width: 42px;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  border-radius: var(--skin-radius-control);
+  flex-direction: var(--row-direction-normal);
+}
+
+/* Data display average rating default default rating less than 6.
+ * sets the background fill; sets the outline/corner shape; controls size/placement; sets spacing
+ * around/inside the element.
+ * Source rule 1864.
+ */
+.data_display-average_rating-default-default-rating-less-than-6 {
+  height: 16px;
+  padding: 0 var(--spacing-small---8);
+  border-width: 1px;
+  border-color: var(--data-average-rating-border-default);
+  background-color: var(--data-average-rating-surface-0-6);
+  min-width: 42px;
+  max-width: 50px;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  border-radius: var(--skin-radius-control);
+  flex-direction: var(--row-direction-normal);
+}
+
+/* Data display average rating default default rating null.
+ * sets the background fill; sets the outline/corner shape; controls size/placement; sets spacing
+ * around/inside the element.
+ * Source rule 1865.
+ */
+.data_display-average_rating-default-default-rating-null {
+  height: 16px;
+  padding: 0 var(--spacing-small---8);
+  border-width: 1px;
+  border-color: var(--data-average-rating-border-default);
+  background-color: var(--data-average-rating-surface-not-available);
+  min-width: 42px;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  border-radius: var(--skin-radius-control);
+  flex-direction: var(--row-direction-normal);
+}
+
+/* Data display cell ability regular link false.
+ * controls size/placement; sets spacing around/inside the element.
+ * Shared rule for 2 selectors. Editing a declaration here affects the whole group below.
+ * Source rule 1866.
+ */
+.data_display-cell-ability-regular-link-false,
+.data_display-cell-ability-regular-link-true {
+  height: 24px;
+  padding: 0 var(--global-padding-small);
+  justify-content: flex-start;
+  align-items: center;
+  flex-shrink: 0;
+  flex-direction: var(--row-direction-normal);
+}
+
+/* Data display cell ability small link true.
+ * sets the outline/corner shape; controls size/placement; sets spacing around/inside the element; defines
+ * how state changes animate.
+ * Source rule 1867.
+ */
+.data_display-cell-ability-small-link-true {
+  height: 20px;
+  padding: 0 var(--global-padding-small);
+  border-width: 1px;
+  border-color: var(--skin-border-subtle);
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  border-radius: var(--skin-radius-small);
+  flex-direction: var(--row-direction-normal);
+  transition: background-color var(--global-transition-buttons) var(--global-transition-animation-buttons);
+}
+
+/* Data display cell accent with icon double string regular.
+ * sets the background fill; sets the outline/corner shape; controls size/placement; sets spacing
+ * around/inside the element.
+ * Shared rule for 2 selectors. Editing a declaration here affects the whole group below.
+ * Source rule 1868.
+ */
+.data_display-cell-accent-with-icon-double-string-regular,
+.data_display-cell-accent-with-icon-regular {
+  height: 24px;
+  padding: 0 var(--global-padding-small);
+  border-width: 1px;
+  border-color: var(--skin-border-subtle);
+  background-color: var(--skin-surface-panel);
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  border-radius: var(--skin-radius-small);
+  transition: background-color var(--global-transition-buttons) var(--global-transition-animation-buttons);
+}
+
+/* Data display cell accent with icon regular default.
+ * sets the background fill; sets the outline/corner shape; controls size/placement; sets spacing
+ * around/inside the element.
+ * Source rule 1869.
+ */
+.data_display-cell-accent-with-icon-regular-default {
+  height: 24px;
+  padding: var(--numbers-border-radius-null) var(--spacing-padding-small---8);
+  border-width: 1px;
+  border-color: var(--skin-border-subtle);
+  background-color: var(--skin-on-media-alpha-08);
+  justify-content: center;
+  align-items: center;
+  border-radius: var(--skin-radius-small);
+  transition-property: var(--transition-props-paint);
+  transition-duration: var(--global-transition-buttons);
+  transition-timing-function: var(--global-transition-animation-buttons);
+}
+
+/* Data display cell accent with icon regular no height.
+ * sets the background fill; sets the outline/corner shape; controls size/placement; sets spacing
+ * around/inside the element.
+ * Source rule 1870.
+ */
+.data_display-cell-accent-with-icon-regular-no-height {
+  padding: 0 var(--spacing-small---8);
+  border-width: 1px;
+  border-color: var(--skin-border-subtle);
+  background-color: var(--skin-surface-panel);
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  border-radius: var(--skin-radius-small);
+  transition-property: var(--transition-props-paint);
+  transition-duration: var(--global-transition-buttons);
+  transition-timing-function: var(--global-transition-animation-buttons);
+}
+
+/* Data display cell combo cell default type default icon size large orientation horizontal combo 1 cell 1
+ * string.
+ * sets the outline/corner shape; controls size/placement; defines how state changes animate.
+ * Shared rule for 9 selectors. Editing a declaration here affects the whole group below.
+ * Source rule 1871.
+ */
+.data_display-cell-combo_cell-default-type-default-icon-size-large-orientation-horizontal-combo-1-cell-1-string,
+.data_display-cell-combo_cell-default-type-ico-icon-size-large-orientation-vertical-combo-1-cell-1-string,
+.data_display-cell-combo_cell-default-type-ico-icon-size-large-orientation-vertical-combo-2-cell,
+.data_display-cell-combo_cell-default-type-ico-icon-size-large-orientation-vertical-combo-2-string,
+.data_display-cell-combo_cell-default-type-icon-icon-size-medium-orientation-vertical-combo-2-cell,
+.data_display-cell-combo_cell-default-type-icon-icon-size-small-orientation-horizontal-combo-2-string,
+.data_display-cell-combo_cell-default-type-icon-icon-size-small-orientation-vertical-combo-2-cell,
+.data_display-cell-combo_cell-default-type-icon-icon-size-small-orientation-vertical-combo-2-string,
+.data_display-cell-combo_cell-default-type-player_non-cell-icon-size-large-orientation-horizontal-combo-1-cell-1-string {
+  height: 44px;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  border-radius: var(--numbers-border-radius-null);
+  flex-direction: var(--row-direction-normal);
+  transition-property: var(--transition-props-continuous);
+  transition-duration: var(--global-transition-buttons);
+  transition-timing-function: var(--global-transition-animation-buttons);
+}
+
+/* Data display cell combo cell default type default icon size medium orientation horizontal combo 2 cell.
+ * sets the outline/corner shape; controls size/placement; defines how state changes animate.
+ * Source rule 1872.
+ */
+.data_display-cell-combo_cell-default-type-default-icon-size-medium-orientation-horizontal-combo-2-cell {
+  justify-content: center;
+  align-items: center;
+  border-radius: var(--numbers-border-radius-null);
+  flex-direction: var(--row-direction-normal);
+  transition-property: var(--transition-props-paint);
+  transition-duration: var(--global-transition-buttons);
+  transition-timing-function: var(--global-transition-animation-buttons);
+}
+
+/* Data display cell combo cell default type icon icon size medium orientation vertical combo 1 cell 1
+ * string.
+ * sets the outline/corner shape; controls size/placement; defines how state changes animate.
+ * Source rule 1873.
+ */
+.data_display-cell-combo_cell-default-type-icon-icon-size-medium-orientation-vertical-combo-1-cell-1-string {
+  height: 44px;
+  flex-shrink: 0;
+  border-radius: var(--numbers-border-radius-null);
+  flex-direction: var(--row-direction-normal);
+  transition-property: var(--transition-props-paint);
+  transition-duration: var(--global-transition-medium);
+  transition-timing-function: ease-in-out;
+}
+
+/* Data display cell combo cell default type player icon size large orientation horizontal combo 2 cell.
+ * sets the outline/corner shape; controls size/placement; sets spacing around/inside the element; defines
+ * how state changes animate.
+ * Source rule 1874.
+ */
+.data_display-cell-combo_cell-default-type-player-icon-size-large-orientation-horizontal-combo-2-cell {
+  height: 44px;
+  justify-content: flex-start;
+  align-items: center;
+  flex-shrink: 0;
+  border-radius: var(--numbers-border-radius-null);
+  flex-direction: var(--row-direction-normal);
+  padding-top: 0;
+  padding-right: 0;
+  padding-bottom: 0;
+  padding-left: 0;
+  margin-top: 0;
+  margin-right: 0;
+  margin-bottom: 0;
+  margin-left: 4px;
+  transition-property: var(--transition-props-paint);
+  transition-duration: var(--global-transition-medium);
+  transition-timing-function: ease-in-out;
+}
+
+/* Data display cell combo cell default type player non cell icon size large orientation horizontal combo 2
+ * string.
+ * sets the outline/corner shape; controls size/placement; defines how state changes animate.
+ * Source rule 1875.
+ */
+.data_display-cell-combo_cell-default-type-player_non-cell-icon-size-large-orientation-horizontal-combo-2-string {
+  height: 44px;
+  justify-content: flex-start;
+  align-items: center;
+  flex-shrink: 0;
+  border-radius: var(--numbers-border-radius-null);
+  flex-direction: var(--row-direction-normal);
+  transition-property: var(--transition-props-paint);
+  transition-duration: var(--global-transition-medium);
+  transition-timing-function: ease-in-out;
+}
+
+/* Data display cell country womens leagues.
+ * sets the background fill; sets the outline/corner shape.
+ * Source rule 1876.
+ */
+.data_display-cell-country-womens-leagues {
+  border-width: 1px;
+  border-color: var(--skin-on-media-alpha-08);
+  background-color: var(--skin-component-data-display-cell-country-womens-leagues-background);
+  border-radius: var(--skin-radius-small);
+}
+
+/* Data display cell default default no border.
+ * controls size/placement; sets spacing around/inside the element.
+ * Source rule 1877.
+ */
+.data_display-cell-default-default-no-border {
+  height: 36px;
+  padding: var(--global-padding-none) var(--global-padding-regular);
+  align-items: center;
+  flex-shrink: 0;
+  flex-direction: var(--row-direction-normal);
+}
+
+/* Data display cell grey background.
+ * sets the background fill; sets the outline/corner shape; controls size/placement; sets spacing
+ * around/inside the element.
+ * Source rule 1878.
+ */
+.data_display-cell-grey-background {
+  height: 24px;
+  padding: 0 var(--spacing-small---8);
+  border-width: 1px;
+  border-color: var(--skin-border-subtle);
+  background-color: var(--skin-surface-panel);
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: var(--skin-radius-small);
+  transition-property: var(--transition-props-paint);
+  transition-duration: var(--global-transition-medium);
+  transition-timing-function: ease-in-out;
+}
+
+/* Data display cell highlighted regular left aligned active.
+ * sets the background fill; sets the outline/corner shape; controls size/placement; sets spacing
+ * around/inside the element.
+ * Source rule 1879.
+ */
+.data_display-cell-highlighted-regular-left-aligned-active {
+  height: 24px;
+  border-width: 1px;
+  border-color: var(--layout-ui-cell-focus-default-border);
+  background-color: var(--colours-brand-tints-horizon-alpha-20);
+  padding-top: 0;
+  padding-right: var(--global-padding-regular);
+  padding-bottom: 0;
+  padding-left: var(--global-padding-regular);
+  justify-content: center;
+  align-items: center;
+  border-radius: var(--skin-radius-small);
+  flex-direction: var(--row-direction-normal);
+}
+
+/* Plugin context menu bindings.
+ * controls size/placement; sets spacing around/inside the element.
+ * Source rule 1880.
+ */
+.data_display-cell-icon-and-double-string-regular .plugin-context-menu-bindings {
+  margin: 0 -8px;
+  padding: 0 var(--spacing-small---8);
+  justify-content: center;
+  align-items: center;
+  flex-direction: var(--row-direction-normal);
+}
+
+/* Data display cell icon and double string regular.
+ * sets the outline/corner shape; controls size/placement; sets spacing around/inside the element; defines
+ * how state changes animate.
+ * Shared rule for 2 selectors. Editing a declaration here affects the whole group below.
+ * Source rule 1881.
+ */
+.data_display-cell-icon-and-double-string-regular,
+.data_display-cell-radial-gauge-single-string-regular {
+  height: 28px;
+  padding: 0 var(--spacing-small---8);
+  border-width: 1px;
+  border-color: var(--skin-border-subtle);
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  border-radius: var(--skin-radius-small);
+  flex-direction: var(--row-direction-normal);
+  transition: background-color var(--global-transition-medium) ease-in-out;
+}
+
+/* Data display cell icon and string regular.
+ * sets the outline/corner shape; controls size/placement; sets spacing around/inside the element; defines
+ * how state changes animate.
+ * Source rule 1882.
+ */
+.data_display-cell-icon-and-string-regular {
+  height: 28px;
+  padding: 0 var(--spacing-padding-small---8);
+  border-width: 1px;
+  border-color: var(--layout-ui-cell-focus-default-border);
+  justify-content: center;
+  align-items: center;
+  border-radius: var(--skin-radius-small);
+  flex-direction: var(--row-direction-normal);
+  transition: background-color var(--global-transition-medium) ease-in-out;
+}
+
+/* Data display cell icon and string small.
+ * sets the outline/corner shape; controls size/placement; sets spacing around/inside the element; defines
+ * how state changes animate.
+ * Source rule 1883.
+ */
+.data_display-cell-icon-and-string-small {
+  height: 20px;
+  padding: 0 var(--spacing-small---8);
+  border-width: 1px;
+  border-color: var(--skin-border-subtle);
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  border-radius: var(--skin-radius-small);
+  margin-bottom: 0;
+  flex-direction: var(--row-direction-normal);
+  transition: background-color var(--global-transition-medium) ease-in-out;
+}
+
+/* Data display cell player header.
+ * sets the outline/corner shape; controls size/placement; sets spacing around/inside the element; defines
+ * how state changes animate.
+ * Source rule 1884.
+ */
+.data_display-cell-player-header {
+  height: 24px;
+  margin: 0 var(--spacing-padding-extra-small---4) 0 0;
+  padding: 0 var(--spacing-padding-small---8);
+  border-width: 1px;
+  border-color: var(--layout-ui-cell-focus-default-border);
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  border-radius: var(--numbers-border-radius-small);
+  flex-direction: var(--row-direction-normal);
+  transition: background-color var(--global-transition-medium) ease-in-out;
+}
+
+/* Data display cell recent form fixtures regular property 1 default.
+ * sets the outline/corner shape; controls size/placement; sets spacing around/inside the element; defines
+ * how state changes animate.
+ * Source rule 1885.
+ */
+.data_display-cell-recent-form-fixtures-regular-property-1-default {
+  height: 28px;
+  padding: 0 var(--spacing-small---8);
+  border-width: 1px;
+  border-color: var(--skin-border-subtle);
+  justify-content: center;
+  align-items: center;
+  border-radius: var(--skin-radius-small);
+  margin-bottom: 4px;
+  flex-direction: var(--row-direction-normal);
+  transition-property: var(--transition-props-paint);
+  transition-duration: var(--global-transition-medium);
+  transition-timing-function: ease-in-out;
+}
+
+/* Data display cell recent form fixtures small property 1 default.
+ * sets the outline/corner shape; controls size/placement; sets spacing around/inside the element.
+ * Source rule 1886.
+ */
+.data_display-cell-recent-form-fixtures-small-property-1-default {
+  height: 20px;
+  padding: var(--numbers-border-radius-null) var(--spacing-padding-small---8);
+  border-width: 1px;
+  border-color: var(--layout-ui-cell-focus-default-border);
+  justify-content: center;
+  align-items: center;
+  border-radius: var(--skin-radius-small);
+  flex-direction: var(--row-direction-normal);
+}
+
+/* Data display cell standard regular type loaned out.
+ * Changes text/foreground colour; sets the outline/corner shape; controls size/placement; sets spacing
+ * around/inside the element.
+ * Source rule 1887.
+ */
+.data_display-cell-standard-regular--type-loaned-out {
+  height: 28px;
+  padding: 0 var(--spacing-small---8);
+  border-width: 1px;
+  border-color: var(--communication-player-status-outbound-loan);
+  color: var(--communication-player-status-outbound-loan);
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  border-radius: var(--numbers-border-radius-extra-small);
+  flex-direction: var(--row-direction-normal);
+  transition-property: var(--transition-props-paint);
+  transition-duration: var(--global-transition-medium);
+  transition-timing-function: ease-in-out;
+}
+
+/* Data display cell standard small type loaned out.
+ * sets the background fill; sets the outline/corner shape; controls size/placement; sets spacing
+ * around/inside the element.
+ * Source rule 1888.
+ */
+.data_display-cell-standard-small--type-loaned-out {
+  height: 20px;
+  padding: 0 var(--spacing-padding-small---8);
+  border-width: 1px;
+  border-color: var(--communication-player-status-outbound-loan);
+  background-color: var(--skin-transparent);
+  justify-content: center;
+  align-items: center;
+  border-radius: var(--numbers-border-radius-extra-small);
+  flex-direction: var(--row-direction-normal);
+  transition: background-color var(--global-transition-medium) ease-in-out, color var(--global-transition-medium) ease-in-out;
+}
+
+/* Data display cell standard small type loaned out — pressed.
+ * Changes text/foreground colour; sets the background fill.
+ * Source rule 1889.
+ */
+.data_display-cell-standard-small--type-loaned-out:active:enabled {
+  background-color: var(--skin-control-hover);
+  color: var(--communication-player-status-outbound-loan);
+}
+
+/* Data display cell standard small type loaned out — pointer hover.
+ * Changes text/foreground colour; sets the background fill.
+ * Source rule 1890.
+ */
+.data_display-cell-standard-small--type-loaned-out:hover {
+  background-color: var(--skin-surface-panel);
+  color: var(--communication-player-status-outbound-loan);
+}
+
+/* Data display cell standard small type standard fmc.
+ * sets the background fill; sets the outline/corner shape; sets spacing around/inside the element.
+ * Source rule 1891.
+ */
+.data_display-cell-standard-small--type-standard-fmc {
+  padding: 0 4px 0 4px;
+  background-color: var(--skin-surface-canvas-alpha-56);
+  border-radius: var(--global-radius-small);
+}
+
+/* Data display cell standard small active type standard.
+ * sets the outline/corner shape; controls size/placement; sets spacing around/inside the element; defines
+ * how state changes animate.
+ * Source rule 1892.
+ */
+.data_display-cell-standard-small-active-type-standard {
+  height: 20px;
+  padding: 0 var(--spacing-small---8);
+  align-items: center;
+  border-radius: var(--skin-radius-medium);
+  flex-direction: var(--row-direction-normal);
+  transition-property: var(--transition-props-paint);
+  transition-duration: var(--global-transition-medium);
+  transition-timing-function: ease-in-out;
+}
+
+/* Data display cell standard warning type standard.
+ * Changes text/foreground colour; sets the background fill; sets the outline/corner shape; controls
+ * size/placement.
+ * Source rule 1893.
+ */
+.data_display-cell-standard-warning--type-standard {
+  height: 20px;
+  padding: 0 var(--spacing-small---8);
+  border-width: 1px;
+  border-color: var(--skin-border-subtle);
+  background-color: var(--skin-transparent);
+  color: var(--skin-text-secondary);
+  justify-content: flex-start;
+  align-items: center;
+  flex-shrink: 0;
+  border-radius: var(--numbers-border-radius-extra-small);
+  flex-direction: var(--row-direction-normal);
+  transition: background-color var(--global-transition-medium) ease-in-out;
+}
+
+/* Data display cell string stepper regular.
+ * sets the outline/corner shape; controls size/placement; sets spacing around/inside the element; defines
+ * how state changes animate.
+ * Source rule 1894.
+ */
+.data_display-cell-string-stepper-regular {
+  height: 28px;
+  padding: 0 8px;
+  border-width: 1px;
+  border-color: var(--skin-border-subtle);
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  border-radius: var(--skin-radius-small);
+  transition: background-color var(--global-transition-medium) ease-in-out;
+}
+
+/* Data display cell transfer offer budget footer.
+ * sets the outline/corner shape; controls size/placement; sets spacing around/inside the element; defines
+ * how state changes animate.
+ * Source rule 1895.
+ */
+.data_display-cell-transfer-offer-budget-footer {
+  width: var(--interaction-global-height-xl);
+  margin: 0px;
+  padding: 0 var(--spacing-padding-small---8);
+  border-width: 1px;
+  border-color: var(--layout-ui-cell-focus-default-border);
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  border-radius: var(--numbers-border-radius-extra-small);
+  flex-direction: var(--row-direction-normal);
+  transition-property: var(--transition-props-paint);
+  transition-duration: var(--global-transition-medium);
+  transition-timing-function: ease-in-out;
+}
+
+/* Data display cell transfer offer budget footer adjust budgets.
+ * controls size/placement.
+ * Source rule 1896.
+ */
+.data_display-cell-transfer-offer-budget-footer-adjust-budgets {
+  height: var(--interaction-global-height-xl);
+}
+
+/* Data display cell transfer offer budget footer adjust budgets small.
+ * controls size/placement.
+ * Shared rule for 2 selectors. Editing a declaration here affects the whole group below.
+ * Source rule 1897.
+ */
+.data_display-cell-transfer-offer-budget-footer-adjust-budgets-small,
+.size-global-height-regular {
+  height: var(--global-height-regular);
+}
+
+/* Data display cell transfer offer budget footer breakdown.
+ * controls size/placement; sets spacing around/inside the element.
+ * Source rule 1898.
+ */
+.data_display-cell-transfer-offer-budget-footer-breakdown {
+  height: 48px;
+  margin: 0 0 var(--spacing-padding-small---8) 0;
+  max-height: 48px;
+}
+
+/* Data display chart linear gauge default positon high data relationship none.
+ * controls size/placement; sets spacing around/inside the element.
+ * Source rule 1899.
+ */
+.data_display-chart-linear_gauge-default-positon-high-data-relationship-none {
+  width: 160px;
+  justify-content: center;
+  align-items: center;
+  margin-right: 8px;
+  flex-direction: var(--row-direction-normal);
+}
+
+/* Data display chart linear gauge default positon low data relationship none.
+ * controls size/placement; sets spacing around/inside the element.
+ * Source rule 1900.
+ */
+.data_display-chart-linear_gauge-default-positon-low-data-relationship-none {
+  width: 160px;
+  align-items: center;
+  margin-right: 8px;
+  flex-direction: var(--row-direction-normal);
+}
+
+/* Data display chart pie chart default size regular.
+ * controls size/placement; sets spacing around/inside the element.
+ * Source rule 1901.
+ */
+.data_display-chart-pie-chart-default-size-regular {
+  width: 120px;
+  height: 120px;
+  max-width: 120px;
+  max-height: 120px;
+  padding-left: var(--padding-padding-16);
+  padding-right: var(--padding-padding-16);
+}
+
+/* Data display chart pie chart default size small.
+ * controls size/placement; sets spacing around/inside the element.
+ * Source rule 1902.
+ */
+.data_display-chart-pie-chart-default-size-small {
+  width: 60px;
+  height: 60px;
+  margin-left: 8px;
+  margin-right: 8px;
+}
+
+/* Data display chart pie chart tile size small.
+ * controls size/placement; sets spacing around/inside the element.
+ * Source rule 1903.
+ */
+.data_display-chart-pie-chart-tile-size-small {
+  width: 80px;
+  height: 80px;
+  max-width: 80px;
+  max-height: 80px;
+  padding-left: var(--global-padding-regular);
+  padding-right: var(--global-padding-regular);
+}
+
+/* Data display chart radial gauge neutral large narrow track.
+ * controls size/placement.
+ * Source rule 1904.
+ */
+.data_display-chart-radial_gauge-neutral-large-narrow-track {
+  width: 32px;
+  height: 32px;
+  flex-shrink: 0;
+  justify-content: center;
+  --track-width: 4;
+  --track-colour: var(--skin-on-media-alpha-35);
+  --current-colour: var(--communication-feedback-information);
+}
+
+/* Data display chart radial gauge neutral size large position 5 8 direction clockwise type number.
+ * controls size/placement.
+ * Source rule 1905.
+ */
+.data_display-chart-radial_gauge-neutral-size-large-position-5-8-direction-clockwise-type-number {
+  width: 32px;
+  height: 32px;
+  flex-shrink: 0;
+  justify-content: center;
+  --track-width: 4;
+  --track-colour: var(--skin-on-media-alpha-35);
+  --current-colour: var(--colours-base-green-strong);
+}
+
+/* Data display chart radial gauge neutral small.
+ * controls size/placement.
+ * Source rule 1906.
+ */
+.data_display-chart-radial_gauge-neutral-small {
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+  justify-content: center;
+  --track-width: 8;
+  --track-colour: var(--skin-on-media-alpha-35);
+  --current-colour: var(--communication-feedback-information);
+}
+
+/* Data display chart radial gauge neutral xlarge.
+ * controls size/placement.
+ * Source rule 1907.
+ */
+.data_display-chart-radial_gauge-neutral-xlarge {
+  width: 64px;
+  height: 64px;
+  flex-shrink: 0;
+  justify-content: center;
+  --track-width: 8;
+  --track-colour: var(--skin-on-media-alpha-35);
+  --current-colour: var(--communication-feedback-information);
+  align-items: stretch;
+}
+
+/* Data display chart radial gauge positive to negative large.
+ * controls size/placement.
+ * Source rule 1908.
+ */
+.data_display-chart-radial_gauge-positive-to-negative-large {
+  width: 32px;
+  height: 32px;
+  flex-shrink: 0;
+  justify-content: center;
+  --track-width: 8;
+  --track-colour: var(--skin-on-media-alpha-35);
+  --current-colour: var(--colours-linear-scale-strong-5);
+  --increasing-colour: var(--colours-linear-scale-strong-1);
+}
+
+/* Data display chart stacked bar chart default type type3.
+ * sets the outline/corner shape; controls size/placement.
+ * Source rule 1909.
+ */
+.data_display-chart-stacked-bar-chart-default-type-type3 {
+  border-width: 1px;
+  border-color: var(--skin-on-media-alpha-35);
+  align-items: flex-start;
+  flex: 1 0 0;
+  border-radius: var(--interaction-global-radius-sm);
+  flex-direction: var(--row-direction-normal);
+}
+
+/* Data display coaching adjectives ratings small level elite 20.
+ * sets the background fill; sets the outline/corner shape; controls size/placement; sets spacing
+ * around/inside the element.
+ * Source rule 1910.
+ */
+.data_display-coaching_adjectives_ratings-small-level-elite-20 {
+  height: 20px;
+  padding: 0 var(--padding-padding-4);
+  border-width: 1px;
+  border-color: var(--colours-base-green-strong);
+  background-color: var(--communication-coaching-adjective-ratings-elite-surface);
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: var(--global-radius-extra-small);
+}
+
+/* Data display coaching adjectives ratings small level unsuited 1 3.
+ * sets the background fill; sets the outline/corner shape; controls size/placement; sets spacing
+ * around/inside the element.
+ * Source rule 1911.
+ */
+.data_display-coaching_adjectives_ratings-small-level-unsuited-1-3 {
+  height: 20px;
+  padding: 0 var(--padding-padding-4);
+  background-color: var(--communication-coaching-adjective-ratings-unsuited-surface);
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: var(--global-radius-extra-small);
+}
+
+/* Data display coaching ratings small.
+ * sets the background fill; sets the outline/corner shape; controls size/placement; sets spacing
+ * around/inside the element.
+ * Source rule 1912.
+ */
+.data_display-coaching_ratings-small {
+  height: 20px;
+  padding: 0 var(--padding-padding-4);
+  background-color: var(--skin-transparent);
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: var(--global-radius-extra-small);
+}
+
+/* Data display draft player selection label.
+ * sets the background fill; sets the outline/corner shape; controls size/placement; sets spacing
+ * around/inside the element.
+ * Source rule 1913.
+ */
+.data_display-draft-player-selection-label {
+  height: var(--interaction-global-height-xs);
+  padding: 0 var(--global-gap-regular);
+  border-width: var(--global-border-width-thin);
+  border-color: var(--skin-on-media-alpha-20);
+  background-color: var(--skin-on-media-alpha-16);
+  justify-content: center;
+  align-items: center;
+  flex-direction: var(--row-direction-normal);
+  border-radius: var(--border-radius-radius-4);
+}
+
+/* Data display graph progress timeline progress indicator.
+ * sets the background fill; sets the outline/corner shape; controls size/placement.
+ * Source rule 1914.
+ */
+.data_display-graph-progress_timeline-progress_indicator {
+  width: 12px;
+  height: 12px;
+  border-width: 2px;
+  border-color: var(--skin-data-data-display-graph-progress-timeline-progress-indicator-border-color);
+  background-color: var(--skin-data-data-display-graph-progress-timeline-progress-indicator-background);
+  align-self: center;
+  border-radius: var(--skin-radius-card);
+}
+
+/* Data display graph shotmap data.
+ * sets the outline/corner shape; controls size/placement.
+ * Source rule 1915.
+ */
+.data_display-graph-shotmap-data {
+  border-width: 0.5px;
+  border-color: var(--colours-base-neutral-white);
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex: 1 0 0;
+  align-self: stretch;
+}
+
+/* Data display graph shotmap data type data.
+ * sets the background fill.
+ * Source rule 1916.
+ */
+.data_display-graph-shotmap-data-type-data {
+  background-color: var(--skin-data-data-display-graph-shotmap-data-type-data-background);
+}
+
+/* Data display graph shotmap data type data opponent.
+ * sets the background fill.
+ * Source rule 1917.
+ */
+.data_display-graph-shotmap-data-type-data-opponent {
+  background-color: var(--skin-data-data-display-graph-shotmap-data-type-data-opponent-background);
+}
+
+/* Data display graph spider graph labelled tile x large.
+ * controls size/placement.
+ * Source rule 1918.
+ */
+.data_display-graph-spider-graph-labelled--tile-x-large {
+  width: 506px;
+  height: 408px;
+}
+
+/* Data display graph stats row.
+ * controls size/placement.
+ * Source rule 1919.
+ */
+.data_display-graph-stats-row {
+  width: 288px;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: var(--row-direction-normal);
+}
+
+/* Stepper step.
+ * sets the outline/corner shape; controls size/placement.
+ * Source rule 1920.
+ */
+.data_display-graphs-bans-stepper-step_bar .stepper-step {
+  height: 4px;
+  align-items: flex-start;
+  border-radius: var(--skin-radius-micro);
+  flex-direction: var(--row-direction-normal);
+}
+
+/* Data display graphs bar chart bar.
+ * sets the outline/corner shape; controls size/placement.
+ * Source rule 1921.
+ */
+.data_display-graphs-bar_chart-bar {
+  border-width: 1px;
+  border-color: var(--skin-on-media-alpha-35);
+  align-self: stretch;
+  border-radius: var(--skin-radius-hairline);
+  overflow: hidden;
+}
+
+/* Data display graphs elements bar colour cyan.
+ * sets the background fill; sets the outline/corner shape; controls size/placement; sets spacing
+ * around/inside the element.
+ * Source rule 1922.
+ */
+.data_display-graphs-elements-bar-colour-cyan {
+  padding: 8px;
+  border-width: 1px;
+  border-color: var(--skin-on-media-alpha-35);
+  background-color: var(--colours-base-orange-strong);
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  align-self: stretch;
+  flex-direction: var(--row-direction-normal);
+  border-radius: 0 0 0 0;
+}
+
+/* Data display graphs elements bar colour lime.
+ * sets the background fill; sets the outline/corner shape; controls size/placement; sets spacing
+ * around/inside the element.
+ * Source rule 1923.
+ */
+.data_display-graphs-elements-bar-colour-lime {
+  padding: 8px;
+  border-width: 1px;
+  border-color: var(--skin-on-media-alpha-35);
+  background-color: var(--colours-base-cyan-strong);
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  align-self: stretch;
+  flex-direction: var(--row-direction-normal);
+  border-radius: 0 0 0 0;
+}
+
+/* Semantic progress fills can also carry these generic chart-fill classes.
+ * Native AlwaysApplied places red/green after the generic colours, while the
+ * split core/data imports reverse that tie. Keep the proven compound pairs
+ * semantic, including rounded Create Schedule impact bars. Paint only: generic
+ * categorical bars and the native progress geometry retain their own rules.
+ */
+.progress-bar-value-red.data_display-graphs-elements-bar-colour-lime,
+.progress-bar-value-red-left-radius.data_display-graphs-elements-bar-colour-lime {
+  background-color: var(--communication-feedback-negative);
+}
+
+.progress-bar-value-green.data_display-graphs-elements-bar-colour-cyan,
+.progress-bar-value-green-right-radius.data_display-graphs-elements-bar-colour-cyan {
+  background-color: var(--communication-feedback-positive);
+}
+
+/* Data display graphs elements data badge colour ability text type primary.
+ * sets the outline/corner shape; controls size/placement.
+ * Source rule 1924.
+ */
+.data_display-graphs-elements-data_badge-colour-ability-text_type-primary {
+  border-width: 2px;
+  border-color: var(--colours-data-ratings-star-ability-orange);
+  justify-content: center;
+  align-items: center;
+  border-radius: var(--skin-radius-card);
+  flex-direction: var(--row-direction-normal);
+}
+
+/* Data display graphs elements data badge colour green text type primary.
+ * sets the outline/corner shape; controls size/placement.
+ * Source rule 1925.
+ */
+.data_display-graphs-elements-data_badge-colour-green-text_type-primary {
+  border-width: 2px;
+  border-color: var(--colours-base-green-soft);
+  justify-content: center;
+  align-items: center;
+  border-radius: var(--skin-radius-card);
+  flex-direction: var(--row-direction-normal);
+}
+
+/* Data display graphs elements data badge colour grey text type primary.
+ * sets the outline/corner shape; controls size/placement.
+ * Source rule 1926.
+ */
+.data_display-graphs-elements-data_badge-colour-grey-text_type-primary {
+  border-width: 2px;
+  border-color: var(--colours-base-grey-soft);
+  justify-content: center;
+  align-items: center;
+  border-radius: var(--skin-radius-card);
+  flex-direction: var(--row-direction-normal);
+}
+
+/* Data display graphs elements data badge colour lime text type primary.
+ * sets the outline/corner shape; controls size/placement.
+ * Source rule 1927.
+ */
+.data_display-graphs-elements-data_badge-colour-lime-text_type-primary {
+  border-width: 2px;
+  border-color: var(--colours-base-lime-soft);
+  justify-content: center;
+  align-items: center;
+  border-radius: var(--skin-radius-card);
+  flex-direction: var(--row-direction-normal);
+}
+
+/* Data display graphs elements data badge colour orange text type primary.
+ * sets the outline/corner shape; controls size/placement.
+ * Source rule 1928.
+ */
+.data_display-graphs-elements-data_badge-colour-orange-text_type-primary {
+  border-width: 2px;
+  border-color: var(--colours-base-orange-soft);
+  justify-content: center;
+  align-items: center;
+  border-radius: var(--skin-radius-card);
+  flex-direction: var(--row-direction-normal);
+}
+
+/* Data display graphs elements data badge colour red text type primary.
+ * sets the outline/corner shape; controls size/placement.
+ * Source rule 1929.
+ */
+.data_display-graphs-elements-data_badge-colour-red-text_type-primary {
+  border-width: 2px;
+  border-color: var(--colours-base-red-soft);
+  justify-content: center;
+  align-items: center;
+  border-radius: var(--skin-radius-card);
+  flex-direction: var(--row-direction-normal);
+}
+
+/* Data display graphs elements data badge colour white text type primary.
+ * sets the outline/corner shape; controls size/placement.
+ * Source rule 1930.
+ */
+.data_display-graphs-elements-data_badge-colour-white-text_type-primary {
+  border-width: 2px;
+  border-color: var(--skin-text-primary);
+  justify-content: center;
+  align-items: center;
+  border-radius: var(--skin-radius-card);
+  flex-direction: var(--row-direction-normal);
+}
+
+/* Data display graphs elements data badge colour yellow text type primary.
+ * sets the outline/corner shape; controls size/placement.
+ * Source rule 1931.
+ */
+.data_display-graphs-elements-data_badge-colour-yellow-text_type-primary {
+  border-width: 2px;
+  border-color: var(--colours-base-yellow-soft);
+  justify-content: center;
+  align-items: center;
+  border-radius: var(--skin-radius-card);
+  flex-direction: var(--row-direction-normal);
+}
+
+/* Data display graphs progress bar bar progress 2 4 size default.
+ * controls size/placement.
+ * Shared rule for 2 selectors. Editing a declaration here affects the whole group below.
+ * Source rule 1932.
+ */
+.data_display-graphs-progress_bar-bar-progress-2-4-size-default,
+.data_display-graphs-progress_bar-bar-progress-3-4-size-default {
+  width: 100px;
+  height: 8px;
+  max-height: 8px;
+  flex-direction: column;
+  align-items: flex-start;
+  flex-shrink: 0;
+}
+
+/* Data display graphs progress bar bar progress 4 4 size default.
+ * controls size/placement.
+ * Source rule 1933.
+ */
+.data_display-graphs-progress_bar-bar-progress-4-4-size-default {
+  height: 8px;
+  max-height: 8px;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+/* Data display graphs progress bar default type primary.
+ * controls size/placement.
+ * Source rule 1934.
+ */
+.data_display-graphs-progress_bar-default-type-primary {
+  width: 157px;
+  align-items: center;
+  flex-direction: var(--row-direction-normal);
+}
+
+/* Data display graphs see saw bar to left regular type huge.
+ * sets the outline/corner shape; controls size/placement.
+ * Source rule 1935.
+ */
+.data_display-graphs-see-saw-bar-to-left-regular-type-huge {
+  width: 124px;
+  height: 28px;
+  align-items: center;
+  flex-shrink: 0;
+  border-radius: 14px 0 0 14px;
+  flex-direction: var(--row-direction-normal);
+}
+
+/* Data display graphs see saw bar to left regular type huge small radius.
+ * sets the outline/corner shape; controls size/placement.
+ * Source rule 1936.
+ */
+.data_display-graphs-see-saw-bar-to-left-regular-type-huge-small-radius {
+  width: 124px;
+  height: 28px;
+  align-items: center;
+  flex-shrink: 0;
+  border-radius: var(--skin-radius-small) 0 0 var(--skin-radius-small);
+  flex-direction: var(--row-direction-normal);
+}
+
+/* Data display graphs see saw bar to right regular type huge.
+ * sets the outline/corner shape; controls size/placement.
+ * Source rule 1937.
+ */
+.data_display-graphs-see-saw-bar-to-right-regular-type-huge {
+  width: 124px;
+  height: 28px;
+  align-items: center;
+  flex-shrink: 0;
+  border-radius: 0 14px 14px 0;
+  flex-direction: var(--row-direction-normal);
+}
+
+/* Data display graphs see saw bar to right regular type huge small radius.
+ * sets the outline/corner shape; controls size/placement.
+ * Source rule 1938.
+ */
+.data_display-graphs-see-saw-bar-to-right-regular-type-huge-small-radius {
+  width: 124px;
+  height: 28px;
+  align-items: center;
+  flex-shrink: 0;
+  border-radius: 0 var(--skin-radius-small) var(--skin-radius-small) 0;
+  flex-direction: var(--row-direction-normal);
+}
+
+/* Native track rule 3308 follows see-saw rules 1936/1938. Restore that
+ * height only when both roles share an element after core/data splitting.
+ * Generic see-saws and the rounded training-track family keep their own sizes.
+ */
+.progress-bar-track-no-radius.data_display-graphs-see-saw-bar-to-left-regular-type-huge-small-radius,
+.progress-bar-track-no-radius.data_display-graphs-see-saw-bar-to-right-regular-type-huge-small-radius {
+  height: 8px;
+}
+
+/* Data display graphs stepper step bar.
+ * controls size/placement.
+ * Source rule 1939.
+ */
+.data_display-graphs-stepper-step_bar {
+  height: 4px;
+  align-items: flex-start;
+  flex-shrink: 0;
+  flex-direction: var(--row-direction-normal);
+}
+
+/* Stepper step.
+ * controls size/placement.
+ * Source rule 1940.
+ */
+.data_display-graphs-stepper-step_bar .stepper-step {
+  width: 24.8px;
+  height: 4px;
+  align-items: flex-start;
+  flex-direction: var(--row-direction-normal);
+}
+
+/* Data display graphs stepper step bar width size narrow counter.
+ * sets the outline/corner shape; controls size/placement.
+ * Source rule 1941.
+ */
+.data_display-graphs-stepper-step_bar-width-size-narrow-counter {
+  width: 68px;
+  height: 4px;
+  align-items: flex-start;
+  border-radius: var(--skin-radius-small);
+  flex-direction: var(--row-direction-normal);
+}
+
+/* Stepper step.
+ * controls size/placement.
+ * Source rule 1942.
+ */
+.data_display-graphs-stepper-step_bar-width-size-narrow-counter .stepper-step {
+  height: 4px;
+  align-items: flex-start;
+  flex-direction: var(--row-direction-normal);
+}
+
+/* Stepper step selected.
+ * sets the background fill.
+ * Shared rule for 5 selectors. Editing a declaration here affects the whole group below.
+ * Source rule 1943.
+ */
+.data_display-graphs-stepper-step_bar-width-size-narrow-counter .stepper-step--selected,
+.new-game-creation-stepper-colour .stepper-step--selected,
+.press-conference-question-stepper-style,
+.setupgame-stepper-style .stepper-step--selected,
+.biography-property1-stepper .stepper-step--selected {
+  background-color: var(--communication-feedback-information);
+}
+
+/* Data display graphs stepper step bar width size narrow counter total 3 height default.
+ * Shows these elements; sets the outline/corner shape; controls size/placement.
+ * Source rule 1944.
+ */
+.data_display-graphs-stepper-step_bar-width-size-narrow-counter-total-3-height-default {
+  display: flex;
+  width: 68px;
+  height: 4px;
+  align-items: flex-start;
+  border-radius: 20px;
+}
+
+/* Data display graphs stepper step bar width size wide counter total 3 height narrow.
+ * controls size/placement.
+ * Shared rule for 4 selectors. Editing a declaration here affects the whole group below.
+ * Source rule 1945.
+ */
+.data_display-graphs-stepper-step_bar-width-size-wide-counter-total-3-height-narrow,
+.data_display-graphs-stepper-step_bar-width-size-wide-counter-total-4-height-narrow,
+.data_display-graphs-stepper-step_bar-width-size-wide-counter-total-6-height-narrow,
+.data_display-graphs-stepper-step_bar-width-size-wide-counter-total-7-height-narrow {
+  align-items: flex-start;
+  align-self: stretch;
+  flex-direction: var(--row-direction-normal);
+}
+
+/* Data display graphs tile line chart size small tile card.
+ * controls size/placement.
+ * Source rule 1946.
+ */
+.data_display-graphs-tile-line_chart-size-small-tile-card {
+  width: 608px;
+  height: 200px;
+  flex-direction: column;
+  align-items: flex-start;
+  flex-shrink: 0;
+  overflow: hidden;
+}
+
+/* Data display graphs tile line chart size tiny tile icon.
+ * controls size/placement.
+ * Shared rule for 2 selectors. Editing a declaration here affects the whole group below.
+ * Source rule 1947.
+ */
+.data_display-graphs-tile-line_chart-size-tiny-tile-icon,
+.data_display-graphs-tile-scatter_chart-size-tiny-tile-cell {
+  width: 62px;
+  height: 32px;
+  flex-shrink: 0;
+  overflow: hidden;
+}
+
+/* Data display graphs tile elements x y axis trend neutral tile 2x4 size small.
+ * controls size/placement.
+ * Source rule 1948.
+ */
+.data_display-graphs-tile_elements-x_y_axis-trend-neutral-tile-2x4-size-small {
+  height: 56px;
+  flex-direction: column;
+  align-items: flex-start;
+  flex-shrink: 0;
+  align-self: stretch;
+}
+
+/* Streamed list view item.
+ * controls size/placement.
+ * Source rule 1949.
+ */
+.data_display-graphs-tile_elements-x_y_axis-trend-neutral-tile-2x4-size-small .streamed-list-view-item {
+  flex-grow: 1;
+  justify-content: flex-end;
+  align-self: stretch;
+}
+
+/* Virtualised list view.
+ * controls size/placement.
+ * Shared rule for 2 selectors. Editing a declaration here affects the whole group below.
+ * Source rule 1950.
+ */
+.data_display-graphs-tile_elements-x_y_axis-trend-neutral-tile-2x4-size-small .virtualised-list__view,
+.player-fitness-top-frame {
+  align-self: stretch;
+  justify-content: space-evenly;
+}
+
+/* Data display graphs xg story small.
+ * controls size/placement.
+ * Source rule 1951.
+ */
+.data_display-graphs-xg_story-small {
+  height: 160px;
+  align-self: stretch;
+}
+
+/* Data display header with border.
+ * sets the outline/corner shape; controls size/placement; sets spacing around/inside the element.
+ * Source rule 1952.
+ */
+.data_display-header-with-border {
+  padding: 4px var(--spacing-medium---16);
+  border-width: 1px;
+  border-color: var(--colours-base-grey-soft);
+  align-items: center;
+  border-radius: 20px;
+  margin-right: var(--spacing-padding-small---8);
+  flex-direction: var(--row-direction-normal);
+}
+
+/* Data display icon accent default.
+ * sets the background fill; sets the outline/corner shape; controls size/placement; sets spacing
+ * around/inside the element.
+ * Source rule 1953.
+ */
+.data_display-icon-accent-default {
+  width: 24px;
+  padding: 4px var(--numbers-border-radius-extra-small);
+  background-color: var(--skin-on-media-alpha-08);
+  flex-direction: column;
+  align-items: flex-start;
+  border-radius: 20px;
+}
+
+/* Data display information chip default.
+ * sets the outline/corner shape; controls size/placement; sets spacing around/inside the element.
+ * Source rule 1954.
+ */
+.data_display-information_chip-default {
+  padding: var(--spacing-extra-small---4) var(--spacing-small---8);
+  border-width: 1px;
+  border-color: var(--internal-design-system-surface-variant-frame);
+  align-items: center;
+  border-radius: var(--skin-radius-card);
+  flex-direction: var(--row-direction-normal);
+}
+
+/* Data display information chip default default type neutral.
+ * sets the outline/corner shape; controls size/placement; sets spacing around/inside the element.
+ * Source rule 1955.
+ */
+.data_display-information_chip-default-default-type-neutral {
+  height: 16px;
+  padding: 0 var(--padding-padding-8);
+  border-width: 1px;
+  border-color: var(--colours-base-neutral-white);
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  border-radius: var(--skin-radius-control);
+  flex-direction: var(--row-direction-normal);
+}
+
+/* Data display input draggable regular.
+ * sets the outline/corner shape; controls size/placement; sets spacing around/inside the element.
+ * Source rule 1956.
+ */
+.data_display-input-draggable-regular {
+  height: 28px;
+  padding: 0 var(--spacing-padding-extra-small---4) 0 var(--spacing-padding-small---8);
+  border-width: 1px;
+  border-color: var(--layout-ui-cell-focus-default-border);
+  justify-content: center;
+  align-items: center;
+  border-radius: var(--spacing-padding-extra-small---4);
+  flex-direction: var(--row-direction-always-normal);
+}
+
+/* Data display me timeline default.
+ * sets the background fill; sets the outline/corner shape; controls size/placement; sets spacing
+ * around/inside the element.
+ * Source rule 1957.
+ */
+.data_display-me-timeline-default {
+  padding: var(--spacing-padding-small---8) var(--spacing-padding-medium---16);
+  border-width: 1px;
+  border-color: var(--skin-border-subtle);
+  background-color: var(--skin-surface-page);
+  justify-content: center;
+  align-items: center;
+  border-radius: var(--spacing-padding-small---8);
+}
+
+/* Text container.
+ * sets the outline/corner shape; controls size/placement; sets spacing around/inside the element.
+ * Source rule 1958.
+ */
+.data_display-names-overview-pitch-indicator-regular-spacing-wide .text-container {
+  padding: 0 2px;
+  border-width: 1px;
+  max-width: 100px;
+  justify-content: center;
+  align-items: center;
+  border-radius: var(--skin-radius-small);
+  flex-direction: var(--row-direction-normal);
+}
+
+/* Data display names overview pitch indicator regular spacing wide.
+ * controls size/placement.
+ * Shared rule for 5 selectors. Editing a declaration here affects the whole group below.
+ * Source rule 1959.
+ */
+.data_display-names-overview-pitch-indicator-regular-spacing-wide,
+.inputs-inputs-date_picker-confirmation_with_selection-default,
+.property-1,
+.tile-states-stats_row,
+.colour-picker-element__gradient-area {
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Text container — pointer hover.
+ * sets the background fill; sets the outline/corner shape.
+ * Source rule 1960.
+ */
+.data_display-names-overview-pitch-indicator-regular-spacing-wide:hover .text-container {
+  border-color: var(--skin-surface-page-alpha-56);
+  background-color: var(--skin-surface-page-alpha-56);
+}
+
+/* Data display pitch perspective default.
+ * sets the background artwork; controls size/placement.
+ * Native image/font declarations stay with the game; their omitted positions are marked below.
+ * Source rule 1961.
+ */
+.data_display-pitch_perspective-default {
+  flex-shrink: 0;
+}
+
+/* Data display pitch perspective thematic.
+ * sets the background artwork; controls size/placement.
+ * Native image/font declarations stay with the game; their omitted positions are marked below.
+ * Source rule 1962.
+ */
+.data_display-pitch_perspective-thematic {
+  flex-shrink: 0;
+}
+
+/* Input squad planner data point regular type ability mode light active false.
+ * controls size/placement.
+ * Shared rule for 2 selectors. Editing a declaration here affects the whole group below.
+ * Source rule 1963.
+ */
+.data_display-pitch_perspective-thematic-small .input-squad-planner-data-point-regular-type-ability-mode-light-active-false,
+.data_display-pitch_perspective-thematic-small .input-squad-planner-data-point-regular-type-ability-mode-mixed-active-true {
+  width: 50px;
+  height: 20px;
+}
+
+/* Data display player overview pitch regular default orientation portrait.
+ * controls size/placement.
+ * Source rule 1964.
+ */
+.data_display-player-overview-pitch-regular-default-orientation-portrait {
+  width: 288px;
+  height: 412px;
+}
+
+/* Data display player report header squad number type standard.
+ * sets the background fill; sets the outline/corner shape; controls size/placement.
+ * Source rule 1965.
+ */
+.data_display-player-report-header-squad-number-type-standard {
+  translate: 0 var(--skin-player-number-offset-y);
+  min-width: var(--skin-player-number-min-width);
+  height: var(--skin-player-number-height);
+  padding-left: var(--skin-player-number-padding);
+  padding-right: var(--skin-player-number-padding);
+  flex-shrink: 0;
+  border-width: 1px;
+  border-color: var(--skin-border-subtle);
+  background-color: var(--skin-player-number-background);
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: var(--skin-radius-small);
+}
+
+.data_display-player-report-header-squad-number-type-standard .sitext {
+  white-space: nowrap;
+  color: var(--skin-player-number-foreground);
+  font-size: var(--skin-player-number-size);
+  -unity-font-definition: var(--skin-player-number-font);
+  -unity-font-style: normal;
+  -unity-text-align: middle-center;
+  flex-shrink: 0;
+}
+
+/* Data display positions suitability default type thematic orientation landscape 200px.
+ * controls size/placement.
+ * Source rule 1966.
+ */
+.data_display-positions-suitability-default-type-thematic-orientation-landscape-200px {
+  position: absolute;
+  width: 200px;
+  height: 140px;
+  top: 0;
+}
+
+/* Data display positions suitability default type thematic orientation landscape 200px container.
+ * controls size/placement.
+ * Source rule 1967.
+ */
+.data_display-positions-suitability-default-type-thematic-orientation-landscape-200px_container {
+  width: 200px;
+  height: 140px;
+}
+
+/* Data display positions suitability default type thematic orientation landscape no image.
+ * controls size/placement.
+ * Source rule 1968.
+ */
+.data_display-positions-suitability-default-type-thematic-orientation-landscape-no-image {
+  position: absolute;
+  width: 120px;
+  height: 84px;
+  top: 0;
+}
+
+/* Data display positions suitability default type thematic orientation landscape no image container.
+ * controls size/placement.
+ * Shared rule for 2 selectors. Editing a declaration here affects the whole group below.
+ * Source rule 1969.
+ */
+.data_display-positions-suitability-default-type-thematic-orientation-landscape-no-image_container,
+.tactics-accent-thematic-pitch-container-80px {
+  width: 120px;
+  height: 84px;
+}
+
+/* Data display positions suitability extra small default type thematic orientation portrait.
+ * sets the background artwork; controls size/placement; sets spacing around/inside the element.
+ * Native image/font declarations stay with the game; their omitted positions are marked below.
+ * Source rule 1970.
+ */
+.data_display-positions-suitability-extra-small-default-type-thematic-orientation-portrait {
+  width: 22px;
+  height: 32px;
+  margin-bottom: var(--global-gap-none);
+  padding-right: var(--global-padding-none);
+  padding-left: var(--global-padding-none);
+}
+
+/* Data display positions suitability extra small pitch.
+ * sets the background fill; sets the outline/corner shape.
+ * Source rule 1971.
+ */
+.data_display-positions-suitability-extra-small-pitch {
+  border-width: var(--border-width-border-width-1);
+  border-color: var(--skin-on-media-alpha-35);
+  background-color: var(--skin-surface-canvas-alpha-90);
+  border-radius: var(--border-radius-radius-1);
+}
+
+/* Data display positions suitability large default type accent orientation landscape.
+ * sets the background artwork; controls size/placement; sets spacing around/inside the element.
+ * Native image/font declarations stay with the game; their omitted positions are marked below.
+ * Source rule 1972.
+ */
+.data_display-positions-suitability-large-default-type-accent-orientation-landscape {
+  height: 120px;
+  margin-bottom: var(--spacing-padding-small---8);
+  padding-top: 8px;
+  padding-right: 2px;
+  padding-bottom: 8px;
+  padding-left: 2px;
+}
+
+/* Data display positions suitability medium default type accent orientation portrait.
+ * sets the background artwork; controls size/placement; sets spacing around/inside the element.
+ * Native image/font declarations stay with the game; their omitted positions are marked below.
+ * Source rule 1973.
+ */
+.data_display-positions-suitability-medium-default-type-accent-orientation-portrait {
+  width: 90px;
+  height: 120px;
+  margin-bottom: var(--global-gap-none);
+  padding-right: var(--global-padding-none);
+  padding-left: var(--global-padding-none);
+}
+
+/* Data display positions suitability medium small default type thematic orientation portrait.
+ * sets the background artwork; controls size/placement; sets spacing around/inside the element.
+ * Native image/font declarations stay with the game; their omitted positions are marked below.
+ * Source rule 1974.
+ */
+.data_display-positions-suitability-medium-small-default-type-thematic-orientation-portrait {
+  width: 50px;
+  height: 70px;
+  margin-bottom: var(--global-gap-none);
+  padding-right: var(--global-padding-none);
+  padding-left: var(--global-padding-none);
+}
+
+/* Data display positions suitability small default type accent orientation portrait.
+ * sets the background artwork; controls size/placement.
+ * Native image/font declarations stay with the game; their omitted positions are marked below.
+ * Source rule 1975.
+ */
+.data_display-positions-suitability-small-default-type-accent-orientation-portrait {
+  width: 32px;
+  height: 46px;
+}
+
+/* Data display positions suitability small default type thematic orientation portrait.
+ * sets the background artwork; controls size/placement.
+ * Native image/font declarations stay with the game; their omitted positions are marked below.
+ * Source rule 1976.
+ */
+.data_display-positions-suitability-small-default-type-thematic-orientation-portrait {
+  width: 32px;
+  height: 46px;
+}
+
+/* Data display radial stepper 5 medium level 1.
+ * controls size/placement; sets spacing around/inside the element.
+ * Source rule 1977.
+ */
+.data_display-radial-stepper-5-medium-level-1 {
+  width: 24px;
+  height: 24px;
+  padding: 1.5px;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  flex-direction: var(--row-direction-normal);
+}
+
+/* Data display radial stepper 5 small level 4.
+ * controls size/placement; sets spacing around/inside the element.
+ * Source rule 1978.
+ */
+.data_display-radial-stepper-5-small-level-4 {
+  width: 16px;
+  height: 16px;
+  padding: 1px;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  flex-direction: var(--row-direction-normal);
+}
+
+/* Sislider tracker.
+ * Own the shared track paint so standalone/multiplayer sliders do not inherit
+ * Unity's hardcoded grey. Keep the native track/handle dimensions and opacity.
+ * Source rule 1979.
+ */
+.data_display-range_slider-track-default-increments-none .sislider--tracker {
+  background-color: var(--skin-range-track-background);
+  border-color: var(--skin-range-track-border);
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  flex: 1 0 0;
+  border-radius: var(--skin-radius-small);
+}
+
+/* Data display selection button property default.
+ * sets the outline/corner shape; controls size/placement; sets spacing around/inside the element.
+ * Source rule 1980.
+ */
+.data_display-selection-button-property-default {
+  width: 300px;
+  height: 40px;
+  padding: var(--global-padding-large);
+  border-width: 1px;
+  border-color: var(--skin-on-media-alpha-20);
+  align-items: center;
+  border-radius: var(--global-radius-small);
+  flex-direction: var(--row-direction-normal);
+}
+
+/* Navigation tab settings circle filled icon.
+ * sets the background fill.
+ * Source rule 1981.
+ */
+.data_display-selection-button-property-default-active .navigation-tab-settings-circle-filled-icon {
+  background-color: var(--skin-surface-raised);
+}
+
+/* Data display selection button property default active.
+ * sets the background fill.
+ * Shared rule for 3 selectors. Editing a declaration here affects the whole group below.
+ * Source rule 1982.
+ */
+.data_display-selection-button-property-default-active,
+.filter-tags-property:active:enabled,
+.tab-button-segmented-selected {
+  background-color: var(--skin-selection-background);
+  color: var(--skin-selection-foreground);
+}
+
+/* Legacy data selections have their own label leaves. Pair their foreground
+ * explicitly so generic primary-text helpers cannot paint white over Volt. */
+.data_display-selection-button-property-default-active .sitext,
+.filter-tags-property:active:enabled .sitext,
+.tab-button-segmented-selected .sitext {
+  color: var(--skin-selection-foreground);
+}
+
+.data_display-selection-button-property-default-active:hover:enabled,
+.tab-button-segmented-selected:hover:enabled {
+  background-color: var(--skin-selection-hover);
+}
+
+.data_display-selection-button-property-default-active:active:enabled,
+.filter-tags-property:active:enabled,
+.tab-button-segmented-selected:active:enabled {
+  background-color: var(--skin-selection-pressed);
+}
+
+.data_display-selection-button-property-default-active:disabled,
+.tab-button-segmented-selected:disabled {
+  background-color: var(--skin-action-disabled-background);
+  color: var(--skin-action-disabled-foreground);
+}
+
+.data_display-selection-button-property-default-active:disabled .sitext,
+.tab-button-segmented-selected:disabled .sitext {
+  color: var(--skin-action-disabled-foreground);
+}
+
+/* Data display set pieces player indicator visualiser type type6.
+ * sets the background fill; sets the outline/corner shape; controls size/placement; sets spacing
+ * around/inside the element.
+ * Source rule 1983.
+ */
+.data_display-set-pieces-player-indicator-visualiser-type-type6 {
+  width: 28px;
+  height: 28px;
+  padding: 2px;
+  border-width: 1px;
+  border-color: var(--skin-surface-canvas-alpha-40);
+  background-color: var(--skin-surface-raised);
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  border-radius: var(--skin-radius-shell);
+}
+
+/* Data display sicell substitute.
+ * sets the outline/corner shape; controls size/placement; sets spacing around/inside the element; defines
+ * how state changes animate.
+ * Source rule 1984.
+ */
+.data_display-sicell-substitute {
+  margin: var(--spacing-padding-extra-small---4);
+  border-width: 1px;
+  border-color: var(--skin-border-subtle);
+  min-height: 28px;
+  border-radius: var(--numbers-border-radius-extra-small);
+  padding-left: var(--spacing-padding-new-ex);
+  padding-right: var(--spacing-padding-new-ex);
+  padding-top: var(--spacing-border-standard);
+  padding-bottom: var(--spacing-border-standard);
+  transition: background-color var(--global-transition-medium) ease-in-out;
+}
+
+/* Data display slot counter number 0 slot.
+ * sets the background fill; sets the outline/corner shape; controls size/placement; sets spacing
+ * around/inside the element.
+ * Source rule 1985.
+ */
+.data_display-slot-counter-number-0-slot {
+  height: 20px;
+  padding: 0 var(--spacing-padding-small---8);
+  background-color: var(--communication-coaching-adjective-ratings-reasonable-surface);
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: var(--numbers-border-radius-medium-small);
+}
+
+/* Data display slot counter number 1 slot.
+ * sets the background fill; sets the outline/corner shape; controls size/placement; sets spacing
+ * around/inside the element.
+ * Source rule 1986.
+ */
+.data_display-slot-counter-number-1-slot {
+  height: 20px;
+  padding: 0 var(--padding-padding-4);
+  background-color: var(--communication-coaching-adjective-ratings-elite-surface);
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: var(--global-radius-extra-small);
+}
+
+/* Data display squad planner player depth header type good depth.
+ * sets the background fill; controls size/placement; sets spacing around/inside the element.
+ * Source rule 1987.
+ */
+.data_display-squad_planner-player_depth-header-type-good-depth {
+  padding: var(--spacing-padding-extra-small---4) var(--spacing-padding-small---8);
+  background-color: var(--skin-surface-canvas-alpha-56);
+  justify-content: space-between;
+  align-items: center;
+  align-self: stretch;
+  flex-direction: var(--row-direction-normal);
+}
+
+/* Data display squad planner player depth small depth good.
+ * sets the outline/corner shape; controls size/placement.
+ * Source rule 1988.
+ */
+.data_display-squad_planner-player_depth-small-depth-good {
+  width: 144px;
+  border-width: 1px;
+  border-color: var(--skin-on-media-alpha-35);
+  min-width: 144px;
+  flex-direction: column;
+  align-items: flex-start;
+  border-radius: var(--spacing-padding-small---8);
+}
+
+/* Data display state strings state6.
+ * controls size/placement; sets spacing around/inside the element.
+ * Source rule 1989.
+ */
+.data_display-state-strings-state6 {
+  align-items: flex-start;
+  margin-bottom: 16px;
+  flex-direction: var(--row-direction-normal);
+}
+
+/* Data display string accent default fractional eg 26 30.
+ * sets the background fill; sets the outline/corner shape; controls size/placement; sets spacing
+ * around/inside the element.
+ * Source rule 1990.
+ */
+.data_display-string-accent-default-fractional-eg-26-30 {
+  padding: 4px 8px;
+  background-color: var(--skin-on-media-alpha-08);
+  flex-direction: column;
+  align-items: flex-start;
+  border-radius: var(--skin-radius-card);
+}
+
+/* Data display string accent default type Two Strings.
+ * sets the background fill; sets the outline/corner shape; controls size/placement; sets spacing
+ * around/inside the element.
+ * Source rule 1991.
+ */
+.data_display-string-accent-default-type-Two-Strings {
+  padding: 4px 8px;
+  background-color: var(--skin-on-media-alpha-08);
+  flex-direction: var(--row-direction-normal);
+  align-items: flex-start;
+  border-radius: var(--skin-radius-medium);
+}
+
+/* Data display string accent large type two strings.
+ * sets the background fill; sets the outline/corner shape; controls size/placement; sets spacing
+ * around/inside the element.
+ * Source rule 1992.
+ */
+.data_display-string-accent-large-type-two-strings {
+  height: 28px;
+  padding: 0 var(--spacing-small---8);
+  background-color: var(--skin-on-media-alpha-08);
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  border-radius: var(--numbers-border-radius-medium);
+}
+
+/* Data display string accent small type two strings.
+ * sets the background fill; sets the outline/corner shape; controls size/placement; sets spacing
+ * around/inside the element.
+ * Source rule 1993.
+ */
+.data_display-string-accent-small-type-two-strings {
+  height: 20px;
+  padding: 0 var(--spacing-small---8);
+  background-color: var(--skin-on-media-alpha-08);
+  flex-direction: var(--row-direction-normal);
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  border-radius: var(--numbers-border-radius-medium);
+}
+
+/* Data display string list item pro con type pro.
+ * controls size/placement; sets spacing around/inside the element.
+ * Source rule 1994.
+ */
+.data_display-string-list-item-pro-con-type-pro {
+  align-items: flex-start;
+  margin-bottom: 0;
+  flex-direction: var(--row-direction-normal);
+}
+
+/* Data display string thematic accent.
+ * sets the outline/corner shape; controls size/placement; sets spacing around/inside the element.
+ * Source rule 1995.
+ */
+.data_display-string-thematic-accent {
+  padding: 0 var(--padding-padding-4);
+  border-width: var(--global-border-width-thin);
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  flex-shrink: 0;
+  border-radius: var(--global-radius-small);
+  flex-direction: var(--row-direction-normal);
+}
+
+/* Recycled rating labels may retain both green and lime text classes. Use
+ * the current painted host's category instead of the stale leaf class order. */
+.data_display-string-thematic-accent.badges-background-color-lime-soft > .sitext {
+  color: var(--skin-rating-badge-lime-foreground);
+}
+
+.data_display-string-thematic-accent.badges-background-color-green-soft > .sitext {
+  color: var(--skin-rating-badge-green-foreground);
+}
+
+/* Data display string thematic accent medium.
+ * sets the outline/corner shape; controls size/placement; sets spacing around/inside the element.
+ * Source rule 1996.
+ */
+.data_display-string-thematic-accent-medium {
+  height: 24px;
+  padding: 0 var(--padding-padding-4);
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  flex-wrap: wrap;
+  border-radius: var(--global-radius-extra-small);
+  flex-direction: var(--row-direction-normal);
+}
+
+/* Data display string thematic accent medium colour black no padding.
+ * sets the background fill; sets the outline/corner shape; controls size/placement.
+ * Source rule 1997.
+ */
+.data_display-string-thematic-accent-medium-colour-black-no-padding {
+  height: 24px;
+  background-color: var(--skin-surface-canvas-alpha-16);
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  flex-shrink: 0;
+  flex-wrap: wrap;
+  border-radius: 0;
+  flex-direction: var(--row-direction-normal);
+}
+
+/* Data display string thematic accent small.
+ * sets the outline/corner shape; controls size/placement; sets spacing around/inside the element.
+ * Source rule 1998.
+ */
+.data_display-string-thematic-accent-small {
+  height: 20px;
+  padding: 0 var(--padding-padding-4);
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  flex-wrap: wrap;
+  border-radius: var(--global-radius-extra-small);
+  flex-direction: var(--row-direction-normal);
+}
+
+/* Data display string with icon single default icon size large string type secondary text size small.
+ * Changes text/foreground colour; controls size/placement.
+ * Source rule 1999.
+ */
+.data_display-string_with_icon-single-default-icon_size-large-string_type-secondary-text_size-small {
+  color: var(--skin-text-secondary);
+  align-items: center;
+  flex-direction: var(--row-direction-normal);
+}
+
+/* Data display string with icon single left aligned icon size small string type primary text size small
+ * flex.
+ * controls size/placement.
+ * Source rule 2000.
+ */
+.data_display-string_with_icon-single-left-aligned-icon_size-small-string_type-primary-text_size-small_flex {
+  align-items: center;
+  flex: 1 0 0;
+  flex-direction: var(--row-direction-normal);
+}
+
+/* Data display table cell default advice.
+ * controls size/placement.
+ * Shared rule for 2 selectors. Editing a declaration here affects the whole group below.
+ * Source rule 2001.
+ */
+.data_display-table-cell-default-advice,
+.horizontal-container-vertical-center {
+  align-items: center;
+  flex-direction: var(--row-direction-normal);
+}
+
+/* Data display table cell default default type 0 basic text space compact accent false orientation default
+ * selected false.
+ * sets the background fill; controls size/placement; sets spacing around/inside the element.
+ * Shared rule for 3 selectors. Editing a declaration here affects the whole group below.
+ * Source rule 2002.
+ */
+.data_display-table-cell-default-default-type-0---basic-text-space-compact-accent-false-orientation-default-selected-false,
+.data_display-table-cell-default-default-type-1---competition-table-space-compact-accent-false-orientation-default-selected-false,
+.data_display-table-cell-default-default-type-2--team-and-primary-thumbnail-and-player-space-compact-accent-false-orientation-horizontal-selected-false {
+  height: 28px;
+  padding: var(--numbers-border-radius-null) var(--global-padding-small);
+  /* Let the owning row/card show through ordinary cell content. */
+  background-color: var(--skin-table-cell-background);
+  align-items: center;
+  align-self: stretch;
+  flex-direction: var(--row-direction-normal);
+}
+
+/* Data display table cell default default type 0 basic text space compact accent true orientation default
+ * selected false.
+ * sets the background fill; controls size/placement; sets spacing around/inside the element.
+ * Source rule 2003.
+ */
+.data_display-table-cell-default-default-type-0---basic-text-space-compact-accent-true-orientation-default-selected-false {
+  height: 28px;
+  padding: var(--numbers-border-radius-null) var(--global-padding-small);
+  /* Cell geometry is independent of the owning row surface/stripe. */
+  background-color: var(--skin-table-cell-background);
+  align-items: center;
+  align-self: stretch;
+  flex-direction: var(--row-direction-normal);
+}
+
+/* Data display table cell default default type 0 basic text space regular accent false orientation default
+ * selected false.
+ * sets the background fill; controls size/placement; sets spacing around/inside the element.
+ * Shared rule for 2 selectors. Editing a declaration here affects the whole group below.
+ * Source rule 2004.
+ */
+.data_display-table-cell-default-default-type-0---basic-text-space-regular-accent-false-orientation-default-selected-false,
+.data_display-table-cell-default-default-type-1---star-rating-ability-space-regular-accent-false-orientation-default-selected-false {
+  height: 36px;
+  padding: var(--numbers-border-radius-null) var(--global-padding-small);
+  /* Let the owning row/card show through ordinary cell content. */
+  background-color: var(--skin-table-cell-background);
+  align-items: center;
+  align-self: stretch;
+  flex-direction: var(--row-direction-normal);
+}
+
+/* Data display table cell default default type 0 basic text space regular accent true orientation default
+ * selected false.
+ * sets the background fill; controls size/placement; sets spacing around/inside the element.
+ * Source rule 2005.
+ */
+.data_display-table-cell-default-default-type-0---basic-text-space-regular-accent-true-orientation-default-selected-false {
+  width: 216px;
+  height: 36px;
+  padding: var(--numbers-border-radius-null) var(--global-padding-small);
+  /* Cell geometry is independent of the owning row surface/stripe. */
+  background-color: var(--skin-table-cell-background);
+  align-items: center;
+  flex-shrink: 0;
+  flex-direction: var(--row-direction-normal);
+}
+
+/* Data display table cell default default type 0 basic text space spacious accent false orientation default
+ * selected false.
+ * sets the background fill; controls size/placement; sets spacing around/inside the element.
+ * Shared rule for 2 selectors. Editing a declaration here affects the whole group below.
+ * Source rule 2006.
+ */
+.data_display-table-cell-default-default-type-0---basic-text-space-spacious-accent-false-orientation-default-selected-false,
+.data_display-table-cell-default-default-type-1-2--text-basic-space-spacious-accent-false-orientation-default-selected-false {
+  height: 52px;
+  padding: var(--numbers-border-radius-null) var(--global-padding-small);
+  /* Let the owning row/card show through ordinary cell content. */
+  background-color: var(--skin-table-cell-background);
+  justify-content: flex-end;
+  align-items: center;
+  align-self: stretch;
+  flex-direction: var(--row-direction-normal);
+}
+
+/* Data display table cell default default type 0 basic text space spacious accent true orientation default
+ * selected false.
+ * sets the background fill; controls size/placement; sets spacing around/inside the element.
+ * Source rule 2007.
+ */
+.data_display-table-cell-default-default-type-0---basic-text-space-spacious-accent-true-orientation-default-selected-false {
+  height: 52px;
+  padding: var(--numbers-border-radius-null) var(--global-padding-small);
+  /* Cell geometry is independent of the owning row surface/stripe. */
+  background-color: var(--skin-table-cell-background);
+  justify-content: flex-end;
+  align-items: center;
+  align-self: stretch;
+  flex-direction: var(--row-direction-normal);
+}
+
+/* Data display table cell default default type 1.
+ * controls size/placement; sets spacing around/inside the element.
+ * Shared rule for 5 selectors. Editing a declaration here affects the whole group below.
+ * Source rule 2008.
+ */
+.data_display-table-cell-default-default-type-1,
+.data_display-table-cell-default-default-type-1---icon-average-rating-space-spacious-accent-false-orientation-default-selected-true,
+.data_display-table-cell-default-default-type-1---text-basic-space-spacious-accent-false-orientation-default-selected-true,
+.data_display-table-cell-default-default-type-1-text-basic-space-spacious-accent-true-orientation-default-selected-false,
+.data_display-table-cell-default-default-type-2---primary-and-secondary-player-and-description-space-spacious-accent-false-orientation-vertical-selected-true {
+  height: 52px;
+  padding: var(--numbers-border-radius-null) var(--global-padding-small);
+  align-items: center;
+  align-self: stretch;
+  flex-direction: var(--row-direction-normal);
+}
+
+/* Data display table cell default default type 1 accent string space spacious accent false orientation
+ * default selected false.
+ * sets the background fill; controls size/placement; sets spacing around/inside the element.
+ * Shared rule for 2 selectors. Editing a declaration here affects the whole group below.
+ * Source rule 2009.
+ */
+.data_display-table-cell-default-default-type-1---accent-string-space-spacious-accent-false-orientation-default-selected-false,
+.data_display-table-cell-default-default-type-1---selection_checkbox-space-spacious-accent-false-orientation-default-selected-false {
+  height: 52px;
+  padding: var(--numbers-border-radius-null) var(--global-padding-small);
+  /* Let the owning row/card show through ordinary cell content. */
+  background-color: var(--skin-table-cell-background);
+  justify-content: center;
+  align-items: center;
+  align-self: stretch;
+  flex-direction: var(--row-direction-normal);
+}
+
+/* Data display table cell default default type 1 button action space spacious accent false orientation
+ * default selected false.
+ * sets the background fill; controls size/placement; sets spacing around/inside the element.
+ * Source rule 2010.
+ */
+.data_display-table-cell-default-default-type-1---button-action-space-spacious-accent-false-orientation-default-selected-false {
+  height: 52px;
+  padding: var(--numbers-border-radius-null) var(--global-padding-small);
+  /* Let the owning row/card show through ordinary cell content. */
+  background-color: var(--skin-table-cell-background);
+  align-items: center;
+  flex-direction: var(--row-direction-normal);
+}
+
+/* Data display table cell default default type 1 button action space spacious accent true orientation
+ * default selected false.
+ * sets the background fill; controls size/placement; sets spacing around/inside the element.
+ * Source rule 2011.
+ */
+.data_display-table-cell-default-default-type-1---button-action-space-spacious-accent-true-orientation-default-selected-false {
+  height: 52px;
+  padding: var(--numbers-border-radius-null) var(--global-padding-small);
+  background-color: var(--skin-on-media-alpha-04);
+  align-items: center;
+  align-self: stretch;
+  flex-direction: var(--row-direction-normal);
+}
+
+/* Data display table cell default default type 1 competition table space spacious accent false orientation
+ * default selected false.
+ * sets the background fill; controls size/placement; sets spacing around/inside the element.
+ * Shared rule for 2 selectors. Editing a declaration here affects the whole group below.
+ * Source rule 2012.
+ */
+.data_display-table-cell-default-default-type-1---competition-table-space-spacious-accent-false-orientation-default-selected-false,
+.data_display-table-cell-default-default-type-3---thumbnail-primary-and-secondary-thumbnail-player-and-desc-space-spacious-accent-false-orientation-vertical-selected-false {
+  height: 52px;
+  padding: var(--numbers-border-radius-null) var(--global-padding-small);
+  /* Let the owning row/card show through ordinary cell content. */
+  background-color: var(--skin-table-cell-background);
+  align-items: center;
+  align-self: stretch;
+  flex-direction: var(--row-direction-normal);
+}
+
+/* Data display table cell default default type 1 flag and primary nationality short space compact accent
+ * false orientation default selected false.
+ * sets the background fill; controls size/placement; sets spacing around/inside the element.
+ * Shared rule for 2 selectors. Editing a declaration here affects the whole group below.
+ * Source rule 2013.
+ */
+.data_display-table-cell-default-default-type-1---flag-and-primary-nationality-short-space-compact-accent-false-orientation-default-selected-false,
+.data_display-table-cell-default-default-type-1---icon-with-string-space-compact-accent-false-orientation-default-selected-false {
+  height: 28px;
+  padding: var(--numbers-border-radius-null) var(--global-padding-small);
+  /* Let the owning row/card show through ordinary cell content. */
+  background-color: var(--skin-table-cell-background);
+  justify-content: flex-end;
+  align-items: center;
+  align-self: stretch;
+  flex-direction: var(--row-direction-normal);
+}
+
+/* Data display table cell default default type 1 flag and primary nationality short space regular accent
+ * false orientation default selected false.
+ * controls size/placement; sets spacing around/inside the element.
+ * Source rule 2014.
+ */
+.data_display-table-cell-default-default-type-1---flag-and-primary-nationality-short-space-regular-accent-false-orientation-default-selected-false {
+  padding: var(--numbers-border-radius-null) var(--global-padding-small);
+  align-items: center;
+  align-self: stretch;
+  flex-direction: var(--row-direction-normal);
+}
+
+/* Data display table cell default default type 1 icon button space spacious accent true orientation default
+ * selected false.
+ * controls size/placement; sets spacing around/inside the element.
+ * Source rule 2015.
+ */
+.data_display-table-cell-default-default-type-1---icon-button-space-spacious-accent-true-orientation-default-selected-false {
+  padding: var(--numbers-border-radius-null) var(--global-padding-small);
+  align-items: center;
+  flex-direction: var(--row-direction-normal);
+}
+
+/* Data display table cell default default type 1 icon form icon space spacious accent false orientation
+ * default selected false.
+ * controls size/placement.
+ * Source rule 2016.
+ */
+.data_display-table-cell-default-default-type-1---icon-form-icon-space-spacious-accent-false-orientation-default-selected-false {
+  height: 52px;
+  align-items: center;
+  align-self: var(--flex-start-normal);
+  flex-direction: var(--row-direction-normal);
+  justify-content: center;
+}
+
+/* Data display table cell default default type 1 progress bar with label space regular accent true
+ * orientation default selected false.
+ * sets the background fill; controls size/placement; sets spacing around/inside the element.
+ * Source rule 2017.
+ */
+.data_display-table-cell-default-default-type-1---progress-bar-with-label-space-regular-accent-true-orientation-default-selected-false {
+  height: 36px;
+  padding: var(--numbers-border-radius-null) var(--global-padding-small);
+  /* Cell geometry is independent of the owning row surface/stripe. */
+  background-color: var(--skin-table-cell-background);
+  justify-content: flex-end;
+  align-items: center;
+  align-self: stretch;
+  flex-direction: var(--row-direction-normal);
+}
+
+/* Data display table cell default default type 1 recent form space compact accent true orientation default
+ * selected false.
+ * controls size/placement; sets spacing around/inside the element.
+ * Source rule 2018.
+ */
+.data_display-table-cell-default-default-type-1---recent-form-space-compact-accent-true-orientation-default-selected-false {
+  height: 28px;
+  padding: var(--numbers-border-radius-null) var(--global-padding-small);
+  align-items: center;
+  flex-direction: var(--row-direction-normal);
+}
+
+/* Data display table cell default default type 1 star rating ability space spacious accent false
+ * orientation default selected false.
+ * sets the background fill; controls size/placement.
+ * Source rule 2019.
+ */
+.data_display-table-cell-default-default-type-1---star-rating-ability-space-spacious-accent-false-orientation-default-selected-false {
+  height: 28px;
+  /* Let the owning row/card show through ordinary cell content. */
+  background-color: var(--skin-table-cell-background);
+  align-items: center;
+  flex-direction: var(--row-direction-normal);
+}
+
+/* Data display table cell default default type 1 text basic space compact accent true orientation default
+ * selected false.
+ * controls size/placement; sets spacing around/inside the element.
+ * Source rule 2020.
+ */
+.data_display-table-cell-default-default-type-1---text-basic-space-compact-accent-true-orientation-default-selected-false {
+  height: 28px;
+  padding: var(--numbers-border-radius-null) var(--global-padding-small);
+  align-items: center;
+  align-self: stretch;
+  flex-direction: var(--row-direction-normal);
+}
+
+/* Data display table cell default default type 1 text basic space regular accent false orientation default
+ * selected false.
+ * sets the background fill; controls size/placement; sets spacing around/inside the element.
+ * Shared rule for 2 selectors. Editing a declaration here affects the whole group below.
+ * Source rule 2021.
+ */
+.data_display-table-cell-default-default-type-1---text-basic-space-regular-accent-false-orientation-default-selected-false,
+.data_display-table-cell-default-default-type-2--thumbnail-primary-and-secondary-thumbnail-and-player-space-regular-accent-false-orientation-horizontal-selected-false {
+  height: 36px;
+  padding: var(--numbers-border-radius-null) var(--global-padding-small);
+  /* Let the owning row/card show through ordinary cell content. */
+  background-color: var(--skin-table-cell-background);
+  align-items: center;
+  flex-shrink: 0;
+  flex-direction: var(--row-direction-normal);
+}
+
+/* Data display table cell default default type 1 text basic space spacious accent false orientation default
+ * selected false.
+ * controls size/placement; sets spacing around/inside the element.
+ * Source rule 2022.
+ */
+.data_display-table-cell-default-default-type-1---text-basic-space-spacious-accent-false-orientation-default-selected-false {
+  height: 52px;
+  padding: var(--numbers-border-radius-null) var(--global-padding-small);
+  justify-content: flex-end;
+  align-items: center;
+  align-self: stretch;
+  flex-direction: var(--row-direction-normal);
+}
+
+/* Data display table cell default default type 2 thumbnail primary and secondary thumbnail and player space
+ * compact accent false orientation horizontal selected false.
+ * sets the background fill; controls size/placement; sets spacing around/inside the element.
+ * Source rule 2023.
+ */
+.data_display-table-cell-default-default-type-2---thumbnail-primary-and-secondary-thumbnail-and-player-space-compact-accent-false-orientation-horizontal-selected-false {
+  height: 28px;
+  padding: var(--numbers-border-radius-null) var(--global-padding-small);
+  /* Let the owning row/card show through ordinary cell content. */
+  background-color: var(--skin-table-cell-background);
+  align-items: center;
+  flex-shrink: 0;
+  flex-direction: var(--row-direction-normal);
+}
+
+/* Data display table cell default default type 2 team and primary thumbnail and player space spacious
+ * accent false orientation horizontal selected false.
+ * controls size/placement; sets spacing around/inside the element.
+ * Source rule 2024.
+ */
+.data_display-table-cell-default-default-type-2--team-and-primary-thumbnail-and-player-space-spacious-accent-false-orientation-horizontal-selected-false {
+  height: 52px;
+  padding: var(--numbers-border-radius-null) var(--global-padding-small);
+  justify-content: center;
+  align-items: center;
+  align-self: stretch;
+  flex-direction: var(--row-direction-normal);
+}
+
+/* Data display table cell default default type 3 badge primary and secondary badge team and league space
+ * regular accent false orientation horizontal selected false.
+ * sets the background fill; controls size/placement.
+ * Source rule 2025.
+ */
+.data_display-table-cell-default-default-type-3---badge-primary-and-secondary-badge-team-and-league-space-regular-accent-false-orientation-horizontal-selected-false {
+  height: 36px;
+  /* Let the owning row/card show through ordinary cell content. */
+  background-color: var(--skin-table-cell-background);
+  align-items: center;
+  flex-direction: var(--row-direction-normal);
+}
+
+/* Data display table cell default justify start.
+ * sets the background fill; controls size/placement; sets spacing around/inside the element.
+ * Source rule 2026.
+ */
+.data_display-table-cell-default-justify-start {
+  height: 52px;
+  padding: var(--numbers-border-radius-null) var(--global-padding-small);
+  /* Cell geometry is independent of the owning row surface/stripe. */
+  background-color: var(--skin-table-cell-background);
+  justify-content: flex-start;
+  align-items: center;
+  align-self: stretch;
+  flex-direction: var(--row-direction-normal);
+}
+
+/* Data display table column default default type set piece tendencies compact.
+ * controls size/placement.
+ * Source rule 2027.
+ */
+.data_display-table-column-default-default-type-set-piece-tendencies-compact {
+  flex-direction: column;
+  align-items: flex-start;
+  flex: 1 0 0;
+}
+
+/* Data display table heading default default.
+ * sets the outline/corner shape; controls size/placement; sets spacing around/inside the element.
+ * Source rule 2028.
+ */
+.data_display-table-heading-default-default {
+  padding: var(--numbers-spacing-tables-regular);
+  align-items: center;
+  align-self: stretch;
+  border-bottom-width: 1px;
+  border-bottom-color: var(--skin-on-media-alpha-16);
+  flex-direction: var(--row-direction-normal);
+}
+
+/* Data display tables player position default position mc.
+ * sets the background fill; sets the outline/corner shape; controls size/placement; sets spacing
+ * around/inside the element.
+ * Source rule 2029.
+ */
+.data_display-tables-player_position-default-position-mc {
+  width: 40px;
+  height: 24px;
+  border-width: 1px;
+  border-color: var(--skin-on-media-alpha-35);
+  background-color: var(--colours-tactics-midfield-foreground);
+  justify-content: center;
+  align-items: center;
+  border-radius: var(--skin-radius-small);
+  margin-right: 11px;
+  flex-direction: var(--row-direction-always-normal);
+}
+
+/* Data display tables player status badge stacked default stacked true.
+ * controls size/placement; sets spacing around/inside the element.
+ * Source rule 2030.
+ */
+.data_display-tables-player_status_badge_stacked-default-stacked-true {
+  width: 38px;
+  height: 20px;
+  flex-shrink: 0;
+  margin-right: 16px;
+}
+
+/* Data display tables player status badge stacked default stacked true squad planner version.
+ * controls size/placement.
+ * Source rule 2031.
+ */
+.data_display-tables-player_status_badge_stacked-default-stacked-true-squad-planner-version {
+  width: 76px;
+  height: 24px;
+  flex-shrink: 0;
+}
+
+/* Data display tactics kit squad outfield size medium.
+ * controls size/placement.
+ * Shared rule for 5 selectors. Editing a declaration here affects the whole group below.
+ * Source rule 2032.
+ */
+.data_display-tactics-kit-squad-outfield-size-medium,
+.game-concepts-size-medium,
+.scaling-icons-condition-medium,
+.scaling-icons-sharpness-sharpness-medium,
+.ui-concepts-size-medium {
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+}
+
+/* Data display tactics kit squad outfield transparent size medium.
+ * controls size/placement; changes opacity for the whole element and its contents.
+ * Source rule 2033.
+ */
+.data_display-tactics-kit-squad-outfield-transparent-size-medium {
+  opacity: 0.6;
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+}
+
+/* Data display timeline default row thematic.
+ * sets the outline/corner shape; controls size/placement; sets spacing around/inside the element.
+ * Source rule 2034.
+ */
+.data_display-timeline-default-row-thematic {
+  padding: var(--spacing-tiles);
+  justify-content: space-between;
+  align-items: center;
+  align-self: stretch;
+  border-radius: var(--spacing-extra-small---4);
+  flex-direction: var(--row-direction-normal);
+}
+
+/* Data display timeline icon indicator default type middle.
+ * sets the outline/corner shape; controls size/placement; sets spacing around/inside the element.
+ * Source rule 2035.
+ */
+.data_display-timeline-icon-indicator-default-type-middle {
+  height: 48px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  border-radius: 0 0 var(--skin-radius-card) var(--skin-radius-card);
+  margin-right: var(--spacing-tiles);
+}
+
+/* Data hub checkbox dropdown row.
+ * controls size/placement.
+ * Source rule 2036.
+ */
+.data_hub_checkbox_dropdown_row {
+  min-width: 250px;
+}
+
+/* Data knowledge level 0 basic.
+ * Changes text/foreground colour.
+ * Shared rule for 11 selectors. Editing a declaration here affects the whole group below.
+ * Source rule 2037.
+ */
+.data_knowledge_level_0_basic,
+.data_knowledge_level_1_average,
+.data_knowledge_level_5_verygood,
+.data_knowledge_level_6_superb,
+.data_knowledge_level_9_peerless,
+.injury-susceptibility-average-text,
+.training-load-medium-text,
+.transfer-status-category-none,
+.notificationmessagestatus-action-performed-colour .action-header {
+  color: var(--skin-text-primary);
+}
+
+/* Neutral navigation hover follows the theme ink, independently of the data
+ * statuses above; native white remains available for media and data roles. */
+.navigation-tab-portal-default-active-false .portal-text:hover,
+.navigation-tab-portal-default-active-false:hover .portal-text {
+  color: var(--skin-text-primary);
+}
+
+/* The response-required label uses the same warning ink as its glyph, paired with the
+ * warning surface rather than the native claret strip. */
+.notificationmessagestatus-action-required-colour .action-header {
+  color: var(--skin-feedback-warning-foreground);
+}
+
+/* Data knowledge level 2 reasonable.
+ * Changes text/foreground colour.
+ * Shared rule for 2 selectors. Editing a declaration here affects the whole group below.
+ * Source rule 2038.
+ */
+.data_knowledge_level_2_reasonable,
+.transfer-interest-rating-label-not-interested {
+  color: var(--colours-linear-scale-strong-4);
+}
+
+/* Data knowledge level 4 good.
+ * Changes text/foreground colour.
+ * Shared rule for 3 selectors. Editing a declaration here affects the whole group below.
+ * Source rule 2039.
+ */
+.data_knowledge_level_4_good,
+.injury-risk-text-colour-normal,
+.transfer-interest-rating-label-interested {
+  color: var(--colours-linear-scale-strong-6);
+}
+
+/* Data knowledge level 7 outstanding.
+ * Changes text/foreground colour.
+ * Source rule 2040.
+ */
+.data_knowledge_level_7_outstanding {
+  color: var(--colours-linear-scale-strong-9);
+}
+
+/* Header.
+ * sets the outline/corner shape; controls size/placement; sets spacing around/inside the element.
+ * Source rule 2041.
+ */
+.date-grid-day-week-overridden #Header {
+  margin: -8px -8px 0;
+  align-self: stretch;
+  padding-top: var(--global-padding-regular);
+  padding-left: var(--global-padding-regular);
+  padding-bottom: var(--global-gap-regular);
+  border-bottom-width: 1px;
+  border-bottom-color: var(--skin-surface-panel);
+}
+
+/* Calendar training day standard default type upcoming.
+ * sets the outline/corner shape.
+ * Source rule 2042.
+ */
+.date-grid-day-week-overridden .calendar-training-day-standard-default-type-upcoming {
+  border-right-width: 0;
+}
+
+/* Header.
+ * sets the outline/corner shape.
+ * Source rule 2043.
+ */
+.date-grid-day-week-overridden-right-margin #Header {
+  border-right-width: 1px;
+  border-right-color: var(--skin-surface-panel);
+}
+
+/* Date grid week text label.
+ * sets the outline/corner shape; controls size/placement.
+ * Source rule 2044.
+ */
+.date-grid-week-text-label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-right-width: 1px;
+  border-right-color: var(--skin-surface-panel);
+}
+
+/* Tables Data
+ * Table/list rows, cells, attributes and data display roles; names do not prove table-exclusive use.
+ */
+
+/* Column headers.
+ * controls size/placement.
+ * Source rule 3780.
+ */
+.table-header-height-20px #column-headers {
+  max-height: 20px;
+}
+
+/* Static contract/stat rows share the virtualised-table stripe roles.
+ * Tables internal slot large height comfy interaction default.
+ * sets the background fill; controls size/placement; sets spacing around/inside the element.
+ * Source rule 3781.
+ */
+.tables-internal-slot-lg-height-comfy-interaction-default {
+  height: var(--tables-spacious);
+  padding: var(--padding-padding-8) var(--padding-padding-4);
+  background-color: var(--skin-table-row-background);
+  align-items: center;
+  align-self: stretch;
+  flex-direction: var(--row-direction-normal);
+}
+
+/* Tables internal slot large height comfy interaction default accent.
+ * sets the background fill; controls size/placement; sets spacing around/inside the element.
+ * Source rule 3782.
+ */
+.tables-internal-slot-lg-height-comfy-interaction-default-accent {
+  height: var(--tables-spacious);
+  padding: var(--padding-padding-8) var(--padding-padding-4);
+  background-color: var(--skin-table-row-alternate-background);
+  align-items: center;
+  align-self: stretch;
+  flex-direction: var(--row-direction-normal);
+}
+
+/* Tables internal slot medium height compact interaction accent.
+ * Shows these elements; sets the background fill; controls size/placement; sets spacing around/inside the
+ * element.
+ * Source rule 3783.
+ */
+.tables-internal-slot-md-height-compact-interaction-accent {
+  display: flex;
+  height: 24px;
+  padding: 8px 4px;
+  background-color: var(--skin-table-row-alternate-background);
+  align-items: center;
+  align-self: stretch;
+  flex-direction: var(--row-direction-normal);
+  justify-content: space-between;
+}
+
+/* Tables internal slot medium height compact interaction default.
+ * Shows these elements; sets the background fill; controls size/placement; sets spacing around/inside the
+ * element.
+ * Source rule 3784.
+ */
+.tables-internal-slot-md-height-compact-interaction-default {
+  display: flex;
+  height: 24px;
+  padding: 8px 4px;
+  background-color: var(--skin-table-row-background);
+  align-items: center;
+  align-self: stretch;
+  flex-direction: var(--row-direction-normal);
+  justify-content: space-between;
+}
+
+/* Tables internal slot medium height condensed interaction accent.
+ * Shows these elements; sets the background fill; controls size/placement; sets spacing around/inside the
+ * element.
+ * Source rule 3785.
+ */
+.tables-internal-slot-md-height-condensed-interaction-accent {
+  display: flex;
+  height: 20px;
+  padding: 0 4px;
+  background-color: var(--skin-table-row-alternate-background);
+  align-items: flex-start;
+  align-self: stretch;
+}
+
+/* Tables internal slot medium height condensed interaction default.
+ * Shows these elements; sets the background fill; controls size/placement; sets spacing around/inside the
+ * element.
+ * Source rule 3786.
+ */
+.tables-internal-slot-md-height-condensed-interaction-default {
+  display: flex;
+  height: 20px;
+  padding: 0 4px;
+  background-color: var(--skin-table-row-background);
+  align-items: flex-start;
+  align-self: stretch;
+}
+
+/* Tactic pending changes large.
+ * controls size/placement.
+ * Source rule 3787.
+ */
+.tactic-pending-changes-large {
+  width: 440px;
+  max-width: 440px;
+}
+
+/* Tactic pending changes small.
+ * controls size/placement.
+ * Source rule 3788.
+ */
+.tactic-pending-changes-small {
+  width: 296px;
+  max-width: 296px;
+}
+
+/* Tactic icons player role movement ip colour.
+ * tints background artwork.
+ * Source rule 3789.
+ */
+.tactic_icons-player_role_movement-ip-colour {
+  -unity-background-image-tint-color: var(--data-tables-ip-key-highlight);
+}
+
+/* Tactic icons player role movement oop colour.
+ * tints background artwork.
+ * Source rule 3790.
+ */
+.tactic_icons-player_role_movement-oop-colour {
+  -unity-background-image-tint-color: var(--data-tables-oop-key-highlight);
+}
+
+/* Tactic icons player role movement drop.
+ * sets the native component presentation.
+ * Shared rule for 2 selectors. Editing a declaration here affects the whole group below.
+ * Source rule 3791.
+ */
+.tactic_icons-player_role_movement_drop,
+.tactical-tweak-player-row--expanded .tactical-tweak-player-row__chevron {
+  rotate: 180deg;
+}
+
+/* Tactic icons player role movement press.
+ * sets the native component presentation.
+ * Source rule 3792.
+ */
+.tactic_icons-player_role_movement_press {
+  rotate: 0;
+}
+
+/* Tactical effectiveness breakdown.
+ * sets the background fill; sets the outline/corner shape; controls size/placement; sets spacing
+ * around/inside the element.
+ * Source rule 3793.
+ */
+.tactical-effectiveness-breakdown {
+  padding: var(--spacing-padding-small---8);
+  background-color: var(--skin-surface-raised);
+  border-radius: var(--spacing-padding-small---8);
+  flex-grow: 1;
+}
+
+/* Tables Data
+ * Table/list rows, cells, attributes and data display roles; names do not prove table-exclusive use.
+ */
+
+/* About rules block row.
+ * sets spacing around/inside the element.
+ * Shared rule for 4 selectors. Editing a declaration here affects the whole group below.
+ * Source rule 4269.
+ */
+.virtualised-list__item--first .about-rules-block-row,
+.virtualised-list__item--first .milestone-large-row,
+.virtualised-list__item--first .targets-promise_show-on-meet_the_time-no-size-large,
+.player_search_transfer_interest_radio .unity-base-field {
+  margin-top: 0;
+}
+
+/* Vertical line upper.
+ * Controls visibility while retaining the layout space.
+ * Shared rule for 4 selectors. Editing a declaration here affects the whole group below.
+ * Source rule 4270.
+ */
+.virtualised-list__item--first .vertical-line-upper,
+.virtualised-list__item--last .team-report-form-divider,
+.virtualised-list__item--last .vertical-line-lower,
+.visibility-hidden-tifo {
+  visibility: hidden;
+}
+
+/* Bar chart item.
+ * sets spacing around/inside the element.
+ * Shared rule for 3 selectors. Editing a declaration here affects the whole group below.
+ * Source rule 4271.
+ */
+.virtualised-list__item--last .bar-chart-item,
+.stats-star-ratings-potential-3-ability-3-youth-false.no-margin,
+.input-field-noborder .unity-base-text-field {
+  margin: 0px;
+}
+
+/* Team report assist summary record.
+ * sets spacing around/inside the element.
+ * Shared rule for 6 selectors. Editing a declaration here affects the whole group below.
+ * Source rule 4272.
+ */
+.virtualised-list__item--last .team-report-assist-summary-record,
+.virtualised-list__item--last .team-report-assist-type-record,
+.virtualised-list__item--last > * > * > #SpeakToResponseActionButton .speakto-body-header-suggestion-button--action-secondary,
+.navigation-secondary-text-portal-default-active-true .sibutton,
+.navigation-secondary-text-portal-default-active-false .sibutton,
+.sibutton.no-margin {
+  margin: 0;
+}
+
+/* Agent offer player item.
+ * sets the background fill; sets the outline/corner shape.
+ * Source rule 4273.
+ */
+.virtualised-list__item--selected .agent-offer-player-item {
+  border-color: var(--skin-card-border-colour);
+  background-color: var(--skin-control-hover);
+  border-radius: var(--border-radius-radius-4);
+}
+
+/* Selected fill and foreground use the paired default Dugout Volt/ink roles.
+ */
+.virtualised-list__item--selected .buttons-toggle-picture-button-default-type-unselected--selected-false,
+.virtualised-list__item--selected .manager-preset-button-bg,
+.virtualised-list__item--selected .manager-preset-button-bg:hover {
+  background-color: var(--skin-selection-background);
+  color: var(--skin-selection-foreground);
+}
+
+/* Inputs colour picker swatch pallete swatch.
+ * sets the outline/corner shape.
+ * Source rule 4275.
+ */
+.virtualised-list__item--selected .inputs-colour_picker-swatch-pallete-swatch {
+  border-width: 1px;
+}
+
+/* Manager creation menu text block.
+ * sets spacing around/inside the element; chooses the pointer and hotspot.
+ * Source rule 4276.
+ */
+.virtualised-list__item--selected .manager-creation-menu-text-block {
+  padding-left: 12px;
+  padding-right: 16px;
+  padding-bottom: 8px;
+  padding-top: 8px;
+  cursor: var(--cursor-clickable-1x-url) var(--cursor-clickable-1x-hotspot-x) var(--cursor-clickable-1x-hotspot-y);
+}
+
+/* Manager preset button bg border.
+ * sets the outline/corner shape.
+ * Source rule 4277.
+ */
+.virtualised-list__item--selected .manager-preset-button-bg-border {
+  border-width: var(--global-border-width-thick);
+  border-color: var(--skin-border-subtle);
+  border-radius: var(--interaction-global-radius-md);
+}
+
+/* A selectable row inside a grouped list shares the neutral selection role.
+ * Keep parent month headings and linked club/competition names readable too. */
+.virtualised-list__item--selected .selectable-list__item-child--selected {
+  background-color: var(--skin-list-selection-background);
+  color: var(--skin-list-selection-foreground);
+}
+.virtualised-list__item--selected .selectable-list__item-child--selected:hover {
+  background-color: var(--skin-list-selection-hover);
+}
+
+/* Virtualised list view.
+ * controls size/placement.
+ * Source rule 4279.
+ */
+.virtualised-list__view-max-width .virtualised-list__view {
+  width: 100%;
+  max-width: 100%;
+}
+
+/* White dot.
+ * Shows these elements; controls size/placement; sets spacing around/inside the element.
+ * Source rule 4282.
+ */
+.white-dot {
+  display: flex;
+  width: 14px;
+  height: 14px;
+  align-items: center;
+  flex-direction: var(--row-direction-normal);
+  margin-right: 0;
+  flex-wrap: nowrap;
+  flex-grow: 0;
+  align-self: auto;
+  padding-top: 1px;
+  padding-right: 1px;
+  padding-bottom: 1px;
+  padding-left: 1px;
+}
+
+/* Widget container block.
+ * sets the background fill; sets the outline/corner shape; controls size/placement; sets spacing
+ * around/inside the element.
+ * Source rule 4283.
+ */
+.widget-container-block {
+  padding: 12px;
+  background-color: var(--skin-surface-panel);
+  justify-content: center;
+  border-radius: var(--skin-radius-control);
+}
+
+/* Selected surface and label use the paired Volt/ink tokens from the default Dugout theme.
+ */
+.virtualised-list__item--selected .buttons-toggle-picture-button-default-type-unselected--selected-false .sitext,
+.virtualised-list__item--selected .buttons-toggle-picture-button-default-type-unselected--selected-false .sitextmedium,
+.virtualised-list__item--selected .buttons-toggle-picture-button-default-type-unselected--selected-false .sitextsmall,
+.virtualised-list__item--selected .manager-preset-button-bg .sitext,
+.virtualised-list__item--selected .manager-preset-button-bg .sitextmedium,
+.virtualised-list__item--selected .manager-preset-button-bg .sitextsmall,
+.virtualised-list__item--selected .manager-preset-button-bg:hover .sitext,
+.virtualised-list__item--selected .manager-preset-button-bg:hover .sitextmedium,
+.virtualised-list__item--selected .manager-preset-button-bg:hover .sitextsmall {
+  color: var(--skin-selection-foreground);
+}
+.virtualised-list__item--selected .selectable-list__item-child--selected .sitext,
+.virtualised-list__item--selected .selectable-list__item-child--selected .sitextmedium,
+.virtualised-list__item--selected .selectable-list__item-child--selected .sitextsmall {
+  color: var(--skin-list-selection-foreground);
+}
+
+/* Tables Data
+ * Table/list rows, cells, attributes and data display roles; names do not prove table-exclusive use.
+ */
+
+/* Bar.
+ * sets the background fill.
+ * Source rule 4697.
+ */
+.table-accent-orange #bar {
+  background-color: var(--data-tables-accent-orange);
+}
+
+/* Bar.
+ * sets the background fill.
+ * Source rule 4698.
+ */
+.table-accent-blue #bar {
+  background-color: var(--data-tables-accent-blue);
+}
+
+/* Bar.
+ * sets the background fill.
+ * Source rule 4699.
+ */
+.table-accent-red #bar {
+  background-color: var(--data-tables-accent-red);
+}
+
+/* Bar.
+ * sets the background fill.
+ * Source rule 4700.
+ */
+.table-accent-green #bar {
+  background-color: var(--data-tables-accent-green);
+}
+
+/* Row.
+ * sets the background fill.
+ * Source rule 4701.
+ */
+.table-row-purple #row {
+  background-color: var(--colours-base-purple-base);
+}
+
+/* Sitext.
+ * Changes text/foreground colour.
+ * Shared rule for 2 selectors. Editing a declaration here affects the whole group below.
+ * Source rule 4702.
+ */
+.table-row-disabled .sitext,
+.table-row-disabled .sibutton {
+  color: var(--skin-text-disabled);
+}
+
+/* Unity image.
+ * Changes text/foreground colour; tints background artwork.
+ * Source rule 4703.
+ */
+.table-row-disabled .unity-image {
+  color: var(--skin-ink);
+  -unity-background-image-tint-color: var(--skin-ink);
+}
+
+/* Team report goal analysis goal times scoring.
+ * sets the background fill.
+ * Source rule 4704.
+ */
+.team-report-goal-analysis-goal-times-scoring {
+  background-color: var(--colours-base-green-soft);
+}
+
+/* Team report linear ranges 7 values 1.
+ * tints background artwork.
+ * Source rule 4705.
+ */
+.team-report-linear-ranges-7-values-1 {
+  -unity-background-image-tint-color: var(--linear-ranges-7-values-1);
+}
+
+/* Team report linear ranges 7 values 2.
+ * tints background artwork.
+ * Source rule 4706.
+ */
+.team-report-linear-ranges-7-values-2 {
+  -unity-background-image-tint-color: var(--linear-ranges-7-values-2);
+}
+
+/* Team report linear ranges 7 values 3.
+ * tints background artwork.
+ * Source rule 4707.
+ */
+.team-report-linear-ranges-7-values-3 {
+  -unity-background-image-tint-color: var(--linear-ranges-7-values-3);
+}
+
+/* Team report linear ranges 7 values 4.
+ * tints background artwork.
+ * Source rule 4708.
+ */
+.team-report-linear-ranges-7-values-4 {
+  -unity-background-image-tint-color: var(--linear-ranges-7-values-4);
+}
+
+/* Team report linear ranges 7 values 5.
+ * tints background artwork.
+ * Source rule 4709.
+ */
+.team-report-linear-ranges-7-values-5 {
+  -unity-background-image-tint-color: var(--linear-ranges-7-values-5);
+}
+
+/* Team report linear ranges 7 values 6.
+ * tints background artwork.
+ * Source rule 4710.
+ */
+.team-report-linear-ranges-7-values-6 {
+  -unity-background-image-tint-color: var(--linear-ranges-7-values-6);
+}
+
+/* Team report linear ranges 7 values 7.
+ * tints background artwork.
+ * Source rule 4711.
+ */
+.team-report-linear-ranges-7-values-7 {
+  -unity-background-image-tint-color: var(--linear-ranges-7-values-7);
+}
+
+/* Text colours brand FM ultra violet.
+ * Changes text/foreground colour.
+ * Source rule 4712.
+ */
+.text-colours-brand-fm-ultra-violet {
+  color: var(--skin-brand-primary);
+}
+
+/* Text light red.
+ * Changes text/foreground colour.
+ * Source rule 4713.
+ */
+.text-light-red {
+  color: var(--linear-ranges-4-values-1);
+}
+
+/* Text neutral black.
+ * Changes text/foreground colour.
+ * Source rule 4714.
+ */
+.text-neutral-black {
+  color: var(--colours-base-neutral-black);
+}
+
+/* First-contact zones are intensity bands, not value-height bars. Native bound
+ * heights can exceed the compact pitch and hide the percentage labels. Cap the
+ * bands at the pitch interior while preserving every semantic intensity. */
+.firstcontact_map_container .zone-map-bar-intensity-1,
+.firstcontact_map_container .zone-map-bar-intensity-2,
+.firstcontact_map_container .zone-map-bar-intensity-3,
+.firstcontact_map_container .zone-map-bar-intensity-4,
+.firstcontact_map_container .zone-map-bar-intensity-5,
+.firstcontact_map_container .zone-map-bar-intensity-6,
+.firstcontact_map_container .zone-map-bar-intensity-7,
+.firstcontact_map_container .zone-map-bar-intensity-8 {
+  max-height: var(--skin-chart-first-contact-zone-height);
+}
+
+/* Report radar labels extend outside the native plot bounds. Leave horizontal
+ * gutters in report tiles; profile/comparison and miniature charts are separate. */
+.data-hub-padding .fmspiderchartlarge {
+  width: var(--skin-chart-report-radar-width);
+  max-width: var(--skin-chart-report-radar-width);
+  align-self: center;
+}
+
+/* Use the comparison's muted reference bands for Data Hub radar families,
+ * including the compact Data Hub widget hosted by Portal Overview.
+ * The existing PNG is the verified runtime fallback for the editable SVG.
+ * Clear native grey fill/grid paint without hiding live series or grade data. */
+.data-hub-padding .fmspiderchartlarge,
+.data-hub-padding .fmspiderchartmedium,
+#PortalScreen #DataHub .fmspiderchartmedium {
+  background-image: var(--skin-chart-radar-artwork);
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  -unity-background-image-tint-color: var(--skin-on-media);
+  --chart-fill-colour: var(--skin-transparent);
+  --chart-axis-colour: var(--skin-transparent);
+  --chart-inner-ring-colour: var(--skin-transparent);
+  --chart-outline-colour: var(--skin-chart-grid);
+  --chart-outline-line-width: 1;
+  --chart-axis-line-width: 0;
+  --chart-inner-ring-line-width: 0;
+  --chart-graded-colour-1: var(--skin-chart-grade-1);
+  --chart-graded-colour-2: var(--skin-chart-grade-2);
+  --chart-graded-colour-3: var(--skin-chart-grade-3);
+  --chart-graded-colour-4: var(--skin-chart-grade-4);
+  --chart-graded-colour-5: var(--skin-chart-grade-5);
+  --series-1-stroke-colour: var(--skin-chart-series-1);
+  --series-1-fill-colour: var(--skin-chart-series-1-fill);
+  --series-1-chartpoint-colour: var(--skin-chart-series-1);
+  --series-2-stroke-colour: var(--skin-chart-series-2);
+  --series-2-fill-colour: var(--skin-chart-series-2-fill);
+  --series-2-chartpoint-colour: var(--skin-chart-series-2);
+}
+
+/* The compact Portal plot reaches its element bounds. The shared artwork has
+ * comparison label padding; enlarge its paint only, preserving plot geometry. */
+#PortalScreen #DataHub .fmspiderchartmedium {
+  background-size: var(--skin-chart-compact-radar-background-size);
+}
+
+/* Position-map colours are bound by the game. Tone the text overlay rather
+ * than replacing scoring/conceding meaning or muting the entire tile. */
+#GoalAnalysis #PositionSection #PositionsTemplate_Item > #TextFrame {
+  background-color: var(--skin-chart-position-scrim);
+}
+
+/* Income/expenditure history labels extend to the left of the native plot.
+ * Shrink only that plot within its existing card and reserve the axis gutter. */
+.silinechart.fm-financial-history-chart {
+  width: auto;
+  align-self: stretch;
+  margin-left: var(--skin-chart-finance-axis-gutter);
+  margin-right: var(--skin-chart-finance-edge-gutter);
+  margin-bottom: var(--skin-chart-finance-label-gap);
+}
+
+
+/* Stable comparison identities shared by labels, bars and radar lines. */
+.attribute-text-player-left {
+  color: var(--skin-comparison-left);
+}
+
+/* Stable comparison identities shared by labels, bars and radar lines. */
+.attribute-text-player-right {
+  color: var(--skin-comparison-right);
+}
+
+.attributes-key-key {
+  -unity-background-image-tint-color: var(--skin-attribute-key);
+}
+
+.attributes-key-preferable-oop {
+  -unity-background-image-tint-color: var(--skin-attribute-preferred);
+}
+
+/* Native radar labels have a narrow measured width. A minimum constraint and
+ * shared compact type keep abbreviations readable around the existing anchors. */
+.data-hub-padding .fmspiderchartlarge #Label {
+  min-width: var(--skin-chart-radar-label-min-width);
+  font-size: var(--skin-chart-label-size);
+  white-space: nowrap;
+}
+.data-hub-padding .fmspiderchartlarge #Value {
+  font-size: var(--skin-chart-label-size);
+  white-space: nowrap;
+}
+
+/* The single-player match popup uses a white live outline over the same graded
+ * reference bands, independently from the overview/comparison series palette. */
+#MatchPlayerReport #AttributeSpiderChart .fmspiderchartlarge {
+  --series-1-stroke-colour: var(--skin-radar-match-profile-line);
+  --series-1-chartpoint-colour: var(--skin-radar-match-profile-line);
+  --chart-graded-colour-1: var(--skin-radar-match-profile-line);
+  --chart-graded-colour-2: var(--skin-radar-match-profile-line);
+  --chart-graded-colour-3: var(--skin-radar-match-profile-line);
+  --chart-graded-colour-4: var(--skin-radar-match-profile-line);
+  --chart-graded-colour-5: var(--skin-radar-match-profile-line);
+}
+
+
+/* Embedded and expanded analysis reports reuse the native comparison-frame
+ * owner, outside Data Hub's padding wrapper. Keep series identity consistent
+ * with its reference-first source order, across lines, points and value labels. */
+#data_display-graph-spider-graph-comparison-frame .fmspiderchartlarge {
+  background-image: var(--skin-chart-radar-artwork);
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  -unity-background-image-tint-color: var(--skin-on-media);
+  --chart-fill-colour: var(--skin-transparent);
+  --chart-axis-colour: var(--skin-transparent);
+  --chart-inner-ring-colour: var(--skin-transparent);
+  --chart-outline-colour: var(--skin-chart-grid);
+  --chart-outline-line-width: 1;
+  --chart-axis-line-width: 0;
+  --chart-inner-ring-line-width: 0;
+  --series-1-stroke-colour: var(--skin-report-radar-reference-line);
+  --series-1-fill-colour: var(--skin-report-radar-reference-fill);
+  --series-1-chartpoint-colour: var(--skin-report-radar-reference-line);
+  --series-2-stroke-colour: var(--skin-report-radar-subject-line);
+  --series-2-fill-colour: var(--skin-report-radar-subject-fill);
+  --series-2-chartpoint-colour: var(--skin-report-radar-subject-line);
+}
+#data_display-graph-spider-graph-comparison-frame #subject_Value {
+  color: var(--skin-report-radar-subject-line);
+}
+#data_display-graph-spider-graph-comparison-frame #comparison_Value {
+  color: var(--skin-report-radar-reference-line);
+}
+.frame-states-radar-polygon-graph-template-template3 #SpiderGraphField.graph_datavis_accent_background {
+  background-color: var(--skin-report-chart-surface);
+}
+
+.frame-states-radar-polygon-graph-template-template3 #attributes-key .image-tint-cyan-50 {
+  -unity-background-image-tint-color: var(--skin-report-radar-subject-line);
+}
+.frame-states-radar-polygon-graph-template-template3 #attributes-key .image-tint-orange-50 {
+  -unity-background-image-tint-color: var(--skin-report-radar-reference-line);
+}
+
+/* Embedded finance summaries reserve an axis gutter and a separate label line
+ * before the next heading/table. Native short heights failed the Windows
+ * projection-label check; retain this checkpoint pending renderer diagnosis. */
+.frames-finance-graph-property .silinechart.fm-finance-graph-overal,
+.frames-finance-graph-property .silinechart.fm-finance-graph-projections,
+.frames-finance-graph-property .silinechart.fm-finance-graph-income,
+.frames-finance-graph-property .silinechart.fm-finance-graph-expenditures {
+  width: auto;
+  align-self: stretch;
+  height: var(--skin-chart-finance-summary-height);
+  min-height: var(--skin-chart-finance-summary-height);
+  margin-left: var(--skin-chart-finance-axis-gutter);
+  margin-right: var(--skin-chart-finance-edge-gutter);
+  margin-bottom: var(--skin-chart-finance-label-gap);
+  --axis-colour: var(--skin-chart-axis-foreground);
+  --axis-label-colour: var(--skin-chart-axis-foreground);
+}
+.frames-finance-graph-property .silinechart.fm-finance-graph-overal,
+.frames-finance-graph-property .silinechart.fm-finance-graph-projections {
+  --line-colour: var(--skin-chart-finance-line);
+  --fill-colour: var(--skin-chart-finance-fill);
+}
+
+/* The authored Expenditure season view alone has an inline 606px maximum.
+ * Use its parent's available allocation so category labels fit the fixed rows.
+ * The typed root excludes the inspected Income BindingExpect hierarchy. */
+#ReportBody ComponentElement > #Body.frames-income-breakdown > #Tabs > TabGroup > #TabsContent > #ThisSeasonView {
+  min-width: var(--skin-finance-breakdown-view-min-width);
+}
+
+/* Attribute link cells retain horizontal ellipsis but need a complete font
+ * line box: native 16px cells clipped Poppins descenders. Rows keep their height. */
+.attributes-row-number .cell-medium {
+  height: var(--skin-attribute-label-line-height);
+}
+.attributes-row-number .cell-medium .cell-primary-text {
+  min-height: var(--skin-attribute-label-line-height);
+}
+
+/* Individual Training's Footedness/Traits card shares the attribute row's
+ * natural height. Compact only its vertical inset; keep feet/traits content,
+ * horizontal padding, attribute list allocation and legend semantics intact. */
+#ReportBody #AttributesAndCoachReport #Attributes #FootednessAndTraits #FootednessAndTraitsFrame.widget-container-block {
+  padding-top: var(--skin-training-traits-vertical-inset);
+  padding-bottom: var(--skin-training-traits-vertical-inset);
+}
+
+/* Compact Board Culture and Members tables retain narrow native columns.
+ * Reclaim redundant header inset for the wider family, keeping native sorting,
+ * ellipsis, column allocation, objective icon gutters and row height. */
+#ReportBody #NonPhoneVisible > #BoardMembers > .figma-table .data-display-data_display-table-heading-default-default,
+#ReportBody #tile-wide-4x2 #Culture .data-display-data_display-table-heading-default-default {
+  padding-left: var(--skin-summary-table-header-inset);
+  padding-right: var(--skin-summary-table-header-inset);
+}
+#ReportBody #NonPhoneVisible > #BoardMembers > .figma-table .text-header-container,
+#ReportBody #tile-wide-4x2 #Culture .text-header-container {
+  margin-right: var(--skin-summary-table-header-inset);
+}
+
+/* Award history's direct Best Players table uses the same compact header.
+ * Reclaim its horizontal inset for metric labels, retaining native column
+ * allocation, typography, sort-icon gap, body cells and the separate branches. */
+#ReportBody #BestPlayers > #Frame > .row-direction-normal > #PreviousAwardsList > StreamedTable .data-display-data_display-table-heading-default-default {
+  padding-left: var(--skin-summary-table-header-inset);
+  padding-right: var(--skin-summary-table-header-inset);
+}
+
+/* Risk Assessment uses the same compact native header in fixed health lanes.
+ * Reclaim its horizontal template padding without changing column allocation,
+ * typography, sort icons, body cells or the separate message-table branch. */
+#ReportBody .medical-risk-assessment-state5 #table .data-display-data_display-table-heading-default-default {
+  padding-left: var(--skin-summary-table-header-inset);
+  padding-right: var(--skin-summary-table-header-inset);
+}
+
+/* Captains' two left-player views use StandardHeaderCellGrow with the same
+ * compact inset owner. Keep native title overrides, sorting and body columns. */
+#ReportBody #Content.siblock-border > #LHSPanel #FilteredPlayersTable .data-display-data_display-table-heading-default-default {
+  padding-left: var(--skin-captain-table-header-inset);
+  padding-right: var(--skin-captain-table-header-inset);
+}
+
+/* Individual Detailed and Intensity share native compact table headings.
+ * Reclaim their horizontal inset, keeping sorting, text/row heights, sibling
+ * headers and native column allocation. Factory column IDs are not USS hooks. */
+#ReportBody #ViewContent > #frame > .width-30-percent > #Frame > #Table .data-display-data_display-table-heading-default-default,
+#ReportBody #individual-intensity .data-display-data_display-table-heading-default-default {
+  padding-left: var(--skin-training-table-header-inset);
+  padding-right: var(--skin-training-table-header-inset);
+}
+
+/* Job Market uses the standard compact header with a 4px horizontal inset.
+ * Reclaim that inset inside the authored table only, preserving its native
+ * column allocation, 24px height, sort icon and separate trailing text gap. */
+#ReportBody .frame-states-property-1-job-market-property-2-hi-res-property-3-v2 > #streamed-table-container .data-display-data_display-table-heading-default-default {
+  padding-left: var(--skin-job-market-header-inset);
+  padding-right: var(--skin-job-market-header-inset);
+}
+
+/* CompCell's native 4px inset is separate from the team name, logo gap and
+ * outer cell padding. These authored table/list-entry hosts share that leaf;
+ * both competition and no-competition branches retain native heights/content. */
+#ReportBody .frame-states-property-1-job-market-property-2-hi-res-property-3-v2 > #streamed-table-container #root.padding-horizontal-global-padding-regular > #content-container .default-cell-start,
+#TeamRemapper > #root > #container > #left-side #root.padding-horizontal-global-padding-regular > #content-container .default-cell-start {
+  padding-left: var(--skin-job-market-competition-inset);
+  padding-right: var(--skin-job-market-competition-inset);
+}
+
+/* Squad Numbers' plain-text cells share their host spacing. Reclaim only this
+ * horizontal inset for playing-time, position and age; retain native widths,
+ * row height, single-line ellipsis and all number/portrait controls. */
+#ReportBody #TableView.squad-numbers-disaplay-table-view .data_display-table-cell-default-default-type-1---text-basic-space-regular-accent-false-orientation-default-selected-false {
+  padding-left: var(--skin-number-table-plain-cell-inset);
+  padding-right: var(--skin-number-table-plain-cell-inset);
+}
+
+/* All domestic Staff views share the native portrait/name cell. Reclaim only
+ * its portrait gap; keep preview controls, text gutters and column allocation. */
+#ReportBody #StaffContractsTable BindingExpect.row-direction-normal > .thumbnails-alt-person-picture-property-1-24px {
+  margin-right: var(--skin-staff-identity-portrait-gap);
+}
+
+/* The Staff Contracts factory's Club Job text has no authored trailing gutter.
+ * Bound this leaf inside its native column before the first attribute value. */
+#ReportBody #StaffContractsTable BindingExpect.align-items-start.align-self-start.flex-grow-class.justify-content-center > SIText.body-sm.global-text-primary.content-no-wrap.content-ellipsis {
+  max-width: 100%;
+  padding-right: var(--skin-staff-job-gutter);
+}
+
+/* Loans Compact, More Details and Contract share the native ExpiryDateCell.
+ * Reclaim only its date/NA text's redundant trailing margin. Preserve the
+ * clock's separate icon gap, column allocation, host inset and ellipsis. */
+#ReportBody #LoanPlayerContent #PlayersTable #cell-expect #end-date-text.margin-right-global-gap-small,
+#ReportBody #LoanPlayerContent #PlayersTable #cell-expect #na-text.margin-right-global-gap-small {
+  margin-right: var(--skin-loans-expiry-text-trailing-gap);
+}
+
+/* The same expiry host owns horizontal padding. Its native neighbours retain
+ * their own gutters: Progress/Wage before, Loan Happiness/Transfer Value after.
+ * Reclaim this host inset without changing the clock's inter-element gap. */
+#ReportBody #LoanPlayerContent #PlayersTable #cell-expect.padding-horizontal-global-padding-small {
+  padding-left: var(--skin-loans-expiry-cell-inset);
+  padding-right: var(--skin-loans-expiry-cell-inset);
+}

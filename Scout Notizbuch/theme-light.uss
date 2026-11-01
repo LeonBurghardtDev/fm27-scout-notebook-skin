@@ -1,0 +1,114 @@
+/* DUGOUT LIGHT — token-only experiment.
+ * Opt in by importing this file immediately after theme.uss in main.uss.
+ * Experimental Dugout Light palette, expressed through existing theme roles.
+ * FM data/club/competition colours, media whites, fonts and geometry stay unchanged.
+ * HSL channels are converted to explicit RGB for Unity USS.
+ */
+:root {
+
+  /* Surface layers. Source role is documented on each declaration. */
+  --skin-surface-canvas: rgb(201, 208, 217); /* --fmsb-layer-canvas */
+  --skin-surface-page: rgb(244, 245, 246); /* --fmsb-layer-workspace */
+  --skin-surface-navigation: rgb(217, 221, 226); /* --fmsb-layer-navigation */
+  --skin-surface-panel: rgb(229, 232, 235); /* --fmsb-layer-panel */
+  --skin-surface-raised: rgb(255, 255, 255); /* --fmsb-layer-panel-raised */
+  --skin-surface-strong: rgb(217, 221, 227); /* --fmsb-layer-panel-strong */
+
+  /* Text, edges and neutral controls. Source role is documented on each declaration. */
+  --skin-text-primary: rgb(23, 35, 49); /* --fmsb-text-primary */
+  --skin-text-secondary: rgb(66, 79, 92); /* --fmsb-text-secondary */
+  --skin-text-disabled: rgb(76, 87, 97); /* --fmsb-text-tertiary */
+  --skin-text-link: rgb(57, 92, 5); /* --fmsb-brand-accent-ink */
+  --skin-text-link-hover: rgb(68, 104, 13); /* --fmsb-focus */
+  --skin-border-default: rgb(175, 183, 192); /* --fmsb-separator */
+  --skin-border-subtle: rgb(212, 216, 222); /* --fmsb-separator-subtle */
+  --skin-control-background: rgb(226, 229, 233); /* --fmsb-control */
+  --skin-control-border: rgb(109, 122, 136); /* --fmsb-control-border */
+  --skin-control-hover: rgb(208, 213, 220); /* --fmsb-control-hover */
+  --skin-control-pressed: rgb(190, 198, 207); /* --fmsb-control-active */
+  --skin-selection-muted: rgb(205, 211, 218); /* --fmsb-selection-muted */
+  --skin-focus-ring: rgb(68, 104, 13); /* --fmsb-focus */
+
+  /* Daylight Volt and filled states. Source role is documented on each declaration. */
+  --skin-brand-primary: rgb(203, 234, 102); /* --fmsb-brand-dugout */
+  --skin-brand-primary-hover: rgb(194, 233, 78); /* --fmsb-brand-dugout-hover */
+  --skin-brand-primary-pressed: rgb(180, 229, 56); /* --fmsb-brand-dugout-active */
+  --skin-brand-on-primary: rgb(11, 12, 14); /* --fmsb-brand-dugout-foreground */
+  --skin-selection-background: rgb(203, 234, 102); /* --fmsb-selection */
+  --skin-selection-hover: rgb(194, 233, 78); /* --fmsb-selection-hover */
+  --skin-selection-pressed: rgb(180, 229, 56); /* --fmsb-selection-active */
+  --skin-selection-foreground: rgb(11, 12, 14); /* --fmsb-selection-foreground */
+  --skin-nav-active-indicator: rgb(40, 59, 83); /* --fmsb-selection-indicator */
+  --skin-choice-marker: rgb(203, 234, 102); /* --fmsb-selection-marker */
+
+  /* Paired feedback. Source role is documented on each declaration. */
+  --skin-feedback-success: rgb(20, 103, 81); /* --fmsb-status-success */
+  --skin-feedback-success-surface: rgb(221, 243, 237); /* --fmsb-status-success-surface */
+  --skin-feedback-success-foreground: rgb(20, 103, 81); /* --fmsb-status-success-foreground */
+  --skin-feedback-info: rgb(28, 85, 146); /* --fmsb-status-info */
+  --skin-feedback-info-surface: rgb(228, 239, 252); /* --fmsb-status-info-surface */
+  --skin-feedback-info-foreground: rgb(28, 85, 146); /* --fmsb-status-info-foreground */
+  --skin-feedback-warning: rgb(107, 81, 20); /* --fmsb-status-warning */
+  --skin-feedback-warning-surface: rgb(253, 242, 217); /* --fmsb-status-warning-surface */
+  --skin-feedback-warning-foreground: rgb(107, 81, 20); /* --fmsb-status-warning-foreground */
+  --skin-feedback-danger: rgb(167, 57, 74); /* --fmsb-status-danger */
+  --skin-feedback-danger-surface: rgb(253, 232, 235); /* --fmsb-status-danger-surface */
+  --skin-feedback-danger-foreground: rgb(167, 57, 74); /* --fmsb-status-danger-foreground */
+
+  /* Explicit RGBA companions keep the same opacity with the mapped RGB. */
+  --skin-brand-primary-alpha-08: rgba(203, 234, 102, 0.08);
+  --skin-brand-primary-alpha-16: rgba(203, 234, 102, 0.16);
+  --skin-brand-primary-alpha-70: rgba(203, 234, 102, 0.7);
+  --skin-brand-primary-alpha-00: rgba(203, 234, 102, 0);
+  --skin-brand-accent-alpha-40: rgba(203, 234, 102, 0.4);
+  --skin-surface-page-alpha-60: rgba(244, 245, 246, 0.6);
+  --skin-surface-page-alpha-70: rgba(244, 245, 246, 0.7);
+  --skin-surface-page-alpha-100: rgba(244, 245, 246, 1);
+  --skin-brand-accent-alpha-20: rgba(203, 234, 102, 0.2);
+  --skin-surface-page-alpha-05: rgba(244, 245, 246, 0.05);
+  --skin-surface-page-alpha-72: rgba(244, 245, 246, 0.72);
+  --skin-surface-page-alpha-76: rgba(244, 245, 246, 0.76);
+  --skin-surface-page-alpha-80: rgba(244, 245, 246, 0.8);
+  --skin-surface-page-alpha-85: rgba(244, 245, 246, 0.85);
+  --skin-brand-primary-hover-alpha-00: rgba(194, 233, 78, 0);
+  --skin-feedback-danger-surface-alpha-00: rgba(253, 232, 235, 0);
+  --skin-feedback-danger-alpha-00: rgba(167, 57, 74, 0);
+  --skin-surface-page-alpha-65: rgba(244, 245, 246, 0.65);
+  --skin-surface-page-alpha-35: rgba(244, 245, 246, 0.35);
+  --skin-brand-accent-alpha-35: rgba(203, 234, 102, 0.35);
+  --skin-surface-canvas-alpha-95: rgba(201, 208, 217, 0.95);
+  --skin-surface-canvas-alpha-90: rgba(201, 208, 217, 0.9);
+  --skin-surface-canvas-alpha-85: rgba(201, 208, 217, 0.85);
+  --skin-surface-canvas-alpha-75: rgba(201, 208, 217, 0.75);
+  --skin-surface-canvas-alpha-65: rgba(201, 208, 217, 0.65);
+  --skin-surface-canvas-alpha-56: rgba(201, 208, 217, 0.56);
+  --skin-surface-canvas-alpha-48: rgba(201, 208, 217, 0.48);
+  --skin-surface-canvas-alpha-40: rgba(201, 208, 217, 0.4);
+  --skin-surface-canvas-alpha-35: rgba(201, 208, 217, 0.35);
+  --skin-surface-canvas-alpha-32: rgba(201, 208, 217, 0.32);
+  --skin-surface-canvas-alpha-20: rgba(201, 208, 217, 0.2);
+  --skin-surface-canvas-alpha-16: rgba(201, 208, 217, 0.16);
+  --skin-surface-canvas-alpha-14: rgba(201, 208, 217, 0.14);
+  --skin-surface-canvas-alpha-12: rgba(201, 208, 217, 0.12);
+  --skin-surface-canvas-alpha-08: rgba(201, 208, 217, 0.08);
+  --skin-surface-canvas-alpha-04: rgba(201, 208, 217, 0.04);
+  --skin-surface-canvas-alpha-70: rgba(201, 208, 217, 0.7);
+  --skin-surface-canvas-alpha-60: rgba(201, 208, 217, 0.6);
+  --skin-surface-canvas-alpha-55: rgba(201, 208, 217, 0.55);
+  --skin-surface-canvas-alpha-30: rgba(201, 208, 217, 0.3);
+  --skin-surface-panel-alpha-75: rgba(229, 232, 235, 0.75);
+  --skin-surface-canvas-alpha-58: rgba(201, 208, 217, 0.58);
+  --skin-surface-canvas-alpha-94: rgba(201, 208, 217, 0.94);
+  --skin-surface-canvas-alpha-50: rgba(201, 208, 217, 0.5);
+  --skin-surface-page-alpha-20: rgba(244, 245, 246, 0.2);
+  --skin-surface-panel-alpha-14: rgba(229, 232, 235, 0.14);
+  --skin-surface-page-alpha-16: rgba(244, 245, 246, 0.16);
+  --skin-surface-page-alpha-56: rgba(244, 245, 246, 0.56);
+  --skin-surface-page-alpha-90: rgba(244, 245, 246, 0.9);
+  --skin-surface-canvas-alpha-45: rgba(201, 208, 217, 0.45);
+  --skin-surface-page-alpha-40: rgba(244, 245, 246, 0.4);
+  --skin-surface-canvas-alpha-25: rgba(201, 208, 217, 0.25);
+  --skin-surface-panel-alpha-10: rgba(229, 232, 235, 0.1);
+  --skin-surface-panel-alpha-20: rgba(229, 232, 235, 0.2);
+  --skin-surface-page-alpha-14: rgba(244, 245, 246, 0.14);
+}
